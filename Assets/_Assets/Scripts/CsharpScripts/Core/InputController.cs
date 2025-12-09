@@ -11,19 +11,23 @@ public class InputController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
+        // Just enable everything once and leave it enabled
+        foreach (var map in playerInput.actions.actionMaps)
+            map.Enable();
     }
 
     private void OnDestroy()
     {
     }
 
-    public void Move(InputAction.CallbackContext value)
+    private void OnMove(InputValue value)
     {
-        moveValue = value.ReadValue<Vector2>();
+        moveValue = playerInput.actions["Move"].ReadValue<Vector2>();
+        Debug.Log("Move: " + moveValue);
     }
 
-    public void Fire(InputAction.CallbackContext value)
+    private void OnFire(InputValue value)
     {
-        // Implement fire action logic here
+        Debug.Log("Fire pressed");
     }
 }
