@@ -30,8 +30,8 @@ function SetupBoundary()
 end
 
 function MovementUpdate()
-    local horizontal = CS.UnityEngine.Input.GetAxis("Horizontal")
-    local vertical = CS.UnityEngine.Input.GetAxis("Vertical")
+    local horizontal = CS.InputController.moveValue.x
+    local vertical = CS.InputController.moveValue.y
 
     self.transform:Translate(CS.UnityEngine.Vector3(horizontal, vertical, 0) * CS.UnityEngine.Time.deltaTime * speed)
 end

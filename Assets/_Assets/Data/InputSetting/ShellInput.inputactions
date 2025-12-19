@@ -667,7 +667,7 @@
                     "name": "",
                     "id": "e76ce42a-adb5-465a-bcec-60c8dec5899c",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Fire",

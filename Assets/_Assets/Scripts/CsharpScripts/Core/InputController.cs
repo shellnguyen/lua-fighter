@@ -1,12 +1,14 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using XLua;
 
+[LuaCallCSharp]
 public class InputController : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
-    public Vector2 moveValue;
-    public bool jumpPressed;
+    public static Vector2 moveValue;
+    public static bool isFiring;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -22,12 +24,13 @@ public class InputController : MonoBehaviour
 
     private void OnMove(InputValue value)
     {
-        moveValue = playerInput.actions["Move"].ReadValue<Vector2>();
+        moveValue = value.Get<Vector2>();
         Debug.Log("Move: " + moveValue);
     }
 
     private void OnFire(InputValue value)
     {
-        Debug.Log("Fire pressed");
+        Debug.Log("Fire pressed: " + value.isPressed);
+        isFiring = value.isPressed;
     }
 }
