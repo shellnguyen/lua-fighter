@@ -30,8 +30,8 @@ function SetupBoundary()
 end
 
 function MovementUpdate()
-    local horizontal = CS.InputController.moveValue.x
-    local vertical = CS.InputController.moveValue.y
+    local horizontal = CS.ShellSoft.InputController.moveValue.x
+    local vertical = CS.ShellSoft.InputController.moveValue.y
 
     self.transform:Translate(CS.UnityEngine.Vector3(horizontal, vertical, 0) * CS.UnityEngine.Time.deltaTime * speed)
 end
