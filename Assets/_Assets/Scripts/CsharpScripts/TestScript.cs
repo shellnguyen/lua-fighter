@@ -8,7 +8,7 @@ using XLua;
 public class Injection
 {
     public string name;
-    public object value;
+    public UnityEngine.GameObject value;
 }
 
 public class TestScript : MonoBehaviour

@@ -48,6 +48,61 @@ public class LuaBehaviour : MonoBehaviour
         _scriptScopeTable = null;
     }
 
+    protected virtual void OnEnable()
+    {
+        if (_luaOnEnable != null)
+        {
+            _luaOnEnable();
+        }
+    }
+
+    protected virtual void Start()
+    {
+        if (_luaOnStart != null)
+        {
+            _luaOnStart();
+        }
+    }
+
+    protected virtual void OnDisable()
+    {
+        if (_luaOnDisable != null)
+        {
+            _luaOnDisable();
+        }
+    }
+
+    protected virtual void Update()
+    {
+        if (_luaOnUpdate != null)
+        {
+            _luaOnUpdate();
+        }
+    }
+
+    protected virtual void FixedUpdate()
+    {
+        if (_luaOnFixedUpdate != null)
+        {
+            _luaOnFixedUpdate();
+        }
+    }
+
+    protected virtual void LateUpdate()
+    {
+        if (_luaOnLateUpdate != null)
+        {
+            _luaOnLateUpdate();
+        }
+
+        // Perform Lua garbage collection at defined intervals
+        if (Time.time - lastGCTime > GCInterval)
+        {
+            luaEnv.Tick();
+            lastGCTime = Time.time;
+        }
+    }
+
     protected virtual void SetupScriptScopeTable()
     {
         // Create a new Lua table to serve as the script's scope. This is to avoid conflicts between multiple scripts.
