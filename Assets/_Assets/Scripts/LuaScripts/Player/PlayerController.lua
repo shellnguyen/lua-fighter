@@ -1,4 +1,14 @@
+-- PlayerController.lua
+
+-- This script controls the player movement and ensures the player stays within screen boundaries.
+
+-- Settings
 local speed = 5
+local offsetMinX = 2.5
+local offsetMaxX = 3
+local offsetMaxY = 0.9
+
+-- Boundary variables (to be calculated in Awake)
 local minX
 local maxX
 local minY
@@ -23,10 +33,10 @@ function SetupBoundary()
     local halfWidth = playerCollider.bounds.extents.x / 2
     local halfHeight = playerCollider.bounds.extents.y / 2
 
-    minX = bottomLeft.x + halfWidth
-    maxX = topRight.x - halfWidth
+    minX = bottomLeft.x + halfWidth + offsetMinX
+    maxX = topRight.x - halfWidth - offsetMaxX
     minY = bottomLeft.y + halfHeight
-    maxY = topRight.y - halfHeight
+    maxY = topRight.y - halfHeight - offsetMaxY
 end
 
 function MovementUpdate()
