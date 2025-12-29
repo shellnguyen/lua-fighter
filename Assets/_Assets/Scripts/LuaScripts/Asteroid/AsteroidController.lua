@@ -11,11 +11,12 @@ function Update()
 end
 
 function MovementUpdate()
-    self.transform:Translate(CS.UnityEngine.Vector3(-1, 0, 0) * CS.UnityEngine.Time.deltaTime * speed)
+    self.transform:Translate(CS.UnityEngine.Vector3(-1, 0, 0) * CS.UnityEngine.Time.deltaTime * speed,
+        CS.UnityEngine.Space.World)
 end
 
 function RotationUpdate()
-    -- self.transform:Rotate(CS.UnityEngine.Vector3(0, 0, 1) * CS.UnityEngine.Time.deltaTime * rotationSpeed)
+    self.transform:Rotate(CS.UnityEngine.Vector3(0, 0, 1) * CS.UnityEngine.Time.deltaTime * rotationSpeed)
 end
 
 function OnTriggerEnter(other)
