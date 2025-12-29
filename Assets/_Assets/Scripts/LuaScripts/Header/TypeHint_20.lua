@@ -1,5 +1,3082 @@
 ---@meta
 
+---@class UnityEngine.InputSystem.Switch.SwitchSupportHID : System.Object
+UnityEngine.InputSystem.Switch.SwitchSupportHID = {}
+---@alias CS.UnityEngine.InputSystem.Switch.SwitchSupportHID UnityEngine.InputSystem.Switch.SwitchSupportHID
+CS.UnityEngine.InputSystem.Switch.SwitchSupportHID = UnityEngine.InputSystem.Switch.SwitchSupportHID
+
+function UnityEngine.InputSystem.Switch.SwitchSupportHID.Initialize() end
+
+---@class UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState : System.ValueType
+---@field Format UnityEngine.InputSystem.Utilities.FourCC
+---@field leftStickX number
+---@field leftStickY number
+---@field rightStickX number
+---@field rightStickY number
+---@field buttons1 number
+---@field buttons2 number
+---@field format UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState = {}
+---@alias CS.UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState
+CS.UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState = UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState
+
+---@param button UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState.Button
+---@param value boolean
+---@return UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState
+function UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState:WithButton(button, value) end
+---@param button UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState.Button
+---@param state boolean
+function UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState:Set(button, state) end
+---@param button UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState.Button
+function UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState:Press(button) end
+---@param button UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState.Button
+function UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState:Release(button) end
+
+---@class UnityEngine.InputSystem.OSX.NimbusGamepadHid : UnityEngine.InputSystem.Gamepad
+---@field homeButton UnityEngine.InputSystem.Controls.ButtonControl
+UnityEngine.InputSystem.OSX.NimbusGamepadHid = {}
+---@alias CS.UnityEngine.InputSystem.OSX.NimbusGamepadHid UnityEngine.InputSystem.OSX.NimbusGamepadHid
+CS.UnityEngine.InputSystem.OSX.NimbusGamepadHid = UnityEngine.InputSystem.OSX.NimbusGamepadHid
+
+---@return UnityEngine.InputSystem.OSX.NimbusGamepadHid
+function UnityEngine.InputSystem.OSX.NimbusGamepadHid.New() end
+
+---@class UnityEngine.InputSystem.OSX.OSXSupport : System.Object
+UnityEngine.InputSystem.OSX.OSXSupport = {}
+---@alias CS.UnityEngine.InputSystem.OSX.OSXSupport UnityEngine.InputSystem.OSX.OSXSupport
+CS.UnityEngine.InputSystem.OSX.OSXSupport = UnityEngine.InputSystem.OSX.OSXSupport
+
+function UnityEngine.InputSystem.OSX.OSXSupport.Initialize() end
+
+---@class UnityEngine.InputSystem.OSX.LowLevel.NimbusPlusHIDInputReport : System.ValueType
+---@field OSXVendorId number
+---@field OSXProductId number
+---@field leftStickX number
+---@field leftStickY number
+---@field rightStickX number
+---@field rightStickY number
+---@field leftTrigger number
+---@field rightTrigger number
+---@field buttons1 number
+---@field buttons2 number
+---@field format UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.OSX.LowLevel.NimbusPlusHIDInputReport = {}
+---@alias CS.UnityEngine.InputSystem.OSX.LowLevel.NimbusPlusHIDInputReport UnityEngine.InputSystem.OSX.LowLevel.NimbusPlusHIDInputReport
+CS.UnityEngine.InputSystem.OSX.LowLevel.NimbusPlusHIDInputReport = UnityEngine.InputSystem.OSX.LowLevel.NimbusPlusHIDInputReport
+
+
+---@class UnityEngine.InputSystem.OnScreen.OnScreenButton : UnityEngine.InputSystem.OnScreen.OnScreenControl
+UnityEngine.InputSystem.OnScreen.OnScreenButton = {}
+---@alias CS.UnityEngine.InputSystem.OnScreen.OnScreenButton UnityEngine.InputSystem.OnScreen.OnScreenButton
+CS.UnityEngine.InputSystem.OnScreen.OnScreenButton = UnityEngine.InputSystem.OnScreen.OnScreenButton
+
+---@param eventData UnityEngine.EventSystems.PointerEventData
+function UnityEngine.InputSystem.OnScreen.OnScreenButton:OnPointerUp(eventData) end
+---@param eventData UnityEngine.EventSystems.PointerEventData
+function UnityEngine.InputSystem.OnScreen.OnScreenButton:OnPointerDown(eventData) end
+
+---@class UnityEngine.InputSystem.OnScreen.OnScreenControl : UnityEngine.MonoBehaviour
+---@field controlPath string
+---@field control UnityEngine.InputSystem.InputControl
+UnityEngine.InputSystem.OnScreen.OnScreenControl = {}
+---@alias CS.UnityEngine.InputSystem.OnScreen.OnScreenControl UnityEngine.InputSystem.OnScreen.OnScreenControl
+CS.UnityEngine.InputSystem.OnScreen.OnScreenControl = UnityEngine.InputSystem.OnScreen.OnScreenControl
+
+
+---@class UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlUtils : System.Object
+UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlUtils = {}
+---@alias CS.UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlUtils UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlUtils
+CS.UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlUtils = UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlUtils
+
+---@param transform UnityEngine.Transform
+---@return UnityEngine.RectTransform
+function UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlUtils.GetCanvasRectTransform(transform) end
+
+---@class UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlEditorUtils : System.Object
+UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlEditorUtils = {}
+---@alias CS.UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlEditorUtils UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlEditorUtils
+CS.UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlEditorUtils = UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlEditorUtils
+
+---@param target UnityEngine.InputSystem.OnScreen.OnScreenControl
+function UnityEngine.InputSystem.OnScreen.UGUIOnScreenControlEditorUtils.ShowWarningIfNotPartOfCanvasHierarchy(target) end
+
+---@class UnityEngine.InputSystem.OnScreen.OnScreenStick : UnityEngine.InputSystem.OnScreen.OnScreenControl
+---@field movementRange number
+---@field dynamicOriginRange number
+---@field useIsolatedInputActions boolean
+---@field behaviour UnityEngine.InputSystem.OnScreen.OnScreenStick.Behaviour
+UnityEngine.InputSystem.OnScreen.OnScreenStick = {}
+---@alias CS.UnityEngine.InputSystem.OnScreen.OnScreenStick UnityEngine.InputSystem.OnScreen.OnScreenStick
+CS.UnityEngine.InputSystem.OnScreen.OnScreenStick = UnityEngine.InputSystem.OnScreen.OnScreenStick
+
+---@param eventData UnityEngine.EventSystems.PointerEventData
+function UnityEngine.InputSystem.OnScreen.OnScreenStick:OnPointerDown(eventData) end
+---@param eventData UnityEngine.EventSystems.PointerEventData
+function UnityEngine.InputSystem.OnScreen.OnScreenStick:OnDrag(eventData) end
+---@param eventData UnityEngine.EventSystems.PointerEventData
+function UnityEngine.InputSystem.OnScreen.OnScreenStick:OnPointerUp(eventData) end
+
+---@class UnityEngine.InputSystem.OnScreen.OnScreenSupport : System.Object
+UnityEngine.InputSystem.OnScreen.OnScreenSupport = {}
+---@alias CS.UnityEngine.InputSystem.OnScreen.OnScreenSupport UnityEngine.InputSystem.OnScreen.OnScreenSupport
+CS.UnityEngine.InputSystem.OnScreen.OnScreenSupport = UnityEngine.InputSystem.OnScreen.OnScreenSupport
+
+function UnityEngine.InputSystem.OnScreen.OnScreenSupport.Initialize() end
+
+---@class UnityEngine.InputSystem.Linux.JoystickFeatureType
+---@field Invalid UnityEngine.InputSystem.Linux.JoystickFeatureType
+---@field Axis UnityEngine.InputSystem.Linux.JoystickFeatureType
+---@field Ball UnityEngine.InputSystem.Linux.JoystickFeatureType
+---@field Button UnityEngine.InputSystem.Linux.JoystickFeatureType
+---@field Hat UnityEngine.InputSystem.Linux.JoystickFeatureType
+---@field Max UnityEngine.InputSystem.Linux.JoystickFeatureType
+UnityEngine.InputSystem.Linux.JoystickFeatureType = {}
+---@alias CS.UnityEngine.InputSystem.Linux.JoystickFeatureType UnityEngine.InputSystem.Linux.JoystickFeatureType
+CS.UnityEngine.InputSystem.Linux.JoystickFeatureType = UnityEngine.InputSystem.Linux.JoystickFeatureType
+
+
+---@class UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Unknown UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field X UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Y UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Z UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field RotateX UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field RotateY UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field RotateZ UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Throttle UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Rudder UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Wheel UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Gas UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Brake UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Hat0X UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Hat0Y UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Hat1X UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Hat1Y UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Hat2X UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Hat2Y UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Hat3X UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Hat3Y UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@field Count UnityEngine.InputSystem.Linux.SDLAxisUsage
+UnityEngine.InputSystem.Linux.SDLAxisUsage = {}
+---@alias CS.UnityEngine.InputSystem.Linux.SDLAxisUsage UnityEngine.InputSystem.Linux.SDLAxisUsage
+CS.UnityEngine.InputSystem.Linux.SDLAxisUsage = UnityEngine.InputSystem.Linux.SDLAxisUsage
+
+
+---@class UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Unknown UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Trigger UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Thumb UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Thumb2 UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Top UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Top2 UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Pinkie UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Base UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Base2 UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Base3 UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Base4 UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Base5 UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Base6 UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Dead UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field A UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field B UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field X UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Y UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Z UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field TriggerLeft UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field TriggerRight UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field TriggerLeft2 UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field TriggerRight2 UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Select UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Start UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Mode UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field ThumbLeft UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field ThumbRight UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@field Count UnityEngine.InputSystem.Linux.SDLButtonUsage
+UnityEngine.InputSystem.Linux.SDLButtonUsage = {}
+---@alias CS.UnityEngine.InputSystem.Linux.SDLButtonUsage UnityEngine.InputSystem.Linux.SDLButtonUsage
+CS.UnityEngine.InputSystem.Linux.SDLButtonUsage = UnityEngine.InputSystem.Linux.SDLButtonUsage
+
+
+---@class UnityEngine.InputSystem.Linux.SDLFeatureDescriptor : System.ValueType
+---@field featureType UnityEngine.InputSystem.Linux.JoystickFeatureType
+---@field usageHint number
+---@field featureSize number
+---@field offset number
+---@field bit number
+---@field min number
+---@field max number
+UnityEngine.InputSystem.Linux.SDLFeatureDescriptor = {}
+---@alias CS.UnityEngine.InputSystem.Linux.SDLFeatureDescriptor UnityEngine.InputSystem.Linux.SDLFeatureDescriptor
+CS.UnityEngine.InputSystem.Linux.SDLFeatureDescriptor = UnityEngine.InputSystem.Linux.SDLFeatureDescriptor
+
+
+---@class UnityEngine.InputSystem.Linux.SDLDeviceDescriptor : System.Object
+---@field controls UnityEngine.InputSystem.Linux.SDLFeatureDescriptor[]
+UnityEngine.InputSystem.Linux.SDLDeviceDescriptor = {}
+---@alias CS.UnityEngine.InputSystem.Linux.SDLDeviceDescriptor UnityEngine.InputSystem.Linux.SDLDeviceDescriptor
+CS.UnityEngine.InputSystem.Linux.SDLDeviceDescriptor = UnityEngine.InputSystem.Linux.SDLDeviceDescriptor
+
+---@return UnityEngine.InputSystem.Linux.SDLDeviceDescriptor
+function UnityEngine.InputSystem.Linux.SDLDeviceDescriptor.New() end
+
+---@class UnityEngine.InputSystem.Linux.LinuxSupport : System.Object
+UnityEngine.InputSystem.Linux.LinuxSupport = {}
+---@alias CS.UnityEngine.InputSystem.Linux.LinuxSupport UnityEngine.InputSystem.Linux.LinuxSupport
+CS.UnityEngine.InputSystem.Linux.LinuxSupport = UnityEngine.InputSystem.Linux.LinuxSupport
+
+---@param usage UnityEngine.InputSystem.Linux.SDLAxisUsage
+---@return string
+function UnityEngine.InputSystem.Linux.LinuxSupport.GetAxisNameFromUsage(usage) end
+---@param usage UnityEngine.InputSystem.Linux.SDLButtonUsage
+---@return string
+function UnityEngine.InputSystem.Linux.LinuxSupport.GetButtonNameFromUsage(usage) end
+function UnityEngine.InputSystem.Linux.LinuxSupport.Initialize() end
+
+---@class UnityEngine.InputSystem.Linux.SDLLayoutBuilder : System.Object
+UnityEngine.InputSystem.Linux.SDLLayoutBuilder = {}
+---@alias CS.UnityEngine.InputSystem.Linux.SDLLayoutBuilder UnityEngine.InputSystem.Linux.SDLLayoutBuilder
+CS.UnityEngine.InputSystem.Linux.SDLLayoutBuilder = UnityEngine.InputSystem.Linux.SDLLayoutBuilder
+
+---@return UnityEngine.InputSystem.Linux.SDLLayoutBuilder
+function UnityEngine.InputSystem.Linux.SDLLayoutBuilder.New() end
+
+---@class UnityEngine.InputSystem.iOS.PrivacyDataUsage : System.Object
+---@field enabled boolean
+---@field usageDescription string
+UnityEngine.InputSystem.iOS.PrivacyDataUsage = {}
+---@alias CS.UnityEngine.InputSystem.iOS.PrivacyDataUsage UnityEngine.InputSystem.iOS.PrivacyDataUsage
+CS.UnityEngine.InputSystem.iOS.PrivacyDataUsage = UnityEngine.InputSystem.iOS.PrivacyDataUsage
+
+---@return UnityEngine.InputSystem.iOS.PrivacyDataUsage
+function UnityEngine.InputSystem.iOS.PrivacyDataUsage.New() end
+
+---@class UnityEngine.InputSystem.iOS.iOSGameController : UnityEngine.InputSystem.Gamepad
+UnityEngine.InputSystem.iOS.iOSGameController = {}
+---@alias CS.UnityEngine.InputSystem.iOS.iOSGameController UnityEngine.InputSystem.iOS.iOSGameController
+CS.UnityEngine.InputSystem.iOS.iOSGameController = UnityEngine.InputSystem.iOS.iOSGameController
+
+---@return UnityEngine.InputSystem.iOS.iOSGameController
+function UnityEngine.InputSystem.iOS.iOSGameController.New() end
+
+---@class UnityEngine.InputSystem.iOS.XboxOneGampadiOS : UnityEngine.InputSystem.XInput.XInputController
+UnityEngine.InputSystem.iOS.XboxOneGampadiOS = {}
+---@alias CS.UnityEngine.InputSystem.iOS.XboxOneGampadiOS UnityEngine.InputSystem.iOS.XboxOneGampadiOS
+CS.UnityEngine.InputSystem.iOS.XboxOneGampadiOS = UnityEngine.InputSystem.iOS.XboxOneGampadiOS
+
+---@return UnityEngine.InputSystem.iOS.XboxOneGampadiOS
+function UnityEngine.InputSystem.iOS.XboxOneGampadiOS.New() end
+
+---@class UnityEngine.InputSystem.iOS.DualShock4GampadiOS : UnityEngine.InputSystem.DualShock.DualShockGamepad
+UnityEngine.InputSystem.iOS.DualShock4GampadiOS = {}
+---@alias CS.UnityEngine.InputSystem.iOS.DualShock4GampadiOS UnityEngine.InputSystem.iOS.DualShock4GampadiOS
+CS.UnityEngine.InputSystem.iOS.DualShock4GampadiOS = UnityEngine.InputSystem.iOS.DualShock4GampadiOS
+
+---@return UnityEngine.InputSystem.iOS.DualShock4GampadiOS
+function UnityEngine.InputSystem.iOS.DualShock4GampadiOS.New() end
+
+---@class UnityEngine.InputSystem.iOS.DualSenseGampadiOS : UnityEngine.InputSystem.DualShock.DualShockGamepad
+UnityEngine.InputSystem.iOS.DualSenseGampadiOS = {}
+---@alias CS.UnityEngine.InputSystem.iOS.DualSenseGampadiOS UnityEngine.InputSystem.iOS.DualSenseGampadiOS
+CS.UnityEngine.InputSystem.iOS.DualSenseGampadiOS = UnityEngine.InputSystem.iOS.DualSenseGampadiOS
+
+---@return UnityEngine.InputSystem.iOS.DualSenseGampadiOS
+function UnityEngine.InputSystem.iOS.DualSenseGampadiOS.New() end
+
+---@class UnityEngine.InputSystem.iOS.iOSSupport : System.Object
+UnityEngine.InputSystem.iOS.iOSSupport = {}
+---@alias CS.UnityEngine.InputSystem.iOS.iOSSupport UnityEngine.InputSystem.iOS.iOSSupport
+CS.UnityEngine.InputSystem.iOS.iOSSupport = UnityEngine.InputSystem.iOS.iOSSupport
+
+function UnityEngine.InputSystem.iOS.iOSSupport.Initialize() end
+
+---@class UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field DpadUp UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field DpadDown UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field DpadLeft UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field DpadRight UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field LeftStick UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field RightStick UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field LeftShoulder UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field RightShoulder UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field LeftTrigger UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field RightTrigger UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field X UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field Y UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field A UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field B UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field Start UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@field Select UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+UnityEngine.InputSystem.iOS.LowLevel.iOSButton = {}
+---@alias CS.UnityEngine.InputSystem.iOS.LowLevel.iOSButton UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+CS.UnityEngine.InputSystem.iOS.LowLevel.iOSButton = UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+
+
+---@class UnityEngine.InputSystem.iOS.LowLevel.iOSAxis
+---@field LeftStickX UnityEngine.InputSystem.iOS.LowLevel.iOSAxis
+---@field LeftStickY UnityEngine.InputSystem.iOS.LowLevel.iOSAxis
+---@field RightStickX UnityEngine.InputSystem.iOS.LowLevel.iOSAxis
+---@field RightStickY UnityEngine.InputSystem.iOS.LowLevel.iOSAxis
+UnityEngine.InputSystem.iOS.LowLevel.iOSAxis = {}
+---@alias CS.UnityEngine.InputSystem.iOS.LowLevel.iOSAxis UnityEngine.InputSystem.iOS.LowLevel.iOSAxis
+CS.UnityEngine.InputSystem.iOS.LowLevel.iOSAxis = UnityEngine.InputSystem.iOS.LowLevel.iOSAxis
+
+
+---@class UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState : System.ValueType
+---@field kFormat UnityEngine.InputSystem.Utilities.FourCC
+---@field MaxButtons number
+---@field MaxAxis number
+---@field buttons number
+---@field buttonValues UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState.<buttonValues>e__FixedBuffer
+---@field axisValues UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState.<axisValues>e__FixedBuffer
+---@field format UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState = {}
+---@alias CS.UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState
+CS.UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState = UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState
+
+---@param button UnityEngine.InputSystem.iOS.LowLevel.iOSButton
+---@param value boolean
+---@param rawValue number
+---@return UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState
+function UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState:WithButton(button, value, rawValue) end
+---@param axis UnityEngine.InputSystem.iOS.LowLevel.iOSAxis
+---@param value number
+---@return UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState
+function UnityEngine.InputSystem.iOS.LowLevel.iOSGameControllerState:WithAxis(axis, value) end
+
+---@class UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus
+---@field NotDetermined UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus
+---@field Restricted UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus
+---@field Denied UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus
+---@field Authorized UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus
+UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus = {}
+---@alias CS.UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus
+CS.UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus = UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus
+
+
+---@class UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounterState : System.ValueType
+---@field kFormat UnityEngine.InputSystem.Utilities.FourCC
+---@field stepCounter number
+---@field format UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounterState = {}
+---@alias CS.UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounterState UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounterState
+CS.UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounterState = UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounterState
+
+
+---@class UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounter : UnityEngine.InputSystem.StepCounter
+---@field AuthorizationStatus UnityEngine.InputSystem.iOS.LowLevel.MotionAuthorizationStatus
+UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounter = {}
+---@alias CS.UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounter UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounter
+CS.UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounter = UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounter
+
+---@return UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounter
+function UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounter.New() end
+---@return boolean
+function UnityEngine.InputSystem.iOS.LowLevel.iOSStepCounter.IsAvailable() end
+
+---@class UnityEngine.InputSystem.HID.HID : UnityEngine.InputSystem.InputDevice
+---@field QueryHIDReportDescriptorDeviceCommandType UnityEngine.InputSystem.Utilities.FourCC
+---@field QueryHIDReportDescriptorSizeDeviceCommandType UnityEngine.InputSystem.Utilities.FourCC
+---@field QueryHIDParsedReportDescriptorDeviceCommandType UnityEngine.InputSystem.Utilities.FourCC
+---@field hidDescriptor UnityEngine.InputSystem.HID.HID.HIDDeviceDescriptor
+UnityEngine.InputSystem.HID.HID = {}
+---@alias CS.UnityEngine.InputSystem.HID.HID UnityEngine.InputSystem.HID.HID
+CS.UnityEngine.InputSystem.HID.HID = UnityEngine.InputSystem.HID.HID
+
+---@return UnityEngine.InputSystem.HID.HID
+function UnityEngine.InputSystem.HID.HID.New() end
+---@param usagePage UnityEngine.InputSystem.HID.HID.UsagePage
+---@return string
+function UnityEngine.InputSystem.HID.HID.UsagePageToString(usagePage) end
+---@param usagePage UnityEngine.InputSystem.HID.HID.UsagePage
+---@param usage number
+---@return string
+function UnityEngine.InputSystem.HID.HID.UsageToString(usagePage, usage) end
+
+---@class UnityEngine.InputSystem.HID.HIDParser : System.Object
+UnityEngine.InputSystem.HID.HIDParser = {}
+---@alias CS.UnityEngine.InputSystem.HID.HIDParser UnityEngine.InputSystem.HID.HIDParser
+CS.UnityEngine.InputSystem.HID.HIDParser = UnityEngine.InputSystem.HID.HIDParser
+
+---@overload fun(buffer: System.Byte[], ref_deviceDescriptor: UnityEngine.InputSystem.HID.HID.HIDDeviceDescriptor) : boolean, UnityEngine.InputSystem.HID.HID.HIDDeviceDescriptor
+---@param bufferPtr System.Byte*
+---@param bufferLength number
+---@param ref_deviceDescriptor UnityEngine.InputSystem.HID.HID.HIDDeviceDescriptor
+---@return boolean,UnityEngine.InputSystem.HID.HID.HIDDeviceDescriptor
+function UnityEngine.InputSystem.HID.HIDParser.ParseReportDescriptor(bufferPtr, bufferLength, ref_deviceDescriptor) end
+
+---@class UnityEngine.InputSystem.HID.HIDSupport : System.Object
+---@field supportedHIDUsages UnityEngine.InputSystem.Utilities.ReadOnlyArray
+UnityEngine.InputSystem.HID.HIDSupport = {}
+---@alias CS.UnityEngine.InputSystem.HID.HIDSupport UnityEngine.InputSystem.HID.HIDSupport
+CS.UnityEngine.InputSystem.HID.HIDSupport = UnityEngine.InputSystem.HID.HIDSupport
+
+
+---@class UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow : UnityEditor.EditorWindow
+UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow = {}
+---@alias CS.UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow
+CS.UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow = UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow
+
+---@return UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow
+function UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow.New() end
+---@param deviceId number
+---@param deviceDescription UnityEngine.InputSystem.Layouts.InputDeviceDescription
+function UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow.CreateOrShowExisting(deviceId, deviceDescription) end
+function UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow:Awake() end
+function UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow:OnDestroy() end
+function UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow:OnGUI() end
+function UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow:OnBeforeSerialize() end
+function UnityEngine.InputSystem.HID.Editor.HIDDescriptorWindow:OnAfterDeserialize() end
+
+---@class UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport : System.Object
+---@field enabled boolean
+UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport = {}
+---@alias CS.UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport
+CS.UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport = UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport
+
+function UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.Enable() end
+function UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.Disable() end
+
+---@class UnityEngine.InputSystem.EnhancedTouch.Finger : System.Object
+---@field screen UnityEngine.InputSystem.Touchscreen
+---@field index number
+---@field isActive boolean
+---@field screenPosition UnityEngine.Vector2
+---@field lastTouch UnityEngine.InputSystem.EnhancedTouch.Touch
+---@field currentTouch UnityEngine.InputSystem.EnhancedTouch.Touch
+---@field touchHistory UnityEngine.InputSystem.EnhancedTouch.TouchHistory
+UnityEngine.InputSystem.EnhancedTouch.Finger = {}
+---@alias CS.UnityEngine.InputSystem.EnhancedTouch.Finger UnityEngine.InputSystem.EnhancedTouch.Finger
+CS.UnityEngine.InputSystem.EnhancedTouch.Finger = UnityEngine.InputSystem.EnhancedTouch.Finger
+
+
+---@class UnityEngine.InputSystem.EnhancedTouch.Touch : System.ValueType
+---@field activeTouches UnityEngine.InputSystem.Utilities.ReadOnlyArray
+---@field fingers UnityEngine.InputSystem.Utilities.ReadOnlyArray
+---@field activeFingers UnityEngine.InputSystem.Utilities.ReadOnlyArray
+---@field screens System.Collections.Generic.IEnumerable
+---@field maxHistoryLengthPerFinger number
+---@field valid boolean
+---@field finger UnityEngine.InputSystem.EnhancedTouch.Finger
+---@field phase UnityEngine.InputSystem.TouchPhase
+---@field began boolean
+---@field inProgress boolean
+---@field ended boolean
+---@field touchId number
+---@field pressure number
+---@field radius UnityEngine.Vector2
+---@field startTime number
+---@field time number
+---@field screen UnityEngine.InputSystem.Touchscreen
+---@field screenPosition UnityEngine.Vector2
+---@field startScreenPosition UnityEngine.Vector2
+---@field delta UnityEngine.Vector2
+---@field tapCount number
+---@field isTap boolean
+---@field displayIndex number
+---@field isInProgress boolean
+---@field history UnityEngine.InputSystem.EnhancedTouch.TouchHistory
+UnityEngine.InputSystem.EnhancedTouch.Touch = {}
+---@alias CS.UnityEngine.InputSystem.EnhancedTouch.Touch UnityEngine.InputSystem.EnhancedTouch.Touch
+CS.UnityEngine.InputSystem.EnhancedTouch.Touch = UnityEngine.InputSystem.EnhancedTouch.Touch
+
+---@return string
+function UnityEngine.InputSystem.EnhancedTouch.Touch:ToString() end
+---@overload fun(self: UnityEngine.InputSystem.EnhancedTouch.Touch, other: UnityEngine.InputSystem.EnhancedTouch.Touch) : boolean
+---@param obj System.Object
+---@return boolean
+function UnityEngine.InputSystem.EnhancedTouch.Touch:Equals(obj) end
+---@return number
+function UnityEngine.InputSystem.EnhancedTouch.Touch:GetHashCode() end
+
+---@class UnityEngine.InputSystem.EnhancedTouch.TouchHistory : System.ValueType
+---@field Count number
+---@field Item UnityEngine.InputSystem.EnhancedTouch.Touch
+UnityEngine.InputSystem.EnhancedTouch.TouchHistory = {}
+---@alias CS.UnityEngine.InputSystem.EnhancedTouch.TouchHistory UnityEngine.InputSystem.EnhancedTouch.TouchHistory
+CS.UnityEngine.InputSystem.EnhancedTouch.TouchHistory = UnityEngine.InputSystem.EnhancedTouch.TouchHistory
+
+---@return System.Collections.Generic.IEnumerator
+function UnityEngine.InputSystem.EnhancedTouch.TouchHistory:GetEnumerator() end
+
+---@class UnityEngine.InputSystem.EnhancedTouch.TouchSimulation : UnityEngine.MonoBehaviour
+---@field instance UnityEngine.InputSystem.EnhancedTouch.TouchSimulation
+---@field simulatedTouchscreen UnityEngine.InputSystem.Touchscreen
+UnityEngine.InputSystem.EnhancedTouch.TouchSimulation = {}
+---@alias CS.UnityEngine.InputSystem.EnhancedTouch.TouchSimulation UnityEngine.InputSystem.EnhancedTouch.TouchSimulation
+CS.UnityEngine.InputSystem.EnhancedTouch.TouchSimulation = UnityEngine.InputSystem.EnhancedTouch.TouchSimulation
+
+function UnityEngine.InputSystem.EnhancedTouch.TouchSimulation.Enable() end
+function UnityEngine.InputSystem.EnhancedTouch.TouchSimulation.Disable() end
+function UnityEngine.InputSystem.EnhancedTouch.TouchSimulation.Destroy() end
+
+---@class UnityEngine.InputSystem.DualShock.DualShockGamepad : UnityEngine.InputSystem.Gamepad
+---@field current UnityEngine.InputSystem.DualShock.DualShockGamepad
+---@field touchpadButton UnityEngine.InputSystem.Controls.ButtonControl
+---@field optionsButton UnityEngine.InputSystem.Controls.ButtonControl
+---@field shareButton UnityEngine.InputSystem.Controls.ButtonControl
+---@field L1 UnityEngine.InputSystem.Controls.ButtonControl
+---@field R1 UnityEngine.InputSystem.Controls.ButtonControl
+---@field L2 UnityEngine.InputSystem.Controls.ButtonControl
+---@field R2 UnityEngine.InputSystem.Controls.ButtonControl
+---@field L3 UnityEngine.InputSystem.Controls.ButtonControl
+---@field R3 UnityEngine.InputSystem.Controls.ButtonControl
+UnityEngine.InputSystem.DualShock.DualShockGamepad = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.DualShockGamepad UnityEngine.InputSystem.DualShock.DualShockGamepad
+CS.UnityEngine.InputSystem.DualShock.DualShockGamepad = UnityEngine.InputSystem.DualShock.DualShockGamepad
+
+---@return UnityEngine.InputSystem.DualShock.DualShockGamepad
+function UnityEngine.InputSystem.DualShock.DualShockGamepad.New() end
+function UnityEngine.InputSystem.DualShock.DualShockGamepad:MakeCurrent() end
+---@param color UnityEngine.Color
+function UnityEngine.InputSystem.DualShock.DualShockGamepad:SetLightBarColor(color) end
+
+---@class UnityEngine.InputSystem.DualShock.DualSenseGamepadHID : UnityEngine.InputSystem.DualShock.DualShockGamepad
+---@field leftTriggerButton UnityEngine.InputSystem.Controls.ButtonControl
+---@field rightTriggerButton UnityEngine.InputSystem.Controls.ButtonControl
+---@field playStationButton UnityEngine.InputSystem.Controls.ButtonControl
+UnityEngine.InputSystem.DualShock.DualSenseGamepadHID = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.DualSenseGamepadHID UnityEngine.InputSystem.DualShock.DualSenseGamepadHID
+CS.UnityEngine.InputSystem.DualShock.DualSenseGamepadHID = UnityEngine.InputSystem.DualShock.DualSenseGamepadHID
+
+---@return UnityEngine.InputSystem.DualShock.DualSenseGamepadHID
+function UnityEngine.InputSystem.DualShock.DualSenseGamepadHID.New() end
+function UnityEngine.InputSystem.DualShock.DualSenseGamepadHID:PauseHaptics() end
+function UnityEngine.InputSystem.DualShock.DualSenseGamepadHID:ResetHaptics() end
+function UnityEngine.InputSystem.DualShock.DualSenseGamepadHID:ResumeHaptics() end
+---@param color UnityEngine.Color
+function UnityEngine.InputSystem.DualShock.DualSenseGamepadHID:SetLightBarColor(color) end
+---@param lowFrequency number
+---@param highFrequency number
+function UnityEngine.InputSystem.DualShock.DualSenseGamepadHID:SetMotorSpeeds(lowFrequency, highFrequency) end
+---@param lowFrequency System.Nullable
+---@param highFrequency System.Nullable
+---@param color System.Nullable
+---@return boolean
+function UnityEngine.InputSystem.DualShock.DualSenseGamepadHID:SetMotorSpeedsAndLightBarColor(lowFrequency, highFrequency, color) end
+function UnityEngine.InputSystem.DualShock.DualSenseGamepadHID:OnNextUpdate() end
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+function UnityEngine.InputSystem.DualShock.DualSenseGamepadHID:OnStateEvent(eventPtr) end
+---@param control UnityEngine.InputSystem.InputControl
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+---@param ref_offset number
+---@return boolean,number
+function UnityEngine.InputSystem.DualShock.DualSenseGamepadHID:GetStateOffsetForEvent(control, eventPtr, ref_offset) end
+
+---@class UnityEngine.InputSystem.DualShock.DualShock4GamepadHID : UnityEngine.InputSystem.DualShock.DualShockGamepad
+---@field leftTriggerButton UnityEngine.InputSystem.Controls.ButtonControl
+---@field rightTriggerButton UnityEngine.InputSystem.Controls.ButtonControl
+---@field playStationButton UnityEngine.InputSystem.Controls.ButtonControl
+UnityEngine.InputSystem.DualShock.DualShock4GamepadHID = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.DualShock4GamepadHID UnityEngine.InputSystem.DualShock.DualShock4GamepadHID
+CS.UnityEngine.InputSystem.DualShock.DualShock4GamepadHID = UnityEngine.InputSystem.DualShock.DualShock4GamepadHID
+
+---@return UnityEngine.InputSystem.DualShock.DualShock4GamepadHID
+function UnityEngine.InputSystem.DualShock.DualShock4GamepadHID.New() end
+function UnityEngine.InputSystem.DualShock.DualShock4GamepadHID:PauseHaptics() end
+function UnityEngine.InputSystem.DualShock.DualShock4GamepadHID:ResetHaptics() end
+function UnityEngine.InputSystem.DualShock.DualShock4GamepadHID:ResumeHaptics() end
+---@param color UnityEngine.Color
+function UnityEngine.InputSystem.DualShock.DualShock4GamepadHID:SetLightBarColor(color) end
+---@param lowFrequency number
+---@param highFrequency number
+function UnityEngine.InputSystem.DualShock.DualShock4GamepadHID:SetMotorSpeeds(lowFrequency, highFrequency) end
+---@param lowFrequency number
+---@param highFrequency number
+---@param color UnityEngine.Color
+---@return boolean
+function UnityEngine.InputSystem.DualShock.DualShock4GamepadHID:SetMotorSpeedsAndLightBarColor(lowFrequency, highFrequency, color) end
+function UnityEngine.InputSystem.DualShock.DualShock4GamepadHID:OnNextUpdate() end
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+function UnityEngine.InputSystem.DualShock.DualShock4GamepadHID:OnStateEvent(eventPtr) end
+---@param control UnityEngine.InputSystem.InputControl
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+---@param ref_offset number
+---@return boolean,number
+function UnityEngine.InputSystem.DualShock.DualShock4GamepadHID:GetStateOffsetForEvent(control, eventPtr, ref_offset) end
+
+---@class UnityEngine.InputSystem.DualShock.DualShock3GamepadHID : UnityEngine.InputSystem.DualShock.DualShockGamepad
+---@field leftTriggerButton UnityEngine.InputSystem.Controls.ButtonControl
+---@field rightTriggerButton UnityEngine.InputSystem.Controls.ButtonControl
+---@field playStationButton UnityEngine.InputSystem.Controls.ButtonControl
+UnityEngine.InputSystem.DualShock.DualShock3GamepadHID = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.DualShock3GamepadHID UnityEngine.InputSystem.DualShock.DualShock3GamepadHID
+CS.UnityEngine.InputSystem.DualShock.DualShock3GamepadHID = UnityEngine.InputSystem.DualShock.DualShock3GamepadHID
+
+---@return UnityEngine.InputSystem.DualShock.DualShock3GamepadHID
+function UnityEngine.InputSystem.DualShock.DualShock3GamepadHID.New() end
+
+---@class UnityEngine.InputSystem.DualShock.DualShockSupport : System.Object
+UnityEngine.InputSystem.DualShock.DualShockSupport = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.DualShockSupport UnityEngine.InputSystem.DualShock.DualShockSupport
+CS.UnityEngine.InputSystem.DualShock.DualShockSupport = UnityEngine.InputSystem.DualShock.DualShockSupport
+
+function UnityEngine.InputSystem.DualShock.DualShockSupport.Initialize() end
+
+---@class UnityEngine.InputSystem.DualShock.IDualShockHaptics
+UnityEngine.InputSystem.DualShock.IDualShockHaptics = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.IDualShockHaptics UnityEngine.InputSystem.DualShock.IDualShockHaptics
+CS.UnityEngine.InputSystem.DualShock.IDualShockHaptics = UnityEngine.InputSystem.DualShock.IDualShockHaptics
+
+---@param color UnityEngine.Color
+function UnityEngine.InputSystem.DualShock.IDualShockHaptics:SetLightBarColor(color) end
+
+---@class UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDInputReport : System.ValueType
+---@field Format UnityEngine.InputSystem.Utilities.FourCC
+---@field leftStickX number
+---@field leftStickY number
+---@field rightStickX number
+---@field rightStickY number
+---@field leftTrigger number
+---@field rightTrigger number
+---@field buttons0 number
+---@field buttons1 number
+---@field buttons2 number
+---@field format UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDInputReport = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDInputReport UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDInputReport
+CS.UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDInputReport = UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDInputReport
+
+
+---@class UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDOutputReportPayload : System.ValueType
+---@field enableFlags1 number
+---@field enableFlags2 number
+---@field highFrequencyMotorSpeed number
+---@field lowFrequencyMotorSpeed number
+---@field redColor number
+---@field greenColor number
+---@field blueColor number
+UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDOutputReportPayload = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDOutputReportPayload UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDOutputReportPayload
+CS.UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDOutputReportPayload = UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDOutputReportPayload
+
+
+---@class UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDUSBOutputReport : System.ValueType
+---@field baseCommand UnityEngine.InputSystem.LowLevel.InputDeviceCommand
+---@field reportId number
+---@field payload UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDOutputReportPayload
+---@field Type UnityEngine.InputSystem.Utilities.FourCC
+---@field typeStatic UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDUSBOutputReport = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDUSBOutputReport UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDUSBOutputReport
+CS.UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDUSBOutputReport = UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDUSBOutputReport
+
+---@param payload UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDOutputReportPayload
+---@param outputReportSize number
+---@return UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDUSBOutputReport
+function UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDUSBOutputReport.Create(payload, outputReportSize) end
+
+---@class UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDBluetoothOutputReport : System.ValueType
+---@field baseCommand UnityEngine.InputSystem.LowLevel.InputDeviceCommand
+---@field reportId number
+---@field tag1 number
+---@field tag2 number
+---@field payload UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDOutputReportPayload
+---@field crc32 number
+---@field rawData UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDBluetoothOutputReport.<rawData>e__FixedBuffer
+---@field Type UnityEngine.InputSystem.Utilities.FourCC
+---@field typeStatic UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDBluetoothOutputReport = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDBluetoothOutputReport UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDBluetoothOutputReport
+CS.UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDBluetoothOutputReport = UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDBluetoothOutputReport
+
+---@param payload UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDOutputReportPayload
+---@param outputSequenceId number
+---@param outputReportSize number
+---@return UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDBluetoothOutputReport
+function UnityEngine.InputSystem.DualShock.LowLevel.DualSenseHIDBluetoothOutputReport.Create(payload, outputSequenceId, outputReportSize) end
+
+---@class UnityEngine.InputSystem.DualShock.LowLevel.DualShock4HIDInputReport : System.ValueType
+---@field Format UnityEngine.InputSystem.Utilities.FourCC
+---@field leftStickX number
+---@field leftStickY number
+---@field rightStickX number
+---@field rightStickY number
+---@field buttons1 number
+---@field buttons2 number
+---@field buttons3 number
+---@field leftTrigger number
+---@field rightTrigger number
+---@field format UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.DualShock.LowLevel.DualShock4HIDInputReport = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.LowLevel.DualShock4HIDInputReport UnityEngine.InputSystem.DualShock.LowLevel.DualShock4HIDInputReport
+CS.UnityEngine.InputSystem.DualShock.LowLevel.DualShock4HIDInputReport = UnityEngine.InputSystem.DualShock.LowLevel.DualShock4HIDInputReport
+
+
+---@class UnityEngine.InputSystem.DualShock.LowLevel.DualShock3HIDInputReport : System.ValueType
+---@field buttons1 number
+---@field buttons2 number
+---@field buttons3 number
+---@field leftStickX number
+---@field leftStickY number
+---@field rightStickX number
+---@field rightStickY number
+---@field leftTrigger number
+---@field rightTrigger number
+---@field format UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.DualShock.LowLevel.DualShock3HIDInputReport = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.LowLevel.DualShock3HIDInputReport UnityEngine.InputSystem.DualShock.LowLevel.DualShock3HIDInputReport
+CS.UnityEngine.InputSystem.DualShock.LowLevel.DualShock3HIDInputReport = UnityEngine.InputSystem.DualShock.LowLevel.DualShock3HIDInputReport
+
+
+---@class UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport : System.ValueType
+---@field baseCommand UnityEngine.InputSystem.LowLevel.InputDeviceCommand
+---@field reportId number
+---@field flags number
+---@field unknown1 UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport.<unknown1>e__FixedBuffer
+---@field highFrequencyMotorSpeed number
+---@field lowFrequencyMotorSpeed number
+---@field redColor number
+---@field greenColor number
+---@field blueColor number
+---@field unknown2 UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport.<unknown2>e__FixedBuffer
+---@field Type UnityEngine.InputSystem.Utilities.FourCC
+---@field typeStatic UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport = {}
+---@alias CS.UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport
+CS.UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport = UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport
+
+---@param outputReportSize number
+---@return UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport
+function UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport.Create(outputReportSize) end
+---@param lowFreq number
+---@param highFreq number
+function UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport:SetMotorSpeeds(lowFreq, highFreq) end
+---@param color UnityEngine.Color
+function UnityEngine.InputSystem.DualShock.LowLevel.DualShockHIDOutputReport:SetColor(color) end
+
+---@class UnityEngine.InputSystem.Android.AndroidGamepad : UnityEngine.InputSystem.Gamepad
+UnityEngine.InputSystem.Android.AndroidGamepad = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidGamepad UnityEngine.InputSystem.Android.AndroidGamepad
+CS.UnityEngine.InputSystem.Android.AndroidGamepad = UnityEngine.InputSystem.Android.AndroidGamepad
+
+---@return UnityEngine.InputSystem.Android.AndroidGamepad
+function UnityEngine.InputSystem.Android.AndroidGamepad.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidGamepadWithDpadAxes : UnityEngine.InputSystem.Android.AndroidGamepad
+UnityEngine.InputSystem.Android.AndroidGamepadWithDpadAxes = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidGamepadWithDpadAxes UnityEngine.InputSystem.Android.AndroidGamepadWithDpadAxes
+CS.UnityEngine.InputSystem.Android.AndroidGamepadWithDpadAxes = UnityEngine.InputSystem.Android.AndroidGamepadWithDpadAxes
+
+---@return UnityEngine.InputSystem.Android.AndroidGamepadWithDpadAxes
+function UnityEngine.InputSystem.Android.AndroidGamepadWithDpadAxes.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidGamepadWithDpadButtons : UnityEngine.InputSystem.Android.AndroidGamepad
+UnityEngine.InputSystem.Android.AndroidGamepadWithDpadButtons = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidGamepadWithDpadButtons UnityEngine.InputSystem.Android.AndroidGamepadWithDpadButtons
+CS.UnityEngine.InputSystem.Android.AndroidGamepadWithDpadButtons = UnityEngine.InputSystem.Android.AndroidGamepadWithDpadButtons
+
+---@return UnityEngine.InputSystem.Android.AndroidGamepadWithDpadButtons
+function UnityEngine.InputSystem.Android.AndroidGamepadWithDpadButtons.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidJoystick : UnityEngine.InputSystem.Joystick
+UnityEngine.InputSystem.Android.AndroidJoystick = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidJoystick UnityEngine.InputSystem.Android.AndroidJoystick
+CS.UnityEngine.InputSystem.Android.AndroidJoystick = UnityEngine.InputSystem.Android.AndroidJoystick
+
+---@return UnityEngine.InputSystem.Android.AndroidJoystick
+function UnityEngine.InputSystem.Android.AndroidJoystick.New() end
+
+---@class UnityEngine.InputSystem.Android.DualShock4GamepadAndroid : UnityEngine.InputSystem.DualShock.DualShockGamepad
+UnityEngine.InputSystem.Android.DualShock4GamepadAndroid = {}
+---@alias CS.UnityEngine.InputSystem.Android.DualShock4GamepadAndroid UnityEngine.InputSystem.Android.DualShock4GamepadAndroid
+CS.UnityEngine.InputSystem.Android.DualShock4GamepadAndroid = UnityEngine.InputSystem.Android.DualShock4GamepadAndroid
+
+---@return UnityEngine.InputSystem.Android.DualShock4GamepadAndroid
+function UnityEngine.InputSystem.Android.DualShock4GamepadAndroid.New() end
+
+---@class UnityEngine.InputSystem.Android.XboxOneGamepadAndroid : UnityEngine.InputSystem.XInput.XInputController
+UnityEngine.InputSystem.Android.XboxOneGamepadAndroid = {}
+---@alias CS.UnityEngine.InputSystem.Android.XboxOneGamepadAndroid UnityEngine.InputSystem.Android.XboxOneGamepadAndroid
+CS.UnityEngine.InputSystem.Android.XboxOneGamepadAndroid = UnityEngine.InputSystem.Android.XboxOneGamepadAndroid
+
+---@return UnityEngine.InputSystem.Android.XboxOneGamepadAndroid
+function UnityEngine.InputSystem.Android.XboxOneGamepadAndroid.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidAccelerometer : UnityEngine.InputSystem.Accelerometer
+UnityEngine.InputSystem.Android.AndroidAccelerometer = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidAccelerometer UnityEngine.InputSystem.Android.AndroidAccelerometer
+CS.UnityEngine.InputSystem.Android.AndroidAccelerometer = UnityEngine.InputSystem.Android.AndroidAccelerometer
+
+---@return UnityEngine.InputSystem.Android.AndroidAccelerometer
+function UnityEngine.InputSystem.Android.AndroidAccelerometer.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidMagneticFieldSensor : UnityEngine.InputSystem.MagneticFieldSensor
+UnityEngine.InputSystem.Android.AndroidMagneticFieldSensor = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidMagneticFieldSensor UnityEngine.InputSystem.Android.AndroidMagneticFieldSensor
+CS.UnityEngine.InputSystem.Android.AndroidMagneticFieldSensor = UnityEngine.InputSystem.Android.AndroidMagneticFieldSensor
+
+---@return UnityEngine.InputSystem.Android.AndroidMagneticFieldSensor
+function UnityEngine.InputSystem.Android.AndroidMagneticFieldSensor.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidGyroscope : UnityEngine.InputSystem.Gyroscope
+UnityEngine.InputSystem.Android.AndroidGyroscope = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidGyroscope UnityEngine.InputSystem.Android.AndroidGyroscope
+CS.UnityEngine.InputSystem.Android.AndroidGyroscope = UnityEngine.InputSystem.Android.AndroidGyroscope
+
+---@return UnityEngine.InputSystem.Android.AndroidGyroscope
+function UnityEngine.InputSystem.Android.AndroidGyroscope.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidLightSensor : UnityEngine.InputSystem.LightSensor
+UnityEngine.InputSystem.Android.AndroidLightSensor = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidLightSensor UnityEngine.InputSystem.Android.AndroidLightSensor
+CS.UnityEngine.InputSystem.Android.AndroidLightSensor = UnityEngine.InputSystem.Android.AndroidLightSensor
+
+---@return UnityEngine.InputSystem.Android.AndroidLightSensor
+function UnityEngine.InputSystem.Android.AndroidLightSensor.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidPressureSensor : UnityEngine.InputSystem.PressureSensor
+UnityEngine.InputSystem.Android.AndroidPressureSensor = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidPressureSensor UnityEngine.InputSystem.Android.AndroidPressureSensor
+CS.UnityEngine.InputSystem.Android.AndroidPressureSensor = UnityEngine.InputSystem.Android.AndroidPressureSensor
+
+---@return UnityEngine.InputSystem.Android.AndroidPressureSensor
+function UnityEngine.InputSystem.Android.AndroidPressureSensor.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidProximity : UnityEngine.InputSystem.ProximitySensor
+UnityEngine.InputSystem.Android.AndroidProximity = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidProximity UnityEngine.InputSystem.Android.AndroidProximity
+CS.UnityEngine.InputSystem.Android.AndroidProximity = UnityEngine.InputSystem.Android.AndroidProximity
+
+---@return UnityEngine.InputSystem.Android.AndroidProximity
+function UnityEngine.InputSystem.Android.AndroidProximity.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidGravitySensor : UnityEngine.InputSystem.GravitySensor
+UnityEngine.InputSystem.Android.AndroidGravitySensor = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidGravitySensor UnityEngine.InputSystem.Android.AndroidGravitySensor
+CS.UnityEngine.InputSystem.Android.AndroidGravitySensor = UnityEngine.InputSystem.Android.AndroidGravitySensor
+
+---@return UnityEngine.InputSystem.Android.AndroidGravitySensor
+function UnityEngine.InputSystem.Android.AndroidGravitySensor.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidLinearAccelerationSensor : UnityEngine.InputSystem.LinearAccelerationSensor
+UnityEngine.InputSystem.Android.AndroidLinearAccelerationSensor = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidLinearAccelerationSensor UnityEngine.InputSystem.Android.AndroidLinearAccelerationSensor
+CS.UnityEngine.InputSystem.Android.AndroidLinearAccelerationSensor = UnityEngine.InputSystem.Android.AndroidLinearAccelerationSensor
+
+---@return UnityEngine.InputSystem.Android.AndroidLinearAccelerationSensor
+function UnityEngine.InputSystem.Android.AndroidLinearAccelerationSensor.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidRotationVector : UnityEngine.InputSystem.AttitudeSensor
+UnityEngine.InputSystem.Android.AndroidRotationVector = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidRotationVector UnityEngine.InputSystem.Android.AndroidRotationVector
+CS.UnityEngine.InputSystem.Android.AndroidRotationVector = UnityEngine.InputSystem.Android.AndroidRotationVector
+
+---@return UnityEngine.InputSystem.Android.AndroidRotationVector
+function UnityEngine.InputSystem.Android.AndroidRotationVector.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidRelativeHumidity : UnityEngine.InputSystem.HumiditySensor
+UnityEngine.InputSystem.Android.AndroidRelativeHumidity = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidRelativeHumidity UnityEngine.InputSystem.Android.AndroidRelativeHumidity
+CS.UnityEngine.InputSystem.Android.AndroidRelativeHumidity = UnityEngine.InputSystem.Android.AndroidRelativeHumidity
+
+---@return UnityEngine.InputSystem.Android.AndroidRelativeHumidity
+function UnityEngine.InputSystem.Android.AndroidRelativeHumidity.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidAmbientTemperature : UnityEngine.InputSystem.AmbientTemperatureSensor
+UnityEngine.InputSystem.Android.AndroidAmbientTemperature = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidAmbientTemperature UnityEngine.InputSystem.Android.AndroidAmbientTemperature
+CS.UnityEngine.InputSystem.Android.AndroidAmbientTemperature = UnityEngine.InputSystem.Android.AndroidAmbientTemperature
+
+---@return UnityEngine.InputSystem.Android.AndroidAmbientTemperature
+function UnityEngine.InputSystem.Android.AndroidAmbientTemperature.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidGameRotationVector : UnityEngine.InputSystem.AttitudeSensor
+UnityEngine.InputSystem.Android.AndroidGameRotationVector = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidGameRotationVector UnityEngine.InputSystem.Android.AndroidGameRotationVector
+CS.UnityEngine.InputSystem.Android.AndroidGameRotationVector = UnityEngine.InputSystem.Android.AndroidGameRotationVector
+
+---@return UnityEngine.InputSystem.Android.AndroidGameRotationVector
+function UnityEngine.InputSystem.Android.AndroidGameRotationVector.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidStepCounter : UnityEngine.InputSystem.StepCounter
+UnityEngine.InputSystem.Android.AndroidStepCounter = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidStepCounter UnityEngine.InputSystem.Android.AndroidStepCounter
+CS.UnityEngine.InputSystem.Android.AndroidStepCounter = UnityEngine.InputSystem.Android.AndroidStepCounter
+
+---@return UnityEngine.InputSystem.Android.AndroidStepCounter
+function UnityEngine.InputSystem.Android.AndroidStepCounter.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidHingeAngle : UnityEngine.InputSystem.HingeAngle
+UnityEngine.InputSystem.Android.AndroidHingeAngle = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidHingeAngle UnityEngine.InputSystem.Android.AndroidHingeAngle
+CS.UnityEngine.InputSystem.Android.AndroidHingeAngle = UnityEngine.InputSystem.Android.AndroidHingeAngle
+
+---@return UnityEngine.InputSystem.Android.AndroidHingeAngle
+function UnityEngine.InputSystem.Android.AndroidHingeAngle.New() end
+
+---@class UnityEngine.InputSystem.Android.AndroidSupport : System.Object
+UnityEngine.InputSystem.Android.AndroidSupport = {}
+---@alias CS.UnityEngine.InputSystem.Android.AndroidSupport UnityEngine.InputSystem.Android.AndroidSupport
+CS.UnityEngine.InputSystem.Android.AndroidSupport = UnityEngine.InputSystem.Android.AndroidSupport
+
+---@return UnityEngine.InputSystem.Android.AndroidSupport
+function UnityEngine.InputSystem.Android.AndroidSupport.New() end
+function UnityEngine.InputSystem.Android.AndroidSupport.Initialize() end
+
+---@class UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field X UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Y UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Pressure UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Size UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field TouchMajor UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field TouchMinor UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field ToolMajor UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field ToolMinor UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Orientation UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Vscroll UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Hscroll UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Z UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Rx UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Ry UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Rz UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field HatX UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field HatY UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Ltrigger UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Rtrigger UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Throttle UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Rudder UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Wheel UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Gas UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Brake UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Distance UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Tilt UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic1 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic2 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic3 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic4 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic5 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic6 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic7 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic8 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic9 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic10 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic11 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic12 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic13 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic14 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic15 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@field Generic16 UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+UnityEngine.InputSystem.Android.LowLevel.AndroidAxis = {}
+---@alias CS.UnityEngine.InputSystem.Android.LowLevel.AndroidAxis UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+CS.UnityEngine.InputSystem.Android.LowLevel.AndroidAxis = UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+
+
+---@class UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState : System.ValueType
+---@field MaxAxes number
+---@field MaxButtons number
+---@field kFormat UnityEngine.InputSystem.Utilities.FourCC
+---@field buttons UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState.<buttons>e__FixedBuffer
+---@field axis UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState.<axis>e__FixedBuffer
+---@field format UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState = {}
+---@alias CS.UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState
+CS.UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState = UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState
+
+---@param code UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@param value boolean
+---@return UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState
+function UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState:WithButton(code, value) end
+---@param axis UnityEngine.InputSystem.Android.LowLevel.AndroidAxis
+---@param value number
+---@return UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState
+function UnityEngine.InputSystem.Android.LowLevel.AndroidGameControllerState:WithAxis(axis, value) end
+
+---@class UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+---@field Keyboard UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+---@field Dpad UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+---@field Gamepad UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+---@field Touchscreen UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+---@field Mouse UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+---@field Stylus UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+---@field Trackball UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+---@field Touchpad UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+---@field Joystick UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource = {}
+---@alias CS.UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+CS.UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource = UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+
+
+---@class UnityEngine.InputSystem.Android.LowLevel.AndroidDeviceCapabilities : System.ValueType
+---@field deviceDescriptor string
+---@field productId number
+---@field vendorId number
+---@field isVirtual boolean
+---@field motionAxes UnityEngine.InputSystem.Android.LowLevel.AndroidAxis[]
+---@field inputSources UnityEngine.InputSystem.Android.LowLevel.AndroidInputSource
+UnityEngine.InputSystem.Android.LowLevel.AndroidDeviceCapabilities = {}
+---@alias CS.UnityEngine.InputSystem.Android.LowLevel.AndroidDeviceCapabilities UnityEngine.InputSystem.Android.LowLevel.AndroidDeviceCapabilities
+CS.UnityEngine.InputSystem.Android.LowLevel.AndroidDeviceCapabilities = UnityEngine.InputSystem.Android.LowLevel.AndroidDeviceCapabilities
+
+---@param json string
+---@return UnityEngine.InputSystem.Android.LowLevel.AndroidDeviceCapabilities
+function UnityEngine.InputSystem.Android.LowLevel.AndroidDeviceCapabilities.FromJson(json) end
+---@return string
+function UnityEngine.InputSystem.Android.LowLevel.AndroidDeviceCapabilities:ToJson() end
+---@return string
+function UnityEngine.InputSystem.Android.LowLevel.AndroidDeviceCapabilities:ToString() end
+
+---@class UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Unknown UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field SoftLeft UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field SoftRight UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Home UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Back UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Call UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Endcall UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Alpha0 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Alpha1 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Alpha2 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Alpha3 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Alpha4 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Alpha5 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Alpha6 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Alpha7 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Alpha8 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Alpha9 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Star UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Pound UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field DpadUp UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field DpadDown UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field DpadLeft UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field DpadRight UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field DpadCenter UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field VolumeUp UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field VolumeDown UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Power UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Camera UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Clear UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field A UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field B UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field C UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field D UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field E UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field G UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field H UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field I UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field J UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field K UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field L UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field M UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field N UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field O UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field P UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Q UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field R UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field S UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field T UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field U UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field V UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field W UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field X UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Y UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Z UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Comma UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Period UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field AltLeft UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field AltRight UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ShiftLeft UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ShiftRight UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Tab UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Space UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Sym UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Explorer UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Envelope UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Enter UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Del UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Grave UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Minus UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Equals UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field LeftBracket UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field RightBracket UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Backslash UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Semicolon UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Apostrophe UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Slash UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field At UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Num UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Headsethook UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Focus UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Plus UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Menu UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Notification UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Search UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaPlayPause UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaStop UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaNext UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaPrevious UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaRewind UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaFastForward UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Mute UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field PageUp UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field PageDown UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Pictsymbols UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field SwitchCharset UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonA UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonB UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonC UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonX UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonY UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonZ UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonL1 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonR1 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonL2 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonR2 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonThumbl UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonThumbr UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonStart UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonSelect UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ButtonMode UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Escape UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ForwardDel UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field CtrlLeft UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field CtrlRight UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field CapsLock UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ScrollLock UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MetaLeft UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MetaRight UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Function UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Sysrq UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Break UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MoveHome UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MoveEnd UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Insert UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Forward UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaPlay UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaPause UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaClose UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaEject UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MediaRecord UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F1 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F2 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F3 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F4 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F5 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F6 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F7 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F8 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F9 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F10 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F11 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field F12 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumLock UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Numpad0 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Numpad1 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Numpad2 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Numpad3 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Numpad4 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Numpad5 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Numpad6 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Numpad7 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Numpad8 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Numpad9 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumpadDivide UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumpadMultiply UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumpadSubtract UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumpadAdd UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumpadDot UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumpadComma UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumpadEnter UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumpadEquals UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumpadLeftParen UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field NumpadRightParen UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field VolumeMute UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Info UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ChannelUp UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ChannelDown UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ZoomIn UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ZoomOut UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Tv UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Window UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Guide UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Dvr UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Bookmark UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Captions UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Settings UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field TvPower UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field TvInput UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field StbPower UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field StbInput UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field AvrPower UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field AvrInput UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ProgRed UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ProgGreen UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ProgYellow UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ProgBlue UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field AppSwitch UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button1 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button2 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button3 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button4 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button5 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button6 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button7 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button8 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button9 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button10 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button11 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button12 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button13 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button14 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button15 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Button16 UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field LanguageSwitch UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field MannerMode UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Mode3D UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Contacts UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Calendar UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Music UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Calculator UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field ZenkakuHankaku UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Eisu UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Muhenkan UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Henkan UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field KatakanaHiragana UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Yen UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Ro UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Kana UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+---@field Assist UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode = {}
+---@alias CS.UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+CS.UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode = UnityEngine.InputSystem.Android.LowLevel.AndroidKeyCode
+
+
+---@class UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field None UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field Accelerometer UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field MagneticField UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field Orientation UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field Gyroscope UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field Light UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field Pressure UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field Temperature UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field Proximity UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field Gravity UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field LinearAcceleration UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field RotationVector UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field RelativeHumidity UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field AmbientTemperature UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field MagneticFieldUncalibrated UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field GameRotationVector UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field GyroscopeUncalibrated UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field SignificantMotion UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field StepDetector UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field StepCounter UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field GeomagneticRotationVector UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field HeartRate UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field Pose6DOF UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field StationaryDetect UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field MotionDetect UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field HeartBeat UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field LowLatencyOffBodyDetect UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field AccelerometerUncalibrated UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+---@field HingeAngle UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType = {}
+---@alias CS.UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+CS.UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType = UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+
+
+---@class UnityEngine.InputSystem.Android.LowLevel.AndroidSensorCapabilities : System.ValueType
+---@field sensorType UnityEngine.InputSystem.Android.LowLevel.AndroidSensorType
+UnityEngine.InputSystem.Android.LowLevel.AndroidSensorCapabilities = {}
+---@alias CS.UnityEngine.InputSystem.Android.LowLevel.AndroidSensorCapabilities UnityEngine.InputSystem.Android.LowLevel.AndroidSensorCapabilities
+CS.UnityEngine.InputSystem.Android.LowLevel.AndroidSensorCapabilities = UnityEngine.InputSystem.Android.LowLevel.AndroidSensorCapabilities
+
+---@param json string
+---@return UnityEngine.InputSystem.Android.LowLevel.AndroidSensorCapabilities
+function UnityEngine.InputSystem.Android.LowLevel.AndroidSensorCapabilities.FromJson(json) end
+---@return string
+function UnityEngine.InputSystem.Android.LowLevel.AndroidSensorCapabilities:ToJson() end
+---@return string
+function UnityEngine.InputSystem.Android.LowLevel.AndroidSensorCapabilities:ToString() end
+
+---@class UnityEngine.InputSystem.Android.LowLevel.AndroidSensorState : System.ValueType
+---@field kFormat UnityEngine.InputSystem.Utilities.FourCC
+---@field data UnityEngine.InputSystem.Android.LowLevel.AndroidSensorState.<data>e__FixedBuffer
+---@field format UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.Android.LowLevel.AndroidSensorState = {}
+---@alias CS.UnityEngine.InputSystem.Android.LowLevel.AndroidSensorState UnityEngine.InputSystem.Android.LowLevel.AndroidSensorState
+CS.UnityEngine.InputSystem.Android.LowLevel.AndroidSensorState = UnityEngine.InputSystem.Android.LowLevel.AndroidSensorState
+
+---@param data System.Single[]
+---@return UnityEngine.InputSystem.Android.LowLevel.AndroidSensorState
+function UnityEngine.InputSystem.Android.LowLevel.AndroidSensorState:WithData(data) end
+
+---@class UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateDirectionProcessor : UnityEngine.InputSystem.Processors.CompensateDirectionProcessor
+UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateDirectionProcessor = {}
+---@alias CS.UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateDirectionProcessor UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateDirectionProcessor
+CS.UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateDirectionProcessor = UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateDirectionProcessor
+
+---@return UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateDirectionProcessor
+function UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateDirectionProcessor.New() end
+---@param vector UnityEngine.Vector3
+---@param control UnityEngine.InputSystem.InputControl
+---@return UnityEngine.Vector3
+function UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateDirectionProcessor:Process(vector, control) end
+
+---@class UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateRotationProcessor : UnityEngine.InputSystem.Processors.CompensateRotationProcessor
+UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateRotationProcessor = {}
+---@alias CS.UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateRotationProcessor UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateRotationProcessor
+CS.UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateRotationProcessor = UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateRotationProcessor
+
+---@return UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateRotationProcessor
+function UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateRotationProcessor.New() end
+---@param value UnityEngine.Quaternion
+---@param control UnityEngine.InputSystem.InputControl
+---@return UnityEngine.Quaternion
+function UnityEngine.InputSystem.Android.LowLevel.AndroidCompensateRotationProcessor:Process(value, control) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic : System.Object
+---@field kEventName string
+---@field kMaxEventsPerHour number
+---@field kMaxNumberOfElements number
+---@field info UnityEngine.InputSystem.InputAnalytics.InputAnalyticInfo
+UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic
+CS.UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic = UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic
+
+---@param kind UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic.Data.Kind
+---@return UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic.New(kind) end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:RegisterActionMapEdit() end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:RegisterActionEdit() end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:RegisterBindingEdit() end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:RegisterControlSchemeEdit() end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:RegisterEditorFocusIn() end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:RegisterEditorFocusOut() end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:RegisterExplicitSave() end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:RegisterAutoSave() end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:RegisterReset() end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:Begin() end
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:End() end
+---@param out_data UnityEngine.Analytics.IAnalytic.IData
+---@param out_error System.Exception
+---@return boolean,UnityEngine.Analytics.IAnalytic.IData,System.Exception
+function UnityEngine.InputSystem.Editor.InputActionsEditorSessionAnalytic:TryGatherData(out_data, out_error) end
+
+---@class UnityEngine.InputSystem.Editor.InputBuildAnalytic : System.Object
+---@field kEventName string
+---@field kMaxEventsPerHour number
+---@field kMaxNumberOfElements number
+---@field info UnityEngine.InputSystem.InputAnalytics.InputAnalyticInfo
+UnityEngine.InputSystem.Editor.InputBuildAnalytic = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputBuildAnalytic UnityEngine.InputSystem.Editor.InputBuildAnalytic
+CS.UnityEngine.InputSystem.Editor.InputBuildAnalytic = UnityEngine.InputSystem.Editor.InputBuildAnalytic
+
+---@param buildReport UnityEditor.Build.Reporting.BuildReport
+---@return UnityEngine.InputSystem.Editor.InputBuildAnalytic
+function UnityEngine.InputSystem.Editor.InputBuildAnalytic.New(buildReport) end
+---@param out_data UnityEngine.Analytics.IAnalytic.IData
+---@param out_error System.Exception
+---@return boolean,UnityEngine.Analytics.IAnalytic.IData,System.Exception
+function UnityEngine.InputSystem.Editor.InputBuildAnalytic:TryGatherData(out_data, out_error) end
+
+---@class UnityEngine.InputSystem.Editor.InputSystemComponent
+---@field PlayerInput UnityEngine.InputSystem.Editor.InputSystemComponent
+---@field PlayerInputManager UnityEngine.InputSystem.Editor.InputSystemComponent
+---@field OnScreenStick UnityEngine.InputSystem.Editor.InputSystemComponent
+---@field OnScreenButton UnityEngine.InputSystem.Editor.InputSystemComponent
+---@field VirtualMouseInput UnityEngine.InputSystem.Editor.InputSystemComponent
+---@field TouchSimulation UnityEngine.InputSystem.Editor.InputSystemComponent
+---@field StandaloneInputModule UnityEngine.InputSystem.Editor.InputSystemComponent
+---@field InputSystemUIInputModule UnityEngine.InputSystem.Editor.InputSystemComponent
+UnityEngine.InputSystem.Editor.InputSystemComponent = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputSystemComponent UnityEngine.InputSystem.Editor.InputSystemComponent
+CS.UnityEngine.InputSystem.Editor.InputSystemComponent = UnityEngine.InputSystem.Editor.InputSystemComponent
+
+
+---@class UnityEngine.InputSystem.Editor.InputComponentEditorAnalytic : System.Object
+---@field kEventName string
+---@field kMaxEventsPerHour number
+---@field kMaxNumberOfElements number
+---@field info UnityEngine.InputSystem.InputAnalytics.InputAnalyticInfo
+UnityEngine.InputSystem.Editor.InputComponentEditorAnalytic = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputComponentEditorAnalytic UnityEngine.InputSystem.Editor.InputComponentEditorAnalytic
+CS.UnityEngine.InputSystem.Editor.InputComponentEditorAnalytic = UnityEngine.InputSystem.Editor.InputComponentEditorAnalytic
+
+---@param component UnityEngine.InputSystem.Editor.InputSystemComponent
+---@return UnityEngine.InputSystem.Editor.InputComponentEditorAnalytic
+function UnityEngine.InputSystem.Editor.InputComponentEditorAnalytic.New(component) end
+---@param out_data UnityEngine.Analytics.IAnalytic.IData
+---@param out_error System.Exception
+---@return boolean,UnityEngine.Analytics.IAnalytic.IData,System.Exception
+function UnityEngine.InputSystem.Editor.InputComponentEditorAnalytic:TryGatherData(out_data, out_error) end
+
+---@class UnityEngine.InputSystem.Editor.InputEditorAnalytics : System.Object
+UnityEngine.InputSystem.Editor.InputEditorAnalytics = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputEditorAnalytics UnityEngine.InputSystem.Editor.InputEditorAnalytics
+CS.UnityEngine.InputSystem.Editor.InputEditorAnalytics = UnityEngine.InputSystem.Editor.InputEditorAnalytics
+
+
+---@class UnityEngine.InputSystem.Editor.InputExitPlayModeAnalytic : System.Object
+---@field kEventName string
+---@field kMaxEventsPerHour number
+---@field kMaxNumberOfElements number
+---@field suppress boolean
+---@field info UnityEngine.InputSystem.InputAnalytics.InputAnalyticInfo
+UnityEngine.InputSystem.Editor.InputExitPlayModeAnalytic = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputExitPlayModeAnalytic UnityEngine.InputSystem.Editor.InputExitPlayModeAnalytic
+CS.UnityEngine.InputSystem.Editor.InputExitPlayModeAnalytic = UnityEngine.InputSystem.Editor.InputExitPlayModeAnalytic
+
+---@param api UnityEngine.InputSystem.Editor.InputExitPlayModeAnalytic.Api
+function UnityEngine.InputSystem.Editor.InputExitPlayModeAnalytic.Register(api) end
+---@param out_data UnityEngine.Analytics.IAnalytic.IData
+---@param out_error System.Exception
+---@return boolean,UnityEngine.Analytics.IAnalytic.IData,System.Exception
+function UnityEngine.InputSystem.Editor.InputExitPlayModeAnalytic:TryGatherData(out_data, out_error) end
+
+---@class UnityEngine.InputSystem.Editor.OnScreenStickEditorAnalytic : System.Object
+---@field kEventName string
+---@field kMaxEventsPerHour number
+---@field kMaxNumberOfElements number
+---@field info UnityEngine.InputSystem.InputAnalytics.InputAnalyticInfo
+UnityEngine.InputSystem.Editor.OnScreenStickEditorAnalytic = {}
+---@alias CS.UnityEngine.InputSystem.Editor.OnScreenStickEditorAnalytic UnityEngine.InputSystem.Editor.OnScreenStickEditorAnalytic
+CS.UnityEngine.InputSystem.Editor.OnScreenStickEditorAnalytic = UnityEngine.InputSystem.Editor.OnScreenStickEditorAnalytic
+
+---@param editor UnityEditor.Editor
+---@return UnityEngine.InputSystem.Editor.OnScreenStickEditorAnalytic
+function UnityEngine.InputSystem.Editor.OnScreenStickEditorAnalytic.New(editor) end
+---@param out_data UnityEngine.Analytics.IAnalytic.IData
+---@param out_error System.Exception
+---@return boolean,UnityEngine.Analytics.IAnalytic.IData,System.Exception
+function UnityEngine.InputSystem.Editor.OnScreenStickEditorAnalytic:TryGatherData(out_data, out_error) end
+
+---@class UnityEngine.InputSystem.Editor.PlayerInputEditorAnalytic : System.Object
+---@field kEventName string
+---@field kMaxEventsPerHour number
+---@field kMaxNumberOfElements number
+---@field info UnityEngine.InputSystem.InputAnalytics.InputAnalyticInfo
+UnityEngine.InputSystem.Editor.PlayerInputEditorAnalytic = {}
+---@alias CS.UnityEngine.InputSystem.Editor.PlayerInputEditorAnalytic UnityEngine.InputSystem.Editor.PlayerInputEditorAnalytic
+CS.UnityEngine.InputSystem.Editor.PlayerInputEditorAnalytic = UnityEngine.InputSystem.Editor.PlayerInputEditorAnalytic
+
+---@param editor UnityEditor.Editor
+---@return UnityEngine.InputSystem.Editor.PlayerInputEditorAnalytic
+function UnityEngine.InputSystem.Editor.PlayerInputEditorAnalytic.New(editor) end
+---@param out_data UnityEngine.Analytics.IAnalytic.IData
+---@param out_error System.Exception
+---@return boolean,UnityEngine.Analytics.IAnalytic.IData,System.Exception
+function UnityEngine.InputSystem.Editor.PlayerInputEditorAnalytic:TryGatherData(out_data, out_error) end
+
+---@class UnityEngine.InputSystem.Editor.PlayerInputManagerEditorAnalytic : System.Object
+---@field kEventName string
+---@field kMaxEventsPerHour number
+---@field kMaxNumberOfElements number
+---@field info UnityEngine.InputSystem.InputAnalytics.InputAnalyticInfo
+UnityEngine.InputSystem.Editor.PlayerInputManagerEditorAnalytic = {}
+---@alias CS.UnityEngine.InputSystem.Editor.PlayerInputManagerEditorAnalytic UnityEngine.InputSystem.Editor.PlayerInputManagerEditorAnalytic
+CS.UnityEngine.InputSystem.Editor.PlayerInputManagerEditorAnalytic = UnityEngine.InputSystem.Editor.PlayerInputManagerEditorAnalytic
+
+---@param editor UnityEditor.Editor
+---@return UnityEngine.InputSystem.Editor.PlayerInputManagerEditorAnalytic
+function UnityEngine.InputSystem.Editor.PlayerInputManagerEditorAnalytic.New(editor) end
+---@param out_data UnityEngine.Analytics.IAnalytic.IData
+---@param out_error System.Exception
+---@return boolean,UnityEngine.Analytics.IAnalytic.IData,System.Exception
+function UnityEngine.InputSystem.Editor.PlayerInputManagerEditorAnalytic:TryGatherData(out_data, out_error) end
+
+---@class UnityEngine.InputSystem.Editor.VirtualMouseInputEditorAnalytic : System.Object
+---@field kEventName string
+---@field kMaxEventsPerHour number
+---@field kMaxNumberOfElements number
+---@field info UnityEngine.InputSystem.InputAnalytics.InputAnalyticInfo
+UnityEngine.InputSystem.Editor.VirtualMouseInputEditorAnalytic = {}
+---@alias CS.UnityEngine.InputSystem.Editor.VirtualMouseInputEditorAnalytic UnityEngine.InputSystem.Editor.VirtualMouseInputEditorAnalytic
+CS.UnityEngine.InputSystem.Editor.VirtualMouseInputEditorAnalytic = UnityEngine.InputSystem.Editor.VirtualMouseInputEditorAnalytic
+
+---@param editor UnityEditor.Editor
+---@return UnityEngine.InputSystem.Editor.VirtualMouseInputEditorAnalytic
+function UnityEngine.InputSystem.Editor.VirtualMouseInputEditorAnalytic.New(editor) end
+---@param out_data UnityEngine.Analytics.IAnalytic.IData
+---@param out_error System.Exception
+---@return boolean,UnityEngine.Analytics.IAnalytic.IData,System.Exception
+function UnityEngine.InputSystem.Editor.VirtualMouseInputEditorAnalytic:TryGatherData(out_data, out_error) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionAssetManager : System.Object
+---@field guid string
+---@field path string
+---@field name string
+---@field editedAsset UnityEngine.InputSystem.InputActionAsset
+---@field onDirtyChanged System.Action
+---@field serializedObject UnityEditor.SerializedObject
+---@field dirty boolean
+UnityEngine.InputSystem.Editor.InputActionAssetManager = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionAssetManager UnityEngine.InputSystem.Editor.InputActionAssetManager
+CS.UnityEngine.InputSystem.Editor.InputActionAssetManager = UnityEngine.InputSystem.Editor.InputActionAssetManager
+
+---@param inputActionAsset UnityEngine.InputSystem.InputActionAsset
+---@return UnityEngine.InputSystem.Editor.InputActionAssetManager
+function UnityEngine.InputSystem.Editor.InputActionAssetManager.New(inputActionAsset) end
+---@param source UnityEngine.InputSystem.InputActionAsset
+---@return UnityEngine.InputSystem.InputActionAsset
+function UnityEngine.InputSystem.Editor.InputActionAssetManager.CreateWorkingCopy(source) end
+---@param ref_copy UnityEngine.InputSystem.InputActionAsset
+---@param source UnityEngine.InputSystem.InputActionAsset
+---@return ,UnityEngine.InputSystem.InputActionAsset
+function UnityEngine.InputSystem.Editor.InputActionAssetManager.CreateWorkingCopyAsset(ref_copy, source) end
+---@overload fun(ref_asset: UnityEngine.InputSystem.InputActionAsset) : UnityEngine.InputSystem.InputActionAsset
+function UnityEngine.InputSystem.Editor.InputActionAssetManager:Cleanup() end
+---@return boolean
+function UnityEngine.InputSystem.Editor.InputActionAssetManager:Initialize() end
+function UnityEngine.InputSystem.Editor.InputActionAssetManager:Dispose() end
+---@return boolean
+function UnityEngine.InputSystem.Editor.InputActionAssetManager:ReInitializeIfAssetHasChanged() end
+function UnityEngine.InputSystem.Editor.InputActionAssetManager:ApplyChanges() end
+function UnityEngine.InputSystem.Editor.InputActionAssetManager:MarkDirty() end
+function UnityEngine.InputSystem.Editor.InputActionAssetManager:UpdateAssetDirtyState() end
+
+---@class UnityEngine.InputSystem.Editor.InputActionEditorToolbar : System.Object
+---@field onSearchChanged System.Action
+---@field onSelectedSchemeChanged System.Action
+---@field onSelectedDeviceChanged System.Action
+---@field onControlSchemesChanged System.Action
+---@field onControlSchemeRenamed System.Action
+---@field onControlSchemeDeleted System.Action
+---@field onSave System.Action
+---@field controlSchemes UnityEngine.InputSystem.Utilities.ReadOnlyArray
+---@field selectedControlScheme System.Nullable
+---@field selectedDeviceRequirement System.Nullable
+---@field searchText string
+---@field isDirty boolean
+UnityEngine.InputSystem.Editor.InputActionEditorToolbar = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionEditorToolbar UnityEngine.InputSystem.Editor.InputActionEditorToolbar
+CS.UnityEngine.InputSystem.Editor.InputActionEditorToolbar = UnityEngine.InputSystem.Editor.InputActionEditorToolbar
+
+---@return UnityEngine.InputSystem.Editor.InputActionEditorToolbar
+function UnityEngine.InputSystem.Editor.InputActionEditorToolbar.New() end
+function UnityEngine.InputSystem.Editor.InputActionEditorToolbar:OnGUI() end
+
+---@class UnityEngine.InputSystem.Editor.InputActionEditorWindow : UnityEditor.EditorWindow
+---@field assetGUID string
+---@field isDirty boolean
+UnityEngine.InputSystem.Editor.InputActionEditorWindow = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionEditorWindow UnityEngine.InputSystem.Editor.InputActionEditorWindow
+CS.UnityEngine.InputSystem.Editor.InputActionEditorWindow = UnityEngine.InputSystem.Editor.InputActionEditorWindow
+
+---@return UnityEngine.InputSystem.Editor.InputActionEditorWindow
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow.New() end
+---@param entityId UnityEngine.EntityId
+---@param line number
+---@return boolean
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow.OpenAsset(entityId, line) end
+---@param asset UnityEngine.InputSystem.InputActionAsset
+---@return UnityEngine.InputSystem.Editor.InputActionEditorWindow
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow.OpenEditor(asset) end
+---@param guid string
+---@return UnityEngine.InputSystem.Editor.InputActionEditorWindow
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow.FindEditorForAssetWithGUID(guid) end
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow:SaveChangesToAsset() end
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow:AddNewActionMap() end
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow:AddNewAction() end
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow:AddNewBinding() end
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow:Dispose() end
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow:OnAssetImported() end
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow:OnAssetMoved() end
+function UnityEngine.InputSystem.Editor.InputActionEditorWindow:OnAssetDeleted() end
+
+---@class UnityEngine.InputSystem.Editor.InputActionPropertiesView : UnityEngine.InputSystem.Editor.PropertiesViewBase
+---@field k_PropertiesChanged UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.Editor.InputActionPropertiesView = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionPropertiesView UnityEngine.InputSystem.Editor.InputActionPropertiesView
+CS.UnityEngine.InputSystem.Editor.InputActionPropertiesView = UnityEngine.InputSystem.Editor.InputActionPropertiesView
+
+---@param actionProperty UnityEditor.SerializedProperty
+---@param onChange System.Action
+---@return UnityEngine.InputSystem.Editor.InputActionPropertiesView
+function UnityEngine.InputSystem.Editor.InputActionPropertiesView.New(actionProperty, onChange) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionTreeView : UnityEditor.IMGUI.Controls.TreeView
+---@field k_CopyCommand string
+---@field k_PasteCommand string
+---@field k_DuplicateCommand string
+---@field k_CutCommand string
+---@field k_DeleteCommand string
+---@field k_SoftDeleteCommand string
+---@field SharedResourcesPath string
+---@field ResourcesPath string
+---@field serializedObject UnityEditor.SerializedObject
+---@field bindingGroupForNewBindings string
+---@field rootItem UnityEditor.IMGUI.Controls.TreeViewItem
+---@field onSerializedObjectModified System.Action
+---@field onSelectionChanged System.Action
+---@field onDoubleClick System.Action
+---@field onBeginRename System.Action
+---@field onBuildTree System.Func
+---@field onBindingAdded System.Action
+---@field drawHeader boolean
+---@field drawPlusButton boolean
+---@field drawMinusButton boolean
+---@field drawActionPropertiesButton boolean
+---@field onHandleAddNewAction System.Action
+---@field title System.ValueTuple
+---@field totalHeight number
+---@field Item UnityEngine.InputSystem.Editor.ActionTreeItemBase
+UnityEngine.InputSystem.Editor.InputActionTreeView = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionTreeView UnityEngine.InputSystem.Editor.InputActionTreeView
+CS.UnityEngine.InputSystem.Editor.InputActionTreeView = UnityEngine.InputSystem.Editor.InputActionTreeView
+
+---@param serializedObject UnityEditor.SerializedObject
+---@param state UnityEditor.IMGUI.Controls.TreeViewState
+---@return UnityEngine.InputSystem.Editor.InputActionTreeView
+function UnityEngine.InputSystem.Editor.InputActionTreeView.New(serializedObject, state) end
+---@param actionProperty UnityEditor.SerializedProperty
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@return UnityEditor.IMGUI.Controls.TreeViewItem
+function UnityEngine.InputSystem.Editor.InputActionTreeView.BuildWithJustBindingsFromAction(actionProperty, actionMapProperty) end
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@return UnityEditor.IMGUI.Controls.TreeViewItem
+function UnityEngine.InputSystem.Editor.InputActionTreeView.BuildWithJustActionsAndBindingsFromMap(actionMapProperty) end
+---@param assetObject UnityEditor.SerializedObject
+---@return UnityEditor.IMGUI.Controls.TreeViewItem
+function UnityEngine.InputSystem.Editor.InputActionTreeView.BuildWithJustActionMapsFromAsset(assetObject) end
+---@param assetObject UnityEditor.SerializedObject
+---@return UnityEditor.IMGUI.Controls.TreeViewItem
+function UnityEngine.InputSystem.Editor.InputActionTreeView.BuildFullTree(assetObject) end
+---@param items System.Collections.Generic.IEnumerable
+---@param buffer System.Text.StringBuilder
+function UnityEngine.InputSystem.Editor.InputActionTreeView.CopyItems(items, buffer) end
+---@param arrayProperty UnityEditor.SerializedProperty
+---@param name string
+---@param index number
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionTreeView.AddElement(arrayProperty, name, index) end
+function UnityEngine.InputSystem.Editor.InputActionTreeView:ClearItemSearchFilterAndReload() end
+---@overload fun(self: UnityEngine.InputSystem.Editor.InputActionTreeView, criteria: string)
+---@param criteria System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.InputActionTreeView:SetItemSearchFilterAndReload(criteria) end
+---@param path string
+---@return UnityEngine.InputSystem.Editor.ActionTreeItemBase
+function UnityEngine.InputSystem.Editor.InputActionTreeView:FindItemByPath(path) end
+---@param propertyPath string
+---@return UnityEngine.InputSystem.Editor.ActionTreeItemBase
+function UnityEngine.InputSystem.Editor.InputActionTreeView:FindItemByPropertyPath(propertyPath) end
+---@param element UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.ActionTreeItemBase
+function UnityEngine.InputSystem.Editor.InputActionTreeView:FindItemFor(element) end
+function UnityEngine.InputSystem.Editor.InputActionTreeView:ClearSelection() end
+---@param items System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.InputActionTreeView:SelectItems(items) end
+---@overload fun(self: UnityEngine.InputSystem.Editor.InputActionTreeView, element: UnityEditor.SerializedProperty, additive: boolean)
+---@overload fun(self: UnityEngine.InputSystem.Editor.InputActionTreeView, path: string, additive: boolean)
+---@param item UnityEngine.InputSystem.Editor.ActionTreeItemBase
+---@param additive boolean
+function UnityEngine.InputSystem.Editor.InputActionTreeView:SelectItem(item, additive) end
+---@param path string
+---@param additive boolean
+---@return boolean
+function UnityEngine.InputSystem.Editor.InputActionTreeView:TrySelectItem(path, additive) end
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.InputActionTreeView:GetSelectedItems() end
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.InputActionTreeView:GetSelectedItemsWithChildrenFilteredOut() end
+function UnityEngine.InputSystem.Editor.InputActionTreeView:SelectFirstToplevelItem() end
+---@param item UnityEditor.IMGUI.Controls.TreeViewItem
+function UnityEngine.InputSystem.Editor.InputActionTreeView:BeginRename(item) end
+---@param forceAccept boolean
+function UnityEngine.InputSystem.Editor.InputActionTreeView:EndRename(forceAccept) end
+---@param uiEvent UnityEngine.Event
+function UnityEngine.InputSystem.Editor.InputActionTreeView:HandleCopyPasteCommandEvent(uiEvent) end
+function UnityEngine.InputSystem.Editor.InputActionTreeView:CopySelectedItemsToClipboard() end
+---@param buffer System.Text.StringBuilder
+function UnityEngine.InputSystem.Editor.InputActionTreeView:CopySelectedItemsTo(buffer) end
+function UnityEngine.InputSystem.Editor.InputActionTreeView:DeleteDataOfSelectedItems() end
+---@param items System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.InputActionTreeView:DeleteItems(items) end
+---@return boolean
+function UnityEngine.InputSystem.Editor.InputActionTreeView:HavePastableClipboardData() end
+function UnityEngine.InputSystem.Editor.InputActionTreeView:PasteDataFromClipboard() end
+---@param copyBufferString string
+function UnityEngine.InputSystem.Editor.InputActionTreeView:PasteDataFrom(copyBufferString) end
+---@param copyBufferString string
+---@param locations System.Collections.Generic.IEnumerable
+---@param assignNewIDs boolean
+---@param selectNewItems boolean
+function UnityEngine.InputSystem.Editor.InputActionTreeView:PasteItems(copyBufferString, locations, assignNewIDs, selectNewItems) end
+---@param itemType System.Type
+---@param menu UnityEditor.GenericMenu
+---@param multiSelect boolean
+---@param actionItem UnityEngine.InputSystem.Editor.ActionTreeItem
+---@param noSelection boolean
+function UnityEngine.InputSystem.Editor.InputActionTreeView:BuildContextMenuFor(itemType, menu, multiSelect, actionItem, noSelection) end
+---@param menu UnityEditor.GenericMenu
+---@param actionItem UnityEngine.InputSystem.Editor.ActionTreeItem
+function UnityEngine.InputSystem.Editor.InputActionTreeView:BuildMenuToAddBindings(menu, actionItem) end
+function UnityEngine.InputSystem.Editor.InputActionTreeView:AddNewActionMap() end
+---@overload fun()
+---@param actionMapProperty UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionTreeView:AddNewAction(actionMapProperty) end
+---@overload fun()
+---@param actionProperty UnityEditor.SerializedProperty
+---@param actionMapProperty UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionTreeView:AddNewBinding(actionProperty, actionMapProperty) end
+---@overload fun(self: UnityEngine.InputSystem.Editor.InputActionTreeView, compositeType: string)
+---@param actionProperty UnityEditor.SerializedProperty
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@param compositeName string
+function UnityEngine.InputSystem.Editor.InputActionTreeView:AddNewComposite(actionProperty, actionMapProperty, compositeName) end
+---@param rect UnityEngine.Rect
+function UnityEngine.InputSystem.Editor.InputActionTreeView:OnGUI(rect) end
+function UnityEngine.InputSystem.Editor.InputActionTreeView:UpdateSerializedObjectDirtyCount() end
+
+---@class UnityEngine.InputSystem.Editor.ActionTreeItemBase : UnityEditor.IMGUI.Controls.TreeViewItem
+---@field property UnityEditor.SerializedProperty
+---@field expectedControlLayout string
+---@field canRename boolean
+---@field serializedDataIncludesChildren boolean
+---@field colorTagStyle UnityEngine.GUIStyle
+---@field name string
+---@field guid System.Guid
+---@field showWarningIcon boolean
+---@field hasChildrenIncludingHidden boolean
+---@field hiddenChildren System.Collections.Generic.IEnumerable
+---@field childrenIncludingHidden System.Collections.Generic.IEnumerable
+---@field arrayProperty UnityEditor.SerializedProperty
+---@field arrayIndex number
+---@field id UnityEngine.InputSystem.Editor.ActionTreeItemBase -- infered from UnityEditor.IMGUI.Controls.TreeViewItem`1[System.Int32]
+UnityEngine.InputSystem.Editor.ActionTreeItemBase = {}
+---@alias CS.UnityEngine.InputSystem.Editor.ActionTreeItemBase UnityEngine.InputSystem.Editor.ActionTreeItemBase
+CS.UnityEngine.InputSystem.Editor.ActionTreeItemBase = UnityEngine.InputSystem.Editor.ActionTreeItemBase
+
+---@param newName string
+function UnityEngine.InputSystem.Editor.ActionTreeItemBase:Rename(newName) end
+function UnityEngine.InputSystem.Editor.ActionTreeItemBase:DeleteData() end
+---@param item UnityEngine.InputSystem.Editor.ActionTreeItemBase
+---@return boolean
+function UnityEngine.InputSystem.Editor.ActionTreeItemBase:AcceptsDrop(item) end
+---@param itemType System.Type
+---@param childIndex System.Nullable
+---@param ref_array UnityEditor.SerializedProperty
+---@param ref_arrayIndex number
+---@return boolean,UnityEditor.SerializedProperty,number
+function UnityEngine.InputSystem.Editor.ActionTreeItemBase:GetDropLocation(itemType, childIndex, ref_array, ref_arrayIndex) end
+
+---@class UnityEngine.InputSystem.Editor.ActionMapTreeItem : UnityEngine.InputSystem.Editor.ActionTreeItemBase
+---@field colorTagStyle UnityEngine.GUIStyle
+---@field bindingsArrayProperty UnityEditor.SerializedProperty
+---@field actionsArrayProperty UnityEditor.SerializedProperty
+---@field serializedDataIncludesChildren boolean
+UnityEngine.InputSystem.Editor.ActionMapTreeItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.ActionMapTreeItem UnityEngine.InputSystem.Editor.ActionMapTreeItem
+CS.UnityEngine.InputSystem.Editor.ActionMapTreeItem = UnityEngine.InputSystem.Editor.ActionMapTreeItem
+
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.ActionMapTreeItem
+function UnityEngine.InputSystem.Editor.ActionMapTreeItem.New(actionMapProperty) end
+---@param parent UnityEditor.IMGUI.Controls.TreeViewItem
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.ActionMapTreeItem
+function UnityEngine.InputSystem.Editor.ActionMapTreeItem.AddTo(parent, actionMapProperty) end
+---@param parent UnityEditor.IMGUI.Controls.TreeViewItem
+---@param assetObject UnityEditor.SerializedObject
+function UnityEngine.InputSystem.Editor.ActionMapTreeItem.AddActionMapsFromAssetTo(parent, assetObject) end
+---@param newName string
+function UnityEngine.InputSystem.Editor.ActionMapTreeItem:Rename(newName) end
+function UnityEngine.InputSystem.Editor.ActionMapTreeItem:DeleteData() end
+---@param item UnityEngine.InputSystem.Editor.ActionTreeItemBase
+---@return boolean
+function UnityEngine.InputSystem.Editor.ActionMapTreeItem:AcceptsDrop(item) end
+---@param itemType System.Type
+---@param childIndex System.Nullable
+---@param ref_array UnityEditor.SerializedProperty
+---@param ref_arrayIndex number
+---@return boolean,UnityEditor.SerializedProperty,number
+function UnityEngine.InputSystem.Editor.ActionMapTreeItem:GetDropLocation(itemType, childIndex, ref_array, ref_arrayIndex) end
+---@param parent UnityEditor.IMGUI.Controls.TreeViewItem
+function UnityEngine.InputSystem.Editor.ActionMapTreeItem:AddActionsTo(parent) end
+---@param parent UnityEditor.IMGUI.Controls.TreeViewItem
+function UnityEngine.InputSystem.Editor.ActionMapTreeItem:AddActionsAndBindingsTo(parent) end
+
+---@class UnityEngine.InputSystem.Editor.ActionTreeItem : UnityEngine.InputSystem.Editor.ActionTreeItemBase
+---@field actionMapProperty UnityEditor.SerializedProperty
+---@field colorTagStyle UnityEngine.GUIStyle
+---@field isSingletonAction boolean
+---@field expectedControlLayout string
+---@field bindingsArrayProperty UnityEditor.SerializedProperty
+---@field serializedDataIncludesChildren boolean
+UnityEngine.InputSystem.Editor.ActionTreeItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.ActionTreeItem UnityEngine.InputSystem.Editor.ActionTreeItem
+CS.UnityEngine.InputSystem.Editor.ActionTreeItem = UnityEngine.InputSystem.Editor.ActionTreeItem
+
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@param actionProperty UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.ActionTreeItem
+function UnityEngine.InputSystem.Editor.ActionTreeItem.New(actionMapProperty, actionProperty) end
+---@param parent UnityEditor.IMGUI.Controls.TreeViewItem
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@param actionProperty UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.ActionTreeItem
+function UnityEngine.InputSystem.Editor.ActionTreeItem.AddTo(parent, actionMapProperty, actionProperty) end
+---@param newName string
+function UnityEngine.InputSystem.Editor.ActionTreeItem:Rename(newName) end
+function UnityEngine.InputSystem.Editor.ActionTreeItem:DeleteData() end
+---@param item UnityEngine.InputSystem.Editor.ActionTreeItemBase
+---@return boolean
+function UnityEngine.InputSystem.Editor.ActionTreeItem:AcceptsDrop(item) end
+---@param itemType System.Type
+---@param childIndex System.Nullable
+---@param ref_array UnityEditor.SerializedProperty
+---@param ref_arrayIndex number
+---@return boolean,UnityEditor.SerializedProperty,number
+function UnityEngine.InputSystem.Editor.ActionTreeItem:GetDropLocation(itemType, childIndex, ref_array, ref_arrayIndex) end
+---@param parent UnityEditor.IMGUI.Controls.TreeViewItem
+function UnityEngine.InputSystem.Editor.ActionTreeItem:AddBindingsTo(parent) end
+
+---@class UnityEngine.InputSystem.Editor.BindingTreeItem : UnityEngine.InputSystem.Editor.ActionTreeItemBase
+---@field path string
+---@field groups string
+---@field action string
+---@field showWarningIcon boolean
+---@field canRename boolean
+---@field colorTagStyle UnityEngine.GUIStyle
+---@field displayPath string
+---@field expectedControlLayout string
+UnityEngine.InputSystem.Editor.BindingTreeItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.BindingTreeItem UnityEngine.InputSystem.Editor.BindingTreeItem
+CS.UnityEngine.InputSystem.Editor.BindingTreeItem = UnityEngine.InputSystem.Editor.BindingTreeItem
+
+---@param bindingProperty UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.BindingTreeItem
+function UnityEngine.InputSystem.Editor.BindingTreeItem.New(bindingProperty) end
+---@param parent UnityEditor.IMGUI.Controls.TreeViewItem
+---@param bindingProperty UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.BindingTreeItem
+function UnityEngine.InputSystem.Editor.BindingTreeItem.AddTo(parent, bindingProperty) end
+function UnityEngine.InputSystem.Editor.BindingTreeItem:DeleteData() end
+---@param item UnityEngine.InputSystem.Editor.ActionTreeItemBase
+---@return boolean
+function UnityEngine.InputSystem.Editor.BindingTreeItem:AcceptsDrop(item) end
+---@param itemType System.Type
+---@param childIndex System.Nullable
+---@param ref_array UnityEditor.SerializedProperty
+---@param ref_arrayIndex number
+---@return boolean,UnityEditor.SerializedProperty,number
+function UnityEngine.InputSystem.Editor.BindingTreeItem:GetDropLocation(itemType, childIndex, ref_array, ref_arrayIndex) end
+
+---@class UnityEngine.InputSystem.Editor.CompositeBindingTreeItem : UnityEngine.InputSystem.Editor.BindingTreeItem
+---@field colorTagStyle UnityEngine.GUIStyle
+---@field canRename boolean
+---@field compositeName string
+UnityEngine.InputSystem.Editor.CompositeBindingTreeItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.CompositeBindingTreeItem UnityEngine.InputSystem.Editor.CompositeBindingTreeItem
+CS.UnityEngine.InputSystem.Editor.CompositeBindingTreeItem = UnityEngine.InputSystem.Editor.CompositeBindingTreeItem
+
+---@param bindingProperty UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.CompositeBindingTreeItem
+function UnityEngine.InputSystem.Editor.CompositeBindingTreeItem.New(bindingProperty) end
+---@param parent UnityEditor.IMGUI.Controls.TreeViewItem
+---@param bindingProperty UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.CompositeBindingTreeItem
+function UnityEngine.InputSystem.Editor.CompositeBindingTreeItem.AddTo(parent, bindingProperty) end
+---@param newName string
+function UnityEngine.InputSystem.Editor.CompositeBindingTreeItem:Rename(newName) end
+---@param item UnityEngine.InputSystem.Editor.ActionTreeItemBase
+---@return boolean
+function UnityEngine.InputSystem.Editor.CompositeBindingTreeItem:AcceptsDrop(item) end
+---@param itemType System.Type
+---@param childIndex System.Nullable
+---@param ref_array UnityEditor.SerializedProperty
+---@param ref_arrayIndex number
+---@return boolean,UnityEditor.SerializedProperty,number
+function UnityEngine.InputSystem.Editor.CompositeBindingTreeItem:GetDropLocation(itemType, childIndex, ref_array, ref_arrayIndex) end
+
+---@class UnityEngine.InputSystem.Editor.PartOfCompositeBindingTreeItem : UnityEngine.InputSystem.Editor.BindingTreeItem
+---@field colorTagStyle UnityEngine.GUIStyle
+---@field canRename boolean
+---@field expectedControlLayout string
+UnityEngine.InputSystem.Editor.PartOfCompositeBindingTreeItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.PartOfCompositeBindingTreeItem UnityEngine.InputSystem.Editor.PartOfCompositeBindingTreeItem
+CS.UnityEngine.InputSystem.Editor.PartOfCompositeBindingTreeItem = UnityEngine.InputSystem.Editor.PartOfCompositeBindingTreeItem
+
+---@param bindingProperty UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.PartOfCompositeBindingTreeItem
+function UnityEngine.InputSystem.Editor.PartOfCompositeBindingTreeItem.New(bindingProperty) end
+---@param parent UnityEditor.IMGUI.Controls.TreeViewItem
+---@param bindingProperty UnityEditor.SerializedProperty
+---@return UnityEngine.InputSystem.Editor.PartOfCompositeBindingTreeItem
+function UnityEngine.InputSystem.Editor.PartOfCompositeBindingTreeItem.AddTo(parent, bindingProperty) end
+
+---@class UnityEngine.InputSystem.Editor.InputBindingPropertiesView : UnityEngine.InputSystem.Editor.PropertiesViewBase
+---@field k_GroupsChanged UnityEngine.InputSystem.Utilities.FourCC
+---@field k_PathChanged UnityEngine.InputSystem.Utilities.FourCC
+---@field k_CompositeTypeChanged UnityEngine.InputSystem.Utilities.FourCC
+---@field k_CompositePartAssignmentChanged UnityEngine.InputSystem.Utilities.FourCC
+UnityEngine.InputSystem.Editor.InputBindingPropertiesView = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputBindingPropertiesView UnityEngine.InputSystem.Editor.InputBindingPropertiesView
+CS.UnityEngine.InputSystem.Editor.InputBindingPropertiesView = UnityEngine.InputSystem.Editor.InputBindingPropertiesView
+
+---@param bindingProperty UnityEditor.SerializedProperty
+---@param onChange System.Action
+---@param controlPickerState UnityEngine.InputSystem.Editor.InputControlPickerState
+---@param expectedControlLayout string
+---@param controlSchemes UnityEngine.InputSystem.Utilities.ReadOnlyArray
+---@param controlPathsToMatch System.Collections.Generic.IEnumerable
+---@return UnityEngine.InputSystem.Editor.InputBindingPropertiesView
+function UnityEngine.InputSystem.Editor.InputBindingPropertiesView.New(bindingProperty, onChange, controlPickerState, expectedControlLayout, controlSchemes, controlPathsToMatch) end
+function UnityEngine.InputSystem.Editor.InputBindingPropertiesView:Dispose() end
+
+---@class UnityEngine.InputSystem.Editor.PropertiesViewBase : System.Object
+---@field s_ProcessorsAddButton UnityEngine.GUIContent
+---@field s_InteractionsAddButton UnityEngine.GUIContent
+---@field k_InteractionsChanged UnityEngine.InputSystem.Utilities.FourCC
+---@field k_ProcessorsChanged UnityEngine.InputSystem.Utilities.FourCC
+---@field onChange System.Action
+UnityEngine.InputSystem.Editor.PropertiesViewBase = {}
+---@alias CS.UnityEngine.InputSystem.Editor.PropertiesViewBase UnityEngine.InputSystem.Editor.PropertiesViewBase
+CS.UnityEngine.InputSystem.Editor.PropertiesViewBase = UnityEngine.InputSystem.Editor.PropertiesViewBase
+
+function UnityEngine.InputSystem.Editor.PropertiesViewBase:OnGUI() end
+
+---@class UnityEngine.InputSystem.Editor.IAssetObserver
+UnityEngine.InputSystem.Editor.IAssetObserver = {}
+---@alias CS.UnityEngine.InputSystem.Editor.IAssetObserver UnityEngine.InputSystem.Editor.IAssetObserver
+CS.UnityEngine.InputSystem.Editor.IAssetObserver = UnityEngine.InputSystem.Editor.IAssetObserver
+
+function UnityEngine.InputSystem.Editor.IAssetObserver:OnAssetImported() end
+function UnityEngine.InputSystem.Editor.IAssetObserver:OnAssetMoved() end
+function UnityEngine.InputSystem.Editor.IAssetObserver:OnAssetDeleted() end
+
+---@class UnityEngine.InputSystem.Editor.IInputActionAssetEditor
+---@field assetGUID string
+---@field isDirty boolean
+UnityEngine.InputSystem.Editor.IInputActionAssetEditor = {}
+---@alias CS.UnityEngine.InputSystem.Editor.IInputActionAssetEditor UnityEngine.InputSystem.Editor.IInputActionAssetEditor
+CS.UnityEngine.InputSystem.Editor.IInputActionAssetEditor = UnityEngine.InputSystem.Editor.IInputActionAssetEditor
+
+
+---@class UnityEngine.InputSystem.Editor.InputActionAssetEditor : UnityEditor.Editor
+UnityEngine.InputSystem.Editor.InputActionAssetEditor = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionAssetEditor UnityEngine.InputSystem.Editor.InputActionAssetEditor
+CS.UnityEngine.InputSystem.Editor.InputActionAssetEditor = UnityEngine.InputSystem.Editor.InputActionAssetEditor
+
+---@return UnityEngine.InputSystem.Editor.InputActionAssetEditor
+function UnityEngine.InputSystem.Editor.InputActionAssetEditor.New() end
+---@param path string
+---@return UnityEngine.InputSystem.Editor.IInputActionAssetEditor[]
+function UnityEngine.InputSystem.Editor.InputActionAssetEditor.FindAllEditorsForPath(path) end
+---@param predicate System.Predicate
+---@return UnityEngine.InputSystem.Editor.IInputActionAssetEditor[]
+function UnityEngine.InputSystem.Editor.InputActionAssetEditor.FindAllEditors(predicate) end
+function UnityEngine.InputSystem.Editor.InputActionAssetEditor:OnInspectorGUI() end
+
+---@class UnityEngine.InputSystem.Editor.InputActionAssetIconLoader : System.Object
+UnityEngine.InputSystem.Editor.InputActionAssetIconLoader = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionAssetIconLoader UnityEngine.InputSystem.Editor.InputActionAssetIconLoader
+CS.UnityEngine.InputSystem.Editor.InputActionAssetIconLoader = UnityEngine.InputSystem.Editor.InputActionAssetIconLoader
+
+
+---@class UnityEngine.InputSystem.Editor.InputActionCodeGenerator : System.Object
+UnityEngine.InputSystem.Editor.InputActionCodeGenerator = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionCodeGenerator UnityEngine.InputSystem.Editor.InputActionCodeGenerator
+CS.UnityEngine.InputSystem.Editor.InputActionCodeGenerator = UnityEngine.InputSystem.Editor.InputActionCodeGenerator
+
+---@overload fun(asset: UnityEngine.InputSystem.InputActionAsset, options: UnityEngine.InputSystem.Editor.InputActionCodeGenerator.Options) : string
+---@param filePath string
+---@param asset UnityEngine.InputSystem.InputActionAsset
+---@param options UnityEngine.InputSystem.Editor.InputActionCodeGenerator.Options
+---@return boolean
+function UnityEngine.InputSystem.Editor.InputActionCodeGenerator.GenerateWrapperCode(filePath, asset, options) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionImporter : UnityEditor.AssetImporters.ScriptedImporter
+UnityEngine.InputSystem.Editor.InputActionImporter = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionImporter UnityEngine.InputSystem.Editor.InputActionImporter
+CS.UnityEngine.InputSystem.Editor.InputActionImporter = UnityEngine.InputSystem.Editor.InputActionImporter
+
+---@return UnityEngine.InputSystem.Editor.InputActionImporter
+function UnityEngine.InputSystem.Editor.InputActionImporter.New() end
+function UnityEngine.InputSystem.Editor.InputActionImporter.CreateInputAsset() end
+---@param path string
+---@return boolean
+function UnityEngine.InputSystem.Editor.InputActionImporter.IsInputActionAssetPath(path) end
+---@param assetPath string
+---@return string
+function UnityEngine.InputSystem.Editor.InputActionImporter.NameFromAssetPath(assetPath) end
+---@param ctx UnityEditor.AssetImporters.AssetImportContext
+function UnityEngine.InputSystem.Editor.InputActionImporter:OnImportAsset(ctx) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionImporterEditor : UnityEditor.AssetImporters.ScriptedImporterEditor
+UnityEngine.InputSystem.Editor.InputActionImporterEditor = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionImporterEditor UnityEngine.InputSystem.Editor.InputActionImporterEditor
+CS.UnityEngine.InputSystem.Editor.InputActionImporterEditor = UnityEngine.InputSystem.Editor.InputActionImporterEditor
+
+---@return UnityEngine.InputSystem.Editor.InputActionImporterEditor
+function UnityEngine.InputSystem.Editor.InputActionImporterEditor.New() end
+function UnityEngine.InputSystem.Editor.InputActionImporterEditor:OnInspectorGUI() end
+
+---@class UnityEngine.InputSystem.Editor.LinkFileGenerator : System.Object
+---@field callbackOrder number
+UnityEngine.InputSystem.Editor.LinkFileGenerator = {}
+---@alias CS.UnityEngine.InputSystem.Editor.LinkFileGenerator UnityEngine.InputSystem.Editor.LinkFileGenerator
+CS.UnityEngine.InputSystem.Editor.LinkFileGenerator = UnityEngine.InputSystem.Editor.LinkFileGenerator
+
+---@return UnityEngine.InputSystem.Editor.LinkFileGenerator
+function UnityEngine.InputSystem.Editor.LinkFileGenerator.New() end
+---@param report UnityEditor.Build.Reporting.BuildReport
+---@param data UnityEditor.UnityLinker.UnityLinkerBuildPipelineData
+---@return string
+function UnityEngine.InputSystem.Editor.LinkFileGenerator:GenerateAdditionalLinkXmlFile(report, data) end
+---@param report UnityEditor.Build.Reporting.BuildReport
+---@param data UnityEditor.UnityLinker.UnityLinkerBuildPipelineData
+function UnityEngine.InputSystem.Editor.LinkFileGenerator:OnBeforeRun(report, data) end
+---@param report UnityEditor.Build.Reporting.BuildReport
+---@param data UnityEditor.UnityLinker.UnityLinkerBuildPipelineData
+function UnityEngine.InputSystem.Editor.LinkFileGenerator:OnAfterRun(report, data) end
+
+---@class UnityEngine.InputSystem.Editor.IInputControlPickerLayout
+UnityEngine.InputSystem.Editor.IInputControlPickerLayout = {}
+---@alias CS.UnityEngine.InputSystem.Editor.IInputControlPickerLayout UnityEngine.InputSystem.Editor.IInputControlPickerLayout
+CS.UnityEngine.InputSystem.Editor.IInputControlPickerLayout = UnityEngine.InputSystem.Editor.IInputControlPickerLayout
+
+---@param dropdown UnityEngine.InputSystem.Editor.InputControlPickerDropdown
+---@param parent UnityEngine.InputSystem.Editor.DeviceDropdownItem
+---@param parentControl UnityEngine.InputSystem.Editor.ControlDropdownItem
+---@param control UnityEngine.InputSystem.Layouts.InputControlLayout.ControlItem
+---@param device string
+---@param usage string
+---@param searchable boolean
+function UnityEngine.InputSystem.Editor.IInputControlPickerLayout:AddControlItem(dropdown, parent, parentControl, control, device, usage, searchable) end
+
+---@class UnityEngine.InputSystem.Editor.InputControlDropdownItem : UnityEngine.InputSystem.Editor.AdvancedDropdownItem
+---@field controlPath string
+---@field controlPathWithDevice string
+---@field searchableName string
+UnityEngine.InputSystem.Editor.InputControlDropdownItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputControlDropdownItem UnityEngine.InputSystem.Editor.InputControlDropdownItem
+CS.UnityEngine.InputSystem.Editor.InputControlDropdownItem = UnityEngine.InputSystem.Editor.InputControlDropdownItem
+
+
+---@class UnityEngine.InputSystem.Editor.OptionalControlDropdownItem : UnityEngine.InputSystem.Editor.InputControlDropdownItem
+UnityEngine.InputSystem.Editor.OptionalControlDropdownItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.OptionalControlDropdownItem UnityEngine.InputSystem.Editor.OptionalControlDropdownItem
+CS.UnityEngine.InputSystem.Editor.OptionalControlDropdownItem = UnityEngine.InputSystem.Editor.OptionalControlDropdownItem
+
+---@param optionalControl UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache.OptionalControl
+---@param deviceControlId string
+---@param commonUsage string
+---@return UnityEngine.InputSystem.Editor.OptionalControlDropdownItem
+function UnityEngine.InputSystem.Editor.OptionalControlDropdownItem.New(optionalControl, deviceControlId, commonUsage) end
+
+---@class UnityEngine.InputSystem.Editor.ControlUsageDropdownItem : UnityEngine.InputSystem.Editor.InputControlDropdownItem
+---@field controlPathWithDevice string
+UnityEngine.InputSystem.Editor.ControlUsageDropdownItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.ControlUsageDropdownItem UnityEngine.InputSystem.Editor.ControlUsageDropdownItem
+CS.UnityEngine.InputSystem.Editor.ControlUsageDropdownItem = UnityEngine.InputSystem.Editor.ControlUsageDropdownItem
+
+---@param device string
+---@param usage string
+---@param controlUsage string
+---@return UnityEngine.InputSystem.Editor.ControlUsageDropdownItem
+function UnityEngine.InputSystem.Editor.ControlUsageDropdownItem.New(device, usage, controlUsage) end
+
+---@class UnityEngine.InputSystem.Editor.DeviceDropdownItem : UnityEngine.InputSystem.Editor.InputControlDropdownItem
+UnityEngine.InputSystem.Editor.DeviceDropdownItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.DeviceDropdownItem UnityEngine.InputSystem.Editor.DeviceDropdownItem
+CS.UnityEngine.InputSystem.Editor.DeviceDropdownItem = UnityEngine.InputSystem.Editor.DeviceDropdownItem
+
+---@param layout UnityEngine.InputSystem.Layouts.InputControlLayout
+---@param usage string
+---@param searchable boolean
+---@return UnityEngine.InputSystem.Editor.DeviceDropdownItem
+function UnityEngine.InputSystem.Editor.DeviceDropdownItem.New(layout, usage, searchable) end
+
+---@class UnityEngine.InputSystem.Editor.ControlDropdownItem : UnityEngine.InputSystem.Editor.InputControlDropdownItem
+UnityEngine.InputSystem.Editor.ControlDropdownItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.ControlDropdownItem UnityEngine.InputSystem.Editor.ControlDropdownItem
+CS.UnityEngine.InputSystem.Editor.ControlDropdownItem = UnityEngine.InputSystem.Editor.ControlDropdownItem
+
+---@param parent UnityEngine.InputSystem.Editor.ControlDropdownItem
+---@param controlName string
+---@param displayName string
+---@param device string
+---@param usage string
+---@param searchable boolean
+---@return UnityEngine.InputSystem.Editor.ControlDropdownItem
+function UnityEngine.InputSystem.Editor.ControlDropdownItem.New(parent, controlName, displayName, device, usage, searchable) end
+
+---@class UnityEngine.InputSystem.Editor.InputControlPathEditor : System.Object
+---@field pathProperty UnityEditor.SerializedProperty
+---@field onModified System.Action
+UnityEngine.InputSystem.Editor.InputControlPathEditor = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputControlPathEditor UnityEngine.InputSystem.Editor.InputControlPathEditor
+CS.UnityEngine.InputSystem.Editor.InputControlPathEditor = UnityEngine.InputSystem.Editor.InputControlPathEditor
+
+---@param pathProperty UnityEditor.SerializedProperty
+---@param pickerState UnityEngine.InputSystem.Editor.InputControlPickerState
+---@param onModified System.Action
+---@param label UnityEngine.GUIContent
+---@return UnityEngine.InputSystem.Editor.InputControlPathEditor
+function UnityEngine.InputSystem.Editor.InputControlPathEditor.New(pathProperty, pickerState, onModified, label) end
+function UnityEngine.InputSystem.Editor.InputControlPathEditor:Dispose() end
+---@param controlPaths System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.InputControlPathEditor:SetControlPathsToMatch(controlPaths) end
+---@param expectedControlLayout string
+function UnityEngine.InputSystem.Editor.InputControlPathEditor:SetExpectedControlLayout(expectedControlLayout) end
+function UnityEngine.InputSystem.Editor.InputControlPathEditor:SetExpectedControlLayoutFromAttribute() end
+---@overload fun()
+---@param rect UnityEngine.Rect
+---@param label UnityEngine.GUIContent
+---@param property UnityEditor.SerializedProperty
+---@param modifiedCallback System.Action
+function UnityEngine.InputSystem.Editor.InputControlPathEditor:OnGUI(rect, label, property, modifiedCallback) end
+
+---@class UnityEngine.InputSystem.Editor.InputControlPicker : System.Object
+---@field state UnityEngine.InputSystem.Editor.InputControlPickerState
+UnityEngine.InputSystem.Editor.InputControlPicker = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputControlPicker UnityEngine.InputSystem.Editor.InputControlPicker
+CS.UnityEngine.InputSystem.Editor.InputControlPicker = UnityEngine.InputSystem.Editor.InputControlPicker
+
+---@param mode UnityEngine.InputSystem.Editor.InputControlPicker.Mode
+---@param onPick System.Action
+---@param state UnityEngine.InputSystem.Editor.InputControlPickerState
+---@return UnityEngine.InputSystem.Editor.InputControlPicker
+function UnityEngine.InputSystem.Editor.InputControlPicker.New(mode, onPick, state) end
+---@param rect UnityEngine.Rect
+function UnityEngine.InputSystem.Editor.InputControlPicker:Show(rect) end
+function UnityEngine.InputSystem.Editor.InputControlPicker:Dispose() end
+
+---@class UnityEngine.InputSystem.Editor.InputControlPickerDropdown : UnityEngine.InputSystem.Editor.AdvancedDropdown
+UnityEngine.InputSystem.Editor.InputControlPickerDropdown = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputControlPickerDropdown UnityEngine.InputSystem.Editor.InputControlPickerDropdown
+CS.UnityEngine.InputSystem.Editor.InputControlPickerDropdown = UnityEngine.InputSystem.Editor.InputControlPickerDropdown
+
+---@param state UnityEngine.InputSystem.Editor.InputControlPickerState
+---@param onPickCallback System.Action
+---@param mode UnityEngine.InputSystem.Editor.InputControlPicker.Mode
+---@return UnityEngine.InputSystem.Editor.InputControlPickerDropdown
+function UnityEngine.InputSystem.Editor.InputControlPickerDropdown.New(state, onPickCallback, mode) end
+---@param controlPathsToMatch System.String[]
+function UnityEngine.InputSystem.Editor.InputControlPickerDropdown:SetControlPathsToMatch(controlPathsToMatch) end
+---@param expectedControlLayout string
+function UnityEngine.InputSystem.Editor.InputControlPickerDropdown:SetExpectedControlLayout(expectedControlLayout) end
+---@param action System.Action
+function UnityEngine.InputSystem.Editor.InputControlPickerDropdown:SetPickedCallback(action) end
+function UnityEngine.InputSystem.Editor.InputControlPickerDropdown:Dispose() end
+
+---@class UnityEngine.InputSystem.Editor.InputControlPickerState : System.Object
+UnityEngine.InputSystem.Editor.InputControlPickerState = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputControlPickerState UnityEngine.InputSystem.Editor.InputControlPickerState
+CS.UnityEngine.InputSystem.Editor.InputControlPickerState = UnityEngine.InputSystem.Editor.InputControlPickerState
+
+---@return UnityEngine.InputSystem.Editor.InputControlPickerState
+function UnityEngine.InputSystem.Editor.InputControlPickerState.New() end
+
+---@class UnityEngine.InputSystem.Editor.DefaultInputControlPickerLayout : System.Object
+UnityEngine.InputSystem.Editor.DefaultInputControlPickerLayout = {}
+---@alias CS.UnityEngine.InputSystem.Editor.DefaultInputControlPickerLayout UnityEngine.InputSystem.Editor.DefaultInputControlPickerLayout
+CS.UnityEngine.InputSystem.Editor.DefaultInputControlPickerLayout = UnityEngine.InputSystem.Editor.DefaultInputControlPickerLayout
+
+---@return UnityEngine.InputSystem.Editor.DefaultInputControlPickerLayout
+function UnityEngine.InputSystem.Editor.DefaultInputControlPickerLayout.New() end
+---@param dropdown UnityEngine.InputSystem.Editor.InputControlPickerDropdown
+---@param parent UnityEngine.InputSystem.Editor.DeviceDropdownItem
+---@param parentControl UnityEngine.InputSystem.Editor.ControlDropdownItem
+---@param control UnityEngine.InputSystem.Layouts.InputControlLayout.ControlItem
+---@param device string
+---@param usage string
+---@param searchable boolean
+function UnityEngine.InputSystem.Editor.DefaultInputControlPickerLayout:AddControlItem(dropdown, parent, parentControl, control, device, usage, searchable) end
+
+---@class UnityEngine.InputSystem.Editor.TouchscreenControlPickerLayout : System.Object
+UnityEngine.InputSystem.Editor.TouchscreenControlPickerLayout = {}
+---@alias CS.UnityEngine.InputSystem.Editor.TouchscreenControlPickerLayout UnityEngine.InputSystem.Editor.TouchscreenControlPickerLayout
+CS.UnityEngine.InputSystem.Editor.TouchscreenControlPickerLayout = UnityEngine.InputSystem.Editor.TouchscreenControlPickerLayout
+
+---@return UnityEngine.InputSystem.Editor.TouchscreenControlPickerLayout
+function UnityEngine.InputSystem.Editor.TouchscreenControlPickerLayout.New() end
+---@param dropdown UnityEngine.InputSystem.Editor.InputControlPickerDropdown
+---@param parent UnityEngine.InputSystem.Editor.DeviceDropdownItem
+---@param parentControl UnityEngine.InputSystem.Editor.ControlDropdownItem
+---@param control UnityEngine.InputSystem.Layouts.InputControlLayout.ControlItem
+---@param device string
+---@param usage string
+---@param searchable boolean
+function UnityEngine.InputSystem.Editor.TouchscreenControlPickerLayout:AddControlItem(dropdown, parent, parentControl, control, device, usage, searchable) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionDebuggerWindow : UnityEditor.EditorWindow
+UnityEngine.InputSystem.Editor.InputActionDebuggerWindow = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionDebuggerWindow UnityEngine.InputSystem.Editor.InputActionDebuggerWindow
+CS.UnityEngine.InputSystem.Editor.InputActionDebuggerWindow = UnityEngine.InputSystem.Editor.InputActionDebuggerWindow
+
+---@return UnityEngine.InputSystem.Editor.InputActionDebuggerWindow
+function UnityEngine.InputSystem.Editor.InputActionDebuggerWindow.New() end
+---@param action UnityEngine.InputSystem.InputAction
+function UnityEngine.InputSystem.Editor.InputActionDebuggerWindow.CreateOrShowExisting(action) end
+function UnityEngine.InputSystem.Editor.InputActionDebuggerWindow:OnGUI() end
+
+---@class UnityEngine.InputSystem.Editor.InputDebuggerWindow : UnityEditor.EditorWindow
+UnityEngine.InputSystem.Editor.InputDebuggerWindow = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputDebuggerWindow UnityEngine.InputSystem.Editor.InputDebuggerWindow
+CS.UnityEngine.InputSystem.Editor.InputDebuggerWindow = UnityEngine.InputSystem.Editor.InputDebuggerWindow
+
+---@return UnityEngine.InputSystem.Editor.InputDebuggerWindow
+function UnityEngine.InputSystem.Editor.InputDebuggerWindow.New() end
+function UnityEngine.InputSystem.Editor.InputDebuggerWindow.CreateOrShow() end
+function UnityEngine.InputSystem.Editor.InputDebuggerWindow.Enable() end
+function UnityEngine.InputSystem.Editor.InputDebuggerWindow.Disable() end
+function UnityEngine.InputSystem.Editor.InputDebuggerWindow:OnDestroy() end
+function UnityEngine.InputSystem.Editor.InputDebuggerWindow:OnGUI() end
+
+---@class UnityEngine.InputSystem.Editor.InputDeviceDebuggerWindow : UnityEditor.EditorWindow
+UnityEngine.InputSystem.Editor.InputDeviceDebuggerWindow = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputDeviceDebuggerWindow UnityEngine.InputSystem.Editor.InputDeviceDebuggerWindow
+CS.UnityEngine.InputSystem.Editor.InputDeviceDebuggerWindow = UnityEngine.InputSystem.Editor.InputDeviceDebuggerWindow
+
+---@return UnityEngine.InputSystem.Editor.InputDeviceDebuggerWindow
+function UnityEngine.InputSystem.Editor.InputDeviceDebuggerWindow.New() end
+---@param device UnityEngine.InputSystem.InputDevice
+function UnityEngine.InputSystem.Editor.InputDeviceDebuggerWindow.CreateOrShowExisting(device) end
+function UnityEngine.InputSystem.Editor.InputDeviceDebuggerWindow:Dispose() end
+
+---@class UnityEngine.InputSystem.Editor.InputLatencyCalculator : System.ValueType
+---@field averageLatencySeconds number
+---@field minLatencySeconds number
+---@field maxLatencySeconds number
+UnityEngine.InputSystem.Editor.InputLatencyCalculator = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputLatencyCalculator UnityEngine.InputSystem.Editor.InputLatencyCalculator
+CS.UnityEngine.InputSystem.Editor.InputLatencyCalculator = UnityEngine.InputSystem.Editor.InputLatencyCalculator
+
+---@param realtimeSinceStartup number
+---@return UnityEngine.InputSystem.Editor.InputLatencyCalculator
+function UnityEngine.InputSystem.Editor.InputLatencyCalculator.New(realtimeSinceStartup) end
+---@overload fun(self: UnityEngine.InputSystem.Editor.InputLatencyCalculator, eventPtr: UnityEngine.InputSystem.LowLevel.InputEventPtr)
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+---@param realtimeSinceStartup number
+function UnityEngine.InputSystem.Editor.InputLatencyCalculator:ProcessSample(eventPtr, realtimeSinceStartup) end
+---@overload fun() : boolean
+---@param realtimeSinceStartup number
+---@return boolean
+function UnityEngine.InputSystem.Editor.InputLatencyCalculator:Update(realtimeSinceStartup) end
+
+---@class UnityEngine.InputSystem.Editor.SampleFrequencyCalculator : System.ValueType
+---@field targetFrequency number
+---@field frequency number
+UnityEngine.InputSystem.Editor.SampleFrequencyCalculator = {}
+---@alias CS.UnityEngine.InputSystem.Editor.SampleFrequencyCalculator UnityEngine.InputSystem.Editor.SampleFrequencyCalculator
+CS.UnityEngine.InputSystem.Editor.SampleFrequencyCalculator = UnityEngine.InputSystem.Editor.SampleFrequencyCalculator
+
+---@param targetFrequency number
+---@param realtimeSinceStartup number
+---@return UnityEngine.InputSystem.Editor.SampleFrequencyCalculator
+function UnityEngine.InputSystem.Editor.SampleFrequencyCalculator.New(targetFrequency, realtimeSinceStartup) end
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+function UnityEngine.InputSystem.Editor.SampleFrequencyCalculator:ProcessSample(eventPtr) end
+---@overload fun() : boolean
+---@param realtimeSinceStartup number
+---@return boolean
+function UnityEngine.InputSystem.Editor.SampleFrequencyCalculator:Update(realtimeSinceStartup) end
+
+---@class UnityEngine.InputSystem.Editor.InputSystemPlugin : UnityEditor.DeviceSimulation.DeviceSimulatorPlugin
+---@field title string
+UnityEngine.InputSystem.Editor.InputSystemPlugin = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputSystemPlugin UnityEngine.InputSystem.Editor.InputSystemPlugin
+CS.UnityEngine.InputSystem.Editor.InputSystemPlugin = UnityEngine.InputSystem.Editor.InputSystemPlugin
+
+---@return UnityEngine.InputSystem.Editor.InputSystemPlugin
+function UnityEngine.InputSystem.Editor.InputSystemPlugin.New() end
+function UnityEngine.InputSystem.Editor.InputSystemPlugin:OnCreate() end
+function UnityEngine.InputSystem.Editor.InputSystemPlugin:OnDestroy() end
+
+---@class UnityEngine.InputSystem.Editor.Dialog : System.Object
+UnityEngine.InputSystem.Editor.Dialog = {}
+---@alias CS.UnityEngine.InputSystem.Editor.Dialog UnityEngine.InputSystem.Editor.Dialog
+CS.UnityEngine.InputSystem.Editor.Dialog = UnityEngine.InputSystem.Editor.Dialog
+
+
+---@class UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache : System.Object
+---@field allLayouts System.Collections.Generic.IEnumerable
+---@field allUsages System.Collections.Generic.IEnumerable
+---@field allControlLayouts System.Collections.Generic.IEnumerable
+---@field allDeviceLayouts System.Collections.Generic.IEnumerable
+---@field allProductLayouts System.Collections.Generic.IEnumerable
+UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache = {}
+---@alias CS.UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache
+CS.UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache = UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache
+
+---@param layoutName string
+---@return boolean
+function UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache.HasChildLayouts(layoutName) end
+---@param layoutName string
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache.TryGetChildLayouts(layoutName) end
+---@param layoutName string
+---@return UnityEngine.InputSystem.Layouts.InputControlLayout
+function UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache.TryGetLayout(layoutName) end
+---@param layoutName string
+---@return System.Type
+function UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache.GetValueType(layoutName) end
+---@param layoutName string
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache.GetDeviceMatchers(layoutName) end
+---@param layoutName string
+---@return string
+function UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache.GetDisplayName(layoutName) end
+---@param layoutName string
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache.GetOptionalControlsForLayout(layoutName) end
+---@param layoutName string
+---@return UnityEngine.Texture2D
+function UnityEngine.InputSystem.Editor.EditorInputControlLayoutCache.GetIconForLayout(layoutName) end
+
+---@class UnityEngine.InputSystem.Editor.InputAssetEditorUtils : System.Object
+UnityEngine.InputSystem.Editor.InputAssetEditorUtils = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputAssetEditorUtils UnityEngine.InputSystem.Editor.InputAssetEditorUtils
+CS.UnityEngine.InputSystem.Editor.InputAssetEditorUtils = UnityEngine.InputSystem.Editor.InputAssetEditorUtils
+
+---@param path string
+---@return boolean
+function UnityEngine.InputSystem.Editor.InputAssetEditorUtils.IsValidFileExtension(path) end
+
+---@class UnityEngine.InputSystem.Editor.InputDiagnostics : System.Object
+UnityEngine.InputSystem.Editor.InputDiagnostics = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputDiagnostics UnityEngine.InputSystem.Editor.InputDiagnostics
+CS.UnityEngine.InputSystem.Editor.InputDiagnostics = UnityEngine.InputSystem.Editor.InputDiagnostics
+
+---@return UnityEngine.InputSystem.Editor.InputDiagnostics
+function UnityEngine.InputSystem.Editor.InputDiagnostics.New() end
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+function UnityEngine.InputSystem.Editor.InputDiagnostics:OnCannotFindDeviceForEvent(eventPtr) end
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+---@param device UnityEngine.InputSystem.InputDevice
+function UnityEngine.InputSystem.Editor.InputDiagnostics:OnEventTimestampOutdated(eventPtr, device) end
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+---@param device UnityEngine.InputSystem.InputDevice
+function UnityEngine.InputSystem.Editor.InputDiagnostics:OnEventFormatMismatch(eventPtr, device) end
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+---@param device UnityEngine.InputSystem.InputDevice
+function UnityEngine.InputSystem.Editor.InputDiagnostics:OnEventForDisabledDevice(eventPtr, device) end
+
+---@class UnityEngine.InputSystem.Editor.InputLayoutCodeGenerator : System.Object
+UnityEngine.InputSystem.Editor.InputLayoutCodeGenerator = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputLayoutCodeGenerator UnityEngine.InputSystem.Editor.InputLayoutCodeGenerator
+CS.UnityEngine.InputSystem.Editor.InputLayoutCodeGenerator = UnityEngine.InputSystem.Editor.InputLayoutCodeGenerator
+
+---@param layoutName string
+---@param fileName string
+---@param prefix string
+---@return string
+function UnityEngine.InputSystem.Editor.InputLayoutCodeGenerator.GenerateCodeFileForDeviceLayout(layoutName, fileName, prefix) end
+---@param layoutName string
+---@param defines string
+---@param namePrefix string
+---@param visibility string
+---@param namespace string
+---@return string
+function UnityEngine.InputSystem.Editor.InputLayoutCodeGenerator.GenerateCodeForDeviceLayout(layoutName, defines, namePrefix, visibility, namespace) end
+
+---@class UnityEngine.InputSystem.Editor.InputParameterEditor : System.Object
+---@field target System.Object
+UnityEngine.InputSystem.Editor.InputParameterEditor = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputParameterEditor UnityEngine.InputSystem.Editor.InputParameterEditor
+CS.UnityEngine.InputSystem.Editor.InputParameterEditor = UnityEngine.InputSystem.Editor.InputParameterEditor
+
+function UnityEngine.InputSystem.Editor.InputParameterEditor:OnGUI() end
+---@param root UnityEngine.UIElements.VisualElement
+---@param onChangedCallback System.Action
+function UnityEngine.InputSystem.Editor.InputParameterEditor:OnDrawVisualElements(root, onChangedCallback) end
+
+---@class UnityEngine.InputSystem.Editor.InputParameterEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
+---@field target TObject
+UnityEngine.InputSystem.Editor.InputParameterEditor = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputParameterEditor UnityEngine.InputSystem.Editor.InputParameterEditor
+CS.UnityEngine.InputSystem.Editor.InputParameterEditor = UnityEngine.InputSystem.Editor.InputParameterEditor
+
+---@param root UnityEngine.UIElements.VisualElement
+---@param onChangedCallback System.Action
+function UnityEngine.InputSystem.Editor.InputParameterEditor:OnDrawVisualElements(root, onChangedCallback) end
+
+---@class UnityEngine.InputSystem.Editor.InputSystemPackageControl : System.Object
+UnityEngine.InputSystem.Editor.InputSystemPackageControl = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputSystemPackageControl UnityEngine.InputSystem.Editor.InputSystemPackageControl
+CS.UnityEngine.InputSystem.Editor.InputSystemPackageControl = UnityEngine.InputSystem.Editor.InputSystemPackageControl
+
+---@return UnityEngine.InputSystem.Editor.InputSystemPackageControl
+function UnityEngine.InputSystem.Editor.InputSystemPackageControl.New() end
+
+---@class UnityEngine.InputSystem.Editor.InputSystemPluginControl : System.Object
+UnityEngine.InputSystem.Editor.InputSystemPluginControl = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputSystemPluginControl UnityEngine.InputSystem.Editor.InputSystemPluginControl
+CS.UnityEngine.InputSystem.Editor.InputSystemPluginControl = UnityEngine.InputSystem.Editor.InputSystemPluginControl
+
+---@return UnityEngine.InputSystem.Editor.InputSystemPluginControl
+function UnityEngine.InputSystem.Editor.InputSystemPluginControl.New() end
+---@param target UnityEditor.BuildTarget
+function UnityEngine.InputSystem.Editor.InputSystemPluginControl.RegisterPlatform(target) end
+
+---@class UnityEngine.InputSystem.Editor.AdvancedDropdown : System.Object
+UnityEngine.InputSystem.Editor.AdvancedDropdown = {}
+---@alias CS.UnityEngine.InputSystem.Editor.AdvancedDropdown UnityEngine.InputSystem.Editor.AdvancedDropdown
+CS.UnityEngine.InputSystem.Editor.AdvancedDropdown = UnityEngine.InputSystem.Editor.AdvancedDropdown
+
+---@param state UnityEngine.InputSystem.Editor.AdvancedDropdownState
+---@return UnityEngine.InputSystem.Editor.AdvancedDropdown
+function UnityEngine.InputSystem.Editor.AdvancedDropdown.New(state) end
+---@param rect UnityEngine.Rect
+function UnityEngine.InputSystem.Editor.AdvancedDropdown:Show(rect) end
+function UnityEngine.InputSystem.Editor.AdvancedDropdown:Reload() end
+function UnityEngine.InputSystem.Editor.AdvancedDropdown:Repaint() end
+
+---@class UnityEngine.InputSystem.Editor.AdvancedDropdownDataSource : System.Object
+---@field mainTree UnityEngine.InputSystem.Editor.AdvancedDropdownItem
+---@field searchTree UnityEngine.InputSystem.Editor.AdvancedDropdownItem
+---@field selectedIDs System.Collections.Generic.List
+UnityEngine.InputSystem.Editor.AdvancedDropdownDataSource = {}
+---@alias CS.UnityEngine.InputSystem.Editor.AdvancedDropdownDataSource UnityEngine.InputSystem.Editor.AdvancedDropdownDataSource
+CS.UnityEngine.InputSystem.Editor.AdvancedDropdownDataSource = UnityEngine.InputSystem.Editor.AdvancedDropdownDataSource
+
+function UnityEngine.InputSystem.Editor.AdvancedDropdownDataSource:ReloadData() end
+---@param search string
+function UnityEngine.InputSystem.Editor.AdvancedDropdownDataSource:RebuildSearch(search) end
+
+---@class UnityEngine.InputSystem.Editor.AdvancedDropdownGUI : System.Object
+UnityEngine.InputSystem.Editor.AdvancedDropdownGUI = {}
+---@alias CS.UnityEngine.InputSystem.Editor.AdvancedDropdownGUI UnityEngine.InputSystem.Editor.AdvancedDropdownGUI
+CS.UnityEngine.InputSystem.Editor.AdvancedDropdownGUI = UnityEngine.InputSystem.Editor.AdvancedDropdownGUI
+
+---@return UnityEngine.InputSystem.Editor.AdvancedDropdownGUI
+function UnityEngine.InputSystem.Editor.AdvancedDropdownGUI.New() end
+function UnityEngine.InputSystem.Editor.AdvancedDropdownGUI:Init() end
+
+---@class UnityEngine.InputSystem.Editor.AdvancedDropdownItem : System.Object
+---@field name string
+---@field icon UnityEngine.Texture2D
+---@field id number
+---@field enabled boolean
+---@field indent number
+---@field children System.Collections.Generic.IEnumerable
+---@field searchableName string
+UnityEngine.InputSystem.Editor.AdvancedDropdownItem = {}
+---@alias CS.UnityEngine.InputSystem.Editor.AdvancedDropdownItem UnityEngine.InputSystem.Editor.AdvancedDropdownItem
+CS.UnityEngine.InputSystem.Editor.AdvancedDropdownItem = UnityEngine.InputSystem.Editor.AdvancedDropdownItem
+
+---@param name string
+---@return UnityEngine.InputSystem.Editor.AdvancedDropdownItem
+function UnityEngine.InputSystem.Editor.AdvancedDropdownItem.New(name) end
+---@param child UnityEngine.InputSystem.Editor.AdvancedDropdownItem
+function UnityEngine.InputSystem.Editor.AdvancedDropdownItem:AddChild(child) end
+---@param child UnityEngine.InputSystem.Editor.AdvancedDropdownItem
+---@return number
+function UnityEngine.InputSystem.Editor.AdvancedDropdownItem:GetIndexOfChild(child) end
+---@param o System.Object
+---@return number
+function UnityEngine.InputSystem.Editor.AdvancedDropdownItem:CompareTo(o) end
+---@param label string
+function UnityEngine.InputSystem.Editor.AdvancedDropdownItem:AddSeparator(label) end
+---@return string
+function UnityEngine.InputSystem.Editor.AdvancedDropdownItem:ToString() end
+
+---@class UnityEngine.InputSystem.Editor.AdvancedDropdownState : System.Object
+UnityEngine.InputSystem.Editor.AdvancedDropdownState = {}
+---@alias CS.UnityEngine.InputSystem.Editor.AdvancedDropdownState UnityEngine.InputSystem.Editor.AdvancedDropdownState
+CS.UnityEngine.InputSystem.Editor.AdvancedDropdownState = UnityEngine.InputSystem.Editor.AdvancedDropdownState
+
+---@return UnityEngine.InputSystem.Editor.AdvancedDropdownState
+function UnityEngine.InputSystem.Editor.AdvancedDropdownState.New() end
+
+---@class UnityEngine.InputSystem.Editor.AdvancedDropdownWindow : UnityEditor.EditorWindow
+UnityEngine.InputSystem.Editor.AdvancedDropdownWindow = {}
+---@alias CS.UnityEngine.InputSystem.Editor.AdvancedDropdownWindow UnityEngine.InputSystem.Editor.AdvancedDropdownWindow
+CS.UnityEngine.InputSystem.Editor.AdvancedDropdownWindow = UnityEngine.InputSystem.Editor.AdvancedDropdownWindow
+
+---@return UnityEngine.InputSystem.Editor.AdvancedDropdownWindow
+function UnityEngine.InputSystem.Editor.AdvancedDropdownWindow.New() end
+---@param buttonRect UnityEngine.Rect
+function UnityEngine.InputSystem.Editor.AdvancedDropdownWindow:Init(buttonRect) end
+function UnityEngine.InputSystem.Editor.AdvancedDropdownWindow:ReloadData() end
+
+---@class UnityEngine.InputSystem.Editor.CallbackDataSource : UnityEngine.InputSystem.Editor.AdvancedDropdownDataSource
+UnityEngine.InputSystem.Editor.CallbackDataSource = {}
+---@alias CS.UnityEngine.InputSystem.Editor.CallbackDataSource UnityEngine.InputSystem.Editor.CallbackDataSource
+CS.UnityEngine.InputSystem.Editor.CallbackDataSource = UnityEngine.InputSystem.Editor.CallbackDataSource
+
+
+---@class UnityEngine.InputSystem.Editor.MultiLevelDataSource : UnityEngine.InputSystem.Editor.AdvancedDropdownDataSource
+UnityEngine.InputSystem.Editor.MultiLevelDataSource = {}
+---@alias CS.UnityEngine.InputSystem.Editor.MultiLevelDataSource UnityEngine.InputSystem.Editor.MultiLevelDataSource
+CS.UnityEngine.InputSystem.Editor.MultiLevelDataSource = UnityEngine.InputSystem.Editor.MultiLevelDataSource
+
+---@param displayOptions System.String[]
+---@return UnityEngine.InputSystem.Editor.MultiLevelDataSource
+function UnityEngine.InputSystem.Editor.MultiLevelDataSource.New(displayOptions) end
+
+---@class UnityEngine.InputSystem.Editor.BuildProviderHelpers : System.Object
+UnityEngine.InputSystem.Editor.BuildProviderHelpers = {}
+---@alias CS.UnityEngine.InputSystem.Editor.BuildProviderHelpers UnityEngine.InputSystem.Editor.BuildProviderHelpers
+CS.UnityEngine.InputSystem.Editor.BuildProviderHelpers = UnityEngine.InputSystem.Editor.BuildProviderHelpers
+
+---@param assetToPreload UnityEngine.Object
+---@return UnityEngine.Object
+function UnityEngine.InputSystem.Editor.BuildProviderHelpers.PreProcessSinglePreloadedAsset(assetToPreload) end
+---@param ref_assetAddedByThisProvider UnityEngine.Object
+---@return ,UnityEngine.Object
+function UnityEngine.InputSystem.Editor.BuildProviderHelpers.PostProcessSinglePreloadedAsset(ref_assetAddedByThisProvider) end
+
+---@class UnityEngine.InputSystem.Editor.EditorHelpers : System.Object
+---@field SetSystemCopyBufferContents System.Action
+---@field GetSystemCopyBufferContents System.Func
+UnityEngine.InputSystem.Editor.EditorHelpers = {}
+---@alias CS.UnityEngine.InputSystem.Editor.EditorHelpers UnityEngine.InputSystem.Editor.EditorHelpers
+CS.UnityEngine.InputSystem.Editor.EditorHelpers = UnityEngine.InputSystem.Editor.EditorHelpers
+
+---@param asset UnityEngine.Object
+---@return string
+function UnityEngine.InputSystem.Editor.EditorHelpers.GetAssetGUID(asset) end
+---@param property UnityEditor.SerializedProperty
+---@return string
+function UnityEngine.InputSystem.Editor.EditorHelpers.GetTooltip(property) end
+---@overload fun(text: string, path: string) : string
+---@param path string
+---@return string
+function UnityEngine.InputSystem.Editor.EditorHelpers.GetHyperlink(path) end
+---@param dryRun boolean
+function UnityEngine.InputSystem.Editor.EditorHelpers.RestartEditorAndRecompileScripts(dryRun) end
+---@param path string
+---@return boolean
+function UnityEngine.InputSystem.Editor.EditorHelpers.CheckOut(path) end
+---@param path string
+---@return string
+function UnityEngine.InputSystem.Editor.EditorHelpers.GetPhysicalPath(path) end
+
+---@class UnityEngine.InputSystem.Editor.GUIHelpers : System.Object
+UnityEngine.InputSystem.Editor.GUIHelpers = {}
+---@alias CS.UnityEngine.InputSystem.Editor.GUIHelpers UnityEngine.InputSystem.Editor.GUIHelpers
+CS.UnityEngine.InputSystem.Editor.GUIHelpers = UnityEngine.InputSystem.Editor.GUIHelpers
+
+---@param label string
+function UnityEngine.InputSystem.Editor.GUIHelpers.DrawLineSeparator(label) end
+---@param name string
+---@return UnityEngine.Texture2D
+function UnityEngine.InputSystem.Editor.GUIHelpers.LoadIcon(name) end
+---@param style UnityEngine.GUIStyle
+---@param background UnityEngine.Texture2D
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithNormalBackground(style, background) end
+---@param style UnityEngine.GUIStyle
+---@param fontSize number
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithFontSize(style, fontSize) end
+---@param style UnityEngine.GUIStyle
+---@param fontStyle UnityEngine.FontStyle
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithFontStyle(style, fontStyle) end
+---@param style UnityEngine.GUIStyle
+---@param alignment UnityEngine.TextAnchor
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithAlignment(style, alignment) end
+---@param style UnityEngine.GUIStyle
+---@param margin UnityEngine.RectOffset
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithMargin(style, margin) end
+---@param style UnityEngine.GUIStyle
+---@param border UnityEngine.RectOffset
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithBorder(style, border) end
+---@param style UnityEngine.GUIStyle
+---@param padding UnityEngine.RectOffset
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithPadding(style, padding) end
+---@param style UnityEngine.GUIStyle
+---@param fixedWidth number
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithFixedWidth(style, fixedWidth) end
+---@param style UnityEngine.GUIStyle
+---@param fixedHeight number
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithFixedHeight(style, fixedHeight) end
+---@param style UnityEngine.GUIStyle
+---@param richText boolean
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithRichText(style, richText) end
+---@param style UnityEngine.GUIStyle
+---@param font UnityEngine.Font
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithFont(style, font) end
+---@param style UnityEngine.GUIStyle
+---@param contentOffset UnityEngine.Vector2
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithContentOffset(style, contentOffset) end
+---@param style UnityEngine.GUIStyle
+---@param textColor UnityEngine.Color
+---@return UnityEngine.GUIStyle
+function UnityEngine.InputSystem.Editor.GUIHelpers.WithNormalTextColor(style, textColor) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionSerializationHelpers : System.Object
+UnityEngine.InputSystem.Editor.InputActionSerializationHelpers = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionSerializationHelpers UnityEngine.InputSystem.Editor.InputActionSerializationHelpers
+CS.UnityEngine.InputSystem.Editor.InputActionSerializationHelpers = UnityEngine.InputSystem.Editor.InputActionSerializationHelpers
+
+---@param element UnityEditor.SerializedProperty
+---@return string
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.GetName(element) end
+---@param element UnityEditor.SerializedProperty
+---@return System.Guid
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.GetId(element) end
+---@overload fun(arrayProperty: UnityEditor.SerializedProperty, id: System.Guid) : number
+---@overload fun(arrayProperty: UnityEditor.SerializedProperty, arrayElement: UnityEditor.SerializedProperty) : number
+---@param arrayElement UnityEditor.SerializedProperty
+---@return number
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.GetIndex(arrayElement) end
+---@param bindingArrayProperty UnityEditor.SerializedProperty
+---@param bindingIndex number
+---@return number
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.GetCompositeStartIndex(bindingArrayProperty, bindingIndex) end
+---@param bindingArrayProperty UnityEditor.SerializedProperty
+---@param bindingIndex number
+---@return number
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.GetCompositePartCount(bindingArrayProperty, bindingIndex) end
+---@param bindingArrayProperty UnityEditor.SerializedProperty
+---@param actionName string
+---@param bindingIndexOnAction number
+---@return number
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.ConvertBindingIndexOnActionToBindingIndexInArray(bindingArrayProperty, actionName, bindingIndexOnAction) end
+---@param asset UnityEditor.SerializedObject
+---@param sourceAsset UnityEditor.SerializedObject
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.AddActionMaps(asset, sourceAsset) end
+---@param asset UnityEditor.SerializedObject
+---@param sourceAsset UnityEditor.SerializedObject
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.AddControlSchemes(asset, sourceAsset) end
+---@param asset UnityEditor.SerializedObject
+---@param index number
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.AddActionMap(asset, index) end
+---@param asset UnityEditor.SerializedObject
+---@param id System.Guid
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.DeleteActionMap(asset, id) end
+---@param asset UnityEditor.SerializedObject
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.DeleteAllActionMaps(asset) end
+---@param asset UnityEditor.SerializedObject
+---@param fromIndex number
+---@param toIndex number
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.MoveActionMap(asset, fromIndex, toIndex) end
+---@param actionMap UnityEditor.SerializedProperty
+---@param fromIndex number
+---@param toIndex number
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.MoveAction(actionMap, fromIndex, toIndex) end
+---@param actionMap UnityEditor.SerializedProperty
+---@param fromIndex number
+---@param toIndex number
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.MoveBinding(actionMap, fromIndex, toIndex) end
+---@param actionMap UnityEditor.SerializedProperty
+---@param index number
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.AddAction(actionMap, index) end
+---@param actionMap UnityEditor.SerializedProperty
+---@param actionId System.Guid
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.DeleteActionAndBindings(actionMap, actionId) end
+---@param actionProperty UnityEditor.SerializedProperty
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@param afterBinding UnityEditor.SerializedProperty
+---@param groups string
+---@param path string
+---@param name string
+---@param interactions string
+---@param processors string
+---@param flags UnityEngine.InputSystem.InputBinding.Flags
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.AddBinding(actionProperty, actionMapProperty, afterBinding, groups, path, name, interactions, processors, flags) end
+---@param bindingsArrayProperty UnityEditor.SerializedProperty
+---@param bindingIndex number
+---@param actionName string
+---@param groups string
+---@param path string
+---@param name string
+---@param interactions string
+---@param processors string
+---@param flags UnityEngine.InputSystem.InputBinding.Flags
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.AddBindingToBindingArray(bindingsArrayProperty, bindingIndex, actionName, groups, path, name, interactions, processors, flags) end
+---@param bindingProperty UnityEditor.SerializedProperty
+---@param partName string
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.SetBindingPartName(bindingProperty, partName) end
+---@param bindingProperty UnityEditor.SerializedProperty
+---@param path string
+---@param groups string
+---@param interactions string
+---@param processors string
+---@param action string
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.ChangeBinding(bindingProperty, path, groups, interactions, processors, action) end
+---@overload fun(binding: UnityEditor.SerializedProperty, actionMap: UnityEditor.SerializedProperty)
+---@param bindingArrayProperty UnityEditor.SerializedProperty
+---@param id System.Guid
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.DeleteBinding(bindingArrayProperty, id) end
+---@param arrayElement UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.EnsureUniqueName(arrayElement) end
+---@param arrayProperty UnityEditor.SerializedProperty
+---@param baseName string
+---@param ignoreIndex number
+---@return string
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.FindUniqueName(arrayProperty, baseName, ignoreIndex) end
+---@param element UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.AssignUniqueIDs(element) end
+---@param actionProperty UnityEditor.SerializedProperty
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@param newName string
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.RenameAction(actionProperty, actionMapProperty, newName) end
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@param newName string
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.RenameActionMap(actionMapProperty, newName) end
+---@param compositeGroupProperty UnityEditor.SerializedProperty
+---@param newName string
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.RenameComposite(compositeGroupProperty, newName) end
+---@param actionProperty UnityEditor.SerializedProperty
+---@param actionMapProperty UnityEditor.SerializedProperty
+---@param compositeName string
+---@param compositeType System.Type
+---@param groups string
+---@param addPartBindings boolean
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.AddCompositeBinding(actionProperty, actionMapProperty, compositeName, compositeType, groups, addPartBindings) end
+---@param bindingProperty UnityEditor.SerializedProperty
+---@return boolean
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.IsCompositeBinding(bindingProperty) end
+---@param bindingProperty UnityEditor.SerializedProperty
+---@param nameAndParameters UnityEngine.InputSystem.Utilities.NameAndParameters
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.ChangeCompositeBindingType(bindingProperty, nameAndParameters) end
+---@param asset UnityEditor.SerializedObject
+---@param oldBindingGroup string
+---@param newBindingGroup string
+---@param deleteOrphanedBindings boolean
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.ReplaceBindingGroup(asset, oldBindingGroup, newBindingGroup, deleteOrphanedBindings) end
+---@param binding UnityEditor.SerializedProperty
+---@param controlSchemes UnityEngine.InputSystem.Utilities.ReadOnlyArray
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.RemoveUnusedBindingGroups(binding, controlSchemes) end
+---@param asset UnityEditor.SerializedObject
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.DeleteAllControlSchemes(asset) end
+---@param controlSchemeArray UnityEditor.SerializedProperty
+---@param controlSchemeName string
+---@return number
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.IndexOfControlScheme(controlSchemeArray, controlSchemeName) end
+---@param asset UnityEditor.SerializedObject
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.InputActionSerializationHelpers.GetControlSchemesArray(asset) end
+
+---@class UnityEngine.InputSystem.Editor.InputControlTreeView : UnityEditor.IMGUI.Controls.TreeView
+---@field stateBuffer System.Byte[]
+---@field multipleStateBuffers System.Byte[][]
+---@field showDifferentOnly boolean
+UnityEngine.InputSystem.Editor.InputControlTreeView = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputControlTreeView UnityEngine.InputSystem.Editor.InputControlTreeView
+CS.UnityEngine.InputSystem.Editor.InputControlTreeView = UnityEngine.InputSystem.Editor.InputControlTreeView
+
+---@param rootControl UnityEngine.InputSystem.InputControl
+---@param numValueColumns number
+---@param ref_treeState UnityEditor.IMGUI.Controls.TreeViewState
+---@param ref_headerState UnityEditor.IMGUI.Controls.MultiColumnHeaderState
+---@return UnityEngine.InputSystem.Editor.InputControlTreeView,UnityEditor.IMGUI.Controls.TreeViewState,UnityEditor.IMGUI.Controls.MultiColumnHeaderState
+function UnityEngine.InputSystem.Editor.InputControlTreeView.Create(rootControl, numValueColumns, ref_treeState, ref_headerState) end
+function UnityEngine.InputSystem.Editor.InputControlTreeView:RefreshControlValues() end
+
+---@class UnityEngine.InputSystem.Editor.InputEventTreeView : UnityEditor.IMGUI.Controls.TreeView
+UnityEngine.InputSystem.Editor.InputEventTreeView = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputEventTreeView UnityEngine.InputSystem.Editor.InputEventTreeView
+CS.UnityEngine.InputSystem.Editor.InputEventTreeView = UnityEngine.InputSystem.Editor.InputEventTreeView
+
+---@param device UnityEngine.InputSystem.InputDevice
+---@param eventTrace UnityEngine.InputSystem.LowLevel.InputEventTrace
+---@param ref_treeState UnityEditor.IMGUI.Controls.TreeViewState
+---@param ref_headerState UnityEditor.IMGUI.Controls.MultiColumnHeaderState
+---@return UnityEngine.InputSystem.Editor.InputEventTreeView,UnityEditor.IMGUI.Controls.TreeViewState,UnityEditor.IMGUI.Controls.MultiColumnHeaderState
+function UnityEngine.InputSystem.Editor.InputEventTreeView.Create(device, eventTrace, ref_treeState, ref_headerState) end
+
+---@class UnityEngine.InputSystem.Editor.InputStateWindow : UnityEditor.EditorWindow
+UnityEngine.InputSystem.Editor.InputStateWindow = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputStateWindow UnityEngine.InputSystem.Editor.InputStateWindow
+CS.UnityEngine.InputSystem.Editor.InputStateWindow = UnityEngine.InputSystem.Editor.InputStateWindow
+
+---@return UnityEngine.InputSystem.Editor.InputStateWindow
+function UnityEngine.InputSystem.Editor.InputStateWindow.New() end
+---@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
+---@param control UnityEngine.InputSystem.InputControl
+function UnityEngine.InputSystem.Editor.InputStateWindow:InitializeWithEvent(eventPtr, control) end
+---@param eventPtrs UnityEngine.InputSystem.LowLevel.InputEventPtr[]
+---@param control UnityEngine.InputSystem.InputControl
+function UnityEngine.InputSystem.Editor.InputStateWindow:InitializeWithEvents(eventPtrs, control) end
+---@param control UnityEngine.InputSystem.InputControl
+function UnityEngine.InputSystem.Editor.InputStateWindow:InitializeWithControl(control) end
+function UnityEngine.InputSystem.Editor.InputStateWindow:OnGUI() end
+
+---@class UnityEngine.InputSystem.Editor.SerializedPropertyHelpers : System.Object
+UnityEngine.InputSystem.Editor.SerializedPropertyHelpers = {}
+---@alias CS.UnityEngine.InputSystem.Editor.SerializedPropertyHelpers UnityEngine.InputSystem.Editor.SerializedPropertyHelpers
+CS.UnityEngine.InputSystem.Editor.SerializedPropertyHelpers = UnityEngine.InputSystem.Editor.SerializedPropertyHelpers
+
+---@param prop UnityEditor.SerializedProperty
+---@param label UnityEngine.GUIContent
+---@param defaultText string
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.PropertyFieldWithDefaultText(prop, label, defaultText) end
+---@param property UnityEditor.SerializedProperty
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.GetParentProperty(property) end
+---@param property UnityEditor.SerializedProperty
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.GetArrayPropertyFromElement(property) end
+---@param property UnityEditor.SerializedProperty
+---@return number
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.GetIndexOfArrayElement(property) end
+---@param property UnityEditor.SerializedProperty
+---@return System.Type
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.GetArrayElementType(property) end
+---@param property UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.ResetValuesToDefault(property) end
+---@param serializedObject UnityEditor.SerializedObject
+---@return string
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.ToJson(serializedObject) end
+---@overload fun(property: UnityEditor.SerializedProperty, ignoreObjectReferences: boolean) : string
+---@param property UnityEditor.SerializedProperty
+---@param buffer System.Text.StringBuilder
+---@param ignoreObjectReferences boolean
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.CopyToJson(property, buffer, ignoreObjectReferences) end
+---@overload fun(property: UnityEditor.SerializedProperty, json: string)
+---@param property UnityEditor.SerializedProperty
+---@param ref_parser UnityEngine.InputSystem.Utilities.JsonParser
+---@return ,UnityEngine.InputSystem.Utilities.JsonParser
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.RestoreFromJson(property, ref_parser) end
+---@param property UnityEditor.SerializedProperty
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.GetChildren(property) end
+---@param property UnityEditor.SerializedProperty
+---@return System.Reflection.FieldInfo
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.GetField(property) end
+---@param property UnityEditor.SerializedProperty
+---@return System.Type
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.GetFieldType(property) end
+---@param property UnityEditor.SerializedProperty
+---@param propertyName string
+---@param value string
+function UnityEngine.InputSystem.Editor.SerializedPropertyHelpers.SetStringValue(property, propertyName, value) end
+
+---@class UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions : System.Object
+UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions = {}
+---@alias CS.UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions
+CS.UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions = UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions
+
+---@param property UnityEditor.SerializedProperty
+---@param predicate System.Func
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions.Where(property, predicate) end
+---@param property UnityEditor.SerializedProperty
+---@param predicate System.Func
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions.FindLast(property, predicate) end
+---@overload fun(property: UnityEditor.SerializedProperty) : UnityEditor.SerializedProperty
+---@param property UnityEditor.SerializedProperty
+---@param predicate System.Func
+---@return UnityEditor.SerializedProperty
+function UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions.FirstOrDefault(property, predicate) end
+---@param property UnityEditor.SerializedProperty
+---@param count number
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions.Skip(property, count) end
+---@param property UnityEditor.SerializedProperty
+---@param count number
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.InputSystem.Editor.SerializedPropertyLinqExtensions.Take(property, count) end
+
+---@class UnityEngine.InputSystem.Editor.TreeViewHelpers : System.Object
+UnityEngine.InputSystem.Editor.TreeViewHelpers = {}
+---@alias CS.UnityEngine.InputSystem.Editor.TreeViewHelpers UnityEngine.InputSystem.Editor.TreeViewHelpers
+CS.UnityEngine.InputSystem.Editor.TreeViewHelpers = UnityEngine.InputSystem.Editor.TreeViewHelpers
+
+---@param parent UnityEditor.IMGUI.Controls.TreeViewItem
+---@param child UnityEditor.IMGUI.Controls.TreeViewItem
+---@return boolean
+function UnityEngine.InputSystem.Editor.TreeViewHelpers.IsParentOf(parent, child) end
+---@param treeView UnityEditor.IMGUI.Controls.TreeView
+---@param item UnityEditor.IMGUI.Controls.TreeViewItem
+function UnityEngine.InputSystem.Editor.TreeViewHelpers.ExpandChildren(treeView, item) end
+
+---@class UnityEngine.InputSystem.Editor.ProjectWideActionsAsset : System.Object
+UnityEngine.InputSystem.Editor.ProjectWideActionsAsset = {}
+---@alias CS.UnityEngine.InputSystem.Editor.ProjectWideActionsAsset UnityEngine.InputSystem.Editor.ProjectWideActionsAsset
+CS.UnityEngine.InputSystem.Editor.ProjectWideActionsAsset = UnityEngine.InputSystem.Editor.ProjectWideActionsAsset
+
+
+---@class UnityEngine.InputSystem.Editor.ProjectWideActionsBuildProvider : System.Object
+---@field callbackOrder number
+UnityEngine.InputSystem.Editor.ProjectWideActionsBuildProvider = {}
+---@alias CS.UnityEngine.InputSystem.Editor.ProjectWideActionsBuildProvider UnityEngine.InputSystem.Editor.ProjectWideActionsBuildProvider
+CS.UnityEngine.InputSystem.Editor.ProjectWideActionsBuildProvider = UnityEngine.InputSystem.Editor.ProjectWideActionsBuildProvider
+
+---@return UnityEngine.InputSystem.Editor.ProjectWideActionsBuildProvider
+function UnityEngine.InputSystem.Editor.ProjectWideActionsBuildProvider.New() end
+---@param report UnityEditor.Build.Reporting.BuildReport
+function UnityEngine.InputSystem.Editor.ProjectWideActionsBuildProvider:OnPreprocessBuild(report) end
+---@param report UnityEditor.Build.Reporting.BuildReport
+function UnityEngine.InputSystem.Editor.ProjectWideActionsBuildProvider:OnPostprocessBuild(report) end
+
+---@class UnityEngine.InputSystem.Editor.GamepadButtonPropertyDrawer : UnityEditor.PropertyDrawer
+UnityEngine.InputSystem.Editor.GamepadButtonPropertyDrawer = {}
+---@alias CS.UnityEngine.InputSystem.Editor.GamepadButtonPropertyDrawer UnityEngine.InputSystem.Editor.GamepadButtonPropertyDrawer
+CS.UnityEngine.InputSystem.Editor.GamepadButtonPropertyDrawer = UnityEngine.InputSystem.Editor.GamepadButtonPropertyDrawer
+
+---@return UnityEngine.InputSystem.Editor.GamepadButtonPropertyDrawer
+function UnityEngine.InputSystem.Editor.GamepadButtonPropertyDrawer.New() end
+---@param property UnityEditor.SerializedProperty
+---@return UnityEngine.UIElements.VisualElement
+function UnityEngine.InputSystem.Editor.GamepadButtonPropertyDrawer:CreatePropertyGUI(property) end
+---@param position UnityEngine.Rect
+---@param property UnityEditor.SerializedProperty
+---@param label UnityEngine.GUIContent
+function UnityEngine.InputSystem.Editor.GamepadButtonPropertyDrawer:OnGUI(position, property, label) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionAssetDrawer : UnityEditor.PropertyDrawer
+UnityEngine.InputSystem.Editor.InputActionAssetDrawer = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionAssetDrawer UnityEngine.InputSystem.Editor.InputActionAssetDrawer
+CS.UnityEngine.InputSystem.Editor.InputActionAssetDrawer = UnityEngine.InputSystem.Editor.InputActionAssetDrawer
+
+---@return UnityEngine.InputSystem.Editor.InputActionAssetDrawer
+function UnityEngine.InputSystem.Editor.InputActionAssetDrawer.New() end
+---@param position UnityEngine.Rect
+---@param property UnityEditor.SerializedProperty
+---@param label UnityEngine.GUIContent
+function UnityEngine.InputSystem.Editor.InputActionAssetDrawer:OnGUI(position, property, label) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionAssetSearchProviders : System.Object
+UnityEngine.InputSystem.Editor.InputActionAssetSearchProviders = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionAssetSearchProviders UnityEngine.InputSystem.Editor.InputActionAssetSearchProviders
+CS.UnityEngine.InputSystem.Editor.InputActionAssetSearchProviders = UnityEngine.InputSystem.Editor.InputActionAssetSearchProviders
+
+
+---@class UnityEngine.InputSystem.Editor.InputActionDrawer : UnityEngine.InputSystem.Editor.InputActionDrawerBase
+UnityEngine.InputSystem.Editor.InputActionDrawer = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionDrawer UnityEngine.InputSystem.Editor.InputActionDrawer
+CS.UnityEngine.InputSystem.Editor.InputActionDrawer = UnityEngine.InputSystem.Editor.InputActionDrawer
+
+---@return UnityEngine.InputSystem.Editor.InputActionDrawer
+function UnityEngine.InputSystem.Editor.InputActionDrawer.New() end
+
+---@class UnityEngine.InputSystem.Editor.InputActionDrawerBase : UnityEditor.PropertyDrawer
+UnityEngine.InputSystem.Editor.InputActionDrawerBase = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionDrawerBase UnityEngine.InputSystem.Editor.InputActionDrawerBase
+CS.UnityEngine.InputSystem.Editor.InputActionDrawerBase = UnityEngine.InputSystem.Editor.InputActionDrawerBase
+
+---@param property UnityEditor.SerializedProperty
+---@param label UnityEngine.GUIContent
+---@return number
+function UnityEngine.InputSystem.Editor.InputActionDrawerBase:GetPropertyHeight(property, label) end
+---@param position UnityEngine.Rect
+---@param property UnityEditor.SerializedProperty
+---@param label UnityEngine.GUIContent
+function UnityEngine.InputSystem.Editor.InputActionDrawerBase:OnGUI(position, property, label) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionMapDrawer : UnityEngine.InputSystem.Editor.InputActionDrawerBase
+UnityEngine.InputSystem.Editor.InputActionMapDrawer = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionMapDrawer UnityEngine.InputSystem.Editor.InputActionMapDrawer
+CS.UnityEngine.InputSystem.Editor.InputActionMapDrawer = UnityEngine.InputSystem.Editor.InputActionMapDrawer
+
+---@return UnityEngine.InputSystem.Editor.InputActionMapDrawer
+function UnityEngine.InputSystem.Editor.InputActionMapDrawer.New() end
+
+---@class UnityEngine.InputSystem.Editor.InputActionPropertyDrawer : UnityEditor.PropertyDrawer
+UnityEngine.InputSystem.Editor.InputActionPropertyDrawer = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionPropertyDrawer UnityEngine.InputSystem.Editor.InputActionPropertyDrawer
+CS.UnityEngine.InputSystem.Editor.InputActionPropertyDrawer = UnityEngine.InputSystem.Editor.InputActionPropertyDrawer
+
+---@return UnityEngine.InputSystem.Editor.InputActionPropertyDrawer
+function UnityEngine.InputSystem.Editor.InputActionPropertyDrawer.New() end
+---@param property UnityEditor.SerializedProperty
+---@param label UnityEngine.GUIContent
+---@return number
+function UnityEngine.InputSystem.Editor.InputActionPropertyDrawer:GetPropertyHeight(property, label) end
+---@param position UnityEngine.Rect
+---@param property UnityEditor.SerializedProperty
+---@param label UnityEngine.GUIContent
+function UnityEngine.InputSystem.Editor.InputActionPropertyDrawer:OnGUI(position, property, label) end
+
+---@class UnityEngine.InputSystem.Editor.InputActionReferencePropertyDrawer : UnityEditor.PropertyDrawer
+UnityEngine.InputSystem.Editor.InputActionReferencePropertyDrawer = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionReferencePropertyDrawer UnityEngine.InputSystem.Editor.InputActionReferencePropertyDrawer
+CS.UnityEngine.InputSystem.Editor.InputActionReferencePropertyDrawer = UnityEngine.InputSystem.Editor.InputActionReferencePropertyDrawer
+
+---@return UnityEngine.InputSystem.Editor.InputActionReferencePropertyDrawer
+function UnityEngine.InputSystem.Editor.InputActionReferencePropertyDrawer.New() end
+---@overload fun(self: UnityEngine.InputSystem.Editor.InputActionReferencePropertyDrawer, position: UnityEngine.Rect, property: UnityEditor.SerializedProperty, label: UnityEngine.GUIContent, doField: System.Func)
+---@param position UnityEngine.Rect
+---@param property UnityEditor.SerializedProperty
+---@param label UnityEngine.GUIContent
+function UnityEngine.InputSystem.Editor.InputActionReferencePropertyDrawer:OnGUI(position, property, label) end
+
+---@class UnityEngine.InputSystem.Editor.SearchConstants : System.Object
+UnityEngine.InputSystem.Editor.SearchConstants = {}
+---@alias CS.UnityEngine.InputSystem.Editor.SearchConstants UnityEngine.InputSystem.Editor.SearchConstants
+CS.UnityEngine.InputSystem.Editor.SearchConstants = UnityEngine.InputSystem.Editor.SearchConstants
+
+
+---@class UnityEngine.InputSystem.Editor.InputActionReferenceSearchProviders : System.Object
+UnityEngine.InputSystem.Editor.InputActionReferenceSearchProviders = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputActionReferenceSearchProviders UnityEngine.InputSystem.Editor.InputActionReferenceSearchProviders
+CS.UnityEngine.InputSystem.Editor.InputActionReferenceSearchProviders = UnityEngine.InputSystem.Editor.InputActionReferenceSearchProviders
+
+
+---@class UnityEngine.InputSystem.Editor.InputControlPathDrawer : UnityEditor.PropertyDrawer
+UnityEngine.InputSystem.Editor.InputControlPathDrawer = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputControlPathDrawer UnityEngine.InputSystem.Editor.InputControlPathDrawer
+CS.UnityEngine.InputSystem.Editor.InputControlPathDrawer = UnityEngine.InputSystem.Editor.InputControlPathDrawer
+
+---@return UnityEngine.InputSystem.Editor.InputControlPathDrawer
+function UnityEngine.InputSystem.Editor.InputControlPathDrawer.New() end
+function UnityEngine.InputSystem.Editor.InputControlPathDrawer:Dispose() end
+---@param position UnityEngine.Rect
+---@param property UnityEditor.SerializedProperty
+---@param label UnityEngine.GUIContent
+function UnityEngine.InputSystem.Editor.InputControlPathDrawer:OnGUI(position, property, label) end
+
+---@class UnityEngine.InputSystem.Editor.EditorPlayerSettingHelpers : System.Object
+---@field newSystemBackendsEnabled boolean
+---@field oldSystemBackendsEnabled boolean
+UnityEngine.InputSystem.Editor.EditorPlayerSettingHelpers = {}
+---@alias CS.UnityEngine.InputSystem.Editor.EditorPlayerSettingHelpers UnityEngine.InputSystem.Editor.EditorPlayerSettingHelpers
+CS.UnityEngine.InputSystem.Editor.EditorPlayerSettingHelpers = UnityEngine.InputSystem.Editor.EditorPlayerSettingHelpers
+
+
+---@class UnityEngine.InputSystem.Editor.InputEditorUserSettings : System.Object
+---@field simulateTouch boolean
+---@field addDevicesNotSupportedByProject boolean
+---@field autoSaveInputActionAssets boolean
+UnityEngine.InputSystem.Editor.InputEditorUserSettings = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputEditorUserSettings UnityEngine.InputSystem.Editor.InputEditorUserSettings
+CS.UnityEngine.InputSystem.Editor.InputEditorUserSettings = UnityEngine.InputSystem.Editor.InputEditorUserSettings
+
+
+---@class UnityEngine.InputSystem.Editor.InputSettingsBuildProvider : System.Object
+---@field callbackOrder number
+UnityEngine.InputSystem.Editor.InputSettingsBuildProvider = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputSettingsBuildProvider UnityEngine.InputSystem.Editor.InputSettingsBuildProvider
+CS.UnityEngine.InputSystem.Editor.InputSettingsBuildProvider = UnityEngine.InputSystem.Editor.InputSettingsBuildProvider
+
+---@return UnityEngine.InputSystem.Editor.InputSettingsBuildProvider
+function UnityEngine.InputSystem.Editor.InputSettingsBuildProvider.New() end
+---@param report UnityEditor.Build.Reporting.BuildReport
+function UnityEngine.InputSystem.Editor.InputSettingsBuildProvider:OnPreprocessBuild(report) end
+---@param report UnityEditor.Build.Reporting.BuildReport
+function UnityEngine.InputSystem.Editor.InputSettingsBuildProvider:OnPostprocessBuild(report) end
+
+---@class UnityEngine.InputSystem.Editor.InputSettingsPath : System.Object
+---@field kSettingsRootPath string
+UnityEngine.InputSystem.Editor.InputSettingsPath = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputSettingsPath UnityEngine.InputSystem.Editor.InputSettingsPath
+CS.UnityEngine.InputSystem.Editor.InputSettingsPath = UnityEngine.InputSystem.Editor.InputSettingsPath
+
+
+---@class UnityEngine.InputSystem.Editor.InputSettingsProvider : UnityEditor.SettingsProvider
+---@field kEditorBuildSettingsConfigKey string
+---@field kSettingsPath string
+UnityEngine.InputSystem.Editor.InputSettingsProvider = {}
+---@alias CS.UnityEngine.InputSystem.Editor.InputSettingsProvider UnityEngine.InputSystem.Editor.InputSettingsProvider
+CS.UnityEngine.InputSystem.Editor.InputSettingsProvider = UnityEngine.InputSystem.Editor.InputSettingsProvider
+
+function UnityEngine.InputSystem.Editor.InputSettingsProvider.Open() end
+---@return UnityEditor.SettingsProvider
+function UnityEngine.InputSystem.Editor.InputSettingsProvider.CreateInputSettingsProvider() end
+---@param searchContext string
+---@param rootElement UnityEngine.UIElements.VisualElement
+function UnityEngine.InputSystem.Editor.InputSettingsProvider:OnActivate(searchContext, rootElement) end
+function UnityEngine.InputSystem.Editor.InputSettingsProvider:OnDeactivate() end
+function UnityEngine.InputSystem.Editor.InputSettingsProvider:Dispose() end
+function UnityEngine.InputSystem.Editor.InputSettingsProvider:OnTitleBarGUI() end
+---@param searchContext string
+function UnityEngine.InputSystem.Editor.InputSettingsProvider:OnGUI(searchContext) end
+
 ---@class UnityEngine.InputSystem.Editor.InputSettingsEditor : UnityEditor.Editor
 UnityEngine.InputSystem.Editor.InputSettingsEditor = {}
 ---@alias CS.UnityEngine.InputSystem.Editor.InputSettingsEditor UnityEngine.InputSystem.Editor.InputSettingsEditor
@@ -1927,3147 +5004,3 @@ CS.UnityEngine.InputSystem.LowLevel.DeviceResetEvent = UnityEngine.InputSystem.L
 ---@param time number
 ---@return UnityEngine.InputSystem.LowLevel.DeviceResetEvent
 function UnityEngine.InputSystem.LowLevel.DeviceResetEvent.Create(deviceId, hardReset, time) end
-
----@class UnityEngine.InputSystem.LowLevel.IInputEventTypeInfo
----@field typeStatic UnityEngine.InputSystem.Utilities.FourCC
-UnityEngine.InputSystem.LowLevel.IInputEventTypeInfo = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.IInputEventTypeInfo UnityEngine.InputSystem.LowLevel.IInputEventTypeInfo
-CS.UnityEngine.InputSystem.LowLevel.IInputEventTypeInfo = UnityEngine.InputSystem.LowLevel.IInputEventTypeInfo
-
-
----@class UnityEngine.InputSystem.LowLevel.IMECompositionEvent : System.ValueType
----@field Type number
----@field baseEvent UnityEngine.InputSystem.LowLevel.InputEvent
----@field compositionString UnityEngine.InputSystem.LowLevel.IMECompositionString
----@field typeStatic UnityEngine.InputSystem.Utilities.FourCC
-UnityEngine.InputSystem.LowLevel.IMECompositionEvent = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.IMECompositionEvent UnityEngine.InputSystem.LowLevel.IMECompositionEvent
-CS.UnityEngine.InputSystem.LowLevel.IMECompositionEvent = UnityEngine.InputSystem.LowLevel.IMECompositionEvent
-
----@param deviceId number
----@param compositionString string
----@param time number
----@return UnityEngine.InputSystem.LowLevel.IMECompositionEvent
-function UnityEngine.InputSystem.LowLevel.IMECompositionEvent.Create(deviceId, compositionString, time) end
-
----@class UnityEngine.InputSystem.LowLevel.IMECompositionString : System.ValueType
----@field Count number
----@field Item System.Char
-UnityEngine.InputSystem.LowLevel.IMECompositionString = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.IMECompositionString UnityEngine.InputSystem.LowLevel.IMECompositionString
-CS.UnityEngine.InputSystem.LowLevel.IMECompositionString = UnityEngine.InputSystem.LowLevel.IMECompositionString
-
----@param characters string
----@return UnityEngine.InputSystem.LowLevel.IMECompositionString
-function UnityEngine.InputSystem.LowLevel.IMECompositionString.New(characters) end
----@return string
-function UnityEngine.InputSystem.LowLevel.IMECompositionString:ToString() end
----@return System.Collections.Generic.IEnumerator
-function UnityEngine.InputSystem.LowLevel.IMECompositionString:GetEnumerator() end
-
----@class UnityEngine.InputSystem.LowLevel.InputEvent : System.ValueType
----@field InvalidEventId number
----@field type UnityEngine.InputSystem.Utilities.FourCC
----@field sizeInBytes number
----@field eventId number
----@field deviceId number
----@field time number
----@field handled boolean
-UnityEngine.InputSystem.LowLevel.InputEvent = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputEvent UnityEngine.InputSystem.LowLevel.InputEvent
-CS.UnityEngine.InputSystem.LowLevel.InputEvent = UnityEngine.InputSystem.LowLevel.InputEvent
-
----@param type UnityEngine.InputSystem.Utilities.FourCC
----@param sizeInBytes number
----@param deviceId number
----@param time number
----@return UnityEngine.InputSystem.LowLevel.InputEvent
-function UnityEngine.InputSystem.LowLevel.InputEvent.New(type, sizeInBytes, deviceId, time) end
----@param first UnityEngine.InputSystem.LowLevel.InputEvent*
----@param second UnityEngine.InputSystem.LowLevel.InputEvent*
----@return boolean
-function UnityEngine.InputSystem.LowLevel.InputEvent.Equals(first, second) end
----@return string
-function UnityEngine.InputSystem.LowLevel.InputEvent:ToString() end
-
----@class UnityEngine.InputSystem.LowLevel.InputEventBuffer : System.ValueType
----@field BufferSizeUnknown number
----@field eventCount number
----@field sizeInBytes number
----@field capacityInBytes number
----@field data Unity.Collections.NativeArray
----@field bufferPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
-UnityEngine.InputSystem.LowLevel.InputEventBuffer = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputEventBuffer UnityEngine.InputSystem.LowLevel.InputEventBuffer
-CS.UnityEngine.InputSystem.LowLevel.InputEventBuffer = UnityEngine.InputSystem.LowLevel.InputEventBuffer
-
----@overload fun(eventPtr: UnityEngine.InputSystem.LowLevel.InputEvent*, eventCount: number, sizeInBytes: number, capacityInBytes: number) : UnityEngine.InputSystem.LowLevel.InputEventBuffer
----@param buffer Unity.Collections.NativeArray
----@param eventCount number
----@param sizeInBytes number
----@param transferNativeArrayOwnership boolean
----@return UnityEngine.InputSystem.LowLevel.InputEventBuffer
-function UnityEngine.InputSystem.LowLevel.InputEventBuffer.New(buffer, eventCount, sizeInBytes, transferNativeArrayOwnership) end
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEvent*
----@param capacityIncrementInBytes number
----@param allocator Unity.Collections.Allocator
-function UnityEngine.InputSystem.LowLevel.InputEventBuffer:AppendEvent(eventPtr, capacityIncrementInBytes, allocator) end
----@param sizeInBytes number
----@param capacityIncrementInBytes number
----@param allocator Unity.Collections.Allocator
----@return UnityEngine.InputSystem.LowLevel.InputEvent*
-function UnityEngine.InputSystem.LowLevel.InputEventBuffer:AllocateEvent(sizeInBytes, capacityIncrementInBytes, allocator) end
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEvent*
----@return boolean
-function UnityEngine.InputSystem.LowLevel.InputEventBuffer:Contains(eventPtr) end
-function UnityEngine.InputSystem.LowLevel.InputEventBuffer:Reset() end
----@return System.Collections.Generic.IEnumerator
-function UnityEngine.InputSystem.LowLevel.InputEventBuffer:GetEnumerator() end
-function UnityEngine.InputSystem.LowLevel.InputEventBuffer:Dispose() end
----@return UnityEngine.InputSystem.LowLevel.InputEventBuffer
-function UnityEngine.InputSystem.LowLevel.InputEventBuffer:Clone() end
-
----@class UnityEngine.InputSystem.LowLevel.InputEventHandledPolicy
----@field SuppressStateUpdates UnityEngine.InputSystem.LowLevel.InputEventHandledPolicy
----@field SuppressActionEventNotifications UnityEngine.InputSystem.LowLevel.InputEventHandledPolicy
-UnityEngine.InputSystem.LowLevel.InputEventHandledPolicy = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputEventHandledPolicy UnityEngine.InputSystem.LowLevel.InputEventHandledPolicy
-CS.UnityEngine.InputSystem.LowLevel.InputEventHandledPolicy = UnityEngine.InputSystem.LowLevel.InputEventHandledPolicy
-
-
----@class UnityEngine.InputSystem.LowLevel.InputEventListener : System.ValueType
-UnityEngine.InputSystem.LowLevel.InputEventListener = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputEventListener UnityEngine.InputSystem.LowLevel.InputEventListener
-CS.UnityEngine.InputSystem.LowLevel.InputEventListener = UnityEngine.InputSystem.LowLevel.InputEventListener
-
----@param observer System.IObserver
----@return System.IDisposable
-function UnityEngine.InputSystem.LowLevel.InputEventListener:Subscribe(observer) end
-
----@class UnityEngine.InputSystem.LowLevel.InputEventPtr : System.ValueType
----@field valid boolean
----@field handled boolean
----@field id number
----@field type UnityEngine.InputSystem.Utilities.FourCC
----@field sizeInBytes number
----@field deviceId number
----@field time number
----@field data UnityEngine.InputSystem.LowLevel.InputEvent*
-UnityEngine.InputSystem.LowLevel.InputEventPtr = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputEventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
-CS.UnityEngine.InputSystem.LowLevel.InputEventPtr = UnityEngine.InputSystem.LowLevel.InputEventPtr
-
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEvent*
----@return UnityEngine.InputSystem.LowLevel.InputEventPtr
-function UnityEngine.InputSystem.LowLevel.InputEventPtr.New(eventPtr) end
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEvent*
----@return UnityEngine.InputSystem.LowLevel.InputEventPtr
-function UnityEngine.InputSystem.LowLevel.InputEventPtr.From(eventPtr) end
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
----@return UnityEngine.InputSystem.LowLevel.InputEvent*
-function UnityEngine.InputSystem.LowLevel.InputEventPtr.FromInputEventPtr(eventPtr) end
----@return UnityEngine.InputSystem.LowLevel.InputEventPtr
-function UnityEngine.InputSystem.LowLevel.InputEventPtr:Next() end
----@return string
-function UnityEngine.InputSystem.LowLevel.InputEventPtr:ToString() end
----@return UnityEngine.InputSystem.LowLevel.InputEvent*
-function UnityEngine.InputSystem.LowLevel.InputEventPtr:ToPointer() end
----@overload fun(self: UnityEngine.InputSystem.LowLevel.InputEventPtr, other: UnityEngine.InputSystem.LowLevel.InputEventPtr) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.InputSystem.LowLevel.InputEventPtr:Equals(obj) end
----@return number
-function UnityEngine.InputSystem.LowLevel.InputEventPtr:GetHashCode() end
----@param flags UnityEngine.InputSystem.InputControlExtensions.Enumerate
----@param device UnityEngine.InputSystem.InputDevice
----@param magnitudeThreshold number
----@return UnityEngine.InputSystem.InputControlExtensions.InputEventControlCollection
-function UnityEngine.InputSystem.LowLevel.InputEventPtr:EnumerateControls(flags, device, magnitudeThreshold) end
----@param device UnityEngine.InputSystem.InputDevice
----@param magnitudeThreshold number
----@return UnityEngine.InputSystem.InputControlExtensions.InputEventControlCollection
-function UnityEngine.InputSystem.LowLevel.InputEventPtr:EnumerateChangedControls(device, magnitudeThreshold) end
----@param magnitude number
----@param buttonControlsOnly boolean
----@return boolean
-function UnityEngine.InputSystem.LowLevel.InputEventPtr:HasButtonPress(magnitude, buttonControlsOnly) end
----@param magnitude number
----@param buttonControlsOnly boolean
----@return UnityEngine.InputSystem.InputControl
-function UnityEngine.InputSystem.LowLevel.InputEventPtr:GetFirstButtonPressOrNull(magnitude, buttonControlsOnly) end
----@param magnitude number
----@param buttonControlsOnly boolean
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.InputSystem.LowLevel.InputEventPtr:GetAllButtonPresses(magnitude, buttonControlsOnly) end
-
----@class UnityEngine.InputSystem.LowLevel.InputEventStream : System.ValueType
----@field isOpen boolean
----@field remainingEventCount number
----@field numEventsRetainedInBuffer number
----@field currentEventPtr UnityEngine.InputSystem.LowLevel.InputEvent*
----@field numBytesRetainedInBuffer number
-UnityEngine.InputSystem.LowLevel.InputEventStream = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputEventStream UnityEngine.InputSystem.LowLevel.InputEventStream
-CS.UnityEngine.InputSystem.LowLevel.InputEventStream = UnityEngine.InputSystem.LowLevel.InputEventStream
-
----@param ref_eventBuffer UnityEngine.InputSystem.LowLevel.InputEventBuffer
----@param maxAppendedEvents number
----@return UnityEngine.InputSystem.LowLevel.InputEventStream,UnityEngine.InputSystem.LowLevel.InputEventBuffer
-function UnityEngine.InputSystem.LowLevel.InputEventStream.New(ref_eventBuffer, maxAppendedEvents) end
----@param ref_eventBuffer UnityEngine.InputSystem.LowLevel.InputEventBuffer
----@return ,UnityEngine.InputSystem.LowLevel.InputEventBuffer
-function UnityEngine.InputSystem.LowLevel.InputEventStream:Close(ref_eventBuffer) end
-function UnityEngine.InputSystem.LowLevel.InputEventStream:CleanUpAfterException() end
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEvent*
-function UnityEngine.InputSystem.LowLevel.InputEventStream:Write(eventPtr) end
----@param leaveEventInBuffer boolean
----@return UnityEngine.InputSystem.LowLevel.InputEvent*
-function UnityEngine.InputSystem.LowLevel.InputEventStream:Advance(leaveEventInBuffer) end
----@return UnityEngine.InputSystem.LowLevel.InputEvent*
-function UnityEngine.InputSystem.LowLevel.InputEventStream:Peek() end
-
----@class UnityEngine.InputSystem.LowLevel.InputEventTrace : System.Object
----@field FrameMarkerEvent UnityEngine.InputSystem.Utilities.FourCC
----@field deviceId number
----@field enabled boolean
----@field recordFrameMarkers boolean
----@field eventCount number
----@field totalEventSizeInBytes number
----@field allocatedSizeInBytes number
----@field maxSizeInBytes number
----@field deviceInfos UnityEngine.InputSystem.Utilities.ReadOnlyArray
----@field onFilterEvent System.Func
-UnityEngine.InputSystem.LowLevel.InputEventTrace = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputEventTrace UnityEngine.InputSystem.LowLevel.InputEventTrace
-CS.UnityEngine.InputSystem.LowLevel.InputEventTrace = UnityEngine.InputSystem.LowLevel.InputEventTrace
-
----@overload fun(device: UnityEngine.InputSystem.InputDevice, bufferSizeInBytes: number, growBuffer: boolean, maxBufferSizeInBytes: number, growIncrementSizeInBytes: number) : UnityEngine.InputSystem.LowLevel.InputEventTrace
----@param bufferSizeInBytes number
----@param growBuffer boolean
----@param maxBufferSizeInBytes number
----@param growIncrementSizeInBytes number
----@return UnityEngine.InputSystem.LowLevel.InputEventTrace
-function UnityEngine.InputSystem.LowLevel.InputEventTrace.New(bufferSizeInBytes, growBuffer, maxBufferSizeInBytes, growIncrementSizeInBytes) end
----@overload fun(filePath: string) : UnityEngine.InputSystem.LowLevel.InputEventTrace
----@param stream System.IO.Stream
----@return UnityEngine.InputSystem.LowLevel.InputEventTrace
-function UnityEngine.InputSystem.LowLevel.InputEventTrace.LoadFrom(stream) end
----@overload fun(self: UnityEngine.InputSystem.LowLevel.InputEventTrace, filePath: string)
----@param stream System.IO.Stream
-function UnityEngine.InputSystem.LowLevel.InputEventTrace:WriteTo(stream) end
----@overload fun(self: UnityEngine.InputSystem.LowLevel.InputEventTrace, filePath: string)
----@param stream System.IO.Stream
-function UnityEngine.InputSystem.LowLevel.InputEventTrace:ReadFrom(stream) end
----@return UnityEngine.InputSystem.LowLevel.InputEventTrace.ReplayController
-function UnityEngine.InputSystem.LowLevel.InputEventTrace:Replay() end
----@param newBufferSize number
----@param newMaxBufferSize number
----@return boolean
-function UnityEngine.InputSystem.LowLevel.InputEventTrace:Resize(newBufferSize, newMaxBufferSize) end
-function UnityEngine.InputSystem.LowLevel.InputEventTrace:Clear() end
-function UnityEngine.InputSystem.LowLevel.InputEventTrace:Enable() end
-function UnityEngine.InputSystem.LowLevel.InputEventTrace:Disable() end
----@param ref_current UnityEngine.InputSystem.LowLevel.InputEventPtr
----@return boolean,UnityEngine.InputSystem.LowLevel.InputEventPtr
-function UnityEngine.InputSystem.LowLevel.InputEventTrace:GetNextEvent(ref_current) end
----@return System.Collections.Generic.IEnumerator
-function UnityEngine.InputSystem.LowLevel.InputEventTrace:GetEnumerator() end
-function UnityEngine.InputSystem.LowLevel.InputEventTrace:Dispose() end
-
----@class UnityEngine.InputSystem.LowLevel.StateEvent : System.ValueType
----@field Type number
----@field baseEvent UnityEngine.InputSystem.LowLevel.InputEvent
----@field stateFormat UnityEngine.InputSystem.Utilities.FourCC
----@field stateSizeInBytes number
----@field state System.Void*
----@field typeStatic UnityEngine.InputSystem.Utilities.FourCC
-UnityEngine.InputSystem.LowLevel.StateEvent = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.StateEvent UnityEngine.InputSystem.LowLevel.StateEvent
-CS.UnityEngine.InputSystem.LowLevel.StateEvent = UnityEngine.InputSystem.LowLevel.StateEvent
-
----@overload fun(ptr: UnityEngine.InputSystem.LowLevel.InputEventPtr) : UnityEngine.InputSystem.LowLevel.StateEvent*
----@param device UnityEngine.InputSystem.InputDevice
----@param out_eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray,UnityEngine.InputSystem.LowLevel.InputEventPtr
-function UnityEngine.InputSystem.LowLevel.StateEvent.From(device, out_eventPtr, allocator) end
----@param device UnityEngine.InputSystem.InputDevice
----@param out_eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray,UnityEngine.InputSystem.LowLevel.InputEventPtr
-function UnityEngine.InputSystem.LowLevel.StateEvent.FromDefaultStateFor(device, out_eventPtr, allocator) end
----@return UnityEngine.InputSystem.LowLevel.InputEventPtr
-function UnityEngine.InputSystem.LowLevel.StateEvent:ToEventPtr() end
-
----@class UnityEngine.InputSystem.LowLevel.TextEvent : System.ValueType
----@field Type number
----@field baseEvent UnityEngine.InputSystem.LowLevel.InputEvent
----@field character number
----@field typeStatic UnityEngine.InputSystem.Utilities.FourCC
-UnityEngine.InputSystem.LowLevel.TextEvent = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.TextEvent UnityEngine.InputSystem.LowLevel.TextEvent
-CS.UnityEngine.InputSystem.LowLevel.TextEvent = UnityEngine.InputSystem.LowLevel.TextEvent
-
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
----@return UnityEngine.InputSystem.LowLevel.TextEvent*
-function UnityEngine.InputSystem.LowLevel.TextEvent.From(eventPtr) end
----@overload fun(deviceId: number, character: System.Char, time: number) : UnityEngine.InputSystem.LowLevel.TextEvent
----@param deviceId number
----@param character number
----@param time number
----@return UnityEngine.InputSystem.LowLevel.TextEvent
-function UnityEngine.InputSystem.LowLevel.TextEvent.Create(deviceId, character, time) end
-
----@class UnityEngine.InputSystem.LowLevel.InputUpdateDelegate : System.MulticastDelegate
-UnityEngine.InputSystem.LowLevel.InputUpdateDelegate = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputUpdateDelegate UnityEngine.InputSystem.LowLevel.InputUpdateDelegate
-CS.UnityEngine.InputSystem.LowLevel.InputUpdateDelegate = UnityEngine.InputSystem.LowLevel.InputUpdateDelegate
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.InputSystem.LowLevel.InputUpdateDelegate
-function UnityEngine.InputSystem.LowLevel.InputUpdateDelegate.New(object, method) end
----@param updateType UnityEngine.InputSystem.LowLevel.InputUpdateType
----@param ref_eventBuffer UnityEngine.InputSystem.LowLevel.InputEventBuffer
----@return ,UnityEngine.InputSystem.LowLevel.InputEventBuffer
-function UnityEngine.InputSystem.LowLevel.InputUpdateDelegate:Invoke(updateType, ref_eventBuffer) end
----@param updateType UnityEngine.InputSystem.LowLevel.InputUpdateType
----@param ref_eventBuffer UnityEngine.InputSystem.LowLevel.InputEventBuffer
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult,UnityEngine.InputSystem.LowLevel.InputEventBuffer
-function UnityEngine.InputSystem.LowLevel.InputUpdateDelegate:BeginInvoke(updateType, ref_eventBuffer, callback, object) end
----@param ref_eventBuffer UnityEngine.InputSystem.LowLevel.InputEventBuffer
----@param result System.IAsyncResult
----@return ,UnityEngine.InputSystem.LowLevel.InputEventBuffer
-function UnityEngine.InputSystem.LowLevel.InputUpdateDelegate:EndInvoke(ref_eventBuffer, result) end
-
----@class UnityEngine.InputSystem.LowLevel.IInputRuntime
----@field onUpdate UnityEngine.InputSystem.LowLevel.InputUpdateDelegate
----@field onBeforeUpdate System.Action
----@field onShouldRunUpdate System.Func
----@field onPlayerLoopInitialization System.Action
----@field onDeviceDiscovered System.Action
----@field onPlayerFocusChanged System.Action
----@field isPlayerFocused boolean
----@field onShutdown System.Action
----@field pollingFrequency number
----@field currentTime number
----@field currentTimeForFixedUpdate number
----@field unscaledGameTime number
----@field currentTimeOffsetToRealtimeSinceStartup number
----@field runInBackground boolean
----@field screenSize UnityEngine.Vector2
----@field screenOrientation UnityEngine.ScreenOrientation
----@field normalizeScrollWheelDelta boolean
----@field scrollWheelDeltaPerTick number
----@field onPlayModeChanged System.Action
----@field onProjectChange System.Action
----@field isInPlayMode boolean
----@field isEditorActive boolean
----@field onUnityRemoteMessage System.Func
-UnityEngine.InputSystem.LowLevel.IInputRuntime = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.IInputRuntime UnityEngine.InputSystem.LowLevel.IInputRuntime
-CS.UnityEngine.InputSystem.LowLevel.IInputRuntime = UnityEngine.InputSystem.LowLevel.IInputRuntime
-
----@return number
-function UnityEngine.InputSystem.LowLevel.IInputRuntime:AllocateDeviceId() end
----@param type UnityEngine.InputSystem.LowLevel.InputUpdateType
-function UnityEngine.InputSystem.LowLevel.IInputRuntime:Update(type) end
----@param ptr UnityEngine.InputSystem.LowLevel.InputEvent*
-function UnityEngine.InputSystem.LowLevel.IInputRuntime:QueueEvent(ptr) end
----@param deviceId number
----@param commandPtr UnityEngine.InputSystem.LowLevel.InputDeviceCommand*
----@return number
-function UnityEngine.InputSystem.LowLevel.IInputRuntime:DeviceCommand(deviceId, commandPtr) end
----@param analytic UnityEngine.InputSystem.InputAnalytics.IInputAnalytic
-function UnityEngine.InputSystem.LowLevel.IInputRuntime:SendAnalytic(analytic) end
----@param value boolean
-function UnityEngine.InputSystem.LowLevel.IInputRuntime:SetUnityRemoteGyroEnabled(value) end
----@param interval number
-function UnityEngine.InputSystem.LowLevel.IInputRuntime:SetUnityRemoteGyroUpdateInterval(interval) end
----@param deviceId number
----@param ref_command TCommand
----@return number,TCommand
-function UnityEngine.InputSystem.LowLevel.IInputRuntime:DeviceCommand(deviceId, ref_command) end
-
----@class UnityEngine.InputSystem.LowLevel.InputRuntime : System.Object
----@field s_Instance UnityEngine.InputSystem.LowLevel.IInputRuntime
----@field s_CurrentTimeOffsetToRealtimeSinceStartup number
-UnityEngine.InputSystem.LowLevel.InputRuntime = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputRuntime UnityEngine.InputSystem.LowLevel.InputRuntime
-CS.UnityEngine.InputSystem.LowLevel.InputRuntime = UnityEngine.InputSystem.LowLevel.InputRuntime
-
-
----@class UnityEngine.InputSystem.LowLevel.InputRuntimeExtensions : System.Object
-UnityEngine.InputSystem.LowLevel.InputRuntimeExtensions = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputRuntimeExtensions UnityEngine.InputSystem.LowLevel.InputRuntimeExtensions
-CS.UnityEngine.InputSystem.LowLevel.InputRuntimeExtensions = UnityEngine.InputSystem.LowLevel.InputRuntimeExtensions
-
-
----@class UnityEngine.InputSystem.LowLevel.InputMetrics : System.ValueType
----@field maxNumDevices number
----@field currentNumDevices number
----@field maxStateSizeInBytes number
----@field currentStateSizeInBytes number
----@field currentControlCount number
----@field currentLayoutCount number
----@field totalEventBytes number
----@field totalEventCount number
----@field totalUpdateCount number
----@field totalEventProcessingTime number
----@field totalEventLagTime number
----@field averageEventBytesPerFrame number
----@field averageProcessingTimePerEvent number
----@field averageLagTimePerEvent number
-UnityEngine.InputSystem.LowLevel.InputMetrics = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputMetrics UnityEngine.InputSystem.LowLevel.InputMetrics
-CS.UnityEngine.InputSystem.LowLevel.InputMetrics = UnityEngine.InputSystem.LowLevel.InputMetrics
-
-
----@class UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field None UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field Dynamic UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field Fixed UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field BeforeRender UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field Editor UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field Manual UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field Default UnityEngine.InputSystem.LowLevel.InputUpdateType
-UnityEngine.InputSystem.LowLevel.InputUpdateType = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputUpdateType UnityEngine.InputSystem.LowLevel.InputUpdateType
-CS.UnityEngine.InputSystem.LowLevel.InputUpdateType = UnityEngine.InputSystem.LowLevel.InputUpdateType
-
----@return UnityEngine.InputSystem.LowLevel.InputUpdateType
-function UnityEngine.InputSystem.LowLevel.InputUpdateType:GetUpdateTypeForPlayer() end
----@return boolean
-function UnityEngine.InputSystem.LowLevel.InputUpdateType:IsPlayerUpdate() end
----@return boolean
-function UnityEngine.InputSystem.LowLevel.InputUpdateType:IsEditorUpdate() end
-
----@class UnityEngine.InputSystem.LowLevel.InputUpdate : System.Object
----@field s_UpdateStepCount number
----@field s_LatestUpdateType UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field s_PlayerUpdateStepCount UnityEngine.InputSystem.LowLevel.InputUpdate.UpdateStepCount
----@field s_LatestNonEditorUpdateType UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field s_EditorUpdateStepCount UnityEngine.InputSystem.LowLevel.InputUpdate.UpdateStepCount
-UnityEngine.InputSystem.LowLevel.InputUpdate = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputUpdate UnityEngine.InputSystem.LowLevel.InputUpdate
-CS.UnityEngine.InputSystem.LowLevel.InputUpdate = UnityEngine.InputSystem.LowLevel.InputUpdate
-
----@return UnityEngine.InputSystem.LowLevel.InputUpdate.SerializedState
-function UnityEngine.InputSystem.LowLevel.InputUpdate.Save() end
----@param state UnityEngine.InputSystem.LowLevel.InputUpdate.SerializedState
-function UnityEngine.InputSystem.LowLevel.InputUpdate.Restore(state) end
----@param mask UnityEngine.InputSystem.LowLevel.InputUpdateType
----@return UnityEngine.InputSystem.LowLevel.InputUpdateType
-function UnityEngine.InputSystem.LowLevel.InputUpdate.GetUpdateTypeForPlayer(mask) end
----@param updateType UnityEngine.InputSystem.LowLevel.InputUpdateType
----@return boolean
-function UnityEngine.InputSystem.LowLevel.InputUpdate.IsPlayerUpdate(updateType) end
----@param updateType UnityEngine.InputSystem.LowLevel.InputUpdateType
----@return boolean
-function UnityEngine.InputSystem.LowLevel.InputUpdate.IsEditorUpdate(updateType) end
-
----@class UnityEngine.InputSystem.LowLevel.NativeInputRuntime : System.Object
----@field instance UnityEngine.InputSystem.LowLevel.NativeInputRuntime
----@field onUpdate UnityEngine.InputSystem.LowLevel.InputUpdateDelegate
----@field onBeforeUpdate System.Action
----@field onShouldRunUpdate System.Func
----@field onPlayerLoopInitialization System.Action
----@field onDeviceDiscovered System.Action
----@field onShutdown System.Action
----@field onPlayerFocusChanged System.Action
----@field isPlayerFocused boolean
----@field pollingFrequency number
----@field currentTime number
----@field currentTimeForFixedUpdate number
----@field currentTimeOffsetToRealtimeSinceStartup number
----@field unscaledGameTime number
----@field runInBackground boolean
----@field screenSize UnityEngine.Vector2
----@field screenOrientation UnityEngine.ScreenOrientation
----@field normalizeScrollWheelDelta boolean
----@field scrollWheelDeltaPerTick number
----@field isInPlayMode boolean
----@field isEditorActive boolean
----@field onUnityRemoteMessage System.Func
----@field onPlayModeChanged System.Action
----@field onProjectChange System.Action
-UnityEngine.InputSystem.LowLevel.NativeInputRuntime = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.NativeInputRuntime UnityEngine.InputSystem.LowLevel.NativeInputRuntime
-CS.UnityEngine.InputSystem.LowLevel.NativeInputRuntime = UnityEngine.InputSystem.LowLevel.NativeInputRuntime
-
----@return UnityEngine.InputSystem.LowLevel.NativeInputRuntime
-function UnityEngine.InputSystem.LowLevel.NativeInputRuntime.New() end
----@return number
-function UnityEngine.InputSystem.LowLevel.NativeInputRuntime:AllocateDeviceId() end
----@param updateType UnityEngine.InputSystem.LowLevel.InputUpdateType
-function UnityEngine.InputSystem.LowLevel.NativeInputRuntime:Update(updateType) end
----@param ptr UnityEngine.InputSystem.LowLevel.InputEvent*
-function UnityEngine.InputSystem.LowLevel.NativeInputRuntime:QueueEvent(ptr) end
----@param deviceId number
----@param commandPtr UnityEngine.InputSystem.LowLevel.InputDeviceCommand*
----@return number
-function UnityEngine.InputSystem.LowLevel.NativeInputRuntime:DeviceCommand(deviceId, commandPtr) end
----@param value boolean
-function UnityEngine.InputSystem.LowLevel.NativeInputRuntime:SetUnityRemoteGyroEnabled(value) end
----@param interval number
-function UnityEngine.InputSystem.LowLevel.NativeInputRuntime:SetUnityRemoteGyroUpdateInterval(interval) end
----@param analytic UnityEngine.InputSystem.InputAnalytics.IInputAnalytic
-function UnityEngine.InputSystem.LowLevel.NativeInputRuntime:SendAnalytic(analytic) end
-
----@class UnityEngine.InputSystem.LowLevel.IInputStateCallbackReceiver
-UnityEngine.InputSystem.LowLevel.IInputStateCallbackReceiver = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.IInputStateCallbackReceiver UnityEngine.InputSystem.LowLevel.IInputStateCallbackReceiver
-CS.UnityEngine.InputSystem.LowLevel.IInputStateCallbackReceiver = UnityEngine.InputSystem.LowLevel.IInputStateCallbackReceiver
-
-function UnityEngine.InputSystem.LowLevel.IInputStateCallbackReceiver:OnNextUpdate() end
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
-function UnityEngine.InputSystem.LowLevel.IInputStateCallbackReceiver:OnStateEvent(eventPtr) end
----@param control UnityEngine.InputSystem.InputControl
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
----@param ref_offset number
----@return boolean,number
-function UnityEngine.InputSystem.LowLevel.IInputStateCallbackReceiver:GetStateOffsetForEvent(control, eventPtr, ref_offset) end
-
----@class UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor
-UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor
-CS.UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor = UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor
-
----@param control UnityEngine.InputSystem.InputControl
----@param time number
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
----@param monitorIndex number
-function UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor:NotifyControlStateChanged(control, time, eventPtr, monitorIndex) end
----@param control UnityEngine.InputSystem.InputControl
----@param time number
----@param monitorIndex number
----@param timerIndex number
-function UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor:NotifyTimerExpired(control, time, monitorIndex, timerIndex) end
-
----@class UnityEngine.InputSystem.LowLevel.IInputStateTypeInfo
----@field format UnityEngine.InputSystem.Utilities.FourCC
-UnityEngine.InputSystem.LowLevel.IInputStateTypeInfo = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.IInputStateTypeInfo UnityEngine.InputSystem.LowLevel.IInputStateTypeInfo
-CS.UnityEngine.InputSystem.LowLevel.IInputStateTypeInfo = UnityEngine.InputSystem.LowLevel.IInputStateTypeInfo
-
-
----@class UnityEngine.InputSystem.LowLevel.InputState : System.Object
----@field currentUpdateType UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field updateCount number
----@field currentTime number
-UnityEngine.InputSystem.LowLevel.InputState = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputState UnityEngine.InputSystem.LowLevel.InputState
-CS.UnityEngine.InputSystem.LowLevel.InputState = UnityEngine.InputSystem.LowLevel.InputState
-
----@param device UnityEngine.InputSystem.InputDevice
----@param eventPtr UnityEngine.InputSystem.LowLevel.InputEventPtr
----@param updateType UnityEngine.InputSystem.LowLevel.InputUpdateType
-function UnityEngine.InputSystem.LowLevel.InputState.Change(device, eventPtr, updateType) end
----@param format UnityEngine.InputSystem.Utilities.FourCC
----@return boolean
-function UnityEngine.InputSystem.LowLevel.InputState.IsIntegerFormat(format) end
----@overload fun(control: UnityEngine.InputSystem.InputControl, monitor: UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor, monitorIndex: number, groupIndex: number)
----@param control UnityEngine.InputSystem.InputControl
----@param valueChangeCallback System.Action
----@param monitorIndex number
----@param timerExpiredCallback System.Action
----@return UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor
-function UnityEngine.InputSystem.LowLevel.InputState.AddChangeMonitor(control, valueChangeCallback, monitorIndex, timerExpiredCallback) end
----@param control UnityEngine.InputSystem.InputControl
----@param monitor UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor
----@param monitorIndex number
-function UnityEngine.InputSystem.LowLevel.InputState.RemoveChangeMonitor(control, monitor, monitorIndex) end
----@param control UnityEngine.InputSystem.InputControl
----@param monitor UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor
----@param time number
----@param monitorIndex number
----@param timerIndex number
-function UnityEngine.InputSystem.LowLevel.InputState.AddChangeMonitorTimeout(control, monitor, time, monitorIndex, timerIndex) end
----@param monitor UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor
----@param monitorIndex number
----@param timerIndex number
-function UnityEngine.InputSystem.LowLevel.InputState.RemoveChangeMonitorTimeout(monitor, monitorIndex, timerIndex) end
-
----@class UnityEngine.InputSystem.LowLevel.InputStateBlock : System.ValueType
----@field InvalidOffset number
----@field AutomaticOffset number
----@field FormatInvalid UnityEngine.InputSystem.Utilities.FourCC
----@field FormatBit UnityEngine.InputSystem.Utilities.FourCC
----@field FormatSBit UnityEngine.InputSystem.Utilities.FourCC
----@field FormatInt UnityEngine.InputSystem.Utilities.FourCC
----@field FormatUInt UnityEngine.InputSystem.Utilities.FourCC
----@field FormatShort UnityEngine.InputSystem.Utilities.FourCC
----@field FormatUShort UnityEngine.InputSystem.Utilities.FourCC
----@field FormatByte UnityEngine.InputSystem.Utilities.FourCC
----@field FormatSByte UnityEngine.InputSystem.Utilities.FourCC
----@field FormatLong UnityEngine.InputSystem.Utilities.FourCC
----@field FormatULong UnityEngine.InputSystem.Utilities.FourCC
----@field FormatFloat UnityEngine.InputSystem.Utilities.FourCC
----@field FormatDouble UnityEngine.InputSystem.Utilities.FourCC
----@field FormatVector2 UnityEngine.InputSystem.Utilities.FourCC
----@field FormatVector3 UnityEngine.InputSystem.Utilities.FourCC
----@field FormatQuaternion UnityEngine.InputSystem.Utilities.FourCC
----@field FormatVector2Short UnityEngine.InputSystem.Utilities.FourCC
----@field FormatVector3Short UnityEngine.InputSystem.Utilities.FourCC
----@field FormatVector2Byte UnityEngine.InputSystem.Utilities.FourCC
----@field FormatVector3Byte UnityEngine.InputSystem.Utilities.FourCC
----@field FormatPose UnityEngine.InputSystem.Utilities.FourCC
----@field format UnityEngine.InputSystem.Utilities.FourCC
----@field byteOffset number
----@field bitOffset number
----@field sizeInBits number
-UnityEngine.InputSystem.LowLevel.InputStateBlock = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputStateBlock UnityEngine.InputSystem.LowLevel.InputStateBlock
-CS.UnityEngine.InputSystem.LowLevel.InputStateBlock = UnityEngine.InputSystem.LowLevel.InputStateBlock
-
----@param type UnityEngine.InputSystem.Utilities.FourCC
----@return number
-function UnityEngine.InputSystem.LowLevel.InputStateBlock.GetSizeOfPrimitiveFormatInBits(type) end
----@param type System.Type
----@return UnityEngine.InputSystem.Utilities.FourCC
-function UnityEngine.InputSystem.LowLevel.InputStateBlock.GetPrimitiveFormatFromType(type) end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.LowLevel.InputStateBlock:ReadInt(statePtr) end
----@param statePtr System.Void*
----@param value number
-function UnityEngine.InputSystem.LowLevel.InputStateBlock:WriteInt(statePtr, value) end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.LowLevel.InputStateBlock:ReadFloat(statePtr) end
----@param statePtr System.Void*
----@param value number
-function UnityEngine.InputSystem.LowLevel.InputStateBlock:WriteFloat(statePtr, value) end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.LowLevel.InputStateBlock:ReadDouble(statePtr) end
----@param statePtr System.Void*
----@param value number
-function UnityEngine.InputSystem.LowLevel.InputStateBlock:WriteDouble(statePtr, value) end
----@param statePtr System.Void*
----@param value UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.LowLevel.InputStateBlock:Write(statePtr, value) end
----@param toStatePtr System.Void*
----@param fromStatePtr System.Void*
-function UnityEngine.InputSystem.LowLevel.InputStateBlock:CopyToFrom(toStatePtr, fromStatePtr) end
-
----@class UnityEngine.InputSystem.LowLevel.InputStateBuffers : System.ValueType
----@field sizePerBuffer number
----@field totalSize number
----@field defaultStateBuffer System.Void*
----@field noiseMaskBuffer System.Void*
----@field resetMaskBuffer System.Void*
-UnityEngine.InputSystem.LowLevel.InputStateBuffers = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputStateBuffers UnityEngine.InputSystem.LowLevel.InputStateBuffers
-CS.UnityEngine.InputSystem.LowLevel.InputStateBuffers = UnityEngine.InputSystem.LowLevel.InputStateBuffers
-
----@param deviceIndex number
----@return System.Void*
-function UnityEngine.InputSystem.LowLevel.InputStateBuffers.GetFrontBufferForDevice(deviceIndex) end
----@param deviceIndex number
----@return System.Void*
-function UnityEngine.InputSystem.LowLevel.InputStateBuffers.GetBackBufferForDevice(deviceIndex) end
----@param buffers UnityEngine.InputSystem.LowLevel.InputStateBuffers
----@param update UnityEngine.InputSystem.LowLevel.InputUpdateType
-function UnityEngine.InputSystem.LowLevel.InputStateBuffers.SwitchTo(buffers, update) end
----@param updateType UnityEngine.InputSystem.LowLevel.InputUpdateType
----@return UnityEngine.InputSystem.LowLevel.InputStateBuffers.DoubleBuffers
-function UnityEngine.InputSystem.LowLevel.InputStateBuffers:GetDoubleBuffersFor(updateType) end
----@param devices UnityEngine.InputSystem.InputDevice[]
----@param deviceCount number
-function UnityEngine.InputSystem.LowLevel.InputStateBuffers:AllocateAll(devices, deviceCount) end
-function UnityEngine.InputSystem.LowLevel.InputStateBuffers:FreeAll() end
----@param devices UnityEngine.InputSystem.InputDevice[]
----@param deviceCount number
----@param oldBuffers UnityEngine.InputSystem.LowLevel.InputStateBuffers
-function UnityEngine.InputSystem.LowLevel.InputStateBuffers:MigrateAll(devices, deviceCount, oldBuffers) end
-
----@class UnityEngine.InputSystem.LowLevel.InputStateHistory : System.Object
----@field Count number
----@field version number
----@field historyDepth number
----@field extraMemoryPerRecord number
----@field updateMask UnityEngine.InputSystem.LowLevel.InputUpdateType
----@field controls UnityEngine.InputSystem.Utilities.ReadOnlyArray
----@field Item UnityEngine.InputSystem.LowLevel.InputStateHistory.Record
----@field onRecordAdded System.Action
----@field onShouldRecordStateChange System.Func
-UnityEngine.InputSystem.LowLevel.InputStateHistory = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputStateHistory UnityEngine.InputSystem.LowLevel.InputStateHistory
-CS.UnityEngine.InputSystem.LowLevel.InputStateHistory = UnityEngine.InputSystem.LowLevel.InputStateHistory
-
----@overload fun(maxStateSizeInBytes: number) : UnityEngine.InputSystem.LowLevel.InputStateHistory
----@overload fun(path: string) : UnityEngine.InputSystem.LowLevel.InputStateHistory
----@overload fun(control: UnityEngine.InputSystem.InputControl) : UnityEngine.InputSystem.LowLevel.InputStateHistory
----@param controls System.Collections.Generic.IEnumerable
----@return UnityEngine.InputSystem.LowLevel.InputStateHistory
-function UnityEngine.InputSystem.LowLevel.InputStateHistory.New(controls) end
-function UnityEngine.InputSystem.LowLevel.InputStateHistory:Clear() end
----@param record UnityEngine.InputSystem.LowLevel.InputStateHistory.Record
----@return UnityEngine.InputSystem.LowLevel.InputStateHistory.Record
-function UnityEngine.InputSystem.LowLevel.InputStateHistory:AddRecord(record) end
-function UnityEngine.InputSystem.LowLevel.InputStateHistory:StartRecording() end
-function UnityEngine.InputSystem.LowLevel.InputStateHistory:StopRecording() end
----@overload fun(self: UnityEngine.InputSystem.LowLevel.InputStateHistory, control: UnityEngine.InputSystem.InputControl, eventPtr: UnityEngine.InputSystem.LowLevel.InputEventPtr) : UnityEngine.InputSystem.LowLevel.InputStateHistory.Record
----@param control UnityEngine.InputSystem.InputControl
----@param statePtr System.Void*
----@param time number
----@return UnityEngine.InputSystem.LowLevel.InputStateHistory.Record
-function UnityEngine.InputSystem.LowLevel.InputStateHistory:RecordStateChange(control, statePtr, time) end
----@return System.Collections.Generic.IEnumerator
-function UnityEngine.InputSystem.LowLevel.InputStateHistory:GetEnumerator() end
-function UnityEngine.InputSystem.LowLevel.InputStateHistory:Dispose() end
-
----@class UnityEngine.InputSystem.LowLevel.InputStateHistory : UnityEngine.InputSystem.LowLevel.InputStateHistory
----@field Item UnityEngine.InputSystem.LowLevel.InputStateHistory.Record[TValue]
-UnityEngine.InputSystem.LowLevel.InputStateHistory = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.InputStateHistory UnityEngine.InputSystem.LowLevel.InputStateHistory
-CS.UnityEngine.InputSystem.LowLevel.InputStateHistory = UnityEngine.InputSystem.LowLevel.InputStateHistory
-
----@overload fun(maxStateSizeInBytes: System.Nullable) : UnityEngine.InputSystem.LowLevel.InputStateHistory
----@overload fun(control: UnityEngine.InputSystem.InputControl[TValue]) : UnityEngine.InputSystem.LowLevel.InputStateHistory
----@param path string
----@return UnityEngine.InputSystem.LowLevel.InputStateHistory
-function UnityEngine.InputSystem.LowLevel.InputStateHistory.New(path) end
----@param record UnityEngine.InputSystem.LowLevel.InputStateHistory.Record[TValue]
----@return UnityEngine.InputSystem.LowLevel.InputStateHistory.Record[TValue]
-function UnityEngine.InputSystem.LowLevel.InputStateHistory:AddRecord(record) end
----@param control UnityEngine.InputSystem.InputControl[TValue]
----@param value TValue
----@param time number
----@return UnityEngine.InputSystem.LowLevel.InputStateHistory.Record[TValue]
-function UnityEngine.InputSystem.LowLevel.InputStateHistory:RecordStateChange(control, value, time) end
----@return System.Collections.Generic.IEnumerator[UnityEngine.InputSystem.LowLevel.InputStateHistory.Record[TValue]]
-function UnityEngine.InputSystem.LowLevel.InputStateHistory:GetEnumerator() end
-
----@class UnityEngine.InputSystem.LowLevel.SelectObservable : System.Object
-UnityEngine.InputSystem.LowLevel.SelectObservable = {}
----@alias CS.UnityEngine.InputSystem.LowLevel.SelectObservable UnityEngine.InputSystem.LowLevel.SelectObservable
-CS.UnityEngine.InputSystem.LowLevel.SelectObservable = UnityEngine.InputSystem.LowLevel.SelectObservable
-
----@param source System.IObservable[TSource]
----@param filter System.Func[TSource,TResult]
----@return UnityEngine.InputSystem.LowLevel.SelectObservable
-function UnityEngine.InputSystem.LowLevel.SelectObservable.New(source, filter) end
----@param observer System.IObserver[TResult]
----@return System.IDisposable
-function UnityEngine.InputSystem.LowLevel.SelectObservable:Subscribe(observer) end
-
----@class UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor : UnityEngine.InputSystem.InputProcessor
----@field min number
----@field max number
-UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor = {}
----@alias CS.UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor
-CS.UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor = UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor
-
----@return UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor
-function UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor.New() end
----@param value number
----@param control UnityEngine.InputSystem.InputControl
----@return number
-function UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
----@field target UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor -- infered from UnityEngine.InputSystem.Editor.InputParameterEditor`1[UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor]
-UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor = {}
----@alias CS.UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor
-CS.UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor = UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor
-
----@return UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor
-function UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor.New() end
-function UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor:OnGUI() end
----@param root UnityEngine.UIElements.VisualElement
----@param onChangedCallback System.Action
-function UnityEngine.InputSystem.Processors.AxisDeadzoneProcessorEditor:OnDrawVisualElements(root, onChangedCallback) end
-
----@class UnityEngine.InputSystem.Processors.ClampProcessor : UnityEngine.InputSystem.InputProcessor
----@field min number
----@field max number
-UnityEngine.InputSystem.Processors.ClampProcessor = {}
----@alias CS.UnityEngine.InputSystem.Processors.ClampProcessor UnityEngine.InputSystem.Processors.ClampProcessor
-CS.UnityEngine.InputSystem.Processors.ClampProcessor = UnityEngine.InputSystem.Processors.ClampProcessor
-
----@return UnityEngine.InputSystem.Processors.ClampProcessor
-function UnityEngine.InputSystem.Processors.ClampProcessor.New() end
----@param value number
----@param control UnityEngine.InputSystem.InputControl
----@return number
-function UnityEngine.InputSystem.Processors.ClampProcessor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.ClampProcessor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.CompensateDirectionProcessor : UnityEngine.InputSystem.InputProcessor
----@field cachingPolicy UnityEngine.InputSystem.InputProcessor.CachingPolicy
-UnityEngine.InputSystem.Processors.CompensateDirectionProcessor = {}
----@alias CS.UnityEngine.InputSystem.Processors.CompensateDirectionProcessor UnityEngine.InputSystem.Processors.CompensateDirectionProcessor
-CS.UnityEngine.InputSystem.Processors.CompensateDirectionProcessor = UnityEngine.InputSystem.Processors.CompensateDirectionProcessor
-
----@return UnityEngine.InputSystem.Processors.CompensateDirectionProcessor
-function UnityEngine.InputSystem.Processors.CompensateDirectionProcessor.New() end
----@param value UnityEngine.Vector3
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.Vector3
-function UnityEngine.InputSystem.Processors.CompensateDirectionProcessor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.CompensateDirectionProcessor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.CompensateRotationProcessor : UnityEngine.InputSystem.InputProcessor
----@field cachingPolicy UnityEngine.InputSystem.InputProcessor.CachingPolicy
-UnityEngine.InputSystem.Processors.CompensateRotationProcessor = {}
----@alias CS.UnityEngine.InputSystem.Processors.CompensateRotationProcessor UnityEngine.InputSystem.Processors.CompensateRotationProcessor
-CS.UnityEngine.InputSystem.Processors.CompensateRotationProcessor = UnityEngine.InputSystem.Processors.CompensateRotationProcessor
-
----@return UnityEngine.InputSystem.Processors.CompensateRotationProcessor
-function UnityEngine.InputSystem.Processors.CompensateRotationProcessor.New() end
----@param value UnityEngine.Quaternion
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.Quaternion
-function UnityEngine.InputSystem.Processors.CompensateRotationProcessor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.CompensateRotationProcessor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.EditorWindowSpaceProcessor : UnityEngine.InputSystem.InputProcessor
-UnityEngine.InputSystem.Processors.EditorWindowSpaceProcessor = {}
----@alias CS.UnityEngine.InputSystem.Processors.EditorWindowSpaceProcessor UnityEngine.InputSystem.Processors.EditorWindowSpaceProcessor
-CS.UnityEngine.InputSystem.Processors.EditorWindowSpaceProcessor = UnityEngine.InputSystem.Processors.EditorWindowSpaceProcessor
-
----@return UnityEngine.InputSystem.Processors.EditorWindowSpaceProcessor
-function UnityEngine.InputSystem.Processors.EditorWindowSpaceProcessor.New() end
----@param value UnityEngine.Vector2
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.Vector2
-function UnityEngine.InputSystem.Processors.EditorWindowSpaceProcessor:Process(value, control) end
-
----@class UnityEngine.InputSystem.Processors.InvertProcessor : UnityEngine.InputSystem.InputProcessor
-UnityEngine.InputSystem.Processors.InvertProcessor = {}
----@alias CS.UnityEngine.InputSystem.Processors.InvertProcessor UnityEngine.InputSystem.Processors.InvertProcessor
-CS.UnityEngine.InputSystem.Processors.InvertProcessor = UnityEngine.InputSystem.Processors.InvertProcessor
-
----@return UnityEngine.InputSystem.Processors.InvertProcessor
-function UnityEngine.InputSystem.Processors.InvertProcessor.New() end
----@param value number
----@param control UnityEngine.InputSystem.InputControl
----@return number
-function UnityEngine.InputSystem.Processors.InvertProcessor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.InvertProcessor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.InvertVector2Processor : UnityEngine.InputSystem.InputProcessor
----@field invertX boolean
----@field invertY boolean
-UnityEngine.InputSystem.Processors.InvertVector2Processor = {}
----@alias CS.UnityEngine.InputSystem.Processors.InvertVector2Processor UnityEngine.InputSystem.Processors.InvertVector2Processor
-CS.UnityEngine.InputSystem.Processors.InvertVector2Processor = UnityEngine.InputSystem.Processors.InvertVector2Processor
-
----@return UnityEngine.InputSystem.Processors.InvertVector2Processor
-function UnityEngine.InputSystem.Processors.InvertVector2Processor.New() end
----@param value UnityEngine.Vector2
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.Vector2
-function UnityEngine.InputSystem.Processors.InvertVector2Processor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.InvertVector2Processor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.InvertVector3Processor : UnityEngine.InputSystem.InputProcessor
----@field invertX boolean
----@field invertY boolean
----@field invertZ boolean
-UnityEngine.InputSystem.Processors.InvertVector3Processor = {}
----@alias CS.UnityEngine.InputSystem.Processors.InvertVector3Processor UnityEngine.InputSystem.Processors.InvertVector3Processor
-CS.UnityEngine.InputSystem.Processors.InvertVector3Processor = UnityEngine.InputSystem.Processors.InvertVector3Processor
-
----@return UnityEngine.InputSystem.Processors.InvertVector3Processor
-function UnityEngine.InputSystem.Processors.InvertVector3Processor.New() end
----@param value UnityEngine.Vector3
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.Vector3
-function UnityEngine.InputSystem.Processors.InvertVector3Processor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.InvertVector3Processor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.NormalizeProcessor : UnityEngine.InputSystem.InputProcessor
----@field min number
----@field max number
----@field zero number
-UnityEngine.InputSystem.Processors.NormalizeProcessor = {}
----@alias CS.UnityEngine.InputSystem.Processors.NormalizeProcessor UnityEngine.InputSystem.Processors.NormalizeProcessor
-CS.UnityEngine.InputSystem.Processors.NormalizeProcessor = UnityEngine.InputSystem.Processors.NormalizeProcessor
-
----@return UnityEngine.InputSystem.Processors.NormalizeProcessor
-function UnityEngine.InputSystem.Processors.NormalizeProcessor.New() end
----@param value number
----@param min number
----@param max number
----@param zero number
----@return number
-function UnityEngine.InputSystem.Processors.NormalizeProcessor.Normalize(value, min, max, zero) end
----@param value number
----@param control UnityEngine.InputSystem.InputControl
----@return number
-function UnityEngine.InputSystem.Processors.NormalizeProcessor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.NormalizeProcessor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.NormalizeVector2Processor : UnityEngine.InputSystem.InputProcessor
-UnityEngine.InputSystem.Processors.NormalizeVector2Processor = {}
----@alias CS.UnityEngine.InputSystem.Processors.NormalizeVector2Processor UnityEngine.InputSystem.Processors.NormalizeVector2Processor
-CS.UnityEngine.InputSystem.Processors.NormalizeVector2Processor = UnityEngine.InputSystem.Processors.NormalizeVector2Processor
-
----@return UnityEngine.InputSystem.Processors.NormalizeVector2Processor
-function UnityEngine.InputSystem.Processors.NormalizeVector2Processor.New() end
----@param value UnityEngine.Vector2
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.Vector2
-function UnityEngine.InputSystem.Processors.NormalizeVector2Processor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.NormalizeVector2Processor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.NormalizeVector3Processor : UnityEngine.InputSystem.InputProcessor
-UnityEngine.InputSystem.Processors.NormalizeVector3Processor = {}
----@alias CS.UnityEngine.InputSystem.Processors.NormalizeVector3Processor UnityEngine.InputSystem.Processors.NormalizeVector3Processor
-CS.UnityEngine.InputSystem.Processors.NormalizeVector3Processor = UnityEngine.InputSystem.Processors.NormalizeVector3Processor
-
----@return UnityEngine.InputSystem.Processors.NormalizeVector3Processor
-function UnityEngine.InputSystem.Processors.NormalizeVector3Processor.New() end
----@param value UnityEngine.Vector3
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.Vector3
-function UnityEngine.InputSystem.Processors.NormalizeVector3Processor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.NormalizeVector3Processor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.ScaleProcessor : UnityEngine.InputSystem.InputProcessor
----@field factor number
-UnityEngine.InputSystem.Processors.ScaleProcessor = {}
----@alias CS.UnityEngine.InputSystem.Processors.ScaleProcessor UnityEngine.InputSystem.Processors.ScaleProcessor
-CS.UnityEngine.InputSystem.Processors.ScaleProcessor = UnityEngine.InputSystem.Processors.ScaleProcessor
-
----@return UnityEngine.InputSystem.Processors.ScaleProcessor
-function UnityEngine.InputSystem.Processors.ScaleProcessor.New() end
----@param value number
----@param control UnityEngine.InputSystem.InputControl
----@return number
-function UnityEngine.InputSystem.Processors.ScaleProcessor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.ScaleProcessor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.ScaleVector2Processor : UnityEngine.InputSystem.InputProcessor
----@field x number
----@field y number
-UnityEngine.InputSystem.Processors.ScaleVector2Processor = {}
----@alias CS.UnityEngine.InputSystem.Processors.ScaleVector2Processor UnityEngine.InputSystem.Processors.ScaleVector2Processor
-CS.UnityEngine.InputSystem.Processors.ScaleVector2Processor = UnityEngine.InputSystem.Processors.ScaleVector2Processor
-
----@return UnityEngine.InputSystem.Processors.ScaleVector2Processor
-function UnityEngine.InputSystem.Processors.ScaleVector2Processor.New() end
----@param value UnityEngine.Vector2
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.Vector2
-function UnityEngine.InputSystem.Processors.ScaleVector2Processor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.ScaleVector2Processor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.ScaleVector3Processor : UnityEngine.InputSystem.InputProcessor
----@field x number
----@field y number
----@field z number
-UnityEngine.InputSystem.Processors.ScaleVector3Processor = {}
----@alias CS.UnityEngine.InputSystem.Processors.ScaleVector3Processor UnityEngine.InputSystem.Processors.ScaleVector3Processor
-CS.UnityEngine.InputSystem.Processors.ScaleVector3Processor = UnityEngine.InputSystem.Processors.ScaleVector3Processor
-
----@return UnityEngine.InputSystem.Processors.ScaleVector3Processor
-function UnityEngine.InputSystem.Processors.ScaleVector3Processor.New() end
----@param value UnityEngine.Vector3
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.Vector3
-function UnityEngine.InputSystem.Processors.ScaleVector3Processor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.ScaleVector3Processor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.StickDeadzoneProcessor : UnityEngine.InputSystem.InputProcessor
----@field min number
----@field max number
-UnityEngine.InputSystem.Processors.StickDeadzoneProcessor = {}
----@alias CS.UnityEngine.InputSystem.Processors.StickDeadzoneProcessor UnityEngine.InputSystem.Processors.StickDeadzoneProcessor
-CS.UnityEngine.InputSystem.Processors.StickDeadzoneProcessor = UnityEngine.InputSystem.Processors.StickDeadzoneProcessor
-
----@return UnityEngine.InputSystem.Processors.StickDeadzoneProcessor
-function UnityEngine.InputSystem.Processors.StickDeadzoneProcessor.New() end
----@param value UnityEngine.Vector2
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.Vector2
-function UnityEngine.InputSystem.Processors.StickDeadzoneProcessor:Process(value, control) end
----@return string
-function UnityEngine.InputSystem.Processors.StickDeadzoneProcessor:ToString() end
-
----@class UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
----@field target UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor -- infered from UnityEngine.InputSystem.Editor.InputParameterEditor`1[UnityEngine.InputSystem.Processors.StickDeadzoneProcessor]
-UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor = {}
----@alias CS.UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor
-CS.UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor = UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor
-
----@return UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor
-function UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor.New() end
-function UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor:OnGUI() end
----@param root UnityEngine.UIElements.VisualElement
----@param onChangedCallback System.Action
-function UnityEngine.InputSystem.Processors.StickDeadzoneProcessorEditor:OnDrawVisualElements(root, onChangedCallback) end
-
----@class UnityEngine.InputSystem.Layouts.InputControlAttribute : UnityEngine.PropertyAttribute
----@field layout string
----@field variants string
----@field name string
----@field format string
----@field usage string
----@field usages System.String[]
----@field parameters string
----@field processors string
----@field alias string
----@field aliases System.String[]
----@field useStateFrom string
----@field bit number
----@field offset number
----@field sizeInBits number
----@field arraySize number
----@field displayName string
----@field shortDisplayName string
----@field noisy boolean
----@field synthetic boolean
----@field dontReset boolean
----@field defaultState System.Object
----@field minValue System.Object
----@field maxValue System.Object
-UnityEngine.InputSystem.Layouts.InputControlAttribute = {}
----@alias CS.UnityEngine.InputSystem.Layouts.InputControlAttribute UnityEngine.InputSystem.Layouts.InputControlAttribute
-CS.UnityEngine.InputSystem.Layouts.InputControlAttribute = UnityEngine.InputSystem.Layouts.InputControlAttribute
-
----@return UnityEngine.InputSystem.Layouts.InputControlAttribute
-function UnityEngine.InputSystem.Layouts.InputControlAttribute.New() end
-
----@class UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate : System.MulticastDelegate
-UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate = {}
----@alias CS.UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate
-CS.UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate = UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate
-function UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate.New(object, method) end
----@param ref_description UnityEngine.InputSystem.Layouts.InputDeviceDescription
----@param matchedLayout string
----@param executeDeviceCommand UnityEngine.InputSystem.LowLevel.InputDeviceExecuteCommandDelegate
----@return string,UnityEngine.InputSystem.Layouts.InputDeviceDescription
-function UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate:Invoke(ref_description, matchedLayout, executeDeviceCommand) end
----@param ref_description UnityEngine.InputSystem.Layouts.InputDeviceDescription
----@param matchedLayout string
----@param executeDeviceCommand UnityEngine.InputSystem.LowLevel.InputDeviceExecuteCommandDelegate
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult,UnityEngine.InputSystem.Layouts.InputDeviceDescription
-function UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate:BeginInvoke(ref_description, matchedLayout, executeDeviceCommand, callback, object) end
----@param ref_description UnityEngine.InputSystem.Layouts.InputDeviceDescription
----@param result System.IAsyncResult
----@return string,UnityEngine.InputSystem.Layouts.InputDeviceDescription
-function UnityEngine.InputSystem.Layouts.InputDeviceFindControlLayoutDelegate:EndInvoke(ref_description, result) end
-
----@class UnityEngine.InputSystem.Layouts.InputControlLayout : System.Object
----@field VariantSeparator string
----@field DefaultVariant UnityEngine.InputSystem.Utilities.InternedString
----@field name UnityEngine.InputSystem.Utilities.InternedString
----@field displayName string
----@field type System.Type
----@field variants UnityEngine.InputSystem.Utilities.InternedString
----@field stateFormat UnityEngine.InputSystem.Utilities.FourCC
----@field stateSizeInBytes number
----@field baseLayouts System.Collections.Generic.IEnumerable
----@field appliedOverrides System.Collections.Generic.IEnumerable
----@field commonUsages UnityEngine.InputSystem.Utilities.ReadOnlyArray
----@field controls UnityEngine.InputSystem.Utilities.ReadOnlyArray
----@field updateBeforeRender boolean
----@field isDeviceLayout boolean
----@field isControlLayout boolean
----@field isOverride boolean
----@field isGenericTypeOfDevice boolean
----@field hideInUI boolean
----@field isNoisy boolean
----@field canRunInBackground System.Nullable
----@field Item UnityEngine.InputSystem.Layouts.InputControlLayout.ControlItem
-UnityEngine.InputSystem.Layouts.InputControlLayout = {}
----@alias CS.UnityEngine.InputSystem.Layouts.InputControlLayout UnityEngine.InputSystem.Layouts.InputControlLayout
-CS.UnityEngine.InputSystem.Layouts.InputControlLayout = UnityEngine.InputSystem.Layouts.InputControlLayout
-
----@param name string
----@param type System.Type
----@return UnityEngine.InputSystem.Layouts.InputControlLayout
-function UnityEngine.InputSystem.Layouts.InputControlLayout.FromType(name, type) end
----@param json string
----@return UnityEngine.InputSystem.Layouts.InputControlLayout
-function UnityEngine.InputSystem.Layouts.InputControlLayout.FromJson(json) end
----@param path UnityEngine.InputSystem.Utilities.InternedString
----@return System.Nullable
-function UnityEngine.InputSystem.Layouts.InputControlLayout:FindControl(path) end
----@param path string
----@param out_arrayIndex number
----@return System.Nullable,number
-function UnityEngine.InputSystem.Layouts.InputControlLayout:FindControlIncludingArrayElements(path, out_arrayIndex) end
----@return System.Type
-function UnityEngine.InputSystem.Layouts.InputControlLayout:GetValueType() end
----@return string
-function UnityEngine.InputSystem.Layouts.InputControlLayout:ToJson() end
----@param other UnityEngine.InputSystem.Layouts.InputControlLayout
-function UnityEngine.InputSystem.Layouts.InputControlLayout:MergeLayout(other) end
-
----@class UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute : System.Attribute
----@field stateType System.Type
----@field stateFormat string
----@field commonUsages System.String[]
----@field variants string
----@field isNoisy boolean
----@field canRunInBackground boolean
----@field updateBeforeRender boolean
----@field isGenericTypeOfDevice boolean
----@field displayName string
----@field description string
----@field hideInUI boolean
-UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute = {}
----@alias CS.UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute
-CS.UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute = UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute
-
----@return UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute
-function UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute.New() end
-
----@class UnityEngine.InputSystem.Layouts.InputDeviceBuilder : System.ValueType
-UnityEngine.InputSystem.Layouts.InputDeviceBuilder = {}
----@alias CS.UnityEngine.InputSystem.Layouts.InputDeviceBuilder UnityEngine.InputSystem.Layouts.InputDeviceBuilder
-CS.UnityEngine.InputSystem.Layouts.InputDeviceBuilder = UnityEngine.InputSystem.Layouts.InputDeviceBuilder
-
----@param layout UnityEngine.InputSystem.Utilities.InternedString
----@param variants UnityEngine.InputSystem.Utilities.InternedString
----@param deviceDescription UnityEngine.InputSystem.Layouts.InputDeviceDescription
-function UnityEngine.InputSystem.Layouts.InputDeviceBuilder:Setup(layout, variants, deviceDescription) end
----@return UnityEngine.InputSystem.InputDevice
-function UnityEngine.InputSystem.Layouts.InputDeviceBuilder:Finish() end
-function UnityEngine.InputSystem.Layouts.InputDeviceBuilder:Dispose() end
-
----@class UnityEngine.InputSystem.Layouts.InputDeviceDescription : System.ValueType
----@field interfaceName string
----@field deviceClass string
----@field manufacturer string
----@field product string
----@field serial string
----@field version string
----@field capabilities string
----@field empty boolean
-UnityEngine.InputSystem.Layouts.InputDeviceDescription = {}
----@alias CS.UnityEngine.InputSystem.Layouts.InputDeviceDescription UnityEngine.InputSystem.Layouts.InputDeviceDescription
-CS.UnityEngine.InputSystem.Layouts.InputDeviceDescription = UnityEngine.InputSystem.Layouts.InputDeviceDescription
-
----@param json string
----@return UnityEngine.InputSystem.Layouts.InputDeviceDescription
-function UnityEngine.InputSystem.Layouts.InputDeviceDescription.FromJson(json) end
----@return string
-function UnityEngine.InputSystem.Layouts.InputDeviceDescription:ToString() end
----@overload fun(self: UnityEngine.InputSystem.Layouts.InputDeviceDescription, other: UnityEngine.InputSystem.Layouts.InputDeviceDescription) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.InputSystem.Layouts.InputDeviceDescription:Equals(obj) end
----@return number
-function UnityEngine.InputSystem.Layouts.InputDeviceDescription:GetHashCode() end
----@return string
-function UnityEngine.InputSystem.Layouts.InputDeviceDescription:ToJson() end
-
----@class UnityEngine.InputSystem.Layouts.InputDeviceMatcher : System.ValueType
----@field empty boolean
----@field patterns System.Collections.Generic.IEnumerable
-UnityEngine.InputSystem.Layouts.InputDeviceMatcher = {}
----@alias CS.UnityEngine.InputSystem.Layouts.InputDeviceMatcher UnityEngine.InputSystem.Layouts.InputDeviceMatcher
-CS.UnityEngine.InputSystem.Layouts.InputDeviceMatcher = UnityEngine.InputSystem.Layouts.InputDeviceMatcher
-
----@param deviceDescription UnityEngine.InputSystem.Layouts.InputDeviceDescription
----@return UnityEngine.InputSystem.Layouts.InputDeviceMatcher
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher.FromDeviceDescription(deviceDescription) end
----@param pattern string
----@param supportRegex boolean
----@return UnityEngine.InputSystem.Layouts.InputDeviceMatcher
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher:WithInterface(pattern, supportRegex) end
----@param pattern string
----@param supportRegex boolean
----@return UnityEngine.InputSystem.Layouts.InputDeviceMatcher
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher:WithDeviceClass(pattern, supportRegex) end
----@param pattern string
----@param supportRegex boolean
----@return UnityEngine.InputSystem.Layouts.InputDeviceMatcher
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher:WithManufacturer(pattern, supportRegex) end
----@param noRegExPattern string
----@return UnityEngine.InputSystem.Layouts.InputDeviceMatcher
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher:WithManufacturerContains(noRegExPattern) end
----@param pattern string
----@param supportRegex boolean
----@return UnityEngine.InputSystem.Layouts.InputDeviceMatcher
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher:WithProduct(pattern, supportRegex) end
----@param pattern string
----@param supportRegex boolean
----@return UnityEngine.InputSystem.Layouts.InputDeviceMatcher
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher:WithVersion(pattern, supportRegex) end
----@param deviceDescription UnityEngine.InputSystem.Layouts.InputDeviceDescription
----@return number
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher:MatchPercentage(deviceDescription) end
----@return string
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher:ToString() end
----@overload fun(self: UnityEngine.InputSystem.Layouts.InputDeviceMatcher, other: UnityEngine.InputSystem.Layouts.InputDeviceMatcher) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher:Equals(obj) end
----@return number
-function UnityEngine.InputSystem.Layouts.InputDeviceMatcher:GetHashCode() end
-
----@class UnityEngine.InputSystem.Controls.AnyKeyControl : UnityEngine.InputSystem.Controls.ButtonControl
-UnityEngine.InputSystem.Controls.AnyKeyControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.AnyKeyControl UnityEngine.InputSystem.Controls.AnyKeyControl
-CS.UnityEngine.InputSystem.Controls.AnyKeyControl = UnityEngine.InputSystem.Controls.AnyKeyControl
-
----@return UnityEngine.InputSystem.Controls.AnyKeyControl
-function UnityEngine.InputSystem.Controls.AnyKeyControl.New() end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.Controls.AnyKeyControl:ReadUnprocessedValueFromState(statePtr) end
-
----@class UnityEngine.InputSystem.Controls.AxisControl : UnityEngine.InputSystem.InputControl
----@field clamp UnityEngine.InputSystem.Controls.AxisControl.Clamp
----@field clampMin number
----@field clampMax number
----@field clampConstant number
----@field invert boolean
----@field normalize boolean
----@field normalizeMin number
----@field normalizeMax number
----@field normalizeZero number
----@field scale boolean
----@field scaleFactor number
-UnityEngine.InputSystem.Controls.AxisControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.AxisControl UnityEngine.InputSystem.Controls.AxisControl
-CS.UnityEngine.InputSystem.Controls.AxisControl = UnityEngine.InputSystem.Controls.AxisControl
-
----@return UnityEngine.InputSystem.Controls.AxisControl
-function UnityEngine.InputSystem.Controls.AxisControl.New() end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.Controls.AxisControl:ReadUnprocessedValueFromState(statePtr) end
----@param value number
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.AxisControl:WriteValueIntoState(value, statePtr) end
----@param firstStatePtr System.Void*
----@param secondStatePtr System.Void*
----@return boolean
-function UnityEngine.InputSystem.Controls.AxisControl:CompareValue(firstStatePtr, secondStatePtr) end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.Controls.AxisControl:EvaluateMagnitude(statePtr) end
-
----@class UnityEngine.InputSystem.Controls.ButtonControl : UnityEngine.InputSystem.Controls.AxisControl
----@field pressPoint number
----@field pressPointOrDefault number
----@field isPressed boolean
----@field wasPressedThisFrame boolean
----@field wasReleasedThisFrame boolean
-UnityEngine.InputSystem.Controls.ButtonControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.InputSystem.Controls.ButtonControl
-CS.UnityEngine.InputSystem.Controls.ButtonControl = UnityEngine.InputSystem.Controls.ButtonControl
-
----@return UnityEngine.InputSystem.Controls.ButtonControl
-function UnityEngine.InputSystem.Controls.ButtonControl.New() end
----@param value number
----@return boolean
-function UnityEngine.InputSystem.Controls.ButtonControl:IsValueConsideredPressed(value) end
-
----@class UnityEngine.InputSystem.Controls.DeltaControl : UnityEngine.InputSystem.Controls.Vector2Control
----@field up UnityEngine.InputSystem.Controls.AxisControl
----@field down UnityEngine.InputSystem.Controls.AxisControl
----@field left UnityEngine.InputSystem.Controls.AxisControl
----@field right UnityEngine.InputSystem.Controls.AxisControl
-UnityEngine.InputSystem.Controls.DeltaControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.DeltaControl UnityEngine.InputSystem.Controls.DeltaControl
-CS.UnityEngine.InputSystem.Controls.DeltaControl = UnityEngine.InputSystem.Controls.DeltaControl
-
----@return UnityEngine.InputSystem.Controls.DeltaControl
-function UnityEngine.InputSystem.Controls.DeltaControl.New() end
-
----@class UnityEngine.InputSystem.Controls.DiscreteButtonControl : UnityEngine.InputSystem.Controls.ButtonControl
----@field minValue number
----@field maxValue number
----@field wrapAtValue number
----@field nullValue number
----@field writeMode UnityEngine.InputSystem.Controls.DiscreteButtonControl.WriteMode
-UnityEngine.InputSystem.Controls.DiscreteButtonControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.DiscreteButtonControl UnityEngine.InputSystem.Controls.DiscreteButtonControl
-CS.UnityEngine.InputSystem.Controls.DiscreteButtonControl = UnityEngine.InputSystem.Controls.DiscreteButtonControl
-
----@return UnityEngine.InputSystem.Controls.DiscreteButtonControl
-function UnityEngine.InputSystem.Controls.DiscreteButtonControl.New() end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.Controls.DiscreteButtonControl:ReadUnprocessedValueFromState(statePtr) end
----@param value number
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.DiscreteButtonControl:WriteValueIntoState(value, statePtr) end
-
----@class UnityEngine.InputSystem.Controls.DoubleControl : UnityEngine.InputSystem.InputControl
-UnityEngine.InputSystem.Controls.DoubleControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.DoubleControl UnityEngine.InputSystem.Controls.DoubleControl
-CS.UnityEngine.InputSystem.Controls.DoubleControl = UnityEngine.InputSystem.Controls.DoubleControl
-
----@return UnityEngine.InputSystem.Controls.DoubleControl
-function UnityEngine.InputSystem.Controls.DoubleControl.New() end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.Controls.DoubleControl:ReadUnprocessedValueFromState(statePtr) end
----@param value number
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.DoubleControl:WriteValueIntoState(value, statePtr) end
-
----@class UnityEngine.InputSystem.Controls.DpadControl : UnityEngine.InputSystem.Controls.Vector2Control
----@field up UnityEngine.InputSystem.Controls.ButtonControl
----@field down UnityEngine.InputSystem.Controls.ButtonControl
----@field left UnityEngine.InputSystem.Controls.ButtonControl
----@field right UnityEngine.InputSystem.Controls.ButtonControl
-UnityEngine.InputSystem.Controls.DpadControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.DpadControl UnityEngine.InputSystem.Controls.DpadControl
-CS.UnityEngine.InputSystem.Controls.DpadControl = UnityEngine.InputSystem.Controls.DpadControl
-
----@return UnityEngine.InputSystem.Controls.DpadControl
-function UnityEngine.InputSystem.Controls.DpadControl.New() end
----@overload fun(up: boolean, down: boolean, left: boolean, right: boolean, normalize: boolean) : UnityEngine.Vector2
----@param up number
----@param down number
----@param left number
----@param right number
----@return UnityEngine.Vector2
-function UnityEngine.InputSystem.Controls.DpadControl.MakeDpadVector(up, down, left, right) end
----@param statePtr System.Void*
----@return UnityEngine.Vector2
-function UnityEngine.InputSystem.Controls.DpadControl:ReadUnprocessedValueFromState(statePtr) end
----@param value UnityEngine.Vector2
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.DpadControl:WriteValueIntoState(value, statePtr) end
-
----@class UnityEngine.InputSystem.Controls.IntegerControl : UnityEngine.InputSystem.InputControl
-UnityEngine.InputSystem.Controls.IntegerControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.IntegerControl UnityEngine.InputSystem.Controls.IntegerControl
-CS.UnityEngine.InputSystem.Controls.IntegerControl = UnityEngine.InputSystem.Controls.IntegerControl
-
----@return UnityEngine.InputSystem.Controls.IntegerControl
-function UnityEngine.InputSystem.Controls.IntegerControl.New() end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.Controls.IntegerControl:ReadUnprocessedValueFromState(statePtr) end
----@param value number
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.IntegerControl:WriteValueIntoState(value, statePtr) end
-
----@class UnityEngine.InputSystem.Controls.KeyControl : UnityEngine.InputSystem.Controls.ButtonControl
----@field keyCode UnityEngine.InputSystem.Key
----@field scanCode number
-UnityEngine.InputSystem.Controls.KeyControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.KeyControl UnityEngine.InputSystem.Controls.KeyControl
-CS.UnityEngine.InputSystem.Controls.KeyControl = UnityEngine.InputSystem.Controls.KeyControl
-
----@return UnityEngine.InputSystem.Controls.KeyControl
-function UnityEngine.InputSystem.Controls.KeyControl.New() end
-
----@class UnityEngine.InputSystem.Controls.QuaternionControl : UnityEngine.InputSystem.InputControl
----@field x UnityEngine.InputSystem.Controls.AxisControl
----@field y UnityEngine.InputSystem.Controls.AxisControl
----@field z UnityEngine.InputSystem.Controls.AxisControl
----@field w UnityEngine.InputSystem.Controls.AxisControl
-UnityEngine.InputSystem.Controls.QuaternionControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.QuaternionControl UnityEngine.InputSystem.Controls.QuaternionControl
-CS.UnityEngine.InputSystem.Controls.QuaternionControl = UnityEngine.InputSystem.Controls.QuaternionControl
-
----@return UnityEngine.InputSystem.Controls.QuaternionControl
-function UnityEngine.InputSystem.Controls.QuaternionControl.New() end
----@param statePtr System.Void*
----@return UnityEngine.Quaternion
-function UnityEngine.InputSystem.Controls.QuaternionControl:ReadUnprocessedValueFromState(statePtr) end
----@param value UnityEngine.Quaternion
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.QuaternionControl:WriteValueIntoState(value, statePtr) end
-
----@class UnityEngine.InputSystem.Controls.StickControl : UnityEngine.InputSystem.Controls.Vector2Control
----@field up UnityEngine.InputSystem.Controls.ButtonControl
----@field down UnityEngine.InputSystem.Controls.ButtonControl
----@field left UnityEngine.InputSystem.Controls.ButtonControl
----@field right UnityEngine.InputSystem.Controls.ButtonControl
-UnityEngine.InputSystem.Controls.StickControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.StickControl UnityEngine.InputSystem.Controls.StickControl
-CS.UnityEngine.InputSystem.Controls.StickControl = UnityEngine.InputSystem.Controls.StickControl
-
----@return UnityEngine.InputSystem.Controls.StickControl
-function UnityEngine.InputSystem.Controls.StickControl.New() end
-
----@class UnityEngine.InputSystem.Controls.TouchControl : UnityEngine.InputSystem.InputControl
----@field press UnityEngine.InputSystem.Controls.TouchPressControl
----@field displayIndex UnityEngine.InputSystem.Controls.IntegerControl
----@field touchId UnityEngine.InputSystem.Controls.IntegerControl
----@field position UnityEngine.InputSystem.Controls.Vector2Control
----@field delta UnityEngine.InputSystem.Controls.DeltaControl
----@field pressure UnityEngine.InputSystem.Controls.AxisControl
----@field radius UnityEngine.InputSystem.Controls.Vector2Control
----@field phase UnityEngine.InputSystem.Controls.TouchPhaseControl
----@field indirectTouch UnityEngine.InputSystem.Controls.ButtonControl
----@field tap UnityEngine.InputSystem.Controls.ButtonControl
----@field tapCount UnityEngine.InputSystem.Controls.IntegerControl
----@field startTime UnityEngine.InputSystem.Controls.DoubleControl
----@field startPosition UnityEngine.InputSystem.Controls.Vector2Control
----@field isInProgress boolean
-UnityEngine.InputSystem.Controls.TouchControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.TouchControl UnityEngine.InputSystem.Controls.TouchControl
-CS.UnityEngine.InputSystem.Controls.TouchControl = UnityEngine.InputSystem.Controls.TouchControl
-
----@return UnityEngine.InputSystem.Controls.TouchControl
-function UnityEngine.InputSystem.Controls.TouchControl.New() end
----@param statePtr System.Void*
----@return UnityEngine.InputSystem.LowLevel.TouchState
-function UnityEngine.InputSystem.Controls.TouchControl:ReadUnprocessedValueFromState(statePtr) end
----@param value UnityEngine.InputSystem.LowLevel.TouchState
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.TouchControl:WriteValueIntoState(value, statePtr) end
-
----@class UnityEngine.InputSystem.Controls.TouchPhaseControl : UnityEngine.InputSystem.InputControl
-UnityEngine.InputSystem.Controls.TouchPhaseControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.TouchPhaseControl UnityEngine.InputSystem.Controls.TouchPhaseControl
-CS.UnityEngine.InputSystem.Controls.TouchPhaseControl = UnityEngine.InputSystem.Controls.TouchPhaseControl
-
----@return UnityEngine.InputSystem.Controls.TouchPhaseControl
-function UnityEngine.InputSystem.Controls.TouchPhaseControl.New() end
----@param statePtr System.Void*
----@return UnityEngine.InputSystem.TouchPhase
-function UnityEngine.InputSystem.Controls.TouchPhaseControl:ReadUnprocessedValueFromState(statePtr) end
----@param value UnityEngine.InputSystem.TouchPhase
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.TouchPhaseControl:WriteValueIntoState(value, statePtr) end
-
----@class UnityEngine.InputSystem.Controls.TouchPressControl : UnityEngine.InputSystem.Controls.ButtonControl
-UnityEngine.InputSystem.Controls.TouchPressControl = {}
----@alias CS.UnityEngine.InputSystem.Controls.TouchPressControl UnityEngine.InputSystem.Controls.TouchPressControl
-CS.UnityEngine.InputSystem.Controls.TouchPressControl = UnityEngine.InputSystem.Controls.TouchPressControl
-
----@return UnityEngine.InputSystem.Controls.TouchPressControl
-function UnityEngine.InputSystem.Controls.TouchPressControl.New() end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.Controls.TouchPressControl:ReadUnprocessedValueFromState(statePtr) end
----@param value number
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.TouchPressControl:WriteValueIntoState(value, statePtr) end
-
----@class UnityEngine.InputSystem.Controls.Vector2Control : UnityEngine.InputSystem.InputControl
----@field x UnityEngine.InputSystem.Controls.AxisControl
----@field y UnityEngine.InputSystem.Controls.AxisControl
-UnityEngine.InputSystem.Controls.Vector2Control = {}
----@alias CS.UnityEngine.InputSystem.Controls.Vector2Control UnityEngine.InputSystem.Controls.Vector2Control
-CS.UnityEngine.InputSystem.Controls.Vector2Control = UnityEngine.InputSystem.Controls.Vector2Control
-
----@return UnityEngine.InputSystem.Controls.Vector2Control
-function UnityEngine.InputSystem.Controls.Vector2Control.New() end
----@param statePtr System.Void*
----@return UnityEngine.Vector2
-function UnityEngine.InputSystem.Controls.Vector2Control:ReadUnprocessedValueFromState(statePtr) end
----@param value UnityEngine.Vector2
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.Vector2Control:WriteValueIntoState(value, statePtr) end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.Controls.Vector2Control:EvaluateMagnitude(statePtr) end
-
----@class UnityEngine.InputSystem.Controls.Vector3Control : UnityEngine.InputSystem.InputControl
----@field x UnityEngine.InputSystem.Controls.AxisControl
----@field y UnityEngine.InputSystem.Controls.AxisControl
----@field z UnityEngine.InputSystem.Controls.AxisControl
-UnityEngine.InputSystem.Controls.Vector3Control = {}
----@alias CS.UnityEngine.InputSystem.Controls.Vector3Control UnityEngine.InputSystem.Controls.Vector3Control
-CS.UnityEngine.InputSystem.Controls.Vector3Control = UnityEngine.InputSystem.Controls.Vector3Control
-
----@return UnityEngine.InputSystem.Controls.Vector3Control
-function UnityEngine.InputSystem.Controls.Vector3Control.New() end
----@param statePtr System.Void*
----@return UnityEngine.Vector3
-function UnityEngine.InputSystem.Controls.Vector3Control:ReadUnprocessedValueFromState(statePtr) end
----@param value UnityEngine.Vector3
----@param statePtr System.Void*
-function UnityEngine.InputSystem.Controls.Vector3Control:WriteValueIntoState(value, statePtr) end
----@param statePtr System.Void*
----@return number
-function UnityEngine.InputSystem.Controls.Vector3Control:EvaluateMagnitude(statePtr) end
-
----@class UnityEngine.InputSystem.Interactions.HoldInteraction : System.Object
----@field duration number
----@field pressPoint number
-UnityEngine.InputSystem.Interactions.HoldInteraction = {}
----@alias CS.UnityEngine.InputSystem.Interactions.HoldInteraction UnityEngine.InputSystem.Interactions.HoldInteraction
-CS.UnityEngine.InputSystem.Interactions.HoldInteraction = UnityEngine.InputSystem.Interactions.HoldInteraction
-
----@return UnityEngine.InputSystem.Interactions.HoldInteraction
-function UnityEngine.InputSystem.Interactions.HoldInteraction.New() end
----@param ref_context UnityEngine.InputSystem.InputInteractionContext
----@return ,UnityEngine.InputSystem.InputInteractionContext
-function UnityEngine.InputSystem.Interactions.HoldInteraction:Process(ref_context) end
-function UnityEngine.InputSystem.Interactions.HoldInteraction:Reset() end
-
----@class UnityEngine.InputSystem.Interactions.HoldInteractionEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
----@field target UnityEngine.InputSystem.Interactions.HoldInteractionEditor -- infered from UnityEngine.InputSystem.Editor.InputParameterEditor`1[UnityEngine.InputSystem.Interactions.HoldInteraction]
-UnityEngine.InputSystem.Interactions.HoldInteractionEditor = {}
----@alias CS.UnityEngine.InputSystem.Interactions.HoldInteractionEditor UnityEngine.InputSystem.Interactions.HoldInteractionEditor
-CS.UnityEngine.InputSystem.Interactions.HoldInteractionEditor = UnityEngine.InputSystem.Interactions.HoldInteractionEditor
-
----@return UnityEngine.InputSystem.Interactions.HoldInteractionEditor
-function UnityEngine.InputSystem.Interactions.HoldInteractionEditor.New() end
-function UnityEngine.InputSystem.Interactions.HoldInteractionEditor:OnGUI() end
----@param root UnityEngine.UIElements.VisualElement
----@param onChangedCallback System.Action
-function UnityEngine.InputSystem.Interactions.HoldInteractionEditor:OnDrawVisualElements(root, onChangedCallback) end
-
----@class UnityEngine.InputSystem.Interactions.MultiTapInteraction : System.Object
----@field tapTime number
----@field tapDelay number
----@field tapCount number
----@field pressPoint number
-UnityEngine.InputSystem.Interactions.MultiTapInteraction = {}
----@alias CS.UnityEngine.InputSystem.Interactions.MultiTapInteraction UnityEngine.InputSystem.Interactions.MultiTapInteraction
-CS.UnityEngine.InputSystem.Interactions.MultiTapInteraction = UnityEngine.InputSystem.Interactions.MultiTapInteraction
-
----@return UnityEngine.InputSystem.Interactions.MultiTapInteraction
-function UnityEngine.InputSystem.Interactions.MultiTapInteraction.New() end
----@param ref_context UnityEngine.InputSystem.InputInteractionContext
----@return ,UnityEngine.InputSystem.InputInteractionContext
-function UnityEngine.InputSystem.Interactions.MultiTapInteraction:Process(ref_context) end
-function UnityEngine.InputSystem.Interactions.MultiTapInteraction:Reset() end
-
----@class UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
----@field target UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor -- infered from UnityEngine.InputSystem.Editor.InputParameterEditor`1[UnityEngine.InputSystem.Interactions.MultiTapInteraction]
-UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor = {}
----@alias CS.UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor
-CS.UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor = UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor
-
----@return UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor
-function UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor.New() end
-function UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor:OnGUI() end
----@param root UnityEngine.UIElements.VisualElement
----@param onChangedCallback System.Action
-function UnityEngine.InputSystem.Interactions.MultiTapInteractionEditor:OnDrawVisualElements(root, onChangedCallback) end
-
----@class UnityEngine.InputSystem.Interactions.PressInteraction : System.Object
----@field pressPoint number
----@field behavior UnityEngine.InputSystem.Interactions.PressBehavior
-UnityEngine.InputSystem.Interactions.PressInteraction = {}
----@alias CS.UnityEngine.InputSystem.Interactions.PressInteraction UnityEngine.InputSystem.Interactions.PressInteraction
-CS.UnityEngine.InputSystem.Interactions.PressInteraction = UnityEngine.InputSystem.Interactions.PressInteraction
-
----@return UnityEngine.InputSystem.Interactions.PressInteraction
-function UnityEngine.InputSystem.Interactions.PressInteraction.New() end
----@param ref_context UnityEngine.InputSystem.InputInteractionContext
----@return ,UnityEngine.InputSystem.InputInteractionContext
-function UnityEngine.InputSystem.Interactions.PressInteraction:Process(ref_context) end
-function UnityEngine.InputSystem.Interactions.PressInteraction:Reset() end
-
----@class UnityEngine.InputSystem.Interactions.PressBehavior
----@field PressOnly UnityEngine.InputSystem.Interactions.PressBehavior
----@field ReleaseOnly UnityEngine.InputSystem.Interactions.PressBehavior
----@field PressAndRelease UnityEngine.InputSystem.Interactions.PressBehavior
-UnityEngine.InputSystem.Interactions.PressBehavior = {}
----@alias CS.UnityEngine.InputSystem.Interactions.PressBehavior UnityEngine.InputSystem.Interactions.PressBehavior
-CS.UnityEngine.InputSystem.Interactions.PressBehavior = UnityEngine.InputSystem.Interactions.PressBehavior
-
-
----@class UnityEngine.InputSystem.Interactions.PressInteractionEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
----@field target UnityEngine.InputSystem.Interactions.PressInteractionEditor -- infered from UnityEngine.InputSystem.Editor.InputParameterEditor`1[UnityEngine.InputSystem.Interactions.PressInteraction]
-UnityEngine.InputSystem.Interactions.PressInteractionEditor = {}
----@alias CS.UnityEngine.InputSystem.Interactions.PressInteractionEditor UnityEngine.InputSystem.Interactions.PressInteractionEditor
-CS.UnityEngine.InputSystem.Interactions.PressInteractionEditor = UnityEngine.InputSystem.Interactions.PressInteractionEditor
-
----@return UnityEngine.InputSystem.Interactions.PressInteractionEditor
-function UnityEngine.InputSystem.Interactions.PressInteractionEditor.New() end
-function UnityEngine.InputSystem.Interactions.PressInteractionEditor:OnGUI() end
----@param root UnityEngine.UIElements.VisualElement
----@param onChangedCallback System.Action
-function UnityEngine.InputSystem.Interactions.PressInteractionEditor:OnDrawVisualElements(root, onChangedCallback) end
-
----@class UnityEngine.InputSystem.Interactions.SlowTapInteraction : System.Object
----@field duration number
----@field pressPoint number
-UnityEngine.InputSystem.Interactions.SlowTapInteraction = {}
----@alias CS.UnityEngine.InputSystem.Interactions.SlowTapInteraction UnityEngine.InputSystem.Interactions.SlowTapInteraction
-CS.UnityEngine.InputSystem.Interactions.SlowTapInteraction = UnityEngine.InputSystem.Interactions.SlowTapInteraction
-
----@return UnityEngine.InputSystem.Interactions.SlowTapInteraction
-function UnityEngine.InputSystem.Interactions.SlowTapInteraction.New() end
----@param ref_context UnityEngine.InputSystem.InputInteractionContext
----@return ,UnityEngine.InputSystem.InputInteractionContext
-function UnityEngine.InputSystem.Interactions.SlowTapInteraction:Process(ref_context) end
-function UnityEngine.InputSystem.Interactions.SlowTapInteraction:Reset() end
-
----@class UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
----@field target UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor -- infered from UnityEngine.InputSystem.Editor.InputParameterEditor`1[UnityEngine.InputSystem.Interactions.SlowTapInteraction]
-UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor = {}
----@alias CS.UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor
-CS.UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor = UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor
-
----@return UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor
-function UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor.New() end
-function UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor:OnGUI() end
----@param root UnityEngine.UIElements.VisualElement
----@param onChangedCallback System.Action
-function UnityEngine.InputSystem.Interactions.SlowTapInteractionEditor:OnDrawVisualElements(root, onChangedCallback) end
-
----@class UnityEngine.InputSystem.Interactions.TapInteraction : System.Object
----@field duration number
----@field pressPoint number
-UnityEngine.InputSystem.Interactions.TapInteraction = {}
----@alias CS.UnityEngine.InputSystem.Interactions.TapInteraction UnityEngine.InputSystem.Interactions.TapInteraction
-CS.UnityEngine.InputSystem.Interactions.TapInteraction = UnityEngine.InputSystem.Interactions.TapInteraction
-
----@return UnityEngine.InputSystem.Interactions.TapInteraction
-function UnityEngine.InputSystem.Interactions.TapInteraction.New() end
----@param ref_context UnityEngine.InputSystem.InputInteractionContext
----@return ,UnityEngine.InputSystem.InputInteractionContext
-function UnityEngine.InputSystem.Interactions.TapInteraction:Process(ref_context) end
-function UnityEngine.InputSystem.Interactions.TapInteraction:Reset() end
-
----@class UnityEngine.InputSystem.Interactions.TapInteractionEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
----@field target UnityEngine.InputSystem.Interactions.TapInteractionEditor -- infered from UnityEngine.InputSystem.Editor.InputParameterEditor`1[UnityEngine.InputSystem.Interactions.TapInteraction]
-UnityEngine.InputSystem.Interactions.TapInteractionEditor = {}
----@alias CS.UnityEngine.InputSystem.Interactions.TapInteractionEditor UnityEngine.InputSystem.Interactions.TapInteractionEditor
-CS.UnityEngine.InputSystem.Interactions.TapInteractionEditor = UnityEngine.InputSystem.Interactions.TapInteractionEditor
-
----@return UnityEngine.InputSystem.Interactions.TapInteractionEditor
-function UnityEngine.InputSystem.Interactions.TapInteractionEditor.New() end
-function UnityEngine.InputSystem.Interactions.TapInteractionEditor:OnGUI() end
----@param root UnityEngine.UIElements.VisualElement
----@param onChangedCallback System.Action
-function UnityEngine.InputSystem.Interactions.TapInteractionEditor:OnDrawVisualElements(root, onChangedCallback) end
-
----@class UnityEngine.InputSystem.Utilities.InputActionTrace : System.Object
----@field buffer UnityEngine.InputSystem.LowLevel.InputEventBuffer
----@field count number
-UnityEngine.InputSystem.Utilities.InputActionTrace = {}
----@alias CS.UnityEngine.InputSystem.Utilities.InputActionTrace UnityEngine.InputSystem.Utilities.InputActionTrace
-CS.UnityEngine.InputSystem.Utilities.InputActionTrace = UnityEngine.InputSystem.Utilities.InputActionTrace
-
----@overload fun() : UnityEngine.InputSystem.Utilities.InputActionTrace
----@overload fun(action: UnityEngine.InputSystem.InputAction) : UnityEngine.InputSystem.Utilities.InputActionTrace
----@param actionMap UnityEngine.InputSystem.InputActionMap
----@return UnityEngine.InputSystem.Utilities.InputActionTrace
-function UnityEngine.InputSystem.Utilities.InputActionTrace.New(actionMap) end
-function UnityEngine.InputSystem.Utilities.InputActionTrace:SubscribeToAll() end
-function UnityEngine.InputSystem.Utilities.InputActionTrace:UnsubscribeFromAll() end
----@overload fun(self: UnityEngine.InputSystem.Utilities.InputActionTrace, action: UnityEngine.InputSystem.InputAction)
----@param actionMap UnityEngine.InputSystem.InputActionMap
-function UnityEngine.InputSystem.Utilities.InputActionTrace:SubscribeTo(actionMap) end
----@overload fun(self: UnityEngine.InputSystem.Utilities.InputActionTrace, action: UnityEngine.InputSystem.InputAction)
----@param actionMap UnityEngine.InputSystem.InputActionMap
-function UnityEngine.InputSystem.Utilities.InputActionTrace:UnsubscribeFrom(actionMap) end
----@param context UnityEngine.InputSystem.InputAction.CallbackContext
-function UnityEngine.InputSystem.Utilities.InputActionTrace:RecordAction(context) end
-function UnityEngine.InputSystem.Utilities.InputActionTrace:Clear() end
----@return string
-function UnityEngine.InputSystem.Utilities.InputActionTrace:ToString() end
-function UnityEngine.InputSystem.Utilities.InputActionTrace:Dispose() end
----@return System.Collections.Generic.IEnumerator
-function UnityEngine.InputSystem.Utilities.InputActionTrace:GetEnumerator() end
-
----@class UnityEngine.InputSystem.Utilities.ArrayHelpers : System.Object
-UnityEngine.InputSystem.Utilities.ArrayHelpers = {}
----@alias CS.UnityEngine.InputSystem.Utilities.ArrayHelpers UnityEngine.InputSystem.Utilities.ArrayHelpers
-CS.UnityEngine.InputSystem.Utilities.ArrayHelpers = UnityEngine.InputSystem.Utilities.ArrayHelpers
-
-
----@class UnityEngine.InputSystem.Utilities.CallbackArray : System.ValueType
----@field length number
----@field Item TDelegate
-UnityEngine.InputSystem.Utilities.CallbackArray = {}
----@alias CS.UnityEngine.InputSystem.Utilities.CallbackArray UnityEngine.InputSystem.Utilities.CallbackArray
-CS.UnityEngine.InputSystem.Utilities.CallbackArray = UnityEngine.InputSystem.Utilities.CallbackArray
-
-function UnityEngine.InputSystem.Utilities.CallbackArray:Clear() end
----@param dlg TDelegate
-function UnityEngine.InputSystem.Utilities.CallbackArray:AddCallback(dlg) end
----@param dlg TDelegate
-function UnityEngine.InputSystem.Utilities.CallbackArray:RemoveCallback(dlg) end
-function UnityEngine.InputSystem.Utilities.CallbackArray:LockForChanges() end
-function UnityEngine.InputSystem.Utilities.CallbackArray:UnlockForChanges() end
-
----@class UnityEngine.InputSystem.Utilities.Vector2MagnitudeComparer : System.ValueType
-UnityEngine.InputSystem.Utilities.Vector2MagnitudeComparer = {}
----@alias CS.UnityEngine.InputSystem.Utilities.Vector2MagnitudeComparer UnityEngine.InputSystem.Utilities.Vector2MagnitudeComparer
-CS.UnityEngine.InputSystem.Utilities.Vector2MagnitudeComparer = UnityEngine.InputSystem.Utilities.Vector2MagnitudeComparer
-
----@param x UnityEngine.Vector2
----@param y UnityEngine.Vector2
----@return number
-function UnityEngine.InputSystem.Utilities.Vector2MagnitudeComparer:Compare(x, y) end
-
----@class UnityEngine.InputSystem.Utilities.Vector3MagnitudeComparer : System.ValueType
-UnityEngine.InputSystem.Utilities.Vector3MagnitudeComparer = {}
----@alias CS.UnityEngine.InputSystem.Utilities.Vector3MagnitudeComparer UnityEngine.InputSystem.Utilities.Vector3MagnitudeComparer
-CS.UnityEngine.InputSystem.Utilities.Vector3MagnitudeComparer = UnityEngine.InputSystem.Utilities.Vector3MagnitudeComparer
-
----@param x UnityEngine.Vector3
----@param y UnityEngine.Vector3
----@return number
-function UnityEngine.InputSystem.Utilities.Vector3MagnitudeComparer:Compare(x, y) end
-
----@class UnityEngine.InputSystem.Utilities.CSharpCodeHelpers : System.Object
-UnityEngine.InputSystem.Utilities.CSharpCodeHelpers = {}
----@alias CS.UnityEngine.InputSystem.Utilities.CSharpCodeHelpers UnityEngine.InputSystem.Utilities.CSharpCodeHelpers
-CS.UnityEngine.InputSystem.Utilities.CSharpCodeHelpers = UnityEngine.InputSystem.Utilities.CSharpCodeHelpers
-
----@param name string
----@return boolean
-function UnityEngine.InputSystem.Utilities.CSharpCodeHelpers.IsProperIdentifier(name) end
----@param name string
----@return boolean
-function UnityEngine.InputSystem.Utilities.CSharpCodeHelpers.IsEmptyOrProperIdentifier(name) end
----@param name string
----@return boolean
-function UnityEngine.InputSystem.Utilities.CSharpCodeHelpers.IsEmptyOrProperNamespaceName(name) end
----@param name string
----@param suffix string
----@return string
-function UnityEngine.InputSystem.Utilities.CSharpCodeHelpers.MakeIdentifier(name, suffix) end
----@param name string
----@param suffix string
----@return string
-function UnityEngine.InputSystem.Utilities.CSharpCodeHelpers.MakeTypeName(name, suffix) end
----@param toolName string
----@param toolVersion string
----@param sourceFileName string
----@return string
-function UnityEngine.InputSystem.Utilities.CSharpCodeHelpers.MakeAutoGeneratedCodeHeader(toolName, toolVersion, sourceFileName) end
----@param value System.Object
----@return string
-function UnityEngine.InputSystem.Utilities.CSharpCodeHelpers.ToLiteral(value) end
----@param instance System.Object
----@return string
-function UnityEngine.InputSystem.Utilities.CSharpCodeHelpers.GetInitializersForPublicPrimitiveTypeFields(instance) end
-
----@class UnityEngine.InputSystem.Utilities.DelegateHelpers : System.Object
-UnityEngine.InputSystem.Utilities.DelegateHelpers = {}
----@alias CS.UnityEngine.InputSystem.Utilities.DelegateHelpers UnityEngine.InputSystem.Utilities.DelegateHelpers
-CS.UnityEngine.InputSystem.Utilities.DelegateHelpers = UnityEngine.InputSystem.Utilities.DelegateHelpers
-
----@param ref_callbacks UnityEngine.InputSystem.Utilities.CallbackArray
----@param marker Unity.Profiling.ProfilerMarker
----@param callbackName string
----@param context System.Object
----@return ,UnityEngine.InputSystem.Utilities.CallbackArray
-function UnityEngine.InputSystem.Utilities.DelegateHelpers.InvokeCallbacksSafe(ref_callbacks, marker, callbackName, context) end
-
----@class UnityEngine.InputSystem.Utilities.DisplayStringFormatAttribute : System.Attribute
----@field formatString string
-UnityEngine.InputSystem.Utilities.DisplayStringFormatAttribute = {}
----@alias CS.UnityEngine.InputSystem.Utilities.DisplayStringFormatAttribute UnityEngine.InputSystem.Utilities.DisplayStringFormatAttribute
-CS.UnityEngine.InputSystem.Utilities.DisplayStringFormatAttribute = UnityEngine.InputSystem.Utilities.DisplayStringFormatAttribute
-
----@param formatString string
----@return UnityEngine.InputSystem.Utilities.DisplayStringFormatAttribute
-function UnityEngine.InputSystem.Utilities.DisplayStringFormatAttribute.New(formatString) end
-
----@class UnityEngine.InputSystem.Utilities.ExceptionHelpers : System.Object
-UnityEngine.InputSystem.Utilities.ExceptionHelpers = {}
----@alias CS.UnityEngine.InputSystem.Utilities.ExceptionHelpers UnityEngine.InputSystem.Utilities.ExceptionHelpers
-CS.UnityEngine.InputSystem.Utilities.ExceptionHelpers = UnityEngine.InputSystem.Utilities.ExceptionHelpers
-
----@param exception System.Exception
----@return boolean
-function UnityEngine.InputSystem.Utilities.ExceptionHelpers.IsExceptionIndicatingBugInCode(exception) end
-
----@class UnityEngine.InputSystem.Utilities.FourCC : System.ValueType
-UnityEngine.InputSystem.Utilities.FourCC = {}
----@alias CS.UnityEngine.InputSystem.Utilities.FourCC UnityEngine.InputSystem.Utilities.FourCC
-CS.UnityEngine.InputSystem.Utilities.FourCC = UnityEngine.InputSystem.Utilities.FourCC
-
----@overload fun(code: number) : UnityEngine.InputSystem.Utilities.FourCC
----@overload fun(a: System.Char, b: System.Char, c: System.Char, d: System.Char) : UnityEngine.InputSystem.Utilities.FourCC
----@param str string
----@return UnityEngine.InputSystem.Utilities.FourCC
-function UnityEngine.InputSystem.Utilities.FourCC.New(str) end
----@param i number
----@return UnityEngine.InputSystem.Utilities.FourCC
-function UnityEngine.InputSystem.Utilities.FourCC.FromInt32(i) end
----@param fourCC UnityEngine.InputSystem.Utilities.FourCC
----@return number
-function UnityEngine.InputSystem.Utilities.FourCC.ToInt32(fourCC) end
----@return string
-function UnityEngine.InputSystem.Utilities.FourCC:ToString() end
----@overload fun(self: UnityEngine.InputSystem.Utilities.FourCC, other: UnityEngine.InputSystem.Utilities.FourCC) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.InputSystem.Utilities.FourCC:Equals(obj) end
----@return number
-function UnityEngine.InputSystem.Utilities.FourCC:GetHashCode() end
----@return boolean
-function UnityEngine.InputSystem.Utilities.FourCC:IsIntegerFormat() end
-
----@class UnityEngine.InputSystem.Utilities.InlinedArray : System.ValueType
----@field length number
----@field firstValue TValue
----@field additionalValues TValue[]
----@field Capacity number
----@field Item TValue
-UnityEngine.InputSystem.Utilities.InlinedArray = {}
----@alias CS.UnityEngine.InputSystem.Utilities.InlinedArray UnityEngine.InputSystem.Utilities.InlinedArray
-CS.UnityEngine.InputSystem.Utilities.InlinedArray = UnityEngine.InputSystem.Utilities.InlinedArray
-
----@overload fun(value: TValue) : UnityEngine.InputSystem.Utilities.InlinedArray
----@overload fun(firstValue: TValue, additionalValues: TValue[]) : UnityEngine.InputSystem.Utilities.InlinedArray
----@param values System.Collections.Generic.IEnumerable[TValue]
----@return UnityEngine.InputSystem.Utilities.InlinedArray
-function UnityEngine.InputSystem.Utilities.InlinedArray.New(values) end
-function UnityEngine.InputSystem.Utilities.InlinedArray:Clear() end
-function UnityEngine.InputSystem.Utilities.InlinedArray:ClearWithCapacity() end
----@return UnityEngine.InputSystem.Utilities.InlinedArray
-function UnityEngine.InputSystem.Utilities.InlinedArray:Clone() end
----@param size number
-function UnityEngine.InputSystem.Utilities.InlinedArray:SetLength(size) end
----@return TValue[]
-function UnityEngine.InputSystem.Utilities.InlinedArray:ToArray() end
----@param value TValue
----@return number
-function UnityEngine.InputSystem.Utilities.InlinedArray:IndexOf(value) end
----@overload fun(self: UnityEngine.InputSystem.Utilities.InlinedArray, value: TValue) : number
----@param values System.Collections.Generic.IEnumerable[TValue]
-function UnityEngine.InputSystem.Utilities.InlinedArray:Append(values) end
----@param value TValue
----@param capacityIncrement number
----@return number
-function UnityEngine.InputSystem.Utilities.InlinedArray:AppendWithCapacity(value, capacityIncrement) end
----@param values UnityEngine.InputSystem.Utilities.InlinedArray
-function UnityEngine.InputSystem.Utilities.InlinedArray:AssignWithCapacity(values) end
----@param value TValue
-function UnityEngine.InputSystem.Utilities.InlinedArray:Remove(value) end
----@param index number
-function UnityEngine.InputSystem.Utilities.InlinedArray:RemoveAtWithCapacity(index) end
----@param index number
-function UnityEngine.InputSystem.Utilities.InlinedArray:RemoveAt(index) end
----@param index number
-function UnityEngine.InputSystem.Utilities.InlinedArray:RemoveAtByMovingTailWithCapacity(index) end
----@param value TValue
----@return boolean
-function UnityEngine.InputSystem.Utilities.InlinedArray:RemoveByMovingTailWithCapacity(value) end
----@param value TValue
----@param comparer System.Collections.Generic.IEqualityComparer[TValue]
----@return boolean
-function UnityEngine.InputSystem.Utilities.InlinedArray:Contains(value, comparer) end
----@param other UnityEngine.InputSystem.Utilities.InlinedArray
-function UnityEngine.InputSystem.Utilities.InlinedArray:Merge(other) end
----@return System.Collections.Generic.IEnumerator[TValue]
-function UnityEngine.InputSystem.Utilities.InlinedArray:GetEnumerator() end
-
----@class UnityEngine.InputSystem.Utilities.InputArrayExtensions : System.Object
-UnityEngine.InputSystem.Utilities.InputArrayExtensions = {}
----@alias CS.UnityEngine.InputSystem.Utilities.InputArrayExtensions UnityEngine.InputSystem.Utilities.InputArrayExtensions
-CS.UnityEngine.InputSystem.Utilities.InputArrayExtensions = UnityEngine.InputSystem.Utilities.InputArrayExtensions
-
-
----@class UnityEngine.InputSystem.Utilities.InternedString : System.ValueType
----@field length number
-UnityEngine.InputSystem.Utilities.InternedString = {}
----@alias CS.UnityEngine.InputSystem.Utilities.InternedString UnityEngine.InputSystem.Utilities.InternedString
-CS.UnityEngine.InputSystem.Utilities.InternedString = UnityEngine.InputSystem.Utilities.InternedString
-
----@param text string
----@return UnityEngine.InputSystem.Utilities.InternedString
-function UnityEngine.InputSystem.Utilities.InternedString.New(text) end
----@return boolean
-function UnityEngine.InputSystem.Utilities.InternedString:IsEmpty() end
----@return string
-function UnityEngine.InputSystem.Utilities.InternedString:ToLower() end
----@overload fun(self: UnityEngine.InputSystem.Utilities.InternedString, obj: System.Object) : boolean
----@param other UnityEngine.InputSystem.Utilities.InternedString
----@return boolean
-function UnityEngine.InputSystem.Utilities.InternedString:Equals(other) end
----@param other UnityEngine.InputSystem.Utilities.InternedString
----@return number
-function UnityEngine.InputSystem.Utilities.InternedString:CompareTo(other) end
----@return number
-function UnityEngine.InputSystem.Utilities.InternedString:GetHashCode() end
----@return string
-function UnityEngine.InputSystem.Utilities.InternedString:ToString() end
-
----@class UnityEngine.InputSystem.Utilities.JsonParser : System.ValueType
----@field isAtEnd boolean
-UnityEngine.InputSystem.Utilities.JsonParser = {}
----@alias CS.UnityEngine.InputSystem.Utilities.JsonParser UnityEngine.InputSystem.Utilities.JsonParser
-CS.UnityEngine.InputSystem.Utilities.JsonParser = UnityEngine.InputSystem.Utilities.JsonParser
-
----@param json string
----@return UnityEngine.InputSystem.Utilities.JsonParser
-function UnityEngine.InputSystem.Utilities.JsonParser.New(json) end
-function UnityEngine.InputSystem.Utilities.JsonParser:Reset() end
----@return string
-function UnityEngine.InputSystem.Utilities.JsonParser:ToString() end
----@param path string
----@return boolean
-function UnityEngine.InputSystem.Utilities.JsonParser:NavigateToProperty(path) end
----@param expectedValue UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
----@return boolean
-function UnityEngine.InputSystem.Utilities.JsonParser:CurrentPropertyHasValueEqualTo(expectedValue) end
----@param token System.Char
----@return boolean
-function UnityEngine.InputSystem.Utilities.JsonParser:ParseToken(token) end
----@overload fun() : boolean
----@param out_result UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
----@return boolean,UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
-function UnityEngine.InputSystem.Utilities.JsonParser:ParseValue(out_result) end
----@param out_result UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
----@return boolean,UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
-function UnityEngine.InputSystem.Utilities.JsonParser:ParseStringValue(out_result) end
----@param out_result UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
----@return boolean,UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
-function UnityEngine.InputSystem.Utilities.JsonParser:ParseArrayValue(out_result) end
----@param out_result UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
----@return boolean,UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
-function UnityEngine.InputSystem.Utilities.JsonParser:ParseObjectValue(out_result) end
----@param out_result UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
----@return boolean,UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
-function UnityEngine.InputSystem.Utilities.JsonParser:ParseNumber(out_result) end
----@param out_result UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
----@return boolean,UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
-function UnityEngine.InputSystem.Utilities.JsonParser:ParseBooleanValue(out_result) end
----@param out_result UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
----@return boolean,UnityEngine.InputSystem.Utilities.JsonParser.JsonValue
-function UnityEngine.InputSystem.Utilities.JsonParser:ParseNullValue(out_result) end
----@return boolean
-function UnityEngine.InputSystem.Utilities.JsonParser:SkipToValue() end
-
----@class UnityEngine.InputSystem.Utilities.MemoryHelpers : System.Object
-UnityEngine.InputSystem.Utilities.MemoryHelpers = {}
----@alias CS.UnityEngine.InputSystem.Utilities.MemoryHelpers UnityEngine.InputSystem.Utilities.MemoryHelpers
-CS.UnityEngine.InputSystem.Utilities.MemoryHelpers = UnityEngine.InputSystem.Utilities.MemoryHelpers
-
----@param ptr1 System.Void*
----@param ptr2 System.Void*
----@param region UnityEngine.InputSystem.Utilities.MemoryHelpers.BitRegion
----@return boolean
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.Compare(ptr1, ptr2, region) end
----@param byteOffset number
----@param sizeInBits number
----@return number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.ComputeFollowingByteOffset(byteOffset, sizeInBits) end
----@param ptr System.Void*
----@param bitOffset number
----@param value boolean
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.WriteSingleBit(ptr, bitOffset, value) end
----@param ptr System.Void*
----@param bitOffset number
----@return boolean
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.ReadSingleBit(ptr, bitOffset) end
----@param destination System.Void*
----@param source System.Void*
----@param bitOffset number
----@param bitCount number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.MemCpyBitRegion(destination, source, bitOffset, bitCount) end
----@param ptr1 System.Void*
----@param ptr2 System.Void*
----@param bitOffset number
----@param bitCount number
----@param mask System.Void*
----@return boolean
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.MemCmpBitRegion(ptr1, ptr2, bitOffset, bitCount, mask) end
----@param destination System.Void*
----@param numBytes number
----@param value number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.MemSet(destination, numBytes, value) end
----@param destination System.Void*
----@param source System.Void*
----@param numBytes number
----@param mask System.Void*
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.MemCpyMasked(destination, source, numBytes, mask) end
----@param ptr System.Void*
----@param bitOffset number
----@param bitCount number
----@return number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.ReadMultipleBitsAsUInt(ptr, bitOffset, bitCount) end
----@param ptr System.Void*
----@param bitOffset number
----@param bitCount number
----@param value number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.WriteUIntAsMultipleBits(ptr, bitOffset, bitCount, value) end
----@param ptr System.Void*
----@param bitOffset number
----@param bitCount number
----@return number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.ReadTwosComplementMultipleBitsAsInt(ptr, bitOffset, bitCount) end
----@param ptr System.Void*
----@param bitOffset number
----@param bitCount number
----@param value number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.WriteIntAsTwosComplementMultipleBits(ptr, bitOffset, bitCount, value) end
----@param ptr System.Void*
----@param bitOffset number
----@param bitCount number
----@return number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.ReadExcessKMultipleBitsAsInt(ptr, bitOffset, bitCount) end
----@param ptr System.Void*
----@param bitOffset number
----@param bitCount number
----@param value number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.WriteIntAsExcessKMultipleBits(ptr, bitOffset, bitCount, value) end
----@param ptr System.Void*
----@param bitOffset number
----@param bitCount number
----@return number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.ReadMultipleBitsAsNormalizedUInt(ptr, bitOffset, bitCount) end
----@param ptr System.Void*
----@param bitOffset number
----@param bitCount number
----@param value number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.WriteNormalizedUIntAsMultipleBits(ptr, bitOffset, bitCount, value) end
----@param buffer System.Void*
----@param byteOffset number
----@param bitOffset number
----@param sizeInBits number
----@param value boolean
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.SetBitsInBuffer(buffer, byteOffset, bitOffset, sizeInBits, value) end
----@param offset number
----@param sizeInBytes number
----@return number
-function UnityEngine.InputSystem.Utilities.MemoryHelpers.AlignNatural(offset, sizeInBytes) end
-
----@class UnityEngine.InputSystem.Utilities.MiscHelpers : System.Object
-UnityEngine.InputSystem.Utilities.MiscHelpers = {}
----@alias CS.UnityEngine.InputSystem.Utilities.MiscHelpers UnityEngine.InputSystem.Utilities.MiscHelpers
-CS.UnityEngine.InputSystem.Utilities.MiscHelpers = UnityEngine.InputSystem.Utilities.MiscHelpers
-
-
----@class UnityEngine.InputSystem.Utilities.NameAndParameters : System.ValueType
----@field name string
----@field parameters UnityEngine.InputSystem.Utilities.ReadOnlyArray
-UnityEngine.InputSystem.Utilities.NameAndParameters = {}
----@alias CS.UnityEngine.InputSystem.Utilities.NameAndParameters UnityEngine.InputSystem.Utilities.NameAndParameters
-CS.UnityEngine.InputSystem.Utilities.NameAndParameters = UnityEngine.InputSystem.Utilities.NameAndParameters
-
----@param text string
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.InputSystem.Utilities.NameAndParameters.ParseMultiple(text) end
----@param text string
----@return UnityEngine.InputSystem.Utilities.NameAndParameters
-function UnityEngine.InputSystem.Utilities.NameAndParameters.Parse(text) end
----@return string
-function UnityEngine.InputSystem.Utilities.NameAndParameters:ToString() end
-
----@class UnityEngine.InputSystem.Utilities.NamedValue : System.ValueType
----@field Separator string
----@field name string
----@field value UnityEngine.InputSystem.Utilities.PrimitiveValue
----@field type System.TypeCode
-UnityEngine.InputSystem.Utilities.NamedValue = {}
----@alias CS.UnityEngine.InputSystem.Utilities.NamedValue UnityEngine.InputSystem.Utilities.NamedValue
-CS.UnityEngine.InputSystem.Utilities.NamedValue = UnityEngine.InputSystem.Utilities.NamedValue
-
----@param parameterString string
----@return UnityEngine.InputSystem.Utilities.NamedValue[]
-function UnityEngine.InputSystem.Utilities.NamedValue.ParseMultiple(parameterString) end
----@param str string
----@return UnityEngine.InputSystem.Utilities.NamedValue
-function UnityEngine.InputSystem.Utilities.NamedValue.Parse(str) end
----@param type System.TypeCode
----@return UnityEngine.InputSystem.Utilities.NamedValue
-function UnityEngine.InputSystem.Utilities.NamedValue:ConvertTo(type) end
----@return string
-function UnityEngine.InputSystem.Utilities.NamedValue:ToString() end
----@overload fun(self: UnityEngine.InputSystem.Utilities.NamedValue, other: UnityEngine.InputSystem.Utilities.NamedValue) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.InputSystem.Utilities.NamedValue:Equals(obj) end
----@return number
-function UnityEngine.InputSystem.Utilities.NamedValue:GetHashCode() end
----@param instance System.Object
-function UnityEngine.InputSystem.Utilities.NamedValue:ApplyToObject(instance) end
-
----@class UnityEngine.InputSystem.Utilities.NumberHelpers : System.Object
-UnityEngine.InputSystem.Utilities.NumberHelpers = {}
----@alias CS.UnityEngine.InputSystem.Utilities.NumberHelpers UnityEngine.InputSystem.Utilities.NumberHelpers
-CS.UnityEngine.InputSystem.Utilities.NumberHelpers = UnityEngine.InputSystem.Utilities.NumberHelpers
-
----@overload fun(number: number, alignment: number) : number
----@overload fun(number: number, alignment: number) : number
----@param number number
----@param alignment number
----@return number
-function UnityEngine.InputSystem.Utilities.NumberHelpers.AlignToMultipleOf(number, alignment) end
----@param a number
----@param b number
----@return boolean
-function UnityEngine.InputSystem.Utilities.NumberHelpers.Approximately(a, b) end
----@param value number
----@param minValue number
----@param maxValue number
----@return number
-function UnityEngine.InputSystem.Utilities.NumberHelpers.IntToNormalizedFloat(value, minValue, maxValue) end
----@param value number
----@param intMinValue number
----@param intMaxValue number
----@return number
-function UnityEngine.InputSystem.Utilities.NumberHelpers.NormalizedFloatToInt(value, intMinValue, intMaxValue) end
----@param value number
----@param minValue number
----@param maxValue number
----@return number
-function UnityEngine.InputSystem.Utilities.NumberHelpers.UIntToNormalizedFloat(value, minValue, maxValue) end
----@param value number
----@param uintMinValue number
----@param uintMaxValue number
----@return number
-function UnityEngine.InputSystem.Utilities.NumberHelpers.NormalizedFloatToUInt(value, uintMinValue, uintMaxValue) end
----@param value number
----@param inBitSize number
----@param outBitSize number
----@return number
-function UnityEngine.InputSystem.Utilities.NumberHelpers.RemapUIntBitsToNormalizeFloatToUIntBits(value, inBitSize, outBitSize) end
-
----@class UnityEngine.InputSystem.Utilities.ForDeviceEventObservable : System.Object
-UnityEngine.InputSystem.Utilities.ForDeviceEventObservable = {}
----@alias CS.UnityEngine.InputSystem.Utilities.ForDeviceEventObservable UnityEngine.InputSystem.Utilities.ForDeviceEventObservable
-CS.UnityEngine.InputSystem.Utilities.ForDeviceEventObservable = UnityEngine.InputSystem.Utilities.ForDeviceEventObservable
-
----@param source System.IObservable
----@param deviceType System.Type
----@param device UnityEngine.InputSystem.InputDevice
----@return UnityEngine.InputSystem.Utilities.ForDeviceEventObservable
-function UnityEngine.InputSystem.Utilities.ForDeviceEventObservable.New(source, deviceType, device) end
----@param observer System.IObserver
----@return System.IDisposable
-function UnityEngine.InputSystem.Utilities.ForDeviceEventObservable:Subscribe(observer) end
-
----@class UnityEngine.InputSystem.Utilities.Observable : System.Object
-UnityEngine.InputSystem.Utilities.Observable = {}
----@alias CS.UnityEngine.InputSystem.Utilities.Observable UnityEngine.InputSystem.Utilities.Observable
-CS.UnityEngine.InputSystem.Utilities.Observable = UnityEngine.InputSystem.Utilities.Observable
-
----@param source System.IObservable
----@param device UnityEngine.InputSystem.InputDevice
----@return System.IObservable
-function UnityEngine.InputSystem.Utilities.Observable.ForDevice(source, device) end
-
----@class UnityEngine.InputSystem.Utilities.Observer : System.Object
-UnityEngine.InputSystem.Utilities.Observer = {}
----@alias CS.UnityEngine.InputSystem.Utilities.Observer UnityEngine.InputSystem.Utilities.Observer
-CS.UnityEngine.InputSystem.Utilities.Observer = UnityEngine.InputSystem.Utilities.Observer
-
----@param onNext System.Action[TValue]
----@param onCompleted System.Action
----@return UnityEngine.InputSystem.Utilities.Observer
-function UnityEngine.InputSystem.Utilities.Observer.New(onNext, onCompleted) end
-function UnityEngine.InputSystem.Utilities.Observer:OnCompleted() end
----@param error System.Exception
-function UnityEngine.InputSystem.Utilities.Observer:OnError(error) end
----@param evt TValue
-function UnityEngine.InputSystem.Utilities.Observer:OnNext(evt) end
-
----@class UnityEngine.InputSystem.Utilities.SelectManyObservable : System.Object
-UnityEngine.InputSystem.Utilities.SelectManyObservable = {}
----@alias CS.UnityEngine.InputSystem.Utilities.SelectManyObservable UnityEngine.InputSystem.Utilities.SelectManyObservable
-CS.UnityEngine.InputSystem.Utilities.SelectManyObservable = UnityEngine.InputSystem.Utilities.SelectManyObservable
-
----@param source System.IObservable[TSource]
----@param filter System.Func[TSource,System.Collections.Generic.IEnumerable[TResult]]
----@return UnityEngine.InputSystem.Utilities.SelectManyObservable
-function UnityEngine.InputSystem.Utilities.SelectManyObservable.New(source, filter) end
----@param observer System.IObserver[TResult]
----@return System.IDisposable
-function UnityEngine.InputSystem.Utilities.SelectManyObservable:Subscribe(observer) end
-
----@class UnityEngine.InputSystem.Utilities.TakeNObservable : System.Object
-UnityEngine.InputSystem.Utilities.TakeNObservable = {}
----@alias CS.UnityEngine.InputSystem.Utilities.TakeNObservable UnityEngine.InputSystem.Utilities.TakeNObservable
-CS.UnityEngine.InputSystem.Utilities.TakeNObservable = UnityEngine.InputSystem.Utilities.TakeNObservable
-
----@param source System.IObservable[TValue]
----@param count number
----@return UnityEngine.InputSystem.Utilities.TakeNObservable
-function UnityEngine.InputSystem.Utilities.TakeNObservable.New(source, count) end
----@param observer System.IObserver[TValue]
----@return System.IDisposable
-function UnityEngine.InputSystem.Utilities.TakeNObservable:Subscribe(observer) end
-
----@class UnityEngine.InputSystem.Utilities.WhereObservable : System.Object
-UnityEngine.InputSystem.Utilities.WhereObservable = {}
----@alias CS.UnityEngine.InputSystem.Utilities.WhereObservable UnityEngine.InputSystem.Utilities.WhereObservable
-CS.UnityEngine.InputSystem.Utilities.WhereObservable = UnityEngine.InputSystem.Utilities.WhereObservable
-
----@param source System.IObservable[TValue]
----@param predicate System.Func[TValue,System.Boolean]
----@return UnityEngine.InputSystem.Utilities.WhereObservable
-function UnityEngine.InputSystem.Utilities.WhereObservable.New(source, predicate) end
----@param observer System.IObserver[TValue]
----@return System.IDisposable
-function UnityEngine.InputSystem.Utilities.WhereObservable:Subscribe(observer) end
-
----@class UnityEngine.InputSystem.Utilities.OneOrMore : System.ValueType
----@field Count number
----@field Item TValue
-UnityEngine.InputSystem.Utilities.OneOrMore = {}
----@alias CS.UnityEngine.InputSystem.Utilities.OneOrMore UnityEngine.InputSystem.Utilities.OneOrMore
-CS.UnityEngine.InputSystem.Utilities.OneOrMore = UnityEngine.InputSystem.Utilities.OneOrMore
-
----@overload fun(single: TValue) : UnityEngine.InputSystem.Utilities.OneOrMore
----@param multiple TList
----@return UnityEngine.InputSystem.Utilities.OneOrMore
-function UnityEngine.InputSystem.Utilities.OneOrMore.New(multiple) end
----@return System.Collections.Generic.IEnumerator[TValue]
-function UnityEngine.InputSystem.Utilities.OneOrMore:GetEnumerator() end
-
----@class UnityEngine.InputSystem.Utilities.PredictiveParser : System.ValueType
-UnityEngine.InputSystem.Utilities.PredictiveParser = {}
----@alias CS.UnityEngine.InputSystem.Utilities.PredictiveParser UnityEngine.InputSystem.Utilities.PredictiveParser
-CS.UnityEngine.InputSystem.Utilities.PredictiveParser = UnityEngine.InputSystem.Utilities.PredictiveParser
-
----@param str System.ReadOnlySpan
----@param c System.Char
-function UnityEngine.InputSystem.Utilities.PredictiveParser:ExpectSingleChar(str, c) end
----@param str System.ReadOnlySpan
----@return number
-function UnityEngine.InputSystem.Utilities.PredictiveParser:ExpectInt(str) end
----@param str System.ReadOnlySpan
----@return System.ReadOnlySpan
-function UnityEngine.InputSystem.Utilities.PredictiveParser:ExpectString(str) end
----@param str System.ReadOnlySpan
----@param c System.Char
----@return boolean
-function UnityEngine.InputSystem.Utilities.PredictiveParser:AcceptSingleChar(str, c) end
----@param input System.ReadOnlySpan
----@param out_output System.ReadOnlySpan
----@return boolean,System.ReadOnlySpan
-function UnityEngine.InputSystem.Utilities.PredictiveParser:AcceptString(input, out_output) end
----@param str System.ReadOnlySpan
-function UnityEngine.InputSystem.Utilities.PredictiveParser:AcceptInt(str) end
-
----@class UnityEngine.InputSystem.Utilities.PrimitiveValue : System.ValueType
----@field type System.TypeCode
----@field isEmpty boolean
-UnityEngine.InputSystem.Utilities.PrimitiveValue = {}
----@alias CS.UnityEngine.InputSystem.Utilities.PrimitiveValue UnityEngine.InputSystem.Utilities.PrimitiveValue
-CS.UnityEngine.InputSystem.Utilities.PrimitiveValue = UnityEngine.InputSystem.Utilities.PrimitiveValue
-
----@overload fun(value: boolean) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@overload fun(value: System.Char) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@overload fun(value: number) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@overload fun(value: number) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@overload fun(value: number) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@overload fun(value: number) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@overload fun(value: number) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@overload fun(value: number) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@overload fun(value: number) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@overload fun(value: number) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@overload fun(value: number) : UnityEngine.InputSystem.Utilities.PrimitiveValue
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.New(value) end
----@param value string
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromString(value) end
----@param value System.Object
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromObject(value) end
----@param value boolean
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromBoolean(value) end
----@param value System.Char
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromChar(value) end
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromByte(value) end
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromSByte(value) end
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromInt16(value) end
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromUInt16(value) end
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromInt32(value) end
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromUInt32(value) end
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromInt64(value) end
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromUInt64(value) end
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromSingle(value) end
----@param value number
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue.FromDouble(value) end
----@param type System.TypeCode
----@return UnityEngine.InputSystem.Utilities.PrimitiveValue
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ConvertTo(type) end
----@overload fun(self: UnityEngine.InputSystem.Utilities.PrimitiveValue, other: UnityEngine.InputSystem.Utilities.PrimitiveValue) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:Equals(obj) end
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:GetHashCode() end
----@overload fun() : string
----@param provider System.IFormatProvider
----@return string
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToString(provider) end
----@return System.TypeCode
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:GetTypeCode() end
----@param provider System.IFormatProvider
----@return boolean
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToBoolean(provider) end
----@param provider System.IFormatProvider
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToByte(provider) end
----@param provider System.IFormatProvider
----@return System.Char
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToChar(provider) end
----@param provider System.IFormatProvider
----@return System.DateTime
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToDateTime(provider) end
----@param provider System.IFormatProvider
----@return System.Decimal
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToDecimal(provider) end
----@param provider System.IFormatProvider
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToDouble(provider) end
----@param provider System.IFormatProvider
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToInt16(provider) end
----@param provider System.IFormatProvider
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToInt32(provider) end
----@param provider System.IFormatProvider
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToInt64(provider) end
----@param provider System.IFormatProvider
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToSByte(provider) end
----@param provider System.IFormatProvider
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToSingle(provider) end
----@param conversionType System.Type
----@param provider System.IFormatProvider
----@return System.Object
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToType(conversionType, provider) end
----@param provider System.IFormatProvider
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToUInt16(provider) end
----@param provider System.IFormatProvider
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToUInt32(provider) end
----@param provider System.IFormatProvider
----@return number
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToUInt64(provider) end
----@return System.Object
-function UnityEngine.InputSystem.Utilities.PrimitiveValue:ToObject() end
-
----@class UnityEngine.InputSystem.Utilities.ReadOnlyArray : System.ValueType
----@field Count number
----@field Item TValue
-UnityEngine.InputSystem.Utilities.ReadOnlyArray = {}
----@alias CS.UnityEngine.InputSystem.Utilities.ReadOnlyArray UnityEngine.InputSystem.Utilities.ReadOnlyArray
-CS.UnityEngine.InputSystem.Utilities.ReadOnlyArray = UnityEngine.InputSystem.Utilities.ReadOnlyArray
-
----@overload fun(array: TValue[]) : UnityEngine.InputSystem.Utilities.ReadOnlyArray
----@param array TValue[]
----@param index number
----@param length number
----@return UnityEngine.InputSystem.Utilities.ReadOnlyArray
-function UnityEngine.InputSystem.Utilities.ReadOnlyArray.New(array, index, length) end
----@return TValue[]
-function UnityEngine.InputSystem.Utilities.ReadOnlyArray:ToArray() end
----@param predicate System.Predicate[TValue]
----@return number
-function UnityEngine.InputSystem.Utilities.ReadOnlyArray:IndexOf(predicate) end
----@return UnityEngine.InputSystem.Utilities.ReadOnlyArray.Enumerator[TValue]
-function UnityEngine.InputSystem.Utilities.ReadOnlyArray:GetEnumerator() end
-
----@class UnityEngine.InputSystem.Utilities.ReadOnlyArrayExtensions : System.Object
-UnityEngine.InputSystem.Utilities.ReadOnlyArrayExtensions = {}
----@alias CS.UnityEngine.InputSystem.Utilities.ReadOnlyArrayExtensions UnityEngine.InputSystem.Utilities.ReadOnlyArrayExtensions
-CS.UnityEngine.InputSystem.Utilities.ReadOnlyArrayExtensions = UnityEngine.InputSystem.Utilities.ReadOnlyArrayExtensions
-
-
----@class UnityEngine.InputSystem.Utilities.ISavedState
-UnityEngine.InputSystem.Utilities.ISavedState = {}
----@alias CS.UnityEngine.InputSystem.Utilities.ISavedState UnityEngine.InputSystem.Utilities.ISavedState
-CS.UnityEngine.InputSystem.Utilities.ISavedState = UnityEngine.InputSystem.Utilities.ISavedState
-
-function UnityEngine.InputSystem.Utilities.ISavedState:StaticDisposeCurrentState() end
-function UnityEngine.InputSystem.Utilities.ISavedState:RestoreSavedState() end
-
----@class UnityEngine.InputSystem.Utilities.SavedStructState : System.Object
-UnityEngine.InputSystem.Utilities.SavedStructState = {}
----@alias CS.UnityEngine.InputSystem.Utilities.SavedStructState UnityEngine.InputSystem.Utilities.SavedStructState
-CS.UnityEngine.InputSystem.Utilities.SavedStructState = UnityEngine.InputSystem.Utilities.SavedStructState
-
-function UnityEngine.InputSystem.Utilities.SavedStructState:StaticDisposeCurrentState() end
-function UnityEngine.InputSystem.Utilities.SavedStructState:RestoreSavedState() end
-
----@class UnityEngine.InputSystem.Utilities.SpriteUtilities : System.Object
-UnityEngine.InputSystem.Utilities.SpriteUtilities = {}
----@alias CS.UnityEngine.InputSystem.Utilities.SpriteUtilities UnityEngine.InputSystem.Utilities.SpriteUtilities
-CS.UnityEngine.InputSystem.Utilities.SpriteUtilities = UnityEngine.InputSystem.Utilities.SpriteUtilities
-
----@param radius number
----@param colour UnityEngine.Color32
----@return UnityEngine.Sprite
-function UnityEngine.InputSystem.Utilities.SpriteUtilities.CreateCircleSprite(radius, colour) end
-
----@class UnityEngine.InputSystem.Utilities.StringHelpers : System.Object
-UnityEngine.InputSystem.Utilities.StringHelpers = {}
----@alias CS.UnityEngine.InputSystem.Utilities.StringHelpers UnityEngine.InputSystem.Utilities.StringHelpers
-CS.UnityEngine.InputSystem.Utilities.StringHelpers = UnityEngine.InputSystem.Utilities.StringHelpers
-
----@param str string
----@param chars string
----@param replacements string
----@return string
-function UnityEngine.InputSystem.Utilities.StringHelpers.Escape(str, chars, replacements) end
----@param str string
----@param chars string
----@param replacements string
----@return string
-function UnityEngine.InputSystem.Utilities.StringHelpers.Unescape(str, chars, replacements) end
----@overload fun(str: string, ch: System.Char) : boolean
----@param str string
----@param text string
----@param comparison System.StringComparison
----@return boolean
-function UnityEngine.InputSystem.Utilities.StringHelpers.Contains(str, text, comparison) end
----@param str string
----@return string
-function UnityEngine.InputSystem.Utilities.StringHelpers.GetPlural(str) end
----@param numBytes number
----@return string
-function UnityEngine.InputSystem.Utilities.StringHelpers.NicifyMemorySize(numBytes) end
----@param text string
----@param out_result number
----@param defaultMultiplier number
----@return boolean,number
-function UnityEngine.InputSystem.Utilities.StringHelpers.FromNicifiedMemorySize(text, out_result, defaultMultiplier) end
----@param str string
----@param ch System.Char
----@return number
-function UnityEngine.InputSystem.Utilities.StringHelpers.CountOccurrences(str, ch) end
----@param str string
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.InputSystem.Utilities.StringHelpers.Tokenize(str) end
----@param str string
----@param predicate System.Func
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.InputSystem.Utilities.StringHelpers.Split(str, predicate) end
----@param firstList string
----@param secondList string
----@param separator System.Char
----@return boolean
-function UnityEngine.InputSystem.Utilities.StringHelpers.CharacterSeparatedListsHaveAtLeastOneCommonElement(firstList, secondList, separator) end
----@param str string
----@param pos number
----@return number
-function UnityEngine.InputSystem.Utilities.StringHelpers.ParseInt(str, pos) end
----@overload fun(text: string, buffer: System.IntPtr, bufferSizeInCharacters: number) : boolean
----@param text string
----@param buffer System.IntPtr
----@param bufferSizeInCharacters number
----@param ref_offset number
----@return boolean,number
-function UnityEngine.InputSystem.Utilities.StringHelpers.WriteStringToBuffer(text, buffer, bufferSizeInCharacters, ref_offset) end
----@overload fun(buffer: System.IntPtr, bufferSize: number) : string
----@param buffer System.IntPtr
----@param bufferSize number
----@param ref_offset number
----@return string,number
-function UnityEngine.InputSystem.Utilities.StringHelpers.ReadStringFromBuffer(buffer, bufferSize, ref_offset) end
----@param ch System.Char
----@return boolean
-function UnityEngine.InputSystem.Utilities.StringHelpers.IsPrintable(ch) end
----@param str string
----@return string
-function UnityEngine.InputSystem.Utilities.StringHelpers.WithAllWhitespaceStripped(str) end
----@param left string
----@param right string
----@return boolean
-function UnityEngine.InputSystem.Utilities.StringHelpers.InvariantEqualsIgnoreCase(left, right) end
----@param template string
----@param mapFunc System.Func
----@return string
-function UnityEngine.InputSystem.Utilities.StringHelpers.ExpandTemplateString(template, mapFunc) end
-
----@class UnityEngine.InputSystem.Utilities.Substring : System.ValueType
----@field isEmpty boolean
----@field length number
----@field index number
----@field Item System.Char
-UnityEngine.InputSystem.Utilities.Substring = {}
----@alias CS.UnityEngine.InputSystem.Utilities.Substring UnityEngine.InputSystem.Utilities.Substring
-CS.UnityEngine.InputSystem.Utilities.Substring = UnityEngine.InputSystem.Utilities.Substring
-
----@overload fun(str: string) : UnityEngine.InputSystem.Utilities.Substring
----@overload fun(str: string, index: number, length: number) : UnityEngine.InputSystem.Utilities.Substring
----@param str string
----@param index number
----@return UnityEngine.InputSystem.Utilities.Substring
-function UnityEngine.InputSystem.Utilities.Substring.New(str, index) end
----@param left UnityEngine.InputSystem.Utilities.Substring
----@param right UnityEngine.InputSystem.Utilities.Substring
----@param comparison System.StringComparison
----@return number
-function UnityEngine.InputSystem.Utilities.Substring.Compare(left, right, comparison) end
----@overload fun(self: UnityEngine.InputSystem.Utilities.Substring, obj: System.Object) : boolean
----@overload fun(self: UnityEngine.InputSystem.Utilities.Substring, other: string) : boolean
----@overload fun(self: UnityEngine.InputSystem.Utilities.Substring, other: UnityEngine.InputSystem.Utilities.Substring) : boolean
----@param other UnityEngine.InputSystem.Utilities.InternedString
----@return boolean
-function UnityEngine.InputSystem.Utilities.Substring:Equals(other) end
----@param other UnityEngine.InputSystem.Utilities.Substring
----@return number
-function UnityEngine.InputSystem.Utilities.Substring:CompareTo(other) end
----@param str string
----@return boolean
-function UnityEngine.InputSystem.Utilities.Substring:StartsWith(str) end
----@param index number
----@param length number
----@return string
-function UnityEngine.InputSystem.Utilities.Substring:Substr(index, length) end
----@return string
-function UnityEngine.InputSystem.Utilities.Substring:ToString() end
----@return number
-function UnityEngine.InputSystem.Utilities.Substring:GetHashCode() end
-
----@class UnityEngine.InputSystem.Utilities.TypeHelpers : System.Object
-UnityEngine.InputSystem.Utilities.TypeHelpers = {}
----@alias CS.UnityEngine.InputSystem.Utilities.TypeHelpers UnityEngine.InputSystem.Utilities.TypeHelpers
-CS.UnityEngine.InputSystem.Utilities.TypeHelpers = UnityEngine.InputSystem.Utilities.TypeHelpers
-
----@param type System.TypeCode
----@return boolean
-function UnityEngine.InputSystem.Utilities.TypeHelpers.IsInt(type) end
----@param member System.Reflection.MemberInfo
----@return System.Type
-function UnityEngine.InputSystem.Utilities.TypeHelpers.GetValueType(member) end
----@param type System.Type
----@return string
-function UnityEngine.InputSystem.Utilities.TypeHelpers.GetNiceTypeName(type) end
----@param type System.Type
----@param genericTypeDefinition System.Type
----@param argumentIndex number
----@return System.Type
-function UnityEngine.InputSystem.Utilities.TypeHelpers.GetGenericTypeArgumentFromHierarchy(type, genericTypeDefinition, argumentIndex) end
-
----@class UnityEngine.InputSystem.Utilities.TypeTable : System.ValueType
----@field table System.Collections.Generic.Dictionary
----@field aliases System.Collections.Generic.HashSet
----@field names System.Collections.Generic.IEnumerable
----@field internedNames System.Collections.Generic.IEnumerable
-UnityEngine.InputSystem.Utilities.TypeTable = {}
----@alias CS.UnityEngine.InputSystem.Utilities.TypeTable UnityEngine.InputSystem.Utilities.TypeTable
-CS.UnityEngine.InputSystem.Utilities.TypeTable = UnityEngine.InputSystem.Utilities.TypeTable
-
-function UnityEngine.InputSystem.Utilities.TypeTable:Initialize() end
----@param type System.Type
----@return UnityEngine.InputSystem.Utilities.InternedString
-function UnityEngine.InputSystem.Utilities.TypeTable:FindNameForType(type) end
----@param name string
----@param type System.Type
-function UnityEngine.InputSystem.Utilities.TypeTable:AddTypeRegistration(name, type) end
----@param name string
----@return System.Type
-function UnityEngine.InputSystem.Utilities.TypeTable:LookupTypeRegistration(name) end
----@param name string
----@return boolean
-function UnityEngine.InputSystem.Utilities.TypeTable:ShouldHideInUI(name) end
-
----@class UnityEngine.InputSystem.Composites.AxisComposite : UnityEngine.InputSystem.InputBindingComposite
----@field negative number
----@field positive number
----@field minValue number
----@field maxValue number
----@field whichSideWins UnityEngine.InputSystem.Composites.AxisComposite.WhichSideWins
----@field midPoint number
-UnityEngine.InputSystem.Composites.AxisComposite = {}
----@alias CS.UnityEngine.InputSystem.Composites.AxisComposite UnityEngine.InputSystem.Composites.AxisComposite
-CS.UnityEngine.InputSystem.Composites.AxisComposite = UnityEngine.InputSystem.Composites.AxisComposite
-
----@return UnityEngine.InputSystem.Composites.AxisComposite
-function UnityEngine.InputSystem.Composites.AxisComposite.New() end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return number,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.AxisComposite:ReadValue(ref_context) end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return number,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.AxisComposite:EvaluateMagnitude(ref_context) end
-
----@class UnityEngine.InputSystem.Composites.AxisCompositeEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
----@field target UnityEngine.InputSystem.Composites.AxisCompositeEditor -- infered from UnityEngine.InputSystem.Editor.InputParameterEditor`1[UnityEngine.InputSystem.Composites.AxisComposite]
-UnityEngine.InputSystem.Composites.AxisCompositeEditor = {}
----@alias CS.UnityEngine.InputSystem.Composites.AxisCompositeEditor UnityEngine.InputSystem.Composites.AxisCompositeEditor
-CS.UnityEngine.InputSystem.Composites.AxisCompositeEditor = UnityEngine.InputSystem.Composites.AxisCompositeEditor
-
----@return UnityEngine.InputSystem.Composites.AxisCompositeEditor
-function UnityEngine.InputSystem.Composites.AxisCompositeEditor.New() end
-function UnityEngine.InputSystem.Composites.AxisCompositeEditor:OnGUI() end
----@param root UnityEngine.UIElements.VisualElement
----@param onChangedCallback System.Action
-function UnityEngine.InputSystem.Composites.AxisCompositeEditor:OnDrawVisualElements(root, onChangedCallback) end
-
----@class UnityEngine.InputSystem.Composites.ButtonWithOneModifier : UnityEngine.InputSystem.InputBindingComposite
----@field modifier number
----@field button number
----@field modifiersOrder UnityEngine.InputSystem.Composites.ButtonWithOneModifier.ModifiersOrder
-UnityEngine.InputSystem.Composites.ButtonWithOneModifier = {}
----@alias CS.UnityEngine.InputSystem.Composites.ButtonWithOneModifier UnityEngine.InputSystem.Composites.ButtonWithOneModifier
-CS.UnityEngine.InputSystem.Composites.ButtonWithOneModifier = UnityEngine.InputSystem.Composites.ButtonWithOneModifier
-
----@return UnityEngine.InputSystem.Composites.ButtonWithOneModifier
-function UnityEngine.InputSystem.Composites.ButtonWithOneModifier.New() end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return number,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.ButtonWithOneModifier:ReadValue(ref_context) end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return number,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.ButtonWithOneModifier:EvaluateMagnitude(ref_context) end
-
----@class UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers : UnityEngine.InputSystem.InputBindingComposite
----@field modifier1 number
----@field modifier2 number
----@field button number
----@field modifiersOrder UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers.ModifiersOrder
-UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers = {}
----@alias CS.UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers
-CS.UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers = UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers
-
----@return UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers
-function UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers.New() end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return number,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers:ReadValue(ref_context) end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return number,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.ButtonWithTwoModifiers:EvaluateMagnitude(ref_context) end
-
----@class UnityEngine.InputSystem.Composites.OneModifierComposite : UnityEngine.InputSystem.InputBindingComposite
----@field modifier number
----@field binding number
----@field modifiersOrder UnityEngine.InputSystem.Composites.OneModifierComposite.ModifiersOrder
----@field valueType System.Type
----@field valueSizeInBytes number
-UnityEngine.InputSystem.Composites.OneModifierComposite = {}
----@alias CS.UnityEngine.InputSystem.Composites.OneModifierComposite UnityEngine.InputSystem.Composites.OneModifierComposite
-CS.UnityEngine.InputSystem.Composites.OneModifierComposite = UnityEngine.InputSystem.Composites.OneModifierComposite
-
----@return UnityEngine.InputSystem.Composites.OneModifierComposite
-function UnityEngine.InputSystem.Composites.OneModifierComposite.New() end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return number,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.OneModifierComposite:EvaluateMagnitude(ref_context) end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@param buffer System.Void*
----@param bufferSize number
----@return ,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.OneModifierComposite:ReadValue(ref_context, buffer, bufferSize) end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return System.Object,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.OneModifierComposite:ReadValueAsObject(ref_context) end
-
----@class UnityEngine.InputSystem.Composites.TwoModifiersComposite : UnityEngine.InputSystem.InputBindingComposite
----@field modifier1 number
----@field modifier2 number
----@field binding number
----@field modifiersOrder UnityEngine.InputSystem.Composites.TwoModifiersComposite.ModifiersOrder
----@field valueType System.Type
----@field valueSizeInBytes number
-UnityEngine.InputSystem.Composites.TwoModifiersComposite = {}
----@alias CS.UnityEngine.InputSystem.Composites.TwoModifiersComposite UnityEngine.InputSystem.Composites.TwoModifiersComposite
-CS.UnityEngine.InputSystem.Composites.TwoModifiersComposite = UnityEngine.InputSystem.Composites.TwoModifiersComposite
-
----@return UnityEngine.InputSystem.Composites.TwoModifiersComposite
-function UnityEngine.InputSystem.Composites.TwoModifiersComposite.New() end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return number,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.TwoModifiersComposite:EvaluateMagnitude(ref_context) end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@param buffer System.Void*
----@param bufferSize number
----@return ,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.TwoModifiersComposite:ReadValue(ref_context, buffer, bufferSize) end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return System.Object,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.TwoModifiersComposite:ReadValueAsObject(ref_context) end
-
----@class UnityEngine.InputSystem.Composites.Vector2Composite : UnityEngine.InputSystem.InputBindingComposite
----@field up number
----@field down number
----@field left number
----@field right number
----@field mode UnityEngine.InputSystem.Composites.Vector2Composite.Mode
-UnityEngine.InputSystem.Composites.Vector2Composite = {}
----@alias CS.UnityEngine.InputSystem.Composites.Vector2Composite UnityEngine.InputSystem.Composites.Vector2Composite
-CS.UnityEngine.InputSystem.Composites.Vector2Composite = UnityEngine.InputSystem.Composites.Vector2Composite
-
----@return UnityEngine.InputSystem.Composites.Vector2Composite
-function UnityEngine.InputSystem.Composites.Vector2Composite.New() end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return UnityEngine.Vector2,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.Vector2Composite:ReadValue(ref_context) end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return number,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.Vector2Composite:EvaluateMagnitude(ref_context) end
-
----@class UnityEngine.InputSystem.Composites.Vector2CompositeEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
----@field target UnityEngine.InputSystem.Composites.Vector2CompositeEditor -- infered from UnityEngine.InputSystem.Editor.InputParameterEditor`1[UnityEngine.InputSystem.Composites.Vector2Composite]
-UnityEngine.InputSystem.Composites.Vector2CompositeEditor = {}
----@alias CS.UnityEngine.InputSystem.Composites.Vector2CompositeEditor UnityEngine.InputSystem.Composites.Vector2CompositeEditor
-CS.UnityEngine.InputSystem.Composites.Vector2CompositeEditor = UnityEngine.InputSystem.Composites.Vector2CompositeEditor
-
----@return UnityEngine.InputSystem.Composites.Vector2CompositeEditor
-function UnityEngine.InputSystem.Composites.Vector2CompositeEditor.New() end
-function UnityEngine.InputSystem.Composites.Vector2CompositeEditor:OnGUI() end
----@param root UnityEngine.UIElements.VisualElement
----@param onChangedCallback System.Action
-function UnityEngine.InputSystem.Composites.Vector2CompositeEditor:OnDrawVisualElements(root, onChangedCallback) end
-
----@class UnityEngine.InputSystem.Composites.Vector3Composite : UnityEngine.InputSystem.InputBindingComposite
----@field up number
----@field down number
----@field left number
----@field right number
----@field forward number
----@field backward number
----@field mode UnityEngine.InputSystem.Composites.Vector3Composite.Mode
-UnityEngine.InputSystem.Composites.Vector3Composite = {}
----@alias CS.UnityEngine.InputSystem.Composites.Vector3Composite UnityEngine.InputSystem.Composites.Vector3Composite
-CS.UnityEngine.InputSystem.Composites.Vector3Composite = UnityEngine.InputSystem.Composites.Vector3Composite
-
----@return UnityEngine.InputSystem.Composites.Vector3Composite
-function UnityEngine.InputSystem.Composites.Vector3Composite.New() end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return UnityEngine.Vector3,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.Vector3Composite:ReadValue(ref_context) end
----@param ref_context UnityEngine.InputSystem.InputBindingCompositeContext
----@return number,UnityEngine.InputSystem.InputBindingCompositeContext
-function UnityEngine.InputSystem.Composites.Vector3Composite:EvaluateMagnitude(ref_context) end
-
----@class UnityEngine.InputSystem.Composites.Vector3CompositeEditor : UnityEngine.InputSystem.Editor.InputParameterEditor
----@field target UnityEngine.InputSystem.Composites.Vector3CompositeEditor -- infered from UnityEngine.InputSystem.Editor.InputParameterEditor`1[UnityEngine.InputSystem.Composites.Vector3Composite]
-UnityEngine.InputSystem.Composites.Vector3CompositeEditor = {}
----@alias CS.UnityEngine.InputSystem.Composites.Vector3CompositeEditor UnityEngine.InputSystem.Composites.Vector3CompositeEditor
-CS.UnityEngine.InputSystem.Composites.Vector3CompositeEditor = UnityEngine.InputSystem.Composites.Vector3CompositeEditor
-
----@return UnityEngine.InputSystem.Composites.Vector3CompositeEditor
-function UnityEngine.InputSystem.Composites.Vector3CompositeEditor.New() end
-function UnityEngine.InputSystem.Composites.Vector3CompositeEditor:OnGUI() end
----@param root UnityEngine.UIElements.VisualElement
----@param onChangedCallback System.Action
-function UnityEngine.InputSystem.Composites.Vector3CompositeEditor:OnDrawVisualElements(root, onChangedCallback) end
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData : System.ValueType
----@field FilePathsData System.Byte[]
----@field TypesData System.Byte[]
----@field TotalTypes number
----@field TotalFiles number
----@field IsEditorOnly boolean
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-
-
----@class UnityEngine.InputSystem.InputAction.ActionFlags
----@field WantsInitialStateCheck UnityEngine.InputSystem.InputAction.ActionFlags
-UnityEngine.InputSystem.InputAction.ActionFlags = {}
----@alias CS.UnityEngine.InputSystem.InputAction.ActionFlags UnityEngine.InputSystem.InputAction.ActionFlags
-CS.UnityEngine.InputSystem.InputAction.ActionFlags = UnityEngine.InputSystem.InputAction.ActionFlags
-
-
----@class UnityEngine.InputSystem.InputAction.CallbackContext : System.ValueType
----@field phase UnityEngine.InputSystem.InputActionPhase
----@field started boolean
----@field performed boolean
----@field canceled boolean
----@field action UnityEngine.InputSystem.InputAction
----@field control UnityEngine.InputSystem.InputControl
----@field interaction UnityEngine.InputSystem.IInputInteraction
----@field time number
----@field startTime number
----@field duration number
----@field valueType System.Type
----@field valueSizeInBytes number
-UnityEngine.InputSystem.InputAction.CallbackContext = {}
----@alias CS.UnityEngine.InputSystem.InputAction.CallbackContext UnityEngine.InputSystem.InputAction.CallbackContext
-CS.UnityEngine.InputSystem.InputAction.CallbackContext = UnityEngine.InputSystem.InputAction.CallbackContext
-
----@param buffer System.Void*
----@param bufferSize number
-function UnityEngine.InputSystem.InputAction.CallbackContext:ReadValue(buffer, bufferSize) end
----@return boolean
-function UnityEngine.InputSystem.InputAction.CallbackContext:ReadValueAsButton() end
----@return System.Object
-function UnityEngine.InputSystem.InputAction.CallbackContext:ReadValueAsObject() end
----@return string
-function UnityEngine.InputSystem.InputAction.CallbackContext:ToString() end
-
----@class UnityEngine.InputSystem.InputActionAsset.JsonVersion : System.Object
----@field Version0 number
----@field Version1 number
----@field Current number
-UnityEngine.InputSystem.InputActionAsset.JsonVersion = {}
----@alias CS.UnityEngine.InputSystem.InputActionAsset.JsonVersion UnityEngine.InputSystem.InputActionAsset.JsonVersion
-CS.UnityEngine.InputSystem.InputActionAsset.JsonVersion = UnityEngine.InputSystem.InputActionAsset.JsonVersion
-
-
----@class UnityEngine.InputSystem.InputActionAsset.WriteFileJson : System.ValueType
----@field version number
----@field name string
----@field maps UnityEngine.InputSystem.InputActionMap.WriteMapJson[]
----@field controlSchemes UnityEngine.InputSystem.InputControlScheme.SchemeJson[]
-UnityEngine.InputSystem.InputActionAsset.WriteFileJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionAsset.WriteFileJson UnityEngine.InputSystem.InputActionAsset.WriteFileJson
-CS.UnityEngine.InputSystem.InputActionAsset.WriteFileJson = UnityEngine.InputSystem.InputActionAsset.WriteFileJson
-
-
----@class UnityEngine.InputSystem.InputActionAsset.WriteFileJsonNoName : System.ValueType
----@field maps UnityEngine.InputSystem.InputActionMap.WriteMapJson[]
----@field controlSchemes UnityEngine.InputSystem.InputControlScheme.SchemeJson[]
-UnityEngine.InputSystem.InputActionAsset.WriteFileJsonNoName = {}
----@alias CS.UnityEngine.InputSystem.InputActionAsset.WriteFileJsonNoName UnityEngine.InputSystem.InputActionAsset.WriteFileJsonNoName
-CS.UnityEngine.InputSystem.InputActionAsset.WriteFileJsonNoName = UnityEngine.InputSystem.InputActionAsset.WriteFileJsonNoName
-
-
----@class UnityEngine.InputSystem.InputActionAsset.ReadFileJson : System.ValueType
----@field version number
----@field name string
----@field maps UnityEngine.InputSystem.InputActionMap.ReadMapJson[]
----@field controlSchemes UnityEngine.InputSystem.InputControlScheme.SchemeJson[]
-UnityEngine.InputSystem.InputActionAsset.ReadFileJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionAsset.ReadFileJson UnityEngine.InputSystem.InputActionAsset.ReadFileJson
-CS.UnityEngine.InputSystem.InputActionAsset.ReadFileJson = UnityEngine.InputSystem.InputActionAsset.ReadFileJson
-
----@param asset UnityEngine.InputSystem.InputActionAsset
-function UnityEngine.InputSystem.InputActionAsset.ReadFileJson:ToAsset(asset) end
-
----@class UnityEngine.InputSystem.InputActionMap.Flags
----@field NeedToResolveBindings UnityEngine.InputSystem.InputActionMap.Flags
----@field BindingResolutionNeedsFullReResolve UnityEngine.InputSystem.InputActionMap.Flags
----@field ControlsForEachActionInitialized UnityEngine.InputSystem.InputActionMap.Flags
----@field BindingsForEachActionInitialized UnityEngine.InputSystem.InputActionMap.Flags
-UnityEngine.InputSystem.InputActionMap.Flags = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.Flags UnityEngine.InputSystem.InputActionMap.Flags
-CS.UnityEngine.InputSystem.InputActionMap.Flags = UnityEngine.InputSystem.InputActionMap.Flags
-
-
----@class UnityEngine.InputSystem.InputActionMap.DeviceArray : System.ValueType
-UnityEngine.InputSystem.InputActionMap.DeviceArray = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.DeviceArray UnityEngine.InputSystem.InputActionMap.DeviceArray
-CS.UnityEngine.InputSystem.InputActionMap.DeviceArray = UnityEngine.InputSystem.InputActionMap.DeviceArray
-
----@param device UnityEngine.InputSystem.InputDevice
----@return number
-function UnityEngine.InputSystem.InputActionMap.DeviceArray:IndexOf(device) end
----@param device UnityEngine.InputSystem.InputDevice
----@return boolean
-function UnityEngine.InputSystem.InputActionMap.DeviceArray:Remove(device) end
----@return System.Nullable
-function UnityEngine.InputSystem.InputActionMap.DeviceArray:Get() end
----@param devices System.Nullable
----@return boolean
-function UnityEngine.InputSystem.InputActionMap.DeviceArray:Set(devices) end
-
----@class UnityEngine.InputSystem.InputActionMap.BindingOverrideListJson : System.ValueType
----@field bindings System.Collections.Generic.List
-UnityEngine.InputSystem.InputActionMap.BindingOverrideListJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.BindingOverrideListJson UnityEngine.InputSystem.InputActionMap.BindingOverrideListJson
-CS.UnityEngine.InputSystem.InputActionMap.BindingOverrideListJson = UnityEngine.InputSystem.InputActionMap.BindingOverrideListJson
-
-
----@class UnityEngine.InputSystem.InputActionMap.BindingOverrideJson : System.ValueType
----@field action string
----@field id string
----@field path string
----@field interactions string
----@field processors string
-UnityEngine.InputSystem.InputActionMap.BindingOverrideJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.BindingOverrideJson UnityEngine.InputSystem.InputActionMap.BindingOverrideJson
-CS.UnityEngine.InputSystem.InputActionMap.BindingOverrideJson = UnityEngine.InputSystem.InputActionMap.BindingOverrideJson
-
----@overload fun(binding: UnityEngine.InputSystem.InputBinding, actionName: string) : UnityEngine.InputSystem.InputActionMap.BindingOverrideJson
----@param binding UnityEngine.InputSystem.InputBinding
----@return UnityEngine.InputSystem.InputActionMap.BindingOverrideJson
-function UnityEngine.InputSystem.InputActionMap.BindingOverrideJson.FromBinding(binding) end
----@param bindingOverride UnityEngine.InputSystem.InputActionMap.BindingOverrideJson
----@return UnityEngine.InputSystem.InputBinding
-function UnityEngine.InputSystem.InputActionMap.BindingOverrideJson.ToBinding(bindingOverride) end
-
----@class UnityEngine.InputSystem.InputActionMap.BindingJson : System.ValueType
----@field name string
----@field id string
----@field path string
----@field interactions string
----@field processors string
----@field groups string
----@field action string
----@field isComposite boolean
----@field isPartOfComposite boolean
-UnityEngine.InputSystem.InputActionMap.BindingJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.BindingJson UnityEngine.InputSystem.InputActionMap.BindingJson
-CS.UnityEngine.InputSystem.InputActionMap.BindingJson = UnityEngine.InputSystem.InputActionMap.BindingJson
-
----@param ref_binding UnityEngine.InputSystem.InputBinding
----@return UnityEngine.InputSystem.InputActionMap.BindingJson,UnityEngine.InputSystem.InputBinding
-function UnityEngine.InputSystem.InputActionMap.BindingJson.FromBinding(ref_binding) end
----@return UnityEngine.InputSystem.InputBinding
-function UnityEngine.InputSystem.InputActionMap.BindingJson:ToBinding() end
-
----@class UnityEngine.InputSystem.InputActionMap.ReadActionJson : System.ValueType
----@field name string
----@field type string
----@field id string
----@field expectedControlType string
----@field expectedControlLayout string
----@field processors string
----@field interactions string
----@field passThrough boolean
----@field initialStateCheck boolean
----@field bindings UnityEngine.InputSystem.InputActionMap.BindingJson[]
-UnityEngine.InputSystem.InputActionMap.ReadActionJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.ReadActionJson UnityEngine.InputSystem.InputActionMap.ReadActionJson
-CS.UnityEngine.InputSystem.InputActionMap.ReadActionJson = UnityEngine.InputSystem.InputActionMap.ReadActionJson
-
----@param actionName string
----@return UnityEngine.InputSystem.InputAction
-function UnityEngine.InputSystem.InputActionMap.ReadActionJson:ToAction(actionName) end
-
----@class UnityEngine.InputSystem.InputActionMap.WriteActionJson : System.ValueType
----@field name string
----@field type string
----@field id string
----@field expectedControlType string
----@field processors string
----@field interactions string
----@field initialStateCheck boolean
-UnityEngine.InputSystem.InputActionMap.WriteActionJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.WriteActionJson UnityEngine.InputSystem.InputActionMap.WriteActionJson
-CS.UnityEngine.InputSystem.InputActionMap.WriteActionJson = UnityEngine.InputSystem.InputActionMap.WriteActionJson
-
----@param action UnityEngine.InputSystem.InputAction
----@return UnityEngine.InputSystem.InputActionMap.WriteActionJson
-function UnityEngine.InputSystem.InputActionMap.WriteActionJson.FromAction(action) end
-
----@class UnityEngine.InputSystem.InputActionMap.ReadMapJson : System.ValueType
----@field name string
----@field id string
----@field actions UnityEngine.InputSystem.InputActionMap.ReadActionJson[]
----@field bindings UnityEngine.InputSystem.InputActionMap.BindingJson[]
-UnityEngine.InputSystem.InputActionMap.ReadMapJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.ReadMapJson UnityEngine.InputSystem.InputActionMap.ReadMapJson
-CS.UnityEngine.InputSystem.InputActionMap.ReadMapJson = UnityEngine.InputSystem.InputActionMap.ReadMapJson
-
-
----@class UnityEngine.InputSystem.InputActionMap.WriteMapJson : System.ValueType
----@field name string
----@field id string
----@field actions UnityEngine.InputSystem.InputActionMap.WriteActionJson[]
----@field bindings UnityEngine.InputSystem.InputActionMap.BindingJson[]
-UnityEngine.InputSystem.InputActionMap.WriteMapJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.WriteMapJson UnityEngine.InputSystem.InputActionMap.WriteMapJson
-CS.UnityEngine.InputSystem.InputActionMap.WriteMapJson = UnityEngine.InputSystem.InputActionMap.WriteMapJson
-
----@param map UnityEngine.InputSystem.InputActionMap
----@return UnityEngine.InputSystem.InputActionMap.WriteMapJson
-function UnityEngine.InputSystem.InputActionMap.WriteMapJson.FromMap(map) end
-
----@class UnityEngine.InputSystem.InputActionMap.WriteFileJson : System.ValueType
----@field maps UnityEngine.InputSystem.InputActionMap.WriteMapJson[]
-UnityEngine.InputSystem.InputActionMap.WriteFileJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.WriteFileJson UnityEngine.InputSystem.InputActionMap.WriteFileJson
-CS.UnityEngine.InputSystem.InputActionMap.WriteFileJson = UnityEngine.InputSystem.InputActionMap.WriteFileJson
-
----@param map UnityEngine.InputSystem.InputActionMap
----@return UnityEngine.InputSystem.InputActionMap.WriteFileJson
-function UnityEngine.InputSystem.InputActionMap.WriteFileJson.FromMap(map) end
----@param maps System.Collections.Generic.IEnumerable
----@return UnityEngine.InputSystem.InputActionMap.WriteFileJson
-function UnityEngine.InputSystem.InputActionMap.WriteFileJson.FromMaps(maps) end
-
----@class UnityEngine.InputSystem.InputActionMap.ReadFileJson : System.ValueType
----@field actions UnityEngine.InputSystem.InputActionMap.ReadActionJson[]
----@field maps UnityEngine.InputSystem.InputActionMap.ReadMapJson[]
-UnityEngine.InputSystem.InputActionMap.ReadFileJson = {}
----@alias CS.UnityEngine.InputSystem.InputActionMap.ReadFileJson UnityEngine.InputSystem.InputActionMap.ReadFileJson
-CS.UnityEngine.InputSystem.InputActionMap.ReadFileJson = UnityEngine.InputSystem.InputActionMap.ReadFileJson
-
----@return UnityEngine.InputSystem.InputActionMap[]
-function UnityEngine.InputSystem.InputActionMap.ReadFileJson:ToMaps() end
-
----@class UnityEngine.InputSystem.InputActionRebindingExtensions.Parameter : System.ValueType
----@field instance System.Object
----@field field System.Reflection.FieldInfo
----@field bindingIndex number
-UnityEngine.InputSystem.InputActionRebindingExtensions.Parameter = {}
----@alias CS.UnityEngine.InputSystem.InputActionRebindingExtensions.Parameter UnityEngine.InputSystem.InputActionRebindingExtensions.Parameter
-CS.UnityEngine.InputSystem.InputActionRebindingExtensions.Parameter = UnityEngine.InputSystem.InputActionRebindingExtensions.Parameter
-
-
----@class UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerable : System.ValueType
-UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerable = {}
----@alias CS.UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerable UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerable
-CS.UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerable = UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerable
-
----@param state UnityEngine.InputSystem.InputActionState
----@param parameter UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride
----@param mapIndex number
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerable
-function UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerable.New(state, parameter, mapIndex) end
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator
-function UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerable:GetEnumerator() end
-
----@class UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator : System.ValueType
----@field Current UnityEngine.InputSystem.InputActionRebindingExtensions.Parameter
-UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator = {}
----@alias CS.UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator
-CS.UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator = UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator
-
----@param state UnityEngine.InputSystem.InputActionState
----@param parameter UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride
----@param mapIndex number
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator
-function UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator.New(state, parameter, mapIndex) end
----@return boolean
-function UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator:MoveNext() end
-function UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator:Reset() end
-function UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterEnumerator:Dispose() end
-
----@class UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride : System.ValueType
----@field objectRegistrationName string
----@field parameter string
----@field bindingMask UnityEngine.InputSystem.InputBinding
----@field value UnityEngine.InputSystem.Utilities.PrimitiveValue
----@field objectType System.Type
-UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride = {}
----@alias CS.UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride
-CS.UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride = UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride
-
----@overload fun(parameterName: string, bindingMask: UnityEngine.InputSystem.InputBinding, value: UnityEngine.InputSystem.Utilities.PrimitiveValue) : UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride
----@param objectRegistrationName string
----@param parameterName string
----@param bindingMask UnityEngine.InputSystem.InputBinding
----@param value UnityEngine.InputSystem.Utilities.PrimitiveValue
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride
-function UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride.New(objectRegistrationName, parameterName, bindingMask, value) end
----@param actionMap UnityEngine.InputSystem.InputActionMap
----@param ref_binding UnityEngine.InputSystem.InputBinding
----@param parameterName string
----@param objectRegistrationName string
----@return System.Nullable,UnityEngine.InputSystem.InputBinding
-function UnityEngine.InputSystem.InputActionRebindingExtensions.ParameterOverride.Find(actionMap, ref_binding, parameterName, objectRegistrationName) end
-
----@class UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation : System.Object
----@field kDefaultMagnitudeThreshold number
----@field action UnityEngine.InputSystem.InputAction
----@field bindingMask System.Nullable
----@field candidates UnityEngine.InputSystem.InputControlList
----@field scores UnityEngine.InputSystem.Utilities.ReadOnlyArray
----@field magnitudes UnityEngine.InputSystem.Utilities.ReadOnlyArray
----@field selectedControl UnityEngine.InputSystem.InputControl
----@field started boolean
----@field completed boolean
----@field canceled boolean
----@field startTime number
----@field timeout number
----@field expectedControlType string
-UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation = {}
----@alias CS.UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-CS.UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation = UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.New() end
----@param action UnityEngine.InputSystem.InputAction
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithAction(action) end
----@param value boolean
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithMatchingEventsBeingSuppressed(value) end
----@overload fun(self: UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation, binding: string) : UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
----@param control UnityEngine.InputSystem.InputControl
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithCancelingThrough(control) end
----@overload fun(self: UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation, layoutName: string) : UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
----@param type System.Type
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithExpectedControlType(type) end
----@param bindingIndex number
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithTargetBinding(bindingIndex) end
----@param bindingMask System.Nullable
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithBindingMask(bindingMask) end
----@param group string
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithBindingGroup(group) end
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithoutGeneralizingPathOfSelectedControl() end
----@param group string
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithRebindAddingNewBinding(group) end
----@param magnitude number
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithMagnitudeHavingToBeGreaterThan(magnitude) end
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithoutIgnoringNoisyControls() end
----@param path string
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithControlsHavingToMatchPath(path) end
----@param path string
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithControlsExcluding(path) end
----@param timeInSeconds number
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithTimeout(timeInSeconds) end
----@param callback System.Action
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:OnComplete(callback) end
----@param callback System.Action
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:OnCancel(callback) end
----@param callback System.Action
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:OnPotentialMatch(callback) end
----@param callback System.Func
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:OnGeneratePath(callback) end
----@param callback System.Func
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:OnComputeScore(callback) end
----@param callback System.Action
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:OnApplyBinding(callback) end
----@param seconds number
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:OnMatchWaitForAnother(seconds) end
----@param value boolean
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:WithActionEventNotificationsBeingSuppressed(value) end
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:Start() end
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:Cancel() end
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:Complete() end
----@param control UnityEngine.InputSystem.InputControl
----@param score number
----@param magnitude number
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:AddCandidate(control, score, magnitude) end
----@param control UnityEngine.InputSystem.InputControl
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:RemoveCandidate(control) end
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:Dispose() end
----@return UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation
-function UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation:Reset() end

@@ -1,5 +1,815 @@
 ---@meta
 
+---@return UnityEngine.UIElements.BasePopupField.PopupTextElement
+function UnityEngine.UIElements.BasePopupField.PopupTextElement.New() end
+
+---@class UnityEngine.UIElements.SliderDirection
+---@field Horizontal UnityEngine.UIElements.SliderDirection
+---@field Vertical UnityEngine.UIElements.SliderDirection
+UnityEngine.UIElements.SliderDirection = {}
+---@alias CS.UnityEngine.UIElements.SliderDirection UnityEngine.UIElements.SliderDirection
+CS.UnityEngine.UIElements.SliderDirection = UnityEngine.UIElements.SliderDirection
+
+
+---@class UnityEngine.UIElements.BaseSlider : UnityEngine.UIElements.BaseField[TValueType]
+---@field ussClassName string
+---@field labelUssClassName string
+---@field inputUssClassName string
+---@field horizontalVariantUssClassName string
+---@field verticalVariantUssClassName string
+---@field dragContainerUssClassName string
+---@field trackerUssClassName string
+---@field draggerUssClassName string
+---@field draggerBorderUssClassName string
+---@field textFieldClassName string
+---@field fillUssClassName string
+---@field movableUssClassName string
+---@field lowValue TValueType
+---@field highValue TValueType
+---@field range TValueType
+---@field pageSize number
+---@field showInputField boolean
+---@field fill boolean
+---@field value TValueType
+---@field direction UnityEngine.UIElements.SliderDirection
+---@field inverted boolean
+UnityEngine.UIElements.BaseSlider = {}
+---@alias CS.UnityEngine.UIElements.BaseSlider UnityEngine.UIElements.BaseSlider
+CS.UnityEngine.UIElements.BaseSlider = UnityEngine.UIElements.BaseSlider
+
+---@param delta UnityEngine.Vector3
+---@param speed UnityEngine.UIElements.DeltaSpeed
+---@param startValue TValueType
+function UnityEngine.UIElements.BaseSlider:ApplyInputDeviceDelta(delta, speed, startValue) end
+---@param newValue TValueType
+function UnityEngine.UIElements.BaseSlider:SetValueWithoutNotify(newValue) end
+---@param factor number
+function UnityEngine.UIElements.BaseSlider:AdjustDragElement(factor) end
+
+---@class UnityEngine.UIElements.BaseSlider.UxmlSerializedData : UnityEngine.UIElements.BaseField.UxmlSerializedData[TValueType]
+UnityEngine.UIElements.BaseSlider.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.BaseSlider.UxmlSerializedData UnityEngine.UIElements.BaseSlider.UxmlSerializedData
+CS.UnityEngine.UIElements.BaseSlider.UxmlSerializedData = UnityEngine.UIElements.BaseSlider.UxmlSerializedData
+
+function UnityEngine.UIElements.BaseSlider.UxmlSerializedData.Register() end
+---@param obj System.Object
+function UnityEngine.UIElements.BaseSlider.UxmlSerializedData:Deserialize(obj) end
+
+---@class UnityEngine.UIElements.BaseSlider.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits[TValueType]
+UnityEngine.UIElements.BaseSlider.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.BaseSlider.UxmlTraits UnityEngine.UIElements.BaseSlider.UxmlTraits
+CS.UnityEngine.UIElements.BaseSlider.UxmlTraits = UnityEngine.UIElements.BaseSlider.UxmlTraits
+
+---@return UnityEngine.UIElements.BaseSlider.UxmlTraits
+function UnityEngine.UIElements.BaseSlider.UxmlTraits.New() end
+
+---@class UnityEngine.UIElements.BaseSlider.UxmlTraits : UnityEngine.UIElements.BaseFieldTraits[TValueType,TValueUxmlAttributeType]
+UnityEngine.UIElements.BaseSlider.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.BaseSlider.UxmlTraits UnityEngine.UIElements.BaseSlider.UxmlTraits
+CS.UnityEngine.UIElements.BaseSlider.UxmlTraits = UnityEngine.UIElements.BaseSlider.UxmlTraits
+
+---@return UnityEngine.UIElements.BaseSlider.UxmlTraits
+function UnityEngine.UIElements.BaseSlider.UxmlTraits.New() end
+
+---@class UnityEngine.UIElements.BaseSlider.SliderKey
+---@field None UnityEngine.UIElements.BaseSlider.SliderKey
+---@field Lowest UnityEngine.UIElements.BaseSlider.SliderKey
+---@field LowerPage UnityEngine.UIElements.BaseSlider.SliderKey
+---@field Lower UnityEngine.UIElements.BaseSlider.SliderKey
+---@field Higher UnityEngine.UIElements.BaseSlider.SliderKey
+---@field HigherPage UnityEngine.UIElements.BaseSlider.SliderKey
+---@field Highest UnityEngine.UIElements.BaseSlider.SliderKey
+UnityEngine.UIElements.BaseSlider.SliderKey = {}
+---@alias CS.UnityEngine.UIElements.BaseSlider.SliderKey UnityEngine.UIElements.BaseSlider.SliderKey
+CS.UnityEngine.UIElements.BaseSlider.SliderKey = UnityEngine.UIElements.BaseSlider.SliderKey
+
+
+---@class UnityEngine.UIElements.TreeViewExpansionChangedArgs : System.Object
+---@field id number
+---@field isExpanded boolean
+---@field isAppliedToAllChildren boolean
+UnityEngine.UIElements.TreeViewExpansionChangedArgs = {}
+---@alias CS.UnityEngine.UIElements.TreeViewExpansionChangedArgs UnityEngine.UIElements.TreeViewExpansionChangedArgs
+CS.UnityEngine.UIElements.TreeViewExpansionChangedArgs = UnityEngine.UIElements.TreeViewExpansionChangedArgs
+
+---@return UnityEngine.UIElements.TreeViewExpansionChangedArgs
+function UnityEngine.UIElements.TreeViewExpansionChangedArgs.New() end
+
+---@class UnityEngine.UIElements.BaseTreeView : UnityEngine.UIElements.BaseVerticalCollectionView
+---@field ussClassName string
+---@field itemUssClassName string
+---@field itemToggleUssClassName string
+---@field itemIndentUssClassName string
+---@field itemContentContainerUssClassName string
+---@field itemsSource System.Collections.IList
+---@field viewController UnityEngine.UIElements.BaseTreeViewController
+---@field autoExpand boolean
+UnityEngine.UIElements.BaseTreeView = {}
+---@alias CS.UnityEngine.UIElements.BaseTreeView UnityEngine.UIElements.BaseTreeView
+CS.UnityEngine.UIElements.BaseTreeView = UnityEngine.UIElements.BaseTreeView
+
+---@overload fun() : UnityEngine.UIElements.BaseTreeView
+---@param itemHeight number
+---@return UnityEngine.UIElements.BaseTreeView
+function UnityEngine.UIElements.BaseTreeView.New(itemHeight) end
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.UIElements.BaseTreeView:GetRootIds() end
+---@return number
+function UnityEngine.UIElements.BaseTreeView:GetTreeCount() end
+---@param controller UnityEngine.UIElements.CollectionViewController
+function UnityEngine.UIElements.BaseTreeView:SetViewController(controller) end
+---@param index number
+---@return number
+function UnityEngine.UIElements.BaseTreeView:GetIdForIndex(index) end
+---@param index number
+---@return number
+function UnityEngine.UIElements.BaseTreeView:GetParentIdForIndex(index) end
+---@param index number
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.UIElements.BaseTreeView:GetChildrenIdsForIndex(index) end
+---@param id number
+---@param rebuildTree boolean
+---@return boolean
+function UnityEngine.UIElements.BaseTreeView:TryRemoveItem(id, rebuildTree) end
+---@overload fun(self: UnityEngine.UIElements.BaseTreeView, id: number)
+---@param ids System.Collections.Generic.IEnumerable
+function UnityEngine.UIElements.BaseTreeView:SetSelectionById(ids) end
+---@param ids System.Collections.Generic.IEnumerable
+function UnityEngine.UIElements.BaseTreeView:SetSelectionByIdWithoutNotify(ids) end
+---@param id number
+function UnityEngine.UIElements.BaseTreeView:AddToSelectionById(id) end
+---@param id number
+function UnityEngine.UIElements.BaseTreeView:RemoveFromSelectionById(id) end
+---@param id number
+---@return boolean
+function UnityEngine.UIElements.BaseTreeView:IsExpanded(id) end
+---@param id number
+---@param collapseAllChildren boolean
+---@param refresh boolean
+function UnityEngine.UIElements.BaseTreeView:CollapseItem(id, collapseAllChildren, refresh) end
+---@param id number
+---@param expandAllChildren boolean
+---@param refresh boolean
+function UnityEngine.UIElements.BaseTreeView:ExpandItem(id, expandAllChildren, refresh) end
+function UnityEngine.UIElements.BaseTreeView:ExpandRootItems() end
+function UnityEngine.UIElements.BaseTreeView:ExpandAll() end
+function UnityEngine.UIElements.BaseTreeView:CollapseAll() end
+
+---@class UnityEngine.UIElements.BaseTreeView.UxmlSerializedData : UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData
+UnityEngine.UIElements.BaseTreeView.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.BaseTreeView.UxmlSerializedData UnityEngine.UIElements.BaseTreeView.UxmlSerializedData
+CS.UnityEngine.UIElements.BaseTreeView.UxmlSerializedData = UnityEngine.UIElements.BaseTreeView.UxmlSerializedData
+
+function UnityEngine.UIElements.BaseTreeView.UxmlSerializedData.Register() end
+---@param obj System.Object
+function UnityEngine.UIElements.BaseTreeView.UxmlSerializedData:Deserialize(obj) end
+
+---@class UnityEngine.UIElements.BaseTreeView.UxmlTraits : UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits
+---@field uxmlChildElementsDescription System.Collections.Generic.IEnumerable
+UnityEngine.UIElements.BaseTreeView.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.BaseTreeView.UxmlTraits UnityEngine.UIElements.BaseTreeView.UxmlTraits
+CS.UnityEngine.UIElements.BaseTreeView.UxmlTraits = UnityEngine.UIElements.BaseTreeView.UxmlTraits
+
+---@return UnityEngine.UIElements.BaseTreeView.UxmlTraits
+function UnityEngine.UIElements.BaseTreeView.UxmlTraits.New() end
+---@param ve UnityEngine.UIElements.VisualElement
+---@param bag UnityEngine.UIElements.IUxmlAttributes
+---@param cc UnityEngine.UIElements.CreationContext
+function UnityEngine.UIElements.BaseTreeView.UxmlTraits:Init(ve, bag, cc) end
+
+---@class UnityEngine.UIElements.AlternatingRowBackground
+---@field None UnityEngine.UIElements.AlternatingRowBackground
+---@field ContentOnly UnityEngine.UIElements.AlternatingRowBackground
+---@field All UnityEngine.UIElements.AlternatingRowBackground
+UnityEngine.UIElements.AlternatingRowBackground = {}
+---@alias CS.UnityEngine.UIElements.AlternatingRowBackground UnityEngine.UIElements.AlternatingRowBackground
+CS.UnityEngine.UIElements.AlternatingRowBackground = UnityEngine.UIElements.AlternatingRowBackground
+
+
+---@class UnityEngine.UIElements.CollectionVirtualizationMethod
+---@field FixedHeight UnityEngine.UIElements.CollectionVirtualizationMethod
+---@field DynamicHeight UnityEngine.UIElements.CollectionVirtualizationMethod
+UnityEngine.UIElements.CollectionVirtualizationMethod = {}
+---@alias CS.UnityEngine.UIElements.CollectionVirtualizationMethod UnityEngine.UIElements.CollectionVirtualizationMethod
+CS.UnityEngine.UIElements.CollectionVirtualizationMethod = UnityEngine.UIElements.CollectionVirtualizationMethod
+
+
+---@class UnityEngine.UIElements.BindingSourceSelectionMode
+---@field Manual UnityEngine.UIElements.BindingSourceSelectionMode
+---@field AutoAssign UnityEngine.UIElements.BindingSourceSelectionMode
+UnityEngine.UIElements.BindingSourceSelectionMode = {}
+---@alias CS.UnityEngine.UIElements.BindingSourceSelectionMode UnityEngine.UIElements.BindingSourceSelectionMode
+CS.UnityEngine.UIElements.BindingSourceSelectionMode = UnityEngine.UIElements.BindingSourceSelectionMode
+
+
+---@class UnityEngine.UIElements.SerializedVirtualizationData : System.Object
+---@field scrollOffset UnityEngine.Vector2
+---@field firstVisibleIndex number
+---@field contentPadding number
+---@field contentHeight number
+---@field anchoredItemIndex number
+---@field anchorOffset number
+UnityEngine.UIElements.SerializedVirtualizationData = {}
+---@alias CS.UnityEngine.UIElements.SerializedVirtualizationData UnityEngine.UIElements.SerializedVirtualizationData
+CS.UnityEngine.UIElements.SerializedVirtualizationData = UnityEngine.UIElements.SerializedVirtualizationData
+
+---@return UnityEngine.UIElements.SerializedVirtualizationData
+function UnityEngine.UIElements.SerializedVirtualizationData.New() end
+
+---@class UnityEngine.UIElements.BaseVerticalCollectionView : UnityEngine.UIElements.BindableElement
+---@field ussClassName string
+---@field borderUssClassName string
+---@field itemUssClassName string
+---@field dragHoverBarUssClassName string
+---@field dragHoverMarkerUssClassName string
+---@field itemDragHoverUssClassName string
+---@field itemSelectedVariantUssClassName string
+---@field itemAlternativeBackgroundUssClassName string
+---@field listScrollViewUssClassName string
+---@field itemsSource System.Collections.IList
+---@field contentContainer UnityEngine.UIElements.VisualElement
+---@field selectionType UnityEngine.UIElements.SelectionType
+---@field selectedItem System.Object
+---@field selectedItems System.Collections.Generic.IEnumerable
+---@field selectedIndex number
+---@field selectedIndices System.Collections.Generic.IEnumerable
+---@field selectedIds System.Collections.Generic.IEnumerable
+---@field viewController UnityEngine.UIElements.CollectionViewController
+---@field showBorder boolean
+---@field reorderable boolean
+---@field horizontalScrollingEnabled boolean
+---@field showAlternatingRowBackgrounds UnityEngine.UIElements.AlternatingRowBackground
+---@field virtualizationMethod UnityEngine.UIElements.CollectionVirtualizationMethod
+---@field fixedItemHeight number
+UnityEngine.UIElements.BaseVerticalCollectionView = {}
+---@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView UnityEngine.UIElements.BaseVerticalCollectionView
+CS.UnityEngine.UIElements.BaseVerticalCollectionView = UnityEngine.UIElements.BaseVerticalCollectionView
+
+---@overload fun() : UnityEngine.UIElements.BaseVerticalCollectionView
+---@overload fun(itemsSource: System.Collections.IList, itemHeight: number) : UnityEngine.UIElements.BaseVerticalCollectionView
+---@param itemsSource System.Collections.IList
+---@param itemHeight number
+---@param makeItem System.Func
+---@param bindItem System.Action
+---@return UnityEngine.UIElements.BaseVerticalCollectionView
+function UnityEngine.UIElements.BaseVerticalCollectionView.New(itemsSource, itemHeight, makeItem, bindItem) end
+---@param controller UnityEngine.UIElements.CollectionViewController
+function UnityEngine.UIElements.BaseVerticalCollectionView:SetViewController(controller) end
+---@param id number
+---@return UnityEngine.UIElements.VisualElement
+function UnityEngine.UIElements.BaseVerticalCollectionView:GetRootElementForId(id) end
+---@param index number
+---@return UnityEngine.UIElements.VisualElement
+function UnityEngine.UIElements.BaseVerticalCollectionView:GetRootElementForIndex(index) end
+---@param index number
+function UnityEngine.UIElements.BaseVerticalCollectionView:RefreshItem(index) end
+function UnityEngine.UIElements.BaseVerticalCollectionView:RefreshItems() end
+function UnityEngine.UIElements.BaseVerticalCollectionView:Rebuild() end
+---@param visualElement UnityEngine.UIElements.VisualElement
+function UnityEngine.UIElements.BaseVerticalCollectionView:ScrollTo(visualElement) end
+---@param index number
+function UnityEngine.UIElements.BaseVerticalCollectionView:ScrollToItem(index) end
+---@param id number
+function UnityEngine.UIElements.BaseVerticalCollectionView:ScrollToItemById(id) end
+---@param index number
+function UnityEngine.UIElements.BaseVerticalCollectionView:AddToSelection(index) end
+---@param index number
+function UnityEngine.UIElements.BaseVerticalCollectionView:RemoveFromSelection(index) end
+---@overload fun(self: UnityEngine.UIElements.BaseVerticalCollectionView, index: number)
+---@param indices System.Collections.Generic.IEnumerable
+function UnityEngine.UIElements.BaseVerticalCollectionView:SetSelection(indices) end
+---@param indices System.Collections.Generic.IEnumerable
+function UnityEngine.UIElements.BaseVerticalCollectionView:SetSelectionWithoutNotify(indices) end
+function UnityEngine.UIElements.BaseVerticalCollectionView:ClearSelection() end
+---@param id number
+---@return UnityEngine.UIElements.ReusableCollectionItem
+function UnityEngine.UIElements.BaseVerticalCollectionView:GetRecycledItemFromId(id) end
+---@param index number
+---@return UnityEngine.UIElements.ReusableCollectionItem
+function UnityEngine.UIElements.BaseVerticalCollectionView:GetRecycledItemFromIndex(index) end
+
+---@class UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData : UnityEngine.UIElements.BindableElement.UxmlSerializedData
+UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData
+CS.UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData = UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData
+
+function UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData.Register() end
+---@param obj System.Object
+function UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData:Deserialize(obj) end
+
+---@class UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits : UnityEngine.UIElements.BindableElement.UxmlTraits
+---@field uxmlChildElementsDescription System.Collections.Generic.IEnumerable
+UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits
+CS.UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits = UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits
+
+---@return UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits
+function UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits.New() end
+---@param ve UnityEngine.UIElements.VisualElement
+---@param bag UnityEngine.UIElements.IUxmlAttributes
+---@param cc UnityEngine.UIElements.CreationContext
+function UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits:Init(ve, bag, cc) end
+
+---@class UnityEngine.UIElements.BaseVerticalCollectionView.Selection : System.Object
+---@field indices System.Collections.Generic.List
+---@field items System.Collections.Generic.Dictionary
+---@field selectedIds System.Collections.Generic.List
+---@field indexCount number
+---@field idCount number
+---@field minIndex number
+---@field maxIndex number
+---@field capacity number
+UnityEngine.UIElements.BaseVerticalCollectionView.Selection = {}
+---@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView.Selection UnityEngine.UIElements.BaseVerticalCollectionView.Selection
+CS.UnityEngine.UIElements.BaseVerticalCollectionView.Selection = UnityEngine.UIElements.BaseVerticalCollectionView.Selection
+
+---@return UnityEngine.UIElements.BaseVerticalCollectionView.Selection
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection.New() end
+---@return number
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:FirstIndex() end
+---@return System.Object
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:FirstObject() end
+---@param index number
+---@return boolean
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:ContainsIndex(index) end
+---@param id number
+---@return boolean
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:ContainsId(id) end
+---@param id number
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:AddId(id) end
+---@param index number
+---@param obj System.Object
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:AddIndex(index, obj) end
+---@param index number
+---@return boolean
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:TryRemove(index) end
+---@param id number
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:RemoveId(id) end
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:ClearItems() end
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:ClearIds() end
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:ClearIndices() end
+function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:Clear() end
+
+---@class UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
+---@field Up UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
+---@field None UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
+---@field Down UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
+UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection = {}
+---@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
+CS.UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection = UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
+
+
+---@class UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum
+---@field None UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum
+---@field PointerDown UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum
+UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum = {}
+---@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum
+CS.UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum = UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum
+
+
+---@class UnityEngine.UIElements.IBindable
+---@field binding UnityEngine.UIElements.IBinding
+---@field bindingPath string
+UnityEngine.UIElements.IBindable = {}
+---@alias CS.UnityEngine.UIElements.IBindable UnityEngine.UIElements.IBindable
+CS.UnityEngine.UIElements.IBindable = UnityEngine.UIElements.IBindable
+
+---@return boolean
+function UnityEngine.UIElements.IBindable:IsBound() end
+
+---@class UnityEngine.UIElements.IBinding
+UnityEngine.UIElements.IBinding = {}
+---@alias CS.UnityEngine.UIElements.IBinding UnityEngine.UIElements.IBinding
+CS.UnityEngine.UIElements.IBinding = UnityEngine.UIElements.IBinding
+
+function UnityEngine.UIElements.IBinding:PreUpdate() end
+function UnityEngine.UIElements.IBinding:Update() end
+function UnityEngine.UIElements.IBinding:Release() end
+
+---@class UnityEngine.UIElements.IBindingExtensions : System.Object
+UnityEngine.UIElements.IBindingExtensions = {}
+---@alias CS.UnityEngine.UIElements.IBindingExtensions UnityEngine.UIElements.IBindingExtensions
+CS.UnityEngine.UIElements.IBindingExtensions = UnityEngine.UIElements.IBindingExtensions
+
+---@param control UnityEngine.UIElements.IBindable
+---@return boolean
+function UnityEngine.UIElements.IBindingExtensions.IsBound(control) end
+
+---@class UnityEngine.UIElements.BoundsField : UnityEngine.UIElements.BaseField
+---@field ussClassName string
+---@field labelUssClassName string
+---@field inputUssClassName string
+---@field centerFieldUssClassName string
+---@field extentsFieldUssClassName string
+---@field value UnityEngine.UIElements.BoundsField -- infered from UnityEngine.UIElements.BaseField`1[UnityEngine.Bounds]
+UnityEngine.UIElements.BoundsField = {}
+---@alias CS.UnityEngine.UIElements.BoundsField UnityEngine.UIElements.BoundsField
+CS.UnityEngine.UIElements.BoundsField = UnityEngine.UIElements.BoundsField
+
+---@overload fun() : UnityEngine.UIElements.BoundsField
+---@param label string
+---@return UnityEngine.UIElements.BoundsField
+function UnityEngine.UIElements.BoundsField.New(label) end
+---@param newValue UnityEngine.Bounds
+function UnityEngine.UIElements.BoundsField:SetValueWithoutNotify(newValue) end
+
+---@class UnityEngine.UIElements.BoundsField.UxmlSerializedData : UnityEngine.UIElements.BaseField.UxmlSerializedData
+UnityEngine.UIElements.BoundsField.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.BoundsField.UxmlSerializedData UnityEngine.UIElements.BoundsField.UxmlSerializedData
+CS.UnityEngine.UIElements.BoundsField.UxmlSerializedData = UnityEngine.UIElements.BoundsField.UxmlSerializedData
+
+---@return UnityEngine.UIElements.BoundsField.UxmlSerializedData
+function UnityEngine.UIElements.BoundsField.UxmlSerializedData.New() end
+function UnityEngine.UIElements.BoundsField.UxmlSerializedData.Register() end
+---@return System.Object
+function UnityEngine.UIElements.BoundsField.UxmlSerializedData:CreateInstance() end
+
+---@class UnityEngine.UIElements.BoundsField.UxmlFactory : UnityEngine.UIElements.UxmlFactory
+UnityEngine.UIElements.BoundsField.UxmlFactory = {}
+---@alias CS.UnityEngine.UIElements.BoundsField.UxmlFactory UnityEngine.UIElements.BoundsField.UxmlFactory
+CS.UnityEngine.UIElements.BoundsField.UxmlFactory = UnityEngine.UIElements.BoundsField.UxmlFactory
+
+---@return UnityEngine.UIElements.BoundsField.UxmlFactory
+function UnityEngine.UIElements.BoundsField.UxmlFactory.New() end
+
+---@class UnityEngine.UIElements.BoundsField.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
+UnityEngine.UIElements.BoundsField.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.BoundsField.UxmlTraits UnityEngine.UIElements.BoundsField.UxmlTraits
+CS.UnityEngine.UIElements.BoundsField.UxmlTraits = UnityEngine.UIElements.BoundsField.UxmlTraits
+
+---@return UnityEngine.UIElements.BoundsField.UxmlTraits
+function UnityEngine.UIElements.BoundsField.UxmlTraits.New() end
+---@param ve UnityEngine.UIElements.VisualElement
+---@param bag UnityEngine.UIElements.IUxmlAttributes
+---@param cc UnityEngine.UIElements.CreationContext
+function UnityEngine.UIElements.BoundsField.UxmlTraits:Init(ve, bag, cc) end
+
+---@class UnityEngine.UIElements.BoundsIntField : UnityEngine.UIElements.BaseField
+---@field ussClassName string
+---@field labelUssClassName string
+---@field inputUssClassName string
+---@field positionUssClassName string
+---@field sizeUssClassName string
+---@field value UnityEngine.UIElements.BoundsIntField -- infered from UnityEngine.UIElements.BaseField`1[UnityEngine.BoundsInt]
+UnityEngine.UIElements.BoundsIntField = {}
+---@alias CS.UnityEngine.UIElements.BoundsIntField UnityEngine.UIElements.BoundsIntField
+CS.UnityEngine.UIElements.BoundsIntField = UnityEngine.UIElements.BoundsIntField
+
+---@overload fun() : UnityEngine.UIElements.BoundsIntField
+---@param label string
+---@return UnityEngine.UIElements.BoundsIntField
+function UnityEngine.UIElements.BoundsIntField.New(label) end
+---@param newValue UnityEngine.BoundsInt
+function UnityEngine.UIElements.BoundsIntField:SetValueWithoutNotify(newValue) end
+
+---@class UnityEngine.UIElements.BoundsIntField.UxmlSerializedData : UnityEngine.UIElements.BaseField.UxmlSerializedData
+UnityEngine.UIElements.BoundsIntField.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.BoundsIntField.UxmlSerializedData UnityEngine.UIElements.BoundsIntField.UxmlSerializedData
+CS.UnityEngine.UIElements.BoundsIntField.UxmlSerializedData = UnityEngine.UIElements.BoundsIntField.UxmlSerializedData
+
+---@return UnityEngine.UIElements.BoundsIntField.UxmlSerializedData
+function UnityEngine.UIElements.BoundsIntField.UxmlSerializedData.New() end
+function UnityEngine.UIElements.BoundsIntField.UxmlSerializedData.Register() end
+---@return System.Object
+function UnityEngine.UIElements.BoundsIntField.UxmlSerializedData:CreateInstance() end
+
+---@class UnityEngine.UIElements.BoundsIntField.UxmlFactory : UnityEngine.UIElements.UxmlFactory
+UnityEngine.UIElements.BoundsIntField.UxmlFactory = {}
+---@alias CS.UnityEngine.UIElements.BoundsIntField.UxmlFactory UnityEngine.UIElements.BoundsIntField.UxmlFactory
+CS.UnityEngine.UIElements.BoundsIntField.UxmlFactory = UnityEngine.UIElements.BoundsIntField.UxmlFactory
+
+---@return UnityEngine.UIElements.BoundsIntField.UxmlFactory
+function UnityEngine.UIElements.BoundsIntField.UxmlFactory.New() end
+
+---@class UnityEngine.UIElements.BoundsIntField.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
+UnityEngine.UIElements.BoundsIntField.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.BoundsIntField.UxmlTraits UnityEngine.UIElements.BoundsIntField.UxmlTraits
+CS.UnityEngine.UIElements.BoundsIntField.UxmlTraits = UnityEngine.UIElements.BoundsIntField.UxmlTraits
+
+---@return UnityEngine.UIElements.BoundsIntField.UxmlTraits
+function UnityEngine.UIElements.BoundsIntField.UxmlTraits.New() end
+---@param ve UnityEngine.UIElements.VisualElement
+---@param bag UnityEngine.UIElements.IUxmlAttributes
+---@param cc UnityEngine.UIElements.CreationContext
+function UnityEngine.UIElements.BoundsIntField.UxmlTraits:Init(ve, bag, cc) end
+
+---@class UnityEngine.UIElements.Box : UnityEngine.UIElements.VisualElement
+---@field ussClassName string
+UnityEngine.UIElements.Box = {}
+---@alias CS.UnityEngine.UIElements.Box UnityEngine.UIElements.Box
+CS.UnityEngine.UIElements.Box = UnityEngine.UIElements.Box
+
+---@return UnityEngine.UIElements.Box
+function UnityEngine.UIElements.Box.New() end
+
+---@class UnityEngine.UIElements.Box.UxmlSerializedData : UnityEngine.UIElements.VisualElement.UxmlSerializedData
+UnityEngine.UIElements.Box.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.Box.UxmlSerializedData UnityEngine.UIElements.Box.UxmlSerializedData
+CS.UnityEngine.UIElements.Box.UxmlSerializedData = UnityEngine.UIElements.Box.UxmlSerializedData
+
+---@return UnityEngine.UIElements.Box.UxmlSerializedData
+function UnityEngine.UIElements.Box.UxmlSerializedData.New() end
+---@return System.Object
+function UnityEngine.UIElements.Box.UxmlSerializedData:CreateInstance() end
+
+---@class UnityEngine.UIElements.Box.UxmlFactory : UnityEngine.UIElements.UxmlFactory
+UnityEngine.UIElements.Box.UxmlFactory = {}
+---@alias CS.UnityEngine.UIElements.Box.UxmlFactory UnityEngine.UIElements.Box.UxmlFactory
+CS.UnityEngine.UIElements.Box.UxmlFactory = UnityEngine.UIElements.Box.UxmlFactory
+
+---@return UnityEngine.UIElements.Box.UxmlFactory
+function UnityEngine.UIElements.Box.UxmlFactory.New() end
+
+---@class UnityEngine.UIElements.Button : UnityEngine.UIElements.TextElement
+---@field ussClassName string
+---@field iconUssClassName string
+---@field iconOnlyUssClassName string
+---@field imageUSSClassName string
+---@field clickable UnityEngine.UIElements.Clickable
+---@field iconImage UnityEngine.UIElements.Background
+---@field text string
+UnityEngine.UIElements.Button = {}
+---@alias CS.UnityEngine.UIElements.Button UnityEngine.UIElements.Button
+CS.UnityEngine.UIElements.Button = UnityEngine.UIElements.Button
+
+---@overload fun() : UnityEngine.UIElements.Button
+---@overload fun(iconImage: UnityEngine.UIElements.Background, clickEvent: System.Action) : UnityEngine.UIElements.Button
+---@param clickEvent System.Action
+---@return UnityEngine.UIElements.Button
+function UnityEngine.UIElements.Button.New(clickEvent) end
+
+---@class UnityEngine.UIElements.Button.UxmlSerializedData : UnityEngine.UIElements.TextElement.UxmlSerializedData
+UnityEngine.UIElements.Button.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.Button.UxmlSerializedData UnityEngine.UIElements.Button.UxmlSerializedData
+CS.UnityEngine.UIElements.Button.UxmlSerializedData = UnityEngine.UIElements.Button.UxmlSerializedData
+
+---@return UnityEngine.UIElements.Button.UxmlSerializedData
+function UnityEngine.UIElements.Button.UxmlSerializedData.New() end
+function UnityEngine.UIElements.Button.UxmlSerializedData.Register() end
+---@return System.Object
+function UnityEngine.UIElements.Button.UxmlSerializedData:CreateInstance() end
+---@param obj System.Object
+function UnityEngine.UIElements.Button.UxmlSerializedData:Deserialize(obj) end
+
+---@class UnityEngine.UIElements.Button.UxmlFactory : UnityEngine.UIElements.UxmlFactory
+UnityEngine.UIElements.Button.UxmlFactory = {}
+---@alias CS.UnityEngine.UIElements.Button.UxmlFactory UnityEngine.UIElements.Button.UxmlFactory
+CS.UnityEngine.UIElements.Button.UxmlFactory = UnityEngine.UIElements.Button.UxmlFactory
+
+---@return UnityEngine.UIElements.Button.UxmlFactory
+function UnityEngine.UIElements.Button.UxmlFactory.New() end
+
+---@class UnityEngine.UIElements.Button.UxmlTraits : UnityEngine.UIElements.TextElement.UxmlTraits
+UnityEngine.UIElements.Button.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.Button.UxmlTraits UnityEngine.UIElements.Button.UxmlTraits
+CS.UnityEngine.UIElements.Button.UxmlTraits = UnityEngine.UIElements.Button.UxmlTraits
+
+---@return UnityEngine.UIElements.Button.UxmlTraits
+function UnityEngine.UIElements.Button.UxmlTraits.New() end
+---@param ve UnityEngine.UIElements.VisualElement
+---@param bag UnityEngine.UIElements.IUxmlAttributes
+---@param cc UnityEngine.UIElements.CreationContext
+function UnityEngine.UIElements.Button.UxmlTraits:Init(ve, bag, cc) end
+
+---@class UnityEngine.UIElements.ButtonStripField : UnityEngine.UIElements.BaseField
+---@field className string
+---@field value UnityEngine.UIElements.ButtonStripField -- infered from UnityEngine.UIElements.BaseField`1[System.Int32]
+UnityEngine.UIElements.ButtonStripField = {}
+---@alias CS.UnityEngine.UIElements.ButtonStripField UnityEngine.UIElements.ButtonStripField
+CS.UnityEngine.UIElements.ButtonStripField = UnityEngine.UIElements.ButtonStripField
+
+---@overload fun() : UnityEngine.UIElements.ButtonStripField
+---@param label string
+---@return UnityEngine.UIElements.ButtonStripField
+function UnityEngine.UIElements.ButtonStripField.New(label) end
+---@overload fun(self: UnityEngine.UIElements.ButtonStripField, text: string, name: string)
+---@param icon UnityEngine.UIElements.Background
+---@param name string
+function UnityEngine.UIElements.ButtonStripField:AddButton(icon, name) end
+---@param newValue number
+function UnityEngine.UIElements.ButtonStripField:SetValueWithoutNotify(newValue) end
+
+---@class UnityEngine.UIElements.ButtonStripField.UxmlSerializedData : UnityEngine.UIElements.BaseField.UxmlSerializedData
+UnityEngine.UIElements.ButtonStripField.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.ButtonStripField.UxmlSerializedData UnityEngine.UIElements.ButtonStripField.UxmlSerializedData
+CS.UnityEngine.UIElements.ButtonStripField.UxmlSerializedData = UnityEngine.UIElements.ButtonStripField.UxmlSerializedData
+
+---@return UnityEngine.UIElements.ButtonStripField.UxmlSerializedData
+function UnityEngine.UIElements.ButtonStripField.UxmlSerializedData.New() end
+function UnityEngine.UIElements.ButtonStripField.UxmlSerializedData.Register() end
+---@return System.Object
+function UnityEngine.UIElements.ButtonStripField.UxmlSerializedData:CreateInstance() end
+
+---@class UnityEngine.UIElements.ButtonStripField.UxmlFactory : UnityEngine.UIElements.UxmlFactory
+UnityEngine.UIElements.ButtonStripField.UxmlFactory = {}
+---@alias CS.UnityEngine.UIElements.ButtonStripField.UxmlFactory UnityEngine.UIElements.ButtonStripField.UxmlFactory
+CS.UnityEngine.UIElements.ButtonStripField.UxmlFactory = UnityEngine.UIElements.ButtonStripField.UxmlFactory
+
+---@return UnityEngine.UIElements.ButtonStripField.UxmlFactory
+function UnityEngine.UIElements.ButtonStripField.UxmlFactory.New() end
+
+---@class UnityEngine.UIElements.ButtonStripField.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
+UnityEngine.UIElements.ButtonStripField.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.ButtonStripField.UxmlTraits UnityEngine.UIElements.ButtonStripField.UxmlTraits
+CS.UnityEngine.UIElements.ButtonStripField.UxmlTraits = UnityEngine.UIElements.ButtonStripField.UxmlTraits
+
+---@return UnityEngine.UIElements.ButtonStripField.UxmlTraits
+function UnityEngine.UIElements.ButtonStripField.UxmlTraits.New() end
+
+---@class UnityEngine.UIElements.RectField : UnityEngine.UIElements.BaseCompositeField
+---@field ussClassName string
+---@field labelUssClassName string
+---@field inputUssClassName string
+UnityEngine.UIElements.RectField = {}
+---@alias CS.UnityEngine.UIElements.RectField UnityEngine.UIElements.RectField
+CS.UnityEngine.UIElements.RectField = UnityEngine.UIElements.RectField
+
+---@overload fun() : UnityEngine.UIElements.RectField
+---@param label string
+---@return UnityEngine.UIElements.RectField
+function UnityEngine.UIElements.RectField.New(label) end
+
+---@class UnityEngine.UIElements.RectField.UxmlSerializedData : UnityEngine.UIElements.BaseCompositeField.UxmlSerializedData
+UnityEngine.UIElements.RectField.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.RectField.UxmlSerializedData UnityEngine.UIElements.RectField.UxmlSerializedData
+CS.UnityEngine.UIElements.RectField.UxmlSerializedData = UnityEngine.UIElements.RectField.UxmlSerializedData
+
+---@return UnityEngine.UIElements.RectField.UxmlSerializedData
+function UnityEngine.UIElements.RectField.UxmlSerializedData.New() end
+function UnityEngine.UIElements.RectField.UxmlSerializedData.Register() end
+---@return System.Object
+function UnityEngine.UIElements.RectField.UxmlSerializedData:CreateInstance() end
+
+---@class UnityEngine.UIElements.RectField.UxmlFactory : UnityEngine.UIElements.UxmlFactory
+UnityEngine.UIElements.RectField.UxmlFactory = {}
+---@alias CS.UnityEngine.UIElements.RectField.UxmlFactory UnityEngine.UIElements.RectField.UxmlFactory
+CS.UnityEngine.UIElements.RectField.UxmlFactory = UnityEngine.UIElements.RectField.UxmlFactory
+
+---@return UnityEngine.UIElements.RectField.UxmlFactory
+function UnityEngine.UIElements.RectField.UxmlFactory.New() end
+
+---@class UnityEngine.UIElements.RectField.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
+UnityEngine.UIElements.RectField.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.RectField.UxmlTraits UnityEngine.UIElements.RectField.UxmlTraits
+CS.UnityEngine.UIElements.RectField.UxmlTraits = UnityEngine.UIElements.RectField.UxmlTraits
+
+---@return UnityEngine.UIElements.RectField.UxmlTraits
+function UnityEngine.UIElements.RectField.UxmlTraits.New() end
+---@param ve UnityEngine.UIElements.VisualElement
+---@param bag UnityEngine.UIElements.IUxmlAttributes
+---@param cc UnityEngine.UIElements.CreationContext
+function UnityEngine.UIElements.RectField.UxmlTraits:Init(ve, bag, cc) end
+
+---@class UnityEngine.UIElements.RectIntField : UnityEngine.UIElements.BaseCompositeField
+---@field ussClassName string
+---@field labelUssClassName string
+---@field inputUssClassName string
+UnityEngine.UIElements.RectIntField = {}
+---@alias CS.UnityEngine.UIElements.RectIntField UnityEngine.UIElements.RectIntField
+CS.UnityEngine.UIElements.RectIntField = UnityEngine.UIElements.RectIntField
+
+---@overload fun() : UnityEngine.UIElements.RectIntField
+---@param label string
+---@return UnityEngine.UIElements.RectIntField
+function UnityEngine.UIElements.RectIntField.New(label) end
+
+---@class UnityEngine.UIElements.RectIntField.UxmlSerializedData : UnityEngine.UIElements.BaseCompositeField.UxmlSerializedData
+UnityEngine.UIElements.RectIntField.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.RectIntField.UxmlSerializedData UnityEngine.UIElements.RectIntField.UxmlSerializedData
+CS.UnityEngine.UIElements.RectIntField.UxmlSerializedData = UnityEngine.UIElements.RectIntField.UxmlSerializedData
+
+---@return UnityEngine.UIElements.RectIntField.UxmlSerializedData
+function UnityEngine.UIElements.RectIntField.UxmlSerializedData.New() end
+function UnityEngine.UIElements.RectIntField.UxmlSerializedData.Register() end
+---@return System.Object
+function UnityEngine.UIElements.RectIntField.UxmlSerializedData:CreateInstance() end
+
+---@class UnityEngine.UIElements.RectIntField.UxmlFactory : UnityEngine.UIElements.UxmlFactory
+UnityEngine.UIElements.RectIntField.UxmlFactory = {}
+---@alias CS.UnityEngine.UIElements.RectIntField.UxmlFactory UnityEngine.UIElements.RectIntField.UxmlFactory
+CS.UnityEngine.UIElements.RectIntField.UxmlFactory = UnityEngine.UIElements.RectIntField.UxmlFactory
+
+---@return UnityEngine.UIElements.RectIntField.UxmlFactory
+function UnityEngine.UIElements.RectIntField.UxmlFactory.New() end
+
+---@class UnityEngine.UIElements.RectIntField.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
+UnityEngine.UIElements.RectIntField.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.RectIntField.UxmlTraits UnityEngine.UIElements.RectIntField.UxmlTraits
+CS.UnityEngine.UIElements.RectIntField.UxmlTraits = UnityEngine.UIElements.RectIntField.UxmlTraits
+
+---@return UnityEngine.UIElements.RectIntField.UxmlTraits
+function UnityEngine.UIElements.RectIntField.UxmlTraits.New() end
+---@param ve UnityEngine.UIElements.VisualElement
+---@param bag UnityEngine.UIElements.IUxmlAttributes
+---@param cc UnityEngine.UIElements.CreationContext
+function UnityEngine.UIElements.RectIntField.UxmlTraits:Init(ve, bag, cc) end
+
+---@class UnityEngine.UIElements.Vector2Field : UnityEngine.UIElements.BaseCompositeField
+---@field ussClassName string
+---@field labelUssClassName string
+---@field inputUssClassName string
+UnityEngine.UIElements.Vector2Field = {}
+---@alias CS.UnityEngine.UIElements.Vector2Field UnityEngine.UIElements.Vector2Field
+CS.UnityEngine.UIElements.Vector2Field = UnityEngine.UIElements.Vector2Field
+
+---@overload fun() : UnityEngine.UIElements.Vector2Field
+---@param label string
+---@return UnityEngine.UIElements.Vector2Field
+function UnityEngine.UIElements.Vector2Field.New(label) end
+
+---@class UnityEngine.UIElements.Vector2Field.UxmlSerializedData : UnityEngine.UIElements.BaseCompositeField.UxmlSerializedData
+UnityEngine.UIElements.Vector2Field.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.Vector2Field.UxmlSerializedData UnityEngine.UIElements.Vector2Field.UxmlSerializedData
+CS.UnityEngine.UIElements.Vector2Field.UxmlSerializedData = UnityEngine.UIElements.Vector2Field.UxmlSerializedData
+
+---@return UnityEngine.UIElements.Vector2Field.UxmlSerializedData
+function UnityEngine.UIElements.Vector2Field.UxmlSerializedData.New() end
+function UnityEngine.UIElements.Vector2Field.UxmlSerializedData.Register() end
+---@return System.Object
+function UnityEngine.UIElements.Vector2Field.UxmlSerializedData:CreateInstance() end
+
+---@class UnityEngine.UIElements.Vector2Field.UxmlFactory : UnityEngine.UIElements.UxmlFactory
+UnityEngine.UIElements.Vector2Field.UxmlFactory = {}
+---@alias CS.UnityEngine.UIElements.Vector2Field.UxmlFactory UnityEngine.UIElements.Vector2Field.UxmlFactory
+CS.UnityEngine.UIElements.Vector2Field.UxmlFactory = UnityEngine.UIElements.Vector2Field.UxmlFactory
+
+---@return UnityEngine.UIElements.Vector2Field.UxmlFactory
+function UnityEngine.UIElements.Vector2Field.UxmlFactory.New() end
+
+---@class UnityEngine.UIElements.Vector2Field.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
+UnityEngine.UIElements.Vector2Field.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.Vector2Field.UxmlTraits UnityEngine.UIElements.Vector2Field.UxmlTraits
+CS.UnityEngine.UIElements.Vector2Field.UxmlTraits = UnityEngine.UIElements.Vector2Field.UxmlTraits
+
+---@return UnityEngine.UIElements.Vector2Field.UxmlTraits
+function UnityEngine.UIElements.Vector2Field.UxmlTraits.New() end
+---@param ve UnityEngine.UIElements.VisualElement
+---@param bag UnityEngine.UIElements.IUxmlAttributes
+---@param cc UnityEngine.UIElements.CreationContext
+function UnityEngine.UIElements.Vector2Field.UxmlTraits:Init(ve, bag, cc) end
+
+---@class UnityEngine.UIElements.Vector3Field : UnityEngine.UIElements.BaseCompositeField
+---@field ussClassName string
+---@field labelUssClassName string
+---@field inputUssClassName string
+UnityEngine.UIElements.Vector3Field = {}
+---@alias CS.UnityEngine.UIElements.Vector3Field UnityEngine.UIElements.Vector3Field
+CS.UnityEngine.UIElements.Vector3Field = UnityEngine.UIElements.Vector3Field
+
+---@overload fun() : UnityEngine.UIElements.Vector3Field
+---@param label string
+---@return UnityEngine.UIElements.Vector3Field
+function UnityEngine.UIElements.Vector3Field.New(label) end
+
+---@class UnityEngine.UIElements.Vector3Field.UxmlSerializedData : UnityEngine.UIElements.BaseCompositeField.UxmlSerializedData
+UnityEngine.UIElements.Vector3Field.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.Vector3Field.UxmlSerializedData UnityEngine.UIElements.Vector3Field.UxmlSerializedData
+CS.UnityEngine.UIElements.Vector3Field.UxmlSerializedData = UnityEngine.UIElements.Vector3Field.UxmlSerializedData
+
+---@return UnityEngine.UIElements.Vector3Field.UxmlSerializedData
+function UnityEngine.UIElements.Vector3Field.UxmlSerializedData.New() end
+function UnityEngine.UIElements.Vector3Field.UxmlSerializedData.Register() end
+---@return System.Object
+function UnityEngine.UIElements.Vector3Field.UxmlSerializedData:CreateInstance() end
+
+---@class UnityEngine.UIElements.Vector3Field.UxmlFactory : UnityEngine.UIElements.UxmlFactory
+UnityEngine.UIElements.Vector3Field.UxmlFactory = {}
+---@alias CS.UnityEngine.UIElements.Vector3Field.UxmlFactory UnityEngine.UIElements.Vector3Field.UxmlFactory
+CS.UnityEngine.UIElements.Vector3Field.UxmlFactory = UnityEngine.UIElements.Vector3Field.UxmlFactory
+
+---@return UnityEngine.UIElements.Vector3Field.UxmlFactory
+function UnityEngine.UIElements.Vector3Field.UxmlFactory.New() end
+
+---@class UnityEngine.UIElements.Vector3Field.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
+UnityEngine.UIElements.Vector3Field.UxmlTraits = {}
+---@alias CS.UnityEngine.UIElements.Vector3Field.UxmlTraits UnityEngine.UIElements.Vector3Field.UxmlTraits
+CS.UnityEngine.UIElements.Vector3Field.UxmlTraits = UnityEngine.UIElements.Vector3Field.UxmlTraits
+
+---@return UnityEngine.UIElements.Vector3Field.UxmlTraits
+function UnityEngine.UIElements.Vector3Field.UxmlTraits.New() end
+---@param ve UnityEngine.UIElements.VisualElement
+---@param bag UnityEngine.UIElements.IUxmlAttributes
+---@param cc UnityEngine.UIElements.CreationContext
+function UnityEngine.UIElements.Vector3Field.UxmlTraits:Init(ve, bag, cc) end
+
+---@class UnityEngine.UIElements.Vector4Field : UnityEngine.UIElements.BaseCompositeField
+---@field ussClassName string
+---@field labelUssClassName string
+---@field inputUssClassName string
+UnityEngine.UIElements.Vector4Field = {}
+---@alias CS.UnityEngine.UIElements.Vector4Field UnityEngine.UIElements.Vector4Field
+CS.UnityEngine.UIElements.Vector4Field = UnityEngine.UIElements.Vector4Field
+
+---@overload fun() : UnityEngine.UIElements.Vector4Field
+---@param label string
+---@return UnityEngine.UIElements.Vector4Field
+function UnityEngine.UIElements.Vector4Field.New(label) end
+
+---@class UnityEngine.UIElements.Vector4Field.UxmlSerializedData : UnityEngine.UIElements.BaseCompositeField.UxmlSerializedData
+UnityEngine.UIElements.Vector4Field.UxmlSerializedData = {}
+---@alias CS.UnityEngine.UIElements.Vector4Field.UxmlSerializedData UnityEngine.UIElements.Vector4Field.UxmlSerializedData
+CS.UnityEngine.UIElements.Vector4Field.UxmlSerializedData = UnityEngine.UIElements.Vector4Field.UxmlSerializedData
+
 ---@return UnityEngine.UIElements.Vector4Field.UxmlSerializedData
 function UnityEngine.UIElements.Vector4Field.UxmlSerializedData.New() end
 function UnityEngine.UIElements.Vector4Field.UxmlSerializedData.Register() end
@@ -4196,809 +5006,3 @@ CS.UnityEngine.UIElements.IChangeEvent = UnityEngine.UIElements.IChangeEvent
 UnityEngine.UIElements.ChangeEvent = {}
 ---@alias CS.UnityEngine.UIElements.ChangeEvent UnityEngine.UIElements.ChangeEvent
 CS.UnityEngine.UIElements.ChangeEvent = UnityEngine.UIElements.ChangeEvent
-
----@return UnityEngine.UIElements.ChangeEvent
-function UnityEngine.UIElements.ChangeEvent.New() end
----@param previousValue T
----@param newValue T
----@return UnityEngine.UIElements.ChangeEvent
-function UnityEngine.UIElements.ChangeEvent.GetPooled(previousValue, newValue) end
-
----@class UnityEngine.UIElements.ICommandEvent
----@field commandName string
-UnityEngine.UIElements.ICommandEvent = {}
----@alias CS.UnityEngine.UIElements.ICommandEvent UnityEngine.UIElements.ICommandEvent
-CS.UnityEngine.UIElements.ICommandEvent = UnityEngine.UIElements.ICommandEvent
-
-
----@class UnityEngine.UIElements.CommandEventBase : UnityEngine.UIElements.EventBase[T]
----@field commandName string
-UnityEngine.UIElements.CommandEventBase = {}
----@alias CS.UnityEngine.UIElements.CommandEventBase UnityEngine.UIElements.CommandEventBase
-CS.UnityEngine.UIElements.CommandEventBase = UnityEngine.UIElements.CommandEventBase
-
----@overload fun(systemEvent: UnityEngine.Event) : T
----@param commandName string
----@return T
-function UnityEngine.UIElements.CommandEventBase.GetPooled(commandName) end
-
----@class UnityEngine.UIElements.ValidateCommandEvent : UnityEngine.UIElements.CommandEventBase
-UnityEngine.UIElements.ValidateCommandEvent = {}
----@alias CS.UnityEngine.UIElements.ValidateCommandEvent UnityEngine.UIElements.ValidateCommandEvent
-CS.UnityEngine.UIElements.ValidateCommandEvent = UnityEngine.UIElements.ValidateCommandEvent
-
----@return UnityEngine.UIElements.ValidateCommandEvent
-function UnityEngine.UIElements.ValidateCommandEvent.New() end
-
----@class UnityEngine.UIElements.ExecuteCommandEvent : UnityEngine.UIElements.CommandEventBase
-UnityEngine.UIElements.ExecuteCommandEvent = {}
----@alias CS.UnityEngine.UIElements.ExecuteCommandEvent UnityEngine.UIElements.ExecuteCommandEvent
-CS.UnityEngine.UIElements.ExecuteCommandEvent = UnityEngine.UIElements.ExecuteCommandEvent
-
----@return UnityEngine.UIElements.ExecuteCommandEvent
-function UnityEngine.UIElements.ExecuteCommandEvent.New() end
-
----@class UnityEngine.UIElements.DebuggerEventDispatchUtilities : System.Object
-UnityEngine.UIElements.DebuggerEventDispatchUtilities = {}
----@alias CS.UnityEngine.UIElements.DebuggerEventDispatchUtilities UnityEngine.UIElements.DebuggerEventDispatchUtilities
-CS.UnityEngine.UIElements.DebuggerEventDispatchUtilities = UnityEngine.UIElements.DebuggerEventDispatchUtilities
-
----@param evt UnityEngine.UIElements.EventBase
----@param panel UnityEngine.UIElements.BaseVisualElementPanel
----@return boolean
-function UnityEngine.UIElements.DebuggerEventDispatchUtilities.InterceptEvent(evt, panel) end
----@param evt UnityEngine.UIElements.EventBase
----@param panel UnityEngine.UIElements.BaseVisualElementPanel
-function UnityEngine.UIElements.DebuggerEventDispatchUtilities.PostDispatch(evt, panel) end
-
----@class UnityEngine.UIElements.IDragAndDropEvent
-UnityEngine.UIElements.IDragAndDropEvent = {}
----@alias CS.UnityEngine.UIElements.IDragAndDropEvent UnityEngine.UIElements.IDragAndDropEvent
-CS.UnityEngine.UIElements.IDragAndDropEvent = UnityEngine.UIElements.IDragAndDropEvent
-
-
----@class UnityEngine.UIElements.DragAndDropEventBase : UnityEngine.UIElements.MouseEventBase[T]
-UnityEngine.UIElements.DragAndDropEventBase = {}
----@alias CS.UnityEngine.UIElements.DragAndDropEventBase UnityEngine.UIElements.DragAndDropEventBase
-CS.UnityEngine.UIElements.DragAndDropEventBase = UnityEngine.UIElements.DragAndDropEventBase
-
-
----@class UnityEngine.UIElements.DragExitedEvent : UnityEngine.UIElements.DragAndDropEventBase
-UnityEngine.UIElements.DragExitedEvent = {}
----@alias CS.UnityEngine.UIElements.DragExitedEvent UnityEngine.UIElements.DragExitedEvent
-CS.UnityEngine.UIElements.DragExitedEvent = UnityEngine.UIElements.DragExitedEvent
-
----@return UnityEngine.UIElements.DragExitedEvent
-function UnityEngine.UIElements.DragExitedEvent.New() end
----@param systemEvent UnityEngine.Event
----@return UnityEngine.UIElements.DragExitedEvent
-function UnityEngine.UIElements.DragExitedEvent.GetPooled(systemEvent) end
-
----@class UnityEngine.UIElements.DragEnterEvent : UnityEngine.UIElements.DragAndDropEventBase
-UnityEngine.UIElements.DragEnterEvent = {}
----@alias CS.UnityEngine.UIElements.DragEnterEvent UnityEngine.UIElements.DragEnterEvent
-CS.UnityEngine.UIElements.DragEnterEvent = UnityEngine.UIElements.DragEnterEvent
-
----@return UnityEngine.UIElements.DragEnterEvent
-function UnityEngine.UIElements.DragEnterEvent.New() end
-
----@class UnityEngine.UIElements.DragLeaveEvent : UnityEngine.UIElements.DragAndDropEventBase
-UnityEngine.UIElements.DragLeaveEvent = {}
----@alias CS.UnityEngine.UIElements.DragLeaveEvent UnityEngine.UIElements.DragLeaveEvent
-CS.UnityEngine.UIElements.DragLeaveEvent = UnityEngine.UIElements.DragLeaveEvent
-
----@return UnityEngine.UIElements.DragLeaveEvent
-function UnityEngine.UIElements.DragLeaveEvent.New() end
-
----@class UnityEngine.UIElements.DragUpdatedEvent : UnityEngine.UIElements.DragAndDropEventBase
-UnityEngine.UIElements.DragUpdatedEvent = {}
----@alias CS.UnityEngine.UIElements.DragUpdatedEvent UnityEngine.UIElements.DragUpdatedEvent
-CS.UnityEngine.UIElements.DragUpdatedEvent = UnityEngine.UIElements.DragUpdatedEvent
-
----@return UnityEngine.UIElements.DragUpdatedEvent
-function UnityEngine.UIElements.DragUpdatedEvent.New() end
----@param systemEvent UnityEngine.Event
----@return UnityEngine.UIElements.DragUpdatedEvent
-function UnityEngine.UIElements.DragUpdatedEvent.GetPooled(systemEvent) end
-
----@class UnityEngine.UIElements.DragPerformEvent : UnityEngine.UIElements.DragAndDropEventBase
-UnityEngine.UIElements.DragPerformEvent = {}
----@alias CS.UnityEngine.UIElements.DragPerformEvent UnityEngine.UIElements.DragPerformEvent
-CS.UnityEngine.UIElements.DragPerformEvent = UnityEngine.UIElements.DragPerformEvent
-
----@return UnityEngine.UIElements.DragPerformEvent
-function UnityEngine.UIElements.DragPerformEvent.New() end
-
----@class UnityEngine.UIElements.ElementUnderPointer : System.Object
-UnityEngine.UIElements.ElementUnderPointer = {}
----@alias CS.UnityEngine.UIElements.ElementUnderPointer UnityEngine.UIElements.ElementUnderPointer
-CS.UnityEngine.UIElements.ElementUnderPointer = UnityEngine.UIElements.ElementUnderPointer
-
----@return UnityEngine.UIElements.ElementUnderPointer
-function UnityEngine.UIElements.ElementUnderPointer.New() end
-
----@class UnityEngine.UIElements.EventBase : System.Object
----@field eventTypeId number
----@field timestamp number
----@field bubbles boolean
----@field tricklesDown boolean
----@field target UnityEngine.UIElements.IEventHandler
----@field isPropagationStopped boolean
----@field isImmediatePropagationStopped boolean
----@field propagationPhase UnityEngine.UIElements.PropagationPhase
----@field currentTarget UnityEngine.UIElements.IEventHandler
----@field dispatch boolean
----@field imguiEvent UnityEngine.Event
----@field originalMousePosition UnityEngine.Vector2
-UnityEngine.UIElements.EventBase = {}
----@alias CS.UnityEngine.UIElements.EventBase UnityEngine.UIElements.EventBase
-CS.UnityEngine.UIElements.EventBase = UnityEngine.UIElements.EventBase
-
-function UnityEngine.UIElements.EventBase:StopPropagation() end
-function UnityEngine.UIElements.EventBase:StopImmediatePropagation() end
-function UnityEngine.UIElements.EventBase:Dispose() end
-
----@class UnityEngine.UIElements.EventBase.EventPropagation
----@field None UnityEngine.UIElements.EventBase.EventPropagation
----@field Bubbles UnityEngine.UIElements.EventBase.EventPropagation
----@field TricklesDown UnityEngine.UIElements.EventBase.EventPropagation
----@field SkipDisabledElements UnityEngine.UIElements.EventBase.EventPropagation
----@field BubblesOrTricklesDown UnityEngine.UIElements.EventBase.EventPropagation
-UnityEngine.UIElements.EventBase.EventPropagation = {}
----@alias CS.UnityEngine.UIElements.EventBase.EventPropagation UnityEngine.UIElements.EventBase.EventPropagation
-CS.UnityEngine.UIElements.EventBase.EventPropagation = UnityEngine.UIElements.EventBase.EventPropagation
-
-
----@class UnityEngine.UIElements.EventBase.LifeCycleStatus
----@field None UnityEngine.UIElements.EventBase.LifeCycleStatus
----@field PropagationStopped UnityEngine.UIElements.EventBase.LifeCycleStatus
----@field ImmediatePropagationStopped UnityEngine.UIElements.EventBase.LifeCycleStatus
----@field Dispatching UnityEngine.UIElements.EventBase.LifeCycleStatus
----@field Pooled UnityEngine.UIElements.EventBase.LifeCycleStatus
----@field IMGUIEventIsValid UnityEngine.UIElements.EventBase.LifeCycleStatus
----@field PropagateToIMGUI UnityEngine.UIElements.EventBase.LifeCycleStatus
----@field Dispatched UnityEngine.UIElements.EventBase.LifeCycleStatus
----@field Processed UnityEngine.UIElements.EventBase.LifeCycleStatus
----@field ProcessedByFocusController UnityEngine.UIElements.EventBase.LifeCycleStatus
-UnityEngine.UIElements.EventBase.LifeCycleStatus = {}
----@alias CS.UnityEngine.UIElements.EventBase.LifeCycleStatus UnityEngine.UIElements.EventBase.LifeCycleStatus
-CS.UnityEngine.UIElements.EventBase.LifeCycleStatus = UnityEngine.UIElements.EventBase.LifeCycleStatus
-
-
----@class UnityEngine.UIElements.EventBase : UnityEngine.UIElements.EventBase
----@field eventTypeId number
-UnityEngine.UIElements.EventBase = {}
----@alias CS.UnityEngine.UIElements.EventBase UnityEngine.UIElements.EventBase
-CS.UnityEngine.UIElements.EventBase = UnityEngine.UIElements.EventBase
-
----@return number
-function UnityEngine.UIElements.EventBase.TypeId() end
----@return T
-function UnityEngine.UIElements.EventBase.GetPooled() end
-function UnityEngine.UIElements.EventBase:Dispose() end
-
----@class UnityEngine.UIElements.EventCallback : System.MulticastDelegate
-UnityEngine.UIElements.EventCallback = {}
----@alias CS.UnityEngine.UIElements.EventCallback UnityEngine.UIElements.EventCallback
-CS.UnityEngine.UIElements.EventCallback = UnityEngine.UIElements.EventCallback
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.UIElements.EventCallback
-function UnityEngine.UIElements.EventCallback.New(object, method) end
----@param evt TEventType
-function UnityEngine.UIElements.EventCallback:Invoke(evt) end
----@param evt TEventType
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.UIElements.EventCallback:BeginInvoke(evt, callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.UIElements.EventCallback:EndInvoke(result) end
-
----@class UnityEngine.UIElements.EventCallback : System.MulticastDelegate
-UnityEngine.UIElements.EventCallback = {}
----@alias CS.UnityEngine.UIElements.EventCallback UnityEngine.UIElements.EventCallback
-CS.UnityEngine.UIElements.EventCallback = UnityEngine.UIElements.EventCallback
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.UIElements.EventCallback
-function UnityEngine.UIElements.EventCallback.New(object, method) end
----@param evt TEventType
----@param userArgs TCallbackArgs
-function UnityEngine.UIElements.EventCallback:Invoke(evt, userArgs) end
----@param evt TEventType
----@param userArgs TCallbackArgs
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.UIElements.EventCallback:BeginInvoke(evt, userArgs, callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.UIElements.EventCallback:EndInvoke(result) end
-
----@class UnityEngine.UIElements.EventCallbackFunctorBase : System.Object
----@field eventTypeId number
----@field invokePolicy UnityEngine.UIElements.InvokePolicy
-UnityEngine.UIElements.EventCallbackFunctorBase = {}
----@alias CS.UnityEngine.UIElements.EventCallbackFunctorBase UnityEngine.UIElements.EventCallbackFunctorBase
-CS.UnityEngine.UIElements.EventCallbackFunctorBase = UnityEngine.UIElements.EventCallbackFunctorBase
-
----@param evt UnityEngine.UIElements.EventBase
-function UnityEngine.UIElements.EventCallbackFunctorBase:Invoke(evt) end
----@param target UnityEngine.UIElements.CallbackEventHandler
----@param useTrickleDown UnityEngine.UIElements.TrickleDown
-function UnityEngine.UIElements.EventCallbackFunctorBase:UnregisterCallback(target, useTrickleDown) end
-function UnityEngine.UIElements.EventCallbackFunctorBase:Dispose() end
----@param eventTypeId number
----@param callback System.Delegate
----@return boolean
-function UnityEngine.UIElements.EventCallbackFunctorBase:IsEquivalentTo(eventTypeId, callback) end
-
----@class UnityEngine.UIElements.EventCallbackFunctor : UnityEngine.UIElements.EventCallbackFunctorBase
-UnityEngine.UIElements.EventCallbackFunctor = {}
----@alias CS.UnityEngine.UIElements.EventCallbackFunctor UnityEngine.UIElements.EventCallbackFunctor
-CS.UnityEngine.UIElements.EventCallbackFunctor = UnityEngine.UIElements.EventCallbackFunctor
-
----@return UnityEngine.UIElements.EventCallbackFunctor
-function UnityEngine.UIElements.EventCallbackFunctor.New() end
----@param eventTypeId number
----@param callback UnityEngine.UIElements.EventCallback[TEventType]
----@param invokePolicy UnityEngine.UIElements.InvokePolicy
----@return UnityEngine.UIElements.EventCallbackFunctor
-function UnityEngine.UIElements.EventCallbackFunctor.GetPooled(eventTypeId, callback, invokePolicy) end
-function UnityEngine.UIElements.EventCallbackFunctor:Dispose() end
----@param evt UnityEngine.UIElements.EventBase
-function UnityEngine.UIElements.EventCallbackFunctor:Invoke(evt) end
----@param target UnityEngine.UIElements.CallbackEventHandler
----@param useTrickleDown UnityEngine.UIElements.TrickleDown
-function UnityEngine.UIElements.EventCallbackFunctor:UnregisterCallback(target, useTrickleDown) end
----@param eventTypeId number
----@param callback System.Delegate
----@return boolean
-function UnityEngine.UIElements.EventCallbackFunctor:IsEquivalentTo(eventTypeId, callback) end
-
----@class UnityEngine.UIElements.EventCallbackFunctor : UnityEngine.UIElements.EventCallbackFunctorBase
-UnityEngine.UIElements.EventCallbackFunctor = {}
----@alias CS.UnityEngine.UIElements.EventCallbackFunctor UnityEngine.UIElements.EventCallbackFunctor
-CS.UnityEngine.UIElements.EventCallbackFunctor = UnityEngine.UIElements.EventCallbackFunctor
-
----@return UnityEngine.UIElements.EventCallbackFunctor
-function UnityEngine.UIElements.EventCallbackFunctor.New() end
----@param eventTypeId number
----@param callback UnityEngine.UIElements.EventCallback[TEventType,TCallbackArgs]
----@param userArgs TCallbackArgs
----@param invokePolicy UnityEngine.UIElements.InvokePolicy
----@return UnityEngine.UIElements.EventCallbackFunctor
-function UnityEngine.UIElements.EventCallbackFunctor.GetPooled(eventTypeId, callback, userArgs, invokePolicy) end
-function UnityEngine.UIElements.EventCallbackFunctor:Dispose() end
----@param evt UnityEngine.UIElements.EventBase
-function UnityEngine.UIElements.EventCallbackFunctor:Invoke(evt) end
----@param target UnityEngine.UIElements.CallbackEventHandler
----@param useTrickleDown UnityEngine.UIElements.TrickleDown
-function UnityEngine.UIElements.EventCallbackFunctor:UnregisterCallback(target, useTrickleDown) end
----@param eventTypeId number
----@param callback System.Delegate
----@return boolean
-function UnityEngine.UIElements.EventCallbackFunctor:IsEquivalentTo(eventTypeId, callback) end
-
----@class UnityEngine.UIElements.TrickleDown
----@field NoTrickleDown UnityEngine.UIElements.TrickleDown
----@field TrickleDown UnityEngine.UIElements.TrickleDown
-UnityEngine.UIElements.TrickleDown = {}
----@alias CS.UnityEngine.UIElements.TrickleDown UnityEngine.UIElements.TrickleDown
-CS.UnityEngine.UIElements.TrickleDown = UnityEngine.UIElements.TrickleDown
-
-
----@class UnityEngine.UIElements.InvokePolicy
----@field Default UnityEngine.UIElements.InvokePolicy
----@field IncludeDisabled UnityEngine.UIElements.InvokePolicy
----@field Once UnityEngine.UIElements.InvokePolicy
-UnityEngine.UIElements.InvokePolicy = {}
----@alias CS.UnityEngine.UIElements.InvokePolicy UnityEngine.UIElements.InvokePolicy
-CS.UnityEngine.UIElements.InvokePolicy = UnityEngine.UIElements.InvokePolicy
-
-
----@class UnityEngine.UIElements.EventCallbackListPool : System.Object
-UnityEngine.UIElements.EventCallbackListPool = {}
----@alias CS.UnityEngine.UIElements.EventCallbackListPool UnityEngine.UIElements.EventCallbackListPool
-CS.UnityEngine.UIElements.EventCallbackListPool = UnityEngine.UIElements.EventCallbackListPool
-
----@return UnityEngine.UIElements.EventCallbackListPool
-function UnityEngine.UIElements.EventCallbackListPool.New() end
----@param initializer UnityEngine.UIElements.EventCallbackList
----@return UnityEngine.UIElements.EventCallbackList
-function UnityEngine.UIElements.EventCallbackListPool:Get(initializer) end
----@param element UnityEngine.UIElements.EventCallbackList
-function UnityEngine.UIElements.EventCallbackListPool:Release(element) end
-
----@class UnityEngine.UIElements.EventCallbackList : System.Object
----@field EmptyList UnityEngine.UIElements.EventCallbackList
----@field Count number
----@field Span System.Span
----@field Item UnityEngine.UIElements.EventCallbackFunctorBase
-UnityEngine.UIElements.EventCallbackList = {}
----@alias CS.UnityEngine.UIElements.EventCallbackList UnityEngine.UIElements.EventCallbackList
-CS.UnityEngine.UIElements.EventCallbackList = UnityEngine.UIElements.EventCallbackList
-
----@overload fun() : UnityEngine.UIElements.EventCallbackList
----@param source UnityEngine.UIElements.EventCallbackList
----@return UnityEngine.UIElements.EventCallbackList
-function UnityEngine.UIElements.EventCallbackList.New(source) end
----@param eventTypeId number
----@param callback System.Delegate
----@return boolean
-function UnityEngine.UIElements.EventCallbackList:Contains(eventTypeId, callback) end
----@param eventTypeId number
----@param callback System.Delegate
----@return UnityEngine.UIElements.EventCallbackFunctorBase
-function UnityEngine.UIElements.EventCallbackList:Find(eventTypeId, callback) end
----@param eventTypeId number
----@param callback System.Delegate
----@param out_removedFunctor UnityEngine.UIElements.EventCallbackFunctorBase
----@return boolean,UnityEngine.UIElements.EventCallbackFunctorBase
-function UnityEngine.UIElements.EventCallbackList:Remove(eventTypeId, callback, out_removedFunctor) end
----@param item UnityEngine.UIElements.EventCallbackFunctorBase
-function UnityEngine.UIElements.EventCallbackList:Add(item) end
----@param list UnityEngine.UIElements.EventCallbackList
-function UnityEngine.UIElements.EventCallbackList:AddRange(list) end
-function UnityEngine.UIElements.EventCallbackList:Clear() end
-
----@class UnityEngine.UIElements.EventCallbackRegistry : System.Object
-UnityEngine.UIElements.EventCallbackRegistry = {}
----@alias CS.UnityEngine.UIElements.EventCallbackRegistry UnityEngine.UIElements.EventCallbackRegistry
-CS.UnityEngine.UIElements.EventCallbackRegistry = UnityEngine.UIElements.EventCallbackRegistry
-
----@return UnityEngine.UIElements.EventCallbackRegistry
-function UnityEngine.UIElements.EventCallbackRegistry.New() end
----@return boolean
-function UnityEngine.UIElements.EventCallbackRegistry:HasTrickleDownHandlers() end
----@return boolean
-function UnityEngine.UIElements.EventCallbackRegistry:HasBubbleHandlers() end
-
----@class UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList : System.ValueType
----@field Count number
-UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList = {}
----@alias CS.UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList
-CS.UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList = UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList
-
----@param useTrickleDown UnityEngine.UIElements.TrickleDown
----@return UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList
-function UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList.Create(useTrickleDown) end
----@return UnityEngine.UIElements.EventCallbackList
-function UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList:GetCallbackListForWriting() end
----@return UnityEngine.UIElements.EventCallbackList
-function UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList:GetCallbackListForReading() end
----@param eventTypeId number
----@param callback System.Delegate
----@return boolean
-function UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList:UnregisterCallback(eventTypeId, callback) end
----@param evt UnityEngine.UIElements.EventBase
----@param panel UnityEngine.UIElements.BaseVisualElementPanel
----@param target UnityEngine.UIElements.VisualElement
-function UnityEngine.UIElements.EventCallbackRegistry.DynamicCallbackList:Invoke(evt, panel, target) end
-
----@class UnityEngine.UIElements.PropagationPhase
----@field None UnityEngine.UIElements.PropagationPhase
----@field TrickleDown UnityEngine.UIElements.PropagationPhase
----@field BubbleUp UnityEngine.UIElements.PropagationPhase
-UnityEngine.UIElements.PropagationPhase = {}
----@alias CS.UnityEngine.UIElements.PropagationPhase UnityEngine.UIElements.PropagationPhase
-CS.UnityEngine.UIElements.PropagationPhase = UnityEngine.UIElements.PropagationPhase
-
-
----@class UnityEngine.UIElements.EventDispatchUtilities : System.Object
-UnityEngine.UIElements.EventDispatchUtilities = {}
----@alias CS.UnityEngine.UIElements.EventDispatchUtilities UnityEngine.UIElements.EventDispatchUtilities
-CS.UnityEngine.UIElements.EventDispatchUtilities = UnityEngine.UIElements.EventDispatchUtilities
-
----@param evt UnityEngine.UIElements.EventBase
----@param panel UnityEngine.UIElements.BaseVisualElementPanel
----@param target UnityEngine.UIElements.VisualElement
-function UnityEngine.UIElements.EventDispatchUtilities.SendEventDirectlyToTarget(evt, panel, target) end
----@param evt UnityEngine.UIElements.EventBase
----@param panel UnityEngine.UIElements.BaseVisualElementPanel
----@param target UnityEngine.UIElements.VisualElement
-function UnityEngine.UIElements.EventDispatchUtilities.HandleEventAtTargetAndDefaultPhase(evt, panel, target) end
----@param evt UnityEngine.UIElements.EventBase
----@param target UnityEngine.UIElements.VisualElement
-function UnityEngine.UIElements.EventDispatchUtilities.HandleEvent(evt, target) end
----@param evt UnityEngine.UIElements.EventBase
----@param panel UnityEngine.UIElements.BaseVisualElementPanel
-function UnityEngine.UIElements.EventDispatchUtilities.DispatchToFocusedElementOrPanelRoot(evt, panel) end
----@param evt UnityEngine.UIElements.EventBase
----@param panel UnityEngine.UIElements.BaseVisualElementPanel
----@param pointerId number
----@param position UnityEngine.Vector2
-function UnityEngine.UIElements.EventDispatchUtilities.DispatchToElementUnderPointerOrPanelRoot(evt, panel, pointerId, position) end
----@param evt UnityEngine.UIElements.EventBase
----@param panel UnityEngine.UIElements.BaseVisualElementPanel
-function UnityEngine.UIElements.EventDispatchUtilities.DispatchToAssignedTarget(evt, panel) end
----@param evt UnityEngine.UIElements.EventBase
----@param panel UnityEngine.UIElements.BaseVisualElementPanel
-function UnityEngine.UIElements.EventDispatchUtilities.DefaultDispatch(evt, panel) end
----@param evt UnityEngine.UIElements.EventBase
----@param panel UnityEngine.UIElements.BaseVisualElementPanel
----@param pointerId number
----@param position UnityEngine.Vector2
-function UnityEngine.UIElements.EventDispatchUtilities.DispatchToCapturingElementOrElementUnderPointer(evt, panel, pointerId, position) end
-
----@class UnityEngine.UIElements.IEventHandler
-UnityEngine.UIElements.IEventHandler = {}
----@alias CS.UnityEngine.UIElements.IEventHandler UnityEngine.UIElements.IEventHandler
-CS.UnityEngine.UIElements.IEventHandler = UnityEngine.UIElements.IEventHandler
-
----@param e UnityEngine.UIElements.EventBase
-function UnityEngine.UIElements.IEventHandler:SendEvent(e) end
----@param evt UnityEngine.UIElements.EventBase
-function UnityEngine.UIElements.IEventHandler:HandleEvent(evt) end
----@return boolean
-function UnityEngine.UIElements.IEventHandler:HasTrickleDownHandlers() end
----@return boolean
-function UnityEngine.UIElements.IEventHandler:HasBubbleUpHandlers() end
----@return boolean
-function UnityEngine.UIElements.IEventHandler:HasMouseCapture() end
-function UnityEngine.UIElements.IEventHandler:CaptureMouse() end
-function UnityEngine.UIElements.IEventHandler:ReleaseMouse() end
----@param pointerId number
----@return boolean
-function UnityEngine.UIElements.IEventHandler:HasPointerCapture(pointerId) end
----@param pointerId number
-function UnityEngine.UIElements.IEventHandler:CapturePointer(pointerId) end
----@param pointerId number
-function UnityEngine.UIElements.IEventHandler:ReleasePointer(pointerId) end
-
----@class UnityEngine.UIElements.CallbackEventHandler : System.Object
-UnityEngine.UIElements.CallbackEventHandler = {}
----@alias CS.UnityEngine.UIElements.CallbackEventHandler UnityEngine.UIElements.CallbackEventHandler
-CS.UnityEngine.UIElements.CallbackEventHandler = UnityEngine.UIElements.CallbackEventHandler
-
----@param e UnityEngine.UIElements.EventBase
-function UnityEngine.UIElements.CallbackEventHandler:SendEvent(e) end
----@return boolean
-function UnityEngine.UIElements.CallbackEventHandler:HasTrickleDownHandlers() end
----@return boolean
-function UnityEngine.UIElements.CallbackEventHandler:HasBubbleUpHandlers() end
-
----@class UnityEngine.UIElements.IFocusEvent
----@field relatedTarget UnityEngine.UIElements.Focusable
----@field direction UnityEngine.UIElements.FocusChangeDirection
-UnityEngine.UIElements.IFocusEvent = {}
----@alias CS.UnityEngine.UIElements.IFocusEvent UnityEngine.UIElements.IFocusEvent
-CS.UnityEngine.UIElements.IFocusEvent = UnityEngine.UIElements.IFocusEvent
-
-
----@class UnityEngine.UIElements.FocusEventBase : UnityEngine.UIElements.EventBase[T]
----@field relatedTarget UnityEngine.UIElements.Focusable
----@field direction UnityEngine.UIElements.FocusChangeDirection
-UnityEngine.UIElements.FocusEventBase = {}
----@alias CS.UnityEngine.UIElements.FocusEventBase UnityEngine.UIElements.FocusEventBase
-CS.UnityEngine.UIElements.FocusEventBase = UnityEngine.UIElements.FocusEventBase
-
----@param target UnityEngine.UIElements.IEventHandler
----@param relatedTarget UnityEngine.UIElements.Focusable
----@param direction UnityEngine.UIElements.FocusChangeDirection
----@param focusController UnityEngine.UIElements.FocusController
----@param bIsFocusDelegated boolean
----@return T
-function UnityEngine.UIElements.FocusEventBase.GetPooled(target, relatedTarget, direction, focusController, bIsFocusDelegated) end
-
----@class UnityEngine.UIElements.FocusOutEvent : UnityEngine.UIElements.FocusEventBase
-UnityEngine.UIElements.FocusOutEvent = {}
----@alias CS.UnityEngine.UIElements.FocusOutEvent UnityEngine.UIElements.FocusOutEvent
-CS.UnityEngine.UIElements.FocusOutEvent = UnityEngine.UIElements.FocusOutEvent
-
----@return UnityEngine.UIElements.FocusOutEvent
-function UnityEngine.UIElements.FocusOutEvent.New() end
-
----@class UnityEngine.UIElements.BlurEvent : UnityEngine.UIElements.FocusEventBase
-UnityEngine.UIElements.BlurEvent = {}
----@alias CS.UnityEngine.UIElements.BlurEvent UnityEngine.UIElements.BlurEvent
-CS.UnityEngine.UIElements.BlurEvent = UnityEngine.UIElements.BlurEvent
-
----@return UnityEngine.UIElements.BlurEvent
-function UnityEngine.UIElements.BlurEvent.New() end
-
----@class UnityEngine.UIElements.FocusInEvent : UnityEngine.UIElements.FocusEventBase
-UnityEngine.UIElements.FocusInEvent = {}
----@alias CS.UnityEngine.UIElements.FocusInEvent UnityEngine.UIElements.FocusInEvent
-CS.UnityEngine.UIElements.FocusInEvent = UnityEngine.UIElements.FocusInEvent
-
----@return UnityEngine.UIElements.FocusInEvent
-function UnityEngine.UIElements.FocusInEvent.New() end
-
----@class UnityEngine.UIElements.FocusEvent : UnityEngine.UIElements.FocusEventBase
-UnityEngine.UIElements.FocusEvent = {}
----@alias CS.UnityEngine.UIElements.FocusEvent UnityEngine.UIElements.FocusEvent
-CS.UnityEngine.UIElements.FocusEvent = UnityEngine.UIElements.FocusEvent
-
----@return UnityEngine.UIElements.FocusEvent
-function UnityEngine.UIElements.FocusEvent.New() end
-
----@class UnityEngine.UIElements.IMEEvent : UnityEngine.UIElements.EventBase
----@field compositionString string
-UnityEngine.UIElements.IMEEvent = {}
----@alias CS.UnityEngine.UIElements.IMEEvent UnityEngine.UIElements.IMEEvent
-CS.UnityEngine.UIElements.IMEEvent = UnityEngine.UIElements.IMEEvent
-
----@return UnityEngine.UIElements.IMEEvent
-function UnityEngine.UIElements.IMEEvent.New() end
----@param compositionString string
----@return UnityEngine.UIElements.IMEEvent
-function UnityEngine.UIElements.IMEEvent.GetPooled(compositionString) end
-
----@class UnityEngine.UIElements.InputEvent : UnityEngine.UIElements.EventBase
----@field previousData string
----@field newData string
-UnityEngine.UIElements.InputEvent = {}
----@alias CS.UnityEngine.UIElements.InputEvent UnityEngine.UIElements.InputEvent
-CS.UnityEngine.UIElements.InputEvent = UnityEngine.UIElements.InputEvent
-
----@return UnityEngine.UIElements.InputEvent
-function UnityEngine.UIElements.InputEvent.New() end
----@param previousData string
----@param newData string
----@return UnityEngine.UIElements.InputEvent
-function UnityEngine.UIElements.InputEvent.GetPooled(previousData, newData) end
-
----@class UnityEngine.UIElements.IKeyboardEvent
----@field modifiers UnityEngine.EventModifiers
----@field character System.Char
----@field keyCode UnityEngine.KeyCode
----@field shiftKey boolean
----@field ctrlKey boolean
----@field commandKey boolean
----@field altKey boolean
----@field actionKey boolean
-UnityEngine.UIElements.IKeyboardEvent = {}
----@alias CS.UnityEngine.UIElements.IKeyboardEvent UnityEngine.UIElements.IKeyboardEvent
-CS.UnityEngine.UIElements.IKeyboardEvent = UnityEngine.UIElements.IKeyboardEvent
-
-
----@class UnityEngine.UIElements.KeyboardEventBase : UnityEngine.UIElements.EventBase[T]
----@field modifiers UnityEngine.EventModifiers
----@field character System.Char
----@field keyCode UnityEngine.KeyCode
----@field shiftKey boolean
----@field ctrlKey boolean
----@field commandKey boolean
----@field altKey boolean
----@field actionKey boolean
-UnityEngine.UIElements.KeyboardEventBase = {}
----@alias CS.UnityEngine.UIElements.KeyboardEventBase UnityEngine.UIElements.KeyboardEventBase
-CS.UnityEngine.UIElements.KeyboardEventBase = UnityEngine.UIElements.KeyboardEventBase
-
----@overload fun(c: System.Char, keyCode: UnityEngine.KeyCode, modifiers: UnityEngine.EventModifiers) : T
----@param systemEvent UnityEngine.Event
----@return T
-function UnityEngine.UIElements.KeyboardEventBase.GetPooled(systemEvent) end
-
----@class UnityEngine.UIElements.KeyDownEvent : UnityEngine.UIElements.KeyboardEventBase
-UnityEngine.UIElements.KeyDownEvent = {}
----@alias CS.UnityEngine.UIElements.KeyDownEvent UnityEngine.UIElements.KeyDownEvent
-CS.UnityEngine.UIElements.KeyDownEvent = UnityEngine.UIElements.KeyDownEvent
-
----@return UnityEngine.UIElements.KeyDownEvent
-function UnityEngine.UIElements.KeyDownEvent.New() end
-
----@class UnityEngine.UIElements.KeyboardEventExtensions : System.Object
-UnityEngine.UIElements.KeyboardEventExtensions = {}
----@alias CS.UnityEngine.UIElements.KeyboardEventExtensions UnityEngine.UIElements.KeyboardEventExtensions
-CS.UnityEngine.UIElements.KeyboardEventExtensions = UnityEngine.UIElements.KeyboardEventExtensions
-
-
----@class UnityEngine.UIElements.KeyUpEvent : UnityEngine.UIElements.KeyboardEventBase
-UnityEngine.UIElements.KeyUpEvent = {}
----@alias CS.UnityEngine.UIElements.KeyUpEvent UnityEngine.UIElements.KeyUpEvent
-CS.UnityEngine.UIElements.KeyUpEvent = UnityEngine.UIElements.KeyUpEvent
-
----@return UnityEngine.UIElements.KeyUpEvent
-function UnityEngine.UIElements.KeyUpEvent.New() end
-
----@class UnityEngine.UIElements.GeometryChangedEvent : UnityEngine.UIElements.EventBase
----@field oldRect UnityEngine.Rect
----@field newRect UnityEngine.Rect
-UnityEngine.UIElements.GeometryChangedEvent = {}
----@alias CS.UnityEngine.UIElements.GeometryChangedEvent UnityEngine.UIElements.GeometryChangedEvent
-CS.UnityEngine.UIElements.GeometryChangedEvent = UnityEngine.UIElements.GeometryChangedEvent
-
----@return UnityEngine.UIElements.GeometryChangedEvent
-function UnityEngine.UIElements.GeometryChangedEvent.New() end
----@param oldRect UnityEngine.Rect
----@param newRect UnityEngine.Rect
----@return UnityEngine.UIElements.GeometryChangedEvent
-function UnityEngine.UIElements.GeometryChangedEvent.GetPooled(oldRect, newRect) end
-
----@class UnityEngine.UIElements.IMouseEvent
----@field modifiers UnityEngine.EventModifiers
----@field mousePosition UnityEngine.Vector2
----@field localMousePosition UnityEngine.Vector2
----@field mouseDelta UnityEngine.Vector2
----@field clickCount number
----@field button number
----@field pressedButtons number
----@field shiftKey boolean
----@field ctrlKey boolean
----@field commandKey boolean
----@field altKey boolean
----@field actionKey boolean
-UnityEngine.UIElements.IMouseEvent = {}
----@alias CS.UnityEngine.UIElements.IMouseEvent UnityEngine.UIElements.IMouseEvent
-CS.UnityEngine.UIElements.IMouseEvent = UnityEngine.UIElements.IMouseEvent
-
-
----@class UnityEngine.UIElements.IMouseEventInternal
----@field sourcePointerEvent UnityEngine.UIElements.IPointerEvent
----@field recomputeTopElementUnderMouse boolean
-UnityEngine.UIElements.IMouseEventInternal = {}
----@alias CS.UnityEngine.UIElements.IMouseEventInternal UnityEngine.UIElements.IMouseEventInternal
-CS.UnityEngine.UIElements.IMouseEventInternal = UnityEngine.UIElements.IMouseEventInternal
-
-
----@class UnityEngine.UIElements.MouseEventBase : UnityEngine.UIElements.EventBase[T]
----@field modifiers UnityEngine.EventModifiers
----@field mousePosition UnityEngine.Vector2
----@field localMousePosition UnityEngine.Vector2
----@field mouseDelta UnityEngine.Vector2
----@field clickCount number
----@field button number
----@field pressedButtons number
----@field shiftKey boolean
----@field ctrlKey boolean
----@field commandKey boolean
----@field altKey boolean
----@field actionKey boolean
----@field currentTarget UnityEngine.UIElements.IEventHandler
-UnityEngine.UIElements.MouseEventBase = {}
----@alias CS.UnityEngine.UIElements.MouseEventBase UnityEngine.UIElements.MouseEventBase
-CS.UnityEngine.UIElements.MouseEventBase = UnityEngine.UIElements.MouseEventBase
-
----@overload fun(systemEvent: UnityEngine.Event) : T
----@overload fun(position: UnityEngine.Vector2, button: number, clickCount: number, delta: UnityEngine.Vector2, modifiers: UnityEngine.EventModifiers) : T
----@param triggerEvent UnityEngine.UIElements.IMouseEvent
----@return T
-function UnityEngine.UIElements.MouseEventBase.GetPooled(triggerEvent) end
-
----@class UnityEngine.UIElements.MouseDownEvent : UnityEngine.UIElements.MouseEventBase
-UnityEngine.UIElements.MouseDownEvent = {}
----@alias CS.UnityEngine.UIElements.MouseDownEvent UnityEngine.UIElements.MouseDownEvent
-CS.UnityEngine.UIElements.MouseDownEvent = UnityEngine.UIElements.MouseDownEvent
-
----@return UnityEngine.UIElements.MouseDownEvent
-function UnityEngine.UIElements.MouseDownEvent.New() end
----@param systemEvent UnityEngine.Event
----@return UnityEngine.UIElements.MouseDownEvent
-function UnityEngine.UIElements.MouseDownEvent.GetPooled(systemEvent) end
-
----@class UnityEngine.UIElements.MouseUpEvent : UnityEngine.UIElements.MouseEventBase
-UnityEngine.UIElements.MouseUpEvent = {}
----@alias CS.UnityEngine.UIElements.MouseUpEvent UnityEngine.UIElements.MouseUpEvent
-CS.UnityEngine.UIElements.MouseUpEvent = UnityEngine.UIElements.MouseUpEvent
-
----@return UnityEngine.UIElements.MouseUpEvent
-function UnityEngine.UIElements.MouseUpEvent.New() end
----@param systemEvent UnityEngine.Event
----@return UnityEngine.UIElements.MouseUpEvent
-function UnityEngine.UIElements.MouseUpEvent.GetPooled(systemEvent) end
-
----@class UnityEngine.UIElements.MouseMoveEvent : UnityEngine.UIElements.MouseEventBase
-UnityEngine.UIElements.MouseMoveEvent = {}
----@alias CS.UnityEngine.UIElements.MouseMoveEvent UnityEngine.UIElements.MouseMoveEvent
-CS.UnityEngine.UIElements.MouseMoveEvent = UnityEngine.UIElements.MouseMoveEvent
-
----@return UnityEngine.UIElements.MouseMoveEvent
-function UnityEngine.UIElements.MouseMoveEvent.New() end
----@param systemEvent UnityEngine.Event
----@return UnityEngine.UIElements.MouseMoveEvent
-function UnityEngine.UIElements.MouseMoveEvent.GetPooled(systemEvent) end
-
----@class UnityEngine.UIElements.ContextClickEvent : UnityEngine.UIElements.MouseEventBase
-UnityEngine.UIElements.ContextClickEvent = {}
----@alias CS.UnityEngine.UIElements.ContextClickEvent UnityEngine.UIElements.ContextClickEvent
-CS.UnityEngine.UIElements.ContextClickEvent = UnityEngine.UIElements.ContextClickEvent
-
----@return UnityEngine.UIElements.ContextClickEvent
-function UnityEngine.UIElements.ContextClickEvent.New() end
-
----@class UnityEngine.UIElements.WheelEvent : UnityEngine.UIElements.MouseEventBase
----@field scrollDeltaPerTick number
----@field delta UnityEngine.Vector3
-UnityEngine.UIElements.WheelEvent = {}
----@alias CS.UnityEngine.UIElements.WheelEvent UnityEngine.UIElements.WheelEvent
-CS.UnityEngine.UIElements.WheelEvent = UnityEngine.UIElements.WheelEvent
-
----@return UnityEngine.UIElements.WheelEvent
-function UnityEngine.UIElements.WheelEvent.New() end
----@param systemEvent UnityEngine.Event
----@return UnityEngine.UIElements.WheelEvent
-function UnityEngine.UIElements.WheelEvent.GetPooled(systemEvent) end
-
----@class UnityEngine.UIElements.MouseEnterEvent : UnityEngine.UIElements.MouseEventBase
-UnityEngine.UIElements.MouseEnterEvent = {}
----@alias CS.UnityEngine.UIElements.MouseEnterEvent UnityEngine.UIElements.MouseEnterEvent
-CS.UnityEngine.UIElements.MouseEnterEvent = UnityEngine.UIElements.MouseEnterEvent
-
----@return UnityEngine.UIElements.MouseEnterEvent
-function UnityEngine.UIElements.MouseEnterEvent.New() end
-
----@class UnityEngine.UIElements.MouseLeaveEvent : UnityEngine.UIElements.MouseEventBase
-UnityEngine.UIElements.MouseLeaveEvent = {}
----@alias CS.UnityEngine.UIElements.MouseLeaveEvent UnityEngine.UIElements.MouseLeaveEvent
-CS.UnityEngine.UIElements.MouseLeaveEvent = UnityEngine.UIElements.MouseLeaveEvent
-
----@return UnityEngine.UIElements.MouseLeaveEvent
-function UnityEngine.UIElements.MouseLeaveEvent.New() end
-
----@class UnityEngine.UIElements.MouseOverEvent : UnityEngine.UIElements.MouseEventBase
-UnityEngine.UIElements.MouseOverEvent = {}
----@alias CS.UnityEngine.UIElements.MouseOverEvent UnityEngine.UIElements.MouseOverEvent
-CS.UnityEngine.UIElements.MouseOverEvent = UnityEngine.UIElements.MouseOverEvent
-
----@return UnityEngine.UIElements.MouseOverEvent
-function UnityEngine.UIElements.MouseOverEvent.New() end
-
----@class UnityEngine.UIElements.MouseOutEvent : UnityEngine.UIElements.MouseEventBase
-UnityEngine.UIElements.MouseOutEvent = {}
----@alias CS.UnityEngine.UIElements.MouseOutEvent UnityEngine.UIElements.MouseOutEvent
-CS.UnityEngine.UIElements.MouseOutEvent = UnityEngine.UIElements.MouseOutEvent
-
----@return UnityEngine.UIElements.MouseOutEvent
-function UnityEngine.UIElements.MouseOutEvent.New() end
-
----@class UnityEngine.UIElements.MouseEnterWindowEvent : UnityEngine.UIElements.MouseEventBase
-UnityEngine.UIElements.MouseEnterWindowEvent = {}
----@alias CS.UnityEngine.UIElements.MouseEnterWindowEvent UnityEngine.UIElements.MouseEnterWindowEvent
-CS.UnityEngine.UIElements.MouseEnterWindowEvent = UnityEngine.UIElements.MouseEnterWindowEvent
-
----@return UnityEngine.UIElements.MouseEnterWindowEvent
-function UnityEngine.UIElements.MouseEnterWindowEvent.New() end
-
----@class UnityEngine.UIElements.MouseLeaveWindowEvent : UnityEngine.UIElements.MouseEventBase
-UnityEngine.UIElements.MouseLeaveWindowEvent = {}
----@alias CS.UnityEngine.UIElements.MouseLeaveWindowEvent UnityEngine.UIElements.MouseLeaveWindowEvent
-CS.UnityEngine.UIElements.MouseLeaveWindowEvent = UnityEngine.UIElements.MouseLeaveWindowEvent
-
----@return UnityEngine.UIElements.MouseLeaveWindowEvent
-function UnityEngine.UIElements.MouseLeaveWindowEvent.New() end
----@param systemEvent UnityEngine.Event
----@return UnityEngine.UIElements.MouseLeaveWindowEvent
-function UnityEngine.UIElements.MouseLeaveWindowEvent.GetPooled(systemEvent) end
-
----@class UnityEngine.UIElements.ContextualMenuPopulateEvent : UnityEngine.UIElements.MouseEventBase
----@field menu UnityEngine.UIElements.DropdownMenu
----@field triggerEvent UnityEngine.UIElements.EventBase
-UnityEngine.UIElements.ContextualMenuPopulateEvent = {}
----@alias CS.UnityEngine.UIElements.ContextualMenuPopulateEvent UnityEngine.UIElements.ContextualMenuPopulateEvent
-CS.UnityEngine.UIElements.ContextualMenuPopulateEvent = UnityEngine.UIElements.ContextualMenuPopulateEvent
-
----@return UnityEngine.UIElements.ContextualMenuPopulateEvent
-function UnityEngine.UIElements.ContextualMenuPopulateEvent.New() end
----@param triggerEvent UnityEngine.UIElements.EventBase
----@param menu UnityEngine.UIElements.DropdownMenu
----@param target UnityEngine.UIElements.IEventHandler
----@param menuManager UnityEngine.UIElements.ContextualMenuManager
----@return UnityEngine.UIElements.ContextualMenuPopulateEvent
-function UnityEngine.UIElements.ContextualMenuPopulateEvent.GetPooled(triggerEvent, menu, target, menuManager) end
-
----@class UnityEngine.UIElements.MouseEventsHelper : System.Object
-UnityEngine.UIElements.MouseEventsHelper = {}
----@alias CS.UnityEngine.UIElements.MouseEventsHelper UnityEngine.UIElements.MouseEventsHelper
-CS.UnityEngine.UIElements.MouseEventsHelper = UnityEngine.UIElements.MouseEventsHelper
-
-
----@class UnityEngine.UIElements.PointerEventsHelper : System.Object
-UnityEngine.UIElements.PointerEventsHelper = {}
----@alias CS.UnityEngine.UIElements.PointerEventsHelper UnityEngine.UIElements.PointerEventsHelper
-CS.UnityEngine.UIElements.PointerEventsHelper = UnityEngine.UIElements.PointerEventsHelper
-
-
----@class UnityEngine.UIElements.INavigationEvent
----@field modifiers UnityEngine.EventModifiers
----@field shiftKey boolean
----@field ctrlKey boolean
----@field commandKey boolean
----@field altKey boolean
----@field actionKey boolean
-UnityEngine.UIElements.INavigationEvent = {}
----@alias CS.UnityEngine.UIElements.INavigationEvent UnityEngine.UIElements.INavigationEvent
-CS.UnityEngine.UIElements.INavigationEvent = UnityEngine.UIElements.INavigationEvent

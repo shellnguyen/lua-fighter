@@ -1,5 +1,63 @@
 ---@meta
 
+---@class UnityEngine.SortingLayer.LayerCallback : System.MulticastDelegate
+UnityEngine.SortingLayer.LayerCallback = {}
+---@alias CS.UnityEngine.SortingLayer.LayerCallback UnityEngine.SortingLayer.LayerCallback
+CS.UnityEngine.SortingLayer.LayerCallback = UnityEngine.SortingLayer.LayerCallback
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.SortingLayer.LayerCallback
+function UnityEngine.SortingLayer.LayerCallback.New(object, method) end
+---@param layer UnityEngine.SortingLayer
+function UnityEngine.SortingLayer.LayerCallback:Invoke(layer) end
+---@param layer UnityEngine.SortingLayer
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.SortingLayer.LayerCallback:BeginInvoke(layer, callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.SortingLayer.LayerCallback:EndInvoke(result) end
+
+---@class UnityEngine.SortingLayer.LayerChangedCallback : System.MulticastDelegate
+UnityEngine.SortingLayer.LayerChangedCallback = {}
+---@alias CS.UnityEngine.SortingLayer.LayerChangedCallback UnityEngine.SortingLayer.LayerChangedCallback
+CS.UnityEngine.SortingLayer.LayerChangedCallback = UnityEngine.SortingLayer.LayerChangedCallback
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.SortingLayer.LayerChangedCallback
+function UnityEngine.SortingLayer.LayerChangedCallback.New(object, method) end
+function UnityEngine.SortingLayer.LayerChangedCallback:Invoke() end
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.SortingLayer.LayerChangedCallback:BeginInvoke(callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.SortingLayer.LayerChangedCallback:EndInvoke(result) end
+
+---@class UnityEngine.WeightedMode
+---@field None UnityEngine.WeightedMode
+---@field In UnityEngine.WeightedMode
+---@field Out UnityEngine.WeightedMode
+---@field Both UnityEngine.WeightedMode
+UnityEngine.WeightedMode = {}
+---@alias CS.UnityEngine.WeightedMode UnityEngine.WeightedMode
+CS.UnityEngine.WeightedMode = UnityEngine.WeightedMode
+
+
+---@class UnityEngine.Keyframe : System.ValueType
+---@field time number
+---@field value number
+---@field inTangent number
+---@field outTangent number
+---@field inWeight number
+---@field outWeight number
+---@field weightedMode UnityEngine.WeightedMode
+UnityEngine.Keyframe = {}
+---@alias CS.UnityEngine.Keyframe UnityEngine.Keyframe
+CS.UnityEngine.Keyframe = UnityEngine.Keyframe
+
 ---@overload fun(time: number, value: number) : UnityEngine.Keyframe
 ---@overload fun(time: number, value: number, inTangent: number, outTangent: number) : UnityEngine.Keyframe
 ---@param time number
@@ -865,6 +923,70 @@ function UnityEngine.Camera:UpdateVolumeStack(cameraData) end
 function UnityEngine.Camera:DestroyVolumeStack() end
 ---@param cameraData UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
 function UnityEngine.Camera:DestroyVolumeStack(cameraData) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Camera:DOAspect(endValue, duration) end
+---@param endValue UnityEngine.Color
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Camera:DOColor(endValue, duration) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Camera:DOFarClipPlane(endValue, duration) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Camera:DOFieldOfView(endValue, duration) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Camera:DONearClipPlane(endValue, duration) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Camera:DOOrthoSize(endValue, duration) end
+---@param endValue UnityEngine.Rect
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Camera:DOPixelRect(endValue, duration) end
+---@param endValue UnityEngine.Rect
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Camera:DORect(endValue, duration) end
+---@param duration number
+---@param strength number
+---@param vibrato number
+---@param randomness number
+---@param fadeOut boolean
+---@param randomnessMode DG.Tweening.ShakeRandomnessMode
+---@return DG.Tweening.Tweener
+function UnityEngine.Camera:DOShakePosition(duration, strength, vibrato, randomness, fadeOut, randomnessMode) end
+---@param duration number
+---@param strength UnityEngine.Vector3
+---@param vibrato number
+---@param randomness number
+---@param fadeOut boolean
+---@param randomnessMode DG.Tweening.ShakeRandomnessMode
+---@return DG.Tweening.Tweener
+function UnityEngine.Camera:DOShakePosition(duration, strength, vibrato, randomness, fadeOut, randomnessMode) end
+---@param duration number
+---@param strength number
+---@param vibrato number
+---@param randomness number
+---@param fadeOut boolean
+---@param randomnessMode DG.Tweening.ShakeRandomnessMode
+---@return DG.Tweening.Tweener
+function UnityEngine.Camera:DOShakeRotation(duration, strength, vibrato, randomness, fadeOut, randomnessMode) end
+---@param duration number
+---@param strength UnityEngine.Vector3
+---@param vibrato number
+---@param randomness number
+---@param fadeOut boolean
+---@param randomnessMode DG.Tweening.ShakeRandomnessMode
+---@return DG.Tweening.Tweener
+function UnityEngine.Camera:DOShakeRotation(duration, strength, vibrato, randomness, fadeOut, randomnessMode) end
 
 ---@class UnityEngine.Camera.ProjectionMatrixMode
 ---@field Explicit UnityEngine.Camera.ProjectionMatrixMode
@@ -1841,6 +1963,88 @@ function UnityEngine.Rect:Equals(ref_other) end
 ---@param formatProvider System.IFormatProvider
 ---@return string
 function UnityEngine.Rect:ToString(format, formatProvider) end
+---@param b UnityEngine.Rect
+---@return UnityEngine.Rect
+function UnityEngine.Rect:Add(b) end
+---@param amount number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:Expand(amount) end
+---@param amountX number
+---@param amountY number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:Expand(amountX, amountY) end
+---@param amount number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:Contract(amount) end
+---@param amountX number
+---@param amountY number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:Contract(amountX, amountY) end
+---@param w number
+---@param h number
+---@param shrinkOnly boolean
+---@return UnityEngine.Rect
+function UnityEngine.Rect:Fit(w, h, shrinkOnly) end
+---@param b UnityEngine.Rect
+---@param full boolean
+---@return boolean
+function UnityEngine.Rect:Includes(b, full) end
+---@param b UnityEngine.Rect
+---@param out_intersection UnityEngine.Rect
+---@return boolean,UnityEngine.Rect
+function UnityEngine.Rect:Intersects(b, out_intersection) end
+---@return UnityEngine.Rect
+function UnityEngine.Rect:ResetXY() end
+---@param x number
+---@param margin number
+---@param resizeWidthTo number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:HangToLeftOf(x, margin, resizeWidthTo) end
+---@param x number
+---@param margin number
+---@param extraSizeOffset number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:HangToRightAndResize(x, margin, extraSizeOffset) end
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:Shift(x, y, width, height) end
+---@param x number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:ShiftX(x) end
+---@param y number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:ShiftY(y) end
+---@param x number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:ShiftXAndResize(x) end
+---@param y number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:ShiftYAndResize(y) end
+---@param value number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:SetX(value) end
+---@param value number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:SetY(value) end
+---@param value number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:SetHeight(value) end
+---@param value number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:SetWidth(value) end
+---@param x number
+---@param y number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:SetCenter(x, y) end
+---@param value number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:SetCenterX(value) end
+---@param value number
+---@return UnityEngine.Rect
+function UnityEngine.Rect:SetCenterY(value) end
 
 ---@class UnityEngine.RectInt : System.ValueType
 ---@field zero UnityEngine.RectInt
@@ -4287,6 +4491,15 @@ function UnityEngine.TrailRenderer:AddPosition(position) end
 ---@param out_positions NullType
 ---@return ,NullType
 function UnityEngine.TrailRenderer:AddPositions(out_positions) end
+---@param toStartWidth number
+---@param toEndWidth number
+---@param duration number
+---@return DG.Tweening.Tweener
+function UnityEngine.TrailRenderer:DOResize(toStartWidth, toEndWidth, duration) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.TrailRenderer:DOTime(endValue, duration) end
 
 ---@class UnityEngine.LineRenderer : UnityEngine.Renderer
 ---@field startWidth number
@@ -4336,6 +4549,11 @@ function UnityEngine.LineRenderer:GetPositions(out_positions) end
 ---@overload fun(self: UnityEngine.LineRenderer, positions: Unity.Collections.NativeArray)
 ---@param positions Unity.Collections.NativeSlice
 function UnityEngine.LineRenderer:SetPositions(positions) end
+---@param startValue DG.Tweening.Color2
+---@param endValue DG.Tweening.Color2
+---@param duration number
+---@return DG.Tweening.Tweener
+function UnityEngine.LineRenderer:DOColor(startValue, endValue, duration) end
 
 ---@class UnityEngine.MaterialPropertyBlock : System.Object
 ---@field isEmpty boolean
@@ -4845,164 +5063,132 @@ function UnityEngine.Material:GetTextureScale(nameID) end
 ---@param type UnityEngine.MaterialPropertyType
 ---@return System.String[]
 function UnityEngine.Material:GetPropertyNames(type) end
-
----@class UnityEngine.GraphicsBufferHandle : System.ValueType
----@field value number
-UnityEngine.GraphicsBufferHandle = {}
----@alias CS.UnityEngine.GraphicsBufferHandle UnityEngine.GraphicsBufferHandle
-CS.UnityEngine.GraphicsBufferHandle = UnityEngine.GraphicsBufferHandle
-
+---@param gradient UnityEngine.Gradient
+---@param duration number
+---@return DG.Tweening.Sequence
+function UnityEngine.Material:DOGradientColor(gradient, duration) end
+---@param gradient UnityEngine.Gradient
+---@param property string
+---@param duration number
+---@return DG.Tweening.Sequence
+function UnityEngine.Material:DOGradientColor(gradient, property, duration) end
+---@param endValue UnityEngine.Vector2
+---@param propertyID number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOOffset(endValue, propertyID, duration) end
+---@param endValue UnityEngine.Vector2
+---@param propertyID number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOTiling(endValue, propertyID, duration) end
+---@param endValue UnityEngine.Color
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOColor(endValue, duration) end
+---@param endValue UnityEngine.Color
+---@param property string
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOColor(endValue, property, duration) end
+---@param endValue UnityEngine.Color
+---@param propertyID number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOColor(endValue, propertyID, duration) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOFade(endValue, duration) end
+---@param endValue number
+---@param property string
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOFade(endValue, property, duration) end
+---@param endValue number
+---@param propertyID number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOFade(endValue, propertyID, duration) end
+---@param endValue number
+---@param property string
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOFloat(endValue, property, duration) end
+---@param endValue number
+---@param propertyID number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOFloat(endValue, propertyID, duration) end
+---@param endValue UnityEngine.Vector2
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOOffset(endValue, duration) end
+---@param endValue UnityEngine.Vector2
+---@param property string
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOOffset(endValue, property, duration) end
+---@param endValue UnityEngine.Vector2
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOTiling(endValue, duration) end
+---@param endValue UnityEngine.Vector2
+---@param property string
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOTiling(endValue, property, duration) end
+---@param endValue UnityEngine.Vector4
+---@param property string
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOVector(endValue, property, duration) end
+---@param endValue UnityEngine.Vector4
+---@param propertyID number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Material:DOVector(endValue, propertyID, duration) end
+---@param endValue UnityEngine.Color
+---@param duration number
+---@return DG.Tweening.Tweener
+function UnityEngine.Material:DOBlendableColor(endValue, duration) end
+---@param endValue UnityEngine.Color
+---@param property string
+---@param duration number
+---@return DG.Tweening.Tweener
+function UnityEngine.Material:DOBlendableColor(endValue, property, duration) end
+---@param endValue UnityEngine.Color
+---@param propertyID number
+---@param duration number
+---@return DG.Tweening.Tweener
+function UnityEngine.Material:DOBlendableColor(endValue, propertyID, duration) end
+---@param withCallbacks boolean
 ---@return number
-function UnityEngine.GraphicsBufferHandle:GetHashCode() end
----@overload fun(self: UnityEngine.GraphicsBufferHandle, obj: System.Object) : boolean
----@param other UnityEngine.GraphicsBufferHandle
----@return boolean
-function UnityEngine.GraphicsBufferHandle:Equals(other) end
----@param other UnityEngine.GraphicsBufferHandle
+function UnityEngine.Material:DOComplete(withCallbacks) end
+---@param complete boolean
 ---@return number
-function UnityEngine.GraphicsBufferHandle:CompareTo(other) end
-
----@class UnityEngine.GraphicsBuffer : System.Object
----@field count number
----@field stride number
----@field target UnityEngine.GraphicsBuffer.Target
----@field usageFlags UnityEngine.GraphicsBuffer.UsageFlags
----@field bufferHandle UnityEngine.GraphicsBufferHandle
----@field name string
-UnityEngine.GraphicsBuffer = {}
----@alias CS.UnityEngine.GraphicsBuffer UnityEngine.GraphicsBuffer
-CS.UnityEngine.GraphicsBuffer = UnityEngine.GraphicsBuffer
-
----@overload fun(target: UnityEngine.GraphicsBuffer.Target, count: number, stride: number) : UnityEngine.GraphicsBuffer
----@param target UnityEngine.GraphicsBuffer.Target
----@param usageFlags UnityEngine.GraphicsBuffer.UsageFlags
----@param count number
----@param stride number
----@return UnityEngine.GraphicsBuffer
-function UnityEngine.GraphicsBuffer.New(target, usageFlags, count, stride) end
----@overload fun(src: UnityEngine.ComputeBuffer, dst: UnityEngine.ComputeBuffer, dstOffsetBytes: number)
----@overload fun(src: UnityEngine.GraphicsBuffer, dst: UnityEngine.ComputeBuffer, dstOffsetBytes: number)
----@overload fun(src: UnityEngine.ComputeBuffer, dst: UnityEngine.GraphicsBuffer, dstOffsetBytes: number)
----@param src UnityEngine.GraphicsBuffer
----@param dst UnityEngine.GraphicsBuffer
----@param dstOffsetBytes number
-function UnityEngine.GraphicsBuffer.CopyCount(src, dst, dstOffsetBytes) end
-function UnityEngine.GraphicsBuffer:Dispose() end
-function UnityEngine.GraphicsBuffer:Release() end
----@return boolean
-function UnityEngine.GraphicsBuffer:IsValid() end
----@overload fun(self: UnityEngine.GraphicsBuffer, data: System.Array)
----@param data System.Array
----@param managedBufferStartIndex number
----@param graphicsBufferStartIndex number
----@param count number
-function UnityEngine.GraphicsBuffer:SetData(data, managedBufferStartIndex, graphicsBufferStartIndex, count) end
----@overload fun(self: UnityEngine.GraphicsBuffer, data: System.Array)
----@param data System.Array
----@param managedBufferStartIndex number
----@param computeBufferStartIndex number
----@param count number
-function UnityEngine.GraphicsBuffer:GetData(data, managedBufferStartIndex, computeBufferStartIndex, count) end
----@return System.IntPtr
-function UnityEngine.GraphicsBuffer:GetNativeBufferPtr() end
----@param counterValue number
-function UnityEngine.GraphicsBuffer:SetCounterValue(counterValue) end
-
----@class UnityEngine.GraphicsBuffer.Target
----@field Vertex UnityEngine.GraphicsBuffer.Target
----@field Index UnityEngine.GraphicsBuffer.Target
----@field CopySource UnityEngine.GraphicsBuffer.Target
----@field CopyDestination UnityEngine.GraphicsBuffer.Target
----@field Structured UnityEngine.GraphicsBuffer.Target
----@field Raw UnityEngine.GraphicsBuffer.Target
----@field Append UnityEngine.GraphicsBuffer.Target
----@field Counter UnityEngine.GraphicsBuffer.Target
----@field IndirectArguments UnityEngine.GraphicsBuffer.Target
----@field Constant UnityEngine.GraphicsBuffer.Target
-UnityEngine.GraphicsBuffer.Target = {}
----@alias CS.UnityEngine.GraphicsBuffer.Target UnityEngine.GraphicsBuffer.Target
-CS.UnityEngine.GraphicsBuffer.Target = UnityEngine.GraphicsBuffer.Target
-
-
----@class UnityEngine.GraphicsBuffer.UsageFlags
----@field None UnityEngine.GraphicsBuffer.UsageFlags
----@field LockBufferForWrite UnityEngine.GraphicsBuffer.UsageFlags
-UnityEngine.GraphicsBuffer.UsageFlags = {}
----@alias CS.UnityEngine.GraphicsBuffer.UsageFlags UnityEngine.GraphicsBuffer.UsageFlags
-CS.UnityEngine.GraphicsBuffer.UsageFlags = UnityEngine.GraphicsBuffer.UsageFlags
-
-
----@class UnityEngine.GraphicsBuffer.IndirectDrawArgs : System.ValueType
----@field size number
----@field vertexCountPerInstance number
----@field instanceCount number
----@field startVertex number
----@field startInstance number
-UnityEngine.GraphicsBuffer.IndirectDrawArgs = {}
----@alias CS.UnityEngine.GraphicsBuffer.IndirectDrawArgs UnityEngine.GraphicsBuffer.IndirectDrawArgs
-CS.UnityEngine.GraphicsBuffer.IndirectDrawArgs = UnityEngine.GraphicsBuffer.IndirectDrawArgs
-
-
----@class UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs : System.ValueType
----@field size number
----@field indexCountPerInstance number
----@field instanceCount number
----@field startIndex number
----@field baseVertexIndex number
----@field startInstance number
-UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs = {}
----@alias CS.UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs
-CS.UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs = UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs
-
-
----@class UnityEngine.GraphicsBuffer.BindingsMarshaller : System.Object
-UnityEngine.GraphicsBuffer.BindingsMarshaller = {}
----@alias CS.UnityEngine.GraphicsBuffer.BindingsMarshaller UnityEngine.GraphicsBuffer.BindingsMarshaller
-CS.UnityEngine.GraphicsBuffer.BindingsMarshaller = UnityEngine.GraphicsBuffer.BindingsMarshaller
-
----@param ptr System.IntPtr
----@return UnityEngine.GraphicsBuffer
-function UnityEngine.GraphicsBuffer.BindingsMarshaller.ConvertToManaged(ptr) end
----@param graphicsBuffer UnityEngine.GraphicsBuffer
----@return System.IntPtr
-function UnityEngine.GraphicsBuffer.BindingsMarshaller.ConvertToNative(graphicsBuffer) end
-
----@class UnityEngine.OcclusionPortal : UnityEngine.Component
----@field open boolean
-UnityEngine.OcclusionPortal = {}
----@alias CS.UnityEngine.OcclusionPortal UnityEngine.OcclusionPortal
-CS.UnityEngine.OcclusionPortal = UnityEngine.OcclusionPortal
-
----@return UnityEngine.OcclusionPortal
-function UnityEngine.OcclusionPortal.New() end
-
----@class UnityEngine.OcclusionArea : UnityEngine.Component
----@field center UnityEngine.Vector3
----@field size UnityEngine.Vector3
-UnityEngine.OcclusionArea = {}
----@alias CS.UnityEngine.OcclusionArea UnityEngine.OcclusionArea
-CS.UnityEngine.OcclusionArea = UnityEngine.OcclusionArea
-
----@return UnityEngine.OcclusionArea
-function UnityEngine.OcclusionArea.New() end
-
----@class UnityEngine.Flare : UnityEngine.Object
-UnityEngine.Flare = {}
----@alias CS.UnityEngine.Flare UnityEngine.Flare
-CS.UnityEngine.Flare = UnityEngine.Flare
-
----@return UnityEngine.Flare
-function UnityEngine.Flare.New() end
-
----@class UnityEngine.Flare.FlareElement : System.ValueType
----@field imageIndex number
----@field position number
----@field size number
----@field color UnityEngine.Color
----@field useLightColor boolean
----@field rotate boolean
----@field zoom boolean
----@field fade boolean
-UnityEngine.Flare.FlareElement = {}
----@alias CS.UnityEngine.Flare.FlareElement UnityEngine.Flare.FlareElement
-CS.UnityEngine.Flare.FlareElement = UnityEngine.Flare.FlareElement
+function UnityEngine.Material:DOKill(complete) end
+---@return number
+function UnityEngine.Material:DOFlip() end
+---@param to number
+---@param andPlay boolean
+---@return number
+function UnityEngine.Material:DOGoto(to, andPlay) end
+---@return number
+function UnityEngine.Material:DOPause() end
+---@return number
+function UnityEngine.Material:DOPlay() end
+---@return number
+function UnityEngine.Material:DOPlayBackwards() end
+---@return number
+function UnityEngine.Material:DOPlayForward() end
+---@param includeDelay boolean
+---@return number
+function UnityEngine.Material:DORestart(includeDelay) end
+---@param includeDelay boolean
+---@return number
+function UnityEngine.Material:DORewind(includeDelay) end
+---@return number
+function UnityEngine.Material:DOSmoothRewind() end
+---@return number
+function UnityEngine.Material:DOTogglePause() end

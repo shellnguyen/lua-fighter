@@ -1,5 +1,697 @@
 ---@meta
 
+---@class UnityEngine.StructInt : System.ValueType
+---@field field number
+UnityEngine.StructInt = {}
+---@alias CS.UnityEngine.StructInt UnityEngine.StructInt
+CS.UnityEngine.StructInt = UnityEngine.StructInt
+
+
+---@class UnityEngine.StructInt2 : System.ValueType
+---@field field number
+UnityEngine.StructInt2 = {}
+---@alias CS.UnityEngine.StructInt2 UnityEngine.StructInt2
+CS.UnityEngine.StructInt2 = UnityEngine.StructInt2
+
+
+---@class UnityEngine.StructNestedBlittable : System.ValueType
+---@field field UnityEngine.StructInt
+UnityEngine.StructNestedBlittable = {}
+---@alias CS.UnityEngine.StructNestedBlittable UnityEngine.StructNestedBlittable
+CS.UnityEngine.StructNestedBlittable = UnityEngine.StructNestedBlittable
+
+
+---@class UnityEngine.StructFixedBuffer : System.ValueType
+---@field SomeInts UnityEngine.StructFixedBuffer.<SomeInts>e__FixedBuffer
+UnityEngine.StructFixedBuffer = {}
+---@alias CS.UnityEngine.StructFixedBuffer UnityEngine.StructFixedBuffer
+CS.UnityEngine.StructFixedBuffer = UnityEngine.StructFixedBuffer
+
+
+---@class UnityEngine.BlittableStructTests : System.Object
+---@field structIntProperty UnityEngine.StructInt
+UnityEngine.BlittableStructTests = {}
+---@alias CS.UnityEngine.BlittableStructTests UnityEngine.BlittableStructTests
+CS.UnityEngine.BlittableStructTests = UnityEngine.BlittableStructTests
+
+---@return UnityEngine.BlittableStructTests
+function UnityEngine.BlittableStructTests.New() end
+---@param param UnityEngine.StructInt
+function UnityEngine.BlittableStructTests.ParameterStructInt(param) end
+---@param ref_param UnityEngine.StructInt
+---@return ,UnityEngine.StructInt
+function UnityEngine.BlittableStructTests.ParameterStructIntByRef(ref_param) end
+---@param ref_param UnityEngine.StructInt
+---@return ,UnityEngine.StructInt
+function UnityEngine.BlittableStructTests.ParameterStructIntIn(ref_param) end
+---@param out_param UnityEngine.StructInt
+---@return ,UnityEngine.StructInt
+function UnityEngine.BlittableStructTests.ParameterStructIntOut(out_param) end
+---@param param UnityEngine.StructInt2
+function UnityEngine.BlittableStructTests.ParameterStructInt2(param) end
+---@return UnityEngine.StructInt
+function UnityEngine.BlittableStructTests.ReturnStructInt() end
+---@param s UnityEngine.StructNestedBlittable
+function UnityEngine.BlittableStructTests.ParameterNestedBlittableStruct(s) end
+---@return UnityEngine.StructNestedBlittable
+function UnityEngine.BlittableStructTests.ReturnNestedBlittableStruct() end
+---@param param UnityEngine.StructInt[]
+function UnityEngine.BlittableStructTests.ParameterStructIntVector(param) end
+---@return UnityEngine.StructInt[]
+function UnityEngine.BlittableStructTests.ReturnStructIntVector() end
+---@param param UnityEngine.StructNestedBlittable[]
+function UnityEngine.BlittableStructTests.ParameterStructNestedBlittableVector(param) end
+---@return UnityEngine.StructNestedBlittable[]
+function UnityEngine.BlittableStructTests.ReturnStructNestedBlittableVector() end
+---@param param UnityEngine.StructFixedBuffer
+function UnityEngine.BlittableStructTests.ParameterStructFixedBuffer(param) end
+---@return UnityEngine.StructFixedBuffer
+function UnityEngine.BlittableStructTests.ReturnStructFixedBuffer() end
+
+---@class UnityEngine.StructIntPtrObject : System.ValueType
+---@field field UnityEngine.MyIntPtrObject
+UnityEngine.StructIntPtrObject = {}
+---@alias CS.UnityEngine.StructIntPtrObject UnityEngine.StructIntPtrObject
+CS.UnityEngine.StructIntPtrObject = UnityEngine.StructIntPtrObject
+
+
+---@class UnityEngine.StructIntPtrObjectVector : System.ValueType
+---@field field UnityEngine.MyIntPtrObject[]
+UnityEngine.StructIntPtrObjectVector = {}
+---@alias CS.UnityEngine.StructIntPtrObjectVector UnityEngine.StructIntPtrObjectVector
+CS.UnityEngine.StructIntPtrObjectVector = UnityEngine.StructIntPtrObjectVector
+
+
+---@class UnityEngine.MyIntPtrObject : System.Object
+---@field m_Ptr System.IntPtr
+---@field MemberProperty number
+UnityEngine.MyIntPtrObject = {}
+---@alias CS.UnityEngine.MyIntPtrObject UnityEngine.MyIntPtrObject
+CS.UnityEngine.MyIntPtrObject = UnityEngine.MyIntPtrObject
+
+---@return UnityEngine.MyIntPtrObject
+function UnityEngine.MyIntPtrObject.New() end
+---@return UnityEngine.MyIntPtrObject
+function UnityEngine.MyIntPtrObject.Create() end
+function UnityEngine.MyIntPtrObject:Dispose() end
+---@param a number
+---@return number
+function UnityEngine.MyIntPtrObject:MemberFunction(a) end
+
+---@class UnityEngine.MyIntPtrObject.BindingsMarshaller : System.Object
+UnityEngine.MyIntPtrObject.BindingsMarshaller = {}
+---@alias CS.UnityEngine.MyIntPtrObject.BindingsMarshaller UnityEngine.MyIntPtrObject.BindingsMarshaller
+CS.UnityEngine.MyIntPtrObject.BindingsMarshaller = UnityEngine.MyIntPtrObject.BindingsMarshaller
+
+---@param obj UnityEngine.MyIntPtrObject
+---@return System.IntPtr
+function UnityEngine.MyIntPtrObject.BindingsMarshaller.ConvertToNative(obj) end
+---@param ptr System.IntPtr
+---@return UnityEngine.MyIntPtrObject
+function UnityEngine.MyIntPtrObject.BindingsMarshaller.ConvertToManaged(ptr) end
+
+---@class UnityEngine.IntPtrObjectTests : System.Object
+UnityEngine.IntPtrObjectTests = {}
+---@alias CS.UnityEngine.IntPtrObjectTests UnityEngine.IntPtrObjectTests
+CS.UnityEngine.IntPtrObjectTests = UnityEngine.IntPtrObjectTests
+
+---@return UnityEngine.IntPtrObjectTests
+function UnityEngine.IntPtrObjectTests.New() end
+---@param param UnityEngine.MyIntPtrObject
+function UnityEngine.IntPtrObjectTests.ParameterIntPtrObject(param) end
+---@param param UnityEngine.MyIntPtrObject[]
+function UnityEngine.IntPtrObjectTests.ParameterIntPtrObjectVector(param) end
+---@param param UnityEngine.StructIntPtrObject
+function UnityEngine.IntPtrObjectTests.ParameterStructIntPtrObject(param) end
+---@return UnityEngine.MyIntPtrObject[]
+function UnityEngine.IntPtrObjectTests.ReturnIntPtrObjectVector() end
+---@param param UnityEngine.StructIntPtrObjectVector
+function UnityEngine.IntPtrObjectTests.ParameterStructIntPtrObjectVector(param) end
+---@param value number
+---@return UnityEngine.MyIntPtrObject
+function UnityEngine.IntPtrObjectTests.ReturnIntPtrObject(value) end
+
+---@class UnityEngine.MarshallingTestObject : UnityEngine.Object
+---@field MemberProperty number
+---@field FieldBoundMemberProperty number
+UnityEngine.MarshallingTestObject = {}
+---@alias CS.UnityEngine.MarshallingTestObject UnityEngine.MarshallingTestObject
+CS.UnityEngine.MarshallingTestObject = UnityEngine.MarshallingTestObject
+
+---@return UnityEngine.MarshallingTestObject
+function UnityEngine.MarshallingTestObject.New() end
+---@return UnityEngine.MarshallingTestObject
+function UnityEngine.MarshallingTestObject.Create() end
+---@param a number
+---@return number
+function UnityEngine.MarshallingTestObject:MemberFunction(a) end
+
+---@class UnityEngine.DifferentMarshallingTestObject : UnityEngine.Object
+UnityEngine.DifferentMarshallingTestObject = {}
+---@alias CS.UnityEngine.DifferentMarshallingTestObject UnityEngine.DifferentMarshallingTestObject
+CS.UnityEngine.DifferentMarshallingTestObject = UnityEngine.DifferentMarshallingTestObject
+
+---@return UnityEngine.DifferentMarshallingTestObject
+function UnityEngine.DifferentMarshallingTestObject.New() end
+
+---@class UnityEngine.StructUnityObject : System.ValueType
+---@field field UnityEngine.MarshallingTestObject
+UnityEngine.StructUnityObject = {}
+---@alias CS.UnityEngine.StructUnityObject UnityEngine.StructUnityObject
+CS.UnityEngine.StructUnityObject = UnityEngine.StructUnityObject
+
+---@param o System.Object
+---@return number
+function UnityEngine.StructUnityObject:InstanceMethod(o) end
+
+---@class UnityEngine.StructUnityObjectPPtr : System.ValueType
+---@field field UnityEngine.MarshallingTestObject
+UnityEngine.StructUnityObjectPPtr = {}
+---@alias CS.UnityEngine.StructUnityObjectPPtr UnityEngine.StructUnityObjectPPtr
+CS.UnityEngine.StructUnityObjectPPtr = UnityEngine.StructUnityObjectPPtr
+
+
+---@class UnityEngine.StructUnityObjectVector : System.ValueType
+---@field field UnityEngine.MarshallingTestObject[]
+UnityEngine.StructUnityObjectVector = {}
+---@alias CS.UnityEngine.StructUnityObjectVector UnityEngine.StructUnityObjectVector
+CS.UnityEngine.StructUnityObjectVector = UnityEngine.StructUnityObjectVector
+
+
+---@class UnityEngine.UnityObjectTests : System.Object
+UnityEngine.UnityObjectTests = {}
+---@alias CS.UnityEngine.UnityObjectTests UnityEngine.UnityObjectTests
+CS.UnityEngine.UnityObjectTests = UnityEngine.UnityObjectTests
+
+---@return UnityEngine.UnityObjectTests
+function UnityEngine.UnityObjectTests.New() end
+---@param param UnityEngine.MarshallingTestObject
+function UnityEngine.UnityObjectTests.ParameterUnityObject(param) end
+---@param ref_param UnityEngine.MarshallingTestObject
+---@return ,UnityEngine.MarshallingTestObject
+function UnityEngine.UnityObjectTests.ParameterUnityObjectByRef(ref_param) end
+---@param param UnityEngine.MarshallingTestObject
+function UnityEngine.UnityObjectTests.ParameterUnityObjectPPtr(param) end
+---@param param UnityEngine.StructUnityObject
+function UnityEngine.UnityObjectTests.ParameterStructUnityObject(param) end
+---@param param UnityEngine.StructUnityObjectPPtr
+function UnityEngine.UnityObjectTests.ParameterStructUnityObjectPPtr(param) end
+---@param param UnityEngine.StructUnityObjectVector
+function UnityEngine.UnityObjectTests.ParameterStructUnityObjectVector(param) end
+---@param param UnityEngine.MarshallingTestObject[]
+function UnityEngine.UnityObjectTests.ParameterUnityObjectVector(param) end
+---@param param UnityEngine.MarshallingTestObject[]
+function UnityEngine.UnityObjectTests.ParameterUnityObjectPPtrVector(param) end
+---@return UnityEngine.MarshallingTestObject
+function UnityEngine.UnityObjectTests.ReturnUnityObject() end
+---@param obj UnityEngine.MarshallingTestObject
+---@return UnityEngine.MarshallingTestObject
+function UnityEngine.UnityObjectTests.ReturnInUnityObject(obj) end
+---@return UnityEngine.MarshallingTestObject
+function UnityEngine.UnityObjectTests.ReturnUnityObjectFakeNull() end
+---@return UnityEngine.MarshallingTestObject
+function UnityEngine.UnityObjectTests.ReturnUnassignedErrorObject() end
+---@return UnityEngine.MarshallingTestObject
+function UnityEngine.UnityObjectTests.ReturnUnityObjectPPtr() end
+---@return UnityEngine.MarshallingTestObject[]
+function UnityEngine.UnityObjectTests.ReturnUnityObjectVector() end
+---@return UnityEngine.MarshallingTestObject[]
+function UnityEngine.UnityObjectTests.ReturnUnityObjectPPtrVector() end
+---@return UnityEngine.StructUnityObject
+function UnityEngine.UnityObjectTests.ReturnStructUnityObject() end
+---@return UnityEngine.StructUnityObjectPPtr
+function UnityEngine.UnityObjectTests.ReturnStructUnityObjectPPtr() end
+---@return UnityEngine.StructUnityObject[]
+function UnityEngine.UnityObjectTests.ReturnStructUnityObjectVector() end
+---@return UnityEngine.StructUnityObjectPPtr[]
+function UnityEngine.UnityObjectTests.ReturnStructUnityObjectPPtrVector() end
+---@return UnityEngine.StructUnityObjectVector[]
+function UnityEngine.UnityObjectTests.ReturnStructUnityObjectVectorVector() end
+
+---@class UnityEngine.NullCheckTests : System.Object
+UnityEngine.NullCheckTests = {}
+---@alias CS.UnityEngine.NullCheckTests UnityEngine.NullCheckTests
+CS.UnityEngine.NullCheckTests = UnityEngine.NullCheckTests
+
+---@return UnityEngine.NullCheckTests
+function UnityEngine.NullCheckTests.New() end
+---@param param string
+function UnityEngine.NullCheckTests.StringParameterNullAllowed(param) end
+---@param param string
+function UnityEngine.NullCheckTests.StringParameterNullNotAllowed(param) end
+---@param param System.Int32[]
+function UnityEngine.NullCheckTests.ArrayParameterNullAllowed(param) end
+---@param param System.Int32[]
+function UnityEngine.NullCheckTests.ArrayParameterNullNotAllowed(param) end
+---@param param UnityEngine.MarshallingTestObject
+function UnityEngine.NullCheckTests.ObjectParameterNullAllowed(param) end
+---@param param UnityEngine.MarshallingTestObject
+function UnityEngine.NullCheckTests.ObjectParameterNullNotAllowed(param) end
+---@param param UnityEngine.MarshallingTestObject
+function UnityEngine.NullCheckTests.WritableObjectParameterNullAllowed(param) end
+---@param param UnityEngine.MarshallingTestObject
+function UnityEngine.NullCheckTests.WritableObjectParameterNullNotAllowed(param) end
+---@param param UnityEngine.MyIntPtrObject
+function UnityEngine.NullCheckTests.IntPtrObjectParameterNullAllowed(param) end
+---@param param UnityEngine.MyIntPtrObject
+function UnityEngine.NullCheckTests.IntPtrObjectParameterNullNotAllowed(param) end
+
+---@class UnityEngine.MyManagedObject : System.Object
+---@field value number
+UnityEngine.MyManagedObject = {}
+---@alias CS.UnityEngine.MyManagedObject UnityEngine.MyManagedObject
+CS.UnityEngine.MyManagedObject = UnityEngine.MyManagedObject
+
+---@return UnityEngine.MyManagedObject
+function UnityEngine.MyManagedObject.New() end
+
+---@class UnityEngine.StructManagedObject : System.ValueType
+---@field field UnityEngine.MyManagedObject
+UnityEngine.StructManagedObject = {}
+---@alias CS.UnityEngine.StructManagedObject UnityEngine.StructManagedObject
+CS.UnityEngine.StructManagedObject = UnityEngine.StructManagedObject
+
+
+---@class UnityEngine.StructManagedObjectVector : System.ValueType
+---@field field UnityEngine.MyManagedObject[]
+UnityEngine.StructManagedObjectVector = {}
+---@alias CS.UnityEngine.StructManagedObjectVector UnityEngine.StructManagedObjectVector
+CS.UnityEngine.StructManagedObjectVector = UnityEngine.StructManagedObjectVector
+
+
+---@class UnityEngine.ManagedObjectTests : System.Object
+UnityEngine.ManagedObjectTests = {}
+---@alias CS.UnityEngine.ManagedObjectTests UnityEngine.ManagedObjectTests
+CS.UnityEngine.ManagedObjectTests = UnityEngine.ManagedObjectTests
+
+---@return UnityEngine.ManagedObjectTests
+function UnityEngine.ManagedObjectTests.New() end
+---@param param UnityEngine.MyManagedObject
+---@return UnityEngine.MyManagedObject
+function UnityEngine.ManagedObjectTests.ParameterManagedObject(param) end
+---@param param UnityEngine.StructManagedObject
+---@return UnityEngine.StructManagedObject
+function UnityEngine.ManagedObjectTests.ParameterStructManagedObject(param) end
+---@return UnityEngine.MyManagedObject[]
+function UnityEngine.ManagedObjectTests.ReturnNullManagedObjectArray() end
+---@param param UnityEngine.MyManagedObject[]
+---@return UnityEngine.MyManagedObject[]
+function UnityEngine.ManagedObjectTests.ParameterManagedObjectVector(param) end
+---@param param UnityEngine.StructManagedObjectVector
+---@return UnityEngine.StructManagedObjectVector
+function UnityEngine.ManagedObjectTests.ParameterStructManagedObjectVector(param) end
+
+---@class UnityEngine.StructSystemType : System.ValueType
+---@field field System.Type
+UnityEngine.StructSystemType = {}
+---@alias CS.UnityEngine.StructSystemType UnityEngine.StructSystemType
+CS.UnityEngine.StructSystemType = UnityEngine.StructSystemType
+
+
+---@class UnityEngine.StructSystemTypeArray : System.ValueType
+---@field field System.Type[]
+UnityEngine.StructSystemTypeArray = {}
+---@alias CS.UnityEngine.StructSystemTypeArray UnityEngine.StructSystemTypeArray
+CS.UnityEngine.StructSystemTypeArray = UnityEngine.StructSystemTypeArray
+
+
+---@class UnityEngine.SystemTypeMarshallingTests : System.Object
+UnityEngine.SystemTypeMarshallingTests = {}
+---@alias CS.UnityEngine.SystemTypeMarshallingTests UnityEngine.SystemTypeMarshallingTests
+CS.UnityEngine.SystemTypeMarshallingTests = UnityEngine.SystemTypeMarshallingTests
+
+---@param param System.Type
+---@return string
+function UnityEngine.SystemTypeMarshallingTests.CanMarshallSystemTypeArgumentToScriptingClassPtr(param) end
+---@param param UnityEngine.StructSystemType
+---@return string
+function UnityEngine.SystemTypeMarshallingTests.CanMarshallSystemTypeStructField(param) end
+---@param param UnityEngine.StructSystemTypeArray
+---@return System.String[]
+function UnityEngine.SystemTypeMarshallingTests.CanMarshallSystemTypeArrayStructField(param) end
+---@return UnityEngine.StructSystemType
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallSystemTypeStructField() end
+---@return UnityEngine.StructSystemTypeArray
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallSystemTypeArrayStructField() end
+---@param param System.Type[]
+---@return System.String[]
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfSystemTypeArgumentToVectorOfScriptingSystemTypeObjectPtr(param) end
+---@param param System.Type[]
+---@return System.String[]
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfSystemTypeArgumentToVectorOfUnityType(param) end
+---@param param System.Type[]
+---@return System.String[]
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfSystemTypeArgumentToVectorOfScriptingClassPtr(param) end
+---@return System.Type
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallScriptingSystemTypeObjectPtrToSystemType() end
+---@return System.Type
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallUnityTypeToSystemType() end
+---@return System.Type
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallScriptingClassPtrToSystemType() end
+---@return System.Type[]
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallScriptingArrayPtrToSystemTypeArray() end
+---@return System.Type[]
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfScriptingSystemTypeObjectPtrToSystemTypeArray() end
+---@return System.Type[]
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfUnityTypeToSystemTypeArray() end
+---@return System.Type[]
+function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfScriptingClassPtrToSystemTypeArray() end
+
+---@class UnityEngine.StructSystemReflectionFieldInfo : System.ValueType
+---@field field System.Reflection.FieldInfo
+UnityEngine.StructSystemReflectionFieldInfo = {}
+---@alias CS.UnityEngine.StructSystemReflectionFieldInfo UnityEngine.StructSystemReflectionFieldInfo
+CS.UnityEngine.StructSystemReflectionFieldInfo = UnityEngine.StructSystemReflectionFieldInfo
+
+
+---@class UnityEngine.StructSystemReflectionFieldInfoArray : System.ValueType
+---@field field System.Reflection.FieldInfo[]
+UnityEngine.StructSystemReflectionFieldInfoArray = {}
+---@alias CS.UnityEngine.StructSystemReflectionFieldInfoArray UnityEngine.StructSystemReflectionFieldInfoArray
+CS.UnityEngine.StructSystemReflectionFieldInfoArray = UnityEngine.StructSystemReflectionFieldInfoArray
+
+
+---@class UnityEngine.SystemReflectionFieldInfoMarshallingTests : System.Object
+UnityEngine.SystemReflectionFieldInfoMarshallingTests = {}
+---@alias CS.UnityEngine.SystemReflectionFieldInfoMarshallingTests UnityEngine.SystemReflectionFieldInfoMarshallingTests
+CS.UnityEngine.SystemReflectionFieldInfoMarshallingTests = UnityEngine.SystemReflectionFieldInfoMarshallingTests
+
+---@param param System.Reflection.FieldInfo
+---@return string
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanMarshallFieldInfoArgumentToScriptingFieldPtr(param) end
+---@param param UnityEngine.StructSystemReflectionFieldInfo
+---@return string
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanMarshallSystemReflectionFieldInfoStructField(param) end
+---@param param UnityEngine.StructSystemReflectionFieldInfoArray
+---@return System.String[]
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanMarshallSystemReflectionFieldInfoArrayStructField(param) end
+---@param param System.Reflection.FieldInfo[]
+---@return System.String[]
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanMarshallArrayOfFieldInfoArgumentToVectorOfScriptingFieldInfoObjectPtr(param) end
+---@param param System.Reflection.FieldInfo[]
+---@return System.String[]
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanMarshallArrayOfFieldInfoArgumentToVectorOfScriptingFieldPtr(param) end
+---@return UnityEngine.StructSystemReflectionFieldInfo
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallSystemReflectionFieldInfoStructField() end
+---@return UnityEngine.StructSystemReflectionFieldInfoArray
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallSystemReflectionFieldInfoArrayStructField() end
+---@return System.Reflection.FieldInfo
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallScriptingFieldInfoObjectPtrToFieldInfo() end
+---@return System.Reflection.FieldInfo
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallScriptingFieldPtrToFieldInfo() end
+---@return System.Reflection.FieldInfo[]
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallScriptingArrayPtrToFieldInfoArray() end
+---@return System.Reflection.FieldInfo[]
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallArrayOfScriptingFieldInfoObjectPtrToFieldInfoArray() end
+---@return System.Reflection.FieldInfo[]
+function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallArrayOfScriptingFieldPtrToFieldInfoArray() end
+
+---@class UnityEngine.StructSystemReflectionMethodInfo : System.ValueType
+---@field field System.Reflection.MethodInfo
+UnityEngine.StructSystemReflectionMethodInfo = {}
+---@alias CS.UnityEngine.StructSystemReflectionMethodInfo UnityEngine.StructSystemReflectionMethodInfo
+CS.UnityEngine.StructSystemReflectionMethodInfo = UnityEngine.StructSystemReflectionMethodInfo
+
+
+---@class UnityEngine.StructSystemReflectionMethodInfoArray : System.ValueType
+---@field field System.Reflection.MethodInfo[]
+UnityEngine.StructSystemReflectionMethodInfoArray = {}
+---@alias CS.UnityEngine.StructSystemReflectionMethodInfoArray UnityEngine.StructSystemReflectionMethodInfoArray
+CS.UnityEngine.StructSystemReflectionMethodInfoArray = UnityEngine.StructSystemReflectionMethodInfoArray
+
+
+---@class UnityEngine.SystemReflectionMethodInfoMarshallingTests : System.Object
+UnityEngine.SystemReflectionMethodInfoMarshallingTests = {}
+---@alias CS.UnityEngine.SystemReflectionMethodInfoMarshallingTests UnityEngine.SystemReflectionMethodInfoMarshallingTests
+CS.UnityEngine.SystemReflectionMethodInfoMarshallingTests = UnityEngine.SystemReflectionMethodInfoMarshallingTests
+
+---@param param System.Reflection.MethodInfo
+---@return string
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanMarshallMethodInfoArgumentToScriptingMethodPtr(param) end
+---@param param UnityEngine.StructSystemReflectionMethodInfo
+---@return string
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanMarshallSystemReflectionMethodInfoStructField(param) end
+---@param param UnityEngine.StructSystemReflectionMethodInfoArray
+---@return System.String[]
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanMarshallSystemReflectionMethodInfoArrayStructField(param) end
+---@param param System.Reflection.MethodInfo[]
+---@return System.String[]
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanMarshallArrayOfMethodInfoArgumentToVectorOfScriptingMethodInfoObjectPtr(param) end
+---@param param System.Reflection.MethodInfo[]
+---@return System.String[]
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanMarshallArrayOfMethodInfoArgumentToVectorOfScriptingMethodPtr(param) end
+---@return UnityEngine.StructSystemReflectionMethodInfo
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallSystemReflectionMethodInfoStructField() end
+---@return UnityEngine.StructSystemReflectionMethodInfoArray
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallSystemReflectionMethodInfoArrayStructField() end
+---@return System.Reflection.MethodInfo
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallScriptingMethodInfoObjectPtrToMethodInfo() end
+---@return System.Reflection.MethodInfo
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallScriptingMethodPtrToMethodInfo() end
+---@return System.Reflection.MethodInfo[]
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallScriptingArrayPtrToMethodInfoArray() end
+---@return System.Reflection.MethodInfo[]
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallArrayOfScriptingMethodInfoObjectPtrToMethodInfoArray() end
+---@return System.Reflection.MethodInfo[]
+function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallArrayOfScriptingMethodPtrToMethodInfoArray() end
+
+---@class UnityEngine.StructWithExternTests : System.ValueType
+---@field a number
+UnityEngine.StructWithExternTests = {}
+---@alias CS.UnityEngine.StructWithExternTests UnityEngine.StructWithExternTests
+CS.UnityEngine.StructWithExternTests = UnityEngine.StructWithExternTests
+
+---@param param number
+function UnityEngine.StructWithExternTests.ParameterInt(param) end
+---@return number
+function UnityEngine.StructWithExternTests.ReturnInt() end
+---@return number
+function UnityEngine.StructWithExternTests:GetTimesTwo() end
+function UnityEngine.StructWithExternTests:SetTimesThree() end
+---@param unityObject UnityEngine.Object
+---@return number
+function UnityEngine.StructWithExternTests:ParameterWritable(unityObject) end
+
+---@class UnityEngine.DelegateTests : System.Object
+UnityEngine.DelegateTests = {}
+---@alias CS.UnityEngine.DelegateTests UnityEngine.DelegateTests
+CS.UnityEngine.DelegateTests = UnityEngine.DelegateTests
+
+---@return UnityEngine.DelegateTests
+function UnityEngine.DelegateTests.New() end
+---@return number
+function UnityEngine.DelegateTests.A() end
+---@return number
+function UnityEngine.DelegateTests.B() end
+---@param someDelegate UnityEngine.DelegateTests.SomeDelegate
+---@return number
+function UnityEngine.DelegateTests.ReturnDelegate(someDelegate) end
+---@param SomeDelegateFunctionPtr UnityEngine.DelegateTests.SomeDelegateFunctionPtr
+---@return number
+function UnityEngine.DelegateTests.ReturnDelegateFunctionPtr(SomeDelegateFunctionPtr) end
+
+---@class UnityEngine.DelegateTests.SomeDelegate : System.MulticastDelegate
+UnityEngine.DelegateTests.SomeDelegate = {}
+---@alias CS.UnityEngine.DelegateTests.SomeDelegate UnityEngine.DelegateTests.SomeDelegate
+CS.UnityEngine.DelegateTests.SomeDelegate = UnityEngine.DelegateTests.SomeDelegate
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.DelegateTests.SomeDelegate
+function UnityEngine.DelegateTests.SomeDelegate.New(object, method) end
+---@return number
+function UnityEngine.DelegateTests.SomeDelegate:Invoke() end
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.DelegateTests.SomeDelegate:BeginInvoke(callback, object) end
+---@param result System.IAsyncResult
+---@return number
+function UnityEngine.DelegateTests.SomeDelegate:EndInvoke(result) end
+
+---@class UnityEngine.DelegateTests.SomeDelegateFunctionPtr : System.MulticastDelegate
+UnityEngine.DelegateTests.SomeDelegateFunctionPtr = {}
+---@alias CS.UnityEngine.DelegateTests.SomeDelegateFunctionPtr UnityEngine.DelegateTests.SomeDelegateFunctionPtr
+CS.UnityEngine.DelegateTests.SomeDelegateFunctionPtr = UnityEngine.DelegateTests.SomeDelegateFunctionPtr
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.DelegateTests.SomeDelegateFunctionPtr
+function UnityEngine.DelegateTests.SomeDelegateFunctionPtr.New(object, method) end
+---@return number
+function UnityEngine.DelegateTests.SomeDelegateFunctionPtr:Invoke() end
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.DelegateTests.SomeDelegateFunctionPtr:BeginInvoke(callback, object) end
+---@param result System.IAsyncResult
+---@return number
+function UnityEngine.DelegateTests.SomeDelegateFunctionPtr:EndInvoke(result) end
+
+---@class UnityEngine.ExceptionTests : System.Object
+---@field PropertyThatCanThrow number
+---@field PropertyGetThatCanThrow number
+---@field PropertySetThatCanThrow number
+UnityEngine.ExceptionTests = {}
+---@alias CS.UnityEngine.ExceptionTests UnityEngine.ExceptionTests
+CS.UnityEngine.ExceptionTests = UnityEngine.ExceptionTests
+
+---@return UnityEngine.ExceptionTests
+function UnityEngine.ExceptionTests.New() end
+---@param param string
+function UnityEngine.ExceptionTests.VoidReturnStringParameter(param) end
+---@return number
+function UnityEngine.ExceptionTests.NonUnmarshallingReturn() end
+---@return string
+function UnityEngine.ExceptionTests.UnmarshallingReturn() end
+---@return UnityEngine.StructInt
+function UnityEngine.ExceptionTests.BlittableStructReturn() end
+---@return UnityEngine.StructCoreString
+function UnityEngine.ExceptionTests.NonblittableStructReturn() end
+
+---@class UnityEngine.ExceptionTypeTests : System.Object
+UnityEngine.ExceptionTypeTests = {}
+---@alias CS.UnityEngine.ExceptionTypeTests UnityEngine.ExceptionTypeTests
+CS.UnityEngine.ExceptionTypeTests = UnityEngine.ExceptionTypeTests
+
+---@return UnityEngine.ExceptionTypeTests
+function UnityEngine.ExceptionTypeTests.New() end
+---@param nativeFormat string
+---@param values string
+function UnityEngine.ExceptionTypeTests.NullReferenceException(nativeFormat, values) end
+---@param argumentName string
+function UnityEngine.ExceptionTypeTests.ArgumentNullException(argumentName) end
+---@param nativeFormat string
+---@param values string
+function UnityEngine.ExceptionTypeTests.ArgumentException(nativeFormat, values) end
+---@param nativeFormat string
+---@param values string
+function UnityEngine.ExceptionTypeTests.InvalidOperationException(nativeFormat, values) end
+---@param nativeFormat string
+---@param index number
+function UnityEngine.ExceptionTypeTests.IndexOutOfRangeException(nativeFormat, index) end
+
+---@class UnityEngine.SomeEnum
+---@field A UnityEngine.SomeEnum
+---@field B UnityEngine.SomeEnum
+---@field C UnityEngine.SomeEnum
+UnityEngine.SomeEnum = {}
+---@alias CS.UnityEngine.SomeEnum UnityEngine.SomeEnum
+CS.UnityEngine.SomeEnum = UnityEngine.SomeEnum
+
+
+---@class UnityEngine.EnumTests : System.Object
+UnityEngine.EnumTests = {}
+---@alias CS.UnityEngine.EnumTests UnityEngine.EnumTests
+CS.UnityEngine.EnumTests = UnityEngine.EnumTests
+
+---@return UnityEngine.EnumTests
+function UnityEngine.EnumTests.New() end
+---@param enumArray UnityEngine.SomeEnum[]
+function UnityEngine.EnumTests.ParameterVectorEnum(enumArray) end
+---@param out_enumArray UnityEngine.SomeEnum
+---@return ,UnityEngine.SomeEnum
+function UnityEngine.EnumTests.ParameterOutVectorEnum(out_enumArray) end
+
+---@class UnityEngine.StructWithStringIntAndFloat : System.ValueType
+---@field a string
+---@field b number
+---@field c number
+UnityEngine.StructWithStringIntAndFloat = {}
+---@alias CS.UnityEngine.StructWithStringIntAndFloat UnityEngine.StructWithStringIntAndFloat
+CS.UnityEngine.StructWithStringIntAndFloat = UnityEngine.StructWithStringIntAndFloat
+
+---@param other System.Object
+---@return boolean
+function UnityEngine.StructWithStringIntAndFloat:Equals(other) end
+---@return number
+function UnityEngine.StructWithStringIntAndFloat:GetHashCode() end
+
+---@class UnityEngine.StructWithStringIntAndFloat2 : System.ValueType
+---@field a string
+---@field b number
+---@field c number
+UnityEngine.StructWithStringIntAndFloat2 = {}
+---@alias CS.UnityEngine.StructWithStringIntAndFloat2 UnityEngine.StructWithStringIntAndFloat2
+CS.UnityEngine.StructWithStringIntAndFloat2 = UnityEngine.StructWithStringIntAndFloat2
+
+
+---@class UnityEngine.StructWithStringIgnoredIntAndFloat : System.ValueType
+---@field a string
+---@field b number
+---@field c number
+UnityEngine.StructWithStringIgnoredIntAndFloat = {}
+---@alias CS.UnityEngine.StructWithStringIgnoredIntAndFloat UnityEngine.StructWithStringIgnoredIntAndFloat
+CS.UnityEngine.StructWithStringIgnoredIntAndFloat = UnityEngine.StructWithStringIgnoredIntAndFloat
+
+
+---@class UnityEngine.ClassToStruct : System.Object
+---@field intField number
+---@field stringField string
+UnityEngine.ClassToStruct = {}
+---@alias CS.UnityEngine.ClassToStruct UnityEngine.ClassToStruct
+CS.UnityEngine.ClassToStruct = UnityEngine.ClassToStruct
+
+---@return UnityEngine.ClassToStruct
+function UnityEngine.ClassToStruct.New() end
+
+---@class UnityEngine.StructWithClassToStruct : System.ValueType
+---@field classToStructField UnityEngine.ClassToStruct
+UnityEngine.StructWithClassToStruct = {}
+---@alias CS.UnityEngine.StructWithClassToStruct UnityEngine.StructWithClassToStruct
+CS.UnityEngine.StructWithClassToStruct = UnityEngine.StructWithClassToStruct
+
+
+---@class UnityEngine.StructWithNonBlittableArrayField : System.ValueType
+---@field field UnityEngine.StructWithStringIntAndFloat[]
+UnityEngine.StructWithNonBlittableArrayField = {}
+---@alias CS.UnityEngine.StructWithNonBlittableArrayField UnityEngine.StructWithNonBlittableArrayField
+CS.UnityEngine.StructWithNonBlittableArrayField = UnityEngine.StructWithNonBlittableArrayField
+
+
+---@class UnityEngine.NonBlittableStructTests : System.Object
+UnityEngine.NonBlittableStructTests = {}
+---@alias CS.UnityEngine.NonBlittableStructTests UnityEngine.NonBlittableStructTests
+CS.UnityEngine.NonBlittableStructTests = UnityEngine.NonBlittableStructTests
+
+---@return UnityEngine.NonBlittableStructTests
+function UnityEngine.NonBlittableStructTests.New() end
+---@param param UnityEngine.StructWithStringIntAndFloat
+function UnityEngine.NonBlittableStructTests.ParameterStructWithStringIntAndFloat(param) end
+---@param ref_param UnityEngine.StructWithStringIntAndFloat
+---@return ,UnityEngine.StructWithStringIntAndFloat
+function UnityEngine.NonBlittableStructTests.RefParameterStructWithStringIntAndFloat(ref_param) end
+---@param out_param UnityEngine.StructWithStringIntAndFloat
+---@return ,UnityEngine.StructWithStringIntAndFloat
+function UnityEngine.NonBlittableStructTests.OutParameterStructWithStringIntAndFloat(out_param) end
+---@param param UnityEngine.StructWithStringIntAndFloat2
+function UnityEngine.NonBlittableStructTests.ParameterStructWithStringIntAndFloat2(param) end
+---@param param UnityEngine.StructWithStringIgnoredIntAndFloat
+function UnityEngine.NonBlittableStructTests.ParameterStructWithStringIgnoredIntAndFloat(param) end
+---@param param UnityEngine.StructWithStringIntAndFloat[]
+function UnityEngine.NonBlittableStructTests.ParameterStructWithStringIntAndFloatArray(param) end
+---@return UnityEngine.StructWithStringIntAndFloat[]
+function UnityEngine.NonBlittableStructTests.ReturnStructWithStringIntAndFloatArray() end
+---@param param UnityEngine.StructWithNonBlittableArrayField
+function UnityEngine.NonBlittableStructTests.ParameterStructWithNonBlittableArrayField(param) end
+---@return UnityEngine.StructWithNonBlittableArrayField
+function UnityEngine.NonBlittableStructTests.ReturnStructWithNonBlittableArrayField() end
+---@param param UnityEngine.ClassToStruct
+function UnityEngine.NonBlittableStructTests.CanMarshalManagedObjectToStruct(param) end
+---@param out_param NullType
+---@return ,NullType
+function UnityEngine.NonBlittableStructTests.CanMarshalOutManagedObjectToStruct(out_param) end
+---@param param UnityEngine.StructWithClassToStruct
+function UnityEngine.NonBlittableStructTests.CanMarshalStructWithNativeAsStructField(param) end
+---@param param UnityEngine.ClassToStruct[]
+function UnityEngine.NonBlittableStructTests.CanMarshalNativeAsStructArray(param) end
+---@return UnityEngine.ClassToStruct
+function UnityEngine.NonBlittableStructTests.CanUnmarshalManagedObjectFromStruct() end
+---@return UnityEngine.StructWithClassToStruct
+function UnityEngine.NonBlittableStructTests.CanUnmarshalStructWithNativeAsStructField() end
+---@return UnityEngine.ClassToStruct[]
+function UnityEngine.NonBlittableStructTests.CanUnmarshalNativeAsStructArray() end
+
 ---@class UnityEngine.StructWithTypedefManagedName : System.ValueType
 UnityEngine.StructWithTypedefManagedName = {}
 ---@alias CS.UnityEngine.StructWithTypedefManagedName UnityEngine.StructWithTypedefManagedName
@@ -4314,702 +5006,3 @@ CS.UnityEngine.QueryParameters = UnityEngine.QueryParameters
 ---@param hitBackfaces boolean
 ---@return UnityEngine.QueryParameters
 function UnityEngine.QueryParameters.New(layerMask, hitMultipleFaces, hitTriggers, hitBackfaces) end
-
----@class UnityEngine.ColliderHit : System.ValueType
----@field instanceID number
----@field collider UnityEngine.Collider
-UnityEngine.ColliderHit = {}
----@alias CS.UnityEngine.ColliderHit UnityEngine.ColliderHit
-CS.UnityEngine.ColliderHit = UnityEngine.ColliderHit
-
-
----@class UnityEngine.RaycastCommand : System.ValueType
----@field queryParameters UnityEngine.QueryParameters
----@field from UnityEngine.Vector3
----@field direction UnityEngine.Vector3
----@field physicsScene UnityEngine.PhysicsScene
----@field distance number
-UnityEngine.RaycastCommand = {}
----@alias CS.UnityEngine.RaycastCommand UnityEngine.RaycastCommand
-CS.UnityEngine.RaycastCommand = UnityEngine.RaycastCommand
-
----@overload fun(from: UnityEngine.Vector3, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.RaycastCommand
----@overload fun(physicsScene: UnityEngine.PhysicsScene, from: UnityEngine.Vector3, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.RaycastCommand
----@overload fun(from: UnityEngine.Vector3, direction: UnityEngine.Vector3, distance: number, layerMask: number, maxHits: number) : UnityEngine.RaycastCommand
----@param physicsScene UnityEngine.PhysicsScene
----@param from UnityEngine.Vector3
----@param direction UnityEngine.Vector3
----@param distance number
----@param layerMask number
----@param maxHits number
----@return UnityEngine.RaycastCommand
-function UnityEngine.RaycastCommand.New(physicsScene, from, direction, distance, layerMask, maxHits) end
----@overload fun(commands: Unity.Collections.NativeArray, results: Unity.Collections.NativeArray, minCommandsPerJob: number, maxHits: number, dependsOn: Unity.Jobs.JobHandle) : Unity.Jobs.JobHandle
----@param commands Unity.Collections.NativeArray
----@param results Unity.Collections.NativeArray
----@param minCommandsPerJob number
----@param dependsOn Unity.Jobs.JobHandle
----@return Unity.Jobs.JobHandle
-function UnityEngine.RaycastCommand.ScheduleBatch(commands, results, minCommandsPerJob, dependsOn) end
-
----@class UnityEngine.SpherecastCommand : System.ValueType
----@field queryParameters UnityEngine.QueryParameters
----@field origin UnityEngine.Vector3
----@field radius number
----@field direction UnityEngine.Vector3
----@field distance number
----@field physicsScene UnityEngine.PhysicsScene
-UnityEngine.SpherecastCommand = {}
----@alias CS.UnityEngine.SpherecastCommand UnityEngine.SpherecastCommand
-CS.UnityEngine.SpherecastCommand = UnityEngine.SpherecastCommand
-
----@overload fun(origin: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.SpherecastCommand
----@overload fun(physicsScene: UnityEngine.PhysicsScene, origin: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.SpherecastCommand
----@overload fun(origin: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, distance: number, layerMask: number) : UnityEngine.SpherecastCommand
----@param physicsScene UnityEngine.PhysicsScene
----@param origin UnityEngine.Vector3
----@param radius number
----@param direction UnityEngine.Vector3
----@param distance number
----@param layerMask number
----@return UnityEngine.SpherecastCommand
-function UnityEngine.SpherecastCommand.New(physicsScene, origin, radius, direction, distance, layerMask) end
----@overload fun(commands: Unity.Collections.NativeArray, results: Unity.Collections.NativeArray, minCommandsPerJob: number, maxHits: number, dependsOn: Unity.Jobs.JobHandle) : Unity.Jobs.JobHandle
----@param commands Unity.Collections.NativeArray
----@param results Unity.Collections.NativeArray
----@param minCommandsPerJob number
----@param dependsOn Unity.Jobs.JobHandle
----@return Unity.Jobs.JobHandle
-function UnityEngine.SpherecastCommand.ScheduleBatch(commands, results, minCommandsPerJob, dependsOn) end
-
----@class UnityEngine.CapsulecastCommand : System.ValueType
----@field queryParameters UnityEngine.QueryParameters
----@field point1 UnityEngine.Vector3
----@field point2 UnityEngine.Vector3
----@field radius number
----@field direction UnityEngine.Vector3
----@field distance number
----@field physicsScene UnityEngine.PhysicsScene
-UnityEngine.CapsulecastCommand = {}
----@alias CS.UnityEngine.CapsulecastCommand UnityEngine.CapsulecastCommand
-CS.UnityEngine.CapsulecastCommand = UnityEngine.CapsulecastCommand
-
----@overload fun(p1: UnityEngine.Vector3, p2: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.CapsulecastCommand
----@overload fun(physicsScene: UnityEngine.PhysicsScene, p1: UnityEngine.Vector3, p2: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.CapsulecastCommand
----@overload fun(p1: UnityEngine.Vector3, p2: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, distance: number, layerMask: number) : UnityEngine.CapsulecastCommand
----@param physicsScene UnityEngine.PhysicsScene
----@param p1 UnityEngine.Vector3
----@param p2 UnityEngine.Vector3
----@param radius number
----@param direction UnityEngine.Vector3
----@param distance number
----@param layerMask number
----@return UnityEngine.CapsulecastCommand
-function UnityEngine.CapsulecastCommand.New(physicsScene, p1, p2, radius, direction, distance, layerMask) end
----@overload fun(commands: Unity.Collections.NativeArray, results: Unity.Collections.NativeArray, minCommandsPerJob: number, maxHits: number, dependsOn: Unity.Jobs.JobHandle) : Unity.Jobs.JobHandle
----@param commands Unity.Collections.NativeArray
----@param results Unity.Collections.NativeArray
----@param minCommandsPerJob number
----@param dependsOn Unity.Jobs.JobHandle
----@return Unity.Jobs.JobHandle
-function UnityEngine.CapsulecastCommand.ScheduleBatch(commands, results, minCommandsPerJob, dependsOn) end
-
----@class UnityEngine.BoxcastCommand : System.ValueType
----@field queryParameters UnityEngine.QueryParameters
----@field center UnityEngine.Vector3
----@field halfExtents UnityEngine.Vector3
----@field orientation UnityEngine.Quaternion
----@field direction UnityEngine.Vector3
----@field distance number
----@field physicsScene UnityEngine.PhysicsScene
-UnityEngine.BoxcastCommand = {}
----@alias CS.UnityEngine.BoxcastCommand UnityEngine.BoxcastCommand
-CS.UnityEngine.BoxcastCommand = UnityEngine.BoxcastCommand
-
----@overload fun(center: UnityEngine.Vector3, halfExtents: UnityEngine.Vector3, orientation: UnityEngine.Quaternion, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.BoxcastCommand
----@overload fun(physicsScene: UnityEngine.PhysicsScene, center: UnityEngine.Vector3, halfExtents: UnityEngine.Vector3, orientation: UnityEngine.Quaternion, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.BoxcastCommand
----@overload fun(center: UnityEngine.Vector3, halfExtents: UnityEngine.Vector3, orientation: UnityEngine.Quaternion, direction: UnityEngine.Vector3, distance: number, layerMask: number) : UnityEngine.BoxcastCommand
----@param physicsScene UnityEngine.PhysicsScene
----@param center UnityEngine.Vector3
----@param halfExtents UnityEngine.Vector3
----@param orientation UnityEngine.Quaternion
----@param direction UnityEngine.Vector3
----@param distance number
----@param layerMask number
----@return UnityEngine.BoxcastCommand
-function UnityEngine.BoxcastCommand.New(physicsScene, center, halfExtents, orientation, direction, distance, layerMask) end
----@overload fun(commands: Unity.Collections.NativeArray, results: Unity.Collections.NativeArray, minCommandsPerJob: number, maxHits: number, dependsOn: Unity.Jobs.JobHandle) : Unity.Jobs.JobHandle
----@param commands Unity.Collections.NativeArray
----@param results Unity.Collections.NativeArray
----@param minCommandsPerJob number
----@param dependsOn Unity.Jobs.JobHandle
----@return Unity.Jobs.JobHandle
-function UnityEngine.BoxcastCommand.ScheduleBatch(commands, results, minCommandsPerJob, dependsOn) end
-
----@class UnityEngine.ClosestPointCommand : System.ValueType
----@field point UnityEngine.Vector3
----@field colliderInstanceID number
----@field position UnityEngine.Vector3
----@field rotation UnityEngine.Quaternion
----@field scale UnityEngine.Vector3
-UnityEngine.ClosestPointCommand = {}
----@alias CS.UnityEngine.ClosestPointCommand UnityEngine.ClosestPointCommand
-CS.UnityEngine.ClosestPointCommand = UnityEngine.ClosestPointCommand
-
----@overload fun(point: UnityEngine.Vector3, colliderInstanceID: number, position: UnityEngine.Vector3, rotation: UnityEngine.Quaternion, scale: UnityEngine.Vector3) : UnityEngine.ClosestPointCommand
----@param point UnityEngine.Vector3
----@param collider UnityEngine.Collider
----@param position UnityEngine.Vector3
----@param rotation UnityEngine.Quaternion
----@param scale UnityEngine.Vector3
----@return UnityEngine.ClosestPointCommand
-function UnityEngine.ClosestPointCommand.New(point, collider, position, rotation, scale) end
----@param commands Unity.Collections.NativeArray
----@param results Unity.Collections.NativeArray
----@param minCommandsPerJob number
----@param dependsOn Unity.Jobs.JobHandle
----@return Unity.Jobs.JobHandle
-function UnityEngine.ClosestPointCommand.ScheduleBatch(commands, results, minCommandsPerJob, dependsOn) end
-
----@class UnityEngine.OverlapSphereCommand : System.ValueType
----@field queryParameters UnityEngine.QueryParameters
----@field point UnityEngine.Vector3
----@field radius number
----@field physicsScene UnityEngine.PhysicsScene
-UnityEngine.OverlapSphereCommand = {}
----@alias CS.UnityEngine.OverlapSphereCommand UnityEngine.OverlapSphereCommand
-CS.UnityEngine.OverlapSphereCommand = UnityEngine.OverlapSphereCommand
-
----@overload fun(point: UnityEngine.Vector3, radius: number, queryParameters: UnityEngine.QueryParameters) : UnityEngine.OverlapSphereCommand
----@param physicsScene UnityEngine.PhysicsScene
----@param point UnityEngine.Vector3
----@param radius number
----@param queryParameters UnityEngine.QueryParameters
----@return UnityEngine.OverlapSphereCommand
-function UnityEngine.OverlapSphereCommand.New(physicsScene, point, radius, queryParameters) end
----@param commands Unity.Collections.NativeArray
----@param results Unity.Collections.NativeArray
----@param minCommandsPerJob number
----@param maxHits number
----@param dependsOn Unity.Jobs.JobHandle
----@return Unity.Jobs.JobHandle
-function UnityEngine.OverlapSphereCommand.ScheduleBatch(commands, results, minCommandsPerJob, maxHits, dependsOn) end
-
----@class UnityEngine.OverlapBoxCommand : System.ValueType
----@field queryParameters UnityEngine.QueryParameters
----@field center UnityEngine.Vector3
----@field halfExtents UnityEngine.Vector3
----@field orientation UnityEngine.Quaternion
----@field physicsScene UnityEngine.PhysicsScene
-UnityEngine.OverlapBoxCommand = {}
----@alias CS.UnityEngine.OverlapBoxCommand UnityEngine.OverlapBoxCommand
-CS.UnityEngine.OverlapBoxCommand = UnityEngine.OverlapBoxCommand
-
----@overload fun(center: UnityEngine.Vector3, halfExtents: UnityEngine.Vector3, orientation: UnityEngine.Quaternion, queryParameters: UnityEngine.QueryParameters) : UnityEngine.OverlapBoxCommand
----@param physicsScene UnityEngine.PhysicsScene
----@param center UnityEngine.Vector3
----@param halfExtents UnityEngine.Vector3
----@param orientation UnityEngine.Quaternion
----@param queryParameters UnityEngine.QueryParameters
----@return UnityEngine.OverlapBoxCommand
-function UnityEngine.OverlapBoxCommand.New(physicsScene, center, halfExtents, orientation, queryParameters) end
----@param commands Unity.Collections.NativeArray
----@param results Unity.Collections.NativeArray
----@param minCommandsPerJob number
----@param maxHits number
----@param dependsOn Unity.Jobs.JobHandle
----@return Unity.Jobs.JobHandle
-function UnityEngine.OverlapBoxCommand.ScheduleBatch(commands, results, minCommandsPerJob, maxHits, dependsOn) end
-
----@class UnityEngine.OverlapCapsuleCommand : System.ValueType
----@field queryParameters UnityEngine.QueryParameters
----@field point0 UnityEngine.Vector3
----@field point1 UnityEngine.Vector3
----@field radius number
----@field physicsScene UnityEngine.PhysicsScene
-UnityEngine.OverlapCapsuleCommand = {}
----@alias CS.UnityEngine.OverlapCapsuleCommand UnityEngine.OverlapCapsuleCommand
-CS.UnityEngine.OverlapCapsuleCommand = UnityEngine.OverlapCapsuleCommand
-
----@overload fun(point0: UnityEngine.Vector3, point1: UnityEngine.Vector3, radius: number, queryParameters: UnityEngine.QueryParameters) : UnityEngine.OverlapCapsuleCommand
----@param physicsScene UnityEngine.PhysicsScene
----@param point0 UnityEngine.Vector3
----@param point1 UnityEngine.Vector3
----@param radius number
----@param queryParameters UnityEngine.QueryParameters
----@return UnityEngine.OverlapCapsuleCommand
-function UnityEngine.OverlapCapsuleCommand.New(physicsScene, point0, point1, radius, queryParameters) end
----@param commands Unity.Collections.NativeArray
----@param results Unity.Collections.NativeArray
----@param minCommandsPerJob number
----@param maxHits number
----@param dependsOn Unity.Jobs.JobHandle
----@return Unity.Jobs.JobHandle
-function UnityEngine.OverlapCapsuleCommand.ScheduleBatch(commands, results, minCommandsPerJob, maxHits, dependsOn) end
-
----@class UnityEngine.RaycastHit : System.ValueType
----@field collider UnityEngine.Collider
----@field colliderEntityId UnityEngine.EntityId
----@field point UnityEngine.Vector3
----@field normal UnityEngine.Vector3
----@field barycentricCoordinate UnityEngine.Vector3
----@field distance number
----@field triangleIndex number
----@field textureCoord UnityEngine.Vector2
----@field textureCoord2 UnityEngine.Vector2
----@field transform UnityEngine.Transform
----@field rigidbody UnityEngine.Rigidbody
----@field articulationBody UnityEngine.ArticulationBody
----@field lightmapCoord UnityEngine.Vector2
-UnityEngine.RaycastHit = {}
----@alias CS.UnityEngine.RaycastHit UnityEngine.RaycastHit
-CS.UnityEngine.RaycastHit = UnityEngine.RaycastHit
-
-
----@class UnityEngine.RigidbodyConstraints
----@field None UnityEngine.RigidbodyConstraints
----@field FreezePositionX UnityEngine.RigidbodyConstraints
----@field FreezePositionY UnityEngine.RigidbodyConstraints
----@field FreezePositionZ UnityEngine.RigidbodyConstraints
----@field FreezeRotationX UnityEngine.RigidbodyConstraints
----@field FreezeRotationY UnityEngine.RigidbodyConstraints
----@field FreezeRotationZ UnityEngine.RigidbodyConstraints
----@field FreezePosition UnityEngine.RigidbodyConstraints
----@field FreezeRotation UnityEngine.RigidbodyConstraints
----@field FreezeAll UnityEngine.RigidbodyConstraints
-UnityEngine.RigidbodyConstraints = {}
----@alias CS.UnityEngine.RigidbodyConstraints UnityEngine.RigidbodyConstraints
-CS.UnityEngine.RigidbodyConstraints = UnityEngine.RigidbodyConstraints
-
-
----@class UnityEngine.RigidbodyInterpolation
----@field None UnityEngine.RigidbodyInterpolation
----@field Interpolate UnityEngine.RigidbodyInterpolation
----@field Extrapolate UnityEngine.RigidbodyInterpolation
-UnityEngine.RigidbodyInterpolation = {}
----@alias CS.UnityEngine.RigidbodyInterpolation UnityEngine.RigidbodyInterpolation
-CS.UnityEngine.RigidbodyInterpolation = UnityEngine.RigidbodyInterpolation
-
-
----@class UnityEngine.Rigidbody : UnityEngine.Component
----@field linearVelocity UnityEngine.Vector3
----@field angularVelocity UnityEngine.Vector3
----@field linearDamping number
----@field angularDamping number
----@field mass number
----@field useGravity boolean
----@field maxDepenetrationVelocity number
----@field isKinematic boolean
----@field freezeRotation boolean
----@field constraints UnityEngine.RigidbodyConstraints
----@field collisionDetectionMode UnityEngine.CollisionDetectionMode
----@field automaticCenterOfMass boolean
----@field centerOfMass UnityEngine.Vector3
----@field worldCenterOfMass UnityEngine.Vector3
----@field automaticInertiaTensor boolean
----@field inertiaTensorRotation UnityEngine.Quaternion
----@field inertiaTensor UnityEngine.Vector3
----@field detectCollisions boolean
----@field position UnityEngine.Vector3
----@field rotation UnityEngine.Quaternion
----@field interpolation UnityEngine.RigidbodyInterpolation
----@field solverIterations number
----@field sleepThreshold number
----@field maxAngularVelocity number
----@field maxLinearVelocity number
----@field solverVelocityIterations number
----@field excludeLayers UnityEngine.LayerMask
----@field includeLayers UnityEngine.LayerMask
-UnityEngine.Rigidbody = {}
----@alias CS.UnityEngine.Rigidbody UnityEngine.Rigidbody
-CS.UnityEngine.Rigidbody = UnityEngine.Rigidbody
-
----@return UnityEngine.Rigidbody
-function UnityEngine.Rigidbody.New() end
----@param position UnityEngine.Vector3
-function UnityEngine.Rigidbody:MovePosition(position) end
----@param rotation UnityEngine.Quaternion
-function UnityEngine.Rigidbody:MoveRotation(rotation) end
----@param position UnityEngine.Vector3
----@param rotation UnityEngine.Quaternion
-function UnityEngine.Rigidbody:Move(position, rotation) end
-function UnityEngine.Rigidbody:Sleep() end
----@return boolean
-function UnityEngine.Rigidbody:IsSleeping() end
-function UnityEngine.Rigidbody:WakeUp() end
-function UnityEngine.Rigidbody:ResetCenterOfMass() end
-function UnityEngine.Rigidbody:ResetInertiaTensor() end
----@param relativePoint UnityEngine.Vector3
----@return UnityEngine.Vector3
-function UnityEngine.Rigidbody:GetRelativePointVelocity(relativePoint) end
----@param worldPoint UnityEngine.Vector3
----@return UnityEngine.Vector3
-function UnityEngine.Rigidbody:GetPointVelocity(worldPoint) end
-function UnityEngine.Rigidbody:PublishTransform() end
----@overload fun(self: UnityEngine.Rigidbody, step: number) : UnityEngine.Vector3
----@return UnityEngine.Vector3
-function UnityEngine.Rigidbody:GetAccumulatedForce() end
----@overload fun(self: UnityEngine.Rigidbody, step: number) : UnityEngine.Vector3
----@return UnityEngine.Vector3
-function UnityEngine.Rigidbody:GetAccumulatedTorque() end
----@overload fun(self: UnityEngine.Rigidbody, force: UnityEngine.Vector3, mode: UnityEngine.ForceMode)
----@overload fun(self: UnityEngine.Rigidbody, force: UnityEngine.Vector3)
----@overload fun(self: UnityEngine.Rigidbody, x: number, y: number, z: number, mode: UnityEngine.ForceMode)
----@param x number
----@param y number
----@param z number
-function UnityEngine.Rigidbody:AddForce(x, y, z) end
----@overload fun(self: UnityEngine.Rigidbody, force: UnityEngine.Vector3, mode: UnityEngine.ForceMode)
----@overload fun(self: UnityEngine.Rigidbody, force: UnityEngine.Vector3)
----@overload fun(self: UnityEngine.Rigidbody, x: number, y: number, z: number, mode: UnityEngine.ForceMode)
----@param x number
----@param y number
----@param z number
-function UnityEngine.Rigidbody:AddRelativeForce(x, y, z) end
----@overload fun(self: UnityEngine.Rigidbody, torque: UnityEngine.Vector3, mode: UnityEngine.ForceMode)
----@overload fun(self: UnityEngine.Rigidbody, torque: UnityEngine.Vector3)
----@overload fun(self: UnityEngine.Rigidbody, x: number, y: number, z: number, mode: UnityEngine.ForceMode)
----@param x number
----@param y number
----@param z number
-function UnityEngine.Rigidbody:AddTorque(x, y, z) end
----@overload fun(self: UnityEngine.Rigidbody, torque: UnityEngine.Vector3, mode: UnityEngine.ForceMode)
----@overload fun(self: UnityEngine.Rigidbody, torque: UnityEngine.Vector3)
----@overload fun(self: UnityEngine.Rigidbody, x: number, y: number, z: number, mode: UnityEngine.ForceMode)
----@param x number
----@param y number
----@param z number
-function UnityEngine.Rigidbody:AddRelativeTorque(x, y, z) end
----@overload fun(self: UnityEngine.Rigidbody, force: UnityEngine.Vector3, position: UnityEngine.Vector3, mode: UnityEngine.ForceMode)
----@param force UnityEngine.Vector3
----@param position UnityEngine.Vector3
-function UnityEngine.Rigidbody:AddForceAtPosition(force, position) end
----@overload fun(self: UnityEngine.Rigidbody, explosionForce: number, explosionPosition: UnityEngine.Vector3, explosionRadius: number, upwardsModifier: number, mode: UnityEngine.ForceMode)
----@overload fun(self: UnityEngine.Rigidbody, explosionForce: number, explosionPosition: UnityEngine.Vector3, explosionRadius: number, upwardsModifier: number)
----@param explosionForce number
----@param explosionPosition UnityEngine.Vector3
----@param explosionRadius number
-function UnityEngine.Rigidbody:AddExplosionForce(explosionForce, explosionPosition, explosionRadius) end
----@param position UnityEngine.Vector3
----@return UnityEngine.Vector3
-function UnityEngine.Rigidbody:ClosestPointOnBounds(position) end
----@overload fun(self: UnityEngine.Rigidbody, direction: UnityEngine.Vector3, out_hitInfo: UnityEngine.RaycastHit, maxDistance: number, queryTriggerInteraction: UnityEngine.QueryTriggerInteraction) : boolean, UnityEngine.RaycastHit
----@overload fun(self: UnityEngine.Rigidbody, direction: UnityEngine.Vector3, out_hitInfo: UnityEngine.RaycastHit, maxDistance: number) : boolean, UnityEngine.RaycastHit
----@param direction UnityEngine.Vector3
----@param out_hitInfo UnityEngine.RaycastHit
----@return boolean,UnityEngine.RaycastHit
-function UnityEngine.Rigidbody:SweepTest(direction, out_hitInfo) end
----@overload fun(self: UnityEngine.Rigidbody, direction: UnityEngine.Vector3, maxDistance: number, queryTriggerInteraction: UnityEngine.QueryTriggerInteraction) : UnityEngine.RaycastHit[]
----@overload fun(self: UnityEngine.Rigidbody, direction: UnityEngine.Vector3, maxDistance: number) : UnityEngine.RaycastHit[]
----@param direction UnityEngine.Vector3
----@return UnityEngine.RaycastHit[]
-function UnityEngine.Rigidbody:SweepTestAll(direction) end
-
----@class UnityEngine.SphereCollider : UnityEngine.Collider
----@field center UnityEngine.Vector3
----@field radius number
-UnityEngine.SphereCollider = {}
----@alias CS.UnityEngine.SphereCollider UnityEngine.SphereCollider
-CS.UnityEngine.SphereCollider = UnityEngine.SphereCollider
-
----@return UnityEngine.SphereCollider
-function UnityEngine.SphereCollider.New() end
-
----@class UnityEngine.SpringJoint : UnityEngine.Joint
----@field spring number
----@field damper number
----@field minDistance number
----@field maxDistance number
----@field tolerance number
-UnityEngine.SpringJoint = {}
----@alias CS.UnityEngine.SpringJoint UnityEngine.SpringJoint
-CS.UnityEngine.SpringJoint = UnityEngine.SpringJoint
-
----@return UnityEngine.SpringJoint
-function UnityEngine.SpringJoint.New() end
-
----@class UnityEngine.LowLevelPhysics.ImmediateTransform : System.ValueType
----@field Rotation UnityEngine.Quaternion
----@field Position UnityEngine.Vector3
-UnityEngine.LowLevelPhysics.ImmediateTransform = {}
----@alias CS.UnityEngine.LowLevelPhysics.ImmediateTransform UnityEngine.LowLevelPhysics.ImmediateTransform
-CS.UnityEngine.LowLevelPhysics.ImmediateTransform = UnityEngine.LowLevelPhysics.ImmediateTransform
-
-
----@class UnityEngine.LowLevelPhysics.ImmediateContact : System.ValueType
----@field Normal UnityEngine.Vector3
----@field Separation number
----@field Point UnityEngine.Vector3
-UnityEngine.LowLevelPhysics.ImmediateContact = {}
----@alias CS.UnityEngine.LowLevelPhysics.ImmediateContact UnityEngine.LowLevelPhysics.ImmediateContact
-CS.UnityEngine.LowLevelPhysics.ImmediateContact = UnityEngine.LowLevelPhysics.ImmediateContact
-
-
----@class UnityEngine.LowLevelPhysics.ImmediatePhysics : System.Object
-UnityEngine.LowLevelPhysics.ImmediatePhysics = {}
----@alias CS.UnityEngine.LowLevelPhysics.ImmediatePhysics UnityEngine.LowLevelPhysics.ImmediatePhysics
-CS.UnityEngine.LowLevelPhysics.ImmediatePhysics = UnityEngine.LowLevelPhysics.ImmediatePhysics
-
----@param geom1 Unity.Collections.NativeArray.ReadOnly
----@param geom2 Unity.Collections.NativeArray.ReadOnly
----@param xform1 Unity.Collections.NativeArray.ReadOnly
----@param xform2 Unity.Collections.NativeArray.ReadOnly
----@param pairCount number
----@param outContacts Unity.Collections.NativeArray
----@param outContactCounts Unity.Collections.NativeArray
----@param contactDistance number
----@return number
-function UnityEngine.LowLevelPhysics.ImmediatePhysics.GenerateContacts(geom1, geom2, xform1, xform2, pairCount, outContacts, outContactCounts, contactDistance) end
-
----@class UnityEngine.LowLevelPhysics.IGeometry
----@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
-UnityEngine.LowLevelPhysics.IGeometry = {}
----@alias CS.UnityEngine.LowLevelPhysics.IGeometry UnityEngine.LowLevelPhysics.IGeometry
-CS.UnityEngine.LowLevelPhysics.IGeometry = UnityEngine.LowLevelPhysics.IGeometry
-
-
----@class UnityEngine.LowLevelPhysics.BoxGeometry : System.ValueType
----@field HalfExtents UnityEngine.Vector3
----@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
-UnityEngine.LowLevelPhysics.BoxGeometry = {}
----@alias CS.UnityEngine.LowLevelPhysics.BoxGeometry UnityEngine.LowLevelPhysics.BoxGeometry
-CS.UnityEngine.LowLevelPhysics.BoxGeometry = UnityEngine.LowLevelPhysics.BoxGeometry
-
----@param halfExtents UnityEngine.Vector3
----@return UnityEngine.LowLevelPhysics.BoxGeometry
-function UnityEngine.LowLevelPhysics.BoxGeometry.New(halfExtents) end
-
----@class UnityEngine.LowLevelPhysics.SphereGeometry : System.ValueType
----@field Radius number
----@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
-UnityEngine.LowLevelPhysics.SphereGeometry = {}
----@alias CS.UnityEngine.LowLevelPhysics.SphereGeometry UnityEngine.LowLevelPhysics.SphereGeometry
-CS.UnityEngine.LowLevelPhysics.SphereGeometry = UnityEngine.LowLevelPhysics.SphereGeometry
-
----@param radius number
----@return UnityEngine.LowLevelPhysics.SphereGeometry
-function UnityEngine.LowLevelPhysics.SphereGeometry.New(radius) end
-
----@class UnityEngine.LowLevelPhysics.CapsuleGeometry : System.ValueType
----@field Radius number
----@field HalfLength number
----@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
-UnityEngine.LowLevelPhysics.CapsuleGeometry = {}
----@alias CS.UnityEngine.LowLevelPhysics.CapsuleGeometry UnityEngine.LowLevelPhysics.CapsuleGeometry
-CS.UnityEngine.LowLevelPhysics.CapsuleGeometry = UnityEngine.LowLevelPhysics.CapsuleGeometry
-
----@param radius number
----@param halfLength number
----@return UnityEngine.LowLevelPhysics.CapsuleGeometry
-function UnityEngine.LowLevelPhysics.CapsuleGeometry.New(radius, halfLength) end
-
----@class UnityEngine.LowLevelPhysics.ConvexMeshGeometry : System.ValueType
----@field Scale UnityEngine.Vector3
----@field ScaleAxisRotation UnityEngine.Quaternion
----@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
-UnityEngine.LowLevelPhysics.ConvexMeshGeometry = {}
----@alias CS.UnityEngine.LowLevelPhysics.ConvexMeshGeometry UnityEngine.LowLevelPhysics.ConvexMeshGeometry
-CS.UnityEngine.LowLevelPhysics.ConvexMeshGeometry = UnityEngine.LowLevelPhysics.ConvexMeshGeometry
-
-
----@class UnityEngine.LowLevelPhysics.TriangleMeshGeometry : System.ValueType
----@field Scale UnityEngine.Vector3
----@field ScaleAxisRotation UnityEngine.Quaternion
----@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
-UnityEngine.LowLevelPhysics.TriangleMeshGeometry = {}
----@alias CS.UnityEngine.LowLevelPhysics.TriangleMeshGeometry UnityEngine.LowLevelPhysics.TriangleMeshGeometry
-CS.UnityEngine.LowLevelPhysics.TriangleMeshGeometry = UnityEngine.LowLevelPhysics.TriangleMeshGeometry
-
-
----@class UnityEngine.LowLevelPhysics.TerrainGeometry : System.ValueType
----@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
-UnityEngine.LowLevelPhysics.TerrainGeometry = {}
----@alias CS.UnityEngine.LowLevelPhysics.TerrainGeometry UnityEngine.LowLevelPhysics.TerrainGeometry
-CS.UnityEngine.LowLevelPhysics.TerrainGeometry = UnityEngine.LowLevelPhysics.TerrainGeometry
-
-
----@class UnityEngine.LowLevelPhysics.GeometryType
----@field Sphere UnityEngine.LowLevelPhysics.GeometryType
----@field Capsule UnityEngine.LowLevelPhysics.GeometryType
----@field Box UnityEngine.LowLevelPhysics.GeometryType
----@field ConvexMesh UnityEngine.LowLevelPhysics.GeometryType
----@field TriangleMesh UnityEngine.LowLevelPhysics.GeometryType
----@field Terrain UnityEngine.LowLevelPhysics.GeometryType
----@field Invalid UnityEngine.LowLevelPhysics.GeometryType
-UnityEngine.LowLevelPhysics.GeometryType = {}
----@alias CS.UnityEngine.LowLevelPhysics.GeometryType UnityEngine.LowLevelPhysics.GeometryType
-CS.UnityEngine.LowLevelPhysics.GeometryType = UnityEngine.LowLevelPhysics.GeometryType
-
-
----@class UnityEngine.LowLevelPhysics.GeometryHolder : System.ValueType
----@field Type UnityEngine.LowLevelPhysics.GeometryType
-UnityEngine.LowLevelPhysics.GeometryHolder = {}
----@alias CS.UnityEngine.LowLevelPhysics.GeometryHolder UnityEngine.LowLevelPhysics.GeometryHolder
-CS.UnityEngine.LowLevelPhysics.GeometryHolder = UnityEngine.LowLevelPhysics.GeometryHolder
-
-
----@class UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension : System.Object
-UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension = {}
----@alias CS.UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension
-CS.UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension = UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension
-
----@param col UnityEngine.Collider
----@return UnityEngine.LowLevelPhysics.GeometryHolder
-function UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension.GetGeometryHolder(col) end
-
----@class UnityEngine.PhysicsScene2D : System.ValueType
----@field subStepCount number
----@field subStepLostTime number
-UnityEngine.PhysicsScene2D = {}
----@alias CS.UnityEngine.PhysicsScene2D UnityEngine.PhysicsScene2D
-CS.UnityEngine.PhysicsScene2D = UnityEngine.PhysicsScene2D
-
----@overload fun(collider: UnityEngine.Collider2D, results: UnityEngine.Collider2D[], layerMask: number) : number
----@overload fun(collider: UnityEngine.Collider2D, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
----@overload fun(collider: UnityEngine.Collider2D, results: System.Collections.Generic.List) : number
----@overload fun(collider: UnityEngine.Collider2D, contactFilter: UnityEngine.ContactFilter2D, results: System.Collections.Generic.List) : number
----@overload fun(position: UnityEngine.Vector2, angle: number, collider: UnityEngine.Collider2D, results: System.Collections.Generic.List) : number
----@param position UnityEngine.Vector2
----@param angle number
----@param collider UnityEngine.Collider2D
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D.OverlapCollider(position, angle, collider, contactFilter, results) end
----@return string
-function UnityEngine.PhysicsScene2D:ToString() end
----@return number
-function UnityEngine.PhysicsScene2D:GetHashCode() end
----@overload fun(self: UnityEngine.PhysicsScene2D, other: System.Object) : boolean
----@param other UnityEngine.PhysicsScene2D
----@return boolean
-function UnityEngine.PhysicsScene2D:Equals(other) end
----@return boolean
-function UnityEngine.PhysicsScene2D:IsValid() end
----@return boolean
-function UnityEngine.PhysicsScene2D:IsEmpty() end
----@overload fun(self: UnityEngine.PhysicsScene2D, deltaTime: number) : boolean
----@param deltaTime number
----@param simulationLayers number
----@return boolean
-function UnityEngine.PhysicsScene2D:Simulate(deltaTime, simulationLayers) end
----@overload fun(self: UnityEngine.PhysicsScene2D, start: UnityEngine.Vector2, _end: UnityEngine.Vector2, layerMask: number) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, start: UnityEngine.Vector2, _end: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, start: UnityEngine.Vector2, _end: UnityEngine.Vector2, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
----@overload fun(self: UnityEngine.PhysicsScene2D, start: UnityEngine.Vector2, _end: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.RaycastHit2D[]) : number
----@param start UnityEngine.Vector2
----@param _end UnityEngine.Vector2
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D:Linecast(start, _end, contactFilter, results) end
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, direction: UnityEngine.Vector2, distance: number, layerMask: number) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, direction: UnityEngine.Vector2, distance: number, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.RaycastHit2D[]) : number
----@param origin UnityEngine.Vector2
----@param direction UnityEngine.Vector2
----@param distance number
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D:Raycast(origin, direction, distance, contactFilter, results) end
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, radius: number, direction: UnityEngine.Vector2, distance: number, layerMask: number) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, radius: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, radius: number, direction: UnityEngine.Vector2, distance: number, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, radius: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.RaycastHit2D[]) : number
----@param origin UnityEngine.Vector2
----@param radius number
----@param direction UnityEngine.Vector2
----@param distance number
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D:CircleCast(origin, radius, direction, distance, contactFilter, results) end
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, direction: UnityEngine.Vector2, distance: number, layerMask: number) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, direction: UnityEngine.Vector2, distance: number, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.RaycastHit2D[]) : number
----@param origin UnityEngine.Vector2
----@param size UnityEngine.Vector2
----@param angle number
----@param direction UnityEngine.Vector2
----@param distance number
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D:BoxCast(origin, size, angle, direction, distance, contactFilter, results) end
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, capsuleDirection: UnityEngine.CapsuleDirection2D, angle: number, direction: UnityEngine.Vector2, distance: number, layerMask: number) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, capsuleDirection: UnityEngine.CapsuleDirection2D, angle: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, capsuleDirection: UnityEngine.CapsuleDirection2D, angle: number, direction: UnityEngine.Vector2, distance: number, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
----@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, capsuleDirection: UnityEngine.CapsuleDirection2D, angle: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.RaycastHit2D[]) : number
----@param origin UnityEngine.Vector2
----@param size UnityEngine.Vector2
----@param capsuleDirection UnityEngine.CapsuleDirection2D
----@param angle number
----@param direction UnityEngine.Vector2
----@param distance number
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D:CapsuleCast(origin, size, capsuleDirection, angle, direction, distance, contactFilter, results) end
----@overload fun(self: UnityEngine.PhysicsScene2D, ray: UnityEngine.Ray, distance: number, layerMask: number) : UnityEngine.RaycastHit2D
----@overload fun(self: UnityEngine.PhysicsScene2D, ray: UnityEngine.Ray, distance: number, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
----@param ray UnityEngine.Ray
----@param distance number
----@param results System.Collections.Generic.List
----@param layerMask number
----@return number
-function UnityEngine.PhysicsScene2D:GetRayIntersection(ray, distance, results, layerMask) end
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, layerMask: number) : UnityEngine.Collider2D
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.Collider2D
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, results: UnityEngine.Collider2D[], layerMask: number) : number
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
----@param point UnityEngine.Vector2
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D:OverlapPoint(point, contactFilter, results) end
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, radius: number, layerMask: number) : UnityEngine.Collider2D
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, radius: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.Collider2D
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, radius: number, results: UnityEngine.Collider2D[], layerMask: number) : number
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, radius: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
----@param point UnityEngine.Vector2
----@param radius number
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D:OverlapCircle(point, radius, contactFilter, results) end
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, layerMask: number) : UnityEngine.Collider2D
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.Collider2D
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, results: UnityEngine.Collider2D[], layerMask: number) : number
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
----@param point UnityEngine.Vector2
----@param size UnityEngine.Vector2
----@param angle number
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D:OverlapBox(point, size, angle, contactFilter, results) end
----@overload fun(self: UnityEngine.PhysicsScene2D, pointA: UnityEngine.Vector2, pointB: UnityEngine.Vector2, layerMask: number) : UnityEngine.Collider2D
----@overload fun(self: UnityEngine.PhysicsScene2D, pointA: UnityEngine.Vector2, pointB: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.Collider2D
----@overload fun(self: UnityEngine.PhysicsScene2D, pointA: UnityEngine.Vector2, pointB: UnityEngine.Vector2, results: UnityEngine.Collider2D[], layerMask: number) : number
----@overload fun(self: UnityEngine.PhysicsScene2D, pointA: UnityEngine.Vector2, pointB: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
----@param pointA UnityEngine.Vector2
----@param pointB UnityEngine.Vector2
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D:OverlapArea(pointA, pointB, contactFilter, results) end
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, direction: UnityEngine.CapsuleDirection2D, angle: number, layerMask: number) : UnityEngine.Collider2D
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, direction: UnityEngine.CapsuleDirection2D, angle: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.Collider2D
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, direction: UnityEngine.CapsuleDirection2D, angle: number, results: UnityEngine.Collider2D[], layerMask: number) : number
----@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, direction: UnityEngine.CapsuleDirection2D, angle: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
----@param point UnityEngine.Vector2
----@param size UnityEngine.Vector2
----@param direction UnityEngine.CapsuleDirection2D
----@param angle number
----@param contactFilter UnityEngine.ContactFilter2D
----@param results System.Collections.Generic.List
----@return number
-function UnityEngine.PhysicsScene2D:OverlapCapsule(point, size, direction, angle, contactFilter, results) end

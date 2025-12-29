@@ -1,5 +1,613 @@
 ---@meta
 
+---@class UnityEngine.Windows.WebCam.VideoCapture.CaptureResultType
+---@field Success UnityEngine.Windows.WebCam.VideoCapture.CaptureResultType
+---@field UnknownError UnityEngine.Windows.WebCam.VideoCapture.CaptureResultType
+UnityEngine.Windows.WebCam.VideoCapture.CaptureResultType = {}
+---@alias CS.UnityEngine.Windows.WebCam.VideoCapture.CaptureResultType UnityEngine.Windows.WebCam.VideoCapture.CaptureResultType
+CS.UnityEngine.Windows.WebCam.VideoCapture.CaptureResultType = UnityEngine.Windows.WebCam.VideoCapture.CaptureResultType
+
+
+---@class UnityEngine.Windows.WebCam.VideoCapture.AudioState
+---@field MicAudio UnityEngine.Windows.WebCam.VideoCapture.AudioState
+---@field ApplicationAudio UnityEngine.Windows.WebCam.VideoCapture.AudioState
+---@field ApplicationAndMicAudio UnityEngine.Windows.WebCam.VideoCapture.AudioState
+---@field None UnityEngine.Windows.WebCam.VideoCapture.AudioState
+UnityEngine.Windows.WebCam.VideoCapture.AudioState = {}
+---@alias CS.UnityEngine.Windows.WebCam.VideoCapture.AudioState UnityEngine.Windows.WebCam.VideoCapture.AudioState
+CS.UnityEngine.Windows.WebCam.VideoCapture.AudioState = UnityEngine.Windows.WebCam.VideoCapture.AudioState
+
+
+---@class UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult : System.ValueType
+---@field resultType UnityEngine.Windows.WebCam.VideoCapture.CaptureResultType
+---@field hResult number
+---@field success boolean
+UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult = {}
+---@alias CS.UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult
+CS.UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult = UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult
+
+
+---@class UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback : System.MulticastDelegate
+UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback = {}
+---@alias CS.UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback
+CS.UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback = UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback.New(object, method) end
+---@param captureObject UnityEngine.Windows.WebCam.VideoCapture
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback:Invoke(captureObject) end
+---@param captureObject UnityEngine.Windows.WebCam.VideoCapture
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback:BeginInvoke(captureObject, callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoCaptureResourceCreatedCallback:EndInvoke(result) end
+
+---@class UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback : System.MulticastDelegate
+UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback = {}
+---@alias CS.UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback
+CS.UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback = UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback.New(object, method) end
+---@param result UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback:Invoke(result) end
+---@param result UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback:BeginInvoke(result, callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStartedCallback:EndInvoke(result) end
+
+---@class UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback : System.MulticastDelegate
+UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback = {}
+---@alias CS.UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback
+CS.UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback = UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback.New(object, method) end
+---@param result UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback:Invoke(result) end
+---@param result UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback:BeginInvoke(result, callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnVideoModeStoppedCallback:EndInvoke(result) end
+
+---@class UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback : System.MulticastDelegate
+UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback = {}
+---@alias CS.UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback
+CS.UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback = UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback
+function UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback.New(object, method) end
+---@param result UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback:Invoke(result) end
+---@param result UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback:BeginInvoke(result, callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnStartedRecordingVideoCallback:EndInvoke(result) end
+
+---@class UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback : System.MulticastDelegate
+UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback = {}
+---@alias CS.UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback
+CS.UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback = UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback
+function UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback.New(object, method) end
+---@param result UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback:Invoke(result) end
+---@param result UnityEngine.Windows.WebCam.VideoCapture.VideoCaptureResult
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback:BeginInvoke(result, callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.Windows.WebCam.VideoCapture.OnStoppedRecordingVideoCallback:EndInvoke(result) end
+
+---@class UnityEngine.Windows.WebCam.VideoCapture.BindingsMarshaller : System.Object
+UnityEngine.Windows.WebCam.VideoCapture.BindingsMarshaller = {}
+---@alias CS.UnityEngine.Windows.WebCam.VideoCapture.BindingsMarshaller UnityEngine.Windows.WebCam.VideoCapture.BindingsMarshaller
+CS.UnityEngine.Windows.WebCam.VideoCapture.BindingsMarshaller = UnityEngine.Windows.WebCam.VideoCapture.BindingsMarshaller
+
+---@param videoCapture UnityEngine.Windows.WebCam.VideoCapture
+---@return System.IntPtr
+function UnityEngine.Windows.WebCam.VideoCapture.BindingsMarshaller.ConvertToNative(videoCapture) end
+
+---@class UnityEngine.Windows.WebCam.CapturePixelFormat
+---@field BGRA32 UnityEngine.Windows.WebCam.CapturePixelFormat
+---@field NV12 UnityEngine.Windows.WebCam.CapturePixelFormat
+---@field JPEG UnityEngine.Windows.WebCam.CapturePixelFormat
+---@field PNG UnityEngine.Windows.WebCam.CapturePixelFormat
+UnityEngine.Windows.WebCam.CapturePixelFormat = {}
+---@alias CS.UnityEngine.Windows.WebCam.CapturePixelFormat UnityEngine.Windows.WebCam.CapturePixelFormat
+CS.UnityEngine.Windows.WebCam.CapturePixelFormat = UnityEngine.Windows.WebCam.CapturePixelFormat
+
+
+---@class UnityEngine.Windows.WebCam.WebCamMode
+---@field None UnityEngine.Windows.WebCam.WebCamMode
+---@field PhotoMode UnityEngine.Windows.WebCam.WebCamMode
+---@field VideoMode UnityEngine.Windows.WebCam.WebCamMode
+UnityEngine.Windows.WebCam.WebCamMode = {}
+---@alias CS.UnityEngine.Windows.WebCam.WebCamMode UnityEngine.Windows.WebCam.WebCamMode
+CS.UnityEngine.Windows.WebCam.WebCamMode = UnityEngine.Windows.WebCam.WebCamMode
+
+
+---@class UnityEngine.Windows.WebCam.WebCam : System.Object
+---@field Mode UnityEngine.Windows.WebCam.WebCamMode
+UnityEngine.Windows.WebCam.WebCam = {}
+---@alias CS.UnityEngine.Windows.WebCam.WebCam UnityEngine.Windows.WebCam.WebCam
+CS.UnityEngine.Windows.WebCam.WebCam = UnityEngine.Windows.WebCam.WebCam
+
+---@return UnityEngine.Windows.WebCam.WebCam
+function UnityEngine.Windows.WebCam.WebCam.New() end
+
+---@class UnityEngine.Windows.WebCam.CameraParameters : System.ValueType
+---@field hologramOpacity number
+---@field frameRate number
+---@field cameraResolutionWidth number
+---@field cameraResolutionHeight number
+---@field pixelFormat UnityEngine.Windows.WebCam.CapturePixelFormat
+UnityEngine.Windows.WebCam.CameraParameters = {}
+---@alias CS.UnityEngine.Windows.WebCam.CameraParameters UnityEngine.Windows.WebCam.CameraParameters
+CS.UnityEngine.Windows.WebCam.CameraParameters = UnityEngine.Windows.WebCam.CameraParameters
+
+---@param webCamMode UnityEngine.Windows.WebCam.WebCamMode
+---@return UnityEngine.Windows.WebCam.CameraParameters
+function UnityEngine.Windows.WebCam.CameraParameters.New(webCamMode) end
+
+---@class UnityEngine.Events.PropertyHelper : System.Object
+---@field propertyChangedEvent UnityEngine.Events.PropertyHelper.PropertyChangedEvent[TBase]
+UnityEngine.Events.PropertyHelper = {}
+---@alias CS.UnityEngine.Events.PropertyHelper UnityEngine.Events.PropertyHelper
+CS.UnityEngine.Events.PropertyHelper = UnityEngine.Events.PropertyHelper
+
+---@return UnityEngine.Events.PropertyHelper
+function UnityEngine.Events.PropertyHelper.New() end
+---@param instance TBase
+---@param propertyName string
+function UnityEngine.Events.PropertyHelper:NotifyValueChange(instance, propertyName) end
+
+---@class UnityEngine.Events.PropertyHelper.IEventHolder
+UnityEngine.Events.PropertyHelper.IEventHolder = {}
+---@alias CS.UnityEngine.Events.PropertyHelper.IEventHolder UnityEngine.Events.PropertyHelper.IEventHolder
+CS.UnityEngine.Events.PropertyHelper.IEventHolder = UnityEngine.Events.PropertyHelper.IEventHolder
+
+---@param setting TBase
+---@param property string
+function UnityEngine.Events.PropertyHelper.IEventHolder:Invoke(setting, property) end
+---@return boolean
+function UnityEngine.Events.PropertyHelper.IEventHolder:IsEmpty() end
+
+---@class UnityEngine.Events.PropertyHelper.EventHolder : System.Object
+UnityEngine.Events.PropertyHelper.EventHolder = {}
+---@alias CS.UnityEngine.Events.PropertyHelper.EventHolder UnityEngine.Events.PropertyHelper.EventHolder
+CS.UnityEngine.Events.PropertyHelper.EventHolder = UnityEngine.Events.PropertyHelper.EventHolder
+
+---@return UnityEngine.Events.PropertyHelper.EventHolder
+function UnityEngine.Events.PropertyHelper.EventHolder.New() end
+
+---@class UnityEngine.Events.PropertyHelper.PropertyChangedEvent : System.ValueType
+UnityEngine.Events.PropertyHelper.PropertyChangedEvent = {}
+---@alias CS.UnityEngine.Events.PropertyHelper.PropertyChangedEvent UnityEngine.Events.PropertyHelper.PropertyChangedEvent
+CS.UnityEngine.Events.PropertyHelper.PropertyChangedEvent = UnityEngine.Events.PropertyHelper.PropertyChangedEvent
+
+---@return UnityEngine.Events.PropertyHelper.PropertyChangedEvent
+function UnityEngine.Events.PropertyHelper.PropertyChangedEvent.New() end
+---@param instance TBase
+---@param propertyName string
+function UnityEngine.Events.PropertyHelper.PropertyChangedEvent:Notify(instance, propertyName) end
+
+---@class UnityEngine.Events.PersistentListenerMode
+---@field EventDefined UnityEngine.Events.PersistentListenerMode
+---@field Void UnityEngine.Events.PersistentListenerMode
+---@field Object UnityEngine.Events.PersistentListenerMode
+---@field Int UnityEngine.Events.PersistentListenerMode
+---@field Float UnityEngine.Events.PersistentListenerMode
+---@field String UnityEngine.Events.PersistentListenerMode
+---@field Bool UnityEngine.Events.PersistentListenerMode
+UnityEngine.Events.PersistentListenerMode = {}
+---@alias CS.UnityEngine.Events.PersistentListenerMode UnityEngine.Events.PersistentListenerMode
+CS.UnityEngine.Events.PersistentListenerMode = UnityEngine.Events.PersistentListenerMode
+
+
+---@class UnityEngine.Events.UnityEventTools : System.Object
+UnityEngine.Events.UnityEventTools = {}
+---@alias CS.UnityEngine.Events.UnityEventTools UnityEngine.Events.UnityEventTools
+CS.UnityEngine.Events.UnityEventTools = UnityEngine.Events.UnityEventTools
+
+---@return UnityEngine.Events.UnityEventTools
+function UnityEngine.Events.UnityEventTools.New() end
+
+---@class UnityEngine.Events.ArgumentCache : System.Object
+---@field unityObjectArgument UnityEngine.Object
+---@field unityObjectArgumentAssemblyTypeName string
+---@field intArgument number
+---@field floatArgument number
+---@field stringArgument string
+---@field boolArgument boolean
+UnityEngine.Events.ArgumentCache = {}
+---@alias CS.UnityEngine.Events.ArgumentCache UnityEngine.Events.ArgumentCache
+CS.UnityEngine.Events.ArgumentCache = UnityEngine.Events.ArgumentCache
+
+---@return UnityEngine.Events.ArgumentCache
+function UnityEngine.Events.ArgumentCache.New() end
+function UnityEngine.Events.ArgumentCache:OnBeforeSerialize() end
+function UnityEngine.Events.ArgumentCache:OnAfterDeserialize() end
+
+---@class UnityEngine.Events.BaseInvokableCall : System.Object
+UnityEngine.Events.BaseInvokableCall = {}
+---@alias CS.UnityEngine.Events.BaseInvokableCall UnityEngine.Events.BaseInvokableCall
+CS.UnityEngine.Events.BaseInvokableCall = UnityEngine.Events.BaseInvokableCall
+
+---@param args System.Object[]
+function UnityEngine.Events.BaseInvokableCall:Invoke(args) end
+---@param targetObj System.Object
+---@param method System.Reflection.MethodInfo
+---@return boolean
+function UnityEngine.Events.BaseInvokableCall:Find(targetObj, method) end
+
+---@class UnityEngine.Events.InvokableCall : UnityEngine.Events.BaseInvokableCall
+UnityEngine.Events.InvokableCall = {}
+---@alias CS.UnityEngine.Events.InvokableCall UnityEngine.Events.InvokableCall
+CS.UnityEngine.Events.InvokableCall = UnityEngine.Events.InvokableCall
+
+---@overload fun(target: System.Object, theFunction: System.Reflection.MethodInfo) : UnityEngine.Events.InvokableCall
+---@param action UnityEngine.Events.UnityAction
+---@return UnityEngine.Events.InvokableCall
+function UnityEngine.Events.InvokableCall.New(action) end
+---@overload fun(self: UnityEngine.Events.InvokableCall, args: System.Object[])
+function UnityEngine.Events.InvokableCall:Invoke() end
+---@param targetObj System.Object
+---@param method System.Reflection.MethodInfo
+---@return boolean
+function UnityEngine.Events.InvokableCall:Find(targetObj, method) end
+
+---@class UnityEngine.Events.InvokableCall : UnityEngine.Events.BaseInvokableCall
+UnityEngine.Events.InvokableCall = {}
+---@alias CS.UnityEngine.Events.InvokableCall UnityEngine.Events.InvokableCall
+CS.UnityEngine.Events.InvokableCall = UnityEngine.Events.InvokableCall
+
+---@overload fun(target: System.Object, theFunction: System.Reflection.MethodInfo) : UnityEngine.Events.InvokableCall
+---@param action UnityEngine.Events.UnityAction[T1]
+---@return UnityEngine.Events.InvokableCall
+function UnityEngine.Events.InvokableCall.New(action) end
+---@overload fun(self: UnityEngine.Events.InvokableCall, args: System.Object[])
+---@param args0 T1
+function UnityEngine.Events.InvokableCall:Invoke(args0) end
+---@param targetObj System.Object
+---@param method System.Reflection.MethodInfo
+---@return boolean
+function UnityEngine.Events.InvokableCall:Find(targetObj, method) end
+
+---@class UnityEngine.Events.InvokableCall : UnityEngine.Events.BaseInvokableCall
+UnityEngine.Events.InvokableCall = {}
+---@alias CS.UnityEngine.Events.InvokableCall UnityEngine.Events.InvokableCall
+CS.UnityEngine.Events.InvokableCall = UnityEngine.Events.InvokableCall
+
+---@overload fun(target: System.Object, theFunction: System.Reflection.MethodInfo) : UnityEngine.Events.InvokableCall
+---@param action UnityEngine.Events.UnityAction[T1,T2]
+---@return UnityEngine.Events.InvokableCall
+function UnityEngine.Events.InvokableCall.New(action) end
+---@overload fun(self: UnityEngine.Events.InvokableCall, args: System.Object[])
+---@param args0 T1
+---@param args1 T2
+function UnityEngine.Events.InvokableCall:Invoke(args0, args1) end
+---@param targetObj System.Object
+---@param method System.Reflection.MethodInfo
+---@return boolean
+function UnityEngine.Events.InvokableCall:Find(targetObj, method) end
+
+---@class UnityEngine.Events.InvokableCall : UnityEngine.Events.BaseInvokableCall
+UnityEngine.Events.InvokableCall = {}
+---@alias CS.UnityEngine.Events.InvokableCall UnityEngine.Events.InvokableCall
+CS.UnityEngine.Events.InvokableCall = UnityEngine.Events.InvokableCall
+
+---@overload fun(target: System.Object, theFunction: System.Reflection.MethodInfo) : UnityEngine.Events.InvokableCall
+---@param action UnityEngine.Events.UnityAction[T1,T2,T3]
+---@return UnityEngine.Events.InvokableCall
+function UnityEngine.Events.InvokableCall.New(action) end
+---@overload fun(self: UnityEngine.Events.InvokableCall, args: System.Object[])
+---@param args0 T1
+---@param args1 T2
+---@param args2 T3
+function UnityEngine.Events.InvokableCall:Invoke(args0, args1, args2) end
+---@param targetObj System.Object
+---@param method System.Reflection.MethodInfo
+---@return boolean
+function UnityEngine.Events.InvokableCall:Find(targetObj, method) end
+
+---@class UnityEngine.Events.InvokableCall : UnityEngine.Events.BaseInvokableCall
+UnityEngine.Events.InvokableCall = {}
+---@alias CS.UnityEngine.Events.InvokableCall UnityEngine.Events.InvokableCall
+CS.UnityEngine.Events.InvokableCall = UnityEngine.Events.InvokableCall
+
+---@overload fun(target: System.Object, theFunction: System.Reflection.MethodInfo) : UnityEngine.Events.InvokableCall
+---@param action UnityEngine.Events.UnityAction[T1,T2,T3,T4]
+---@return UnityEngine.Events.InvokableCall
+function UnityEngine.Events.InvokableCall.New(action) end
+---@overload fun(self: UnityEngine.Events.InvokableCall, args: System.Object[])
+---@param args0 T1
+---@param args1 T2
+---@param args2 T3
+---@param args3 T4
+function UnityEngine.Events.InvokableCall:Invoke(args0, args1, args2, args3) end
+---@param targetObj System.Object
+---@param method System.Reflection.MethodInfo
+---@return boolean
+function UnityEngine.Events.InvokableCall:Find(targetObj, method) end
+
+---@class UnityEngine.Events.CachedInvokableCall : UnityEngine.Events.InvokableCall[T]
+UnityEngine.Events.CachedInvokableCall = {}
+---@alias CS.UnityEngine.Events.CachedInvokableCall UnityEngine.Events.CachedInvokableCall
+CS.UnityEngine.Events.CachedInvokableCall = UnityEngine.Events.CachedInvokableCall
+
+---@param target UnityEngine.Object
+---@param theFunction System.Reflection.MethodInfo
+---@param argument T
+---@return UnityEngine.Events.CachedInvokableCall
+function UnityEngine.Events.CachedInvokableCall.New(target, theFunction, argument) end
+---@overload fun(self: UnityEngine.Events.CachedInvokableCall, args: System.Object[])
+---@param arg0 T
+function UnityEngine.Events.CachedInvokableCall:Invoke(arg0) end
+
+---@class UnityEngine.Events.UnityEventCallState
+---@field Off UnityEngine.Events.UnityEventCallState
+---@field EditorAndRuntime UnityEngine.Events.UnityEventCallState
+---@field RuntimeOnly UnityEngine.Events.UnityEventCallState
+UnityEngine.Events.UnityEventCallState = {}
+---@alias CS.UnityEngine.Events.UnityEventCallState UnityEngine.Events.UnityEventCallState
+CS.UnityEngine.Events.UnityEventCallState = UnityEngine.Events.UnityEventCallState
+
+
+---@class UnityEngine.Events.PersistentCall : System.Object
+---@field target UnityEngine.Object
+---@field targetAssemblyTypeName string
+---@field methodName string
+---@field mode UnityEngine.Events.PersistentListenerMode
+---@field arguments UnityEngine.Events.ArgumentCache
+---@field callState UnityEngine.Events.UnityEventCallState
+UnityEngine.Events.PersistentCall = {}
+---@alias CS.UnityEngine.Events.PersistentCall UnityEngine.Events.PersistentCall
+CS.UnityEngine.Events.PersistentCall = UnityEngine.Events.PersistentCall
+
+---@return UnityEngine.Events.PersistentCall
+function UnityEngine.Events.PersistentCall.New() end
+---@return boolean
+function UnityEngine.Events.PersistentCall:IsValid() end
+---@param theEvent UnityEngine.Events.UnityEventBase
+---@return UnityEngine.Events.BaseInvokableCall
+function UnityEngine.Events.PersistentCall:GetRuntimeCall(theEvent) end
+---@param ttarget UnityEngine.Object
+---@param targetType System.Type
+---@param mmethodName string
+function UnityEngine.Events.PersistentCall:RegisterPersistentListener(ttarget, targetType, mmethodName) end
+function UnityEngine.Events.PersistentCall:UnregisterPersistentListener() end
+function UnityEngine.Events.PersistentCall:OnBeforeSerialize() end
+function UnityEngine.Events.PersistentCall:OnAfterDeserialize() end
+
+---@class UnityEngine.Events.PersistentCallGroup : System.Object
+---@field Count number
+UnityEngine.Events.PersistentCallGroup = {}
+---@alias CS.UnityEngine.Events.PersistentCallGroup UnityEngine.Events.PersistentCallGroup
+CS.UnityEngine.Events.PersistentCallGroup = UnityEngine.Events.PersistentCallGroup
+
+---@return UnityEngine.Events.PersistentCallGroup
+function UnityEngine.Events.PersistentCallGroup.New() end
+---@param index number
+---@return UnityEngine.Events.PersistentCall
+function UnityEngine.Events.PersistentCallGroup:GetListener(index) end
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.Events.PersistentCallGroup:GetListeners() end
+---@overload fun()
+---@param call UnityEngine.Events.PersistentCall
+function UnityEngine.Events.PersistentCallGroup:AddListener(call) end
+---@param index number
+function UnityEngine.Events.PersistentCallGroup:RemoveListener(index) end
+function UnityEngine.Events.PersistentCallGroup:Clear() end
+---@param index number
+---@param targetObj UnityEngine.Object
+---@param targetObjType System.Type
+---@param methodName string
+function UnityEngine.Events.PersistentCallGroup:RegisterEventPersistentListener(index, targetObj, targetObjType, methodName) end
+---@param index number
+---@param targetObj UnityEngine.Object
+---@param targetObjType System.Type
+---@param methodName string
+function UnityEngine.Events.PersistentCallGroup:RegisterVoidPersistentListener(index, targetObj, targetObjType, methodName) end
+---@param index number
+---@param targetObj UnityEngine.Object
+---@param targetObjType System.Type
+---@param argument UnityEngine.Object
+---@param methodName string
+function UnityEngine.Events.PersistentCallGroup:RegisterObjectPersistentListener(index, targetObj, targetObjType, argument, methodName) end
+---@param index number
+---@param targetObj UnityEngine.Object
+---@param targetObjType System.Type
+---@param argument number
+---@param methodName string
+function UnityEngine.Events.PersistentCallGroup:RegisterIntPersistentListener(index, targetObj, targetObjType, argument, methodName) end
+---@param index number
+---@param targetObj UnityEngine.Object
+---@param targetObjType System.Type
+---@param argument number
+---@param methodName string
+function UnityEngine.Events.PersistentCallGroup:RegisterFloatPersistentListener(index, targetObj, targetObjType, argument, methodName) end
+---@param index number
+---@param targetObj UnityEngine.Object
+---@param targetObjType System.Type
+---@param argument string
+---@param methodName string
+function UnityEngine.Events.PersistentCallGroup:RegisterStringPersistentListener(index, targetObj, targetObjType, argument, methodName) end
+---@param index number
+---@param targetObj UnityEngine.Object
+---@param targetObjType System.Type
+---@param argument boolean
+---@param methodName string
+function UnityEngine.Events.PersistentCallGroup:RegisterBoolPersistentListener(index, targetObj, targetObjType, argument, methodName) end
+---@param index number
+function UnityEngine.Events.PersistentCallGroup:UnregisterPersistentListener(index) end
+---@param target UnityEngine.Object
+---@param methodName string
+function UnityEngine.Events.PersistentCallGroup:RemoveListeners(target, methodName) end
+---@param invokableList UnityEngine.Events.InvokableCallList
+---@param unityEventBase UnityEngine.Events.UnityEventBase
+function UnityEngine.Events.PersistentCallGroup:Initialize(invokableList, unityEventBase) end
+
+---@class UnityEngine.Events.InvokableCallList : System.Object
+---@field Count number
+UnityEngine.Events.InvokableCallList = {}
+---@alias CS.UnityEngine.Events.InvokableCallList UnityEngine.Events.InvokableCallList
+CS.UnityEngine.Events.InvokableCallList = UnityEngine.Events.InvokableCallList
+
+---@return UnityEngine.Events.InvokableCallList
+function UnityEngine.Events.InvokableCallList.New() end
+---@param call UnityEngine.Events.BaseInvokableCall
+function UnityEngine.Events.InvokableCallList:AddPersistentInvokableCall(call) end
+---@param call UnityEngine.Events.BaseInvokableCall
+function UnityEngine.Events.InvokableCallList:AddListener(call) end
+---@param targetObj System.Object
+---@param method System.Reflection.MethodInfo
+function UnityEngine.Events.InvokableCallList:RemoveListener(targetObj, method) end
+function UnityEngine.Events.InvokableCallList:Clear() end
+function UnityEngine.Events.InvokableCallList:ClearPersistent() end
+---@return System.Collections.Generic.List
+function UnityEngine.Events.InvokableCallList:PrepareInvoke() end
+
+---@class UnityEngine.Events.UnityEventBase : System.Object
+UnityEngine.Events.UnityEventBase = {}
+---@alias CS.UnityEngine.Events.UnityEventBase UnityEngine.Events.UnityEventBase
+CS.UnityEngine.Events.UnityEventBase = UnityEngine.Events.UnityEventBase
+
+---@overload fun(obj: System.Object, functionName: string, argumentTypes: System.Type[]) : System.Reflection.MethodInfo
+---@param objectType System.Type
+---@param functionName string
+---@param argumentTypes System.Type[]
+---@return System.Reflection.MethodInfo
+function UnityEngine.Events.UnityEventBase.GetValidMethodInfo(objectType, functionName, argumentTypes) end
+---@return number
+function UnityEngine.Events.UnityEventBase:GetPersistentEventCount() end
+---@param index number
+---@return UnityEngine.Object
+function UnityEngine.Events.UnityEventBase:GetPersistentTarget(index) end
+---@param index number
+---@return string
+function UnityEngine.Events.UnityEventBase:GetPersistentMethodName(index) end
+---@param index number
+---@param state UnityEngine.Events.UnityEventCallState
+function UnityEngine.Events.UnityEventBase:SetPersistentListenerState(index, state) end
+---@param index number
+---@return UnityEngine.Events.UnityEventCallState
+function UnityEngine.Events.UnityEventBase:GetPersistentListenerState(index) end
+function UnityEngine.Events.UnityEventBase:RemoveAllListeners() end
+---@return string
+function UnityEngine.Events.UnityEventBase:ToString() end
+
+---@class UnityEngine.Events.UnityAction : System.MulticastDelegate
+UnityEngine.Events.UnityAction = {}
+---@alias CS.UnityEngine.Events.UnityAction UnityEngine.Events.UnityAction
+CS.UnityEngine.Events.UnityAction = UnityEngine.Events.UnityAction
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.Events.UnityAction
+function UnityEngine.Events.UnityAction.New(object, method) end
+function UnityEngine.Events.UnityAction:Invoke() end
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.Events.UnityAction:BeginInvoke(callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.Events.UnityAction:EndInvoke(result) end
+
+---@class UnityEngine.Events.UnityEvent : UnityEngine.Events.UnityEventBase
+UnityEngine.Events.UnityEvent = {}
+---@alias CS.UnityEngine.Events.UnityEvent UnityEngine.Events.UnityEvent
+CS.UnityEngine.Events.UnityEvent = UnityEngine.Events.UnityEvent
+
+---@return UnityEngine.Events.UnityEvent
+function UnityEngine.Events.UnityEvent.New() end
+---@param call UnityEngine.Events.UnityAction
+function UnityEngine.Events.UnityEvent:AddListener(call) end
+---@param call UnityEngine.Events.UnityAction
+function UnityEngine.Events.UnityEvent:RemoveListener(call) end
+function UnityEngine.Events.UnityEvent:Invoke() end
+---@return UnityEngine.Awaitable.Awaiter
+function UnityEngine.Events.UnityEvent:GetAwaiter() end
+---@return UnityEngine.Events.UnityEvent
+function UnityEngine.Events.UnityEvent:Clone() end
+
+---@class UnityEngine.Events.UnityAction : System.MulticastDelegate
+UnityEngine.Events.UnityAction = {}
+---@alias CS.UnityEngine.Events.UnityAction UnityEngine.Events.UnityAction
+CS.UnityEngine.Events.UnityAction = UnityEngine.Events.UnityAction
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.Events.UnityAction
+function UnityEngine.Events.UnityAction.New(object, method) end
+---@param arg0 T0
+function UnityEngine.Events.UnityAction:Invoke(arg0) end
+---@param arg0 T0
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.Events.UnityAction:BeginInvoke(arg0, callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.Events.UnityAction:EndInvoke(result) end
+
+---@class UnityEngine.Events.UnityEvent : UnityEngine.Events.UnityEventBase
+UnityEngine.Events.UnityEvent = {}
+---@alias CS.UnityEngine.Events.UnityEvent UnityEngine.Events.UnityEvent
+CS.UnityEngine.Events.UnityEvent = UnityEngine.Events.UnityEvent
+
+---@return UnityEngine.Events.UnityEvent
+function UnityEngine.Events.UnityEvent.New() end
+---@param call UnityEngine.Events.UnityAction[T0]
+function UnityEngine.Events.UnityEvent:AddListener(call) end
+---@param call UnityEngine.Events.UnityAction[T0]
+function UnityEngine.Events.UnityEvent:RemoveListener(call) end
+---@param arg0 T0
+function UnityEngine.Events.UnityEvent:Invoke(arg0) end
+
+---@class UnityEngine.Events.UnityAction : System.MulticastDelegate
+UnityEngine.Events.UnityAction = {}
+---@alias CS.UnityEngine.Events.UnityAction UnityEngine.Events.UnityAction
+CS.UnityEngine.Events.UnityAction = UnityEngine.Events.UnityAction
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.Events.UnityAction
+function UnityEngine.Events.UnityAction.New(object, method) end
+---@param arg0 T0
+---@param arg1 T1
+function UnityEngine.Events.UnityAction:Invoke(arg0, arg1) end
+---@param arg0 T0
+---@param arg1 T1
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.Events.UnityAction:BeginInvoke(arg0, arg1, callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.Events.UnityAction:EndInvoke(result) end
+
 ---@class UnityEngine.Events.UnityEvent : UnityEngine.Events.UnityEventBase
 UnityEngine.Events.UnityEvent = {}
 ---@alias CS.UnityEngine.Events.UnityEvent UnityEngine.Events.UnityEvent
@@ -4411,592 +5019,3 @@ CS.UnityEngine.Rendering.LightUnit = UnityEngine.Rendering.LightUnit
 UnityEngine.Rendering.GraphicsDeviceType = {}
 ---@alias CS.UnityEngine.Rendering.GraphicsDeviceType UnityEngine.Rendering.GraphicsDeviceType
 CS.UnityEngine.Rendering.GraphicsDeviceType = UnityEngine.Rendering.GraphicsDeviceType
-
-
----@class UnityEngine.Rendering.GraphicsTier
----@field Tier1 UnityEngine.Rendering.GraphicsTier
----@field Tier2 UnityEngine.Rendering.GraphicsTier
----@field Tier3 UnityEngine.Rendering.GraphicsTier
-UnityEngine.Rendering.GraphicsTier = {}
----@alias CS.UnityEngine.Rendering.GraphicsTier UnityEngine.Rendering.GraphicsTier
-CS.UnityEngine.Rendering.GraphicsTier = UnityEngine.Rendering.GraphicsTier
-
-
----@class UnityEngine.Rendering.SubMeshDescriptor : System.ValueType
----@field bounds UnityEngine.Bounds
----@field topology UnityEngine.MeshTopology
----@field indexStart number
----@field indexCount number
----@field baseVertex number
----@field firstVertex number
----@field vertexCount number
-UnityEngine.Rendering.SubMeshDescriptor = {}
----@alias CS.UnityEngine.Rendering.SubMeshDescriptor UnityEngine.Rendering.SubMeshDescriptor
-CS.UnityEngine.Rendering.SubMeshDescriptor = UnityEngine.Rendering.SubMeshDescriptor
-
----@param indexStart number
----@param indexCount number
----@param topology UnityEngine.MeshTopology
----@return UnityEngine.Rendering.SubMeshDescriptor
-function UnityEngine.Rendering.SubMeshDescriptor.New(indexStart, indexCount, topology) end
----@return string
-function UnityEngine.Rendering.SubMeshDescriptor:ToString() end
-
----@class UnityEngine.Rendering.VertexAttributeDescriptor : System.ValueType
----@field attribute UnityEngine.Rendering.VertexAttribute
----@field format UnityEngine.Rendering.VertexAttributeFormat
----@field dimension number
----@field stream number
-UnityEngine.Rendering.VertexAttributeDescriptor = {}
----@alias CS.UnityEngine.Rendering.VertexAttributeDescriptor UnityEngine.Rendering.VertexAttributeDescriptor
-CS.UnityEngine.Rendering.VertexAttributeDescriptor = UnityEngine.Rendering.VertexAttributeDescriptor
-
----@param attribute UnityEngine.Rendering.VertexAttribute
----@param format UnityEngine.Rendering.VertexAttributeFormat
----@param dimension number
----@param stream number
----@return UnityEngine.Rendering.VertexAttributeDescriptor
-function UnityEngine.Rendering.VertexAttributeDescriptor.New(attribute, format, dimension, stream) end
----@return string
-function UnityEngine.Rendering.VertexAttributeDescriptor:ToString() end
----@return number
-function UnityEngine.Rendering.VertexAttributeDescriptor:GetHashCode() end
----@overload fun(self: UnityEngine.Rendering.VertexAttributeDescriptor, other: System.Object) : boolean
----@param other UnityEngine.Rendering.VertexAttributeDescriptor
----@return boolean
-function UnityEngine.Rendering.VertexAttributeDescriptor:Equals(other) end
-
----@class UnityEngine.Rendering.FormatSwizzle
----@field FormatSwizzleR UnityEngine.Rendering.FormatSwizzle
----@field FormatSwizzleG UnityEngine.Rendering.FormatSwizzle
----@field FormatSwizzleB UnityEngine.Rendering.FormatSwizzle
----@field FormatSwizzleA UnityEngine.Rendering.FormatSwizzle
----@field FormatSwizzle0 UnityEngine.Rendering.FormatSwizzle
----@field FormatSwizzle1 UnityEngine.Rendering.FormatSwizzle
-UnityEngine.Rendering.FormatSwizzle = {}
----@alias CS.UnityEngine.Rendering.FormatSwizzle UnityEngine.Rendering.FormatSwizzle
-CS.UnityEngine.Rendering.FormatSwizzle = UnityEngine.Rendering.FormatSwizzle
-
-
----@class UnityEngine.Rendering.RenderTargetIdentifier : System.ValueType
----@field Invalid UnityEngine.Rendering.RenderTargetIdentifier
----@field AllDepthSlices number
-UnityEngine.Rendering.RenderTargetIdentifier = {}
----@alias CS.UnityEngine.Rendering.RenderTargetIdentifier UnityEngine.Rendering.RenderTargetIdentifier
-CS.UnityEngine.Rendering.RenderTargetIdentifier = UnityEngine.Rendering.RenderTargetIdentifier
-
----@overload fun(type: UnityEngine.Rendering.BuiltinRenderTextureType) : UnityEngine.Rendering.RenderTargetIdentifier
----@overload fun(type: UnityEngine.Rendering.BuiltinRenderTextureType, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number) : UnityEngine.Rendering.RenderTargetIdentifier
----@overload fun(name: string) : UnityEngine.Rendering.RenderTargetIdentifier
----@overload fun(name: string, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number) : UnityEngine.Rendering.RenderTargetIdentifier
----@overload fun(nameID: number) : UnityEngine.Rendering.RenderTargetIdentifier
----@overload fun(nameID: number, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number) : UnityEngine.Rendering.RenderTargetIdentifier
----@overload fun(renderTargetIdentifier: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number) : UnityEngine.Rendering.RenderTargetIdentifier
----@overload fun(tex: UnityEngine.Texture) : UnityEngine.Rendering.RenderTargetIdentifier
----@overload fun(tex: UnityEngine.Texture, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number) : UnityEngine.Rendering.RenderTargetIdentifier
----@param buf UnityEngine.RenderBuffer
----@param mipLevel number
----@param cubeFace UnityEngine.CubemapFace
----@param depthSlice number
----@return UnityEngine.Rendering.RenderTargetIdentifier
-function UnityEngine.Rendering.RenderTargetIdentifier.New(buf, mipLevel, cubeFace, depthSlice) end
----@return string
-function UnityEngine.Rendering.RenderTargetIdentifier:ToString() end
----@return number
-function UnityEngine.Rendering.RenderTargetIdentifier:GetHashCode() end
----@overload fun(self: UnityEngine.Rendering.RenderTargetIdentifier, rhs: UnityEngine.Rendering.RenderTargetIdentifier) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.Rendering.RenderTargetIdentifier:Equals(obj) end
-
----@class UnityEngine.Rendering.RenderTargetFlags
----@field None UnityEngine.Rendering.RenderTargetFlags
----@field ReadOnlyDepth UnityEngine.Rendering.RenderTargetFlags
----@field ReadOnlyStencil UnityEngine.Rendering.RenderTargetFlags
----@field ReadOnlyDepthStencil UnityEngine.Rendering.RenderTargetFlags
-UnityEngine.Rendering.RenderTargetFlags = {}
----@alias CS.UnityEngine.Rendering.RenderTargetFlags UnityEngine.Rendering.RenderTargetFlags
-CS.UnityEngine.Rendering.RenderTargetFlags = UnityEngine.Rendering.RenderTargetFlags
-
-
----@class UnityEngine.Rendering.RenderTargetBinding : System.ValueType
----@field colorRenderTargets UnityEngine.Rendering.RenderTargetIdentifier[]
----@field depthRenderTarget UnityEngine.Rendering.RenderTargetIdentifier
----@field colorLoadActions UnityEngine.Rendering.RenderBufferLoadAction[]
----@field colorStoreActions UnityEngine.Rendering.RenderBufferStoreAction[]
----@field depthLoadAction UnityEngine.Rendering.RenderBufferLoadAction
----@field depthStoreAction UnityEngine.Rendering.RenderBufferStoreAction
----@field flags UnityEngine.Rendering.RenderTargetFlags
-UnityEngine.Rendering.RenderTargetBinding = {}
----@alias CS.UnityEngine.Rendering.RenderTargetBinding UnityEngine.Rendering.RenderTargetBinding
-CS.UnityEngine.Rendering.RenderTargetBinding = UnityEngine.Rendering.RenderTargetBinding
-
----@overload fun(colorRenderTargets: UnityEngine.Rendering.RenderTargetIdentifier[], colorLoadActions: UnityEngine.Rendering.RenderBufferLoadAction[], colorStoreActions: UnityEngine.Rendering.RenderBufferStoreAction[], depthRenderTarget: UnityEngine.Rendering.RenderTargetIdentifier, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction) : UnityEngine.Rendering.RenderTargetBinding
----@overload fun(colorRenderTarget: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depthRenderTarget: UnityEngine.Rendering.RenderTargetIdentifier, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction) : UnityEngine.Rendering.RenderTargetBinding
----@param setup UnityEngine.RenderTargetSetup
----@return UnityEngine.Rendering.RenderTargetBinding
-function UnityEngine.Rendering.RenderTargetBinding.New(setup) end
-
----@class UnityEngine.Rendering.ReflectionProbeUsage
----@field Off UnityEngine.Rendering.ReflectionProbeUsage
----@field BlendProbes UnityEngine.Rendering.ReflectionProbeUsage
----@field BlendProbesAndSkybox UnityEngine.Rendering.ReflectionProbeUsage
----@field Simple UnityEngine.Rendering.ReflectionProbeUsage
-UnityEngine.Rendering.ReflectionProbeUsage = {}
----@alias CS.UnityEngine.Rendering.ReflectionProbeUsage UnityEngine.Rendering.ReflectionProbeUsage
-CS.UnityEngine.Rendering.ReflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage
-
-
----@class UnityEngine.Rendering.ReflectionProbeType
----@field Cube UnityEngine.Rendering.ReflectionProbeType
----@field Card UnityEngine.Rendering.ReflectionProbeType
-UnityEngine.Rendering.ReflectionProbeType = {}
----@alias CS.UnityEngine.Rendering.ReflectionProbeType UnityEngine.Rendering.ReflectionProbeType
-CS.UnityEngine.Rendering.ReflectionProbeType = UnityEngine.Rendering.ReflectionProbeType
-
-
----@class UnityEngine.Rendering.ReflectionProbeClearFlags
----@field Skybox UnityEngine.Rendering.ReflectionProbeClearFlags
----@field SolidColor UnityEngine.Rendering.ReflectionProbeClearFlags
-UnityEngine.Rendering.ReflectionProbeClearFlags = {}
----@alias CS.UnityEngine.Rendering.ReflectionProbeClearFlags UnityEngine.Rendering.ReflectionProbeClearFlags
-CS.UnityEngine.Rendering.ReflectionProbeClearFlags = UnityEngine.Rendering.ReflectionProbeClearFlags
-
-
----@class UnityEngine.Rendering.ReflectionProbeMode
----@field Baked UnityEngine.Rendering.ReflectionProbeMode
----@field Realtime UnityEngine.Rendering.ReflectionProbeMode
----@field Custom UnityEngine.Rendering.ReflectionProbeMode
-UnityEngine.Rendering.ReflectionProbeMode = {}
----@alias CS.UnityEngine.Rendering.ReflectionProbeMode UnityEngine.Rendering.ReflectionProbeMode
-CS.UnityEngine.Rendering.ReflectionProbeMode = UnityEngine.Rendering.ReflectionProbeMode
-
-
----@class UnityEngine.Rendering.ReflectionProbeBlendInfo : System.ValueType
----@field probe UnityEngine.ReflectionProbe
----@field weight number
-UnityEngine.Rendering.ReflectionProbeBlendInfo = {}
----@alias CS.UnityEngine.Rendering.ReflectionProbeBlendInfo UnityEngine.Rendering.ReflectionProbeBlendInfo
-CS.UnityEngine.Rendering.ReflectionProbeBlendInfo = UnityEngine.Rendering.ReflectionProbeBlendInfo
-
-
----@class UnityEngine.Rendering.ReflectionProbeRefreshMode
----@field OnAwake UnityEngine.Rendering.ReflectionProbeRefreshMode
----@field EveryFrame UnityEngine.Rendering.ReflectionProbeRefreshMode
----@field ViaScripting UnityEngine.Rendering.ReflectionProbeRefreshMode
-UnityEngine.Rendering.ReflectionProbeRefreshMode = {}
----@alias CS.UnityEngine.Rendering.ReflectionProbeRefreshMode UnityEngine.Rendering.ReflectionProbeRefreshMode
-CS.UnityEngine.Rendering.ReflectionProbeRefreshMode = UnityEngine.Rendering.ReflectionProbeRefreshMode
-
-
----@class UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
----@field AllFacesAtOnce UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
----@field IndividualFaces UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
----@field NoTimeSlicing UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
-UnityEngine.Rendering.ReflectionProbeTimeSlicingMode = {}
----@alias CS.UnityEngine.Rendering.ReflectionProbeTimeSlicingMode UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
-CS.UnityEngine.Rendering.ReflectionProbeTimeSlicingMode = UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
-
-
----@class UnityEngine.Rendering.ShadowSamplingMode
----@field CompareDepths UnityEngine.Rendering.ShadowSamplingMode
----@field RawDepth UnityEngine.Rendering.ShadowSamplingMode
----@field None UnityEngine.Rendering.ShadowSamplingMode
-UnityEngine.Rendering.ShadowSamplingMode = {}
----@alias CS.UnityEngine.Rendering.ShadowSamplingMode UnityEngine.Rendering.ShadowSamplingMode
-CS.UnityEngine.Rendering.ShadowSamplingMode = UnityEngine.Rendering.ShadowSamplingMode
-
-
----@class UnityEngine.Rendering.LightProbeUsage
----@field Off UnityEngine.Rendering.LightProbeUsage
----@field BlendProbes UnityEngine.Rendering.LightProbeUsage
----@field UseProxyVolume UnityEngine.Rendering.LightProbeUsage
----@field CustomProvided UnityEngine.Rendering.LightProbeUsage
-UnityEngine.Rendering.LightProbeUsage = {}
----@alias CS.UnityEngine.Rendering.LightProbeUsage UnityEngine.Rendering.LightProbeUsage
-CS.UnityEngine.Rendering.LightProbeUsage = UnityEngine.Rendering.LightProbeUsage
-
-
----@class UnityEngine.Rendering.BuiltinShaderType
----@field DeferredShading UnityEngine.Rendering.BuiltinShaderType
----@field DeferredReflections UnityEngine.Rendering.BuiltinShaderType
----@field ScreenSpaceShadows UnityEngine.Rendering.BuiltinShaderType
----@field DepthNormals UnityEngine.Rendering.BuiltinShaderType
----@field MotionVectors UnityEngine.Rendering.BuiltinShaderType
----@field LightHalo UnityEngine.Rendering.BuiltinShaderType
----@field LensFlare UnityEngine.Rendering.BuiltinShaderType
-UnityEngine.Rendering.BuiltinShaderType = {}
----@alias CS.UnityEngine.Rendering.BuiltinShaderType UnityEngine.Rendering.BuiltinShaderType
-CS.UnityEngine.Rendering.BuiltinShaderType = UnityEngine.Rendering.BuiltinShaderType
-
-
----@class UnityEngine.Rendering.BuiltinShaderMode
----@field Disabled UnityEngine.Rendering.BuiltinShaderMode
----@field UseBuiltin UnityEngine.Rendering.BuiltinShaderMode
----@field UseCustom UnityEngine.Rendering.BuiltinShaderMode
-UnityEngine.Rendering.BuiltinShaderMode = {}
----@alias CS.UnityEngine.Rendering.BuiltinShaderMode UnityEngine.Rendering.BuiltinShaderMode
-CS.UnityEngine.Rendering.BuiltinShaderMode = UnityEngine.Rendering.BuiltinShaderMode
-
-
----@class UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_NO_DXT5nm UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_NO_RGBM UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_ENABLE_REFLECTION_BUFFERS UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_FRAMEBUFFER_FETCH_AVAILABLE UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_METAL_SHADOWS_USE_POINT_FILTERING UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_NO_CUBEMAP_ARRAY UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_NO_SCREENSPACE_SHADOWS UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_PBS_USE_BRDF1 UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_PBS_USE_BRDF2 UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_PBS_USE_BRDF3 UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_SPECCUBE_BOX_PROJECTION UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_SPECCUBE_BLENDING UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_ENABLE_DETAIL_NORMALMAP UnityEngine.Rendering.BuiltinShaderDefine
----@field SHADER_API_MOBILE UnityEngine.Rendering.BuiltinShaderDefine
----@field SHADER_API_DESKTOP UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_HARDWARE_TIER1 UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_HARDWARE_TIER2 UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_HARDWARE_TIER3 UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_COLORSPACE_GAMMA UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_LIGHT_PROBE_PROXY_VOLUME UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_LIGHTMAP_DLDR_ENCODING UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_LIGHTMAP_RGBM_ENCODING UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_LIGHTMAP_FULL_HDR UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_VIRTUAL_TEXTURING UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_ASTC_NORMALMAP_ENCODING UnityEngine.Rendering.BuiltinShaderDefine
----@field SHADER_API_GLES30 UnityEngine.Rendering.BuiltinShaderDefine
----@field SHADER_API_GLES31 UnityEngine.Rendering.BuiltinShaderDefine
----@field SHADER_API_GLES32 UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_UNIFIED_SHADER_PRECISION_MODEL UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_PLATFORM_SUPPORTS_WAVE_32 UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_PLATFORM_SUPPORTS_WAVE_64 UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_NEEDS_RENDERPASS_FBFETCH_FALLBACK UnityEngine.Rendering.BuiltinShaderDefine
----@field UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH UnityEngine.Rendering.BuiltinShaderDefine
-UnityEngine.Rendering.BuiltinShaderDefine = {}
----@alias CS.UnityEngine.Rendering.BuiltinShaderDefine UnityEngine.Rendering.BuiltinShaderDefine
-CS.UnityEngine.Rendering.BuiltinShaderDefine = UnityEngine.Rendering.BuiltinShaderDefine
-
-
----@class UnityEngine.Rendering.VideoShadersIncludeMode
----@field Never UnityEngine.Rendering.VideoShadersIncludeMode
----@field Referenced UnityEngine.Rendering.VideoShadersIncludeMode
----@field Always UnityEngine.Rendering.VideoShadersIncludeMode
-UnityEngine.Rendering.VideoShadersIncludeMode = {}
----@alias CS.UnityEngine.Rendering.VideoShadersIncludeMode UnityEngine.Rendering.VideoShadersIncludeMode
-CS.UnityEngine.Rendering.VideoShadersIncludeMode = UnityEngine.Rendering.VideoShadersIncludeMode
-
-
----@class UnityEngine.Rendering.TextureDimension
----@field Unknown UnityEngine.Rendering.TextureDimension
----@field None UnityEngine.Rendering.TextureDimension
----@field Any UnityEngine.Rendering.TextureDimension
----@field Tex2D UnityEngine.Rendering.TextureDimension
----@field Tex3D UnityEngine.Rendering.TextureDimension
----@field Cube UnityEngine.Rendering.TextureDimension
----@field Tex2DArray UnityEngine.Rendering.TextureDimension
----@field CubeArray UnityEngine.Rendering.TextureDimension
-UnityEngine.Rendering.TextureDimension = {}
----@alias CS.UnityEngine.Rendering.TextureDimension UnityEngine.Rendering.TextureDimension
-CS.UnityEngine.Rendering.TextureDimension = UnityEngine.Rendering.TextureDimension
-
-
----@class UnityEngine.Rendering.CopyTextureSupport
----@field None UnityEngine.Rendering.CopyTextureSupport
----@field Basic UnityEngine.Rendering.CopyTextureSupport
----@field Copy3D UnityEngine.Rendering.CopyTextureSupport
----@field DifferentTypes UnityEngine.Rendering.CopyTextureSupport
----@field TextureToRT UnityEngine.Rendering.CopyTextureSupport
----@field RTToTexture UnityEngine.Rendering.CopyTextureSupport
-UnityEngine.Rendering.CopyTextureSupport = {}
----@alias CS.UnityEngine.Rendering.CopyTextureSupport UnityEngine.Rendering.CopyTextureSupport
-CS.UnityEngine.Rendering.CopyTextureSupport = UnityEngine.Rendering.CopyTextureSupport
-
-
----@class UnityEngine.Rendering.CameraHDRMode
----@field FP16 UnityEngine.Rendering.CameraHDRMode
----@field R11G11B10 UnityEngine.Rendering.CameraHDRMode
-UnityEngine.Rendering.CameraHDRMode = {}
----@alias CS.UnityEngine.Rendering.CameraHDRMode UnityEngine.Rendering.CameraHDRMode
-CS.UnityEngine.Rendering.CameraHDRMode = UnityEngine.Rendering.CameraHDRMode
-
-
----@class UnityEngine.Rendering.RealtimeGICPUUsage
----@field Low UnityEngine.Rendering.RealtimeGICPUUsage
----@field Medium UnityEngine.Rendering.RealtimeGICPUUsage
----@field High UnityEngine.Rendering.RealtimeGICPUUsage
----@field Unlimited UnityEngine.Rendering.RealtimeGICPUUsage
-UnityEngine.Rendering.RealtimeGICPUUsage = {}
----@alias CS.UnityEngine.Rendering.RealtimeGICPUUsage UnityEngine.Rendering.RealtimeGICPUUsage
-CS.UnityEngine.Rendering.RealtimeGICPUUsage = UnityEngine.Rendering.RealtimeGICPUUsage
-
-
----@class UnityEngine.Rendering.LightProbeOutsideHullStrategy
----@field kLightProbeSearchTetrahedralHull UnityEngine.Rendering.LightProbeOutsideHullStrategy
----@field kLightProbeUseAmbientProbe UnityEngine.Rendering.LightProbeOutsideHullStrategy
-UnityEngine.Rendering.LightProbeOutsideHullStrategy = {}
----@alias CS.UnityEngine.Rendering.LightProbeOutsideHullStrategy UnityEngine.Rendering.LightProbeOutsideHullStrategy
-CS.UnityEngine.Rendering.LightProbeOutsideHullStrategy = UnityEngine.Rendering.LightProbeOutsideHullStrategy
-
-
----@class UnityEngine.Rendering.ComputeQueueType
----@field Default UnityEngine.Rendering.ComputeQueueType
----@field Background UnityEngine.Rendering.ComputeQueueType
----@field Urgent UnityEngine.Rendering.ComputeQueueType
-UnityEngine.Rendering.ComputeQueueType = {}
----@alias CS.UnityEngine.Rendering.ComputeQueueType UnityEngine.Rendering.ComputeQueueType
-CS.UnityEngine.Rendering.ComputeQueueType = UnityEngine.Rendering.ComputeQueueType
-
-
----@class UnityEngine.Rendering.SinglePassStereoMode
----@field None UnityEngine.Rendering.SinglePassStereoMode
----@field SideBySide UnityEngine.Rendering.SinglePassStereoMode
----@field Instancing UnityEngine.Rendering.SinglePassStereoMode
----@field Multiview UnityEngine.Rendering.SinglePassStereoMode
-UnityEngine.Rendering.SinglePassStereoMode = {}
----@alias CS.UnityEngine.Rendering.SinglePassStereoMode UnityEngine.Rendering.SinglePassStereoMode
-CS.UnityEngine.Rendering.SinglePassStereoMode = UnityEngine.Rendering.SinglePassStereoMode
-
-
----@class UnityEngine.Rendering.FoveatedRenderingCaps
----@field None UnityEngine.Rendering.FoveatedRenderingCaps
----@field FoveationImage UnityEngine.Rendering.FoveatedRenderingCaps
----@field NonUniformRaster UnityEngine.Rendering.FoveatedRenderingCaps
----@field ModeChangeOnlyBeforeRenderTargetSet UnityEngine.Rendering.FoveatedRenderingCaps
-UnityEngine.Rendering.FoveatedRenderingCaps = {}
----@alias CS.UnityEngine.Rendering.FoveatedRenderingCaps UnityEngine.Rendering.FoveatedRenderingCaps
-CS.UnityEngine.Rendering.FoveatedRenderingCaps = UnityEngine.Rendering.FoveatedRenderingCaps
-
-
----@class UnityEngine.Rendering.FoveatedRenderingMode
----@field Disabled UnityEngine.Rendering.FoveatedRenderingMode
----@field Enabled UnityEngine.Rendering.FoveatedRenderingMode
-UnityEngine.Rendering.FoveatedRenderingMode = {}
----@alias CS.UnityEngine.Rendering.FoveatedRenderingMode UnityEngine.Rendering.FoveatedRenderingMode
-CS.UnityEngine.Rendering.FoveatedRenderingMode = UnityEngine.Rendering.FoveatedRenderingMode
-
-
----@class UnityEngine.Rendering.CommandBufferExecutionFlags
----@field None UnityEngine.Rendering.CommandBufferExecutionFlags
----@field AsyncCompute UnityEngine.Rendering.CommandBufferExecutionFlags
-UnityEngine.Rendering.CommandBufferExecutionFlags = {}
----@alias CS.UnityEngine.Rendering.CommandBufferExecutionFlags UnityEngine.Rendering.CommandBufferExecutionFlags
-CS.UnityEngine.Rendering.CommandBufferExecutionFlags = UnityEngine.Rendering.CommandBufferExecutionFlags
-
-
----@class UnityEngine.Rendering.RTClearFlags
----@field None UnityEngine.Rendering.RTClearFlags
----@field Color UnityEngine.Rendering.RTClearFlags
----@field Depth UnityEngine.Rendering.RTClearFlags
----@field Stencil UnityEngine.Rendering.RTClearFlags
----@field All UnityEngine.Rendering.RTClearFlags
----@field DepthStencil UnityEngine.Rendering.RTClearFlags
----@field ColorDepth UnityEngine.Rendering.RTClearFlags
----@field ColorStencil UnityEngine.Rendering.RTClearFlags
----@field Color0 UnityEngine.Rendering.RTClearFlags
----@field Color1 UnityEngine.Rendering.RTClearFlags
----@field Color2 UnityEngine.Rendering.RTClearFlags
----@field Color3 UnityEngine.Rendering.RTClearFlags
----@field Color4 UnityEngine.Rendering.RTClearFlags
----@field Color5 UnityEngine.Rendering.RTClearFlags
----@field Color6 UnityEngine.Rendering.RTClearFlags
----@field Color7 UnityEngine.Rendering.RTClearFlags
-UnityEngine.Rendering.RTClearFlags = {}
----@alias CS.UnityEngine.Rendering.RTClearFlags UnityEngine.Rendering.RTClearFlags
-CS.UnityEngine.Rendering.RTClearFlags = UnityEngine.Rendering.RTClearFlags
-
-
----@class UnityEngine.Rendering.RenderTextureSubElement
----@field Color UnityEngine.Rendering.RenderTextureSubElement
----@field Depth UnityEngine.Rendering.RenderTextureSubElement
----@field Stencil UnityEngine.Rendering.RenderTextureSubElement
----@field Default UnityEngine.Rendering.RenderTextureSubElement
----@field ShadingRate UnityEngine.Rendering.RenderTextureSubElement
-UnityEngine.Rendering.RenderTextureSubElement = {}
----@alias CS.UnityEngine.Rendering.RenderTextureSubElement UnityEngine.Rendering.RenderTextureSubElement
-CS.UnityEngine.Rendering.RenderTextureSubElement = UnityEngine.Rendering.RenderTextureSubElement
-
-
----@class UnityEngine.Rendering.RenderingThreadingMode
----@field Direct UnityEngine.Rendering.RenderingThreadingMode
----@field SingleThreaded UnityEngine.Rendering.RenderingThreadingMode
----@field MultiThreaded UnityEngine.Rendering.RenderingThreadingMode
----@field LegacyJobified UnityEngine.Rendering.RenderingThreadingMode
----@field NativeGraphicsJobs UnityEngine.Rendering.RenderingThreadingMode
----@field NativeGraphicsJobsWithoutRenderThread UnityEngine.Rendering.RenderingThreadingMode
----@field NativeGraphicsJobsSplitThreading UnityEngine.Rendering.RenderingThreadingMode
-UnityEngine.Rendering.RenderingThreadingMode = {}
----@alias CS.UnityEngine.Rendering.RenderingThreadingMode UnityEngine.Rendering.RenderingThreadingMode
-CS.UnityEngine.Rendering.RenderingThreadingMode = UnityEngine.Rendering.RenderingThreadingMode
-
-
----@class UnityEngine.Rendering.CameraLateLatchMatrixType
----@field View UnityEngine.Rendering.CameraLateLatchMatrixType
----@field InverseView UnityEngine.Rendering.CameraLateLatchMatrixType
----@field ViewProjection UnityEngine.Rendering.CameraLateLatchMatrixType
----@field InverseViewProjection UnityEngine.Rendering.CameraLateLatchMatrixType
-UnityEngine.Rendering.CameraLateLatchMatrixType = {}
----@alias CS.UnityEngine.Rendering.CameraLateLatchMatrixType UnityEngine.Rendering.CameraLateLatchMatrixType
-CS.UnityEngine.Rendering.CameraLateLatchMatrixType = UnityEngine.Rendering.CameraLateLatchMatrixType
-
-
----@class UnityEngine.Rendering.OpenGLESVersion
----@field None UnityEngine.Rendering.OpenGLESVersion
----@field OpenGLES30 UnityEngine.Rendering.OpenGLESVersion
----@field OpenGLES31 UnityEngine.Rendering.OpenGLESVersion
----@field OpenGLES31AEP UnityEngine.Rendering.OpenGLESVersion
----@field OpenGLES32 UnityEngine.Rendering.OpenGLESVersion
-UnityEngine.Rendering.OpenGLESVersion = {}
----@alias CS.UnityEngine.Rendering.OpenGLESVersion UnityEngine.Rendering.OpenGLESVersion
-CS.UnityEngine.Rendering.OpenGLESVersion = UnityEngine.Rendering.OpenGLESVersion
-
-
----@class UnityEngine.Rendering.CustomMarkerCallbackFlags
----@field CustomMarkerCallbackDefault UnityEngine.Rendering.CustomMarkerCallbackFlags
----@field CustomMarkerCallbackForceInvalidateStateTracking UnityEngine.Rendering.CustomMarkerCallbackFlags
-UnityEngine.Rendering.CustomMarkerCallbackFlags = {}
----@alias CS.UnityEngine.Rendering.CustomMarkerCallbackFlags UnityEngine.Rendering.CustomMarkerCallbackFlags
-CS.UnityEngine.Rendering.CustomMarkerCallbackFlags = UnityEngine.Rendering.CustomMarkerCallbackFlags
-
-
----@class UnityEngine.Rendering.ShadingRateFragmentSize
----@field FragmentSize1x1 UnityEngine.Rendering.ShadingRateFragmentSize
----@field FragmentSize1x2 UnityEngine.Rendering.ShadingRateFragmentSize
----@field FragmentSize2x1 UnityEngine.Rendering.ShadingRateFragmentSize
----@field FragmentSize2x2 UnityEngine.Rendering.ShadingRateFragmentSize
----@field FragmentSize1x4 UnityEngine.Rendering.ShadingRateFragmentSize
----@field FragmentSize4x1 UnityEngine.Rendering.ShadingRateFragmentSize
----@field FragmentSize2x4 UnityEngine.Rendering.ShadingRateFragmentSize
----@field FragmentSize4x2 UnityEngine.Rendering.ShadingRateFragmentSize
----@field FragmentSize4x4 UnityEngine.Rendering.ShadingRateFragmentSize
-UnityEngine.Rendering.ShadingRateFragmentSize = {}
----@alias CS.UnityEngine.Rendering.ShadingRateFragmentSize UnityEngine.Rendering.ShadingRateFragmentSize
-CS.UnityEngine.Rendering.ShadingRateFragmentSize = UnityEngine.Rendering.ShadingRateFragmentSize
-
-
----@class UnityEngine.Rendering.ShadingRateCombinerStage
----@field Primitive UnityEngine.Rendering.ShadingRateCombinerStage
----@field Fragment UnityEngine.Rendering.ShadingRateCombinerStage
-UnityEngine.Rendering.ShadingRateCombinerStage = {}
----@alias CS.UnityEngine.Rendering.ShadingRateCombinerStage UnityEngine.Rendering.ShadingRateCombinerStage
-CS.UnityEngine.Rendering.ShadingRateCombinerStage = UnityEngine.Rendering.ShadingRateCombinerStage
-
-
----@class UnityEngine.Rendering.ShadingRateCombiner
----@field Keep UnityEngine.Rendering.ShadingRateCombiner
----@field Override UnityEngine.Rendering.ShadingRateCombiner
----@field Min UnityEngine.Rendering.ShadingRateCombiner
----@field Max UnityEngine.Rendering.ShadingRateCombiner
-UnityEngine.Rendering.ShadingRateCombiner = {}
----@alias CS.UnityEngine.Rendering.ShadingRateCombiner UnityEngine.Rendering.ShadingRateCombiner
-CS.UnityEngine.Rendering.ShadingRateCombiner = UnityEngine.Rendering.ShadingRateCombiner
-
-
----@class UnityEngine.Rendering.SynchronisationStageFlags
----@field VertexProcessing UnityEngine.Rendering.SynchronisationStageFlags
----@field PixelProcessing UnityEngine.Rendering.SynchronisationStageFlags
----@field ComputeProcessing UnityEngine.Rendering.SynchronisationStageFlags
----@field AllGPUOperations UnityEngine.Rendering.SynchronisationStageFlags
-UnityEngine.Rendering.SynchronisationStageFlags = {}
----@alias CS.UnityEngine.Rendering.SynchronisationStageFlags UnityEngine.Rendering.SynchronisationStageFlags
-CS.UnityEngine.Rendering.SynchronisationStageFlags = UnityEngine.Rendering.SynchronisationStageFlags
-
-
----@class UnityEngine.Rendering.GraphicsFenceType
----@field AsyncQueueSynchronisation UnityEngine.Rendering.GraphicsFenceType
----@field CPUSynchronisation UnityEngine.Rendering.GraphicsFenceType
-UnityEngine.Rendering.GraphicsFenceType = {}
----@alias CS.UnityEngine.Rendering.GraphicsFenceType UnityEngine.Rendering.GraphicsFenceType
-CS.UnityEngine.Rendering.GraphicsFenceType = UnityEngine.Rendering.GraphicsFenceType
-
-
----@class UnityEngine.Rendering.GraphicsFence : System.ValueType
----@field passed boolean
-UnityEngine.Rendering.GraphicsFence = {}
----@alias CS.UnityEngine.Rendering.GraphicsFence UnityEngine.Rendering.GraphicsFence
-CS.UnityEngine.Rendering.GraphicsFence = UnityEngine.Rendering.GraphicsFence
-
-
----@class UnityEngine.Rendering.DefaultMaterialType
----@field Default UnityEngine.Rendering.DefaultMaterialType
----@field Particle UnityEngine.Rendering.DefaultMaterialType
----@field Line UnityEngine.Rendering.DefaultMaterialType
----@field Terrain UnityEngine.Rendering.DefaultMaterialType
----@field Sprite UnityEngine.Rendering.DefaultMaterialType
----@field SpriteMask UnityEngine.Rendering.DefaultMaterialType
----@field UGUI UnityEngine.Rendering.DefaultMaterialType
----@field UGUI_Overdraw UnityEngine.Rendering.DefaultMaterialType
----@field UGUI_ETC1Supported UnityEngine.Rendering.DefaultMaterialType
-UnityEngine.Rendering.DefaultMaterialType = {}
----@alias CS.UnityEngine.Rendering.DefaultMaterialType UnityEngine.Rendering.DefaultMaterialType
-CS.UnityEngine.Rendering.DefaultMaterialType = UnityEngine.Rendering.DefaultMaterialType
-
-
----@class UnityEngine.Rendering.DefaultShaderType
----@field Default UnityEngine.Rendering.DefaultShaderType
----@field AutodeskInteractive UnityEngine.Rendering.DefaultShaderType
----@field AutodeskInteractiveTransparent UnityEngine.Rendering.DefaultShaderType
----@field AutodeskInteractiveMasked UnityEngine.Rendering.DefaultShaderType
----@field TerrainDetailLit UnityEngine.Rendering.DefaultShaderType
----@field TerrainDetailGrass UnityEngine.Rendering.DefaultShaderType
----@field TerrainDetailGrassBillboard UnityEngine.Rendering.DefaultShaderType
----@field SpeedTree7 UnityEngine.Rendering.DefaultShaderType
----@field SpeedTree8 UnityEngine.Rendering.DefaultShaderType
----@field SpeedTree9 UnityEngine.Rendering.DefaultShaderType
-UnityEngine.Rendering.DefaultShaderType = {}
----@alias CS.UnityEngine.Rendering.DefaultShaderType UnityEngine.Rendering.DefaultShaderType
-CS.UnityEngine.Rendering.DefaultShaderType = UnityEngine.Rendering.DefaultShaderType
-
-
----@class UnityEngine.Rendering.GraphicsSettings : UnityEngine.Object
----@field transparencySortMode UnityEngine.TransparencySortMode
----@field transparencySortAxis UnityEngine.Vector3
----@field realtimeDirectRectangularAreaLights boolean
----@field lightsUseLinearIntensity boolean
----@field lightsUseColorTemperature boolean
----@field defaultGateFitMode UnityEngine.Camera.GateFitMode
----@field useScriptableRenderPipelineBatching boolean
----@field logWhenShaderIsCompiled boolean
----@field disableBuiltinCustomRenderTextureUpdate boolean
----@field videoShadersIncludeMode UnityEngine.Rendering.VideoShadersIncludeMode
----@field lightProbeOutsideHullStrategy UnityEngine.Rendering.LightProbeOutsideHullStrategy
----@field currentRenderPipeline UnityEngine.Rendering.RenderPipelineAsset
----@field isScriptableRenderPipelineEnabled boolean
----@field currentRenderPipelineAssetType System.Type
----@field defaultRenderPipeline UnityEngine.Rendering.RenderPipelineAsset
----@field allConfiguredRenderPipelines UnityEngine.Rendering.RenderPipelineAsset[]
----@field cameraRelativeLightCulling boolean
----@field cameraRelativeShadowCulling boolean
-UnityEngine.Rendering.GraphicsSettings = {}
----@alias CS.UnityEngine.Rendering.GraphicsSettings UnityEngine.Rendering.GraphicsSettings
-CS.UnityEngine.Rendering.GraphicsSettings = UnityEngine.Rendering.GraphicsSettings
-
----@overload fun(tier: UnityEngine.Rendering.GraphicsTier, defineHash: UnityEngine.Rendering.BuiltinShaderDefine) : boolean
----@param defineHash UnityEngine.Rendering.BuiltinShaderDefine
----@return boolean
-function UnityEngine.Rendering.GraphicsSettings.HasShaderDefine(defineHash) end
----@return UnityEngine.Object
-function UnityEngine.Rendering.GraphicsSettings.GetGraphicsSettings() end
----@param type UnityEngine.Rendering.BuiltinShaderType
----@param mode UnityEngine.Rendering.BuiltinShaderMode
-function UnityEngine.Rendering.GraphicsSettings.SetShaderMode(type, mode) end
----@param type UnityEngine.Rendering.BuiltinShaderType
----@return UnityEngine.Rendering.BuiltinShaderMode
-function UnityEngine.Rendering.GraphicsSettings.GetShaderMode(type) end
----@param type UnityEngine.Rendering.BuiltinShaderType
----@param shader UnityEngine.Shader
-function UnityEngine.Rendering.GraphicsSettings.SetCustomShader(type, shader) end
----@param type UnityEngine.Rendering.BuiltinShaderType
----@return UnityEngine.Shader
-function UnityEngine.Rendering.GraphicsSettings.GetCustomShader(type) end
----@param callback System.Action
-function UnityEngine.Rendering.GraphicsSettings.ForEach(callback) end
----@param renderPipelineType System.Type
----@return UnityEngine.Rendering.RenderPipelineGlobalSettings
-function UnityEngine.Rendering.GraphicsSettings.GetSettingsForRenderPipeline(renderPipelineType) end
----@param out_asset UnityEngine.Rendering.RenderPipelineGlobalSettings
----@return boolean,UnityEngine.Rendering.RenderPipelineGlobalSettings
-function UnityEngine.Rendering.GraphicsSettings.TryGetCurrentRenderPipelineGlobalSettings(out_asset) end

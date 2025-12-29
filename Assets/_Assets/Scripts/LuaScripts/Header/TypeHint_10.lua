@@ -1,6 +1,829 @@
 ---@meta
 
 
+---@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput : System.ValueType
+---@field shapeProxyA UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@field shapeProxyB UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@field transformA UnityEngine.LowLevelPhysics2D.PhysicsTransform
+---@field transformB UnityEngine.LowLevelPhysics2D.PhysicsTransform
+---@field useRadii boolean
+UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput
+CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput = UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult : System.ValueType
+---@field pointA UnityEngine.Vector2
+---@field pointB UnityEngine.Vector2
+---@field normal UnityEngine.Vector2
+---@field distance number
+---@field iterations number
+UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult
+CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult = UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult : System.ValueType
+---@field closest1 UnityEngine.Vector2
+---@field closest2 UnityEngine.Vector2
+---@field fraction1 number
+---@field fraction2 number
+---@field distance number
+UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult
+CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult = UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep : System.ValueType
+---@field localCOM UnityEngine.Vector2
+---@field positionStart UnityEngine.Vector2
+---@field positionEnd UnityEngine.Vector2
+---@field rotationStart UnityEngine.LowLevelPhysics2D.PhysicsRotate
+---@field rotationEnd UnityEngine.LowLevelPhysics2D.PhysicsRotate
+UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep
+CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep = UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput : System.ValueType
+---@field shapeProxyA UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@field shapeProxyB UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@field shapeSweepA UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep
+---@field shapeSweepB UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep
+---@field maxFraction number
+UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput
+CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput = UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult : System.ValueType
+---@field point UnityEngine.Vector2
+---@field normal UnityEngine.Vector2
+---@field impactState UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
+---@field fraction number
+UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult
+CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult = UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
+---@field Unknown UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
+---@field Failed UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
+---@field Overlapped UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
+---@field Hit UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
+---@field Separated UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
+UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
+CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State = UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape : System.ValueType
+---@field definition UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
+---@field isValid boolean
+---@field world UnityEngine.LowLevelPhysics2D.PhysicsWorld
+---@field body UnityEngine.LowLevelPhysics2D.PhysicsBody
+---@field isTrigger boolean
+---@field shapeType UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
+---@field transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
+---@field massConfiguration UnityEngine.LowLevelPhysics2D.PhysicsBody.MassConfiguration
+---@field friction number
+---@field bounciness number
+---@field frictionMixing UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+---@field bouncinessMixing UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+---@field frictionPriority number
+---@field bouncinessPriority number
+---@field rollingResistance number
+---@field tangentSpeed number
+---@field customColor UnityEngine.Color32
+---@field surfaceMaterial UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
+---@field contactFilter UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
+---@field moverData UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData
+---@field triggerEvents boolean
+---@field contactEvents boolean
+---@field hitEvents boolean
+---@field contactFilterCallbacks boolean
+---@field preSolveCallbacks boolean
+---@field circleGeometry UnityEngine.LowLevelPhysics2D.CircleGeometry
+---@field capsuleGeometry UnityEngine.LowLevelPhysics2D.CapsuleGeometry
+---@field polygonGeometry UnityEngine.LowLevelPhysics2D.PolygonGeometry
+---@field segmentGeometry UnityEngine.LowLevelPhysics2D.SegmentGeometry
+---@field chainSegmentGeometry UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry
+---@field isChainSegment boolean
+---@field chain UnityEngine.LowLevelPhysics2D.PhysicsChain
+---@field aabb UnityEngine.LowLevelPhysics2D.PhysicsAABB
+---@field localCenter UnityEngine.Vector2
+---@field isOwned boolean
+---@field callbackTarget System.Object
+---@field userData UnityEngine.LowLevelPhysics2D.PhysicsUserData
+UnityEngine.LowLevelPhysics2D.PhysicsShape = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape UnityEngine.LowLevelPhysics2D.PhysicsShape
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape = UnityEngine.LowLevelPhysics2D.PhysicsShape
+
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@param body UnityEngine.LowLevelPhysics2D.PhysicsBody
+---@param geometry UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry
+---@return UnityEngine.LowLevelPhysics2D.PhysicsShape
+function UnityEngine.LowLevelPhysics2D.PhysicsShape.CreateShape(body, geometry) end
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: System.ReadOnlySpan, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: System.ReadOnlySpan, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: System.ReadOnlySpan, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: System.ReadOnlySpan, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@param body UnityEngine.LowLevelPhysics2D.PhysicsBody
+---@param geometry System.ReadOnlySpan
+---@param definition UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsShape.CreateShapeBatch(body, geometry, definition, allocator) end
+---@param shapes System.ReadOnlySpan
+---@param updateBodyMass boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsShape.DestroyBatch(shapes, updateBodyMass) end
+---@return string
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:ToString() end
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsShape, obj: System.Object) : boolean
+---@param other UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@return boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:Equals(other) end
+---@return number
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetHashCode() end
+---@param updateBodyMass boolean
+---@param ownerKey number
+---@return boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:Destroy(updateBodyMass, ownerKey) end
+---@param density number
+---@param updateBodyMass boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:SetDensity(density, updateBodyMass) end
+---@return number
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetDensity() end
+---@param force UnityEngine.Vector2
+---@param drag number
+---@param lift number
+---@param wake boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:ApplyWind(force, drag, lift, wake) end
+---@param point UnityEngine.Vector2
+---@return boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:OverlapPoint(point) end
+---@param point UnityEngine.Vector2
+---@return UnityEngine.Vector2
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:ClosestPoint(point) end
+---@param castRayInput UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastRayInput
+---@return UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastResult
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:CastRay(castRayInput) end
+---@param input UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastShapeInput
+---@return UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastResult
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:CastShape(input) end
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsShape, otherShape: UnityEngine.LowLevelPhysics2D.PhysicsShape) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
+---@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
+---@param otherShape UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@param otherTransform UnityEngine.LowLevelPhysics2D.PhysicsTransform
+---@return UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:Intersect(transform, otherShape, otherTransform) end
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetContacts(allocator) end
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetTriggerVisitors(allocator) end
+---@return number
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetPerimeter() end
+---@param axis UnityEngine.Vector2
+---@return number
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetPerimeterProjected(axis) end
+---@param owner UnityEngine.Object
+---@return number
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:SetOwner(owner) end
+---@return UnityEngine.Object
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetOwner() end
+---@return UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:CreateShapeProxy() end
+function UnityEngine.LowLevelPhysics2D.PhysicsShape:Draw() end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
+---@field Circle UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
+---@field Capsule UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
+---@field Segment UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
+---@field Polygon UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
+---@field ChainSegment UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
+UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType = UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial : System.ValueType
+---@field Default UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
+---@field friction number
+---@field bounciness number
+---@field frictionMixing UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+---@field bouncinessMixing UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+---@field frictionPriority number
+---@field bouncinessPriority number
+---@field rollingResistance number
+---@field tangentSpeed number
+---@field customColor UnityEngine.Color32
+UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial = UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
+
+---@return UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
+function UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.New() end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+---@field Average UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+---@field Mean UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+---@field Multiply UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+---@field Minimum UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+---@field Maximum UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode = UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold : System.ValueType
+---@field normal UnityEngine.Vector2
+---@field rollingImpulse number
+---@field points UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray
+---@field pointCount number
+---@field speculativePointCount number
+---@field Item UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
+UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
+
+---@return System.Collections.Generic.IEnumerator
+function UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold:GetEnumerator() end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint : System.ValueType
+---@field point UnityEngine.Vector2
+---@field anchorA UnityEngine.Vector2
+---@field anchorB UnityEngine.Vector2
+---@field separation number
+---@field normalImpulse number
+---@field tangentImpulse number
+---@field totalNormalImpulse number
+---@field normalVelocity number
+---@field id number
+---@field persisted boolean
+---@field speculative boolean
+UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray : System.ValueType
+---@field contactInfo0 UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
+---@field contactInfo1 UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
+---@field Item UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
+---@field speculativePointCount number
+UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator : System.ValueType
+UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator
+
+---@param contactManifold UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
+---@return UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator
+function UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator.New(contactManifold) end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact : System.ValueType
+---@field contactId UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId
+---@field shapeA UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@field shapeB UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@field manifold UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
+UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact = UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId : System.ValueType
+---@field isValid boolean
+---@field contact UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact
+UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId
+
+---@return string
+function UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId:ToString() end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter : System.ValueType
+---@field DefaultCategories UnityEngine.LowLevelPhysics2D.PhysicsMask
+---@field DefaultContacts UnityEngine.LowLevelPhysics2D.PhysicsMask
+---@field Everything UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
+---@field defaultFilter UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
+---@field categories UnityEngine.LowLevelPhysics2D.PhysicsMask
+---@field contacts UnityEngine.LowLevelPhysics2D.PhysicsMask
+---@field groupIndex number
+UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
+
+---@param categories UnityEngine.LowLevelPhysics2D.PhysicsMask
+---@param contacts UnityEngine.LowLevelPhysics2D.PhysicsMask
+---@param groupIndex number
+---@return UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
+function UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter.New(categories, contacts, groupIndex) end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray : System.ValueType
+---@field vertex0 UnityEngine.Vector2
+---@field vertex1 UnityEngine.Vector2
+---@field vertex2 UnityEngine.Vector2
+---@field vertex3 UnityEngine.Vector2
+---@field vertex4 UnityEngine.Vector2
+---@field vertex5 UnityEngine.Vector2
+---@field vertex6 UnityEngine.Vector2
+---@field vertex7 UnityEngine.Vector2
+---@field Item UnityEngine.Vector2&
+UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray = UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData : System.ValueType
+---@field pushLimit number
+---@field clipVelocity boolean
+UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData = UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData
+
+---@return UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData
+function UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData.New() end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy : System.ValueType
+---@field circleGeometry UnityEngine.LowLevelPhysics2D.CircleGeometry
+---@field capsuleGeometry UnityEngine.LowLevelPhysics2D.CapsuleGeometry
+---@field polygonGeometry UnityEngine.LowLevelPhysics2D.PolygonGeometry
+---@field segmentGeometry UnityEngine.LowLevelPhysics2D.SegmentGeometry
+---@field vertices UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray
+---@field count number
+---@field radius number
+UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy = UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+
+---@overload fun(point: UnityEngine.Vector2) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@overload fun(circleGeometry: UnityEngine.LowLevelPhysics2D.CircleGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@overload fun(capsuleGeometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@overload fun(polygonGeometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@overload fun(segmentGeometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@param chainSegmentGeometry UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry
+---@return UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+function UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy.New(chainSegmentGeometry) end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition : System.ValueType
+---@field surfaceMaterial UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
+---@field contactFilter UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
+---@field moverData UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData
+---@field defaultDefinition UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
+---@field density number
+---@field isTrigger boolean
+---@field triggerEvents boolean
+---@field contactEvents boolean
+---@field hitEvents boolean
+---@field contactFilterCallbacks boolean
+---@field preSolveCallbacks boolean
+---@field startStaticContacts boolean
+---@field startMassUpdate boolean
+UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
+CS.UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition = UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
+
+---@overload fun() : UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
+---@param useSettings boolean
+---@return UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
+function UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition.New(useSettings) end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsWorld : System.ValueType
+---@field safetyLocksEnabled boolean
+---@field bypassLowLevel boolean
+---@field isRenderingAllowed boolean
+---@field worldCount number
+---@field concurrentSimulations number
+---@field lengthUnitsPerMeter number
+---@field useFullLayers boolean
+---@field hugeWorldExtent number
+---@field linearSlop number
+---@field speculativeContactDistance number
+---@field aabbMargin number
+---@field bodyMaxRotation number
+---@field bodyTimeToSleep number
+---@field defaultWorld UnityEngine.LowLevelPhysics2D.PhysicsWorld
+---@field globalCounters UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
+---@field globalProfile UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
+---@field definition UnityEngine.LowLevelPhysics2D.PhysicsWorldDefinition
+---@field isOwned boolean
+---@field userData UnityEngine.LowLevelPhysics2D.PhysicsUserData
+---@field isValid boolean
+---@field isEmpty boolean
+---@field isDefaultWorld boolean
+---@field paused boolean
+---@field sleepingAllowed boolean
+---@field continuousAllowed boolean
+---@field contactFilterCallbacks boolean
+---@field preSolveCallbacks boolean
+---@field autoBodyUpdateCallbacks boolean
+---@field autoContactCallbacks boolean
+---@field autoTriggerCallbacks boolean
+---@field autoJointThresholdCallbacks boolean
+---@field warmStartingAllowed boolean
+---@field bounceThreshold number
+---@field contactHitEventThreshold number
+---@field contactFrequency number
+---@field contactDamping number
+---@field contactSpeed number
+---@field maximumLinearSpeed number
+---@field gravity UnityEngine.Vector2
+---@field simulationWorkers number
+---@field simulationType UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
+---@field simulationSubSteps number
+---@field lastSimulationTimestamp number
+---@field lastSimulationDeltaTime number
+---@field transformPlane UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
+---@field transformWriteMode UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
+---@field transformTweening boolean
+---@field bodyUpdateEvents System.ReadOnlySpan
+---@field triggerBeginEvents System.ReadOnlySpan
+---@field triggerEndEvents System.ReadOnlySpan
+---@field contactBeginEvents System.ReadOnlySpan
+---@field contactEndEvents System.ReadOnlySpan
+---@field contactHitEvents System.ReadOnlySpan
+---@field jointThresholdEvents System.ReadOnlySpan
+---@field awakeBodyCount number
+---@field counters UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
+---@field profile UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
+---@field drawOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field drawFillOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
+---@field drawThickness number
+---@field drawFillAlpha number
+---@field drawPointScale number
+---@field drawNormalScale number
+---@field drawImpulseScale number
+---@field drawCapacity number
+---@field drawColors UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawColors
+---@field elementDepth number
+UnityEngine.LowLevelPhysics2D.PhysicsWorld = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld UnityEngine.LowLevelPhysics2D.PhysicsWorld
+CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld = UnityEngine.LowLevelPhysics2D.PhysicsWorld
+
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld.GetWorlds(allocator) end
+---@overload fun() : UnityEngine.LowLevelPhysics2D.PhysicsWorld
+---@param definition UnityEngine.LowLevelPhysics2D.PhysicsWorldDefinition
+---@return UnityEngine.LowLevelPhysics2D.PhysicsWorld
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld.Create(definition) end
+---@overload fun(worlds: System.ReadOnlySpan, deltaTime: number)
+---@param deltaTime number
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:Simulate(deltaTime) end
+---@param bodies System.ReadOnlySpan
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld.DestroyBodyBatch(bodies) end
+---@param shapes System.ReadOnlySpan
+---@param updateBodyMass boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld.DestroyShapeBatch(shapes, updateBodyMass) end
+---@param joints System.ReadOnlySpan
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld.DestroyJointBatch(joints) end
+---@return string
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:ToString() end
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, obj: System.Object) : boolean
+---@param other UnityEngine.LowLevelPhysics2D.PhysicsWorld
+---@return boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:Equals(other) end
+---@return number
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetHashCode() end
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetBodies(allocator) end
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetJoints(allocator) end
+---@param ownerKey number
+---@return boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:Destroy(ownerKey) end
+---@param owner UnityEngine.Object
+---@return number
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SetOwner(owner) end
+---@return UnityEngine.Object
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetOwner() end
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:Reset() end
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetTransformWriteTweens() end
+---@param definition UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:Explode(definition) end
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetBodyUpdateUserData(allocator) end
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SendAllCallbacks() end
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SendBodyUpdateCallbacks() end
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SendContactCallbacks() end
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SendTriggerCallbacks() end
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SendJointThresholdCallbacks() end
+---@param allocator Unity.Collections.Allocator
+---@return UnityEngine.LowLevelPhysics2D.PhysicsCallbacks.BodyUpdateCallbackTargets
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetBodyUpdateCallbackTargets(allocator) end
+---@param allocator Unity.Collections.Allocator
+---@return UnityEngine.LowLevelPhysics2D.PhysicsCallbacks.TriggerCallbackTargets
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetTriggerCallbackTargets(allocator) end
+---@param allocator Unity.Collections.Allocator
+---@return UnityEngine.LowLevelPhysics2D.PhysicsCallbacks.ContactCallbackTargets
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetContactCallbackTargets(allocator) end
+---@param allocator Unity.Collections.Allocator
+---@return UnityEngine.LowLevelPhysics2D.PhysicsCallbacks.JointThresholdCallbackTargets
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetJointThresholdCallbackTargets(allocator) end
+---@param aabb UnityEngine.LowLevelPhysics2D.PhysicsAABB
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@return boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:TestOverlapAABB(aabb, filter) end
+---@param shape UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@return boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:TestOverlapShape(shape, filter) end
+---@param shapeProxy UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@return boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:TestOverlapShapeProxy(shapeProxy, filter) end
+---@param point UnityEngine.Vector2
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@return boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:TestOverlapPoint(point, filter) end
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter) : boolean
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter) : boolean
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter) : boolean
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter) : boolean
+---@param geometry UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@return boolean
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:TestOverlapGeometry(geometry, filter) end
+---@param aabb UnityEngine.LowLevelPhysics2D.PhysicsAABB
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:OverlapAABB(aabb, filter, allocator) end
+---@param shape UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:OverlapShape(shape, filter, allocator) end
+---@param shapeProxy UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:OverlapShapeProxy(shapeProxy, filter, allocator) end
+---@param point UnityEngine.Vector2
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:OverlapPoint(point, filter, allocator) end
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@param geometry UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:OverlapGeometry(geometry, filter, allocator) end
+---@param input UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastRayInput
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@param castMode UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CastRay(input, filter, castMode, allocator) end
+---@param shape UnityEngine.LowLevelPhysics2D.PhysicsShape
+---@param translation UnityEngine.Vector2
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@param castMode UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CastShape(shape, translation, filter, castMode, allocator) end
+---@param shapeProxy UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
+---@param translation UnityEngine.Vector2
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@param castMode UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CastShapeProxy(shapeProxy, translation, filter, castMode, allocator) end
+---@param input UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldMoverInput
+---@return UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldMoverResult
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CastMover(input) end
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry, translation: UnityEngine.Vector2, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, castMode: UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry, translation: UnityEngine.Vector2, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, castMode: UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@param geometry UnityEngine.LowLevelPhysics2D.PolygonGeometry
+---@param translation UnityEngine.Vector2
+---@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
+---@param castMode UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CastGeometry(geometry, translation, filter, castMode, allocator) end
+---@overload fun() : UnityEngine.LowLevelPhysics2D.PhysicsBody
+---@param definition UnityEngine.LowLevelPhysics2D.PhysicsBodyDefinition
+---@return UnityEngine.LowLevelPhysics2D.PhysicsBody
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CreateBody(definition) end
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsBodyDefinition, bodyCount: number, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
+---@param definitions System.ReadOnlySpan
+---@param allocator Unity.Collections.Allocator
+---@return Unity.Collections.NativeArray
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CreateBodyBatch(definitions, allocator) end
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsDistanceJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsDistanceJoint
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsRelativeJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsRelativeJoint
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsIgnoreJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsIgnoreJoint
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsSliderJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsSliderJoint
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsHingeJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsHingeJoint
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsFixedJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsFixedJoint
+---@param definition UnityEngine.LowLevelPhysics2D.PhysicsWheelJointDefinition
+---@return UnityEngine.LowLevelPhysics2D.PhysicsWheelJoint
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CreateJoint(definition) end
+---@param position UnityEngine.Vector3
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SetElementDepth3D(position) end
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:ClearDraw() end
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: System.ReadOnlySpan, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: System.ReadOnlySpan, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: System.ReadOnlySpan, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
+---@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number)
+---@param geometry System.ReadOnlySpan
+---@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
+---@param color UnityEngine.Color
+---@param lifetime number
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawGeometry(geometry, transform, color, lifetime) end
+---@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
+---@param size UnityEngine.Vector2
+---@param radius number
+---@param color UnityEngine.Color
+---@param lifetime number
+---@param drawFillOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawBox(transform, size, radius, color, lifetime, drawFillOptions) end
+---@param center UnityEngine.Vector2
+---@param radius number
+---@param color UnityEngine.Color
+---@param lifetime number
+---@param drawFillOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawCircle(center, radius, color, lifetime, drawFillOptions) end
+---@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
+---@param center1 UnityEngine.Vector2
+---@param center2 UnityEngine.Vector2
+---@param radius number
+---@param color UnityEngine.Color
+---@param lifetime number
+---@param drawFillOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawCapsule(transform, center1, center2, radius, color, lifetime, drawFillOptions) end
+---@param position UnityEngine.Vector2
+---@param radius number
+---@param color UnityEngine.Color
+---@param lifetime number
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawPoint(position, radius, color, lifetime) end
+---@param point0 UnityEngine.Vector2
+---@param point1 UnityEngine.Vector2
+---@param color UnityEngine.Color
+---@param lifetime number
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawLine(point0, point1, color, lifetime) end
+---@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
+---@param vertices System.ReadOnlySpan
+---@param loop boolean
+---@param color UnityEngine.Color
+---@param lifetime number
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawLineStrip(transform, vertices, loop, color, lifetime) end
+---@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
+---@param scale number
+---@param lifetime number
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawTransformAxis(transform, scale, lifetime) end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
+---@field FixedUpdate UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
+---@field Update UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
+---@field Script UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
+UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
+CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType = UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
+---@field Off UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
+---@field Fast2D UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
+---@field Slow3D UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
+UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
+CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode = UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
+---@field XY UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
+---@field XZ UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
+---@field ZY UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
+UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
+CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane = UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
+
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition : System.ValueType
+---@field defaultDefinition UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition
+---@field hitCategories UnityEngine.LowLevelPhysics2D.PhysicsMask
+---@field position UnityEngine.Vector2
+---@field radius number
+---@field falloff number
+---@field impulsePerLength number
+UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition
+CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition = UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition
+
+---@return UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition.New() end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters : System.ValueType
+---@field bodyCount number
+---@field shapeCount number
+---@field contactCount number
+---@field jointCount number
+---@field islandCount number
+---@field stackUsed number
+---@field memoryUsed number
+---@field staticBroadphaseHeight number
+---@field broadphaseHeight number
+---@field taskCount number
+UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
+CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters = UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
+
+---@param countersA UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
+---@param countersB UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
+---@return UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters.Add(countersA, countersB) end
+---@param countersA UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
+---@param countersB UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
+---@return UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters.Maximum(countersA, countersB) end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile : System.ValueType
+---@field simulationStep number
+---@field contactPairs number
+---@field contactUpdates number
+---@field solving number
+---@field prepareStages number
+---@field solveConstraints number
+---@field prepareConstraints number
+---@field integrateVelocities number
+---@field warmStarting number
+---@field solveImpulses number
+---@field integrateTransforms number
+---@field relaxImpulses number
+---@field applyBounciness number
+---@field storeImpulses number
+---@field splitIslands number
+---@field bodyTransforms number
+---@field fastTriggers number
+---@field jointEvents number
+---@field hitEvents number
+---@field broadphaseUpdates number
+---@field solveContinuous number
+---@field sleepIslands number
+---@field updateTriggers number
+---@field writeTransforms number
+UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
+CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile = UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
+
+---@param profileA UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
+---@param profileB UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
+---@return UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile.Add(profileA, profileB) end
+---@param profileA UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
+---@param profileB UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
+---@return UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
+function UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile.Maximum(profileA, profileB) end
+
+---@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field Off UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field SelectedBodies UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field SelectedShapes UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field SelectedShapeBounds UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field SelectedJoints UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field AllBodies UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field AllShapes UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field AllShapeBounds UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field AllJoints UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field AllContactPoints UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field AllContactNormal UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field AllContactImpulse UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field AllContactFriction UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field AllCustom UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field AllSolverIslands UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field DefaultAll UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+---@field DefaultSelected UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions = {}
+---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions = UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
+
+
 ---@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
 ---@field Interior UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
 ---@field Outline UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
@@ -4194,811 +5017,3 @@ function UnityEngine.TextCore.Text.FontAsset:ClearFontAssetData(setAtlasSizeToZe
 ---@param includeFontFeatures boolean
 ---@return boolean,string
 function UnityEngine.TextCore.Text.FontAsset:TryAddCharacters(characters, out_missingCharacters, includeFontFeatures) end
-
----@class UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller : System.Object
-UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller = {}
----@alias CS.UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller
-CS.UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller = UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller
-
----@param fontAsset UnityEngine.TextCore.Text.FontAsset
----@return System.IntPtr
-function UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller.ConvertToNative(fontAsset) end
-
----@class UnityEngine.TextCore.Text.FontAssetFactory : System.Object
-UnityEngine.TextCore.Text.FontAssetFactory = {}
----@alias CS.UnityEngine.TextCore.Text.FontAssetFactory UnityEngine.TextCore.Text.FontAssetFactory
-CS.UnityEngine.TextCore.Text.FontAssetFactory = UnityEngine.TextCore.Text.FontAssetFactory
-
----@return UnityEngine.TextCore.Text.FontAssetFactory
-function UnityEngine.TextCore.Text.FontAssetFactory.New() end
----@param baseFontAsset UnityEngine.TextCore.Text.FontAsset
----@param fontSize number
----@param isRaster boolean
----@return UnityEngine.TextCore.Text.FontAsset
-function UnityEngine.TextCore.Text.FontAssetFactory.CloneFontAssetWithBitmapRendering(baseFontAsset, fontSize, isRaster) end
----@param fontAsset UnityEngine.TextCore.Text.FontAsset
-function UnityEngine.TextCore.Text.FontAssetFactory.SetHideFlags(fontAsset) end
-
----@class UnityEngine.TextCore.Text.FontAssetUtilities : System.Object
-UnityEngine.TextCore.Text.FontAssetUtilities = {}
----@alias CS.UnityEngine.TextCore.Text.FontAssetUtilities UnityEngine.TextCore.Text.FontAssetUtilities
-CS.UnityEngine.TextCore.Text.FontAssetUtilities = UnityEngine.TextCore.Text.FontAssetUtilities
-
----@param unicode number
----@param sourceFontAsset UnityEngine.TextCore.Text.FontAsset
----@param fontAssets System.Collections.Generic.List
----@param OSFallbackList System.Collections.Generic.List
----@param includeFallbacks boolean
----@param fontStyle UnityEngine.TextCore.Text.FontStyles
----@param fontWeight UnityEngine.TextCore.Text.TextFontWeight
----@param out_isAlternativeTypeface boolean
----@return UnityEngine.TextCore.Text.Character,boolean
-function UnityEngine.TextCore.Text.FontAssetUtilities.GetCharacterFromFontAssets(unicode, sourceFontAsset, fontAssets, OSFallbackList, includeFallbacks, fontStyle, fontWeight, out_isAlternativeTypeface) end
----@param unicode number
----@param spriteAsset UnityEngine.TextCore.Text.SpriteAsset
----@param includeFallbacks boolean
----@return UnityEngine.TextCore.Text.SpriteCharacter
-function UnityEngine.TextCore.Text.FontAssetUtilities.GetSpriteCharacterFromSpriteAsset(unicode, spriteAsset, includeFallbacks) end
----@overload fun(text: string, ref_index: number) : number, number
----@param codesPoints System.UInt32[]
----@param ref_index number
----@return number,number
-function UnityEngine.TextCore.Text.FontAssetUtilities.GetCodePoint(codesPoints, ref_index) end
-
----@class UnityEngine.TextCore.Text.SpriteAsset : UnityEngine.TextCore.Text.TextAsset
----@field fallbackSpriteAssets System.Collections.Generic.List
----@field faceInfo UnityEngine.TextCore.FaceInfo
----@field spriteSheet UnityEngine.Texture
----@field spriteCharacterTable System.Collections.Generic.List
----@field spriteCharacterLookupTable System.Collections.Generic.Dictionary
----@field spriteGlyphTable System.Collections.Generic.List
-UnityEngine.TextCore.Text.SpriteAsset = {}
----@alias CS.UnityEngine.TextCore.Text.SpriteAsset UnityEngine.TextCore.Text.SpriteAsset
-CS.UnityEngine.TextCore.Text.SpriteAsset = UnityEngine.TextCore.Text.SpriteAsset
-
----@return UnityEngine.TextCore.Text.SpriteAsset
-function UnityEngine.TextCore.Text.SpriteAsset.New() end
----@param spriteAsset UnityEngine.TextCore.Text.SpriteAsset
----@param unicode number
----@param includeFallbacks boolean
----@param out_spriteIndex number
----@return UnityEngine.TextCore.Text.SpriteAsset,number
-function UnityEngine.TextCore.Text.SpriteAsset.SearchForSpriteByUnicode(spriteAsset, unicode, includeFallbacks, out_spriteIndex) end
----@param spriteAsset UnityEngine.TextCore.Text.SpriteAsset
----@param hashCode number
----@param includeFallbacks boolean
----@param out_spriteIndex number
----@param textSettings UnityEngine.TextCore.Text.TextSettings
----@return UnityEngine.TextCore.Text.SpriteAsset,number
-function UnityEngine.TextCore.Text.SpriteAsset.SearchForSpriteByHashCode(spriteAsset, hashCode, includeFallbacks, out_spriteIndex, textSettings) end
-function UnityEngine.TextCore.Text.SpriteAsset:UpdateLookupTables() end
----@param hashCode number
----@return number
-function UnityEngine.TextCore.Text.SpriteAsset:GetSpriteIndexFromHashcode(hashCode) end
----@param unicode number
----@return number
-function UnityEngine.TextCore.Text.SpriteAsset:GetSpriteIndexFromUnicode(unicode) end
----@param name string
----@return number
-function UnityEngine.TextCore.Text.SpriteAsset:GetSpriteIndexFromName(name) end
-function UnityEngine.TextCore.Text.SpriteAsset:SortGlyphTable() end
-
----@class UnityEngine.TextCore.Text.SpriteCharacter : UnityEngine.TextCore.Text.TextElement
----@field name string
-UnityEngine.TextCore.Text.SpriteCharacter = {}
----@alias CS.UnityEngine.TextCore.Text.SpriteCharacter UnityEngine.TextCore.Text.SpriteCharacter
-CS.UnityEngine.TextCore.Text.SpriteCharacter = UnityEngine.TextCore.Text.SpriteCharacter
-
----@overload fun() : UnityEngine.TextCore.Text.SpriteCharacter
----@overload fun(unicode: number, glyph: UnityEngine.TextCore.Text.SpriteGlyph) : UnityEngine.TextCore.Text.SpriteCharacter
----@param unicode number
----@param spriteAsset UnityEngine.TextCore.Text.SpriteAsset
----@param glyph UnityEngine.TextCore.Text.SpriteGlyph
----@return UnityEngine.TextCore.Text.SpriteCharacter
-function UnityEngine.TextCore.Text.SpriteCharacter.New(unicode, spriteAsset, glyph) end
-
----@class UnityEngine.TextCore.Text.SpriteGlyph : UnityEngine.TextCore.Glyph
----@field sprite UnityEngine.Sprite
-UnityEngine.TextCore.Text.SpriteGlyph = {}
----@alias CS.UnityEngine.TextCore.Text.SpriteGlyph UnityEngine.TextCore.Text.SpriteGlyph
-CS.UnityEngine.TextCore.Text.SpriteGlyph = UnityEngine.TextCore.Text.SpriteGlyph
-
----@overload fun() : UnityEngine.TextCore.Text.SpriteGlyph
----@overload fun(index: number, metrics: UnityEngine.TextCore.GlyphMetrics, glyphRect: UnityEngine.TextCore.GlyphRect, scale: number, atlasIndex: number) : UnityEngine.TextCore.Text.SpriteGlyph
----@param index number
----@param metrics UnityEngine.TextCore.GlyphMetrics
----@param glyphRect UnityEngine.TextCore.GlyphRect
----@param scale number
----@param atlasIndex number
----@param sprite UnityEngine.Sprite
----@return UnityEngine.TextCore.Text.SpriteGlyph
-function UnityEngine.TextCore.Text.SpriteGlyph.New(index, metrics, glyphRect, scale, atlasIndex, sprite) end
-
----@class UnityEngine.TextCore.Text.TextAsset : UnityEngine.ScriptableObject
----@field version string
----@field instanceID number
----@field hashCode number
----@field material UnityEngine.Material
----@field materialHashCode number
-UnityEngine.TextCore.Text.TextAsset = {}
----@alias CS.UnityEngine.TextCore.Text.TextAsset UnityEngine.TextCore.Text.TextAsset
-CS.UnityEngine.TextCore.Text.TextAsset = UnityEngine.TextCore.Text.TextAsset
-
-
----@class UnityEngine.TextCore.Text.ColorGradientMode
----@field Single UnityEngine.TextCore.Text.ColorGradientMode
----@field HorizontalGradient UnityEngine.TextCore.Text.ColorGradientMode
----@field VerticalGradient UnityEngine.TextCore.Text.ColorGradientMode
----@field FourCornersGradient UnityEngine.TextCore.Text.ColorGradientMode
-UnityEngine.TextCore.Text.ColorGradientMode = {}
----@alias CS.UnityEngine.TextCore.Text.ColorGradientMode UnityEngine.TextCore.Text.ColorGradientMode
-CS.UnityEngine.TextCore.Text.ColorGradientMode = UnityEngine.TextCore.Text.ColorGradientMode
-
-
----@class UnityEngine.TextCore.Text.TextColorGradient : UnityEngine.ScriptableObject
----@field colorMode UnityEngine.TextCore.Text.ColorGradientMode
----@field topLeft UnityEngine.Color
----@field topRight UnityEngine.Color
----@field bottomLeft UnityEngine.Color
----@field bottomRight UnityEngine.Color
-UnityEngine.TextCore.Text.TextColorGradient = {}
----@alias CS.UnityEngine.TextCore.Text.TextColorGradient UnityEngine.TextCore.Text.TextColorGradient
-CS.UnityEngine.TextCore.Text.TextColorGradient = UnityEngine.TextCore.Text.TextColorGradient
-
----@overload fun() : UnityEngine.TextCore.Text.TextColorGradient
----@overload fun(color: UnityEngine.Color) : UnityEngine.TextCore.Text.TextColorGradient
----@param color0 UnityEngine.Color
----@param color1 UnityEngine.Color
----@param color2 UnityEngine.Color
----@param color3 UnityEngine.Color
----@return UnityEngine.TextCore.Text.TextColorGradient
-function UnityEngine.TextCore.Text.TextColorGradient.New(color0, color1, color2, color3) end
-
----@class UnityEngine.TextCore.Text.TextSettings : UnityEngine.ScriptableObject
----@field version string
----@field defaultFontAsset UnityEngine.TextCore.Text.FontAsset
----@field defaultFontAssetPath string
----@field fallbackFontAssets System.Collections.Generic.List
----@field matchMaterialPreset boolean
----@field missingCharacterUnicode number
----@field clearDynamicDataOnBuild boolean
----@field enableEmojiSupport boolean
----@field emojiFallbackTextAssets System.Collections.Generic.List
----@field defaultSpriteAsset UnityEngine.TextCore.Text.SpriteAsset
----@field defaultSpriteAssetPath string
----@field missingSpriteCharacterUnicode number
----@field defaultStyleSheet UnityEngine.TextCore.Text.TextStyleSheet
----@field styleSheetsResourcePath string
----@field defaultColorGradientPresetsPath string
----@field lineBreakingRules UnityEngine.TextCore.Text.UnicodeLineBreakingRules
----@field displayWarnings boolean
-UnityEngine.TextCore.Text.TextSettings = {}
----@alias CS.UnityEngine.TextCore.Text.TextSettings UnityEngine.TextCore.Text.TextSettings
-CS.UnityEngine.TextCore.Text.TextSettings = UnityEngine.TextCore.Text.TextSettings
-
----@return UnityEngine.TextCore.Text.TextSettings
-function UnityEngine.TextCore.Text.TextSettings.New() end
-
----@class UnityEngine.TextCore.Text.TextSettings.FontReferenceMap : System.ValueType
----@field font UnityEngine.Font
----@field fontAsset UnityEngine.TextCore.Text.FontAsset
-UnityEngine.TextCore.Text.TextSettings.FontReferenceMap = {}
----@alias CS.UnityEngine.TextCore.Text.TextSettings.FontReferenceMap UnityEngine.TextCore.Text.TextSettings.FontReferenceMap
-CS.UnityEngine.TextCore.Text.TextSettings.FontReferenceMap = UnityEngine.TextCore.Text.TextSettings.FontReferenceMap
-
----@param font UnityEngine.Font
----@param fontAsset UnityEngine.TextCore.Text.FontAsset
----@return UnityEngine.TextCore.Text.TextSettings.FontReferenceMap
-function UnityEngine.TextCore.Text.TextSettings.FontReferenceMap.New(font, fontAsset) end
-
----@class UnityEngine.TextCore.Text.TextStyle : System.Object
----@field NormalStyle UnityEngine.TextCore.Text.TextStyle
----@field name string
----@field hashCode number
----@field styleOpeningDefinition string
----@field styleClosingDefinition string
----@field styleOpeningTagArray System.UInt32[]
----@field styleClosingTagArray System.UInt32[]
-UnityEngine.TextCore.Text.TextStyle = {}
----@alias CS.UnityEngine.TextCore.Text.TextStyle UnityEngine.TextCore.Text.TextStyle
-CS.UnityEngine.TextCore.Text.TextStyle = UnityEngine.TextCore.Text.TextStyle
-
-function UnityEngine.TextCore.Text.TextStyle:RefreshStyle() end
-
----@class UnityEngine.TextCore.Text.TextStyleSheet : UnityEngine.ScriptableObject
-UnityEngine.TextCore.Text.TextStyleSheet = {}
----@alias CS.UnityEngine.TextCore.Text.TextStyleSheet UnityEngine.TextCore.Text.TextStyleSheet
-CS.UnityEngine.TextCore.Text.TextStyleSheet = UnityEngine.TextCore.Text.TextStyleSheet
-
----@return UnityEngine.TextCore.Text.TextStyleSheet
-function UnityEngine.TextCore.Text.TextStyleSheet.New() end
----@overload fun(self: UnityEngine.TextCore.Text.TextStyleSheet, hashCode: number) : UnityEngine.TextCore.Text.TextStyle
----@param name string
----@return UnityEngine.TextCore.Text.TextStyle
-function UnityEngine.TextCore.Text.TextStyleSheet:GetStyle(name) end
-function UnityEngine.TextCore.Text.TextStyleSheet:RefreshStyles() end
-
----@class UnityEngine.TextCore.Text.TextCoreVertex : System.ValueType
----@field position UnityEngine.Vector3
----@field color UnityEngine.Color32
----@field uv0 UnityEngine.Vector2
----@field uv2 UnityEngine.Vector2
-UnityEngine.TextCore.Text.TextCoreVertex = {}
----@alias CS.UnityEngine.TextCore.Text.TextCoreVertex UnityEngine.TextCore.Text.TextCoreVertex
-CS.UnityEngine.TextCore.Text.TextCoreVertex = UnityEngine.TextCore.Text.TextCoreVertex
-
-
----@class UnityEngine.TextCore.Text.TextElementType
----@field Character UnityEngine.TextCore.Text.TextElementType
----@field Sprite UnityEngine.TextCore.Text.TextElementType
-UnityEngine.TextCore.Text.TextElementType = {}
----@alias CS.UnityEngine.TextCore.Text.TextElementType UnityEngine.TextCore.Text.TextElementType
-CS.UnityEngine.TextCore.Text.TextElementType = UnityEngine.TextCore.Text.TextElementType
-
-
----@class UnityEngine.TextCore.Text.TextElement : System.Object
----@field elementType UnityEngine.TextCore.Text.TextElementType
----@field unicode number
----@field textAsset UnityEngine.TextCore.Text.TextAsset
----@field glyph UnityEngine.TextCore.Glyph
----@field glyphIndex number
----@field scale number
-UnityEngine.TextCore.Text.TextElement = {}
----@alias CS.UnityEngine.TextCore.Text.TextElement UnityEngine.TextCore.Text.TextElement
-CS.UnityEngine.TextCore.Text.TextElement = UnityEngine.TextCore.Text.TextElement
-
-
----@class UnityEngine.TextCore.Text.TextVertex : System.ValueType
----@field position UnityEngine.Vector3
----@field uv UnityEngine.Vector4
----@field uv2 UnityEngine.Vector2
----@field color UnityEngine.Color32
-UnityEngine.TextCore.Text.TextVertex = {}
----@alias CS.UnityEngine.TextCore.Text.TextVertex UnityEngine.TextCore.Text.TextVertex
-CS.UnityEngine.TextCore.Text.TextVertex = UnityEngine.TextCore.Text.TextVertex
-
-
----@class UnityEngine.TextCore.Text.TextElementInfo : System.ValueType
----@field character number
----@field index number
----@field elementType UnityEngine.TextCore.Text.TextElementType
----@field stringLength number
----@field textElement UnityEngine.TextCore.Text.TextElement
----@field alternativeGlyph UnityEngine.TextCore.Glyph
----@field fontAsset UnityEngine.TextCore.Text.FontAsset
----@field spriteAsset UnityEngine.TextCore.Text.SpriteAsset
----@field material UnityEngine.Material
----@field materialReferenceIndex number
----@field isUsingAlternateTypeface boolean
----@field pointSize number
----@field lineNumber number
----@field vertexIndex number
----@field vertexTopLeft UnityEngine.TextCore.Text.TextVertex
----@field vertexBottomLeft UnityEngine.TextCore.Text.TextVertex
----@field vertexTopRight UnityEngine.TextCore.Text.TextVertex
----@field vertexBottomRight UnityEngine.TextCore.Text.TextVertex
----@field topLeft UnityEngine.Vector3
----@field bottomLeft UnityEngine.Vector3
----@field topRight UnityEngine.Vector3
----@field bottomRight UnityEngine.Vector3
----@field origin number
----@field ascender number
----@field baseLine number
----@field descender number
----@field xAdvance number
----@field aspectRatio number
----@field scale number
----@field color UnityEngine.Color32
----@field underlineColor UnityEngine.Color32
----@field underlineVertexIndex number
----@field strikethroughColor UnityEngine.Color32
----@field strikethroughVertexIndex number
----@field highlightColor UnityEngine.Color32
----@field highlightState UnityEngine.TextCore.Text.HighlightState
----@field style UnityEngine.TextCore.Text.FontStyles
----@field isVisible boolean
-UnityEngine.TextCore.Text.TextElementInfo = {}
----@alias CS.UnityEngine.TextCore.Text.TextElementInfo UnityEngine.TextCore.Text.TextElementInfo
-CS.UnityEngine.TextCore.Text.TextElementInfo = UnityEngine.TextCore.Text.TextElementInfo
-
----@return string
-function UnityEngine.TextCore.Text.TextElementInfo:ToString() end
-
----@class UnityEngine.TextCore.Text.TextEventManager : System.Object
----@field MATERIAL_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
----@field FONT_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
----@field SPRITE_ASSET_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
----@field TEXTMESHPRO_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
----@field DRAG_AND_DROP_MATERIAL_EVENT UnityEngine.TextCore.Text.FastAction
----@field TEXT_STYLE_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
----@field COLOR_GRADIENT_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
----@field TMP_SETTINGS_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
----@field RESOURCE_LOAD_EVENT UnityEngine.TextCore.Text.FastAction
----@field TEXTMESHPRO_UGUI_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
----@field OnPreRenderObject_Event UnityEngine.TextCore.Text.FastAction
----@field TEXT_CHANGED_EVENT UnityEngine.TextCore.Text.FastAction
-UnityEngine.TextCore.Text.TextEventManager = {}
----@alias CS.UnityEngine.TextCore.Text.TextEventManager UnityEngine.TextCore.Text.TextEventManager
-CS.UnityEngine.TextCore.Text.TextEventManager = UnityEngine.TextCore.Text.TextEventManager
-
-function UnityEngine.TextCore.Text.TextEventManager.ON_PRE_RENDER_OBJECT_CHANGED() end
----@param isChanged boolean
----@param mat UnityEngine.Material
-function UnityEngine.TextCore.Text.TextEventManager.ON_MATERIAL_PROPERTY_CHANGED(isChanged, mat) end
----@param isChanged boolean
----@param font UnityEngine.Object
-function UnityEngine.TextCore.Text.TextEventManager.ON_FONT_PROPERTY_CHANGED(isChanged, font) end
----@param isChanged boolean
----@param obj UnityEngine.Object
-function UnityEngine.TextCore.Text.TextEventManager.ON_SPRITE_ASSET_PROPERTY_CHANGED(isChanged, obj) end
----@param isChanged boolean
----@param obj UnityEngine.Object
-function UnityEngine.TextCore.Text.TextEventManager.ON_TEXTMESHPRO_PROPERTY_CHANGED(isChanged, obj) end
----@param sender UnityEngine.GameObject
----@param currentMaterial UnityEngine.Material
----@param newMaterial UnityEngine.Material
-function UnityEngine.TextCore.Text.TextEventManager.ON_DRAG_AND_DROP_MATERIAL_CHANGED(sender, currentMaterial, newMaterial) end
----@param isChanged boolean
-function UnityEngine.TextCore.Text.TextEventManager.ON_TEXT_STYLE_PROPERTY_CHANGED(isChanged) end
----@param gradient UnityEngine.Object
-function UnityEngine.TextCore.Text.TextEventManager.ON_COLOR_GRADIENT_PROPERTY_CHANGED(gradient) end
----@param obj UnityEngine.Object
-function UnityEngine.TextCore.Text.TextEventManager.ON_TEXT_CHANGED(obj) end
-function UnityEngine.TextCore.Text.TextEventManager.ON_TMP_SETTINGS_CHANGED() end
-function UnityEngine.TextCore.Text.TextEventManager.ON_RESOURCES_LOADED() end
----@param isChanged boolean
----@param obj UnityEngine.Object
-function UnityEngine.TextCore.Text.TextEventManager.ON_TEXTMESHPRO_UGUI_PROPERTY_CHANGED(isChanged, obj) end
-
----@class UnityEngine.TextCore.Text.TextGenerator : System.Object
----@field isTextTruncated boolean
-UnityEngine.TextCore.Text.TextGenerator = {}
----@alias CS.UnityEngine.TextCore.Text.TextGenerator UnityEngine.TextCore.Text.TextGenerator
-CS.UnityEngine.TextCore.Text.TextGenerator = UnityEngine.TextCore.Text.TextGenerator
-
----@return UnityEngine.TextCore.Text.TextGenerator
-function UnityEngine.TextCore.Text.TextGenerator.New() end
----@param settings UnityEngine.TextCore.Text.TextGenerationSettings
----@param textInfo UnityEngine.TextCore.Text.TextInfo
-function UnityEngine.TextCore.Text.TextGenerator:GenerateText(settings, textInfo) end
----@param textInfo UnityEngine.TextCore.Text.TextInfo
----@param generationSettings UnityEngine.TextCore.Text.TextGenerationSettings
----@param maxVisibleDescender number
-function UnityEngine.TextCore.Text.TextGenerator:LayoutPhase(textInfo, generationSettings, maxVisibleDescender) end
----@param textInfo UnityEngine.TextCore.Text.TextInfo
----@param generationSettings UnityEngine.TextCore.Text.TextGenerationSettings
----@param out_charCode number
----@param out_maxVisibleDescender number
----@return ,number,number
-function UnityEngine.TextCore.Text.TextGenerator:ParsingPhase(textInfo, generationSettings, out_charCode, out_maxVisibleDescender) end
----@param settings UnityEngine.TextCore.Text.TextGenerationSettings
----@param textInfo UnityEngine.TextCore.Text.TextInfo
----@return UnityEngine.Vector2
-function UnityEngine.TextCore.Text.TextGenerator:GetPreferredValues(settings, textInfo) end
-
----@class UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback : System.MulticastDelegate
-UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback = {}
----@alias CS.UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback
-CS.UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback = UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback
-function UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback.New(object, method) end
----@param unicode number
----@param stringIndex number
----@param text UnityEngine.TextCore.Text.TextInfo
----@param fontAsset UnityEngine.TextCore.Text.FontAsset
-function UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback:Invoke(unicode, stringIndex, text, fontAsset) end
----@param unicode number
----@param stringIndex number
----@param text UnityEngine.TextCore.Text.TextInfo
----@param fontAsset UnityEngine.TextCore.Text.FontAsset
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback:BeginInvoke(unicode, stringIndex, text, fontAsset, callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback:EndInvoke(result) end
-
----@class UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter : System.ValueType
----@field character UnityEngine.TextCore.Text.Character
----@field fontAsset UnityEngine.TextCore.Text.FontAsset
----@field material UnityEngine.Material
----@field materialIndex number
-UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter = {}
----@alias CS.UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter
-CS.UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter = UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter
-
----@param character UnityEngine.TextCore.Text.Character
----@param materialIndex number
----@return UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter
-function UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter.New(character, materialIndex) end
-
----@class UnityEngine.TextCore.Text.TextGenerationSettings : System.Object
----@field wordWrappingRatio number
----@field autoSize boolean
----@field fontSizeMin number
----@field fontSizeMax number
----@field tagNoParsing boolean
----@field lineSpacing number
----@field lineSpacingMax number
----@field maxVisibleCharacters number
----@field maxVisibleWords number
----@field maxVisibleLines number
----@field firstVisibleCharacter number
----@field useMaxVisibleDescender boolean
----@field charWidthMaxAdj number
----@field screenRect UnityEngine.Rect
----@field fontAsset UnityEngine.TextCore.Text.FontAsset
----@field fontStyle UnityEngine.TextCore.Text.FontStyles
----@field textSettings UnityEngine.TextCore.Text.TextSettings
----@field textAlignment UnityEngine.TextCore.Text.TextAlignment
----@field overflowMode UnityEngine.TextCore.Text.TextOverflowMode
----@field color UnityEngine.Color
----@field shouldConvertToLinearSpace boolean
----@field fontSize number
----@field emojiFallbackSupport boolean
----@field richText boolean
----@field isRightToLeft boolean
----@field extraPadding number
----@field parseControlCharacters boolean
----@field isPlaceholder boolean
----@field characterSpacing number
----@field wordSpacing number
----@field paragraphSpacing number
----@field textWrappingMode UnityEngine.TextCore.Text.TextWrappingMode
----@field fontWeight UnityEngine.TextCore.Text.TextFontWeight
----@field isIMGUI boolean
----@field pixelsPerPoint number
----@field renderedText UnityEngine.TextCore.Text.RenderedText
----@field text string
-UnityEngine.TextCore.Text.TextGenerationSettings = {}
----@alias CS.UnityEngine.TextCore.Text.TextGenerationSettings UnityEngine.TextCore.Text.TextGenerationSettings
-CS.UnityEngine.TextCore.Text.TextGenerationSettings = UnityEngine.TextCore.Text.TextGenerationSettings
-
----@return UnityEngine.TextCore.Text.TextGenerationSettings
-function UnityEngine.TextCore.Text.TextGenerationSettings.New() end
----@overload fun(self: UnityEngine.TextCore.Text.TextGenerationSettings, other: UnityEngine.TextCore.Text.TextGenerationSettings) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.TextCore.Text.TextGenerationSettings:Equals(obj) end
----@return number
-function UnityEngine.TextCore.Text.TextGenerationSettings:GetHashCode() end
----@return string
-function UnityEngine.TextCore.Text.TextGenerationSettings:ToString() end
-
----@class UnityEngine.TextCore.Text.HorizontalAlignment
----@field Left UnityEngine.TextCore.Text.HorizontalAlignment
----@field Center UnityEngine.TextCore.Text.HorizontalAlignment
----@field Right UnityEngine.TextCore.Text.HorizontalAlignment
----@field Justified UnityEngine.TextCore.Text.HorizontalAlignment
----@field Flush UnityEngine.TextCore.Text.HorizontalAlignment
----@field Geometry UnityEngine.TextCore.Text.HorizontalAlignment
-UnityEngine.TextCore.Text.HorizontalAlignment = {}
----@alias CS.UnityEngine.TextCore.Text.HorizontalAlignment UnityEngine.TextCore.Text.HorizontalAlignment
-CS.UnityEngine.TextCore.Text.HorizontalAlignment = UnityEngine.TextCore.Text.HorizontalAlignment
-
-
----@class UnityEngine.TextCore.Text.VerticalAlignment
----@field Top UnityEngine.TextCore.Text.VerticalAlignment
----@field Middle UnityEngine.TextCore.Text.VerticalAlignment
----@field Bottom UnityEngine.TextCore.Text.VerticalAlignment
----@field Baseline UnityEngine.TextCore.Text.VerticalAlignment
----@field Midline UnityEngine.TextCore.Text.VerticalAlignment
----@field Capline UnityEngine.TextCore.Text.VerticalAlignment
-UnityEngine.TextCore.Text.VerticalAlignment = {}
----@alias CS.UnityEngine.TextCore.Text.VerticalAlignment UnityEngine.TextCore.Text.VerticalAlignment
-CS.UnityEngine.TextCore.Text.VerticalAlignment = UnityEngine.TextCore.Text.VerticalAlignment
-
-
----@class UnityEngine.TextCore.Text.TextAlignment
----@field TopLeft UnityEngine.TextCore.Text.TextAlignment
----@field TopCenter UnityEngine.TextCore.Text.TextAlignment
----@field TopRight UnityEngine.TextCore.Text.TextAlignment
----@field TopJustified UnityEngine.TextCore.Text.TextAlignment
----@field TopFlush UnityEngine.TextCore.Text.TextAlignment
----@field TopGeoAligned UnityEngine.TextCore.Text.TextAlignment
----@field MiddleLeft UnityEngine.TextCore.Text.TextAlignment
----@field MiddleCenter UnityEngine.TextCore.Text.TextAlignment
----@field MiddleRight UnityEngine.TextCore.Text.TextAlignment
----@field MiddleJustified UnityEngine.TextCore.Text.TextAlignment
----@field MiddleFlush UnityEngine.TextCore.Text.TextAlignment
----@field MiddleGeoAligned UnityEngine.TextCore.Text.TextAlignment
----@field BottomLeft UnityEngine.TextCore.Text.TextAlignment
----@field BottomCenter UnityEngine.TextCore.Text.TextAlignment
----@field BottomRight UnityEngine.TextCore.Text.TextAlignment
----@field BottomJustified UnityEngine.TextCore.Text.TextAlignment
----@field BottomFlush UnityEngine.TextCore.Text.TextAlignment
----@field BottomGeoAligned UnityEngine.TextCore.Text.TextAlignment
----@field BaselineLeft UnityEngine.TextCore.Text.TextAlignment
----@field BaselineCenter UnityEngine.TextCore.Text.TextAlignment
----@field BaselineRight UnityEngine.TextCore.Text.TextAlignment
----@field BaselineJustified UnityEngine.TextCore.Text.TextAlignment
----@field BaselineFlush UnityEngine.TextCore.Text.TextAlignment
----@field BaselineGeoAligned UnityEngine.TextCore.Text.TextAlignment
----@field MidlineLeft UnityEngine.TextCore.Text.TextAlignment
----@field MidlineCenter UnityEngine.TextCore.Text.TextAlignment
----@field MidlineRight UnityEngine.TextCore.Text.TextAlignment
----@field MidlineJustified UnityEngine.TextCore.Text.TextAlignment
----@field MidlineFlush UnityEngine.TextCore.Text.TextAlignment
----@field MidlineGeoAligned UnityEngine.TextCore.Text.TextAlignment
----@field CaplineLeft UnityEngine.TextCore.Text.TextAlignment
----@field CaplineCenter UnityEngine.TextCore.Text.TextAlignment
----@field CaplineRight UnityEngine.TextCore.Text.TextAlignment
----@field CaplineJustified UnityEngine.TextCore.Text.TextAlignment
----@field CaplineFlush UnityEngine.TextCore.Text.TextAlignment
----@field CaplineGeoAligned UnityEngine.TextCore.Text.TextAlignment
-UnityEngine.TextCore.Text.TextAlignment = {}
----@alias CS.UnityEngine.TextCore.Text.TextAlignment UnityEngine.TextCore.Text.TextAlignment
-CS.UnityEngine.TextCore.Text.TextAlignment = UnityEngine.TextCore.Text.TextAlignment
-
-
----@class UnityEngine.TextCore.Text.FontStyles
----@field Normal UnityEngine.TextCore.Text.FontStyles
----@field Bold UnityEngine.TextCore.Text.FontStyles
----@field Italic UnityEngine.TextCore.Text.FontStyles
----@field Underline UnityEngine.TextCore.Text.FontStyles
----@field LowerCase UnityEngine.TextCore.Text.FontStyles
----@field UpperCase UnityEngine.TextCore.Text.FontStyles
----@field SmallCaps UnityEngine.TextCore.Text.FontStyles
----@field Strikethrough UnityEngine.TextCore.Text.FontStyles
----@field Superscript UnityEngine.TextCore.Text.FontStyles
----@field Subscript UnityEngine.TextCore.Text.FontStyles
----@field Highlight UnityEngine.TextCore.Text.FontStyles
-UnityEngine.TextCore.Text.FontStyles = {}
----@alias CS.UnityEngine.TextCore.Text.FontStyles UnityEngine.TextCore.Text.FontStyles
-CS.UnityEngine.TextCore.Text.FontStyles = UnityEngine.TextCore.Text.FontStyles
-
-
----@class UnityEngine.TextCore.Text.TextOverflowMode
----@field Overflow UnityEngine.TextCore.Text.TextOverflowMode
----@field Ellipsis UnityEngine.TextCore.Text.TextOverflowMode
----@field Masking UnityEngine.TextCore.Text.TextOverflowMode
----@field Truncate UnityEngine.TextCore.Text.TextOverflowMode
----@field ScrollRect UnityEngine.TextCore.Text.TextOverflowMode
----@field Linked UnityEngine.TextCore.Text.TextOverflowMode
-UnityEngine.TextCore.Text.TextOverflowMode = {}
----@alias CS.UnityEngine.TextCore.Text.TextOverflowMode UnityEngine.TextCore.Text.TextOverflowMode
-CS.UnityEngine.TextCore.Text.TextOverflowMode = UnityEngine.TextCore.Text.TextOverflowMode
-
-
----@class UnityEngine.TextCore.Text.TextWrappingMode
----@field NoWrap UnityEngine.TextCore.Text.TextWrappingMode
----@field Normal UnityEngine.TextCore.Text.TextWrappingMode
----@field PreserveWhitespace UnityEngine.TextCore.Text.TextWrappingMode
----@field PreserveWhitespaceNoWrap UnityEngine.TextCore.Text.TextWrappingMode
-UnityEngine.TextCore.Text.TextWrappingMode = {}
----@alias CS.UnityEngine.TextCore.Text.TextWrappingMode UnityEngine.TextCore.Text.TextWrappingMode
-CS.UnityEngine.TextCore.Text.TextWrappingMode = UnityEngine.TextCore.Text.TextWrappingMode
-
-
----@class UnityEngine.TextCore.Text.RenderedText : System.ValueType
----@field value string
----@field valueStart number
----@field valueLength number
----@field suffix string
----@field repeat System.Char
----@field repeatCount number
----@field CharacterCount number
-UnityEngine.TextCore.Text.RenderedText = {}
----@alias CS.UnityEngine.TextCore.Text.RenderedText UnityEngine.TextCore.Text.RenderedText
-CS.UnityEngine.TextCore.Text.RenderedText = UnityEngine.TextCore.Text.RenderedText
-
----@overload fun(value: string) : UnityEngine.TextCore.Text.RenderedText
----@overload fun(value: string, suffix: string) : UnityEngine.TextCore.Text.RenderedText
----@overload fun(value: string, start: number, length: number, suffix: string) : UnityEngine.TextCore.Text.RenderedText
----@param _repeat System.Char
----@param repeatCount number
----@param suffix string
----@return UnityEngine.TextCore.Text.RenderedText
-function UnityEngine.TextCore.Text.RenderedText.New(_repeat, repeatCount, suffix) end
----@return UnityEngine.TextCore.Text.RenderedText.Enumerator
-function UnityEngine.TextCore.Text.RenderedText:GetEnumerator() end
----@return string
-function UnityEngine.TextCore.Text.RenderedText:CreateString() end
----@overload fun(self: UnityEngine.TextCore.Text.RenderedText, other: UnityEngine.TextCore.Text.RenderedText) : boolean
----@overload fun(self: UnityEngine.TextCore.Text.RenderedText, other: string) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.TextCore.Text.RenderedText:Equals(obj) end
----@return number
-function UnityEngine.TextCore.Text.RenderedText:GetHashCode() end
-
----@class UnityEngine.TextCore.Text.RenderedText.Enumerator : System.ValueType
----@field Current System.Char
-UnityEngine.TextCore.Text.RenderedText.Enumerator = {}
----@alias CS.UnityEngine.TextCore.Text.RenderedText.Enumerator UnityEngine.TextCore.Text.RenderedText.Enumerator
-CS.UnityEngine.TextCore.Text.RenderedText.Enumerator = UnityEngine.TextCore.Text.RenderedText.Enumerator
-
----@param ref_source UnityEngine.TextCore.Text.RenderedText
----@return UnityEngine.TextCore.Text.RenderedText.Enumerator,UnityEngine.TextCore.Text.RenderedText
-function UnityEngine.TextCore.Text.RenderedText.Enumerator.New(ref_source) end
----@return boolean
-function UnityEngine.TextCore.Text.RenderedText.Enumerator:MoveNext() end
-function UnityEngine.TextCore.Text.RenderedText.Enumerator:Reset() end
-
----@class UnityEngine.TextCore.Text.MeshExtents : System.ValueType
----@field min UnityEngine.Vector2
----@field max UnityEngine.Vector2
-UnityEngine.TextCore.Text.MeshExtents = {}
----@alias CS.UnityEngine.TextCore.Text.MeshExtents UnityEngine.TextCore.Text.MeshExtents
-CS.UnityEngine.TextCore.Text.MeshExtents = UnityEngine.TextCore.Text.MeshExtents
-
----@param min UnityEngine.Vector2
----@param max UnityEngine.Vector2
----@return UnityEngine.TextCore.Text.MeshExtents
-function UnityEngine.TextCore.Text.MeshExtents.New(min, max) end
----@return string
-function UnityEngine.TextCore.Text.MeshExtents:ToString() end
-
----@class UnityEngine.TextCore.Text.XmlTagAttribute : System.ValueType
----@field nameHashCode number
----@field valueType UnityEngine.TextCore.Text.TagValueType
----@field valueStartIndex number
----@field valueLength number
----@field valueHashCode number
-UnityEngine.TextCore.Text.XmlTagAttribute = {}
----@alias CS.UnityEngine.TextCore.Text.XmlTagAttribute UnityEngine.TextCore.Text.XmlTagAttribute
-CS.UnityEngine.TextCore.Text.XmlTagAttribute = UnityEngine.TextCore.Text.XmlTagAttribute
-
-
----@class UnityEngine.TextCore.Text.RichTextTagAttribute : System.ValueType
----@field nameHashCode number
----@field valueHashCode number
----@field valueType UnityEngine.TextCore.Text.TagValueType
----@field valueStartIndex number
----@field valueLength number
----@field unitType UnityEngine.TextCore.Text.TagUnitType
-UnityEngine.TextCore.Text.RichTextTagAttribute = {}
----@alias CS.UnityEngine.TextCore.Text.RichTextTagAttribute UnityEngine.TextCore.Text.RichTextTagAttribute
-CS.UnityEngine.TextCore.Text.RichTextTagAttribute = UnityEngine.TextCore.Text.RichTextTagAttribute
-
-
----@class UnityEngine.TextCore.Text.TextProcessingElement : System.ValueType
----@field elementType UnityEngine.TextCore.Text.TextProcessingElementType
----@field unicode number
----@field stringIndex number
----@field length number
-UnityEngine.TextCore.Text.TextProcessingElement = {}
----@alias CS.UnityEngine.TextCore.Text.TextProcessingElement UnityEngine.TextCore.Text.TextProcessingElement
-CS.UnityEngine.TextCore.Text.TextProcessingElement = UnityEngine.TextCore.Text.TextProcessingElement
-
-
----@class UnityEngine.TextCore.Text.TextBackingContainer : System.ValueType
----@field Text System.UInt32[]
----@field Capacity number
----@field Count number
----@field Item number
-UnityEngine.TextCore.Text.TextBackingContainer = {}
----@alias CS.UnityEngine.TextCore.Text.TextBackingContainer UnityEngine.TextCore.Text.TextBackingContainer
-CS.UnityEngine.TextCore.Text.TextBackingContainer = UnityEngine.TextCore.Text.TextBackingContainer
-
----@param size number
----@return UnityEngine.TextCore.Text.TextBackingContainer
-function UnityEngine.TextCore.Text.TextBackingContainer.New(size) end
----@param size number
-function UnityEngine.TextCore.Text.TextBackingContainer:Resize(size) end
-
----@class UnityEngine.TextCore.Text.CharacterSubstitution : System.ValueType
----@field index number
----@field unicode number
-UnityEngine.TextCore.Text.CharacterSubstitution = {}
----@alias CS.UnityEngine.TextCore.Text.CharacterSubstitution UnityEngine.TextCore.Text.CharacterSubstitution
-CS.UnityEngine.TextCore.Text.CharacterSubstitution = UnityEngine.TextCore.Text.CharacterSubstitution
-
----@param index number
----@param unicode number
----@return UnityEngine.TextCore.Text.CharacterSubstitution
-function UnityEngine.TextCore.Text.CharacterSubstitution.New(index, unicode) end
-
----@class UnityEngine.TextCore.Text.Offset : System.ValueType
----@field zero UnityEngine.TextCore.Text.Offset
----@field left number
----@field right number
----@field top number
----@field bottom number
-UnityEngine.TextCore.Text.Offset = {}
----@alias CS.UnityEngine.TextCore.Text.Offset UnityEngine.TextCore.Text.Offset
-CS.UnityEngine.TextCore.Text.Offset = UnityEngine.TextCore.Text.Offset
-
----@param left number
----@param right number
----@param top number
----@param bottom number
----@return UnityEngine.TextCore.Text.Offset
-function UnityEngine.TextCore.Text.Offset.New(left, right, top, bottom) end
----@return number
-function UnityEngine.TextCore.Text.Offset:GetHashCode() end
----@overload fun(self: UnityEngine.TextCore.Text.Offset, obj: System.Object) : boolean
----@param other UnityEngine.TextCore.Text.Offset
----@return boolean
-function UnityEngine.TextCore.Text.Offset:Equals(other) end
-
----@class UnityEngine.TextCore.Text.HighlightState : System.ValueType
----@field color UnityEngine.Color32
----@field padding UnityEngine.TextCore.Text.Offset
-UnityEngine.TextCore.Text.HighlightState = {}
----@alias CS.UnityEngine.TextCore.Text.HighlightState UnityEngine.TextCore.Text.HighlightState
-CS.UnityEngine.TextCore.Text.HighlightState = UnityEngine.TextCore.Text.HighlightState
-
----@param color UnityEngine.Color32
----@param padding UnityEngine.TextCore.Text.Offset
----@return UnityEngine.TextCore.Text.HighlightState
-function UnityEngine.TextCore.Text.HighlightState.New(color, padding) end
----@return number
-function UnityEngine.TextCore.Text.HighlightState:GetHashCode() end
----@overload fun(self: UnityEngine.TextCore.Text.HighlightState, obj: System.Object) : boolean
----@param other UnityEngine.TextCore.Text.HighlightState
----@return boolean
-function UnityEngine.TextCore.Text.HighlightState:Equals(other) end
-
----@class UnityEngine.TextCore.Text.WordWrapState : System.ValueType
----@field previousWordBreak number
----@field totalCharacterCount number
----@field visibleCharacterCount number
----@field visibleSpaceCount number
----@field visibleSpriteCount number
----@field visibleLinkCount number
----@field firstCharacterIndex number
----@field firstVisibleCharacterIndex number
----@field lastCharacterIndex number
----@field lastVisibleCharIndex number
----@field lineNumber number
----@field maxCapHeight number
----@field maxAscender number
----@field maxDescender number
----@field maxLineAscender number
----@field maxLineDescender number
----@field startOfLineAscender number
----@field xAdvance number
----@field preferredWidth number
----@field preferredHeight number
----@field previousLineScale number
----@field pageAscender number
----@field wordCount number
----@field fontStyle UnityEngine.TextCore.Text.FontStyles
----@field fontScale number
----@field fontScaleMultiplier number
----@field italicAngle number
----@field currentFontSize number
----@field baselineOffset number
----@field lineOffset number
----@field textInfo UnityEngine.TextCore.Text.TextInfo
----@field lineInfo UnityEngine.TextCore.Text.LineInfo
----@field vertexColor UnityEngine.Color32
----@field underlineColor UnityEngine.Color32
----@field strikethroughColor UnityEngine.Color32
----@field highlightColor UnityEngine.Color32
----@field highlightState UnityEngine.TextCore.Text.HighlightState
----@field basicStyleStack UnityEngine.TextCore.Text.FontStyleStack
----@field italicAngleStack UnityEngine.TextCore.Text.TextProcessingStack
----@field colorStack UnityEngine.TextCore.Text.TextProcessingStack
----@field underlineColorStack UnityEngine.TextCore.Text.TextProcessingStack
----@field strikethroughColorStack UnityEngine.TextCore.Text.TextProcessingStack
----@field highlightColorStack UnityEngine.TextCore.Text.TextProcessingStack
----@field highlightStateStack UnityEngine.TextCore.Text.TextProcessingStack
----@field colorGradientStack UnityEngine.TextCore.Text.TextProcessingStack
----@field sizeStack UnityEngine.TextCore.Text.TextProcessingStack
----@field indentStack UnityEngine.TextCore.Text.TextProcessingStack
----@field fontWeightStack UnityEngine.TextCore.Text.TextProcessingStack
----@field styleStack UnityEngine.TextCore.Text.TextProcessingStack
----@field baselineStack UnityEngine.TextCore.Text.TextProcessingStack
----@field actionStack UnityEngine.TextCore.Text.TextProcessingStack
----@field materialReferenceStack UnityEngine.TextCore.Text.TextProcessingStack
----@field lineJustificationStack UnityEngine.TextCore.Text.TextProcessingStack
----@field lastBaseGlyphIndex number
----@field spriteAnimationId number
----@field currentFontAsset UnityEngine.TextCore.Text.FontAsset
----@field currentSpriteAsset UnityEngine.TextCore.Text.SpriteAsset
----@field currentMaterial UnityEngine.Material
----@field currentMaterialIndex number
----@field meshExtents UnityEngine.TextCore.Text.Extents
----@field tagNoParsing boolean
----@field isNonBreakingSpace boolean
----@field isDrivenLineSpacing boolean
----@field fxScale UnityEngine.Vector3
----@field fxRotation UnityEngine.Quaternion
-UnityEngine.TextCore.Text.WordWrapState = {}
----@alias CS.UnityEngine.TextCore.Text.WordWrapState UnityEngine.TextCore.Text.WordWrapState
-CS.UnityEngine.TextCore.Text.WordWrapState = UnityEngine.TextCore.Text.WordWrapState

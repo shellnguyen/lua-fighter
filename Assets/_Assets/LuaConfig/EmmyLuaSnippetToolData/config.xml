@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SettingOptions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <GeneratePath>C:/Users/Admin/Projects/Personal/SimpleLuaFighter/SimpleLuaFighter/Assets/_Assets/Scripts/LuaScripts/Header</GeneratePath>
-  <TargetNamespacesStr>UnityEngine ShellSoft</TargetNamespacesStr>
+  <TargetNamespacesStr>UnityEngine DG ShellSoft</TargetNamespacesStr>
   <GenerateCSAlias>true</GenerateCSAlias>
   <InferGenericFieldType>true</InferGenericFieldType>
   <SingleFileMaxLine>5000</SingleFileMaxLine>

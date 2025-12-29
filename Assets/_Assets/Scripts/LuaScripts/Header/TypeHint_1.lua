@@ -2726,6 +2726,14 @@ function UnityEngine.AudioSource:SetAmbisonicDecoderFloat(index, value) end
 function UnityEngine.AudioSource:RegisterSampleProvider(provider) end
 ---@param provider UnityEngine.Experimental.Audio.AudioSampleProvider
 function UnityEngine.AudioSource:UnregisterSampleProvider(provider) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.AudioSource:DOFade(endValue, duration) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.AudioSource:DOPitch(endValue, duration) end
 
 ---@class UnityEngine.AudioLowPassFilter : UnityEngine.Behaviour
 ---@field customCutoffCurve UnityEngine.AnimationCurve
@@ -4295,6 +4303,39 @@ function UnityEngine.Audio.AudioMixer:ClearFloat(name) end
 ---@param out_value number
 ---@return boolean,number
 function UnityEngine.Audio.AudioMixer:GetFloat(name, out_value) end
+---@param floatName string
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Audio.AudioMixer:DOSetFloat(floatName, endValue, duration) end
+---@param withCallbacks boolean
+---@return number
+function UnityEngine.Audio.AudioMixer:DOComplete(withCallbacks) end
+---@param complete boolean
+---@return number
+function UnityEngine.Audio.AudioMixer:DOKill(complete) end
+---@return number
+function UnityEngine.Audio.AudioMixer:DOFlip() end
+---@param to number
+---@param andPlay boolean
+---@return number
+function UnityEngine.Audio.AudioMixer:DOGoto(to, andPlay) end
+---@return number
+function UnityEngine.Audio.AudioMixer:DOPause() end
+---@return number
+function UnityEngine.Audio.AudioMixer:DOPlay() end
+---@return number
+function UnityEngine.Audio.AudioMixer:DOPlayBackwards() end
+---@return number
+function UnityEngine.Audio.AudioMixer:DOPlayForward() end
+---@return number
+function UnityEngine.Audio.AudioMixer:DORestart() end
+---@return number
+function UnityEngine.Audio.AudioMixer:DORewind() end
+---@return number
+function UnityEngine.Audio.AudioMixer:DOSmoothRewind() end
+---@return number
+function UnityEngine.Audio.AudioMixer:DOTogglePause() end
 
 ---@class UnityEngine.Audio.AudioMixerGroup : UnityEngine.Object
 ---@field audioMixer UnityEngine.Audio.AudioMixer
@@ -4766,6 +4807,22 @@ function UnityEngine.SpriteRenderer:RegisterSpriteChangeCallback(callback) end
 ---@param callback UnityEngine.Events.UnityAction
 function UnityEngine.SpriteRenderer:UnregisterSpriteChangeCallback(callback) end
 function UnityEngine.SpriteRenderer:DeactivateDeformableBuffer() end
+---@param endValue UnityEngine.Color
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.SpriteRenderer:DOColor(endValue, duration) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.SpriteRenderer:DOFade(endValue, duration) end
+---@param gradient UnityEngine.Gradient
+---@param duration number
+---@return DG.Tweening.Sequence
+function UnityEngine.SpriteRenderer:DOGradientColor(gradient, duration) end
+---@param endValue UnityEngine.Color
+---@param duration number
+---@return DG.Tweening.Tweener
+function UnityEngine.SpriteRenderer:DOBlendableColor(endValue, duration) end
 
 ---@class UnityEngine.SpriteMeshType
 ---@field FullRect UnityEngine.SpriteMeshType
@@ -4950,61 +5007,3 @@ function UnityEngine.SortingLayer.IDToName(id) end
 ---@param id number
 ---@return boolean
 function UnityEngine.SortingLayer.IsValid(id) end
-
----@class UnityEngine.SortingLayer.LayerCallback : System.MulticastDelegate
-UnityEngine.SortingLayer.LayerCallback = {}
----@alias CS.UnityEngine.SortingLayer.LayerCallback UnityEngine.SortingLayer.LayerCallback
-CS.UnityEngine.SortingLayer.LayerCallback = UnityEngine.SortingLayer.LayerCallback
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.SortingLayer.LayerCallback
-function UnityEngine.SortingLayer.LayerCallback.New(object, method) end
----@param layer UnityEngine.SortingLayer
-function UnityEngine.SortingLayer.LayerCallback:Invoke(layer) end
----@param layer UnityEngine.SortingLayer
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.SortingLayer.LayerCallback:BeginInvoke(layer, callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.SortingLayer.LayerCallback:EndInvoke(result) end
-
----@class UnityEngine.SortingLayer.LayerChangedCallback : System.MulticastDelegate
-UnityEngine.SortingLayer.LayerChangedCallback = {}
----@alias CS.UnityEngine.SortingLayer.LayerChangedCallback UnityEngine.SortingLayer.LayerChangedCallback
-CS.UnityEngine.SortingLayer.LayerChangedCallback = UnityEngine.SortingLayer.LayerChangedCallback
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.SortingLayer.LayerChangedCallback
-function UnityEngine.SortingLayer.LayerChangedCallback.New(object, method) end
-function UnityEngine.SortingLayer.LayerChangedCallback:Invoke() end
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.SortingLayer.LayerChangedCallback:BeginInvoke(callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.SortingLayer.LayerChangedCallback:EndInvoke(result) end
-
----@class UnityEngine.WeightedMode
----@field None UnityEngine.WeightedMode
----@field In UnityEngine.WeightedMode
----@field Out UnityEngine.WeightedMode
----@field Both UnityEngine.WeightedMode
-UnityEngine.WeightedMode = {}
----@alias CS.UnityEngine.WeightedMode UnityEngine.WeightedMode
-CS.UnityEngine.WeightedMode = UnityEngine.WeightedMode
-
-
----@class UnityEngine.Keyframe : System.ValueType
----@field time number
----@field value number
----@field inTangent number
----@field outTangent number
----@field inWeight number
----@field outWeight number
----@field weightedMode UnityEngine.WeightedMode
-UnityEngine.Keyframe = {}
----@alias CS.UnityEngine.Keyframe UnityEngine.Keyframe
-CS.UnityEngine.Keyframe = UnityEngine.Keyframe

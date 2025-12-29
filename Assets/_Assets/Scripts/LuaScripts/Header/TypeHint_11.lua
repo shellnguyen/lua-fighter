@@ -1,5 +1,813 @@
 ---@meta
 
+---@class UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller : System.Object
+UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller = {}
+---@alias CS.UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller
+CS.UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller = UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller
+
+---@param fontAsset UnityEngine.TextCore.Text.FontAsset
+---@return System.IntPtr
+function UnityEngine.TextCore.Text.FontAsset.BindingsMarshaller.ConvertToNative(fontAsset) end
+
+---@class UnityEngine.TextCore.Text.FontAssetFactory : System.Object
+UnityEngine.TextCore.Text.FontAssetFactory = {}
+---@alias CS.UnityEngine.TextCore.Text.FontAssetFactory UnityEngine.TextCore.Text.FontAssetFactory
+CS.UnityEngine.TextCore.Text.FontAssetFactory = UnityEngine.TextCore.Text.FontAssetFactory
+
+---@return UnityEngine.TextCore.Text.FontAssetFactory
+function UnityEngine.TextCore.Text.FontAssetFactory.New() end
+---@param baseFontAsset UnityEngine.TextCore.Text.FontAsset
+---@param fontSize number
+---@param isRaster boolean
+---@return UnityEngine.TextCore.Text.FontAsset
+function UnityEngine.TextCore.Text.FontAssetFactory.CloneFontAssetWithBitmapRendering(baseFontAsset, fontSize, isRaster) end
+---@param fontAsset UnityEngine.TextCore.Text.FontAsset
+function UnityEngine.TextCore.Text.FontAssetFactory.SetHideFlags(fontAsset) end
+
+---@class UnityEngine.TextCore.Text.FontAssetUtilities : System.Object
+UnityEngine.TextCore.Text.FontAssetUtilities = {}
+---@alias CS.UnityEngine.TextCore.Text.FontAssetUtilities UnityEngine.TextCore.Text.FontAssetUtilities
+CS.UnityEngine.TextCore.Text.FontAssetUtilities = UnityEngine.TextCore.Text.FontAssetUtilities
+
+---@param unicode number
+---@param sourceFontAsset UnityEngine.TextCore.Text.FontAsset
+---@param fontAssets System.Collections.Generic.List
+---@param OSFallbackList System.Collections.Generic.List
+---@param includeFallbacks boolean
+---@param fontStyle UnityEngine.TextCore.Text.FontStyles
+---@param fontWeight UnityEngine.TextCore.Text.TextFontWeight
+---@param out_isAlternativeTypeface boolean
+---@return UnityEngine.TextCore.Text.Character,boolean
+function UnityEngine.TextCore.Text.FontAssetUtilities.GetCharacterFromFontAssets(unicode, sourceFontAsset, fontAssets, OSFallbackList, includeFallbacks, fontStyle, fontWeight, out_isAlternativeTypeface) end
+---@param unicode number
+---@param spriteAsset UnityEngine.TextCore.Text.SpriteAsset
+---@param includeFallbacks boolean
+---@return UnityEngine.TextCore.Text.SpriteCharacter
+function UnityEngine.TextCore.Text.FontAssetUtilities.GetSpriteCharacterFromSpriteAsset(unicode, spriteAsset, includeFallbacks) end
+---@overload fun(text: string, ref_index: number) : number, number
+---@param codesPoints System.UInt32[]
+---@param ref_index number
+---@return number,number
+function UnityEngine.TextCore.Text.FontAssetUtilities.GetCodePoint(codesPoints, ref_index) end
+
+---@class UnityEngine.TextCore.Text.SpriteAsset : UnityEngine.TextCore.Text.TextAsset
+---@field fallbackSpriteAssets System.Collections.Generic.List
+---@field faceInfo UnityEngine.TextCore.FaceInfo
+---@field spriteSheet UnityEngine.Texture
+---@field spriteCharacterTable System.Collections.Generic.List
+---@field spriteCharacterLookupTable System.Collections.Generic.Dictionary
+---@field spriteGlyphTable System.Collections.Generic.List
+UnityEngine.TextCore.Text.SpriteAsset = {}
+---@alias CS.UnityEngine.TextCore.Text.SpriteAsset UnityEngine.TextCore.Text.SpriteAsset
+CS.UnityEngine.TextCore.Text.SpriteAsset = UnityEngine.TextCore.Text.SpriteAsset
+
+---@return UnityEngine.TextCore.Text.SpriteAsset
+function UnityEngine.TextCore.Text.SpriteAsset.New() end
+---@param spriteAsset UnityEngine.TextCore.Text.SpriteAsset
+---@param unicode number
+---@param includeFallbacks boolean
+---@param out_spriteIndex number
+---@return UnityEngine.TextCore.Text.SpriteAsset,number
+function UnityEngine.TextCore.Text.SpriteAsset.SearchForSpriteByUnicode(spriteAsset, unicode, includeFallbacks, out_spriteIndex) end
+---@param spriteAsset UnityEngine.TextCore.Text.SpriteAsset
+---@param hashCode number
+---@param includeFallbacks boolean
+---@param out_spriteIndex number
+---@param textSettings UnityEngine.TextCore.Text.TextSettings
+---@return UnityEngine.TextCore.Text.SpriteAsset,number
+function UnityEngine.TextCore.Text.SpriteAsset.SearchForSpriteByHashCode(spriteAsset, hashCode, includeFallbacks, out_spriteIndex, textSettings) end
+function UnityEngine.TextCore.Text.SpriteAsset:UpdateLookupTables() end
+---@param hashCode number
+---@return number
+function UnityEngine.TextCore.Text.SpriteAsset:GetSpriteIndexFromHashcode(hashCode) end
+---@param unicode number
+---@return number
+function UnityEngine.TextCore.Text.SpriteAsset:GetSpriteIndexFromUnicode(unicode) end
+---@param name string
+---@return number
+function UnityEngine.TextCore.Text.SpriteAsset:GetSpriteIndexFromName(name) end
+function UnityEngine.TextCore.Text.SpriteAsset:SortGlyphTable() end
+
+---@class UnityEngine.TextCore.Text.SpriteCharacter : UnityEngine.TextCore.Text.TextElement
+---@field name string
+UnityEngine.TextCore.Text.SpriteCharacter = {}
+---@alias CS.UnityEngine.TextCore.Text.SpriteCharacter UnityEngine.TextCore.Text.SpriteCharacter
+CS.UnityEngine.TextCore.Text.SpriteCharacter = UnityEngine.TextCore.Text.SpriteCharacter
+
+---@overload fun() : UnityEngine.TextCore.Text.SpriteCharacter
+---@overload fun(unicode: number, glyph: UnityEngine.TextCore.Text.SpriteGlyph) : UnityEngine.TextCore.Text.SpriteCharacter
+---@param unicode number
+---@param spriteAsset UnityEngine.TextCore.Text.SpriteAsset
+---@param glyph UnityEngine.TextCore.Text.SpriteGlyph
+---@return UnityEngine.TextCore.Text.SpriteCharacter
+function UnityEngine.TextCore.Text.SpriteCharacter.New(unicode, spriteAsset, glyph) end
+
+---@class UnityEngine.TextCore.Text.SpriteGlyph : UnityEngine.TextCore.Glyph
+---@field sprite UnityEngine.Sprite
+UnityEngine.TextCore.Text.SpriteGlyph = {}
+---@alias CS.UnityEngine.TextCore.Text.SpriteGlyph UnityEngine.TextCore.Text.SpriteGlyph
+CS.UnityEngine.TextCore.Text.SpriteGlyph = UnityEngine.TextCore.Text.SpriteGlyph
+
+---@overload fun() : UnityEngine.TextCore.Text.SpriteGlyph
+---@overload fun(index: number, metrics: UnityEngine.TextCore.GlyphMetrics, glyphRect: UnityEngine.TextCore.GlyphRect, scale: number, atlasIndex: number) : UnityEngine.TextCore.Text.SpriteGlyph
+---@param index number
+---@param metrics UnityEngine.TextCore.GlyphMetrics
+---@param glyphRect UnityEngine.TextCore.GlyphRect
+---@param scale number
+---@param atlasIndex number
+---@param sprite UnityEngine.Sprite
+---@return UnityEngine.TextCore.Text.SpriteGlyph
+function UnityEngine.TextCore.Text.SpriteGlyph.New(index, metrics, glyphRect, scale, atlasIndex, sprite) end
+
+---@class UnityEngine.TextCore.Text.TextAsset : UnityEngine.ScriptableObject
+---@field version string
+---@field instanceID number
+---@field hashCode number
+---@field material UnityEngine.Material
+---@field materialHashCode number
+UnityEngine.TextCore.Text.TextAsset = {}
+---@alias CS.UnityEngine.TextCore.Text.TextAsset UnityEngine.TextCore.Text.TextAsset
+CS.UnityEngine.TextCore.Text.TextAsset = UnityEngine.TextCore.Text.TextAsset
+
+
+---@class UnityEngine.TextCore.Text.ColorGradientMode
+---@field Single UnityEngine.TextCore.Text.ColorGradientMode
+---@field HorizontalGradient UnityEngine.TextCore.Text.ColorGradientMode
+---@field VerticalGradient UnityEngine.TextCore.Text.ColorGradientMode
+---@field FourCornersGradient UnityEngine.TextCore.Text.ColorGradientMode
+UnityEngine.TextCore.Text.ColorGradientMode = {}
+---@alias CS.UnityEngine.TextCore.Text.ColorGradientMode UnityEngine.TextCore.Text.ColorGradientMode
+CS.UnityEngine.TextCore.Text.ColorGradientMode = UnityEngine.TextCore.Text.ColorGradientMode
+
+
+---@class UnityEngine.TextCore.Text.TextColorGradient : UnityEngine.ScriptableObject
+---@field colorMode UnityEngine.TextCore.Text.ColorGradientMode
+---@field topLeft UnityEngine.Color
+---@field topRight UnityEngine.Color
+---@field bottomLeft UnityEngine.Color
+---@field bottomRight UnityEngine.Color
+UnityEngine.TextCore.Text.TextColorGradient = {}
+---@alias CS.UnityEngine.TextCore.Text.TextColorGradient UnityEngine.TextCore.Text.TextColorGradient
+CS.UnityEngine.TextCore.Text.TextColorGradient = UnityEngine.TextCore.Text.TextColorGradient
+
+---@overload fun() : UnityEngine.TextCore.Text.TextColorGradient
+---@overload fun(color: UnityEngine.Color) : UnityEngine.TextCore.Text.TextColorGradient
+---@param color0 UnityEngine.Color
+---@param color1 UnityEngine.Color
+---@param color2 UnityEngine.Color
+---@param color3 UnityEngine.Color
+---@return UnityEngine.TextCore.Text.TextColorGradient
+function UnityEngine.TextCore.Text.TextColorGradient.New(color0, color1, color2, color3) end
+
+---@class UnityEngine.TextCore.Text.TextSettings : UnityEngine.ScriptableObject
+---@field version string
+---@field defaultFontAsset UnityEngine.TextCore.Text.FontAsset
+---@field defaultFontAssetPath string
+---@field fallbackFontAssets System.Collections.Generic.List
+---@field matchMaterialPreset boolean
+---@field missingCharacterUnicode number
+---@field clearDynamicDataOnBuild boolean
+---@field enableEmojiSupport boolean
+---@field emojiFallbackTextAssets System.Collections.Generic.List
+---@field defaultSpriteAsset UnityEngine.TextCore.Text.SpriteAsset
+---@field defaultSpriteAssetPath string
+---@field missingSpriteCharacterUnicode number
+---@field defaultStyleSheet UnityEngine.TextCore.Text.TextStyleSheet
+---@field styleSheetsResourcePath string
+---@field defaultColorGradientPresetsPath string
+---@field lineBreakingRules UnityEngine.TextCore.Text.UnicodeLineBreakingRules
+---@field displayWarnings boolean
+UnityEngine.TextCore.Text.TextSettings = {}
+---@alias CS.UnityEngine.TextCore.Text.TextSettings UnityEngine.TextCore.Text.TextSettings
+CS.UnityEngine.TextCore.Text.TextSettings = UnityEngine.TextCore.Text.TextSettings
+
+---@return UnityEngine.TextCore.Text.TextSettings
+function UnityEngine.TextCore.Text.TextSettings.New() end
+
+---@class UnityEngine.TextCore.Text.TextSettings.FontReferenceMap : System.ValueType
+---@field font UnityEngine.Font
+---@field fontAsset UnityEngine.TextCore.Text.FontAsset
+UnityEngine.TextCore.Text.TextSettings.FontReferenceMap = {}
+---@alias CS.UnityEngine.TextCore.Text.TextSettings.FontReferenceMap UnityEngine.TextCore.Text.TextSettings.FontReferenceMap
+CS.UnityEngine.TextCore.Text.TextSettings.FontReferenceMap = UnityEngine.TextCore.Text.TextSettings.FontReferenceMap
+
+---@param font UnityEngine.Font
+---@param fontAsset UnityEngine.TextCore.Text.FontAsset
+---@return UnityEngine.TextCore.Text.TextSettings.FontReferenceMap
+function UnityEngine.TextCore.Text.TextSettings.FontReferenceMap.New(font, fontAsset) end
+
+---@class UnityEngine.TextCore.Text.TextStyle : System.Object
+---@field NormalStyle UnityEngine.TextCore.Text.TextStyle
+---@field name string
+---@field hashCode number
+---@field styleOpeningDefinition string
+---@field styleClosingDefinition string
+---@field styleOpeningTagArray System.UInt32[]
+---@field styleClosingTagArray System.UInt32[]
+UnityEngine.TextCore.Text.TextStyle = {}
+---@alias CS.UnityEngine.TextCore.Text.TextStyle UnityEngine.TextCore.Text.TextStyle
+CS.UnityEngine.TextCore.Text.TextStyle = UnityEngine.TextCore.Text.TextStyle
+
+function UnityEngine.TextCore.Text.TextStyle:RefreshStyle() end
+
+---@class UnityEngine.TextCore.Text.TextStyleSheet : UnityEngine.ScriptableObject
+UnityEngine.TextCore.Text.TextStyleSheet = {}
+---@alias CS.UnityEngine.TextCore.Text.TextStyleSheet UnityEngine.TextCore.Text.TextStyleSheet
+CS.UnityEngine.TextCore.Text.TextStyleSheet = UnityEngine.TextCore.Text.TextStyleSheet
+
+---@return UnityEngine.TextCore.Text.TextStyleSheet
+function UnityEngine.TextCore.Text.TextStyleSheet.New() end
+---@overload fun(self: UnityEngine.TextCore.Text.TextStyleSheet, hashCode: number) : UnityEngine.TextCore.Text.TextStyle
+---@param name string
+---@return UnityEngine.TextCore.Text.TextStyle
+function UnityEngine.TextCore.Text.TextStyleSheet:GetStyle(name) end
+function UnityEngine.TextCore.Text.TextStyleSheet:RefreshStyles() end
+
+---@class UnityEngine.TextCore.Text.TextCoreVertex : System.ValueType
+---@field position UnityEngine.Vector3
+---@field color UnityEngine.Color32
+---@field uv0 UnityEngine.Vector2
+---@field uv2 UnityEngine.Vector2
+UnityEngine.TextCore.Text.TextCoreVertex = {}
+---@alias CS.UnityEngine.TextCore.Text.TextCoreVertex UnityEngine.TextCore.Text.TextCoreVertex
+CS.UnityEngine.TextCore.Text.TextCoreVertex = UnityEngine.TextCore.Text.TextCoreVertex
+
+
+---@class UnityEngine.TextCore.Text.TextElementType
+---@field Character UnityEngine.TextCore.Text.TextElementType
+---@field Sprite UnityEngine.TextCore.Text.TextElementType
+UnityEngine.TextCore.Text.TextElementType = {}
+---@alias CS.UnityEngine.TextCore.Text.TextElementType UnityEngine.TextCore.Text.TextElementType
+CS.UnityEngine.TextCore.Text.TextElementType = UnityEngine.TextCore.Text.TextElementType
+
+
+---@class UnityEngine.TextCore.Text.TextElement : System.Object
+---@field elementType UnityEngine.TextCore.Text.TextElementType
+---@field unicode number
+---@field textAsset UnityEngine.TextCore.Text.TextAsset
+---@field glyph UnityEngine.TextCore.Glyph
+---@field glyphIndex number
+---@field scale number
+UnityEngine.TextCore.Text.TextElement = {}
+---@alias CS.UnityEngine.TextCore.Text.TextElement UnityEngine.TextCore.Text.TextElement
+CS.UnityEngine.TextCore.Text.TextElement = UnityEngine.TextCore.Text.TextElement
+
+
+---@class UnityEngine.TextCore.Text.TextVertex : System.ValueType
+---@field position UnityEngine.Vector3
+---@field uv UnityEngine.Vector4
+---@field uv2 UnityEngine.Vector2
+---@field color UnityEngine.Color32
+UnityEngine.TextCore.Text.TextVertex = {}
+---@alias CS.UnityEngine.TextCore.Text.TextVertex UnityEngine.TextCore.Text.TextVertex
+CS.UnityEngine.TextCore.Text.TextVertex = UnityEngine.TextCore.Text.TextVertex
+
+
+---@class UnityEngine.TextCore.Text.TextElementInfo : System.ValueType
+---@field character number
+---@field index number
+---@field elementType UnityEngine.TextCore.Text.TextElementType
+---@field stringLength number
+---@field textElement UnityEngine.TextCore.Text.TextElement
+---@field alternativeGlyph UnityEngine.TextCore.Glyph
+---@field fontAsset UnityEngine.TextCore.Text.FontAsset
+---@field spriteAsset UnityEngine.TextCore.Text.SpriteAsset
+---@field material UnityEngine.Material
+---@field materialReferenceIndex number
+---@field isUsingAlternateTypeface boolean
+---@field pointSize number
+---@field lineNumber number
+---@field vertexIndex number
+---@field vertexTopLeft UnityEngine.TextCore.Text.TextVertex
+---@field vertexBottomLeft UnityEngine.TextCore.Text.TextVertex
+---@field vertexTopRight UnityEngine.TextCore.Text.TextVertex
+---@field vertexBottomRight UnityEngine.TextCore.Text.TextVertex
+---@field topLeft UnityEngine.Vector3
+---@field bottomLeft UnityEngine.Vector3
+---@field topRight UnityEngine.Vector3
+---@field bottomRight UnityEngine.Vector3
+---@field origin number
+---@field ascender number
+---@field baseLine number
+---@field descender number
+---@field xAdvance number
+---@field aspectRatio number
+---@field scale number
+---@field color UnityEngine.Color32
+---@field underlineColor UnityEngine.Color32
+---@field underlineVertexIndex number
+---@field strikethroughColor UnityEngine.Color32
+---@field strikethroughVertexIndex number
+---@field highlightColor UnityEngine.Color32
+---@field highlightState UnityEngine.TextCore.Text.HighlightState
+---@field style UnityEngine.TextCore.Text.FontStyles
+---@field isVisible boolean
+UnityEngine.TextCore.Text.TextElementInfo = {}
+---@alias CS.UnityEngine.TextCore.Text.TextElementInfo UnityEngine.TextCore.Text.TextElementInfo
+CS.UnityEngine.TextCore.Text.TextElementInfo = UnityEngine.TextCore.Text.TextElementInfo
+
+---@return string
+function UnityEngine.TextCore.Text.TextElementInfo:ToString() end
+
+---@class UnityEngine.TextCore.Text.TextEventManager : System.Object
+---@field MATERIAL_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
+---@field FONT_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
+---@field SPRITE_ASSET_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
+---@field TEXTMESHPRO_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
+---@field DRAG_AND_DROP_MATERIAL_EVENT UnityEngine.TextCore.Text.FastAction
+---@field TEXT_STYLE_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
+---@field COLOR_GRADIENT_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
+---@field TMP_SETTINGS_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
+---@field RESOURCE_LOAD_EVENT UnityEngine.TextCore.Text.FastAction
+---@field TEXTMESHPRO_UGUI_PROPERTY_EVENT UnityEngine.TextCore.Text.FastAction
+---@field OnPreRenderObject_Event UnityEngine.TextCore.Text.FastAction
+---@field TEXT_CHANGED_EVENT UnityEngine.TextCore.Text.FastAction
+UnityEngine.TextCore.Text.TextEventManager = {}
+---@alias CS.UnityEngine.TextCore.Text.TextEventManager UnityEngine.TextCore.Text.TextEventManager
+CS.UnityEngine.TextCore.Text.TextEventManager = UnityEngine.TextCore.Text.TextEventManager
+
+function UnityEngine.TextCore.Text.TextEventManager.ON_PRE_RENDER_OBJECT_CHANGED() end
+---@param isChanged boolean
+---@param mat UnityEngine.Material
+function UnityEngine.TextCore.Text.TextEventManager.ON_MATERIAL_PROPERTY_CHANGED(isChanged, mat) end
+---@param isChanged boolean
+---@param font UnityEngine.Object
+function UnityEngine.TextCore.Text.TextEventManager.ON_FONT_PROPERTY_CHANGED(isChanged, font) end
+---@param isChanged boolean
+---@param obj UnityEngine.Object
+function UnityEngine.TextCore.Text.TextEventManager.ON_SPRITE_ASSET_PROPERTY_CHANGED(isChanged, obj) end
+---@param isChanged boolean
+---@param obj UnityEngine.Object
+function UnityEngine.TextCore.Text.TextEventManager.ON_TEXTMESHPRO_PROPERTY_CHANGED(isChanged, obj) end
+---@param sender UnityEngine.GameObject
+---@param currentMaterial UnityEngine.Material
+---@param newMaterial UnityEngine.Material
+function UnityEngine.TextCore.Text.TextEventManager.ON_DRAG_AND_DROP_MATERIAL_CHANGED(sender, currentMaterial, newMaterial) end
+---@param isChanged boolean
+function UnityEngine.TextCore.Text.TextEventManager.ON_TEXT_STYLE_PROPERTY_CHANGED(isChanged) end
+---@param gradient UnityEngine.Object
+function UnityEngine.TextCore.Text.TextEventManager.ON_COLOR_GRADIENT_PROPERTY_CHANGED(gradient) end
+---@param obj UnityEngine.Object
+function UnityEngine.TextCore.Text.TextEventManager.ON_TEXT_CHANGED(obj) end
+function UnityEngine.TextCore.Text.TextEventManager.ON_TMP_SETTINGS_CHANGED() end
+function UnityEngine.TextCore.Text.TextEventManager.ON_RESOURCES_LOADED() end
+---@param isChanged boolean
+---@param obj UnityEngine.Object
+function UnityEngine.TextCore.Text.TextEventManager.ON_TEXTMESHPRO_UGUI_PROPERTY_CHANGED(isChanged, obj) end
+
+---@class UnityEngine.TextCore.Text.TextGenerator : System.Object
+---@field isTextTruncated boolean
+UnityEngine.TextCore.Text.TextGenerator = {}
+---@alias CS.UnityEngine.TextCore.Text.TextGenerator UnityEngine.TextCore.Text.TextGenerator
+CS.UnityEngine.TextCore.Text.TextGenerator = UnityEngine.TextCore.Text.TextGenerator
+
+---@return UnityEngine.TextCore.Text.TextGenerator
+function UnityEngine.TextCore.Text.TextGenerator.New() end
+---@param settings UnityEngine.TextCore.Text.TextGenerationSettings
+---@param textInfo UnityEngine.TextCore.Text.TextInfo
+function UnityEngine.TextCore.Text.TextGenerator:GenerateText(settings, textInfo) end
+---@param textInfo UnityEngine.TextCore.Text.TextInfo
+---@param generationSettings UnityEngine.TextCore.Text.TextGenerationSettings
+---@param maxVisibleDescender number
+function UnityEngine.TextCore.Text.TextGenerator:LayoutPhase(textInfo, generationSettings, maxVisibleDescender) end
+---@param textInfo UnityEngine.TextCore.Text.TextInfo
+---@param generationSettings UnityEngine.TextCore.Text.TextGenerationSettings
+---@param out_charCode number
+---@param out_maxVisibleDescender number
+---@return ,number,number
+function UnityEngine.TextCore.Text.TextGenerator:ParsingPhase(textInfo, generationSettings, out_charCode, out_maxVisibleDescender) end
+---@param settings UnityEngine.TextCore.Text.TextGenerationSettings
+---@param textInfo UnityEngine.TextCore.Text.TextInfo
+---@return UnityEngine.Vector2
+function UnityEngine.TextCore.Text.TextGenerator:GetPreferredValues(settings, textInfo) end
+
+---@class UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback : System.MulticastDelegate
+UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback = {}
+---@alias CS.UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback
+CS.UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback = UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback
+function UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback.New(object, method) end
+---@param unicode number
+---@param stringIndex number
+---@param text UnityEngine.TextCore.Text.TextInfo
+---@param fontAsset UnityEngine.TextCore.Text.FontAsset
+function UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback:Invoke(unicode, stringIndex, text, fontAsset) end
+---@param unicode number
+---@param stringIndex number
+---@param text UnityEngine.TextCore.Text.TextInfo
+---@param fontAsset UnityEngine.TextCore.Text.FontAsset
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback:BeginInvoke(unicode, stringIndex, text, fontAsset, callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.TextCore.Text.TextGenerator.MissingCharacterEventCallback:EndInvoke(result) end
+
+---@class UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter : System.ValueType
+---@field character UnityEngine.TextCore.Text.Character
+---@field fontAsset UnityEngine.TextCore.Text.FontAsset
+---@field material UnityEngine.Material
+---@field materialIndex number
+UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter = {}
+---@alias CS.UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter
+CS.UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter = UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter
+
+---@param character UnityEngine.TextCore.Text.Character
+---@param materialIndex number
+---@return UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter
+function UnityEngine.TextCore.Text.TextGenerator.SpecialCharacter.New(character, materialIndex) end
+
+---@class UnityEngine.TextCore.Text.TextGenerationSettings : System.Object
+---@field wordWrappingRatio number
+---@field autoSize boolean
+---@field fontSizeMin number
+---@field fontSizeMax number
+---@field tagNoParsing boolean
+---@field lineSpacing number
+---@field lineSpacingMax number
+---@field maxVisibleCharacters number
+---@field maxVisibleWords number
+---@field maxVisibleLines number
+---@field firstVisibleCharacter number
+---@field useMaxVisibleDescender boolean
+---@field charWidthMaxAdj number
+---@field screenRect UnityEngine.Rect
+---@field fontAsset UnityEngine.TextCore.Text.FontAsset
+---@field fontStyle UnityEngine.TextCore.Text.FontStyles
+---@field textSettings UnityEngine.TextCore.Text.TextSettings
+---@field textAlignment UnityEngine.TextCore.Text.TextAlignment
+---@field overflowMode UnityEngine.TextCore.Text.TextOverflowMode
+---@field color UnityEngine.Color
+---@field shouldConvertToLinearSpace boolean
+---@field fontSize number
+---@field emojiFallbackSupport boolean
+---@field richText boolean
+---@field isRightToLeft boolean
+---@field extraPadding number
+---@field parseControlCharacters boolean
+---@field isPlaceholder boolean
+---@field characterSpacing number
+---@field wordSpacing number
+---@field paragraphSpacing number
+---@field textWrappingMode UnityEngine.TextCore.Text.TextWrappingMode
+---@field fontWeight UnityEngine.TextCore.Text.TextFontWeight
+---@field isIMGUI boolean
+---@field pixelsPerPoint number
+---@field renderedText UnityEngine.TextCore.Text.RenderedText
+---@field text string
+UnityEngine.TextCore.Text.TextGenerationSettings = {}
+---@alias CS.UnityEngine.TextCore.Text.TextGenerationSettings UnityEngine.TextCore.Text.TextGenerationSettings
+CS.UnityEngine.TextCore.Text.TextGenerationSettings = UnityEngine.TextCore.Text.TextGenerationSettings
+
+---@return UnityEngine.TextCore.Text.TextGenerationSettings
+function UnityEngine.TextCore.Text.TextGenerationSettings.New() end
+---@overload fun(self: UnityEngine.TextCore.Text.TextGenerationSettings, other: UnityEngine.TextCore.Text.TextGenerationSettings) : boolean
+---@param obj System.Object
+---@return boolean
+function UnityEngine.TextCore.Text.TextGenerationSettings:Equals(obj) end
+---@return number
+function UnityEngine.TextCore.Text.TextGenerationSettings:GetHashCode() end
+---@return string
+function UnityEngine.TextCore.Text.TextGenerationSettings:ToString() end
+
+---@class UnityEngine.TextCore.Text.HorizontalAlignment
+---@field Left UnityEngine.TextCore.Text.HorizontalAlignment
+---@field Center UnityEngine.TextCore.Text.HorizontalAlignment
+---@field Right UnityEngine.TextCore.Text.HorizontalAlignment
+---@field Justified UnityEngine.TextCore.Text.HorizontalAlignment
+---@field Flush UnityEngine.TextCore.Text.HorizontalAlignment
+---@field Geometry UnityEngine.TextCore.Text.HorizontalAlignment
+UnityEngine.TextCore.Text.HorizontalAlignment = {}
+---@alias CS.UnityEngine.TextCore.Text.HorizontalAlignment UnityEngine.TextCore.Text.HorizontalAlignment
+CS.UnityEngine.TextCore.Text.HorizontalAlignment = UnityEngine.TextCore.Text.HorizontalAlignment
+
+
+---@class UnityEngine.TextCore.Text.VerticalAlignment
+---@field Top UnityEngine.TextCore.Text.VerticalAlignment
+---@field Middle UnityEngine.TextCore.Text.VerticalAlignment
+---@field Bottom UnityEngine.TextCore.Text.VerticalAlignment
+---@field Baseline UnityEngine.TextCore.Text.VerticalAlignment
+---@field Midline UnityEngine.TextCore.Text.VerticalAlignment
+---@field Capline UnityEngine.TextCore.Text.VerticalAlignment
+UnityEngine.TextCore.Text.VerticalAlignment = {}
+---@alias CS.UnityEngine.TextCore.Text.VerticalAlignment UnityEngine.TextCore.Text.VerticalAlignment
+CS.UnityEngine.TextCore.Text.VerticalAlignment = UnityEngine.TextCore.Text.VerticalAlignment
+
+
+---@class UnityEngine.TextCore.Text.TextAlignment
+---@field TopLeft UnityEngine.TextCore.Text.TextAlignment
+---@field TopCenter UnityEngine.TextCore.Text.TextAlignment
+---@field TopRight UnityEngine.TextCore.Text.TextAlignment
+---@field TopJustified UnityEngine.TextCore.Text.TextAlignment
+---@field TopFlush UnityEngine.TextCore.Text.TextAlignment
+---@field TopGeoAligned UnityEngine.TextCore.Text.TextAlignment
+---@field MiddleLeft UnityEngine.TextCore.Text.TextAlignment
+---@field MiddleCenter UnityEngine.TextCore.Text.TextAlignment
+---@field MiddleRight UnityEngine.TextCore.Text.TextAlignment
+---@field MiddleJustified UnityEngine.TextCore.Text.TextAlignment
+---@field MiddleFlush UnityEngine.TextCore.Text.TextAlignment
+---@field MiddleGeoAligned UnityEngine.TextCore.Text.TextAlignment
+---@field BottomLeft UnityEngine.TextCore.Text.TextAlignment
+---@field BottomCenter UnityEngine.TextCore.Text.TextAlignment
+---@field BottomRight UnityEngine.TextCore.Text.TextAlignment
+---@field BottomJustified UnityEngine.TextCore.Text.TextAlignment
+---@field BottomFlush UnityEngine.TextCore.Text.TextAlignment
+---@field BottomGeoAligned UnityEngine.TextCore.Text.TextAlignment
+---@field BaselineLeft UnityEngine.TextCore.Text.TextAlignment
+---@field BaselineCenter UnityEngine.TextCore.Text.TextAlignment
+---@field BaselineRight UnityEngine.TextCore.Text.TextAlignment
+---@field BaselineJustified UnityEngine.TextCore.Text.TextAlignment
+---@field BaselineFlush UnityEngine.TextCore.Text.TextAlignment
+---@field BaselineGeoAligned UnityEngine.TextCore.Text.TextAlignment
+---@field MidlineLeft UnityEngine.TextCore.Text.TextAlignment
+---@field MidlineCenter UnityEngine.TextCore.Text.TextAlignment
+---@field MidlineRight UnityEngine.TextCore.Text.TextAlignment
+---@field MidlineJustified UnityEngine.TextCore.Text.TextAlignment
+---@field MidlineFlush UnityEngine.TextCore.Text.TextAlignment
+---@field MidlineGeoAligned UnityEngine.TextCore.Text.TextAlignment
+---@field CaplineLeft UnityEngine.TextCore.Text.TextAlignment
+---@field CaplineCenter UnityEngine.TextCore.Text.TextAlignment
+---@field CaplineRight UnityEngine.TextCore.Text.TextAlignment
+---@field CaplineJustified UnityEngine.TextCore.Text.TextAlignment
+---@field CaplineFlush UnityEngine.TextCore.Text.TextAlignment
+---@field CaplineGeoAligned UnityEngine.TextCore.Text.TextAlignment
+UnityEngine.TextCore.Text.TextAlignment = {}
+---@alias CS.UnityEngine.TextCore.Text.TextAlignment UnityEngine.TextCore.Text.TextAlignment
+CS.UnityEngine.TextCore.Text.TextAlignment = UnityEngine.TextCore.Text.TextAlignment
+
+
+---@class UnityEngine.TextCore.Text.FontStyles
+---@field Normal UnityEngine.TextCore.Text.FontStyles
+---@field Bold UnityEngine.TextCore.Text.FontStyles
+---@field Italic UnityEngine.TextCore.Text.FontStyles
+---@field Underline UnityEngine.TextCore.Text.FontStyles
+---@field LowerCase UnityEngine.TextCore.Text.FontStyles
+---@field UpperCase UnityEngine.TextCore.Text.FontStyles
+---@field SmallCaps UnityEngine.TextCore.Text.FontStyles
+---@field Strikethrough UnityEngine.TextCore.Text.FontStyles
+---@field Superscript UnityEngine.TextCore.Text.FontStyles
+---@field Subscript UnityEngine.TextCore.Text.FontStyles
+---@field Highlight UnityEngine.TextCore.Text.FontStyles
+UnityEngine.TextCore.Text.FontStyles = {}
+---@alias CS.UnityEngine.TextCore.Text.FontStyles UnityEngine.TextCore.Text.FontStyles
+CS.UnityEngine.TextCore.Text.FontStyles = UnityEngine.TextCore.Text.FontStyles
+
+
+---@class UnityEngine.TextCore.Text.TextOverflowMode
+---@field Overflow UnityEngine.TextCore.Text.TextOverflowMode
+---@field Ellipsis UnityEngine.TextCore.Text.TextOverflowMode
+---@field Masking UnityEngine.TextCore.Text.TextOverflowMode
+---@field Truncate UnityEngine.TextCore.Text.TextOverflowMode
+---@field ScrollRect UnityEngine.TextCore.Text.TextOverflowMode
+---@field Linked UnityEngine.TextCore.Text.TextOverflowMode
+UnityEngine.TextCore.Text.TextOverflowMode = {}
+---@alias CS.UnityEngine.TextCore.Text.TextOverflowMode UnityEngine.TextCore.Text.TextOverflowMode
+CS.UnityEngine.TextCore.Text.TextOverflowMode = UnityEngine.TextCore.Text.TextOverflowMode
+
+
+---@class UnityEngine.TextCore.Text.TextWrappingMode
+---@field NoWrap UnityEngine.TextCore.Text.TextWrappingMode
+---@field Normal UnityEngine.TextCore.Text.TextWrappingMode
+---@field PreserveWhitespace UnityEngine.TextCore.Text.TextWrappingMode
+---@field PreserveWhitespaceNoWrap UnityEngine.TextCore.Text.TextWrappingMode
+UnityEngine.TextCore.Text.TextWrappingMode = {}
+---@alias CS.UnityEngine.TextCore.Text.TextWrappingMode UnityEngine.TextCore.Text.TextWrappingMode
+CS.UnityEngine.TextCore.Text.TextWrappingMode = UnityEngine.TextCore.Text.TextWrappingMode
+
+
+---@class UnityEngine.TextCore.Text.RenderedText : System.ValueType
+---@field value string
+---@field valueStart number
+---@field valueLength number
+---@field suffix string
+---@field repeat System.Char
+---@field repeatCount number
+---@field CharacterCount number
+UnityEngine.TextCore.Text.RenderedText = {}
+---@alias CS.UnityEngine.TextCore.Text.RenderedText UnityEngine.TextCore.Text.RenderedText
+CS.UnityEngine.TextCore.Text.RenderedText = UnityEngine.TextCore.Text.RenderedText
+
+---@overload fun(value: string) : UnityEngine.TextCore.Text.RenderedText
+---@overload fun(value: string, suffix: string) : UnityEngine.TextCore.Text.RenderedText
+---@overload fun(value: string, start: number, length: number, suffix: string) : UnityEngine.TextCore.Text.RenderedText
+---@param _repeat System.Char
+---@param repeatCount number
+---@param suffix string
+---@return UnityEngine.TextCore.Text.RenderedText
+function UnityEngine.TextCore.Text.RenderedText.New(_repeat, repeatCount, suffix) end
+---@return UnityEngine.TextCore.Text.RenderedText.Enumerator
+function UnityEngine.TextCore.Text.RenderedText:GetEnumerator() end
+---@return string
+function UnityEngine.TextCore.Text.RenderedText:CreateString() end
+---@overload fun(self: UnityEngine.TextCore.Text.RenderedText, other: UnityEngine.TextCore.Text.RenderedText) : boolean
+---@overload fun(self: UnityEngine.TextCore.Text.RenderedText, other: string) : boolean
+---@param obj System.Object
+---@return boolean
+function UnityEngine.TextCore.Text.RenderedText:Equals(obj) end
+---@return number
+function UnityEngine.TextCore.Text.RenderedText:GetHashCode() end
+
+---@class UnityEngine.TextCore.Text.RenderedText.Enumerator : System.ValueType
+---@field Current System.Char
+UnityEngine.TextCore.Text.RenderedText.Enumerator = {}
+---@alias CS.UnityEngine.TextCore.Text.RenderedText.Enumerator UnityEngine.TextCore.Text.RenderedText.Enumerator
+CS.UnityEngine.TextCore.Text.RenderedText.Enumerator = UnityEngine.TextCore.Text.RenderedText.Enumerator
+
+---@param ref_source UnityEngine.TextCore.Text.RenderedText
+---@return UnityEngine.TextCore.Text.RenderedText.Enumerator,UnityEngine.TextCore.Text.RenderedText
+function UnityEngine.TextCore.Text.RenderedText.Enumerator.New(ref_source) end
+---@return boolean
+function UnityEngine.TextCore.Text.RenderedText.Enumerator:MoveNext() end
+function UnityEngine.TextCore.Text.RenderedText.Enumerator:Reset() end
+
+---@class UnityEngine.TextCore.Text.MeshExtents : System.ValueType
+---@field min UnityEngine.Vector2
+---@field max UnityEngine.Vector2
+UnityEngine.TextCore.Text.MeshExtents = {}
+---@alias CS.UnityEngine.TextCore.Text.MeshExtents UnityEngine.TextCore.Text.MeshExtents
+CS.UnityEngine.TextCore.Text.MeshExtents = UnityEngine.TextCore.Text.MeshExtents
+
+---@param min UnityEngine.Vector2
+---@param max UnityEngine.Vector2
+---@return UnityEngine.TextCore.Text.MeshExtents
+function UnityEngine.TextCore.Text.MeshExtents.New(min, max) end
+---@return string
+function UnityEngine.TextCore.Text.MeshExtents:ToString() end
+
+---@class UnityEngine.TextCore.Text.XmlTagAttribute : System.ValueType
+---@field nameHashCode number
+---@field valueType UnityEngine.TextCore.Text.TagValueType
+---@field valueStartIndex number
+---@field valueLength number
+---@field valueHashCode number
+UnityEngine.TextCore.Text.XmlTagAttribute = {}
+---@alias CS.UnityEngine.TextCore.Text.XmlTagAttribute UnityEngine.TextCore.Text.XmlTagAttribute
+CS.UnityEngine.TextCore.Text.XmlTagAttribute = UnityEngine.TextCore.Text.XmlTagAttribute
+
+
+---@class UnityEngine.TextCore.Text.RichTextTagAttribute : System.ValueType
+---@field nameHashCode number
+---@field valueHashCode number
+---@field valueType UnityEngine.TextCore.Text.TagValueType
+---@field valueStartIndex number
+---@field valueLength number
+---@field unitType UnityEngine.TextCore.Text.TagUnitType
+UnityEngine.TextCore.Text.RichTextTagAttribute = {}
+---@alias CS.UnityEngine.TextCore.Text.RichTextTagAttribute UnityEngine.TextCore.Text.RichTextTagAttribute
+CS.UnityEngine.TextCore.Text.RichTextTagAttribute = UnityEngine.TextCore.Text.RichTextTagAttribute
+
+
+---@class UnityEngine.TextCore.Text.TextProcessingElement : System.ValueType
+---@field elementType UnityEngine.TextCore.Text.TextProcessingElementType
+---@field unicode number
+---@field stringIndex number
+---@field length number
+UnityEngine.TextCore.Text.TextProcessingElement = {}
+---@alias CS.UnityEngine.TextCore.Text.TextProcessingElement UnityEngine.TextCore.Text.TextProcessingElement
+CS.UnityEngine.TextCore.Text.TextProcessingElement = UnityEngine.TextCore.Text.TextProcessingElement
+
+
+---@class UnityEngine.TextCore.Text.TextBackingContainer : System.ValueType
+---@field Text System.UInt32[]
+---@field Capacity number
+---@field Count number
+---@field Item number
+UnityEngine.TextCore.Text.TextBackingContainer = {}
+---@alias CS.UnityEngine.TextCore.Text.TextBackingContainer UnityEngine.TextCore.Text.TextBackingContainer
+CS.UnityEngine.TextCore.Text.TextBackingContainer = UnityEngine.TextCore.Text.TextBackingContainer
+
+---@param size number
+---@return UnityEngine.TextCore.Text.TextBackingContainer
+function UnityEngine.TextCore.Text.TextBackingContainer.New(size) end
+---@param size number
+function UnityEngine.TextCore.Text.TextBackingContainer:Resize(size) end
+
+---@class UnityEngine.TextCore.Text.CharacterSubstitution : System.ValueType
+---@field index number
+---@field unicode number
+UnityEngine.TextCore.Text.CharacterSubstitution = {}
+---@alias CS.UnityEngine.TextCore.Text.CharacterSubstitution UnityEngine.TextCore.Text.CharacterSubstitution
+CS.UnityEngine.TextCore.Text.CharacterSubstitution = UnityEngine.TextCore.Text.CharacterSubstitution
+
+---@param index number
+---@param unicode number
+---@return UnityEngine.TextCore.Text.CharacterSubstitution
+function UnityEngine.TextCore.Text.CharacterSubstitution.New(index, unicode) end
+
+---@class UnityEngine.TextCore.Text.Offset : System.ValueType
+---@field zero UnityEngine.TextCore.Text.Offset
+---@field left number
+---@field right number
+---@field top number
+---@field bottom number
+UnityEngine.TextCore.Text.Offset = {}
+---@alias CS.UnityEngine.TextCore.Text.Offset UnityEngine.TextCore.Text.Offset
+CS.UnityEngine.TextCore.Text.Offset = UnityEngine.TextCore.Text.Offset
+
+---@param left number
+---@param right number
+---@param top number
+---@param bottom number
+---@return UnityEngine.TextCore.Text.Offset
+function UnityEngine.TextCore.Text.Offset.New(left, right, top, bottom) end
+---@return number
+function UnityEngine.TextCore.Text.Offset:GetHashCode() end
+---@overload fun(self: UnityEngine.TextCore.Text.Offset, obj: System.Object) : boolean
+---@param other UnityEngine.TextCore.Text.Offset
+---@return boolean
+function UnityEngine.TextCore.Text.Offset:Equals(other) end
+
+---@class UnityEngine.TextCore.Text.HighlightState : System.ValueType
+---@field color UnityEngine.Color32
+---@field padding UnityEngine.TextCore.Text.Offset
+UnityEngine.TextCore.Text.HighlightState = {}
+---@alias CS.UnityEngine.TextCore.Text.HighlightState UnityEngine.TextCore.Text.HighlightState
+CS.UnityEngine.TextCore.Text.HighlightState = UnityEngine.TextCore.Text.HighlightState
+
+---@param color UnityEngine.Color32
+---@param padding UnityEngine.TextCore.Text.Offset
+---@return UnityEngine.TextCore.Text.HighlightState
+function UnityEngine.TextCore.Text.HighlightState.New(color, padding) end
+---@return number
+function UnityEngine.TextCore.Text.HighlightState:GetHashCode() end
+---@overload fun(self: UnityEngine.TextCore.Text.HighlightState, obj: System.Object) : boolean
+---@param other UnityEngine.TextCore.Text.HighlightState
+---@return boolean
+function UnityEngine.TextCore.Text.HighlightState:Equals(other) end
+
+---@class UnityEngine.TextCore.Text.WordWrapState : System.ValueType
+---@field previousWordBreak number
+---@field totalCharacterCount number
+---@field visibleCharacterCount number
+---@field visibleSpaceCount number
+---@field visibleSpriteCount number
+---@field visibleLinkCount number
+---@field firstCharacterIndex number
+---@field firstVisibleCharacterIndex number
+---@field lastCharacterIndex number
+---@field lastVisibleCharIndex number
+---@field lineNumber number
+---@field maxCapHeight number
+---@field maxAscender number
+---@field maxDescender number
+---@field maxLineAscender number
+---@field maxLineDescender number
+---@field startOfLineAscender number
+---@field xAdvance number
+---@field preferredWidth number
+---@field preferredHeight number
+---@field previousLineScale number
+---@field pageAscender number
+---@field wordCount number
+---@field fontStyle UnityEngine.TextCore.Text.FontStyles
+---@field fontScale number
+---@field fontScaleMultiplier number
+---@field italicAngle number
+---@field currentFontSize number
+---@field baselineOffset number
+---@field lineOffset number
+---@field textInfo UnityEngine.TextCore.Text.TextInfo
+---@field lineInfo UnityEngine.TextCore.Text.LineInfo
+---@field vertexColor UnityEngine.Color32
+---@field underlineColor UnityEngine.Color32
+---@field strikethroughColor UnityEngine.Color32
+---@field highlightColor UnityEngine.Color32
+---@field highlightState UnityEngine.TextCore.Text.HighlightState
+---@field basicStyleStack UnityEngine.TextCore.Text.FontStyleStack
+---@field italicAngleStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field colorStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field underlineColorStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field strikethroughColorStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field highlightColorStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field highlightStateStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field colorGradientStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field sizeStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field indentStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field fontWeightStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field styleStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field baselineStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field actionStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field materialReferenceStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field lineJustificationStack UnityEngine.TextCore.Text.TextProcessingStack
+---@field lastBaseGlyphIndex number
+---@field spriteAnimationId number
+---@field currentFontAsset UnityEngine.TextCore.Text.FontAsset
+---@field currentSpriteAsset UnityEngine.TextCore.Text.SpriteAsset
+---@field currentMaterial UnityEngine.Material
+---@field currentMaterialIndex number
+---@field meshExtents UnityEngine.TextCore.Text.Extents
+---@field tagNoParsing boolean
+---@field isNonBreakingSpace boolean
+---@field isDrivenLineSpacing boolean
+---@field fxScale UnityEngine.Vector3
+---@field fxRotation UnityEngine.Quaternion
+UnityEngine.TextCore.Text.WordWrapState = {}
+---@alias CS.UnityEngine.TextCore.Text.WordWrapState UnityEngine.TextCore.Text.WordWrapState
+CS.UnityEngine.TextCore.Text.WordWrapState = UnityEngine.TextCore.Text.WordWrapState
+
 
 ---@class UnityEngine.TextCore.Text.TextGeneratorUtilities : System.Object
 ---@field largePositiveVector2 UnityEngine.Vector2
@@ -1854,6 +2662,10 @@ function UnityEngine.CanvasGroup.New() end
 ---@param eventCamera UnityEngine.Camera
 ---@return boolean
 function UnityEngine.CanvasGroup:IsRaycastLocationValid(sp, eventCamera) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.CanvasGroup:DOFade(endValue, duration) end
 
 ---@class UnityEngine.CanvasRenderer : UnityEngine.Component
 ---@field hasPopInstruction boolean
@@ -4192,813 +5004,3 @@ function UnityEngine.UIElements.BasePopupField:SetValueWithoutNotify(newValue) e
 UnityEngine.UIElements.BasePopupField.PopupTextElement = {}
 ---@alias CS.UnityEngine.UIElements.BasePopupField.PopupTextElement UnityEngine.UIElements.BasePopupField.PopupTextElement
 CS.UnityEngine.UIElements.BasePopupField.PopupTextElement = UnityEngine.UIElements.BasePopupField.PopupTextElement
-
----@return UnityEngine.UIElements.BasePopupField.PopupTextElement
-function UnityEngine.UIElements.BasePopupField.PopupTextElement.New() end
-
----@class UnityEngine.UIElements.SliderDirection
----@field Horizontal UnityEngine.UIElements.SliderDirection
----@field Vertical UnityEngine.UIElements.SliderDirection
-UnityEngine.UIElements.SliderDirection = {}
----@alias CS.UnityEngine.UIElements.SliderDirection UnityEngine.UIElements.SliderDirection
-CS.UnityEngine.UIElements.SliderDirection = UnityEngine.UIElements.SliderDirection
-
-
----@class UnityEngine.UIElements.BaseSlider : UnityEngine.UIElements.BaseField[TValueType]
----@field ussClassName string
----@field labelUssClassName string
----@field inputUssClassName string
----@field horizontalVariantUssClassName string
----@field verticalVariantUssClassName string
----@field dragContainerUssClassName string
----@field trackerUssClassName string
----@field draggerUssClassName string
----@field draggerBorderUssClassName string
----@field textFieldClassName string
----@field fillUssClassName string
----@field movableUssClassName string
----@field lowValue TValueType
----@field highValue TValueType
----@field range TValueType
----@field pageSize number
----@field showInputField boolean
----@field fill boolean
----@field value TValueType
----@field direction UnityEngine.UIElements.SliderDirection
----@field inverted boolean
-UnityEngine.UIElements.BaseSlider = {}
----@alias CS.UnityEngine.UIElements.BaseSlider UnityEngine.UIElements.BaseSlider
-CS.UnityEngine.UIElements.BaseSlider = UnityEngine.UIElements.BaseSlider
-
----@param delta UnityEngine.Vector3
----@param speed UnityEngine.UIElements.DeltaSpeed
----@param startValue TValueType
-function UnityEngine.UIElements.BaseSlider:ApplyInputDeviceDelta(delta, speed, startValue) end
----@param newValue TValueType
-function UnityEngine.UIElements.BaseSlider:SetValueWithoutNotify(newValue) end
----@param factor number
-function UnityEngine.UIElements.BaseSlider:AdjustDragElement(factor) end
-
----@class UnityEngine.UIElements.BaseSlider.UxmlSerializedData : UnityEngine.UIElements.BaseField.UxmlSerializedData[TValueType]
-UnityEngine.UIElements.BaseSlider.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.BaseSlider.UxmlSerializedData UnityEngine.UIElements.BaseSlider.UxmlSerializedData
-CS.UnityEngine.UIElements.BaseSlider.UxmlSerializedData = UnityEngine.UIElements.BaseSlider.UxmlSerializedData
-
-function UnityEngine.UIElements.BaseSlider.UxmlSerializedData.Register() end
----@param obj System.Object
-function UnityEngine.UIElements.BaseSlider.UxmlSerializedData:Deserialize(obj) end
-
----@class UnityEngine.UIElements.BaseSlider.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits[TValueType]
-UnityEngine.UIElements.BaseSlider.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.BaseSlider.UxmlTraits UnityEngine.UIElements.BaseSlider.UxmlTraits
-CS.UnityEngine.UIElements.BaseSlider.UxmlTraits = UnityEngine.UIElements.BaseSlider.UxmlTraits
-
----@return UnityEngine.UIElements.BaseSlider.UxmlTraits
-function UnityEngine.UIElements.BaseSlider.UxmlTraits.New() end
-
----@class UnityEngine.UIElements.BaseSlider.UxmlTraits : UnityEngine.UIElements.BaseFieldTraits[TValueType,TValueUxmlAttributeType]
-UnityEngine.UIElements.BaseSlider.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.BaseSlider.UxmlTraits UnityEngine.UIElements.BaseSlider.UxmlTraits
-CS.UnityEngine.UIElements.BaseSlider.UxmlTraits = UnityEngine.UIElements.BaseSlider.UxmlTraits
-
----@return UnityEngine.UIElements.BaseSlider.UxmlTraits
-function UnityEngine.UIElements.BaseSlider.UxmlTraits.New() end
-
----@class UnityEngine.UIElements.BaseSlider.SliderKey
----@field None UnityEngine.UIElements.BaseSlider.SliderKey
----@field Lowest UnityEngine.UIElements.BaseSlider.SliderKey
----@field LowerPage UnityEngine.UIElements.BaseSlider.SliderKey
----@field Lower UnityEngine.UIElements.BaseSlider.SliderKey
----@field Higher UnityEngine.UIElements.BaseSlider.SliderKey
----@field HigherPage UnityEngine.UIElements.BaseSlider.SliderKey
----@field Highest UnityEngine.UIElements.BaseSlider.SliderKey
-UnityEngine.UIElements.BaseSlider.SliderKey = {}
----@alias CS.UnityEngine.UIElements.BaseSlider.SliderKey UnityEngine.UIElements.BaseSlider.SliderKey
-CS.UnityEngine.UIElements.BaseSlider.SliderKey = UnityEngine.UIElements.BaseSlider.SliderKey
-
-
----@class UnityEngine.UIElements.TreeViewExpansionChangedArgs : System.Object
----@field id number
----@field isExpanded boolean
----@field isAppliedToAllChildren boolean
-UnityEngine.UIElements.TreeViewExpansionChangedArgs = {}
----@alias CS.UnityEngine.UIElements.TreeViewExpansionChangedArgs UnityEngine.UIElements.TreeViewExpansionChangedArgs
-CS.UnityEngine.UIElements.TreeViewExpansionChangedArgs = UnityEngine.UIElements.TreeViewExpansionChangedArgs
-
----@return UnityEngine.UIElements.TreeViewExpansionChangedArgs
-function UnityEngine.UIElements.TreeViewExpansionChangedArgs.New() end
-
----@class UnityEngine.UIElements.BaseTreeView : UnityEngine.UIElements.BaseVerticalCollectionView
----@field ussClassName string
----@field itemUssClassName string
----@field itemToggleUssClassName string
----@field itemIndentUssClassName string
----@field itemContentContainerUssClassName string
----@field itemsSource System.Collections.IList
----@field viewController UnityEngine.UIElements.BaseTreeViewController
----@field autoExpand boolean
-UnityEngine.UIElements.BaseTreeView = {}
----@alias CS.UnityEngine.UIElements.BaseTreeView UnityEngine.UIElements.BaseTreeView
-CS.UnityEngine.UIElements.BaseTreeView = UnityEngine.UIElements.BaseTreeView
-
----@overload fun() : UnityEngine.UIElements.BaseTreeView
----@param itemHeight number
----@return UnityEngine.UIElements.BaseTreeView
-function UnityEngine.UIElements.BaseTreeView.New(itemHeight) end
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.UIElements.BaseTreeView:GetRootIds() end
----@return number
-function UnityEngine.UIElements.BaseTreeView:GetTreeCount() end
----@param controller UnityEngine.UIElements.CollectionViewController
-function UnityEngine.UIElements.BaseTreeView:SetViewController(controller) end
----@param index number
----@return number
-function UnityEngine.UIElements.BaseTreeView:GetIdForIndex(index) end
----@param index number
----@return number
-function UnityEngine.UIElements.BaseTreeView:GetParentIdForIndex(index) end
----@param index number
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.UIElements.BaseTreeView:GetChildrenIdsForIndex(index) end
----@param id number
----@param rebuildTree boolean
----@return boolean
-function UnityEngine.UIElements.BaseTreeView:TryRemoveItem(id, rebuildTree) end
----@overload fun(self: UnityEngine.UIElements.BaseTreeView, id: number)
----@param ids System.Collections.Generic.IEnumerable
-function UnityEngine.UIElements.BaseTreeView:SetSelectionById(ids) end
----@param ids System.Collections.Generic.IEnumerable
-function UnityEngine.UIElements.BaseTreeView:SetSelectionByIdWithoutNotify(ids) end
----@param id number
-function UnityEngine.UIElements.BaseTreeView:AddToSelectionById(id) end
----@param id number
-function UnityEngine.UIElements.BaseTreeView:RemoveFromSelectionById(id) end
----@param id number
----@return boolean
-function UnityEngine.UIElements.BaseTreeView:IsExpanded(id) end
----@param id number
----@param collapseAllChildren boolean
----@param refresh boolean
-function UnityEngine.UIElements.BaseTreeView:CollapseItem(id, collapseAllChildren, refresh) end
----@param id number
----@param expandAllChildren boolean
----@param refresh boolean
-function UnityEngine.UIElements.BaseTreeView:ExpandItem(id, expandAllChildren, refresh) end
-function UnityEngine.UIElements.BaseTreeView:ExpandRootItems() end
-function UnityEngine.UIElements.BaseTreeView:ExpandAll() end
-function UnityEngine.UIElements.BaseTreeView:CollapseAll() end
-
----@class UnityEngine.UIElements.BaseTreeView.UxmlSerializedData : UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData
-UnityEngine.UIElements.BaseTreeView.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.BaseTreeView.UxmlSerializedData UnityEngine.UIElements.BaseTreeView.UxmlSerializedData
-CS.UnityEngine.UIElements.BaseTreeView.UxmlSerializedData = UnityEngine.UIElements.BaseTreeView.UxmlSerializedData
-
-function UnityEngine.UIElements.BaseTreeView.UxmlSerializedData.Register() end
----@param obj System.Object
-function UnityEngine.UIElements.BaseTreeView.UxmlSerializedData:Deserialize(obj) end
-
----@class UnityEngine.UIElements.BaseTreeView.UxmlTraits : UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits
----@field uxmlChildElementsDescription System.Collections.Generic.IEnumerable
-UnityEngine.UIElements.BaseTreeView.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.BaseTreeView.UxmlTraits UnityEngine.UIElements.BaseTreeView.UxmlTraits
-CS.UnityEngine.UIElements.BaseTreeView.UxmlTraits = UnityEngine.UIElements.BaseTreeView.UxmlTraits
-
----@return UnityEngine.UIElements.BaseTreeView.UxmlTraits
-function UnityEngine.UIElements.BaseTreeView.UxmlTraits.New() end
----@param ve UnityEngine.UIElements.VisualElement
----@param bag UnityEngine.UIElements.IUxmlAttributes
----@param cc UnityEngine.UIElements.CreationContext
-function UnityEngine.UIElements.BaseTreeView.UxmlTraits:Init(ve, bag, cc) end
-
----@class UnityEngine.UIElements.AlternatingRowBackground
----@field None UnityEngine.UIElements.AlternatingRowBackground
----@field ContentOnly UnityEngine.UIElements.AlternatingRowBackground
----@field All UnityEngine.UIElements.AlternatingRowBackground
-UnityEngine.UIElements.AlternatingRowBackground = {}
----@alias CS.UnityEngine.UIElements.AlternatingRowBackground UnityEngine.UIElements.AlternatingRowBackground
-CS.UnityEngine.UIElements.AlternatingRowBackground = UnityEngine.UIElements.AlternatingRowBackground
-
-
----@class UnityEngine.UIElements.CollectionVirtualizationMethod
----@field FixedHeight UnityEngine.UIElements.CollectionVirtualizationMethod
----@field DynamicHeight UnityEngine.UIElements.CollectionVirtualizationMethod
-UnityEngine.UIElements.CollectionVirtualizationMethod = {}
----@alias CS.UnityEngine.UIElements.CollectionVirtualizationMethod UnityEngine.UIElements.CollectionVirtualizationMethod
-CS.UnityEngine.UIElements.CollectionVirtualizationMethod = UnityEngine.UIElements.CollectionVirtualizationMethod
-
-
----@class UnityEngine.UIElements.BindingSourceSelectionMode
----@field Manual UnityEngine.UIElements.BindingSourceSelectionMode
----@field AutoAssign UnityEngine.UIElements.BindingSourceSelectionMode
-UnityEngine.UIElements.BindingSourceSelectionMode = {}
----@alias CS.UnityEngine.UIElements.BindingSourceSelectionMode UnityEngine.UIElements.BindingSourceSelectionMode
-CS.UnityEngine.UIElements.BindingSourceSelectionMode = UnityEngine.UIElements.BindingSourceSelectionMode
-
-
----@class UnityEngine.UIElements.SerializedVirtualizationData : System.Object
----@field scrollOffset UnityEngine.Vector2
----@field firstVisibleIndex number
----@field contentPadding number
----@field contentHeight number
----@field anchoredItemIndex number
----@field anchorOffset number
-UnityEngine.UIElements.SerializedVirtualizationData = {}
----@alias CS.UnityEngine.UIElements.SerializedVirtualizationData UnityEngine.UIElements.SerializedVirtualizationData
-CS.UnityEngine.UIElements.SerializedVirtualizationData = UnityEngine.UIElements.SerializedVirtualizationData
-
----@return UnityEngine.UIElements.SerializedVirtualizationData
-function UnityEngine.UIElements.SerializedVirtualizationData.New() end
-
----@class UnityEngine.UIElements.BaseVerticalCollectionView : UnityEngine.UIElements.BindableElement
----@field ussClassName string
----@field borderUssClassName string
----@field itemUssClassName string
----@field dragHoverBarUssClassName string
----@field dragHoverMarkerUssClassName string
----@field itemDragHoverUssClassName string
----@field itemSelectedVariantUssClassName string
----@field itemAlternativeBackgroundUssClassName string
----@field listScrollViewUssClassName string
----@field itemsSource System.Collections.IList
----@field contentContainer UnityEngine.UIElements.VisualElement
----@field selectionType UnityEngine.UIElements.SelectionType
----@field selectedItem System.Object
----@field selectedItems System.Collections.Generic.IEnumerable
----@field selectedIndex number
----@field selectedIndices System.Collections.Generic.IEnumerable
----@field selectedIds System.Collections.Generic.IEnumerable
----@field viewController UnityEngine.UIElements.CollectionViewController
----@field showBorder boolean
----@field reorderable boolean
----@field horizontalScrollingEnabled boolean
----@field showAlternatingRowBackgrounds UnityEngine.UIElements.AlternatingRowBackground
----@field virtualizationMethod UnityEngine.UIElements.CollectionVirtualizationMethod
----@field fixedItemHeight number
-UnityEngine.UIElements.BaseVerticalCollectionView = {}
----@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView UnityEngine.UIElements.BaseVerticalCollectionView
-CS.UnityEngine.UIElements.BaseVerticalCollectionView = UnityEngine.UIElements.BaseVerticalCollectionView
-
----@overload fun() : UnityEngine.UIElements.BaseVerticalCollectionView
----@overload fun(itemsSource: System.Collections.IList, itemHeight: number) : UnityEngine.UIElements.BaseVerticalCollectionView
----@param itemsSource System.Collections.IList
----@param itemHeight number
----@param makeItem System.Func
----@param bindItem System.Action
----@return UnityEngine.UIElements.BaseVerticalCollectionView
-function UnityEngine.UIElements.BaseVerticalCollectionView.New(itemsSource, itemHeight, makeItem, bindItem) end
----@param controller UnityEngine.UIElements.CollectionViewController
-function UnityEngine.UIElements.BaseVerticalCollectionView:SetViewController(controller) end
----@param id number
----@return UnityEngine.UIElements.VisualElement
-function UnityEngine.UIElements.BaseVerticalCollectionView:GetRootElementForId(id) end
----@param index number
----@return UnityEngine.UIElements.VisualElement
-function UnityEngine.UIElements.BaseVerticalCollectionView:GetRootElementForIndex(index) end
----@param index number
-function UnityEngine.UIElements.BaseVerticalCollectionView:RefreshItem(index) end
-function UnityEngine.UIElements.BaseVerticalCollectionView:RefreshItems() end
-function UnityEngine.UIElements.BaseVerticalCollectionView:Rebuild() end
----@param visualElement UnityEngine.UIElements.VisualElement
-function UnityEngine.UIElements.BaseVerticalCollectionView:ScrollTo(visualElement) end
----@param index number
-function UnityEngine.UIElements.BaseVerticalCollectionView:ScrollToItem(index) end
----@param id number
-function UnityEngine.UIElements.BaseVerticalCollectionView:ScrollToItemById(id) end
----@param index number
-function UnityEngine.UIElements.BaseVerticalCollectionView:AddToSelection(index) end
----@param index number
-function UnityEngine.UIElements.BaseVerticalCollectionView:RemoveFromSelection(index) end
----@overload fun(self: UnityEngine.UIElements.BaseVerticalCollectionView, index: number)
----@param indices System.Collections.Generic.IEnumerable
-function UnityEngine.UIElements.BaseVerticalCollectionView:SetSelection(indices) end
----@param indices System.Collections.Generic.IEnumerable
-function UnityEngine.UIElements.BaseVerticalCollectionView:SetSelectionWithoutNotify(indices) end
-function UnityEngine.UIElements.BaseVerticalCollectionView:ClearSelection() end
----@param id number
----@return UnityEngine.UIElements.ReusableCollectionItem
-function UnityEngine.UIElements.BaseVerticalCollectionView:GetRecycledItemFromId(id) end
----@param index number
----@return UnityEngine.UIElements.ReusableCollectionItem
-function UnityEngine.UIElements.BaseVerticalCollectionView:GetRecycledItemFromIndex(index) end
-
----@class UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData : UnityEngine.UIElements.BindableElement.UxmlSerializedData
-UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData
-CS.UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData = UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData
-
-function UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData.Register() end
----@param obj System.Object
-function UnityEngine.UIElements.BaseVerticalCollectionView.UxmlSerializedData:Deserialize(obj) end
-
----@class UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits : UnityEngine.UIElements.BindableElement.UxmlTraits
----@field uxmlChildElementsDescription System.Collections.Generic.IEnumerable
-UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits
-CS.UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits = UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits
-
----@return UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits
-function UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits.New() end
----@param ve UnityEngine.UIElements.VisualElement
----@param bag UnityEngine.UIElements.IUxmlAttributes
----@param cc UnityEngine.UIElements.CreationContext
-function UnityEngine.UIElements.BaseVerticalCollectionView.UxmlTraits:Init(ve, bag, cc) end
-
----@class UnityEngine.UIElements.BaseVerticalCollectionView.Selection : System.Object
----@field indices System.Collections.Generic.List
----@field items System.Collections.Generic.Dictionary
----@field selectedIds System.Collections.Generic.List
----@field indexCount number
----@field idCount number
----@field minIndex number
----@field maxIndex number
----@field capacity number
-UnityEngine.UIElements.BaseVerticalCollectionView.Selection = {}
----@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView.Selection UnityEngine.UIElements.BaseVerticalCollectionView.Selection
-CS.UnityEngine.UIElements.BaseVerticalCollectionView.Selection = UnityEngine.UIElements.BaseVerticalCollectionView.Selection
-
----@return UnityEngine.UIElements.BaseVerticalCollectionView.Selection
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection.New() end
----@return number
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:FirstIndex() end
----@return System.Object
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:FirstObject() end
----@param index number
----@return boolean
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:ContainsIndex(index) end
----@param id number
----@return boolean
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:ContainsId(id) end
----@param id number
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:AddId(id) end
----@param index number
----@param obj System.Object
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:AddIndex(index, obj) end
----@param index number
----@return boolean
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:TryRemove(index) end
----@param id number
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:RemoveId(id) end
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:ClearItems() end
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:ClearIds() end
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:ClearIndices() end
-function UnityEngine.UIElements.BaseVerticalCollectionView.Selection:Clear() end
-
----@class UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
----@field Up UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
----@field None UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
----@field Down UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
-UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection = {}
----@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
-CS.UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection = UnityEngine.UIElements.BaseVerticalCollectionView.RangeSelectionDirection
-
-
----@class UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum
----@field None UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum
----@field PointerDown UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum
-UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum = {}
----@alias CS.UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum
-CS.UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum = UnityEngine.UIElements.BaseVerticalCollectionView.pointerProcessingStateEnum
-
-
----@class UnityEngine.UIElements.IBindable
----@field binding UnityEngine.UIElements.IBinding
----@field bindingPath string
-UnityEngine.UIElements.IBindable = {}
----@alias CS.UnityEngine.UIElements.IBindable UnityEngine.UIElements.IBindable
-CS.UnityEngine.UIElements.IBindable = UnityEngine.UIElements.IBindable
-
----@return boolean
-function UnityEngine.UIElements.IBindable:IsBound() end
-
----@class UnityEngine.UIElements.IBinding
-UnityEngine.UIElements.IBinding = {}
----@alias CS.UnityEngine.UIElements.IBinding UnityEngine.UIElements.IBinding
-CS.UnityEngine.UIElements.IBinding = UnityEngine.UIElements.IBinding
-
-function UnityEngine.UIElements.IBinding:PreUpdate() end
-function UnityEngine.UIElements.IBinding:Update() end
-function UnityEngine.UIElements.IBinding:Release() end
-
----@class UnityEngine.UIElements.IBindingExtensions : System.Object
-UnityEngine.UIElements.IBindingExtensions = {}
----@alias CS.UnityEngine.UIElements.IBindingExtensions UnityEngine.UIElements.IBindingExtensions
-CS.UnityEngine.UIElements.IBindingExtensions = UnityEngine.UIElements.IBindingExtensions
-
----@param control UnityEngine.UIElements.IBindable
----@return boolean
-function UnityEngine.UIElements.IBindingExtensions.IsBound(control) end
-
----@class UnityEngine.UIElements.BoundsField : UnityEngine.UIElements.BaseField
----@field ussClassName string
----@field labelUssClassName string
----@field inputUssClassName string
----@field centerFieldUssClassName string
----@field extentsFieldUssClassName string
----@field value UnityEngine.UIElements.BoundsField -- infered from UnityEngine.UIElements.BaseField`1[UnityEngine.Bounds]
-UnityEngine.UIElements.BoundsField = {}
----@alias CS.UnityEngine.UIElements.BoundsField UnityEngine.UIElements.BoundsField
-CS.UnityEngine.UIElements.BoundsField = UnityEngine.UIElements.BoundsField
-
----@overload fun() : UnityEngine.UIElements.BoundsField
----@param label string
----@return UnityEngine.UIElements.BoundsField
-function UnityEngine.UIElements.BoundsField.New(label) end
----@param newValue UnityEngine.Bounds
-function UnityEngine.UIElements.BoundsField:SetValueWithoutNotify(newValue) end
-
----@class UnityEngine.UIElements.BoundsField.UxmlSerializedData : UnityEngine.UIElements.BaseField.UxmlSerializedData
-UnityEngine.UIElements.BoundsField.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.BoundsField.UxmlSerializedData UnityEngine.UIElements.BoundsField.UxmlSerializedData
-CS.UnityEngine.UIElements.BoundsField.UxmlSerializedData = UnityEngine.UIElements.BoundsField.UxmlSerializedData
-
----@return UnityEngine.UIElements.BoundsField.UxmlSerializedData
-function UnityEngine.UIElements.BoundsField.UxmlSerializedData.New() end
-function UnityEngine.UIElements.BoundsField.UxmlSerializedData.Register() end
----@return System.Object
-function UnityEngine.UIElements.BoundsField.UxmlSerializedData:CreateInstance() end
-
----@class UnityEngine.UIElements.BoundsField.UxmlFactory : UnityEngine.UIElements.UxmlFactory
-UnityEngine.UIElements.BoundsField.UxmlFactory = {}
----@alias CS.UnityEngine.UIElements.BoundsField.UxmlFactory UnityEngine.UIElements.BoundsField.UxmlFactory
-CS.UnityEngine.UIElements.BoundsField.UxmlFactory = UnityEngine.UIElements.BoundsField.UxmlFactory
-
----@return UnityEngine.UIElements.BoundsField.UxmlFactory
-function UnityEngine.UIElements.BoundsField.UxmlFactory.New() end
-
----@class UnityEngine.UIElements.BoundsField.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
-UnityEngine.UIElements.BoundsField.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.BoundsField.UxmlTraits UnityEngine.UIElements.BoundsField.UxmlTraits
-CS.UnityEngine.UIElements.BoundsField.UxmlTraits = UnityEngine.UIElements.BoundsField.UxmlTraits
-
----@return UnityEngine.UIElements.BoundsField.UxmlTraits
-function UnityEngine.UIElements.BoundsField.UxmlTraits.New() end
----@param ve UnityEngine.UIElements.VisualElement
----@param bag UnityEngine.UIElements.IUxmlAttributes
----@param cc UnityEngine.UIElements.CreationContext
-function UnityEngine.UIElements.BoundsField.UxmlTraits:Init(ve, bag, cc) end
-
----@class UnityEngine.UIElements.BoundsIntField : UnityEngine.UIElements.BaseField
----@field ussClassName string
----@field labelUssClassName string
----@field inputUssClassName string
----@field positionUssClassName string
----@field sizeUssClassName string
----@field value UnityEngine.UIElements.BoundsIntField -- infered from UnityEngine.UIElements.BaseField`1[UnityEngine.BoundsInt]
-UnityEngine.UIElements.BoundsIntField = {}
----@alias CS.UnityEngine.UIElements.BoundsIntField UnityEngine.UIElements.BoundsIntField
-CS.UnityEngine.UIElements.BoundsIntField = UnityEngine.UIElements.BoundsIntField
-
----@overload fun() : UnityEngine.UIElements.BoundsIntField
----@param label string
----@return UnityEngine.UIElements.BoundsIntField
-function UnityEngine.UIElements.BoundsIntField.New(label) end
----@param newValue UnityEngine.BoundsInt
-function UnityEngine.UIElements.BoundsIntField:SetValueWithoutNotify(newValue) end
-
----@class UnityEngine.UIElements.BoundsIntField.UxmlSerializedData : UnityEngine.UIElements.BaseField.UxmlSerializedData
-UnityEngine.UIElements.BoundsIntField.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.BoundsIntField.UxmlSerializedData UnityEngine.UIElements.BoundsIntField.UxmlSerializedData
-CS.UnityEngine.UIElements.BoundsIntField.UxmlSerializedData = UnityEngine.UIElements.BoundsIntField.UxmlSerializedData
-
----@return UnityEngine.UIElements.BoundsIntField.UxmlSerializedData
-function UnityEngine.UIElements.BoundsIntField.UxmlSerializedData.New() end
-function UnityEngine.UIElements.BoundsIntField.UxmlSerializedData.Register() end
----@return System.Object
-function UnityEngine.UIElements.BoundsIntField.UxmlSerializedData:CreateInstance() end
-
----@class UnityEngine.UIElements.BoundsIntField.UxmlFactory : UnityEngine.UIElements.UxmlFactory
-UnityEngine.UIElements.BoundsIntField.UxmlFactory = {}
----@alias CS.UnityEngine.UIElements.BoundsIntField.UxmlFactory UnityEngine.UIElements.BoundsIntField.UxmlFactory
-CS.UnityEngine.UIElements.BoundsIntField.UxmlFactory = UnityEngine.UIElements.BoundsIntField.UxmlFactory
-
----@return UnityEngine.UIElements.BoundsIntField.UxmlFactory
-function UnityEngine.UIElements.BoundsIntField.UxmlFactory.New() end
-
----@class UnityEngine.UIElements.BoundsIntField.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
-UnityEngine.UIElements.BoundsIntField.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.BoundsIntField.UxmlTraits UnityEngine.UIElements.BoundsIntField.UxmlTraits
-CS.UnityEngine.UIElements.BoundsIntField.UxmlTraits = UnityEngine.UIElements.BoundsIntField.UxmlTraits
-
----@return UnityEngine.UIElements.BoundsIntField.UxmlTraits
-function UnityEngine.UIElements.BoundsIntField.UxmlTraits.New() end
----@param ve UnityEngine.UIElements.VisualElement
----@param bag UnityEngine.UIElements.IUxmlAttributes
----@param cc UnityEngine.UIElements.CreationContext
-function UnityEngine.UIElements.BoundsIntField.UxmlTraits:Init(ve, bag, cc) end
-
----@class UnityEngine.UIElements.Box : UnityEngine.UIElements.VisualElement
----@field ussClassName string
-UnityEngine.UIElements.Box = {}
----@alias CS.UnityEngine.UIElements.Box UnityEngine.UIElements.Box
-CS.UnityEngine.UIElements.Box = UnityEngine.UIElements.Box
-
----@return UnityEngine.UIElements.Box
-function UnityEngine.UIElements.Box.New() end
-
----@class UnityEngine.UIElements.Box.UxmlSerializedData : UnityEngine.UIElements.VisualElement.UxmlSerializedData
-UnityEngine.UIElements.Box.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.Box.UxmlSerializedData UnityEngine.UIElements.Box.UxmlSerializedData
-CS.UnityEngine.UIElements.Box.UxmlSerializedData = UnityEngine.UIElements.Box.UxmlSerializedData
-
----@return UnityEngine.UIElements.Box.UxmlSerializedData
-function UnityEngine.UIElements.Box.UxmlSerializedData.New() end
----@return System.Object
-function UnityEngine.UIElements.Box.UxmlSerializedData:CreateInstance() end
-
----@class UnityEngine.UIElements.Box.UxmlFactory : UnityEngine.UIElements.UxmlFactory
-UnityEngine.UIElements.Box.UxmlFactory = {}
----@alias CS.UnityEngine.UIElements.Box.UxmlFactory UnityEngine.UIElements.Box.UxmlFactory
-CS.UnityEngine.UIElements.Box.UxmlFactory = UnityEngine.UIElements.Box.UxmlFactory
-
----@return UnityEngine.UIElements.Box.UxmlFactory
-function UnityEngine.UIElements.Box.UxmlFactory.New() end
-
----@class UnityEngine.UIElements.Button : UnityEngine.UIElements.TextElement
----@field ussClassName string
----@field iconUssClassName string
----@field iconOnlyUssClassName string
----@field imageUSSClassName string
----@field clickable UnityEngine.UIElements.Clickable
----@field iconImage UnityEngine.UIElements.Background
----@field text string
-UnityEngine.UIElements.Button = {}
----@alias CS.UnityEngine.UIElements.Button UnityEngine.UIElements.Button
-CS.UnityEngine.UIElements.Button = UnityEngine.UIElements.Button
-
----@overload fun() : UnityEngine.UIElements.Button
----@overload fun(iconImage: UnityEngine.UIElements.Background, clickEvent: System.Action) : UnityEngine.UIElements.Button
----@param clickEvent System.Action
----@return UnityEngine.UIElements.Button
-function UnityEngine.UIElements.Button.New(clickEvent) end
-
----@class UnityEngine.UIElements.Button.UxmlSerializedData : UnityEngine.UIElements.TextElement.UxmlSerializedData
-UnityEngine.UIElements.Button.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.Button.UxmlSerializedData UnityEngine.UIElements.Button.UxmlSerializedData
-CS.UnityEngine.UIElements.Button.UxmlSerializedData = UnityEngine.UIElements.Button.UxmlSerializedData
-
----@return UnityEngine.UIElements.Button.UxmlSerializedData
-function UnityEngine.UIElements.Button.UxmlSerializedData.New() end
-function UnityEngine.UIElements.Button.UxmlSerializedData.Register() end
----@return System.Object
-function UnityEngine.UIElements.Button.UxmlSerializedData:CreateInstance() end
----@param obj System.Object
-function UnityEngine.UIElements.Button.UxmlSerializedData:Deserialize(obj) end
-
----@class UnityEngine.UIElements.Button.UxmlFactory : UnityEngine.UIElements.UxmlFactory
-UnityEngine.UIElements.Button.UxmlFactory = {}
----@alias CS.UnityEngine.UIElements.Button.UxmlFactory UnityEngine.UIElements.Button.UxmlFactory
-CS.UnityEngine.UIElements.Button.UxmlFactory = UnityEngine.UIElements.Button.UxmlFactory
-
----@return UnityEngine.UIElements.Button.UxmlFactory
-function UnityEngine.UIElements.Button.UxmlFactory.New() end
-
----@class UnityEngine.UIElements.Button.UxmlTraits : UnityEngine.UIElements.TextElement.UxmlTraits
-UnityEngine.UIElements.Button.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.Button.UxmlTraits UnityEngine.UIElements.Button.UxmlTraits
-CS.UnityEngine.UIElements.Button.UxmlTraits = UnityEngine.UIElements.Button.UxmlTraits
-
----@return UnityEngine.UIElements.Button.UxmlTraits
-function UnityEngine.UIElements.Button.UxmlTraits.New() end
----@param ve UnityEngine.UIElements.VisualElement
----@param bag UnityEngine.UIElements.IUxmlAttributes
----@param cc UnityEngine.UIElements.CreationContext
-function UnityEngine.UIElements.Button.UxmlTraits:Init(ve, bag, cc) end
-
----@class UnityEngine.UIElements.ButtonStripField : UnityEngine.UIElements.BaseField
----@field className string
----@field value UnityEngine.UIElements.ButtonStripField -- infered from UnityEngine.UIElements.BaseField`1[System.Int32]
-UnityEngine.UIElements.ButtonStripField = {}
----@alias CS.UnityEngine.UIElements.ButtonStripField UnityEngine.UIElements.ButtonStripField
-CS.UnityEngine.UIElements.ButtonStripField = UnityEngine.UIElements.ButtonStripField
-
----@overload fun() : UnityEngine.UIElements.ButtonStripField
----@param label string
----@return UnityEngine.UIElements.ButtonStripField
-function UnityEngine.UIElements.ButtonStripField.New(label) end
----@overload fun(self: UnityEngine.UIElements.ButtonStripField, text: string, name: string)
----@param icon UnityEngine.UIElements.Background
----@param name string
-function UnityEngine.UIElements.ButtonStripField:AddButton(icon, name) end
----@param newValue number
-function UnityEngine.UIElements.ButtonStripField:SetValueWithoutNotify(newValue) end
-
----@class UnityEngine.UIElements.ButtonStripField.UxmlSerializedData : UnityEngine.UIElements.BaseField.UxmlSerializedData
-UnityEngine.UIElements.ButtonStripField.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.ButtonStripField.UxmlSerializedData UnityEngine.UIElements.ButtonStripField.UxmlSerializedData
-CS.UnityEngine.UIElements.ButtonStripField.UxmlSerializedData = UnityEngine.UIElements.ButtonStripField.UxmlSerializedData
-
----@return UnityEngine.UIElements.ButtonStripField.UxmlSerializedData
-function UnityEngine.UIElements.ButtonStripField.UxmlSerializedData.New() end
-function UnityEngine.UIElements.ButtonStripField.UxmlSerializedData.Register() end
----@return System.Object
-function UnityEngine.UIElements.ButtonStripField.UxmlSerializedData:CreateInstance() end
-
----@class UnityEngine.UIElements.ButtonStripField.UxmlFactory : UnityEngine.UIElements.UxmlFactory
-UnityEngine.UIElements.ButtonStripField.UxmlFactory = {}
----@alias CS.UnityEngine.UIElements.ButtonStripField.UxmlFactory UnityEngine.UIElements.ButtonStripField.UxmlFactory
-CS.UnityEngine.UIElements.ButtonStripField.UxmlFactory = UnityEngine.UIElements.ButtonStripField.UxmlFactory
-
----@return UnityEngine.UIElements.ButtonStripField.UxmlFactory
-function UnityEngine.UIElements.ButtonStripField.UxmlFactory.New() end
-
----@class UnityEngine.UIElements.ButtonStripField.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
-UnityEngine.UIElements.ButtonStripField.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.ButtonStripField.UxmlTraits UnityEngine.UIElements.ButtonStripField.UxmlTraits
-CS.UnityEngine.UIElements.ButtonStripField.UxmlTraits = UnityEngine.UIElements.ButtonStripField.UxmlTraits
-
----@return UnityEngine.UIElements.ButtonStripField.UxmlTraits
-function UnityEngine.UIElements.ButtonStripField.UxmlTraits.New() end
-
----@class UnityEngine.UIElements.RectField : UnityEngine.UIElements.BaseCompositeField
----@field ussClassName string
----@field labelUssClassName string
----@field inputUssClassName string
-UnityEngine.UIElements.RectField = {}
----@alias CS.UnityEngine.UIElements.RectField UnityEngine.UIElements.RectField
-CS.UnityEngine.UIElements.RectField = UnityEngine.UIElements.RectField
-
----@overload fun() : UnityEngine.UIElements.RectField
----@param label string
----@return UnityEngine.UIElements.RectField
-function UnityEngine.UIElements.RectField.New(label) end
-
----@class UnityEngine.UIElements.RectField.UxmlSerializedData : UnityEngine.UIElements.BaseCompositeField.UxmlSerializedData
-UnityEngine.UIElements.RectField.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.RectField.UxmlSerializedData UnityEngine.UIElements.RectField.UxmlSerializedData
-CS.UnityEngine.UIElements.RectField.UxmlSerializedData = UnityEngine.UIElements.RectField.UxmlSerializedData
-
----@return UnityEngine.UIElements.RectField.UxmlSerializedData
-function UnityEngine.UIElements.RectField.UxmlSerializedData.New() end
-function UnityEngine.UIElements.RectField.UxmlSerializedData.Register() end
----@return System.Object
-function UnityEngine.UIElements.RectField.UxmlSerializedData:CreateInstance() end
-
----@class UnityEngine.UIElements.RectField.UxmlFactory : UnityEngine.UIElements.UxmlFactory
-UnityEngine.UIElements.RectField.UxmlFactory = {}
----@alias CS.UnityEngine.UIElements.RectField.UxmlFactory UnityEngine.UIElements.RectField.UxmlFactory
-CS.UnityEngine.UIElements.RectField.UxmlFactory = UnityEngine.UIElements.RectField.UxmlFactory
-
----@return UnityEngine.UIElements.RectField.UxmlFactory
-function UnityEngine.UIElements.RectField.UxmlFactory.New() end
-
----@class UnityEngine.UIElements.RectField.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
-UnityEngine.UIElements.RectField.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.RectField.UxmlTraits UnityEngine.UIElements.RectField.UxmlTraits
-CS.UnityEngine.UIElements.RectField.UxmlTraits = UnityEngine.UIElements.RectField.UxmlTraits
-
----@return UnityEngine.UIElements.RectField.UxmlTraits
-function UnityEngine.UIElements.RectField.UxmlTraits.New() end
----@param ve UnityEngine.UIElements.VisualElement
----@param bag UnityEngine.UIElements.IUxmlAttributes
----@param cc UnityEngine.UIElements.CreationContext
-function UnityEngine.UIElements.RectField.UxmlTraits:Init(ve, bag, cc) end
-
----@class UnityEngine.UIElements.RectIntField : UnityEngine.UIElements.BaseCompositeField
----@field ussClassName string
----@field labelUssClassName string
----@field inputUssClassName string
-UnityEngine.UIElements.RectIntField = {}
----@alias CS.UnityEngine.UIElements.RectIntField UnityEngine.UIElements.RectIntField
-CS.UnityEngine.UIElements.RectIntField = UnityEngine.UIElements.RectIntField
-
----@overload fun() : UnityEngine.UIElements.RectIntField
----@param label string
----@return UnityEngine.UIElements.RectIntField
-function UnityEngine.UIElements.RectIntField.New(label) end
-
----@class UnityEngine.UIElements.RectIntField.UxmlSerializedData : UnityEngine.UIElements.BaseCompositeField.UxmlSerializedData
-UnityEngine.UIElements.RectIntField.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.RectIntField.UxmlSerializedData UnityEngine.UIElements.RectIntField.UxmlSerializedData
-CS.UnityEngine.UIElements.RectIntField.UxmlSerializedData = UnityEngine.UIElements.RectIntField.UxmlSerializedData
-
----@return UnityEngine.UIElements.RectIntField.UxmlSerializedData
-function UnityEngine.UIElements.RectIntField.UxmlSerializedData.New() end
-function UnityEngine.UIElements.RectIntField.UxmlSerializedData.Register() end
----@return System.Object
-function UnityEngine.UIElements.RectIntField.UxmlSerializedData:CreateInstance() end
-
----@class UnityEngine.UIElements.RectIntField.UxmlFactory : UnityEngine.UIElements.UxmlFactory
-UnityEngine.UIElements.RectIntField.UxmlFactory = {}
----@alias CS.UnityEngine.UIElements.RectIntField.UxmlFactory UnityEngine.UIElements.RectIntField.UxmlFactory
-CS.UnityEngine.UIElements.RectIntField.UxmlFactory = UnityEngine.UIElements.RectIntField.UxmlFactory
-
----@return UnityEngine.UIElements.RectIntField.UxmlFactory
-function UnityEngine.UIElements.RectIntField.UxmlFactory.New() end
-
----@class UnityEngine.UIElements.RectIntField.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
-UnityEngine.UIElements.RectIntField.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.RectIntField.UxmlTraits UnityEngine.UIElements.RectIntField.UxmlTraits
-CS.UnityEngine.UIElements.RectIntField.UxmlTraits = UnityEngine.UIElements.RectIntField.UxmlTraits
-
----@return UnityEngine.UIElements.RectIntField.UxmlTraits
-function UnityEngine.UIElements.RectIntField.UxmlTraits.New() end
----@param ve UnityEngine.UIElements.VisualElement
----@param bag UnityEngine.UIElements.IUxmlAttributes
----@param cc UnityEngine.UIElements.CreationContext
-function UnityEngine.UIElements.RectIntField.UxmlTraits:Init(ve, bag, cc) end
-
----@class UnityEngine.UIElements.Vector2Field : UnityEngine.UIElements.BaseCompositeField
----@field ussClassName string
----@field labelUssClassName string
----@field inputUssClassName string
-UnityEngine.UIElements.Vector2Field = {}
----@alias CS.UnityEngine.UIElements.Vector2Field UnityEngine.UIElements.Vector2Field
-CS.UnityEngine.UIElements.Vector2Field = UnityEngine.UIElements.Vector2Field
-
----@overload fun() : UnityEngine.UIElements.Vector2Field
----@param label string
----@return UnityEngine.UIElements.Vector2Field
-function UnityEngine.UIElements.Vector2Field.New(label) end
-
----@class UnityEngine.UIElements.Vector2Field.UxmlSerializedData : UnityEngine.UIElements.BaseCompositeField.UxmlSerializedData
-UnityEngine.UIElements.Vector2Field.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.Vector2Field.UxmlSerializedData UnityEngine.UIElements.Vector2Field.UxmlSerializedData
-CS.UnityEngine.UIElements.Vector2Field.UxmlSerializedData = UnityEngine.UIElements.Vector2Field.UxmlSerializedData
-
----@return UnityEngine.UIElements.Vector2Field.UxmlSerializedData
-function UnityEngine.UIElements.Vector2Field.UxmlSerializedData.New() end
-function UnityEngine.UIElements.Vector2Field.UxmlSerializedData.Register() end
----@return System.Object
-function UnityEngine.UIElements.Vector2Field.UxmlSerializedData:CreateInstance() end
-
----@class UnityEngine.UIElements.Vector2Field.UxmlFactory : UnityEngine.UIElements.UxmlFactory
-UnityEngine.UIElements.Vector2Field.UxmlFactory = {}
----@alias CS.UnityEngine.UIElements.Vector2Field.UxmlFactory UnityEngine.UIElements.Vector2Field.UxmlFactory
-CS.UnityEngine.UIElements.Vector2Field.UxmlFactory = UnityEngine.UIElements.Vector2Field.UxmlFactory
-
----@return UnityEngine.UIElements.Vector2Field.UxmlFactory
-function UnityEngine.UIElements.Vector2Field.UxmlFactory.New() end
-
----@class UnityEngine.UIElements.Vector2Field.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
-UnityEngine.UIElements.Vector2Field.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.Vector2Field.UxmlTraits UnityEngine.UIElements.Vector2Field.UxmlTraits
-CS.UnityEngine.UIElements.Vector2Field.UxmlTraits = UnityEngine.UIElements.Vector2Field.UxmlTraits
-
----@return UnityEngine.UIElements.Vector2Field.UxmlTraits
-function UnityEngine.UIElements.Vector2Field.UxmlTraits.New() end
----@param ve UnityEngine.UIElements.VisualElement
----@param bag UnityEngine.UIElements.IUxmlAttributes
----@param cc UnityEngine.UIElements.CreationContext
-function UnityEngine.UIElements.Vector2Field.UxmlTraits:Init(ve, bag, cc) end
-
----@class UnityEngine.UIElements.Vector3Field : UnityEngine.UIElements.BaseCompositeField
----@field ussClassName string
----@field labelUssClassName string
----@field inputUssClassName string
-UnityEngine.UIElements.Vector3Field = {}
----@alias CS.UnityEngine.UIElements.Vector3Field UnityEngine.UIElements.Vector3Field
-CS.UnityEngine.UIElements.Vector3Field = UnityEngine.UIElements.Vector3Field
-
----@overload fun() : UnityEngine.UIElements.Vector3Field
----@param label string
----@return UnityEngine.UIElements.Vector3Field
-function UnityEngine.UIElements.Vector3Field.New(label) end
-
----@class UnityEngine.UIElements.Vector3Field.UxmlSerializedData : UnityEngine.UIElements.BaseCompositeField.UxmlSerializedData
-UnityEngine.UIElements.Vector3Field.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.Vector3Field.UxmlSerializedData UnityEngine.UIElements.Vector3Field.UxmlSerializedData
-CS.UnityEngine.UIElements.Vector3Field.UxmlSerializedData = UnityEngine.UIElements.Vector3Field.UxmlSerializedData
-
----@return UnityEngine.UIElements.Vector3Field.UxmlSerializedData
-function UnityEngine.UIElements.Vector3Field.UxmlSerializedData.New() end
-function UnityEngine.UIElements.Vector3Field.UxmlSerializedData.Register() end
----@return System.Object
-function UnityEngine.UIElements.Vector3Field.UxmlSerializedData:CreateInstance() end
-
----@class UnityEngine.UIElements.Vector3Field.UxmlFactory : UnityEngine.UIElements.UxmlFactory
-UnityEngine.UIElements.Vector3Field.UxmlFactory = {}
----@alias CS.UnityEngine.UIElements.Vector3Field.UxmlFactory UnityEngine.UIElements.Vector3Field.UxmlFactory
-CS.UnityEngine.UIElements.Vector3Field.UxmlFactory = UnityEngine.UIElements.Vector3Field.UxmlFactory
-
----@return UnityEngine.UIElements.Vector3Field.UxmlFactory
-function UnityEngine.UIElements.Vector3Field.UxmlFactory.New() end
-
----@class UnityEngine.UIElements.Vector3Field.UxmlTraits : UnityEngine.UIElements.BaseField.UxmlTraits
-UnityEngine.UIElements.Vector3Field.UxmlTraits = {}
----@alias CS.UnityEngine.UIElements.Vector3Field.UxmlTraits UnityEngine.UIElements.Vector3Field.UxmlTraits
-CS.UnityEngine.UIElements.Vector3Field.UxmlTraits = UnityEngine.UIElements.Vector3Field.UxmlTraits
-
----@return UnityEngine.UIElements.Vector3Field.UxmlTraits
-function UnityEngine.UIElements.Vector3Field.UxmlTraits.New() end
----@param ve UnityEngine.UIElements.VisualElement
----@param bag UnityEngine.UIElements.IUxmlAttributes
----@param cc UnityEngine.UIElements.CreationContext
-function UnityEngine.UIElements.Vector3Field.UxmlTraits:Init(ve, bag, cc) end
-
----@class UnityEngine.UIElements.Vector4Field : UnityEngine.UIElements.BaseCompositeField
----@field ussClassName string
----@field labelUssClassName string
----@field inputUssClassName string
-UnityEngine.UIElements.Vector4Field = {}
----@alias CS.UnityEngine.UIElements.Vector4Field UnityEngine.UIElements.Vector4Field
-CS.UnityEngine.UIElements.Vector4Field = UnityEngine.UIElements.Vector4Field
-
----@overload fun() : UnityEngine.UIElements.Vector4Field
----@param label string
----@return UnityEngine.UIElements.Vector4Field
-function UnityEngine.UIElements.Vector4Field.New(label) end
-
----@class UnityEngine.UIElements.Vector4Field.UxmlSerializedData : UnityEngine.UIElements.BaseCompositeField.UxmlSerializedData
-UnityEngine.UIElements.Vector4Field.UxmlSerializedData = {}
----@alias CS.UnityEngine.UIElements.Vector4Field.UxmlSerializedData UnityEngine.UIElements.Vector4Field.UxmlSerializedData
-CS.UnityEngine.UIElements.Vector4Field.UxmlSerializedData = UnityEngine.UIElements.Vector4Field.UxmlSerializedData

@@ -18,6 +18,11 @@ UnityEngine = {}
 ---@alias CS.UnityEngine UnityEngine
 CS.UnityEngine = {}
 
+---@class DG
+DG = {}
+---@alias CS.DG DG
+CS.DG = {}
+
 ---@class ShellSoft
 ShellSoft = {}
 ---@alias CS.ShellSoft ShellSoft

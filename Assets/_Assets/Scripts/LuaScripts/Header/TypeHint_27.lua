@@ -1,5 +1,3174 @@
 ---@meta
 
+
+---@class UnityEngine.Rendering.Universal.ProjectedTransform.PositionHandleParam.Orientation
+---@field Signed UnityEngine.Rendering.Universal.ProjectedTransform.PositionHandleParam.Orientation
+---@field Camera UnityEngine.Rendering.Universal.ProjectedTransform.PositionHandleParam.Orientation
+UnityEngine.Rendering.Universal.ProjectedTransform.PositionHandleParam.Orientation = {}
+---@alias CS.UnityEngine.Rendering.Universal.ProjectedTransform.PositionHandleParam.Orientation UnityEngine.Rendering.Universal.ProjectedTransform.PositionHandleParam.Orientation
+CS.UnityEngine.Rendering.Universal.ProjectedTransform.PositionHandleParam.Orientation = UnityEngine.Rendering.Universal.ProjectedTransform.PositionHandleParam.Orientation
+
+
+---@class FullScreenPassRendererFeature_OldGUID : UnityEngine.Rendering.Universal.FullScreenPassRendererFeature
+FullScreenPassRendererFeature_OldGUID = {}
+---@alias CS.FullScreenPassRendererFeature_OldGUID FullScreenPassRendererFeature_OldGUID
+CS.FullScreenPassRendererFeature_OldGUID = FullScreenPassRendererFeature_OldGUID
+
+---@return FullScreenPassRendererFeature_OldGUID
+function FullScreenPassRendererFeature_OldGUID.New() end
+
+---@class OnTilePostProcessFeature : UnityEngine.Rendering.Universal.ScriptableRendererFeature
+OnTilePostProcessFeature = {}
+---@alias CS.OnTilePostProcessFeature OnTilePostProcessFeature
+CS.OnTilePostProcessFeature = OnTilePostProcessFeature
+
+---@return OnTilePostProcessFeature
+function OnTilePostProcessFeature.New() end
+function OnTilePostProcessFeature:Create() end
+---@param renderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@param ref_renderingData UnityEngine.Rendering.Universal.RenderingData
+---@return ,UnityEngine.Rendering.Universal.RenderingData
+function OnTilePostProcessFeature:AddRenderPasses(renderer, ref_renderingData) end
+
+---@class OnTilePostProcessPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+OnTilePostProcessPass = {}
+---@alias CS.OnTilePostProcessPass OnTilePostProcessPass
+CS.OnTilePostProcessPass = OnTilePostProcessPass
+
+function OnTilePostProcessPass:Dispose() end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function OnTilePostProcessPass:RecordRenderGraph(renderGraph, frameData) end
+
+---@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
+UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
+---@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
+CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
+
+---@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
+function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
+
+---@class UnityEngine.Rendering.RenderGraphGraphicsAutomatedTests : System.Object
+---@field forceRenderGraphState System.Nullable
+UnityEngine.Rendering.RenderGraphGraphicsAutomatedTests = {}
+---@alias CS.UnityEngine.Rendering.RenderGraphGraphicsAutomatedTests UnityEngine.Rendering.RenderGraphGraphicsAutomatedTests
+CS.UnityEngine.Rendering.RenderGraphGraphicsAutomatedTests = UnityEngine.Rendering.RenderGraphGraphicsAutomatedTests
+
+
+---@class UnityEngine.Rendering.URPReflectionProbeSettings : System.Object
+---@field UseReflectionProbeRotation boolean
+UnityEngine.Rendering.URPReflectionProbeSettings = {}
+---@alias CS.UnityEngine.Rendering.URPReflectionProbeSettings UnityEngine.Rendering.URPReflectionProbeSettings
+CS.UnityEngine.Rendering.URPReflectionProbeSettings = UnityEngine.Rendering.URPReflectionProbeSettings
+
+---@return UnityEngine.Rendering.URPReflectionProbeSettings
+function UnityEngine.Rendering.URPReflectionProbeSettings.New() end
+
+---@class UnityEngine.Rendering.Universal.ComponentUtility : System.Object
+UnityEngine.Rendering.Universal.ComponentUtility = {}
+---@alias CS.UnityEngine.Rendering.Universal.ComponentUtility UnityEngine.Rendering.Universal.ComponentUtility
+CS.UnityEngine.Rendering.Universal.ComponentUtility = UnityEngine.Rendering.Universal.ComponentUtility
+
+---@param camera UnityEngine.Camera
+---@return boolean
+function UnityEngine.Rendering.Universal.ComponentUtility.IsUniversalCamera(camera) end
+---@param light UnityEngine.Light
+---@return boolean
+function UnityEngine.Rendering.Universal.ComponentUtility.IsUniversalLight(light) end
+
+---@class UnityEngine.Rendering.Universal.PostProcessData : UnityEngine.ScriptableObject
+---@field shaders UnityEngine.Rendering.Universal.PostProcessData.ShaderResources
+---@field textures UnityEngine.Rendering.Universal.PostProcessData.TextureResources
+UnityEngine.Rendering.Universal.PostProcessData = {}
+---@alias CS.UnityEngine.Rendering.Universal.PostProcessData UnityEngine.Rendering.Universal.PostProcessData
+CS.UnityEngine.Rendering.Universal.PostProcessData = UnityEngine.Rendering.Universal.PostProcessData
+
+---@return UnityEngine.Rendering.Universal.PostProcessData
+function UnityEngine.Rendering.Universal.PostProcessData.New() end
+
+---@class UnityEngine.Rendering.Universal.StencilStateData : System.Object
+---@field overrideStencilState boolean
+---@field stencilReference number
+---@field stencilCompareFunction UnityEngine.Rendering.CompareFunction
+---@field passOperation UnityEngine.Rendering.StencilOp
+---@field failOperation UnityEngine.Rendering.StencilOp
+---@field zFailOperation UnityEngine.Rendering.StencilOp
+UnityEngine.Rendering.Universal.StencilStateData = {}
+---@alias CS.UnityEngine.Rendering.Universal.StencilStateData UnityEngine.Rendering.Universal.StencilStateData
+CS.UnityEngine.Rendering.Universal.StencilStateData = UnityEngine.Rendering.Universal.StencilStateData
+
+---@return UnityEngine.Rendering.Universal.StencilStateData
+function UnityEngine.Rendering.Universal.StencilStateData.New() end
+
+---@class UnityEngine.Rendering.Universal.ShadowQuality
+---@field Disabled UnityEngine.Rendering.Universal.ShadowQuality
+---@field HardShadows UnityEngine.Rendering.Universal.ShadowQuality
+---@field SoftShadows UnityEngine.Rendering.Universal.ShadowQuality
+UnityEngine.Rendering.Universal.ShadowQuality = {}
+---@alias CS.UnityEngine.Rendering.Universal.ShadowQuality UnityEngine.Rendering.Universal.ShadowQuality
+CS.UnityEngine.Rendering.Universal.ShadowQuality = UnityEngine.Rendering.Universal.ShadowQuality
+
+
+---@class UnityEngine.Rendering.Universal.SoftShadowQuality
+---@field UsePipelineSettings UnityEngine.Rendering.Universal.SoftShadowQuality
+---@field Low UnityEngine.Rendering.Universal.SoftShadowQuality
+---@field Medium UnityEngine.Rendering.Universal.SoftShadowQuality
+---@field High UnityEngine.Rendering.Universal.SoftShadowQuality
+UnityEngine.Rendering.Universal.SoftShadowQuality = {}
+---@alias CS.UnityEngine.Rendering.Universal.SoftShadowQuality UnityEngine.Rendering.Universal.SoftShadowQuality
+CS.UnityEngine.Rendering.Universal.SoftShadowQuality = UnityEngine.Rendering.Universal.SoftShadowQuality
+
+
+---@class UnityEngine.Rendering.Universal.ShadowResolution
+---@field _256 UnityEngine.Rendering.Universal.ShadowResolution
+---@field _512 UnityEngine.Rendering.Universal.ShadowResolution
+---@field _1024 UnityEngine.Rendering.Universal.ShadowResolution
+---@field _2048 UnityEngine.Rendering.Universal.ShadowResolution
+---@field _4096 UnityEngine.Rendering.Universal.ShadowResolution
+---@field _8192 UnityEngine.Rendering.Universal.ShadowResolution
+UnityEngine.Rendering.Universal.ShadowResolution = {}
+---@alias CS.UnityEngine.Rendering.Universal.ShadowResolution UnityEngine.Rendering.Universal.ShadowResolution
+CS.UnityEngine.Rendering.Universal.ShadowResolution = UnityEngine.Rendering.Universal.ShadowResolution
+
+
+---@class UnityEngine.Rendering.Universal.LightCookieResolution
+---@field _256 UnityEngine.Rendering.Universal.LightCookieResolution
+---@field _512 UnityEngine.Rendering.Universal.LightCookieResolution
+---@field _1024 UnityEngine.Rendering.Universal.LightCookieResolution
+---@field _2048 UnityEngine.Rendering.Universal.LightCookieResolution
+---@field _4096 UnityEngine.Rendering.Universal.LightCookieResolution
+UnityEngine.Rendering.Universal.LightCookieResolution = {}
+---@alias CS.UnityEngine.Rendering.Universal.LightCookieResolution UnityEngine.Rendering.Universal.LightCookieResolution
+CS.UnityEngine.Rendering.Universal.LightCookieResolution = UnityEngine.Rendering.Universal.LightCookieResolution
+
+
+---@class UnityEngine.Rendering.Universal.LightCookieFormat
+---@field GrayscaleLow UnityEngine.Rendering.Universal.LightCookieFormat
+---@field GrayscaleHigh UnityEngine.Rendering.Universal.LightCookieFormat
+---@field ColorLow UnityEngine.Rendering.Universal.LightCookieFormat
+---@field ColorHigh UnityEngine.Rendering.Universal.LightCookieFormat
+---@field ColorHDR UnityEngine.Rendering.Universal.LightCookieFormat
+UnityEngine.Rendering.Universal.LightCookieFormat = {}
+---@alias CS.UnityEngine.Rendering.Universal.LightCookieFormat UnityEngine.Rendering.Universal.LightCookieFormat
+CS.UnityEngine.Rendering.Universal.LightCookieFormat = UnityEngine.Rendering.Universal.LightCookieFormat
+
+
+---@class UnityEngine.Rendering.Universal.HDRColorBufferPrecision
+---@field _32Bits UnityEngine.Rendering.Universal.HDRColorBufferPrecision
+---@field _64Bits UnityEngine.Rendering.Universal.HDRColorBufferPrecision
+UnityEngine.Rendering.Universal.HDRColorBufferPrecision = {}
+---@alias CS.UnityEngine.Rendering.Universal.HDRColorBufferPrecision UnityEngine.Rendering.Universal.HDRColorBufferPrecision
+CS.UnityEngine.Rendering.Universal.HDRColorBufferPrecision = UnityEngine.Rendering.Universal.HDRColorBufferPrecision
+
+
+---@class UnityEngine.Rendering.Universal.MsaaQuality
+---@field Disabled UnityEngine.Rendering.Universal.MsaaQuality
+---@field _2x UnityEngine.Rendering.Universal.MsaaQuality
+---@field _4x UnityEngine.Rendering.Universal.MsaaQuality
+---@field _8x UnityEngine.Rendering.Universal.MsaaQuality
+UnityEngine.Rendering.Universal.MsaaQuality = {}
+---@alias CS.UnityEngine.Rendering.Universal.MsaaQuality UnityEngine.Rendering.Universal.MsaaQuality
+CS.UnityEngine.Rendering.Universal.MsaaQuality = UnityEngine.Rendering.Universal.MsaaQuality
+
+
+---@class UnityEngine.Rendering.Universal.Downsampling
+---@field None UnityEngine.Rendering.Universal.Downsampling
+---@field _2xBilinear UnityEngine.Rendering.Universal.Downsampling
+---@field _4xBox UnityEngine.Rendering.Universal.Downsampling
+---@field _4xBilinear UnityEngine.Rendering.Universal.Downsampling
+UnityEngine.Rendering.Universal.Downsampling = {}
+---@alias CS.UnityEngine.Rendering.Universal.Downsampling UnityEngine.Rendering.Universal.Downsampling
+CS.UnityEngine.Rendering.Universal.Downsampling = UnityEngine.Rendering.Universal.Downsampling
+
+
+---@class UnityEngine.Rendering.Universal.LightRenderingMode
+---@field Disabled UnityEngine.Rendering.Universal.LightRenderingMode
+---@field PerVertex UnityEngine.Rendering.Universal.LightRenderingMode
+---@field PerPixel UnityEngine.Rendering.Universal.LightRenderingMode
+UnityEngine.Rendering.Universal.LightRenderingMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.LightRenderingMode UnityEngine.Rendering.Universal.LightRenderingMode
+CS.UnityEngine.Rendering.Universal.LightRenderingMode = UnityEngine.Rendering.Universal.LightRenderingMode
+
+
+---@class UnityEngine.Rendering.Universal.PipelineDebugLevel
+---@field Disabled UnityEngine.Rendering.Universal.PipelineDebugLevel
+---@field Profiling UnityEngine.Rendering.Universal.PipelineDebugLevel
+UnityEngine.Rendering.Universal.PipelineDebugLevel = {}
+---@alias CS.UnityEngine.Rendering.Universal.PipelineDebugLevel UnityEngine.Rendering.Universal.PipelineDebugLevel
+CS.UnityEngine.Rendering.Universal.PipelineDebugLevel = UnityEngine.Rendering.Universal.PipelineDebugLevel
+
+
+---@class UnityEngine.Rendering.Universal.RendererType
+---@field Custom UnityEngine.Rendering.Universal.RendererType
+---@field UniversalRenderer UnityEngine.Rendering.Universal.RendererType
+---@field _2DRenderer UnityEngine.Rendering.Universal.RendererType
+UnityEngine.Rendering.Universal.RendererType = {}
+---@alias CS.UnityEngine.Rendering.Universal.RendererType UnityEngine.Rendering.Universal.RendererType
+CS.UnityEngine.Rendering.Universal.RendererType = UnityEngine.Rendering.Universal.RendererType
+
+
+---@class UnityEngine.Rendering.Universal.ColorGradingMode
+---@field LowDynamicRange UnityEngine.Rendering.Universal.ColorGradingMode
+---@field HighDynamicRange UnityEngine.Rendering.Universal.ColorGradingMode
+UnityEngine.Rendering.Universal.ColorGradingMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.ColorGradingMode UnityEngine.Rendering.Universal.ColorGradingMode
+CS.UnityEngine.Rendering.Universal.ColorGradingMode = UnityEngine.Rendering.Universal.ColorGradingMode
+
+
+---@class UnityEngine.Rendering.Universal.StoreActionsOptimization
+---@field Auto UnityEngine.Rendering.Universal.StoreActionsOptimization
+---@field Discard UnityEngine.Rendering.Universal.StoreActionsOptimization
+---@field Store UnityEngine.Rendering.Universal.StoreActionsOptimization
+UnityEngine.Rendering.Universal.StoreActionsOptimization = {}
+---@alias CS.UnityEngine.Rendering.Universal.StoreActionsOptimization UnityEngine.Rendering.Universal.StoreActionsOptimization
+CS.UnityEngine.Rendering.Universal.StoreActionsOptimization = UnityEngine.Rendering.Universal.StoreActionsOptimization
+
+
+---@class UnityEngine.Rendering.Universal.VolumeFrameworkUpdateMode
+---@field EveryFrame UnityEngine.Rendering.Universal.VolumeFrameworkUpdateMode
+---@field ViaScripting UnityEngine.Rendering.Universal.VolumeFrameworkUpdateMode
+---@field UsePipelineSettings UnityEngine.Rendering.Universal.VolumeFrameworkUpdateMode
+UnityEngine.Rendering.Universal.VolumeFrameworkUpdateMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.VolumeFrameworkUpdateMode UnityEngine.Rendering.Universal.VolumeFrameworkUpdateMode
+CS.UnityEngine.Rendering.Universal.VolumeFrameworkUpdateMode = UnityEngine.Rendering.Universal.VolumeFrameworkUpdateMode
+
+
+---@class UnityEngine.Rendering.Universal.UpscalingFilterSelection
+---@field Auto UnityEngine.Rendering.Universal.UpscalingFilterSelection
+---@field Linear UnityEngine.Rendering.Universal.UpscalingFilterSelection
+---@field Point UnityEngine.Rendering.Universal.UpscalingFilterSelection
+---@field FSR UnityEngine.Rendering.Universal.UpscalingFilterSelection
+---@field STP UnityEngine.Rendering.Universal.UpscalingFilterSelection
+UnityEngine.Rendering.Universal.UpscalingFilterSelection = {}
+---@alias CS.UnityEngine.Rendering.Universal.UpscalingFilterSelection UnityEngine.Rendering.Universal.UpscalingFilterSelection
+CS.UnityEngine.Rendering.Universal.UpscalingFilterSelection = UnityEngine.Rendering.Universal.UpscalingFilterSelection
+
+
+---@class UnityEngine.Rendering.Universal.LODCrossFadeDitheringType
+---@field BayerMatrix UnityEngine.Rendering.Universal.LODCrossFadeDitheringType
+---@field BlueNoise UnityEngine.Rendering.Universal.LODCrossFadeDitheringType
+---@field Stencil UnityEngine.Rendering.Universal.LODCrossFadeDitheringType
+UnityEngine.Rendering.Universal.LODCrossFadeDitheringType = {}
+---@alias CS.UnityEngine.Rendering.Universal.LODCrossFadeDitheringType UnityEngine.Rendering.Universal.LODCrossFadeDitheringType
+CS.UnityEngine.Rendering.Universal.LODCrossFadeDitheringType = UnityEngine.Rendering.Universal.LODCrossFadeDitheringType
+
+
+---@class UnityEngine.Rendering.Universal.LightProbeSystem
+---@field LegacyLightProbes UnityEngine.Rendering.Universal.LightProbeSystem
+---@field ProbeVolumes UnityEngine.Rendering.Universal.LightProbeSystem
+UnityEngine.Rendering.Universal.LightProbeSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.LightProbeSystem UnityEngine.Rendering.Universal.LightProbeSystem
+CS.UnityEngine.Rendering.Universal.LightProbeSystem = UnityEngine.Rendering.Universal.LightProbeSystem
+
+
+---@class UnityEngine.Rendering.Universal.ShEvalMode
+---@field Auto UnityEngine.Rendering.Universal.ShEvalMode
+---@field PerVertex UnityEngine.Rendering.Universal.ShEvalMode
+---@field Mixed UnityEngine.Rendering.Universal.ShEvalMode
+---@field PerPixel UnityEngine.Rendering.Universal.ShEvalMode
+UnityEngine.Rendering.Universal.ShEvalMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.ShEvalMode UnityEngine.Rendering.Universal.ShEvalMode
+CS.UnityEngine.Rendering.Universal.ShEvalMode = UnityEngine.Rendering.Universal.ShEvalMode
+
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset : UnityEngine.Rendering.RenderPipelineAsset
+---@field k_MinLutSize number
+---@field k_MaxLutSize number
+---@field AdditionalLightsDefaultShadowResolutionTierLow number
+---@field AdditionalLightsDefaultShadowResolutionTierMedium number
+---@field AdditionalLightsDefaultShadowResolutionTierHigh number
+---@field packagePath string
+---@field rendererDataList System.ReadOnlySpan
+---@field renderers System.ReadOnlySpan
+---@field isImmediateModeSupported boolean
+---@field scriptableRenderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@field supportsCameraDepthTexture boolean
+---@field supportsCameraOpaqueTexture boolean
+---@field opaqueDownsampling UnityEngine.Rendering.Universal.Downsampling
+---@field supportsTerrainHoles boolean
+---@field storeActionsOptimization UnityEngine.Rendering.Universal.StoreActionsOptimization
+---@field supportsHDR boolean
+---@field hdrColorBufferPrecision UnityEngine.Rendering.Universal.HDRColorBufferPrecision
+---@field msaaSampleCount number
+---@field renderScale number
+---@field enableLODCrossFade boolean
+---@field lodCrossFadeDitheringType UnityEngine.Rendering.Universal.LODCrossFadeDitheringType
+---@field upscalingFilter UnityEngine.Rendering.Universal.UpscalingFilterSelection
+---@field upscalerName string
+---@field fsrOverrideSharpness boolean
+---@field fsrSharpness number
+---@field shEvalMode UnityEngine.Rendering.Universal.ShEvalMode
+---@field lightProbeSystem UnityEngine.Rendering.Universal.LightProbeSystem
+---@field probeVolumeMemoryBudget UnityEngine.Rendering.ProbeVolumeTextureMemoryBudget
+---@field probeVolumeBlendingMemoryBudget UnityEngine.Rendering.ProbeVolumeBlendingTextureMemoryBudget
+---@field supportProbeVolumeGPUStreaming boolean
+---@field supportProbeVolumeDiskStreaming boolean
+---@field supportProbeVolumeScenarios boolean
+---@field supportProbeVolumeScenarioBlending boolean
+---@field probeVolumeSHBands UnityEngine.Rendering.ProbeVolumeSHBands
+---@field mainLightRenderingMode UnityEngine.Rendering.Universal.LightRenderingMode
+---@field supportsMainLightShadows boolean
+---@field mainLightShadowmapResolution number
+---@field additionalLightsRenderingMode UnityEngine.Rendering.Universal.LightRenderingMode
+---@field maxAdditionalLightsCount number
+---@field supportsAdditionalLightShadows boolean
+---@field additionalLightsShadowmapResolution number
+---@field additionalLightsShadowResolutionTierLow number
+---@field additionalLightsShadowResolutionTierMedium number
+---@field additionalLightsShadowResolutionTierHigh number
+---@field reflectionProbeBlending boolean
+---@field reflectionProbeBoxProjection boolean
+---@field reflectionProbeAtlas boolean
+---@field shadowDistance number
+---@field shadowCascadeCount number
+---@field cascade2Split number
+---@field cascade3Split UnityEngine.Vector2
+---@field cascade4Split UnityEngine.Vector3
+---@field cascadeBorder number
+---@field shadowDepthBias number
+---@field shadowNormalBias number
+---@field supportsSoftShadows boolean
+---@field supportsDynamicBatching boolean
+---@field supportsMixedLighting boolean
+---@field supportsLightCookies boolean
+---@field useRenderingLayers boolean
+---@field volumeFrameworkUpdateMode UnityEngine.Rendering.Universal.VolumeFrameworkUpdateMode
+---@field volumeProfile UnityEngine.Rendering.VolumeProfile
+---@field useSRPBatcher boolean
+---@field colorGradingMode UnityEngine.Rendering.Universal.ColorGradingMode
+---@field colorGradingLutSize number
+---@field allowPostProcessAlphaOutput boolean
+---@field useFastSRGBLinearConversion boolean
+---@field supportScreenSpaceLensFlare boolean
+---@field supportDataDrivenLensFlare boolean
+---@field useAdaptivePerformance boolean
+---@field conservativeEnclosingSphere boolean
+---@field numIterationsEnclosingSphere number
+---@field renderPipelineShaderTag string
+---@field gpuResidentDrawerMode UnityEngine.Rendering.GPUResidentDrawerMode
+---@field gpuResidentDrawerEnableOcclusionCullingInCameras boolean
+---@field smallMeshScreenPercentage number
+---@field supportProbeVolume boolean
+---@field maxSHBands UnityEngine.Rendering.ProbeVolumeSHBands
+---@field isStpUsed boolean
+---@field defaultMaterial UnityEngine.Material
+---@field defaultParticleMaterial UnityEngine.Material
+---@field defaultLineMaterial UnityEngine.Material
+---@field defaultTerrainMaterial UnityEngine.Material
+---@field default2DMaterial UnityEngine.Material
+---@field default2DMaskMaterial UnityEngine.Material
+---@field decalMaterial UnityEngine.Material
+---@field defaultShader UnityEngine.Shader
+---@field terrainDetailLitShader UnityEngine.Shader
+---@field terrainDetailGrassShader UnityEngine.Shader
+---@field terrainDetailGrassBillboardShader UnityEngine.Shader
+---@field autodeskInteractiveShader UnityEngine.Shader
+---@field autodeskInteractiveTransparentShader UnityEngine.Shader
+---@field autodeskInteractiveMaskedShader UnityEngine.Shader
+---@field defaultSpeedTree7Shader UnityEngine.Shader
+---@field defaultSpeedTree8Shader UnityEngine.Shader
+---@field defaultSpeedTree9Shader UnityEngine.Shader
+UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset = UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.New() end
+---@param rendererData UnityEngine.Rendering.Universal.ScriptableRendererData
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.Create(rendererData) end
+---@param type UnityEngine.Rendering.Universal.RendererType
+---@return UnityEngine.Rendering.Universal.ScriptableRendererData
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset:LoadBuiltinRendererData(type) end
+---@param index number
+---@return UnityEngine.Rendering.Universal.ScriptableRenderer
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset:GetRenderer(index) end
+---@param out_message string
+---@param out_severity UnityEngine.LogType
+---@return boolean,string,UnityEngine.LogType
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset:IsGPUResidentDrawerSupportedBySRP(out_message, out_severity) end
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset:OnBeforeSerialize() end
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset:OnAfterDeserialize() end
+
+---@class UnityEngine.Rendering.Universal.DefaultMaterialType
+---@field Default UnityEngine.Rendering.Universal.DefaultMaterialType
+---@field Particle UnityEngine.Rendering.Universal.DefaultMaterialType
+---@field Terrain UnityEngine.Rendering.Universal.DefaultMaterialType
+---@field Sprite UnityEngine.Rendering.Universal.DefaultMaterialType
+---@field SpriteMask UnityEngine.Rendering.Universal.DefaultMaterialType
+---@field Decal UnityEngine.Rendering.Universal.DefaultMaterialType
+UnityEngine.Rendering.Universal.DefaultMaterialType = {}
+---@alias CS.UnityEngine.Rendering.Universal.DefaultMaterialType UnityEngine.Rendering.Universal.DefaultMaterialType
+CS.UnityEngine.Rendering.Universal.DefaultMaterialType = UnityEngine.Rendering.Universal.DefaultMaterialType
+
+
+---@class UnityEngine.Rendering.Universal.DebugDisplaySettingsCommon : System.Object
+---@field AreAnySettingsActive boolean
+UnityEngine.Rendering.Universal.DebugDisplaySettingsCommon = {}
+---@alias CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsCommon UnityEngine.Rendering.Universal.DebugDisplaySettingsCommon
+CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsCommon = UnityEngine.Rendering.Universal.DebugDisplaySettingsCommon
+
+---@return UnityEngine.Rendering.Universal.DebugDisplaySettingsCommon
+function UnityEngine.Rendering.Universal.DebugDisplaySettingsCommon.New() end
+---@return UnityEngine.Rendering.IDebugDisplaySettingsPanelDisposable
+function UnityEngine.Rendering.Universal.DebugDisplaySettingsCommon:CreatePanel() end
+
+---@class UnityEngine.Rendering.Universal.DebugDisplaySettingsLighting : System.Object
+---@field lightingDebugMode UnityEngine.Rendering.Universal.DebugLightingMode
+---@field lightingFeatureFlags UnityEngine.Rendering.Universal.DebugLightingFeatureFlags
+---@field hdrDebugMode UnityEngine.Rendering.Universal.HDRDebugMode
+---@field AreAnySettingsActive boolean
+---@field IsPostProcessingAllowed boolean
+---@field IsLightingActive boolean
+UnityEngine.Rendering.Universal.DebugDisplaySettingsLighting = {}
+---@alias CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsLighting UnityEngine.Rendering.Universal.DebugDisplaySettingsLighting
+CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsLighting = UnityEngine.Rendering.Universal.DebugDisplaySettingsLighting
+
+---@return UnityEngine.Rendering.Universal.DebugDisplaySettingsLighting
+function UnityEngine.Rendering.Universal.DebugDisplaySettingsLighting.New() end
+
+---@class UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial : System.Object
+---@field debugRenderingLayersColors UnityEngine.Vector4[]
+---@field albedoValidationPreset UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial.AlbedoDebugValidationPreset
+---@field albedoMinLuminance number
+---@field albedoMaxLuminance number
+---@field albedoHueTolerance number
+---@field albedoSaturationTolerance number
+---@field albedoCompareColor UnityEngine.Color
+---@field metallicMinValue number
+---@field metallicMaxValue number
+---@field renderingLayersSelectedLight boolean
+---@field selectedLightShadowLayerMask boolean
+---@field renderingLayerMask number
+---@field materialValidationMode UnityEngine.Rendering.Universal.DebugMaterialValidationMode
+---@field materialDebugMode UnityEngine.Rendering.Universal.DebugMaterialMode
+---@field vertexAttributeDebugMode UnityEngine.Rendering.Universal.DebugVertexAttributeMode
+---@field AreAnySettingsActive boolean
+---@field IsPostProcessingAllowed boolean
+---@field IsLightingActive boolean
+UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial = {}
+---@alias CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial
+CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial = UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial
+
+---@return UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial
+function UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial.New() end
+---@return number
+function UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial:GetDebugLightLayersMask() end
+
+---@class UnityEngine.Rendering.Universal.DebugWireframeMode
+---@field None UnityEngine.Rendering.Universal.DebugWireframeMode
+---@field Wireframe UnityEngine.Rendering.Universal.DebugWireframeMode
+---@field SolidWireframe UnityEngine.Rendering.Universal.DebugWireframeMode
+---@field ShadedWireframe UnityEngine.Rendering.Universal.DebugWireframeMode
+UnityEngine.Rendering.Universal.DebugWireframeMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.DebugWireframeMode UnityEngine.Rendering.Universal.DebugWireframeMode
+CS.UnityEngine.Rendering.Universal.DebugWireframeMode = UnityEngine.Rendering.Universal.DebugWireframeMode
+
+
+---@class UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering : System.Object
+---@field wireframeMode UnityEngine.Rendering.Universal.DebugWireframeMode
+---@field overdrawMode UnityEngine.Rendering.Universal.DebugOverdrawMode
+---@field maxOverdrawCount number
+---@field fullScreenDebugMode UnityEngine.Rendering.Universal.DebugFullScreenMode
+---@field fullScreenDebugModeOutputSizeScreenPercent number
+---@field mipInfoMode UnityEngine.Rendering.Universal.DebugMipInfoMode
+---@field mipDebugStatusShowCode boolean
+---@field mipDebugStatusMode UnityEngine.Rendering.Universal.DebugMipMapStatusMode
+---@field mipDebugOpacity number
+---@field mipDebugRecentUpdateCooldown number
+---@field mipDebugMaterialTextureSlot number
+---@field showInfoForAllSlots boolean
+---@field mipDebugTerrainTexture UnityEngine.Rendering.Universal.DebugMipMapModeTerrainTexture
+---@field postProcessingDebugMode UnityEngine.Rendering.Universal.DebugPostProcessingMode
+---@field enableMsaa boolean
+---@field enableHDR boolean
+---@field taaDebugMode UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.TaaDebugMode
+---@field validationMode UnityEngine.Rendering.Universal.DebugValidationMode
+---@field validationChannels UnityEngine.Rendering.Universal.PixelValidationChannels
+---@field validationRangeMin number
+---@field validationRangeMax number
+---@field AreAnySettingsActive boolean
+---@field IsPostProcessingAllowed boolean
+---@field IsLightingActive boolean
+UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering = {}
+---@alias CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering
+CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering = UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering
+
+---@return UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering
+function UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.New() end
+---@param ref_color UnityEngine.Color
+---@return boolean,UnityEngine.Color
+function UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering:TryGetScreenClearColor(ref_color) end
+
+---@class UnityEngine.Rendering.Universal.DebugHandler : System.Object
+---@field AreAnySettingsActive boolean
+---@field IsPostProcessingAllowed boolean
+---@field IsLightingActive boolean
+UnityEngine.Rendering.Universal.DebugHandler = {}
+---@alias CS.UnityEngine.Rendering.Universal.DebugHandler UnityEngine.Rendering.Universal.DebugHandler
+CS.UnityEngine.Rendering.Universal.DebugHandler = UnityEngine.Rendering.Universal.DebugHandler
+
+---@param ref_color UnityEngine.Color
+---@return boolean,UnityEngine.Color
+function UnityEngine.Rendering.Universal.DebugHandler:TryGetScreenClearColor(ref_color) end
+function UnityEngine.Rendering.Universal.DebugHandler:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.DebugRendererLists : System.Object
+UnityEngine.Rendering.Universal.DebugRendererLists = {}
+---@alias CS.UnityEngine.Rendering.Universal.DebugRendererLists UnityEngine.Rendering.Universal.DebugRendererLists
+CS.UnityEngine.Rendering.Universal.DebugRendererLists = UnityEngine.Rendering.Universal.DebugRendererLists
+
+---@param debugHandler UnityEngine.Rendering.Universal.DebugHandler
+---@param filteringSettings UnityEngine.Rendering.FilteringSettings
+---@return UnityEngine.Rendering.Universal.DebugRendererLists
+function UnityEngine.Rendering.Universal.DebugRendererLists.New(debugHandler, filteringSettings) end
+
+---@class UnityEngine.Rendering.Universal.DebugRenderSetup : System.Object
+UnityEngine.Rendering.Universal.DebugRenderSetup = {}
+---@alias CS.UnityEngine.Rendering.Universal.DebugRenderSetup UnityEngine.Rendering.Universal.DebugRenderSetup
+CS.UnityEngine.Rendering.Universal.DebugRenderSetup = UnityEngine.Rendering.Universal.DebugRenderSetup
+
+function UnityEngine.Rendering.Universal.DebugRenderSetup:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings : UnityEngine.Rendering.DebugDisplaySettings
+---@field materialSettings UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial
+---@field renderingSettings UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering
+---@field lightingSettings UnityEngine.Rendering.Universal.DebugDisplaySettingsLighting
+---@field volumeSettings UnityEngine.Rendering.DebugDisplaySettingsVolume
+---@field IsPostProcessingAllowed boolean
+---@field Instance UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings -- infered from UnityEngine.Rendering.DebugDisplaySettings`1[UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings]
+UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings = UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings.New() end
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplaySettings:Reset() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats : UnityEngine.Rendering.DebugDisplayStats
+UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats = UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats.New() end
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats:EnableProfilingRecorders() end
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats:DisableProfilingRecorders() end
+---@param list System.Collections.Generic.List
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats:RegisterDebugUI(list) end
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugDisplayStats:Update() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineVolumeDebugSettings : UnityEngine.Rendering.VolumeDebugSettings
+---@field selectedCameraVolumeStack UnityEngine.Rendering.VolumeStack
+---@field selectedCameraLayerMask UnityEngine.LayerMask
+---@field selectedCameraPosition UnityEngine.Vector3
+UnityEngine.Rendering.Universal.UniversalRenderPipelineVolumeDebugSettings = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineVolumeDebugSettings UnityEngine.Rendering.Universal.UniversalRenderPipelineVolumeDebugSettings
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineVolumeDebugSettings = UnityEngine.Rendering.Universal.UniversalRenderPipelineVolumeDebugSettings
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineVolumeDebugSettings
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineVolumeDebugSettings.New() end
+
+---@class UnityEngine.Rendering.Universal.DBufferCopyDepthPass : UnityEngine.Rendering.Universal.Internal.CopyDepthPass
+UnityEngine.Rendering.Universal.DBufferCopyDepthPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.DBufferCopyDepthPass UnityEngine.Rendering.Universal.DBufferCopyDepthPass
+CS.UnityEngine.Rendering.Universal.DBufferCopyDepthPass = UnityEngine.Rendering.Universal.DBufferCopyDepthPass
+
+---@param evt UnityEngine.Rendering.Universal.RenderPassEvent
+---@param copyDepthShader UnityEngine.Shader
+---@param shouldClear boolean
+---@param copyToDepth boolean
+---@param copyResolvedDepth boolean
+---@return UnityEngine.Rendering.Universal.DBufferCopyDepthPass
+function UnityEngine.Rendering.Universal.DBufferCopyDepthPass.New(evt, copyDepthShader, shouldClear, copyToDepth, copyResolvedDepth) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.Universal.DBufferCopyDepthPass:RecordRenderGraph(renderGraph, frameData) end
+
+---@class UnityEngine.Rendering.Universal.DecalDrawDBufferSystem : UnityEngine.Rendering.Universal.DecalDrawSystem
+UnityEngine.Rendering.Universal.DecalDrawDBufferSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalDrawDBufferSystem UnityEngine.Rendering.Universal.DecalDrawDBufferSystem
+CS.UnityEngine.Rendering.Universal.DecalDrawDBufferSystem = UnityEngine.Rendering.Universal.DecalDrawDBufferSystem
+
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@return UnityEngine.Rendering.Universal.DecalDrawDBufferSystem
+function UnityEngine.Rendering.Universal.DecalDrawDBufferSystem.New(entityManager) end
+
+---@class UnityEngine.Rendering.Universal.DBufferRenderPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.DBufferRenderPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.DBufferRenderPass UnityEngine.Rendering.Universal.DBufferRenderPass
+CS.UnityEngine.Rendering.Universal.DBufferRenderPass = UnityEngine.Rendering.Universal.DBufferRenderPass
+
+---@param dBufferClear UnityEngine.Material
+---@param settings UnityEngine.Rendering.Universal.DBufferSettings
+---@param drawSystem UnityEngine.Rendering.Universal.DecalDrawDBufferSystem
+---@param decalLayers boolean
+---@return UnityEngine.Rendering.Universal.DBufferRenderPass
+function UnityEngine.Rendering.Universal.DBufferRenderPass.New(dBufferClear, settings, drawSystem, decalLayers) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.Universal.DBufferRenderPass:RecordRenderGraph(renderGraph, frameData) end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.Universal.DBufferRenderPass:OnCameraCleanup(cmd) end
+
+---@class UnityEngine.Rendering.Universal.DecalDrawFowardEmissiveSystem : UnityEngine.Rendering.Universal.DecalDrawSystem
+UnityEngine.Rendering.Universal.DecalDrawFowardEmissiveSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalDrawFowardEmissiveSystem UnityEngine.Rendering.Universal.DecalDrawFowardEmissiveSystem
+CS.UnityEngine.Rendering.Universal.DecalDrawFowardEmissiveSystem = UnityEngine.Rendering.Universal.DecalDrawFowardEmissiveSystem
+
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@return UnityEngine.Rendering.Universal.DecalDrawFowardEmissiveSystem
+function UnityEngine.Rendering.Universal.DecalDrawFowardEmissiveSystem.New(entityManager) end
+
+---@class UnityEngine.Rendering.Universal.DecalForwardEmissivePass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.DecalForwardEmissivePass = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalForwardEmissivePass UnityEngine.Rendering.Universal.DecalForwardEmissivePass
+CS.UnityEngine.Rendering.Universal.DecalForwardEmissivePass = UnityEngine.Rendering.Universal.DecalForwardEmissivePass
+
+---@param drawSystem UnityEngine.Rendering.Universal.DecalDrawFowardEmissiveSystem
+---@return UnityEngine.Rendering.Universal.DecalForwardEmissivePass
+function UnityEngine.Rendering.Universal.DecalForwardEmissivePass.New(drawSystem) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.Universal.DecalForwardEmissivePass:RecordRenderGraph(renderGraph, frameData) end
+
+---@class UnityEngine.Rendering.Universal.DecalDrawErrorSystem : UnityEngine.Rendering.Universal.DecalDrawSystem
+UnityEngine.Rendering.Universal.DecalDrawErrorSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalDrawErrorSystem UnityEngine.Rendering.Universal.DecalDrawErrorSystem
+CS.UnityEngine.Rendering.Universal.DecalDrawErrorSystem = UnityEngine.Rendering.Universal.DecalDrawErrorSystem
+
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@param technique UnityEngine.Rendering.Universal.DecalTechnique
+---@return UnityEngine.Rendering.Universal.DecalDrawErrorSystem
+function UnityEngine.Rendering.Universal.DecalDrawErrorSystem.New(entityManager, technique) end
+
+---@class UnityEngine.Rendering.Universal.DecalPreviewPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.DecalPreviewPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalPreviewPass UnityEngine.Rendering.Universal.DecalPreviewPass
+CS.UnityEngine.Rendering.Universal.DecalPreviewPass = UnityEngine.Rendering.Universal.DecalPreviewPass
+
+---@return UnityEngine.Rendering.Universal.DecalPreviewPass
+function UnityEngine.Rendering.Universal.DecalPreviewPass.New() end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.Universal.DecalPreviewPass:RecordRenderGraph(renderGraph, frameData) end
+
+---@class UnityEngine.Rendering.Universal.DecalScaleMode
+---@field ScaleInvariant UnityEngine.Rendering.Universal.DecalScaleMode
+---@field InheritFromHierarchy UnityEngine.Rendering.Universal.DecalScaleMode
+UnityEngine.Rendering.Universal.DecalScaleMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalScaleMode UnityEngine.Rendering.Universal.DecalScaleMode
+CS.UnityEngine.Rendering.Universal.DecalScaleMode = UnityEngine.Rendering.Universal.DecalScaleMode
+
+
+---@class UnityEngine.Rendering.Universal.DecalProjector : UnityEngine.MonoBehaviour
+---@field material UnityEngine.Material
+---@field drawDistance number
+---@field fadeScale number
+---@field startAngleFade number
+---@field endAngleFade number
+---@field uvScale UnityEngine.Vector2
+---@field uvBias UnityEngine.Vector2
+---@field renderingLayerMask UnityEngine.RenderingLayerMask
+---@field scaleMode UnityEngine.Rendering.Universal.DecalScaleMode
+---@field pivot UnityEngine.Vector3
+---@field size UnityEngine.Vector3
+---@field fadeFactor number
+UnityEngine.Rendering.Universal.DecalProjector = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalProjector UnityEngine.Rendering.Universal.DecalProjector
+CS.UnityEngine.Rendering.Universal.DecalProjector = UnityEngine.Rendering.Universal.DecalProjector
+
+---@return boolean
+function UnityEngine.Rendering.Universal.DecalProjector:IsValid() end
+
+---@class UnityEngine.Rendering.Universal.DecalShaderPassNames : System.Object
+---@field DecalPreview string
+---@field DBufferProjector string
+---@field DecalProjectorForwardEmissive string
+---@field DecalScreenSpaceProjector string
+---@field DecalGBufferProjector string
+---@field DBufferMesh string
+---@field DecalMeshForwardEmissive string
+---@field DecalScreenSpaceMesh string
+---@field DecalGBufferMesh string
+---@field DBufferProjectorVFX string
+---@field DecalProjectorForwardEmissiveVFX string
+---@field DecalScreenSpaceProjectorVFX string
+---@field DecalGBufferProjectorVFX string
+UnityEngine.Rendering.Universal.DecalShaderPassNames = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalShaderPassNames UnityEngine.Rendering.Universal.DecalShaderPassNames
+CS.UnityEngine.Rendering.Universal.DecalShaderPassNames = UnityEngine.Rendering.Universal.DecalShaderPassNames
+
+
+---@class UnityEngine.Rendering.Universal.DecalChunk : System.Object
+---@field count number
+---@field capacity number
+---@field currentJobHandle Unity.Jobs.JobHandle
+UnityEngine.Rendering.Universal.DecalChunk = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalChunk UnityEngine.Rendering.Universal.DecalChunk
+CS.UnityEngine.Rendering.Universal.DecalChunk = UnityEngine.Rendering.Universal.DecalChunk
+
+function UnityEngine.Rendering.Universal.DecalChunk:Push() end
+---@param index number
+function UnityEngine.Rendering.Universal.DecalChunk:RemoveAtSwapBack(index) end
+---@param capacity number
+function UnityEngine.Rendering.Universal.DecalChunk:SetCapacity(capacity) end
+function UnityEngine.Rendering.Universal.DecalChunk:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.DecalSubDrawCall : System.ValueType
+---@field start number
+---@field end number
+---@field count number
+UnityEngine.Rendering.Universal.DecalSubDrawCall = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalSubDrawCall UnityEngine.Rendering.Universal.DecalSubDrawCall
+CS.UnityEngine.Rendering.Universal.DecalSubDrawCall = UnityEngine.Rendering.Universal.DecalSubDrawCall
+
+
+---@class UnityEngine.Rendering.Universal.DecalDrawCallChunk : UnityEngine.Rendering.Universal.DecalChunk
+---@field decalToWorlds Unity.Collections.NativeArray
+---@field normalToDecals Unity.Collections.NativeArray
+---@field renderingLayerMasks Unity.Collections.NativeArray
+---@field subCalls Unity.Collections.NativeArray
+---@field subCallCounts Unity.Collections.NativeArray
+---@field subCallCount number
+UnityEngine.Rendering.Universal.DecalDrawCallChunk = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalDrawCallChunk UnityEngine.Rendering.Universal.DecalDrawCallChunk
+CS.UnityEngine.Rendering.Universal.DecalDrawCallChunk = UnityEngine.Rendering.Universal.DecalDrawCallChunk
+
+---@return UnityEngine.Rendering.Universal.DecalDrawCallChunk
+function UnityEngine.Rendering.Universal.DecalDrawCallChunk.New() end
+---@param entityIndex number
+function UnityEngine.Rendering.Universal.DecalDrawCallChunk:RemoveAtSwapBack(entityIndex) end
+---@param newCapacity number
+function UnityEngine.Rendering.Universal.DecalDrawCallChunk:SetCapacity(newCapacity) end
+function UnityEngine.Rendering.Universal.DecalDrawCallChunk:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem : System.Object
+---@field maxDrawDistance number
+UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem
+CS.UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem = UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem
+
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@param maxDrawDistance number
+---@return UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem
+function UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem.New(entityManager, maxDrawDistance) end
+function UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem:Execute() end
+
+---@class UnityEngine.Rendering.Universal.DecalDrawSystem : System.Object
+---@field overrideMaterial UnityEngine.Material
+UnityEngine.Rendering.Universal.DecalDrawSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalDrawSystem UnityEngine.Rendering.Universal.DecalDrawSystem
+CS.UnityEngine.Rendering.Universal.DecalDrawSystem = UnityEngine.Rendering.Universal.DecalDrawSystem
+
+---@param sampler string
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@return UnityEngine.Rendering.Universal.DecalDrawSystem
+function UnityEngine.Rendering.Universal.DecalDrawSystem.New(sampler, entityManager) end
+---@overload fun(self: UnityEngine.Rendering.Universal.DecalDrawSystem, cmd: UnityEngine.Rendering.CommandBuffer)
+---@param ref_cameraData UnityEngine.Rendering.Universal.CameraData
+---@return ,UnityEngine.Rendering.Universal.CameraData
+function UnityEngine.Rendering.Universal.DecalDrawSystem:Execute(ref_cameraData) end
+
+---@class UnityEngine.Rendering.Universal.DecalEntityIndexer : System.Object
+UnityEngine.Rendering.Universal.DecalEntityIndexer = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalEntityIndexer UnityEngine.Rendering.Universal.DecalEntityIndexer
+CS.UnityEngine.Rendering.Universal.DecalEntityIndexer = UnityEngine.Rendering.Universal.DecalEntityIndexer
+
+---@return UnityEngine.Rendering.Universal.DecalEntityIndexer
+function UnityEngine.Rendering.Universal.DecalEntityIndexer.New() end
+---@param decalEntity UnityEngine.Rendering.Universal.DecalEntity
+---@return boolean
+function UnityEngine.Rendering.Universal.DecalEntityIndexer:IsValid(decalEntity) end
+---@param arrayIndex number
+---@param chunkIndex number
+---@return UnityEngine.Rendering.Universal.DecalEntity
+function UnityEngine.Rendering.Universal.DecalEntityIndexer:CreateDecalEntity(arrayIndex, chunkIndex) end
+---@param decalEntity UnityEngine.Rendering.Universal.DecalEntity
+function UnityEngine.Rendering.Universal.DecalEntityIndexer:DestroyDecalEntity(decalEntity) end
+---@param decalEntity UnityEngine.Rendering.Universal.DecalEntity
+---@return UnityEngine.Rendering.Universal.DecalEntityIndexer.DecalEntityItem
+function UnityEngine.Rendering.Universal.DecalEntityIndexer:GetItem(decalEntity) end
+---@param decalEntity UnityEngine.Rendering.Universal.DecalEntity
+---@param newArrayIndex number
+function UnityEngine.Rendering.Universal.DecalEntityIndexer:UpdateIndex(decalEntity, newArrayIndex) end
+---@param remaper System.Collections.Generic.List
+function UnityEngine.Rendering.Universal.DecalEntityIndexer:RemapChunkIndices(remaper) end
+function UnityEngine.Rendering.Universal.DecalEntityIndexer:Clear() end
+
+---@class UnityEngine.Rendering.Universal.DecalEntity : System.ValueType
+---@field index number
+---@field version number
+UnityEngine.Rendering.Universal.DecalEntity = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalEntity UnityEngine.Rendering.Universal.DecalEntity
+CS.UnityEngine.Rendering.Universal.DecalEntity = UnityEngine.Rendering.Universal.DecalEntity
+
+
+---@class UnityEngine.Rendering.Universal.DecalEntityChunk : UnityEngine.Rendering.Universal.DecalChunk
+---@field material UnityEngine.Material
+---@field decalEntities Unity.Collections.NativeArray
+---@field decalProjectors UnityEngine.Rendering.Universal.DecalProjector[]
+---@field transformAccessArray UnityEngine.Jobs.TransformAccessArray
+UnityEngine.Rendering.Universal.DecalEntityChunk = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalEntityChunk UnityEngine.Rendering.Universal.DecalEntityChunk
+CS.UnityEngine.Rendering.Universal.DecalEntityChunk = UnityEngine.Rendering.Universal.DecalEntityChunk
+
+---@return UnityEngine.Rendering.Universal.DecalEntityChunk
+function UnityEngine.Rendering.Universal.DecalEntityChunk.New() end
+function UnityEngine.Rendering.Universal.DecalEntityChunk:Push() end
+---@param entityIndex number
+function UnityEngine.Rendering.Universal.DecalEntityChunk:RemoveAtSwapBack(entityIndex) end
+---@param newCapacity number
+function UnityEngine.Rendering.Universal.DecalEntityChunk:SetCapacity(newCapacity) end
+function UnityEngine.Rendering.Universal.DecalEntityChunk:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.DecalEntityManager : System.Object
+---@field entityChunks System.Collections.Generic.List
+---@field cachedChunks System.Collections.Generic.List
+---@field culledChunks System.Collections.Generic.List
+---@field drawCallChunks System.Collections.Generic.List
+---@field chunkCount number
+---@field errorMaterial UnityEngine.Material
+---@field decalProjectorMesh UnityEngine.Mesh
+UnityEngine.Rendering.Universal.DecalEntityManager = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalEntityManager UnityEngine.Rendering.Universal.DecalEntityManager
+CS.UnityEngine.Rendering.Universal.DecalEntityManager = UnityEngine.Rendering.Universal.DecalEntityManager
+
+---@return UnityEngine.Rendering.Universal.DecalEntityManager
+function UnityEngine.Rendering.Universal.DecalEntityManager.New() end
+---@param decalEntity UnityEngine.Rendering.Universal.DecalEntity
+---@return boolean
+function UnityEngine.Rendering.Universal.DecalEntityManager:IsValid(decalEntity) end
+---@param decalProjector UnityEngine.Rendering.Universal.DecalProjector
+---@return UnityEngine.Rendering.Universal.DecalEntity
+function UnityEngine.Rendering.Universal.DecalEntityManager:CreateDecalEntity(decalProjector) end
+function UnityEngine.Rendering.Universal.DecalEntityManager:UpdateAllDecalEntitiesData() end
+---@param decalEntity UnityEngine.Rendering.Universal.DecalEntity
+---@param decalProjector UnityEngine.Rendering.Universal.DecalProjector
+function UnityEngine.Rendering.Universal.DecalEntityManager:UpdateDecalEntityData(decalEntity, decalProjector) end
+---@param decalEntity UnityEngine.Rendering.Universal.DecalEntity
+function UnityEngine.Rendering.Universal.DecalEntityManager:DestroyDecalEntity(decalEntity) end
+function UnityEngine.Rendering.Universal.DecalEntityManager:Update() end
+function UnityEngine.Rendering.Universal.DecalEntityManager:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.DecalSkipCulledSystem : System.Object
+UnityEngine.Rendering.Universal.DecalSkipCulledSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalSkipCulledSystem UnityEngine.Rendering.Universal.DecalSkipCulledSystem
+CS.UnityEngine.Rendering.Universal.DecalSkipCulledSystem = UnityEngine.Rendering.Universal.DecalSkipCulledSystem
+
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@return UnityEngine.Rendering.Universal.DecalSkipCulledSystem
+function UnityEngine.Rendering.Universal.DecalSkipCulledSystem.New(entityManager) end
+---@param camera UnityEngine.Camera
+function UnityEngine.Rendering.Universal.DecalSkipCulledSystem:Execute(camera) end
+
+---@class UnityEngine.Rendering.Universal.DecalCachedChunk : UnityEngine.Rendering.Universal.DecalChunk
+---@field propertyBlock UnityEngine.MaterialPropertyBlock
+---@field passIndexDBuffer number
+---@field passIndexEmissive number
+---@field passIndexScreenSpace number
+---@field passIndexGBuffer number
+---@field drawOrder number
+---@field isCreated boolean
+---@field decalToWorlds Unity.Collections.NativeArray
+---@field normalToWorlds Unity.Collections.NativeArray
+---@field sizeOffsets Unity.Collections.NativeArray
+---@field drawDistances Unity.Collections.NativeArray
+---@field angleFades Unity.Collections.NativeArray
+---@field uvScaleBias Unity.Collections.NativeArray
+---@field layerMasks Unity.Collections.NativeArray
+---@field sceneLayerMasks Unity.Collections.NativeArray
+---@field fadeFactors Unity.Collections.NativeArray
+---@field boundingSpheres Unity.Collections.NativeArray
+---@field scaleModes Unity.Collections.NativeArray
+---@field renderingLayerMasks Unity.Collections.NativeArray
+---@field positions Unity.Collections.NativeArray
+---@field rotation Unity.Collections.NativeArray
+---@field scales Unity.Collections.NativeArray
+---@field dirty Unity.Collections.NativeArray
+---@field boundingSphereArray UnityEngine.BoundingSphere[]
+UnityEngine.Rendering.Universal.DecalCachedChunk = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalCachedChunk UnityEngine.Rendering.Universal.DecalCachedChunk
+CS.UnityEngine.Rendering.Universal.DecalCachedChunk = UnityEngine.Rendering.Universal.DecalCachedChunk
+
+---@return UnityEngine.Rendering.Universal.DecalCachedChunk
+function UnityEngine.Rendering.Universal.DecalCachedChunk.New() end
+---@param entityIndex number
+function UnityEngine.Rendering.Universal.DecalCachedChunk:RemoveAtSwapBack(entityIndex) end
+---@param newCapacity number
+function UnityEngine.Rendering.Universal.DecalCachedChunk:SetCapacity(newCapacity) end
+function UnityEngine.Rendering.Universal.DecalCachedChunk:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.DecalUpdateCachedSystem : System.Object
+UnityEngine.Rendering.Universal.DecalUpdateCachedSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalUpdateCachedSystem UnityEngine.Rendering.Universal.DecalUpdateCachedSystem
+CS.UnityEngine.Rendering.Universal.DecalUpdateCachedSystem = UnityEngine.Rendering.Universal.DecalUpdateCachedSystem
+
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@return UnityEngine.Rendering.Universal.DecalUpdateCachedSystem
+function UnityEngine.Rendering.Universal.DecalUpdateCachedSystem.New(entityManager) end
+function UnityEngine.Rendering.Universal.DecalUpdateCachedSystem:Execute() end
+
+---@class UnityEngine.Rendering.Universal.DecalUpdateCulledSystem : System.Object
+UnityEngine.Rendering.Universal.DecalUpdateCulledSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalUpdateCulledSystem UnityEngine.Rendering.Universal.DecalUpdateCulledSystem
+CS.UnityEngine.Rendering.Universal.DecalUpdateCulledSystem = UnityEngine.Rendering.Universal.DecalUpdateCulledSystem
+
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@return UnityEngine.Rendering.Universal.DecalUpdateCulledSystem
+function UnityEngine.Rendering.Universal.DecalUpdateCulledSystem.New(entityManager) end
+function UnityEngine.Rendering.Universal.DecalUpdateCulledSystem:Execute() end
+
+---@class UnityEngine.Rendering.Universal.DecalCulledChunk : UnityEngine.Rendering.Universal.DecalChunk
+---@field cameraPosition UnityEngine.Vector3
+---@field sceneCullingMask number
+---@field cullingMask number
+---@field cullingGroups UnityEngine.CullingGroup
+---@field visibleDecalIndexArray System.Int32[]
+---@field visibleDecalIndices Unity.Collections.NativeArray
+---@field visibleDecalCount number
+UnityEngine.Rendering.Universal.DecalCulledChunk = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalCulledChunk UnityEngine.Rendering.Universal.DecalCulledChunk
+CS.UnityEngine.Rendering.Universal.DecalCulledChunk = UnityEngine.Rendering.Universal.DecalCulledChunk
+
+---@return UnityEngine.Rendering.Universal.DecalCulledChunk
+function UnityEngine.Rendering.Universal.DecalCulledChunk.New() end
+---@param entityIndex number
+function UnityEngine.Rendering.Universal.DecalCulledChunk:RemoveAtSwapBack(entityIndex) end
+---@param newCapacity number
+function UnityEngine.Rendering.Universal.DecalCulledChunk:SetCapacity(newCapacity) end
+function UnityEngine.Rendering.Universal.DecalCulledChunk:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.DecalUpdateCullingGroupSystem : System.Object
+---@field boundingDistance number
+UnityEngine.Rendering.Universal.DecalUpdateCullingGroupSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalUpdateCullingGroupSystem UnityEngine.Rendering.Universal.DecalUpdateCullingGroupSystem
+CS.UnityEngine.Rendering.Universal.DecalUpdateCullingGroupSystem = UnityEngine.Rendering.Universal.DecalUpdateCullingGroupSystem
+
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@param drawDistance number
+---@return UnityEngine.Rendering.Universal.DecalUpdateCullingGroupSystem
+function UnityEngine.Rendering.Universal.DecalUpdateCullingGroupSystem.New(entityManager, drawDistance) end
+---@overload fun(self: UnityEngine.Rendering.Universal.DecalUpdateCullingGroupSystem, camera: UnityEngine.Camera)
+---@param cachedChunk UnityEngine.Rendering.Universal.DecalCachedChunk
+---@param culledChunk UnityEngine.Rendering.Universal.DecalCulledChunk
+---@param count number
+function UnityEngine.Rendering.Universal.DecalUpdateCullingGroupSystem:Execute(cachedChunk, culledChunk, count) end
+
+---@class UnityEngine.Rendering.Universal.DecalDrawGBufferSystem : UnityEngine.Rendering.Universal.DecalDrawSystem
+UnityEngine.Rendering.Universal.DecalDrawGBufferSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalDrawGBufferSystem UnityEngine.Rendering.Universal.DecalDrawGBufferSystem
+CS.UnityEngine.Rendering.Universal.DecalDrawGBufferSystem = UnityEngine.Rendering.Universal.DecalDrawGBufferSystem
+
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@return UnityEngine.Rendering.Universal.DecalDrawGBufferSystem
+function UnityEngine.Rendering.Universal.DecalDrawGBufferSystem.New(entityManager) end
+
+---@class UnityEngine.Rendering.Universal.DecalGBufferRenderPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.DecalGBufferRenderPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalGBufferRenderPass UnityEngine.Rendering.Universal.DecalGBufferRenderPass
+CS.UnityEngine.Rendering.Universal.DecalGBufferRenderPass = UnityEngine.Rendering.Universal.DecalGBufferRenderPass
+
+---@param settings UnityEngine.Rendering.Universal.DecalScreenSpaceSettings
+---@param drawSystem UnityEngine.Rendering.Universal.DecalDrawGBufferSystem
+---@param decalLayers boolean
+---@return UnityEngine.Rendering.Universal.DecalGBufferRenderPass
+function UnityEngine.Rendering.Universal.DecalGBufferRenderPass.New(settings, drawSystem, decalLayers) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.Universal.DecalGBufferRenderPass:RecordRenderGraph(renderGraph, frameData) end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.Universal.DecalGBufferRenderPass:OnCameraCleanup(cmd) end
+
+---@class UnityEngine.Rendering.Universal.DecalDrawScreenSpaceSystem : UnityEngine.Rendering.Universal.DecalDrawSystem
+UnityEngine.Rendering.Universal.DecalDrawScreenSpaceSystem = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalDrawScreenSpaceSystem UnityEngine.Rendering.Universal.DecalDrawScreenSpaceSystem
+CS.UnityEngine.Rendering.Universal.DecalDrawScreenSpaceSystem = UnityEngine.Rendering.Universal.DecalDrawScreenSpaceSystem
+
+---@param entityManager UnityEngine.Rendering.Universal.DecalEntityManager
+---@return UnityEngine.Rendering.Universal.DecalDrawScreenSpaceSystem
+function UnityEngine.Rendering.Universal.DecalDrawScreenSpaceSystem.New(entityManager) end
+
+---@class UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass
+CS.UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass = UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass
+
+---@param settings UnityEngine.Rendering.Universal.DecalScreenSpaceSettings
+---@param drawSystem UnityEngine.Rendering.Universal.DecalDrawScreenSpaceSystem
+---@param decalLayers boolean
+---@return UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass
+function UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass.New(settings, drawSystem, decalLayers) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass:RecordRenderGraph(renderGraph, frameData) end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass:OnCameraCleanup(cmd) end
+
+---@class UnityEngine.Rendering.Universal.ScriptableRenderPass : System.Object
+---@field renderPassEvent UnityEngine.Rendering.Universal.RenderPassEvent
+---@field input UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+---@field requiresIntermediateTexture boolean
+UnityEngine.Rendering.Universal.ScriptableRenderPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderPass UnityEngine.Rendering.Universal.ScriptableRenderPass
+CS.UnityEngine.Rendering.Universal.ScriptableRenderPass = UnityEngine.Rendering.Universal.ScriptableRenderPass
+
+---@return UnityEngine.Rendering.Universal.ScriptableRenderPass
+function UnityEngine.Rendering.Universal.ScriptableRenderPass.New() end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.Universal.ScriptableRenderPass:FrameCleanup(cmd) end
+---@param passInput UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+function UnityEngine.Rendering.Universal.ScriptableRenderPass:ConfigureInput(passInput) end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.Universal.ScriptableRenderPass:OnCameraCleanup(cmd) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.Universal.ScriptableRenderPass:RecordRenderGraph(renderGraph, frameData) end
+---@overload fun(self: UnityEngine.Rendering.Universal.ScriptableRenderPass, shaderTagId: UnityEngine.Rendering.ShaderTagId, ref_renderingData: UnityEngine.Rendering.Universal.RenderingData, sortingCriteria: UnityEngine.Rendering.SortingCriteria) : UnityEngine.Rendering.DrawingSettings, UnityEngine.Rendering.Universal.RenderingData
+---@overload fun(self: UnityEngine.Rendering.Universal.ScriptableRenderPass, shaderTagId: UnityEngine.Rendering.ShaderTagId, renderingData: UnityEngine.Rendering.Universal.UniversalRenderingData, cameraData: UnityEngine.Rendering.Universal.UniversalCameraData, lightData: UnityEngine.Rendering.Universal.UniversalLightData, sortingCriteria: UnityEngine.Rendering.SortingCriteria) : UnityEngine.Rendering.DrawingSettings
+---@overload fun(self: UnityEngine.Rendering.Universal.ScriptableRenderPass, shaderTagIdList: System.Collections.Generic.List, ref_renderingData: UnityEngine.Rendering.Universal.RenderingData, sortingCriteria: UnityEngine.Rendering.SortingCriteria) : UnityEngine.Rendering.DrawingSettings, UnityEngine.Rendering.Universal.RenderingData
+---@param shaderTagIdList System.Collections.Generic.List
+---@param renderingData UnityEngine.Rendering.Universal.UniversalRenderingData
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param lightData UnityEngine.Rendering.Universal.UniversalLightData
+---@param sortingCriteria UnityEngine.Rendering.SortingCriteria
+---@return UnityEngine.Rendering.DrawingSettings
+function UnityEngine.Rendering.Universal.ScriptableRenderPass:CreateDrawingSettings(shaderTagIdList, renderingData, cameraData, lightData, sortingCriteria) end
+
+---@class UnityEngine.Rendering.Universal.ShadowCascadesOption
+---@field NoCascades UnityEngine.Rendering.Universal.ShadowCascadesOption
+---@field TwoCascades UnityEngine.Rendering.Universal.ShadowCascadesOption
+---@field FourCascades UnityEngine.Rendering.Universal.ShadowCascadesOption
+UnityEngine.Rendering.Universal.ShadowCascadesOption = {}
+---@alias CS.UnityEngine.Rendering.Universal.ShadowCascadesOption UnityEngine.Rendering.Universal.ShadowCascadesOption
+CS.UnityEngine.Rendering.Universal.ShadowCascadesOption = UnityEngine.Rendering.Universal.ShadowCascadesOption
+
+
+---@class UnityEngine.Rendering.Universal.ShaderVariantLogLevel
+---@field Disabled UnityEngine.Rendering.Universal.ShaderVariantLogLevel
+---@field OnlyUniversalRPShaders UnityEngine.Rendering.Universal.ShaderVariantLogLevel
+---@field AllShaders UnityEngine.Rendering.Universal.ShaderVariantLogLevel
+UnityEngine.Rendering.Universal.ShaderVariantLogLevel = {}
+---@alias CS.UnityEngine.Rendering.Universal.ShaderVariantLogLevel UnityEngine.Rendering.Universal.ShaderVariantLogLevel
+CS.UnityEngine.Rendering.Universal.ShaderVariantLogLevel = UnityEngine.Rendering.Universal.ShaderVariantLogLevel
+
+
+---@class UnityEngine.Rendering.Universal.ScriptableRenderer : System.Object
+---@field supportedRenderingFeatures UnityEngine.Rendering.Universal.ScriptableRenderer.RenderingFeatures
+---@field unsupportedGraphicsDeviceTypes UnityEngine.Rendering.GraphicsDeviceType[]
+---@field supportsGPUOcclusion boolean
+UnityEngine.Rendering.Universal.ScriptableRenderer = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer UnityEngine.Rendering.Universal.ScriptableRenderer
+CS.UnityEngine.Rendering.Universal.ScriptableRenderer = UnityEngine.Rendering.Universal.ScriptableRenderer
+
+---@param data UnityEngine.Rendering.Universal.ScriptableRendererData
+---@return UnityEngine.Rendering.Universal.ScriptableRenderer
+function UnityEngine.Rendering.Universal.ScriptableRenderer.New(data) end
+---@return number
+function UnityEngine.Rendering.Universal.ScriptableRenderer:SupportedCameraStackingTypes() end
+---@param cameraRenderType UnityEngine.Rendering.Universal.CameraRenderType
+---@return boolean
+function UnityEngine.Rendering.Universal.ScriptableRenderer:SupportsCameraStackingType(cameraRenderType) end
+function UnityEngine.Rendering.Universal.ScriptableRenderer:Dispose() end
+---@param ref_cullingParameters UnityEngine.Rendering.ScriptableCullingParameters
+---@param ref_cameraData UnityEngine.Rendering.Universal.CameraData
+---@return ,UnityEngine.Rendering.ScriptableCullingParameters,UnityEngine.Rendering.Universal.CameraData
+function UnityEngine.Rendering.Universal.ScriptableRenderer:SetupCullingParameters(ref_cullingParameters, ref_cameraData) end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.Universal.ScriptableRenderer:FinishRendering(cmd) end
+function UnityEngine.Rendering.Universal.ScriptableRenderer:OnBeginRenderGraphFrame() end
+function UnityEngine.Rendering.Universal.ScriptableRenderer:OnEndRenderGraphFrame() end
+---@param pass UnityEngine.Rendering.Universal.ScriptableRenderPass
+function UnityEngine.Rendering.Universal.ScriptableRenderer:EnqueuePass(pass) end
+
+---@class UnityEngine.Rendering.Universal.ScriptableRendererData : UnityEngine.ScriptableObject
+---@field rendererFeatures System.Collections.Generic.List
+---@field useNativeRenderPass boolean
+UnityEngine.Rendering.Universal.ScriptableRendererData = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScriptableRendererData UnityEngine.Rendering.Universal.ScriptableRendererData
+CS.UnityEngine.Rendering.Universal.ScriptableRendererData = UnityEngine.Rendering.Universal.ScriptableRendererData
+
+function UnityEngine.Rendering.Universal.ScriptableRendererData:SetDirty() end
+
+---@class UnityEngine.Rendering.Universal.Bloom : UnityEngine.Rendering.VolumeComponent
+---@field threshold UnityEngine.Rendering.MinFloatParameter
+---@field intensity UnityEngine.Rendering.MinFloatParameter
+---@field scatter UnityEngine.Rendering.ClampedFloatParameter
+---@field clamp UnityEngine.Rendering.MinFloatParameter
+---@field tint UnityEngine.Rendering.ColorParameter
+---@field highQualityFiltering UnityEngine.Rendering.BoolParameter
+---@field filter UnityEngine.Rendering.Universal.BloomFilterModeParameter
+---@field downscale UnityEngine.Rendering.Universal.DownscaleParameter
+---@field maxIterations UnityEngine.Rendering.ClampedIntParameter
+---@field dirtTexture UnityEngine.Rendering.TextureParameter
+---@field dirtIntensity UnityEngine.Rendering.MinFloatParameter
+UnityEngine.Rendering.Universal.Bloom = {}
+---@alias CS.UnityEngine.Rendering.Universal.Bloom UnityEngine.Rendering.Universal.Bloom
+CS.UnityEngine.Rendering.Universal.Bloom = UnityEngine.Rendering.Universal.Bloom
+
+---@return UnityEngine.Rendering.Universal.Bloom
+function UnityEngine.Rendering.Universal.Bloom.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.Bloom:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.XRSystemData : UnityEngine.ScriptableObject
+UnityEngine.Rendering.Universal.XRSystemData = {}
+---@alias CS.UnityEngine.Rendering.Universal.XRSystemData UnityEngine.Rendering.Universal.XRSystemData
+CS.UnityEngine.Rendering.Universal.XRSystemData = UnityEngine.Rendering.Universal.XRSystemData
+
+---@return UnityEngine.Rendering.Universal.XRSystemData
+function UnityEngine.Rendering.Universal.XRSystemData.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRendererData : UnityEngine.Rendering.Universal.ScriptableRendererData
+---@field postProcessData UnityEngine.Rendering.Universal.PostProcessData
+---@field prepassLayerMask UnityEngine.LayerMask
+---@field opaqueLayerMask UnityEngine.LayerMask
+---@field transparentLayerMask UnityEngine.LayerMask
+---@field defaultStencilState UnityEngine.Rendering.Universal.StencilStateData
+---@field shadowTransparentReceive boolean
+---@field renderingMode UnityEngine.Rendering.Universal.RenderingMode
+---@field depthPrimingMode UnityEngine.Rendering.Universal.DepthPrimingMode
+---@field copyDepthMode UnityEngine.Rendering.Universal.CopyDepthMode
+---@field depthAttachmentFormat UnityEngine.Rendering.Universal.DepthFormat
+---@field depthTextureFormat UnityEngine.Rendering.Universal.DepthFormat
+---@field accurateGbufferNormals boolean
+---@field intermediateTextureMode UnityEngine.Rendering.Universal.IntermediateTextureMode
+---@field usesDeferredLighting boolean
+---@field usesClusterLightLoop boolean
+UnityEngine.Rendering.Universal.UniversalRendererData = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRendererData UnityEngine.Rendering.Universal.UniversalRendererData
+CS.UnityEngine.Rendering.Universal.UniversalRendererData = UnityEngine.Rendering.Universal.UniversalRendererData
+
+---@return UnityEngine.Rendering.Universal.UniversalRendererData
+function UnityEngine.Rendering.Universal.UniversalRendererData.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources : UnityEngine.ScriptableObject
+UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources = UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResourcesEditor : UnityEditor.Editor
+UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResourcesEditor = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResourcesEditor UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResourcesEditor
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResourcesEditor = UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResourcesEditor
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResourcesEditor
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResourcesEditor.New() end
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResourcesEditor:OnInspectorGUI() end
+
+---@class UnityEngine.Rendering.Universal.ShaderResources : System.Object
+UnityEngine.Rendering.Universal.ShaderResources = {}
+---@alias CS.UnityEngine.Rendering.Universal.ShaderResources UnityEngine.Rendering.Universal.ShaderResources
+CS.UnityEngine.Rendering.Universal.ShaderResources = UnityEngine.Rendering.Universal.ShaderResources
+
+---@return UnityEngine.Rendering.Universal.ShaderResources
+function UnityEngine.Rendering.Universal.ShaderResources.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings : UnityEngine.Rendering.RenderPipelineGlobalSettings
+---@field defaultAssetName string
+UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings = UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings.New() end
+---@param assetInstanceID UnityEngine.EntityId
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings.UpgradeAsset(assetInstanceID) end
+---@param data UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings.MigrateToRenderPipelineGraphicsSettings(data) end
+---@param source UnityEngine.Rendering.RenderPipelineGlobalSettings
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings:Initialize(source) end
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings:Reset() end
+
+---@class UnityEngine.Rendering.Universal.DeprecationMessage : System.ValueType
+UnityEngine.Rendering.Universal.DeprecationMessage = {}
+---@alias CS.UnityEngine.Rendering.Universal.DeprecationMessage UnityEngine.Rendering.Universal.DeprecationMessage
+CS.UnityEngine.Rendering.Universal.DeprecationMessage = UnityEngine.Rendering.Universal.DeprecationMessage
+
+
+---@class UnityEngine.Rendering.Universal.UniversalCameraData : UnityEngine.Rendering.ContextItem
+---@field camera UnityEngine.Camera
+---@field scaledWidth number
+---@field scaledHeight number
+---@field renderType UnityEngine.Rendering.Universal.CameraRenderType
+---@field targetTexture UnityEngine.RenderTexture
+---@field cameraTargetDescriptor UnityEngine.RenderTextureDescriptor
+---@field renderScale number
+---@field clearDepth boolean
+---@field cameraType UnityEngine.CameraType
+---@field isDefaultViewport boolean
+---@field isHdrEnabled boolean
+---@field allowHDROutput boolean
+---@field isAlphaOutputEnabled boolean
+---@field requiresDepthTexture boolean
+---@field requiresOpaqueTexture boolean
+---@field postProcessingRequiresDepthTexture boolean
+---@field xrRendering boolean
+---@field defaultOpaqueSortFlags UnityEngine.Rendering.SortingCriteria
+---@field maxShadowDistance number
+---@field postProcessEnabled boolean
+---@field captureActions System.Collections.Generic.IEnumerator
+---@field volumeLayerMask UnityEngine.LayerMask
+---@field volumeTrigger UnityEngine.Transform
+---@field isStopNaNEnabled boolean
+---@field isDitheringEnabled boolean
+---@field antialiasing UnityEngine.Rendering.Universal.AntialiasingMode
+---@field antialiasingQuality UnityEngine.Rendering.Universal.AntialiasingQuality
+---@field renderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@field resolveFinalTarget boolean
+---@field worldSpaceCameraPos UnityEngine.Vector3
+---@field backgroundColor UnityEngine.Color
+---@field baseCamera UnityEngine.Camera
+---@field historyManager UnityEngine.Rendering.Universal.UniversalCameraHistory
+---@field isGameCamera boolean
+---@field isSceneViewCamera boolean
+---@field isPreviewCamera boolean
+---@field isHDROutputActive boolean
+---@field hdrDisplayInformation UnityEngine.Rendering.HDROutputUtils.HDRDisplayInformation
+---@field hdrDisplayColorGamut UnityEngine.ColorGamut
+---@field rendersOverlayUI boolean
+---@field xr UnityEngine.Experimental.Rendering.XRPass
+UnityEngine.Rendering.Universal.UniversalCameraData = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalCameraData UnityEngine.Rendering.Universal.UniversalCameraData
+CS.UnityEngine.Rendering.Universal.UniversalCameraData = UnityEngine.Rendering.Universal.UniversalCameraData
+
+---@return UnityEngine.Rendering.Universal.UniversalCameraData
+function UnityEngine.Rendering.Universal.UniversalCameraData.New() end
+---@param viewIndex number
+---@return UnityEngine.Matrix4x4
+function UnityEngine.Rendering.Universal.UniversalCameraData:GetViewMatrix(viewIndex) end
+---@param viewIndex number
+---@return UnityEngine.Matrix4x4
+function UnityEngine.Rendering.Universal.UniversalCameraData:GetProjectionMatrix(viewIndex) end
+---@param handle UnityEngine.Rendering.RTHandle
+---@return boolean
+function UnityEngine.Rendering.Universal.UniversalCameraData:IsHandleYFlipped(handle) end
+---@param color UnityEngine.Rendering.RTHandle
+---@param depth UnityEngine.Rendering.RTHandle
+---@return boolean
+function UnityEngine.Rendering.Universal.UniversalCameraData:IsRenderTargetProjectionMatrixFlipped(color, depth) end
+function UnityEngine.Rendering.Universal.UniversalCameraData:Reset() end
+
+---@class UnityEngine.Rendering.Universal.XROcclusionMeshPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.XROcclusionMeshPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.XROcclusionMeshPass UnityEngine.Rendering.Universal.XROcclusionMeshPass
+CS.UnityEngine.Rendering.Universal.XROcclusionMeshPass = UnityEngine.Rendering.Universal.XROcclusionMeshPass
+
+---@param evt UnityEngine.Rendering.Universal.RenderPassEvent
+---@return UnityEngine.Rendering.Universal.XROcclusionMeshPass
+function UnityEngine.Rendering.Universal.XROcclusionMeshPass.New(evt) end
+
+---@class UnityEngine.Rendering.Universal.DecalRendererFeature : UnityEngine.Rendering.Universal.ScriptableRendererFeature
+UnityEngine.Rendering.Universal.DecalRendererFeature = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalRendererFeature UnityEngine.Rendering.Universal.DecalRendererFeature
+CS.UnityEngine.Rendering.Universal.DecalRendererFeature = UnityEngine.Rendering.Universal.DecalRendererFeature
+
+---@return UnityEngine.Rendering.Universal.DecalRendererFeature
+function UnityEngine.Rendering.Universal.DecalRendererFeature.New() end
+function UnityEngine.Rendering.Universal.DecalRendererFeature:Create() end
+---@param renderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@param ref_cameraData UnityEngine.Rendering.Universal.CameraData
+---@return ,UnityEngine.Rendering.Universal.CameraData
+function UnityEngine.Rendering.Universal.DecalRendererFeature:OnCameraPreCull(renderer, ref_cameraData) end
+---@param renderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@param ref_renderingData UnityEngine.Rendering.Universal.RenderingData
+---@return ,UnityEngine.Rendering.Universal.RenderingData
+function UnityEngine.Rendering.Universal.DecalRendererFeature:AddRenderPasses(renderer, ref_renderingData) end
+
+---@class UnityEngine.Rendering.Universal.ScriptableRendererFeature : UnityEngine.ScriptableObject
+---@field isActive boolean
+UnityEngine.Rendering.Universal.ScriptableRendererFeature = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScriptableRendererFeature UnityEngine.Rendering.Universal.ScriptableRendererFeature
+CS.UnityEngine.Rendering.Universal.ScriptableRendererFeature = UnityEngine.Rendering.Universal.ScriptableRendererFeature
+
+function UnityEngine.Rendering.Universal.ScriptableRendererFeature:Create() end
+---@param renderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@param ref_cameraData UnityEngine.Rendering.Universal.CameraData
+---@return ,UnityEngine.Rendering.Universal.CameraData
+function UnityEngine.Rendering.Universal.ScriptableRendererFeature:OnCameraPreCull(renderer, ref_cameraData) end
+---@param renderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@param ref_renderingData UnityEngine.Rendering.Universal.RenderingData
+---@return ,UnityEngine.Rendering.Universal.RenderingData
+function UnityEngine.Rendering.Universal.ScriptableRendererFeature:AddRenderPasses(renderer, ref_renderingData) end
+---@param active boolean
+function UnityEngine.Rendering.Universal.ScriptableRendererFeature:SetActive(active) end
+function UnityEngine.Rendering.Universal.ScriptableRendererFeature:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.CameraData : System.ValueType
+---@field camera UnityEngine.Camera&
+---@field historyManager UnityEngine.Rendering.Universal.UniversalCameraHistory&
+---@field renderType UnityEngine.Rendering.Universal.CameraRenderType&
+---@field targetTexture UnityEngine.RenderTexture&
+---@field cameraTargetDescriptor UnityEngine.RenderTextureDescriptor&
+---@field renderScale System.Single&
+---@field clearDepth System.Boolean&
+---@field cameraType UnityEngine.CameraType&
+---@field isDefaultViewport System.Boolean&
+---@field isHdrEnabled System.Boolean&
+---@field allowHDROutput System.Boolean&
+---@field isAlphaOutputEnabled System.Boolean&
+---@field requiresDepthTexture System.Boolean&
+---@field requiresOpaqueTexture System.Boolean&
+---@field postProcessingRequiresDepthTexture System.Boolean&
+---@field xrRendering System.Boolean&
+---@field isSceneViewCamera boolean
+---@field isPreviewCamera boolean
+---@field isHDROutputActive boolean
+---@field hdrDisplayInformation UnityEngine.Rendering.HDROutputUtils.HDRDisplayInformation
+---@field hdrDisplayColorGamut UnityEngine.ColorGamut
+---@field rendersOverlayUI boolean
+---@field defaultOpaqueSortFlags UnityEngine.Rendering.SortingCriteria&
+---@field xr UnityEngine.Experimental.Rendering.XRPass
+---@field maxShadowDistance System.Single&
+---@field postProcessEnabled System.Boolean&
+---@field captureActions System.Collections.Generic.IEnumerator
+---@field volumeLayerMask UnityEngine.LayerMask&
+---@field volumeTrigger UnityEngine.Transform&
+---@field isStopNaNEnabled System.Boolean&
+---@field isDitheringEnabled System.Boolean&
+---@field antialiasing UnityEngine.Rendering.Universal.AntialiasingMode&
+---@field antialiasingQuality UnityEngine.Rendering.Universal.AntialiasingQuality&
+---@field renderer UnityEngine.Rendering.Universal.ScriptableRenderer&
+---@field resolveFinalTarget System.Boolean&
+---@field worldSpaceCameraPos UnityEngine.Vector3&
+---@field backgroundColor UnityEngine.Color&
+---@field baseCamera UnityEngine.Camera&
+UnityEngine.Rendering.Universal.CameraData = {}
+---@alias CS.UnityEngine.Rendering.Universal.CameraData UnityEngine.Rendering.Universal.CameraData
+CS.UnityEngine.Rendering.Universal.CameraData = UnityEngine.Rendering.Universal.CameraData
+
+---@param viewIndex number
+---@return UnityEngine.Matrix4x4
+function UnityEngine.Rendering.Universal.CameraData:GetViewMatrix(viewIndex) end
+---@param viewIndex number
+---@return UnityEngine.Matrix4x4
+function UnityEngine.Rendering.Universal.CameraData:GetProjectionMatrix(viewIndex) end
+---@param handle UnityEngine.Rendering.RTHandle
+---@return boolean
+function UnityEngine.Rendering.Universal.CameraData:IsHandleYFlipped(handle) end
+---@param color UnityEngine.Rendering.RTHandle
+---@param depth UnityEngine.Rendering.RTHandle
+---@return boolean
+function UnityEngine.Rendering.Universal.CameraData:IsRenderTargetProjectionMatrixFlipped(color, depth) end
+
+---@class UnityEngine.Rendering.Universal.DrawSkyboxPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.DrawSkyboxPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.DrawSkyboxPass UnityEngine.Rendering.Universal.DrawSkyboxPass
+CS.UnityEngine.Rendering.Universal.DrawSkyboxPass = UnityEngine.Rendering.Universal.DrawSkyboxPass
+
+---@param evt UnityEngine.Rendering.Universal.RenderPassEvent
+---@return UnityEngine.Rendering.Universal.DrawSkyboxPass
+function UnityEngine.Rendering.Universal.DrawSkyboxPass.New(evt) end
+
+---@class UnityEngine.Rendering.Universal.RenderObjectsPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+---@field overrideMaterial UnityEngine.Material
+---@field overrideMaterialPassIndex number
+---@field overrideShader UnityEngine.Shader
+---@field overrideShaderPassIndex number
+UnityEngine.Rendering.Universal.RenderObjectsPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.RenderObjectsPass UnityEngine.Rendering.Universal.RenderObjectsPass
+CS.UnityEngine.Rendering.Universal.RenderObjectsPass = UnityEngine.Rendering.Universal.RenderObjectsPass
+
+---@param profilerTag string
+---@param renderPassEvent UnityEngine.Rendering.Universal.RenderPassEvent
+---@param shaderTags System.String[]
+---@param renderQueueType UnityEngine.Rendering.Universal.RenderQueueType
+---@param layerMask number
+---@param cameraSettings UnityEngine.Rendering.Universal.RenderObjects.CustomCameraSettings
+---@return UnityEngine.Rendering.Universal.RenderObjectsPass
+function UnityEngine.Rendering.Universal.RenderObjectsPass.New(profilerTag, renderPassEvent, shaderTags, renderQueueType, layerMask, cameraSettings) end
+---@param writeEnabled boolean
+---@param _function UnityEngine.Rendering.CompareFunction
+function UnityEngine.Rendering.Universal.RenderObjectsPass:SetDepthState(writeEnabled, _function) end
+---@param reference number
+---@param compareFunction UnityEngine.Rendering.CompareFunction
+---@param passOp UnityEngine.Rendering.StencilOp
+---@param failOp UnityEngine.Rendering.StencilOp
+---@param zFailOp UnityEngine.Rendering.StencilOp
+function UnityEngine.Rendering.Universal.RenderObjectsPass:SetStencilState(reference, compareFunction, passOp, failOp, zFailOp) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.Universal.RenderObjectsPass:RecordRenderGraph(renderGraph, frameData) end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderer : UnityEngine.Rendering.Universal.ScriptableRenderer
+---@field depthPrimingMode UnityEngine.Rendering.Universal.DepthPrimingMode
+---@field supportsGPUOcclusion boolean
+UnityEngine.Rendering.Universal.UniversalRenderer = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderer UnityEngine.Rendering.Universal.UniversalRenderer
+CS.UnityEngine.Rendering.Universal.UniversalRenderer = UnityEngine.Rendering.Universal.UniversalRenderer
+
+---@param data UnityEngine.Rendering.Universal.UniversalRendererData
+---@return UnityEngine.Rendering.Universal.UniversalRenderer
+function UnityEngine.Rendering.Universal.UniversalRenderer.New(data) end
+---@overload fun(ref_cameraData: UnityEngine.Rendering.Universal.CameraData) : boolean, UnityEngine.Rendering.Universal.CameraData
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@return boolean
+function UnityEngine.Rendering.Universal.UniversalRenderer.IsOffscreenDepthTexture(cameraData) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param desc UnityEngine.RenderTextureDescriptor
+---@param name string
+---@param clear boolean
+---@param filterMode UnityEngine.FilterMode
+---@param wrapMode UnityEngine.TextureWrapMode
+---@return UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.UniversalRenderer.CreateRenderGraphTexture(renderGraph, desc, name, clear, filterMode, wrapMode) end
+---@return number
+function UnityEngine.Rendering.Universal.UniversalRenderer:SupportedCameraStackingTypes() end
+---@param ref_cullingParameters UnityEngine.Rendering.ScriptableCullingParameters
+---@param ref_cameraData UnityEngine.Rendering.Universal.CameraData
+---@return ,UnityEngine.Rendering.ScriptableCullingParameters,UnityEngine.Rendering.Universal.CameraData
+function UnityEngine.Rendering.Universal.UniversalRenderer:SetupCullingParameters(ref_cullingParameters, ref_cameraData) end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.Universal.UniversalRenderer:FinishRendering(cmd) end
+function UnityEngine.Rendering.Universal.UniversalRenderer:OnBeginRenderGraphFrame() end
+function UnityEngine.Rendering.Universal.UniversalRenderer:OnEndRenderGraphFrame() end
+
+---@class UnityEngine.Rendering.Universal.URPHelpURLAttribute : UnityEngine.Rendering.CoreRPHelpURLAttribute
+UnityEngine.Rendering.Universal.URPHelpURLAttribute = {}
+---@alias CS.UnityEngine.Rendering.Universal.URPHelpURLAttribute UnityEngine.Rendering.Universal.URPHelpURLAttribute
+CS.UnityEngine.Rendering.Universal.URPHelpURLAttribute = UnityEngine.Rendering.Universal.URPHelpURLAttribute
+
+---@param pageName string
+---@param pageHash string
+---@return UnityEngine.Rendering.Universal.URPHelpURLAttribute
+function UnityEngine.Rendering.Universal.URPHelpURLAttribute.New(pageName, pageHash) end
+
+---@class UnityEngine.Rendering.Universal.Documentation : UnityEngine.Rendering.DocumentationInfo
+---@field packageName string
+UnityEngine.Rendering.Universal.Documentation = {}
+---@alias CS.UnityEngine.Rendering.Universal.Documentation UnityEngine.Rendering.Universal.Documentation
+CS.UnityEngine.Rendering.Universal.Documentation = UnityEngine.Rendering.Universal.Documentation
+
+---@return UnityEngine.Rendering.Universal.Documentation
+function UnityEngine.Rendering.Universal.Documentation.New() end
+---@param pageName string
+---@return string
+function UnityEngine.Rendering.Universal.Documentation.GetPageLink(pageName) end
+
+---@class UnityEngine.Rendering.Universal.ForwardRendererData : UnityEngine.Rendering.Universal.ScriptableRendererData
+---@field shaders UnityEngine.Rendering.Universal.ForwardRendererData.ShaderResources
+---@field postProcessData UnityEngine.Rendering.Universal.PostProcessData
+---@field xrSystemData UnityEngine.Rendering.Universal.XRSystemData
+---@field opaqueLayerMask UnityEngine.LayerMask
+---@field transparentLayerMask UnityEngine.LayerMask
+---@field defaultStencilState UnityEngine.Rendering.Universal.StencilStateData
+---@field shadowTransparentReceive boolean
+---@field renderingMode UnityEngine.Rendering.Universal.RenderingMode
+---@field accurateGbufferNormals boolean
+UnityEngine.Rendering.Universal.ForwardRendererData = {}
+---@alias CS.UnityEngine.Rendering.Universal.ForwardRendererData UnityEngine.Rendering.Universal.ForwardRendererData
+CS.UnityEngine.Rendering.Universal.ForwardRendererData = UnityEngine.Rendering.Universal.ForwardRendererData
+
+---@return UnityEngine.Rendering.Universal.ForwardRendererData
+function UnityEngine.Rendering.Universal.ForwardRendererData.New() end
+
+---@class UnityEngine.Rendering.Universal.Universal2DResourceData : UnityEngine.Rendering.Universal.UniversalResourceDataBase
+UnityEngine.Rendering.Universal.Universal2DResourceData = {}
+---@alias CS.UnityEngine.Rendering.Universal.Universal2DResourceData UnityEngine.Rendering.Universal.Universal2DResourceData
+CS.UnityEngine.Rendering.Universal.Universal2DResourceData = UnityEngine.Rendering.Universal.Universal2DResourceData
+
+---@return UnityEngine.Rendering.Universal.Universal2DResourceData
+function UnityEngine.Rendering.Universal.Universal2DResourceData.New() end
+function UnityEngine.Rendering.Universal.Universal2DResourceData:Reset() end
+
+---@class UnityEngine.Rendering.Universal.UniversalLightData : UnityEngine.Rendering.ContextItem
+---@field mainLightIndex number
+---@field additionalLightsCount number
+---@field maxPerObjectAdditionalLightsCount number
+---@field visibleLights Unity.Collections.NativeArray
+---@field shadeAdditionalLightsPerVertex boolean
+---@field supportsMixedLighting boolean
+---@field reflectionProbeBoxProjection boolean
+---@field reflectionProbeBlending boolean
+---@field reflectionProbeAtlas boolean
+---@field supportsLightLayers boolean
+---@field supportsAdditionalLights boolean
+UnityEngine.Rendering.Universal.UniversalLightData = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalLightData UnityEngine.Rendering.Universal.UniversalLightData
+CS.UnityEngine.Rendering.Universal.UniversalLightData = UnityEngine.Rendering.Universal.UniversalLightData
+
+---@return UnityEngine.Rendering.Universal.UniversalLightData
+function UnityEngine.Rendering.Universal.UniversalLightData.New() end
+function UnityEngine.Rendering.Universal.UniversalLightData:Reset() end
+
+---@class UnityEngine.Rendering.Universal.UniversalPostProcessingData : UnityEngine.Rendering.ContextItem
+---@field isEnabled boolean
+---@field gradingMode UnityEngine.Rendering.Universal.ColorGradingMode
+---@field lutSize number
+---@field useFastSRGBLinearConversion boolean
+---@field supportScreenSpaceLensFlare boolean
+---@field supportDataDrivenLensFlare boolean
+UnityEngine.Rendering.Universal.UniversalPostProcessingData = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalPostProcessingData UnityEngine.Rendering.Universal.UniversalPostProcessingData
+CS.UnityEngine.Rendering.Universal.UniversalPostProcessingData = UnityEngine.Rendering.Universal.UniversalPostProcessingData
+
+---@return UnityEngine.Rendering.Universal.UniversalPostProcessingData
+function UnityEngine.Rendering.Universal.UniversalPostProcessingData.New() end
+function UnityEngine.Rendering.Universal.UniversalPostProcessingData:Reset() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderingData : UnityEngine.Rendering.ContextItem
+---@field cullResults UnityEngine.Rendering.CullingResults
+---@field supportsDynamicBatching boolean
+---@field perObjectData UnityEngine.Rendering.PerObjectData
+---@field renderingMode UnityEngine.Rendering.Universal.RenderingMode
+---@field prepassLayerMask UnityEngine.LayerMask
+---@field opaqueLayerMask UnityEngine.LayerMask
+---@field transparentLayerMask UnityEngine.LayerMask
+---@field stencilLodCrossFadeEnabled boolean
+UnityEngine.Rendering.Universal.UniversalRenderingData = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderingData UnityEngine.Rendering.Universal.UniversalRenderingData
+CS.UnityEngine.Rendering.Universal.UniversalRenderingData = UnityEngine.Rendering.Universal.UniversalRenderingData
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderingData
+function UnityEngine.Rendering.Universal.UniversalRenderingData.New() end
+function UnityEngine.Rendering.Universal.UniversalRenderingData:Reset() end
+
+---@class UnityEngine.Rendering.Universal.UniversalResourceDataBase : UnityEngine.Rendering.ContextItem
+UnityEngine.Rendering.Universal.UniversalResourceDataBase = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalResourceDataBase UnityEngine.Rendering.Universal.UniversalResourceDataBase
+CS.UnityEngine.Rendering.Universal.UniversalResourceDataBase = UnityEngine.Rendering.Universal.UniversalResourceDataBase
+
+
+---@class UnityEngine.Rendering.Universal.UniversalResourceData : UnityEngine.Rendering.Universal.UniversalResourceDataBase
+---@field activeColorTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field activeDepthTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field isActiveTargetBackBuffer boolean
+---@field backBufferColor UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field backBufferDepth UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field cameraColor UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field cameraDepth UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field mainShadowsTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field additionalShadowsTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field gBuffer UnityEngine.Rendering.RenderGraphModule.TextureHandle[]
+---@field cameraOpaqueTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field cameraDepthTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field cameraNormalsTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field motionVectorColor UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field motionVectorDepth UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field internalColorLut UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field afterPostProcessColor UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field overlayUITexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field renderingLayersTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field dBuffer UnityEngine.Rendering.RenderGraphModule.TextureHandle[]
+---@field dBufferDepth UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@field ssaoTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+UnityEngine.Rendering.Universal.UniversalResourceData = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalResourceData UnityEngine.Rendering.Universal.UniversalResourceData
+CS.UnityEngine.Rendering.Universal.UniversalResourceData = UnityEngine.Rendering.Universal.UniversalResourceData
+
+---@return UnityEngine.Rendering.Universal.UniversalResourceData
+function UnityEngine.Rendering.Universal.UniversalResourceData.New() end
+function UnityEngine.Rendering.Universal.UniversalResourceData:SwitchActiveTexturesToBackbuffer() end
+function UnityEngine.Rendering.Universal.UniversalResourceData:Reset() end
+
+---@class UnityEngine.Rendering.Universal.UniversalShadowData : UnityEngine.Rendering.ContextItem
+---@field supportsMainLightShadows boolean
+---@field mainLightShadowmapWidth number
+---@field mainLightShadowmapHeight number
+---@field mainLightShadowCascadesCount number
+---@field mainLightShadowCascadesSplit UnityEngine.Vector3
+---@field mainLightShadowCascadeBorder number
+---@field supportsAdditionalLightShadows boolean
+---@field additionalLightsShadowmapWidth number
+---@field additionalLightsShadowmapHeight number
+---@field supportsSoftShadows boolean
+---@field shadowmapDepthBufferBits number
+---@field bias System.Collections.Generic.List
+---@field resolution System.Collections.Generic.List
+UnityEngine.Rendering.Universal.UniversalShadowData = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalShadowData UnityEngine.Rendering.Universal.UniversalShadowData
+CS.UnityEngine.Rendering.Universal.UniversalShadowData = UnityEngine.Rendering.Universal.UniversalShadowData
+
+---@return UnityEngine.Rendering.Universal.UniversalShadowData
+function UnityEngine.Rendering.Universal.UniversalShadowData.New() end
+function UnityEngine.Rendering.Universal.UniversalShadowData:Reset() end
+
+---@class UnityEngine.Rendering.Universal.RawColorHistory : UnityEngine.Rendering.CameraHistoryItem
+UnityEngine.Rendering.Universal.RawColorHistory = {}
+---@alias CS.UnityEngine.Rendering.Universal.RawColorHistory UnityEngine.Rendering.Universal.RawColorHistory
+CS.UnityEngine.Rendering.Universal.RawColorHistory = UnityEngine.Rendering.Universal.RawColorHistory
+
+---@return UnityEngine.Rendering.Universal.RawColorHistory
+function UnityEngine.Rendering.Universal.RawColorHistory.New() end
+---@param owner UnityEngine.Rendering.BufferedRTHandleSystem
+---@param typeId number
+function UnityEngine.Rendering.Universal.RawColorHistory:OnCreate(owner, typeId) end
+---@param eyeIndex number
+---@return UnityEngine.Rendering.RTHandle
+function UnityEngine.Rendering.Universal.RawColorHistory:GetCurrentTexture(eyeIndex) end
+---@param eyeIndex number
+---@return UnityEngine.Rendering.RTHandle
+function UnityEngine.Rendering.Universal.RawColorHistory:GetPreviousTexture(eyeIndex) end
+function UnityEngine.Rendering.Universal.RawColorHistory:Reset() end
+
+---@class UnityEngine.Rendering.Universal.RawDepthHistory : UnityEngine.Rendering.CameraHistoryItem
+UnityEngine.Rendering.Universal.RawDepthHistory = {}
+---@alias CS.UnityEngine.Rendering.Universal.RawDepthHistory UnityEngine.Rendering.Universal.RawDepthHistory
+CS.UnityEngine.Rendering.Universal.RawDepthHistory = UnityEngine.Rendering.Universal.RawDepthHistory
+
+---@return UnityEngine.Rendering.Universal.RawDepthHistory
+function UnityEngine.Rendering.Universal.RawDepthHistory.New() end
+---@param owner UnityEngine.Rendering.BufferedRTHandleSystem
+---@param typeId number
+function UnityEngine.Rendering.Universal.RawDepthHistory:OnCreate(owner, typeId) end
+---@param eyeIndex number
+---@return UnityEngine.Rendering.RTHandle
+function UnityEngine.Rendering.Universal.RawDepthHistory:GetCurrentTexture(eyeIndex) end
+---@param eyeIndex number
+---@return UnityEngine.Rendering.RTHandle
+function UnityEngine.Rendering.Universal.RawDepthHistory:GetPreviousTexture(eyeIndex) end
+function UnityEngine.Rendering.Universal.RawDepthHistory:Reset() end
+
+---@class UnityEngine.Rendering.Universal.SingleHistoryBase : UnityEngine.Rendering.CameraHistoryItem
+UnityEngine.Rendering.Universal.SingleHistoryBase = {}
+---@alias CS.UnityEngine.Rendering.Universal.SingleHistoryBase UnityEngine.Rendering.Universal.SingleHistoryBase
+CS.UnityEngine.Rendering.Universal.SingleHistoryBase = UnityEngine.Rendering.Universal.SingleHistoryBase
+
+---@param owner UnityEngine.Rendering.BufferedRTHandleSystem
+---@param typeId number
+function UnityEngine.Rendering.Universal.SingleHistoryBase:OnCreate(owner, typeId) end
+---@param frameIndex number
+---@return UnityEngine.Rendering.RTHandle
+function UnityEngine.Rendering.Universal.SingleHistoryBase:GetTexture(frameIndex) end
+---@return UnityEngine.Rendering.RTHandle
+function UnityEngine.Rendering.Universal.SingleHistoryBase:GetCurrentTexture() end
+---@return UnityEngine.Rendering.RTHandle
+function UnityEngine.Rendering.Universal.SingleHistoryBase:GetPreviousTexture() end
+function UnityEngine.Rendering.Universal.SingleHistoryBase:Reset() end
+
+---@class UnityEngine.Rendering.Universal.StpHistory : UnityEngine.Rendering.CameraHistoryItem
+UnityEngine.Rendering.Universal.StpHistory = {}
+---@alias CS.UnityEngine.Rendering.Universal.StpHistory UnityEngine.Rendering.Universal.StpHistory
+CS.UnityEngine.Rendering.Universal.StpHistory = UnityEngine.Rendering.Universal.StpHistory
+
+---@return UnityEngine.Rendering.Universal.StpHistory
+function UnityEngine.Rendering.Universal.StpHistory.New() end
+---@param owner UnityEngine.Rendering.BufferedRTHandleSystem
+---@param typeId number
+function UnityEngine.Rendering.Universal.StpHistory:OnCreate(owner, typeId) end
+function UnityEngine.Rendering.Universal.StpHistory:Reset() end
+
+---@class UnityEngine.Rendering.Universal.TaaHistory : UnityEngine.Rendering.CameraHistoryItem
+UnityEngine.Rendering.Universal.TaaHistory = {}
+---@alias CS.UnityEngine.Rendering.Universal.TaaHistory UnityEngine.Rendering.Universal.TaaHistory
+CS.UnityEngine.Rendering.Universal.TaaHistory = UnityEngine.Rendering.Universal.TaaHistory
+
+---@return UnityEngine.Rendering.Universal.TaaHistory
+function UnityEngine.Rendering.Universal.TaaHistory.New() end
+---@param owner UnityEngine.Rendering.BufferedRTHandleSystem
+---@param typeId number
+function UnityEngine.Rendering.Universal.TaaHistory:OnCreate(owner, typeId) end
+function UnityEngine.Rendering.Universal.TaaHistory:Reset() end
+---@param eyeIndex number
+---@return UnityEngine.Rendering.RTHandle
+function UnityEngine.Rendering.Universal.TaaHistory:GetAccumulationTexture(eyeIndex) end
+---@param eyeIndex number
+---@return number
+function UnityEngine.Rendering.Universal.TaaHistory:GetAccumulationVersion(eyeIndex) end
+
+---@class UnityEngine.Rendering.Universal.IntermediateTextureMode
+---@field Auto UnityEngine.Rendering.Universal.IntermediateTextureMode
+---@field Always UnityEngine.Rendering.Universal.IntermediateTextureMode
+UnityEngine.Rendering.Universal.IntermediateTextureMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.IntermediateTextureMode UnityEngine.Rendering.Universal.IntermediateTextureMode
+CS.UnityEngine.Rendering.Universal.IntermediateTextureMode = UnityEngine.Rendering.Universal.IntermediateTextureMode
+
+
+---@class UnityEngine.Rendering.Universal.LightCookieManager : System.Object
+UnityEngine.Rendering.Universal.LightCookieManager = {}
+---@alias CS.UnityEngine.Rendering.Universal.LightCookieManager UnityEngine.Rendering.Universal.LightCookieManager
+CS.UnityEngine.Rendering.Universal.LightCookieManager = UnityEngine.Rendering.Universal.LightCookieManager
+
+---@param ref_settings UnityEngine.Rendering.Universal.LightCookieManager.Settings
+---@return UnityEngine.Rendering.Universal.LightCookieManager,UnityEngine.Rendering.Universal.LightCookieManager.Settings
+function UnityEngine.Rendering.Universal.LightCookieManager.New(ref_settings) end
+---@return boolean
+function UnityEngine.Rendering.Universal.LightCookieManager:isInitialized() end
+function UnityEngine.Rendering.Universal.LightCookieManager:Dispose() end
+---@param visibleLightIndex number
+---@return number
+function UnityEngine.Rendering.Universal.LightCookieManager:GetLightCookieShaderDataIndex(visibleLightIndex) end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+---@param lightData UnityEngine.Rendering.Universal.UniversalLightData
+function UnityEngine.Rendering.Universal.LightCookieManager:Setup(cmd, lightData) end
+
+---@class UnityEngine.Rendering.Universal.BuddyAllocation : System.ValueType
+---@field level number
+---@field index number
+---@field index2D Unity.Mathematics.uint2
+UnityEngine.Rendering.Universal.BuddyAllocation = {}
+---@alias CS.UnityEngine.Rendering.Universal.BuddyAllocation UnityEngine.Rendering.Universal.BuddyAllocation
+CS.UnityEngine.Rendering.Universal.BuddyAllocation = UnityEngine.Rendering.Universal.BuddyAllocation
+
+---@param level number
+---@param index number
+---@return UnityEngine.Rendering.Universal.BuddyAllocation
+function UnityEngine.Rendering.Universal.BuddyAllocation.New(level, index) end
+
+---@class UnityEngine.Rendering.Universal.BuddyAllocator : System.ValueType
+---@field levelCount number
+UnityEngine.Rendering.Universal.BuddyAllocator = {}
+---@alias CS.UnityEngine.Rendering.Universal.BuddyAllocator UnityEngine.Rendering.Universal.BuddyAllocator
+CS.UnityEngine.Rendering.Universal.BuddyAllocator = UnityEngine.Rendering.Universal.BuddyAllocator
+
+---@param levelCount number
+---@param branchingOrder number
+---@param allocator Unity.Collections.Allocator
+---@return UnityEngine.Rendering.Universal.BuddyAllocator
+function UnityEngine.Rendering.Universal.BuddyAllocator.New(levelCount, branchingOrder, allocator) end
+---@param requestedLevel number
+---@param out_allocation UnityEngine.Rendering.Universal.BuddyAllocation
+---@return boolean,UnityEngine.Rendering.Universal.BuddyAllocation
+function UnityEngine.Rendering.Universal.BuddyAllocator:TryAllocate(requestedLevel, out_allocation) end
+---@param allocation UnityEngine.Rendering.Universal.BuddyAllocation
+function UnityEngine.Rendering.Universal.BuddyAllocator:Free(allocation) end
+function UnityEngine.Rendering.Universal.BuddyAllocator:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.Fixed2 : System.ValueType
+---@field item1 T
+---@field item2 T
+---@field Item T
+UnityEngine.Rendering.Universal.Fixed2 = {}
+---@alias CS.UnityEngine.Rendering.Universal.Fixed2 UnityEngine.Rendering.Universal.Fixed2
+CS.UnityEngine.Rendering.Universal.Fixed2 = UnityEngine.Rendering.Universal.Fixed2
+
+---@overload fun(item1: T) : UnityEngine.Rendering.Universal.Fixed2
+---@param item1 T
+---@param item2 T
+---@return UnityEngine.Rendering.Universal.Fixed2
+function UnityEngine.Rendering.Universal.Fixed2.New(item1, item2) end
+
+---@class UnityEngine.Rendering.Universal.PinnedArray : System.ValueType
+---@field managedArray T[]
+---@field handle System.Runtime.InteropServices.GCHandle
+---@field nativeArray Unity.Collections.NativeArray[T]
+---@field length number
+UnityEngine.Rendering.Universal.PinnedArray = {}
+---@alias CS.UnityEngine.Rendering.Universal.PinnedArray UnityEngine.Rendering.Universal.PinnedArray
+CS.UnityEngine.Rendering.Universal.PinnedArray = UnityEngine.Rendering.Universal.PinnedArray
+
+---@param length number
+---@return UnityEngine.Rendering.Universal.PinnedArray
+function UnityEngine.Rendering.Universal.PinnedArray.New(length) end
+function UnityEngine.Rendering.Universal.PinnedArray:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.MotionVectorsPersistentData : System.Object
+UnityEngine.Rendering.Universal.MotionVectorsPersistentData = {}
+---@alias CS.UnityEngine.Rendering.Universal.MotionVectorsPersistentData UnityEngine.Rendering.Universal.MotionVectorsPersistentData
+CS.UnityEngine.Rendering.Universal.MotionVectorsPersistentData = UnityEngine.Rendering.Universal.MotionVectorsPersistentData
+
+function UnityEngine.Rendering.Universal.MotionVectorsPersistentData:Reset() end
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+function UnityEngine.Rendering.Universal.MotionVectorsPersistentData:Update(cameraData) end
+---@param cmd UnityEngine.Rendering.RasterCommandBuffer
+---@param xr UnityEngine.Experimental.Rendering.XRPass
+function UnityEngine.Rendering.Universal.MotionVectorsPersistentData:SetGlobalMotionMatrices(cmd, xr) end
+
+---@class UnityEngine.Rendering.Universal.Sorting : System.ValueType
+---@field s_QuickSortSampler UnityEngine.Rendering.ProfilingSampler
+---@field s_InsertionSortSampler UnityEngine.Rendering.ProfilingSampler
+UnityEngine.Rendering.Universal.Sorting = {}
+---@alias CS.UnityEngine.Rendering.Universal.Sorting UnityEngine.Rendering.Universal.Sorting
+CS.UnityEngine.Rendering.Universal.Sorting = UnityEngine.Rendering.Universal.Sorting
+
+
+---@class UnityEngine.Rendering.Universal.BloomDownscaleMode
+---@field Half UnityEngine.Rendering.Universal.BloomDownscaleMode
+---@field Quarter UnityEngine.Rendering.Universal.BloomDownscaleMode
+UnityEngine.Rendering.Universal.BloomDownscaleMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.BloomDownscaleMode UnityEngine.Rendering.Universal.BloomDownscaleMode
+CS.UnityEngine.Rendering.Universal.BloomDownscaleMode = UnityEngine.Rendering.Universal.BloomDownscaleMode
+
+
+---@class UnityEngine.Rendering.Universal.BloomFilterMode
+---@field Gaussian UnityEngine.Rendering.Universal.BloomFilterMode
+---@field Dual UnityEngine.Rendering.Universal.BloomFilterMode
+---@field Kawase UnityEngine.Rendering.Universal.BloomFilterMode
+UnityEngine.Rendering.Universal.BloomFilterMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.BloomFilterMode UnityEngine.Rendering.Universal.BloomFilterMode
+CS.UnityEngine.Rendering.Universal.BloomFilterMode = UnityEngine.Rendering.Universal.BloomFilterMode
+
+
+---@class UnityEngine.Rendering.Universal.DownscaleParameter : UnityEngine.Rendering.VolumeParameter
+---@field value UnityEngine.Rendering.Universal.DownscaleParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.Universal.BloomDownscaleMode]
+UnityEngine.Rendering.Universal.DownscaleParameter = {}
+---@alias CS.UnityEngine.Rendering.Universal.DownscaleParameter UnityEngine.Rendering.Universal.DownscaleParameter
+CS.UnityEngine.Rendering.Universal.DownscaleParameter = UnityEngine.Rendering.Universal.DownscaleParameter
+
+---@param value UnityEngine.Rendering.Universal.BloomDownscaleMode
+---@param overrideState boolean
+---@return UnityEngine.Rendering.Universal.DownscaleParameter
+function UnityEngine.Rendering.Universal.DownscaleParameter.New(value, overrideState) end
+
+---@class UnityEngine.Rendering.Universal.BloomFilterModeParameter : UnityEngine.Rendering.VolumeParameter
+---@field value UnityEngine.Rendering.Universal.BloomFilterModeParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.Universal.BloomFilterMode]
+UnityEngine.Rendering.Universal.BloomFilterModeParameter = {}
+---@alias CS.UnityEngine.Rendering.Universal.BloomFilterModeParameter UnityEngine.Rendering.Universal.BloomFilterModeParameter
+CS.UnityEngine.Rendering.Universal.BloomFilterModeParameter = UnityEngine.Rendering.Universal.BloomFilterModeParameter
+
+---@param value UnityEngine.Rendering.Universal.BloomFilterMode
+---@param overrideState boolean
+---@return UnityEngine.Rendering.Universal.BloomFilterModeParameter
+function UnityEngine.Rendering.Universal.BloomFilterModeParameter.New(value, overrideState) end
+
+---@class UnityEngine.Rendering.Universal.ChannelMixer : UnityEngine.Rendering.VolumeComponent
+---@field redOutRedIn UnityEngine.Rendering.ClampedFloatParameter
+---@field redOutGreenIn UnityEngine.Rendering.ClampedFloatParameter
+---@field redOutBlueIn UnityEngine.Rendering.ClampedFloatParameter
+---@field greenOutRedIn UnityEngine.Rendering.ClampedFloatParameter
+---@field greenOutGreenIn UnityEngine.Rendering.ClampedFloatParameter
+---@field greenOutBlueIn UnityEngine.Rendering.ClampedFloatParameter
+---@field blueOutRedIn UnityEngine.Rendering.ClampedFloatParameter
+---@field blueOutGreenIn UnityEngine.Rendering.ClampedFloatParameter
+---@field blueOutBlueIn UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.ChannelMixer = {}
+---@alias CS.UnityEngine.Rendering.Universal.ChannelMixer UnityEngine.Rendering.Universal.ChannelMixer
+CS.UnityEngine.Rendering.Universal.ChannelMixer = UnityEngine.Rendering.Universal.ChannelMixer
+
+---@return UnityEngine.Rendering.Universal.ChannelMixer
+function UnityEngine.Rendering.Universal.ChannelMixer.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.ChannelMixer:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.ChromaticAberration : UnityEngine.Rendering.VolumeComponent
+---@field intensity UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.ChromaticAberration = {}
+---@alias CS.UnityEngine.Rendering.Universal.ChromaticAberration UnityEngine.Rendering.Universal.ChromaticAberration
+CS.UnityEngine.Rendering.Universal.ChromaticAberration = UnityEngine.Rendering.Universal.ChromaticAberration
+
+---@return UnityEngine.Rendering.Universal.ChromaticAberration
+function UnityEngine.Rendering.Universal.ChromaticAberration.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.ChromaticAberration:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.ColorAdjustments : UnityEngine.Rendering.VolumeComponent
+---@field postExposure UnityEngine.Rendering.FloatParameter
+---@field contrast UnityEngine.Rendering.ClampedFloatParameter
+---@field colorFilter UnityEngine.Rendering.ColorParameter
+---@field hueShift UnityEngine.Rendering.ClampedFloatParameter
+---@field saturation UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.ColorAdjustments = {}
+---@alias CS.UnityEngine.Rendering.Universal.ColorAdjustments UnityEngine.Rendering.Universal.ColorAdjustments
+CS.UnityEngine.Rendering.Universal.ColorAdjustments = UnityEngine.Rendering.Universal.ColorAdjustments
+
+---@return UnityEngine.Rendering.Universal.ColorAdjustments
+function UnityEngine.Rendering.Universal.ColorAdjustments.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.ColorAdjustments:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.ColorCurves : UnityEngine.Rendering.VolumeComponent
+---@field master UnityEngine.Rendering.TextureCurveParameter
+---@field red UnityEngine.Rendering.TextureCurveParameter
+---@field green UnityEngine.Rendering.TextureCurveParameter
+---@field blue UnityEngine.Rendering.TextureCurveParameter
+---@field hueVsHue UnityEngine.Rendering.TextureCurveParameter
+---@field hueVsSat UnityEngine.Rendering.TextureCurveParameter
+---@field satVsSat UnityEngine.Rendering.TextureCurveParameter
+---@field lumVsSat UnityEngine.Rendering.TextureCurveParameter
+UnityEngine.Rendering.Universal.ColorCurves = {}
+---@alias CS.UnityEngine.Rendering.Universal.ColorCurves UnityEngine.Rendering.Universal.ColorCurves
+CS.UnityEngine.Rendering.Universal.ColorCurves = UnityEngine.Rendering.Universal.ColorCurves
+
+---@return UnityEngine.Rendering.Universal.ColorCurves
+function UnityEngine.Rendering.Universal.ColorCurves.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.ColorCurves:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.ColorLookup : UnityEngine.Rendering.VolumeComponent
+---@field texture UnityEngine.Rendering.TextureParameter
+---@field contribution UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.ColorLookup = {}
+---@alias CS.UnityEngine.Rendering.Universal.ColorLookup UnityEngine.Rendering.Universal.ColorLookup
+CS.UnityEngine.Rendering.Universal.ColorLookup = UnityEngine.Rendering.Universal.ColorLookup
+
+---@return UnityEngine.Rendering.Universal.ColorLookup
+function UnityEngine.Rendering.Universal.ColorLookup.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.ColorLookup:IsActive() end
+---@return boolean
+function UnityEngine.Rendering.Universal.ColorLookup:ValidateLUT() end
+
+---@class UnityEngine.Rendering.Universal.DepthOfFieldMode
+---@field Off UnityEngine.Rendering.Universal.DepthOfFieldMode
+---@field Gaussian UnityEngine.Rendering.Universal.DepthOfFieldMode
+---@field Bokeh UnityEngine.Rendering.Universal.DepthOfFieldMode
+UnityEngine.Rendering.Universal.DepthOfFieldMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.DepthOfFieldMode UnityEngine.Rendering.Universal.DepthOfFieldMode
+CS.UnityEngine.Rendering.Universal.DepthOfFieldMode = UnityEngine.Rendering.Universal.DepthOfFieldMode
+
+
+---@class UnityEngine.Rendering.Universal.DepthOfField : UnityEngine.Rendering.VolumeComponent
+---@field mode UnityEngine.Rendering.Universal.DepthOfFieldModeParameter
+---@field gaussianStart UnityEngine.Rendering.MinFloatParameter
+---@field gaussianEnd UnityEngine.Rendering.MinFloatParameter
+---@field gaussianMaxRadius UnityEngine.Rendering.ClampedFloatParameter
+---@field highQualitySampling UnityEngine.Rendering.BoolParameter
+---@field focusDistance UnityEngine.Rendering.MinFloatParameter
+---@field aperture UnityEngine.Rendering.ClampedFloatParameter
+---@field focalLength UnityEngine.Rendering.ClampedFloatParameter
+---@field bladeCount UnityEngine.Rendering.ClampedIntParameter
+---@field bladeCurvature UnityEngine.Rendering.ClampedFloatParameter
+---@field bladeRotation UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.DepthOfField = {}
+---@alias CS.UnityEngine.Rendering.Universal.DepthOfField UnityEngine.Rendering.Universal.DepthOfField
+CS.UnityEngine.Rendering.Universal.DepthOfField = UnityEngine.Rendering.Universal.DepthOfField
+
+---@return UnityEngine.Rendering.Universal.DepthOfField
+function UnityEngine.Rendering.Universal.DepthOfField.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.DepthOfField:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.DepthOfFieldModeParameter : UnityEngine.Rendering.VolumeParameter
+---@field value UnityEngine.Rendering.Universal.DepthOfFieldModeParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.Universal.DepthOfFieldMode]
+UnityEngine.Rendering.Universal.DepthOfFieldModeParameter = {}
+---@alias CS.UnityEngine.Rendering.Universal.DepthOfFieldModeParameter UnityEngine.Rendering.Universal.DepthOfFieldModeParameter
+CS.UnityEngine.Rendering.Universal.DepthOfFieldModeParameter = UnityEngine.Rendering.Universal.DepthOfFieldModeParameter
+
+---@param value UnityEngine.Rendering.Universal.DepthOfFieldMode
+---@param overrideState boolean
+---@return UnityEngine.Rendering.Universal.DepthOfFieldModeParameter
+function UnityEngine.Rendering.Universal.DepthOfFieldModeParameter.New(value, overrideState) end
+
+---@class UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Thin1 UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Thin2 UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Medium1 UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Medium2 UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Medium3 UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Medium4 UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Medium5 UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Medium6 UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Large01 UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Large02 UnityEngine.Rendering.Universal.FilmGrainLookup
+---@field Custom UnityEngine.Rendering.Universal.FilmGrainLookup
+UnityEngine.Rendering.Universal.FilmGrainLookup = {}
+---@alias CS.UnityEngine.Rendering.Universal.FilmGrainLookup UnityEngine.Rendering.Universal.FilmGrainLookup
+CS.UnityEngine.Rendering.Universal.FilmGrainLookup = UnityEngine.Rendering.Universal.FilmGrainLookup
+
+
+---@class UnityEngine.Rendering.Universal.FilmGrain : UnityEngine.Rendering.VolumeComponent
+---@field type UnityEngine.Rendering.Universal.FilmGrainLookupParameter
+---@field intensity UnityEngine.Rendering.ClampedFloatParameter
+---@field response UnityEngine.Rendering.ClampedFloatParameter
+---@field texture UnityEngine.Rendering.NoInterpTextureParameter
+UnityEngine.Rendering.Universal.FilmGrain = {}
+---@alias CS.UnityEngine.Rendering.Universal.FilmGrain UnityEngine.Rendering.Universal.FilmGrain
+CS.UnityEngine.Rendering.Universal.FilmGrain = UnityEngine.Rendering.Universal.FilmGrain
+
+---@return UnityEngine.Rendering.Universal.FilmGrain
+function UnityEngine.Rendering.Universal.FilmGrain.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.FilmGrain:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.FilmGrainLookupParameter : UnityEngine.Rendering.VolumeParameter
+---@field value UnityEngine.Rendering.Universal.FilmGrainLookupParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.Universal.FilmGrainLookup]
+UnityEngine.Rendering.Universal.FilmGrainLookupParameter = {}
+---@alias CS.UnityEngine.Rendering.Universal.FilmGrainLookupParameter UnityEngine.Rendering.Universal.FilmGrainLookupParameter
+CS.UnityEngine.Rendering.Universal.FilmGrainLookupParameter = UnityEngine.Rendering.Universal.FilmGrainLookupParameter
+
+---@param value UnityEngine.Rendering.Universal.FilmGrainLookup
+---@param overrideState boolean
+---@return UnityEngine.Rendering.Universal.FilmGrainLookupParameter
+function UnityEngine.Rendering.Universal.FilmGrainLookupParameter.New(value, overrideState) end
+
+---@class UnityEngine.Rendering.Universal.LensDistortion : UnityEngine.Rendering.VolumeComponent
+---@field intensity UnityEngine.Rendering.ClampedFloatParameter
+---@field xMultiplier UnityEngine.Rendering.ClampedFloatParameter
+---@field yMultiplier UnityEngine.Rendering.ClampedFloatParameter
+---@field center UnityEngine.Rendering.Vector2Parameter
+---@field scale UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.LensDistortion = {}
+---@alias CS.UnityEngine.Rendering.Universal.LensDistortion UnityEngine.Rendering.Universal.LensDistortion
+CS.UnityEngine.Rendering.Universal.LensDistortion = UnityEngine.Rendering.Universal.LensDistortion
+
+---@return UnityEngine.Rendering.Universal.LensDistortion
+function UnityEngine.Rendering.Universal.LensDistortion.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.LensDistortion:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.LiftGammaGain : UnityEngine.Rendering.VolumeComponent
+---@field lift UnityEngine.Rendering.Vector4Parameter
+---@field gamma UnityEngine.Rendering.Vector4Parameter
+---@field gain UnityEngine.Rendering.Vector4Parameter
+UnityEngine.Rendering.Universal.LiftGammaGain = {}
+---@alias CS.UnityEngine.Rendering.Universal.LiftGammaGain UnityEngine.Rendering.Universal.LiftGammaGain
+CS.UnityEngine.Rendering.Universal.LiftGammaGain = UnityEngine.Rendering.Universal.LiftGammaGain
+
+---@return UnityEngine.Rendering.Universal.LiftGammaGain
+function UnityEngine.Rendering.Universal.LiftGammaGain.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.LiftGammaGain:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.MotionBlurMode
+---@field CameraOnly UnityEngine.Rendering.Universal.MotionBlurMode
+---@field CameraAndObjects UnityEngine.Rendering.Universal.MotionBlurMode
+UnityEngine.Rendering.Universal.MotionBlurMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.MotionBlurMode UnityEngine.Rendering.Universal.MotionBlurMode
+CS.UnityEngine.Rendering.Universal.MotionBlurMode = UnityEngine.Rendering.Universal.MotionBlurMode
+
+
+---@class UnityEngine.Rendering.Universal.MotionBlurQuality
+---@field Low UnityEngine.Rendering.Universal.MotionBlurQuality
+---@field Medium UnityEngine.Rendering.Universal.MotionBlurQuality
+---@field High UnityEngine.Rendering.Universal.MotionBlurQuality
+UnityEngine.Rendering.Universal.MotionBlurQuality = {}
+---@alias CS.UnityEngine.Rendering.Universal.MotionBlurQuality UnityEngine.Rendering.Universal.MotionBlurQuality
+CS.UnityEngine.Rendering.Universal.MotionBlurQuality = UnityEngine.Rendering.Universal.MotionBlurQuality
+
+
+---@class UnityEngine.Rendering.Universal.MotionBlur : UnityEngine.Rendering.VolumeComponent
+---@field mode UnityEngine.Rendering.Universal.MotionBlurModeParameter
+---@field quality UnityEngine.Rendering.Universal.MotionBlurQualityParameter
+---@field intensity UnityEngine.Rendering.ClampedFloatParameter
+---@field clamp UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.MotionBlur = {}
+---@alias CS.UnityEngine.Rendering.Universal.MotionBlur UnityEngine.Rendering.Universal.MotionBlur
+CS.UnityEngine.Rendering.Universal.MotionBlur = UnityEngine.Rendering.Universal.MotionBlur
+
+---@return UnityEngine.Rendering.Universal.MotionBlur
+function UnityEngine.Rendering.Universal.MotionBlur.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.MotionBlur:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.MotionBlurModeParameter : UnityEngine.Rendering.VolumeParameter
+---@field value UnityEngine.Rendering.Universal.MotionBlurModeParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.Universal.MotionBlurMode]
+UnityEngine.Rendering.Universal.MotionBlurModeParameter = {}
+---@alias CS.UnityEngine.Rendering.Universal.MotionBlurModeParameter UnityEngine.Rendering.Universal.MotionBlurModeParameter
+CS.UnityEngine.Rendering.Universal.MotionBlurModeParameter = UnityEngine.Rendering.Universal.MotionBlurModeParameter
+
+---@param value UnityEngine.Rendering.Universal.MotionBlurMode
+---@param overrideState boolean
+---@return UnityEngine.Rendering.Universal.MotionBlurModeParameter
+function UnityEngine.Rendering.Universal.MotionBlurModeParameter.New(value, overrideState) end
+
+---@class UnityEngine.Rendering.Universal.MotionBlurQualityParameter : UnityEngine.Rendering.VolumeParameter
+---@field value UnityEngine.Rendering.Universal.MotionBlurQualityParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.Universal.MotionBlurQuality]
+UnityEngine.Rendering.Universal.MotionBlurQualityParameter = {}
+---@alias CS.UnityEngine.Rendering.Universal.MotionBlurQualityParameter UnityEngine.Rendering.Universal.MotionBlurQualityParameter
+CS.UnityEngine.Rendering.Universal.MotionBlurQualityParameter = UnityEngine.Rendering.Universal.MotionBlurQualityParameter
+
+---@param value UnityEngine.Rendering.Universal.MotionBlurQuality
+---@param overrideState boolean
+---@return UnityEngine.Rendering.Universal.MotionBlurQualityParameter
+function UnityEngine.Rendering.Universal.MotionBlurQualityParameter.New(value, overrideState) end
+
+---@class UnityEngine.Rendering.Universal.PaniniProjection : UnityEngine.Rendering.VolumeComponent
+---@field distance UnityEngine.Rendering.ClampedFloatParameter
+---@field cropToFit UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.PaniniProjection = {}
+---@alias CS.UnityEngine.Rendering.Universal.PaniniProjection UnityEngine.Rendering.Universal.PaniniProjection
+CS.UnityEngine.Rendering.Universal.PaniniProjection = UnityEngine.Rendering.Universal.PaniniProjection
+
+---@return UnityEngine.Rendering.Universal.PaniniProjection
+function UnityEngine.Rendering.Universal.PaniniProjection.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.PaniniProjection:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution
+---@field Half UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution
+---@field Quarter UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution
+---@field Eighth UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution
+UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution
+CS.UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution = UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution
+
+
+---@class UnityEngine.Rendering.Universal.ScreenSpaceLensFlare : UnityEngine.Rendering.VolumeComponent
+---@field intensity UnityEngine.Rendering.MinFloatParameter
+---@field tintColor UnityEngine.Rendering.ColorParameter
+---@field bloomMip UnityEngine.Rendering.ClampedIntParameter
+---@field firstFlareIntensity UnityEngine.Rendering.MinFloatParameter
+---@field secondaryFlareIntensity UnityEngine.Rendering.MinFloatParameter
+---@field warpedFlareIntensity UnityEngine.Rendering.MinFloatParameter
+---@field warpedFlareScale UnityEngine.Rendering.Vector2Parameter
+---@field samples UnityEngine.Rendering.ClampedIntParameter
+---@field sampleDimmer UnityEngine.Rendering.ClampedFloatParameter
+---@field vignetteEffect UnityEngine.Rendering.ClampedFloatParameter
+---@field startingPosition UnityEngine.Rendering.ClampedFloatParameter
+---@field scale UnityEngine.Rendering.ClampedFloatParameter
+---@field streaksIntensity UnityEngine.Rendering.MinFloatParameter
+---@field streaksLength UnityEngine.Rendering.ClampedFloatParameter
+---@field streaksOrientation UnityEngine.Rendering.FloatParameter
+---@field streaksThreshold UnityEngine.Rendering.ClampedFloatParameter
+---@field resolution UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter
+---@field chromaticAbberationIntensity UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.ScreenSpaceLensFlare = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceLensFlare UnityEngine.Rendering.Universal.ScreenSpaceLensFlare
+CS.UnityEngine.Rendering.Universal.ScreenSpaceLensFlare = UnityEngine.Rendering.Universal.ScreenSpaceLensFlare
+
+---@return UnityEngine.Rendering.Universal.ScreenSpaceLensFlare
+function UnityEngine.Rendering.Universal.ScreenSpaceLensFlare.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.ScreenSpaceLensFlare:IsActive() end
+---@return boolean
+function UnityEngine.Rendering.Universal.ScreenSpaceLensFlare:IsStreaksActive() end
+
+---@class UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter : UnityEngine.Rendering.VolumeParameter
+---@field value UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution]
+UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter
+CS.UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter = UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter
+
+---@param value UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolution
+---@param overrideState boolean
+---@return UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter
+function UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter.New(value, overrideState) end
+
+---@class UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights : UnityEngine.Rendering.VolumeComponent
+---@field shadows UnityEngine.Rendering.Vector4Parameter
+---@field midtones UnityEngine.Rendering.Vector4Parameter
+---@field highlights UnityEngine.Rendering.Vector4Parameter
+---@field shadowsStart UnityEngine.Rendering.MinFloatParameter
+---@field shadowsEnd UnityEngine.Rendering.MinFloatParameter
+---@field highlightsStart UnityEngine.Rendering.MinFloatParameter
+---@field highlightsEnd UnityEngine.Rendering.MinFloatParameter
+UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights = {}
+---@alias CS.UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights
+CS.UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights = UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights
+
+---@return UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights
+function UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.SplitToning : UnityEngine.Rendering.VolumeComponent
+---@field shadows UnityEngine.Rendering.ColorParameter
+---@field highlights UnityEngine.Rendering.ColorParameter
+---@field balance UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.SplitToning = {}
+---@alias CS.UnityEngine.Rendering.Universal.SplitToning UnityEngine.Rendering.Universal.SplitToning
+CS.UnityEngine.Rendering.Universal.SplitToning = UnityEngine.Rendering.Universal.SplitToning
+
+---@return UnityEngine.Rendering.Universal.SplitToning
+function UnityEngine.Rendering.Universal.SplitToning.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.SplitToning:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.TonemappingMode
+---@field None UnityEngine.Rendering.Universal.TonemappingMode
+---@field Neutral UnityEngine.Rendering.Universal.TonemappingMode
+---@field ACES UnityEngine.Rendering.Universal.TonemappingMode
+UnityEngine.Rendering.Universal.TonemappingMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.TonemappingMode UnityEngine.Rendering.Universal.TonemappingMode
+CS.UnityEngine.Rendering.Universal.TonemappingMode = UnityEngine.Rendering.Universal.TonemappingMode
+
+
+---@class UnityEngine.Rendering.Universal.NeutralRangeReductionMode
+---@field Reinhard UnityEngine.Rendering.Universal.NeutralRangeReductionMode
+---@field BT2390 UnityEngine.Rendering.Universal.NeutralRangeReductionMode
+UnityEngine.Rendering.Universal.NeutralRangeReductionMode = {}
+---@alias CS.UnityEngine.Rendering.Universal.NeutralRangeReductionMode UnityEngine.Rendering.Universal.NeutralRangeReductionMode
+CS.UnityEngine.Rendering.Universal.NeutralRangeReductionMode = UnityEngine.Rendering.Universal.NeutralRangeReductionMode
+
+
+---@class UnityEngine.Rendering.Universal.HDRACESPreset
+---@field ACES1000Nits UnityEngine.Rendering.Universal.HDRACESPreset
+---@field ACES2000Nits UnityEngine.Rendering.Universal.HDRACESPreset
+---@field ACES4000Nits UnityEngine.Rendering.Universal.HDRACESPreset
+UnityEngine.Rendering.Universal.HDRACESPreset = {}
+---@alias CS.UnityEngine.Rendering.Universal.HDRACESPreset UnityEngine.Rendering.Universal.HDRACESPreset
+CS.UnityEngine.Rendering.Universal.HDRACESPreset = UnityEngine.Rendering.Universal.HDRACESPreset
+
+
+---@class UnityEngine.Rendering.Universal.Tonemapping : UnityEngine.Rendering.VolumeComponent
+---@field mode UnityEngine.Rendering.Universal.TonemappingModeParameter
+---@field neutralHDRRangeReductionMode UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter
+---@field acesPreset UnityEngine.Rendering.Universal.HDRACESPresetParameter
+---@field hueShiftAmount UnityEngine.Rendering.ClampedFloatParameter
+---@field detectPaperWhite UnityEngine.Rendering.BoolParameter
+---@field paperWhite UnityEngine.Rendering.ClampedFloatParameter
+---@field detectBrightnessLimits UnityEngine.Rendering.BoolParameter
+---@field minNits UnityEngine.Rendering.ClampedFloatParameter
+---@field maxNits UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.Tonemapping = {}
+---@alias CS.UnityEngine.Rendering.Universal.Tonemapping UnityEngine.Rendering.Universal.Tonemapping
+CS.UnityEngine.Rendering.Universal.Tonemapping = UnityEngine.Rendering.Universal.Tonemapping
+
+---@return UnityEngine.Rendering.Universal.Tonemapping
+function UnityEngine.Rendering.Universal.Tonemapping.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.Tonemapping:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.TonemappingModeParameter : UnityEngine.Rendering.VolumeParameter
+---@field value UnityEngine.Rendering.Universal.TonemappingModeParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.Universal.TonemappingMode]
+UnityEngine.Rendering.Universal.TonemappingModeParameter = {}
+---@alias CS.UnityEngine.Rendering.Universal.TonemappingModeParameter UnityEngine.Rendering.Universal.TonemappingModeParameter
+CS.UnityEngine.Rendering.Universal.TonemappingModeParameter = UnityEngine.Rendering.Universal.TonemappingModeParameter
+
+---@param value UnityEngine.Rendering.Universal.TonemappingMode
+---@param overrideState boolean
+---@return UnityEngine.Rendering.Universal.TonemappingModeParameter
+function UnityEngine.Rendering.Universal.TonemappingModeParameter.New(value, overrideState) end
+
+---@class UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter : UnityEngine.Rendering.VolumeParameter
+---@field value UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.Universal.NeutralRangeReductionMode]
+UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter = {}
+---@alias CS.UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter
+CS.UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter = UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter
+
+---@param value UnityEngine.Rendering.Universal.NeutralRangeReductionMode
+---@param overrideState boolean
+---@return UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter
+function UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter.New(value, overrideState) end
+
+---@class UnityEngine.Rendering.Universal.HDRACESPresetParameter : UnityEngine.Rendering.VolumeParameter
+---@field value UnityEngine.Rendering.Universal.HDRACESPresetParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.Universal.HDRACESPreset]
+UnityEngine.Rendering.Universal.HDRACESPresetParameter = {}
+---@alias CS.UnityEngine.Rendering.Universal.HDRACESPresetParameter UnityEngine.Rendering.Universal.HDRACESPresetParameter
+CS.UnityEngine.Rendering.Universal.HDRACESPresetParameter = UnityEngine.Rendering.Universal.HDRACESPresetParameter
+
+---@param value UnityEngine.Rendering.Universal.HDRACESPreset
+---@param overrideState boolean
+---@return UnityEngine.Rendering.Universal.HDRACESPresetParameter
+function UnityEngine.Rendering.Universal.HDRACESPresetParameter.New(value, overrideState) end
+
+---@class UnityEngine.Rendering.Universal.Vignette : UnityEngine.Rendering.VolumeComponent
+---@field color UnityEngine.Rendering.ColorParameter
+---@field center UnityEngine.Rendering.Vector2Parameter
+---@field intensity UnityEngine.Rendering.ClampedFloatParameter
+---@field smoothness UnityEngine.Rendering.ClampedFloatParameter
+---@field rounded UnityEngine.Rendering.BoolParameter
+UnityEngine.Rendering.Universal.Vignette = {}
+---@alias CS.UnityEngine.Rendering.Universal.Vignette UnityEngine.Rendering.Universal.Vignette
+CS.UnityEngine.Rendering.Universal.Vignette = UnityEngine.Rendering.Universal.Vignette
+
+---@return UnityEngine.Rendering.Universal.Vignette
+function UnityEngine.Rendering.Universal.Vignette.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.Vignette:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.WhiteBalance : UnityEngine.Rendering.VolumeComponent
+---@field temperature UnityEngine.Rendering.ClampedFloatParameter
+---@field tint UnityEngine.Rendering.ClampedFloatParameter
+UnityEngine.Rendering.Universal.WhiteBalance = {}
+---@alias CS.UnityEngine.Rendering.Universal.WhiteBalance UnityEngine.Rendering.Universal.WhiteBalance
+CS.UnityEngine.Rendering.Universal.WhiteBalance = UnityEngine.Rendering.Universal.WhiteBalance
+
+---@return UnityEngine.Rendering.Universal.WhiteBalance
+function UnityEngine.Rendering.Universal.WhiteBalance.New() end
+---@return boolean
+function UnityEngine.Rendering.Universal.WhiteBalance:IsActive() end
+
+---@class UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout : System.ValueType
+UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout = {}
+---@alias CS.UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout
+CS.UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout = UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout
+
+---@param lightData UnityEngine.Rendering.Universal.UniversalLightData
+---@param shadowData UnityEngine.Rendering.Universal.UniversalShadowData
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@return UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout
+function UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.New(lightData, shadowData, cameraData) end
+function UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ClearStaticCaches() end
+---@return number
+function UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout:GetTotalShadowSlicesCount() end
+---@return number
+function UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout:GetTotalShadowResolutionRequestCount() end
+---@return boolean
+function UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout:HasTooManyShadowMaps() end
+---@return number
+function UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout:GetShadowSlicesScaleFactor() end
+---@return number
+function UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout:GetAtlasSize() end
+---@param originalVisibleLightIndex number
+---@return boolean
+function UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout:HasSpaceForLight(originalVisibleLightIndex) end
+---@param sortedShadowResolutionRequestIndex number
+---@return UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest
+function UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout:GetSortedShadowResolutionRequest(sortedShadowResolutionRequestIndex) end
+---@param originalVisibleLightIndex number
+---@param sliceIndex number
+---@return UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest
+function UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout:GetSliceShadowResolutionRequest(originalVisibleLightIndex, sliceIndex) end
+
+---@class UnityEngine.Rendering.Universal.CapturePass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.CapturePass = {}
+---@alias CS.UnityEngine.Rendering.Universal.CapturePass UnityEngine.Rendering.Universal.CapturePass
+CS.UnityEngine.Rendering.Universal.CapturePass = UnityEngine.Rendering.Universal.CapturePass
+
+---@param evt UnityEngine.Rendering.Universal.RenderPassEvent
+---@return UnityEngine.Rendering.Universal.CapturePass
+function UnityEngine.Rendering.Universal.CapturePass.New(evt) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.Universal.CapturePass:RecordRenderGraph(renderGraph, frameData) end
+
+---@class UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass
+CS.UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass = UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass
+
+---@param evt UnityEngine.Rendering.Universal.RenderPassEvent
+---@param renderOffscreen boolean
+---@return UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass
+function UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.New(evt, renderOffscreen) end
+---@param ref_descriptor UnityEngine.RenderTextureDescriptor
+---@param cameraWidth number
+---@param cameraHeight number
+---@return ,UnityEngine.RenderTextureDescriptor
+function UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.ConfigureColorDescriptor(ref_descriptor, cameraWidth, cameraHeight) end
+---@param ref_descriptor UnityEngine.RenderTextureDescriptor
+---@param depthStencilFormat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@param cameraWidth number
+---@param cameraHeight number
+---@return ,UnityEngine.RenderTextureDescriptor
+function UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.ConfigureDepthDescriptor(ref_descriptor, depthStencilFormat, cameraWidth, cameraHeight) end
+function UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass:Dispose() end
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param depthStencilFormat UnityEngine.Experimental.Rendering.GraphicsFormat
+function UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass:Setup(cameraData, depthStencilFormat) end
+
+---@class UnityEngine.Rendering.Universal.HDRDebugViewPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.HDRDebugViewPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.HDRDebugViewPass UnityEngine.Rendering.Universal.HDRDebugViewPass
+CS.UnityEngine.Rendering.Universal.HDRDebugViewPass = UnityEngine.Rendering.Universal.HDRDebugViewPass
+
+---@param mat UnityEngine.Material
+---@return UnityEngine.Rendering.Universal.HDRDebugViewPass
+function UnityEngine.Rendering.Universal.HDRDebugViewPass.New(mat) end
+---@param ref_descriptor UnityEngine.RenderTextureDescriptor
+---@return ,UnityEngine.RenderTextureDescriptor
+function UnityEngine.Rendering.Universal.HDRDebugViewPass.ConfigureDescriptorForCIEPrepass(ref_descriptor) end
+function UnityEngine.Rendering.Universal.HDRDebugViewPass:Dispose() end
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param hdrdebugMode UnityEngine.Rendering.Universal.HDRDebugMode
+function UnityEngine.Rendering.Universal.HDRDebugViewPass:Setup(cameraData, hdrdebugMode) end
+
+---@class UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass
+CS.UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass = UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass
+
+---@param evt UnityEngine.Rendering.Universal.RenderPassEvent
+---@return UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass
+function UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass.New(evt) end
+
+---@class UnityEngine.Rendering.Universal.MotionVectorRenderPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+---@field k_MotionVectorsLightModeTag string
+UnityEngine.Rendering.Universal.MotionVectorRenderPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.MotionVectorRenderPass UnityEngine.Rendering.Universal.MotionVectorRenderPass
+CS.UnityEngine.Rendering.Universal.MotionVectorRenderPass = UnityEngine.Rendering.Universal.MotionVectorRenderPass
+
+
+---@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph : System.Object
+UnityEngine.Rendering.Universal.PostProcessPassRenderGraph = {}
+---@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph UnityEngine.Rendering.Universal.PostProcessPassRenderGraph
+CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph
+
+---@param data UnityEngine.Rendering.Universal.PostProcessData
+---@param requestPostProColorFormat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.New(data, requestPostProColorFormat) end
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:Cleanup() end
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:Dispose() end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param ref_activeCameraColor UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param out_stopNaNTarget UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderStopNaN(renderGraph, ref_activeCameraColor, out_stopNaNTarget) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param resourceData UnityEngine.Rendering.Universal.UniversalResourceData
+---@param antialiasingQuality UnityEngine.Rendering.Universal.AntialiasingQuality
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param out_SMAATarget UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderSMAA(renderGraph, resourceData, antialiasingQuality, ref_source, out_SMAATarget) end
+---@param rendergraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param uberMaterial UnityEngine.Material
+---@param ref_srcDesc UnityEngine.Rendering.RenderGraphModule.TextureDesc
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureDesc
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:UberPostSetupBloomPass(rendergraph, uberMaterial, ref_srcDesc) end
+---@param bloom UnityEngine.Rendering.Universal.Bloom
+---@param ref_bloomSourceDesc UnityEngine.Rendering.RenderGraphModule.TextureDesc
+---@return UnityEngine.Vector2Int,UnityEngine.Rendering.RenderGraphModule.TextureDesc
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:CalcBloomResolution(bloom, ref_bloomSourceDesc) end
+---@param bloom UnityEngine.Rendering.Universal.Bloom
+---@param bloomResolution UnityEngine.Vector2Int
+---@return number
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:CalcBloomMipCount(bloom, bloomResolution) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param out_destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param enableAlphaOutput boolean
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderBloomTexture(renderGraph, ref_source, out_destination, enableAlphaOutput) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param resourceData UnityEngine.Rendering.Universal.UniversalResourceData
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param out_destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderDoF(renderGraph, resourceData, cameraData, ref_source, out_destination) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param resourceData UnityEngine.Rendering.Universal.UniversalResourceData
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_dofMaterial UnityEngine.Material
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Material
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderDoFGaussian(renderGraph, resourceData, cameraData, ref_source, destination, ref_dofMaterial) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param resourceData UnityEngine.Rendering.Universal.UniversalResourceData
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_dofMaterial UnityEngine.Material
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Material
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderDoFBokeh(renderGraph, resourceData, cameraData, ref_source, ref_destination, ref_dofMaterial) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param camera UnityEngine.Camera
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param out_destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderPaniniProjection(renderGraph, camera, ref_source, out_destination) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param resourceData UnityEngine.Rendering.Universal.UniversalResourceData
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param out_destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderMotionBlur(renderGraph, resourceData, cameraData, ref_source, out_destination) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param resourceData UnityEngine.Rendering.Universal.UniversalResourceData
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param ref_destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_srcDesc UnityEngine.Rendering.RenderGraphModule.TextureDesc
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureDesc
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderLensFlareDataDriven(renderGraph, resourceData, cameraData, ref_destination, ref_srcDesc) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param camera UnityEngine.Camera
+---@param ref_srcDesc UnityEngine.Rendering.RenderGraphModule.TextureDesc
+---@param originalBloomTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param screenSpaceLensFlareBloomMipTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param sameBloomInputOutputTex boolean
+---@return UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureDesc
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderLensFlareScreenSpace(renderGraph, camera, ref_srcDesc, originalBloomTexture, screenSpaceLensFlareBloomMipTexture, sameBloomInputOutputTex) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_settings UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderFinalSetup(renderGraph, cameraData, ref_source, ref_destination, ref_settings) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_srcDesc UnityEngine.Rendering.RenderGraphModule.TextureDesc
+---@param ref_destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_dstDesc UnityEngine.Rendering.RenderGraphModule.TextureDesc
+---@param enableAlphaOutput boolean
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureDesc,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureDesc
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderFinalFSRScale(renderGraph, ref_source, ref_srcDesc, ref_destination, ref_dstDesc, enableAlphaOutput) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_overlayUITexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_postProcessingTarget UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_settings UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderFinalBlit(renderGraph, cameraData, ref_source, ref_overlayUITexture, ref_postProcessingTarget, ref_settings) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+---@param ref_source UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_overlayUITexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_postProcessingTarget UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param enableColorEncodingIfNeeded boolean
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderFinalPassRenderGraph(renderGraph, frameData, ref_source, ref_overlayUITexture, ref_postProcessingTarget, enableColorEncodingIfNeeded) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param postProcessingData UnityEngine.Rendering.Universal.UniversalPostProcessingData
+---@param ref_sourceTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_destTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_lutTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_bloomTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_overlayUITexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param requireHDROutput boolean
+---@param enableAlphaOutput boolean
+---@param hasFinalPass boolean
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderUberPost(renderGraph, frameData, cameraData, postProcessingData, ref_sourceTexture, ref_destTexture, ref_lutTexture, ref_bloomTexture, ref_overlayUITexture, requireHDROutput, enableAlphaOutput, hasFinalPass) end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+---@param ref_activeCameraColorTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_lutTexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_overlayUITexture UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param ref_postProcessingTarget UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param hasFinalPass boolean
+---@param resolveToDebugScreen boolean
+---@param enableColorEndingIfNeeded boolean
+---@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph:RenderPostProcessingRenderGraph(renderGraph, frameData, ref_activeCameraColorTexture, ref_lutTexture, ref_overlayUITexture, ref_postProcessingTarget, hasFinalPass, resolveToDebugScreen, enableColorEndingIfNeeded) end
+
+---@class UnityEngine.Rendering.Universal.PostProcessMaterialLibrary : System.Object
+---@field stopNaN UnityEngine.Material
+---@field subpixelMorphologicalAntialiasing UnityEngine.Material
+---@field gaussianDepthOfField UnityEngine.Material
+---@field gaussianDepthOfFieldCoC UnityEngine.Material
+---@field bokehDepthOfField UnityEngine.Material
+---@field bokehDepthOfFieldCoC UnityEngine.Material
+---@field temporalAntialiasing UnityEngine.Material
+---@field motionBlur UnityEngine.Material
+---@field paniniProjection UnityEngine.Material
+---@field bloom UnityEngine.Material
+---@field bloomUpsample UnityEngine.Material[]
+---@field lensFlareScreenSpace UnityEngine.Material
+---@field lensFlareDataDriven UnityEngine.Material
+---@field uber UnityEngine.Material
+---@field scalingSetup UnityEngine.Material
+---@field easu UnityEngine.Material
+---@field finalPass UnityEngine.Material
+---@field resources UnityEngine.Rendering.Universal.PostProcessData
+UnityEngine.Rendering.Universal.PostProcessMaterialLibrary = {}
+---@alias CS.UnityEngine.Rendering.Universal.PostProcessMaterialLibrary UnityEngine.Rendering.Universal.PostProcessMaterialLibrary
+CS.UnityEngine.Rendering.Universal.PostProcessMaterialLibrary = UnityEngine.Rendering.Universal.PostProcessMaterialLibrary
+
+---@param data UnityEngine.Rendering.Universal.PostProcessData
+---@return UnityEngine.Rendering.Universal.PostProcessMaterialLibrary
+function UnityEngine.Rendering.Universal.PostProcessMaterialLibrary.New(data) end
+
+---@class UnityEngine.Rendering.Universal.ProbeVolumeDebugPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.ProbeVolumeDebugPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.ProbeVolumeDebugPass UnityEngine.Rendering.Universal.ProbeVolumeDebugPass
+CS.UnityEngine.Rendering.Universal.ProbeVolumeDebugPass = UnityEngine.Rendering.Universal.ProbeVolumeDebugPass
+
+---@param evt UnityEngine.Rendering.Universal.RenderPassEvent
+---@param computeShader UnityEngine.ComputeShader
+---@return UnityEngine.Rendering.Universal.ProbeVolumeDebugPass
+function UnityEngine.Rendering.Universal.ProbeVolumeDebugPass.New(evt, computeShader) end
+
+---@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass
+CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass
+
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param frameData UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass:RecordRenderGraph(renderGraph, frameData) end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass:OnCameraCleanup(cmd) end
+function UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+---@field None UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+---@field Depth UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+---@field Normal UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+---@field Color UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+---@field Motion UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+UnityEngine.Rendering.Universal.ScriptableRenderPassInput = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderPassInput UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+CS.UnityEngine.Rendering.Universal.ScriptableRenderPassInput = UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+
+
+---@class UnityEngine.Rendering.Universal.RenderPassEvent
+---@field BeforeRendering UnityEngine.Rendering.Universal.RenderPassEvent
+---@field BeforeRenderingShadows UnityEngine.Rendering.Universal.RenderPassEvent
+---@field AfterRenderingShadows UnityEngine.Rendering.Universal.RenderPassEvent
+---@field BeforeRenderingPrePasses UnityEngine.Rendering.Universal.RenderPassEvent
+---@field AfterRenderingPrePasses UnityEngine.Rendering.Universal.RenderPassEvent
+---@field BeforeRenderingGbuffer UnityEngine.Rendering.Universal.RenderPassEvent
+---@field AfterRenderingGbuffer UnityEngine.Rendering.Universal.RenderPassEvent
+---@field BeforeRenderingDeferredLights UnityEngine.Rendering.Universal.RenderPassEvent
+---@field AfterRenderingDeferredLights UnityEngine.Rendering.Universal.RenderPassEvent
+---@field BeforeRenderingOpaques UnityEngine.Rendering.Universal.RenderPassEvent
+---@field AfterRenderingOpaques UnityEngine.Rendering.Universal.RenderPassEvent
+---@field BeforeRenderingSkybox UnityEngine.Rendering.Universal.RenderPassEvent
+---@field AfterRenderingSkybox UnityEngine.Rendering.Universal.RenderPassEvent
+---@field BeforeRenderingTransparents UnityEngine.Rendering.Universal.RenderPassEvent
+---@field AfterRenderingTransparents UnityEngine.Rendering.Universal.RenderPassEvent
+---@field BeforeRenderingPostProcessing UnityEngine.Rendering.Universal.RenderPassEvent
+---@field AfterRenderingPostProcessing UnityEngine.Rendering.Universal.RenderPassEvent
+---@field AfterRendering UnityEngine.Rendering.Universal.RenderPassEvent
+UnityEngine.Rendering.Universal.RenderPassEvent = {}
+---@alias CS.UnityEngine.Rendering.Universal.RenderPassEvent UnityEngine.Rendering.Universal.RenderPassEvent
+CS.UnityEngine.Rendering.Universal.RenderPassEvent = UnityEngine.Rendering.Universal.RenderPassEvent
+
+
+---@class UnityEngine.Rendering.Universal.FramebufferFetchEvent
+---@field None UnityEngine.Rendering.Universal.FramebufferFetchEvent
+---@field FetchGbufferInDeferred UnityEngine.Rendering.Universal.FramebufferFetchEvent
+UnityEngine.Rendering.Universal.FramebufferFetchEvent = {}
+---@alias CS.UnityEngine.Rendering.Universal.FramebufferFetchEvent UnityEngine.Rendering.Universal.FramebufferFetchEvent
+CS.UnityEngine.Rendering.Universal.FramebufferFetchEvent = UnityEngine.Rendering.Universal.FramebufferFetchEvent
+
+
+---@class UnityEngine.Rendering.Universal.RenderPassEventsEnumValues : System.Object
+---@field values System.Int32[]
+UnityEngine.Rendering.Universal.RenderPassEventsEnumValues = {}
+---@alias CS.UnityEngine.Rendering.Universal.RenderPassEventsEnumValues UnityEngine.Rendering.Universal.RenderPassEventsEnumValues
+CS.UnityEngine.Rendering.Universal.RenderPassEventsEnumValues = UnityEngine.Rendering.Universal.RenderPassEventsEnumValues
+
+
+---@class UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass : System.Object
+UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass
+CS.UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass = UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass
+
+function UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass:Dispose() end
+---@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@param context UnityEngine.Rendering.ScriptableRenderContext
+---@param depthTarget UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass:Render(renderGraph, context, depthTarget) end
+
+---@class UnityEngine.Rendering.Universal.TransparentSettingsPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+UnityEngine.Rendering.Universal.TransparentSettingsPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.TransparentSettingsPass UnityEngine.Rendering.Universal.TransparentSettingsPass
+CS.UnityEngine.Rendering.Universal.TransparentSettingsPass = UnityEngine.Rendering.Universal.TransparentSettingsPass
+
+---@param evt UnityEngine.Rendering.Universal.RenderPassEvent
+---@param shadowReceiveSupported boolean
+---@return UnityEngine.Rendering.Universal.TransparentSettingsPass
+function UnityEngine.Rendering.Universal.TransparentSettingsPass.New(evt, shadowReceiveSupported) end
+---@param rasterCommandBuffer UnityEngine.Rendering.RasterCommandBuffer
+function UnityEngine.Rendering.Universal.TransparentSettingsPass.ExecutePass(rasterCommandBuffer) end
+---@return boolean
+function UnityEngine.Rendering.Universal.TransparentSettingsPass:Setup() end
+
+---@class UnityEngine.Rendering.Universal.XRDepthMotionPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
+---@field k_MotionOnlyShaderTagIdName string
+UnityEngine.Rendering.Universal.XRDepthMotionPass = {}
+---@alias CS.UnityEngine.Rendering.Universal.XRDepthMotionPass UnityEngine.Rendering.Universal.XRDepthMotionPass
+CS.UnityEngine.Rendering.Universal.XRDepthMotionPass = UnityEngine.Rendering.Universal.XRDepthMotionPass
+
+---@param evt UnityEngine.Rendering.Universal.RenderPassEvent
+---@param xrMotionVector UnityEngine.Shader
+---@return UnityEngine.Rendering.Universal.XRDepthMotionPass
+function UnityEngine.Rendering.Universal.XRDepthMotionPass.New(evt, xrMotionVector) end
+---@param ref_cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@return ,UnityEngine.Rendering.Universal.UniversalCameraData
+function UnityEngine.Rendering.Universal.XRDepthMotionPass:Update(ref_cameraData) end
+function UnityEngine.Rendering.Universal.XRDepthMotionPass:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.PostProcessUtils : System.Object
+UnityEngine.Rendering.Universal.PostProcessUtils = {}
+---@alias CS.UnityEngine.Rendering.Universal.PostProcessUtils UnityEngine.Rendering.Universal.PostProcessUtils
+CS.UnityEngine.Rendering.Universal.PostProcessUtils = UnityEngine.Rendering.Universal.PostProcessUtils
+
+---@param data UnityEngine.Rendering.Universal.PostProcessData
+---@param index number
+---@param cameraPixelWidth number
+---@param cameraPixelHeight number
+---@param material UnityEngine.Material
+---@return number
+function UnityEngine.Rendering.Universal.PostProcessUtils.ConfigureDithering(data, index, cameraPixelWidth, cameraPixelHeight, material) end
+---@param data UnityEngine.Rendering.Universal.PostProcessData
+---@param settings UnityEngine.Rendering.Universal.FilmGrain
+---@param cameraPixelWidth number
+---@param cameraPixelHeight number
+---@param material UnityEngine.Material
+function UnityEngine.Rendering.Universal.PostProcessUtils.ConfigureFilmGrain(data, settings, cameraPixelWidth, cameraPixelHeight, material) end
+
+---@class UnityEngine.Rendering.Universal.ReflectionProbeManager : System.ValueType
+---@field atlasRT UnityEngine.RenderTexture
+---@field atlasRTHandle UnityEngine.Rendering.RTHandle
+UnityEngine.Rendering.Universal.ReflectionProbeManager = {}
+---@alias CS.UnityEngine.Rendering.Universal.ReflectionProbeManager UnityEngine.Rendering.Universal.ReflectionProbeManager
+CS.UnityEngine.Rendering.Universal.ReflectionProbeManager = UnityEngine.Rendering.Universal.ReflectionProbeManager
+
+---@return UnityEngine.Rendering.Universal.ReflectionProbeManager
+function UnityEngine.Rendering.Universal.ReflectionProbeManager.Create() end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+---@param ref_cullResults UnityEngine.Rendering.CullingResults
+---@return ,UnityEngine.Rendering.CullingResults
+function UnityEngine.Rendering.Universal.ReflectionProbeManager:UpdateGpuData(cmd, ref_cullResults) end
+function UnityEngine.Rendering.Universal.ReflectionProbeManager:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.DecalSurfaceData
+---@field Albedo UnityEngine.Rendering.Universal.DecalSurfaceData
+---@field AlbedoNormal UnityEngine.Rendering.Universal.DecalSurfaceData
+---@field AlbedoNormalMAOS UnityEngine.Rendering.Universal.DecalSurfaceData
+UnityEngine.Rendering.Universal.DecalSurfaceData = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalSurfaceData UnityEngine.Rendering.Universal.DecalSurfaceData
+CS.UnityEngine.Rendering.Universal.DecalSurfaceData = UnityEngine.Rendering.Universal.DecalSurfaceData
+
+
+---@class UnityEngine.Rendering.Universal.DecalTechnique
+---@field Invalid UnityEngine.Rendering.Universal.DecalTechnique
+---@field DBuffer UnityEngine.Rendering.Universal.DecalTechnique
+---@field ScreenSpace UnityEngine.Rendering.Universal.DecalTechnique
+---@field GBuffer UnityEngine.Rendering.Universal.DecalTechnique
+UnityEngine.Rendering.Universal.DecalTechnique = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalTechnique UnityEngine.Rendering.Universal.DecalTechnique
+CS.UnityEngine.Rendering.Universal.DecalTechnique = UnityEngine.Rendering.Universal.DecalTechnique
+
+
+---@class UnityEngine.Rendering.Universal.DecalTechniqueOption
+---@field Automatic UnityEngine.Rendering.Universal.DecalTechniqueOption
+---@field DBuffer UnityEngine.Rendering.Universal.DecalTechniqueOption
+---@field ScreenSpace UnityEngine.Rendering.Universal.DecalTechniqueOption
+UnityEngine.Rendering.Universal.DecalTechniqueOption = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalTechniqueOption UnityEngine.Rendering.Universal.DecalTechniqueOption
+CS.UnityEngine.Rendering.Universal.DecalTechniqueOption = UnityEngine.Rendering.Universal.DecalTechniqueOption
+
+
+---@class UnityEngine.Rendering.Universal.DBufferSettings : System.Object
+---@field surfaceData UnityEngine.Rendering.Universal.DecalSurfaceData
+UnityEngine.Rendering.Universal.DBufferSettings = {}
+---@alias CS.UnityEngine.Rendering.Universal.DBufferSettings UnityEngine.Rendering.Universal.DBufferSettings
+CS.UnityEngine.Rendering.Universal.DBufferSettings = UnityEngine.Rendering.Universal.DBufferSettings
+
+---@return UnityEngine.Rendering.Universal.DBufferSettings
+function UnityEngine.Rendering.Universal.DBufferSettings.New() end
+
+---@class UnityEngine.Rendering.Universal.DecalNormalBlend
+---@field Low UnityEngine.Rendering.Universal.DecalNormalBlend
+---@field Medium UnityEngine.Rendering.Universal.DecalNormalBlend
+---@field High UnityEngine.Rendering.Universal.DecalNormalBlend
+UnityEngine.Rendering.Universal.DecalNormalBlend = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalNormalBlend UnityEngine.Rendering.Universal.DecalNormalBlend
+CS.UnityEngine.Rendering.Universal.DecalNormalBlend = UnityEngine.Rendering.Universal.DecalNormalBlend
+
+
+---@class UnityEngine.Rendering.Universal.DecalScreenSpaceSettings : System.Object
+---@field normalBlend UnityEngine.Rendering.Universal.DecalNormalBlend
+UnityEngine.Rendering.Universal.DecalScreenSpaceSettings = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalScreenSpaceSettings UnityEngine.Rendering.Universal.DecalScreenSpaceSettings
+CS.UnityEngine.Rendering.Universal.DecalScreenSpaceSettings = UnityEngine.Rendering.Universal.DecalScreenSpaceSettings
+
+---@return UnityEngine.Rendering.Universal.DecalScreenSpaceSettings
+function UnityEngine.Rendering.Universal.DecalScreenSpaceSettings.New() end
+
+---@class UnityEngine.Rendering.Universal.DecalSettings : System.Object
+---@field technique UnityEngine.Rendering.Universal.DecalTechniqueOption
+---@field maxDrawDistance number
+---@field decalLayers boolean
+---@field dBufferSettings UnityEngine.Rendering.Universal.DBufferSettings
+---@field screenSpaceSettings UnityEngine.Rendering.Universal.DecalScreenSpaceSettings
+UnityEngine.Rendering.Universal.DecalSettings = {}
+---@alias CS.UnityEngine.Rendering.Universal.DecalSettings UnityEngine.Rendering.Universal.DecalSettings
+CS.UnityEngine.Rendering.Universal.DecalSettings = UnityEngine.Rendering.Universal.DecalSettings
+
+---@return UnityEngine.Rendering.Universal.DecalSettings
+function UnityEngine.Rendering.Universal.DecalSettings.New() end
+
+---@class UnityEngine.Rendering.Universal.SharedDecalEntityManager : System.Object
+UnityEngine.Rendering.Universal.SharedDecalEntityManager = {}
+---@alias CS.UnityEngine.Rendering.Universal.SharedDecalEntityManager UnityEngine.Rendering.Universal.SharedDecalEntityManager
+CS.UnityEngine.Rendering.Universal.SharedDecalEntityManager = UnityEngine.Rendering.Universal.SharedDecalEntityManager
+
+---@return UnityEngine.Rendering.Universal.SharedDecalEntityManager
+function UnityEngine.Rendering.Universal.SharedDecalEntityManager.New() end
+---@return UnityEngine.Rendering.Universal.DecalEntityManager
+function UnityEngine.Rendering.Universal.SharedDecalEntityManager:Get() end
+---@param decalEntityManager UnityEngine.Rendering.Universal.DecalEntityManager
+function UnityEngine.Rendering.Universal.SharedDecalEntityManager:Release(decalEntityManager) end
+function UnityEngine.Rendering.Universal.SharedDecalEntityManager:Dispose() end
+
+---@class UnityEngine.Rendering.Universal.DisallowMultipleRendererFeature : System.Attribute
+---@field customTitle string
+UnityEngine.Rendering.Universal.DisallowMultipleRendererFeature = {}
+---@alias CS.UnityEngine.Rendering.Universal.DisallowMultipleRendererFeature UnityEngine.Rendering.Universal.DisallowMultipleRendererFeature
+CS.UnityEngine.Rendering.Universal.DisallowMultipleRendererFeature = UnityEngine.Rendering.Universal.DisallowMultipleRendererFeature
+
+---@param customTitle string
+---@return UnityEngine.Rendering.Universal.DisallowMultipleRendererFeature
+function UnityEngine.Rendering.Universal.DisallowMultipleRendererFeature.New(customTitle) end
+
+---@class UnityEngine.Rendering.Universal.FullScreenPassRendererFeature : UnityEngine.Rendering.Universal.ScriptableRendererFeature
+---@field injectionPoint UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.InjectionPoint
+---@field fetchColorBuffer boolean
+---@field requirements UnityEngine.Rendering.Universal.ScriptableRenderPassInput
+---@field passMaterial UnityEngine.Material
+---@field passIndex number
+---@field bindDepthStencilAttachment boolean
+UnityEngine.Rendering.Universal.FullScreenPassRendererFeature = {}
+---@alias CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature UnityEngine.Rendering.Universal.FullScreenPassRendererFeature
+CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature = UnityEngine.Rendering.Universal.FullScreenPassRendererFeature
+
+---@return UnityEngine.Rendering.Universal.FullScreenPassRendererFeature
+function UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.New() end
+function UnityEngine.Rendering.Universal.FullScreenPassRendererFeature:Create() end
+---@param renderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@param ref_renderingData UnityEngine.Rendering.Universal.RenderingData
+---@return ,UnityEngine.Rendering.Universal.RenderingData
+function UnityEngine.Rendering.Universal.FullScreenPassRendererFeature:AddRenderPasses(renderer, ref_renderingData) end
+
+---@class UnityEngine.Rendering.Universal.OnTilePostProcessResource : System.Object
+---@field version number
+---@field uberPostShader UnityEngine.Shader
+UnityEngine.Rendering.Universal.OnTilePostProcessResource = {}
+---@alias CS.UnityEngine.Rendering.Universal.OnTilePostProcessResource UnityEngine.Rendering.Universal.OnTilePostProcessResource
+CS.UnityEngine.Rendering.Universal.OnTilePostProcessResource = UnityEngine.Rendering.Universal.OnTilePostProcessResource
+
+---@return UnityEngine.Rendering.Universal.OnTilePostProcessResource
+function UnityEngine.Rendering.Universal.OnTilePostProcessResource.New() end
+
+---@class UnityEngine.Rendering.Universal.RenderQueueType
+---@field Opaque UnityEngine.Rendering.Universal.RenderQueueType
+---@field Transparent UnityEngine.Rendering.Universal.RenderQueueType
+UnityEngine.Rendering.Universal.RenderQueueType = {}
+---@alias CS.UnityEngine.Rendering.Universal.RenderQueueType UnityEngine.Rendering.Universal.RenderQueueType
+CS.UnityEngine.Rendering.Universal.RenderQueueType = UnityEngine.Rendering.Universal.RenderQueueType
+
+
+---@class UnityEngine.Rendering.Universal.RenderObjects : UnityEngine.Rendering.Universal.ScriptableRendererFeature
+---@field settings UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings
+UnityEngine.Rendering.Universal.RenderObjects = {}
+---@alias CS.UnityEngine.Rendering.Universal.RenderObjects UnityEngine.Rendering.Universal.RenderObjects
+CS.UnityEngine.Rendering.Universal.RenderObjects = UnityEngine.Rendering.Universal.RenderObjects
+
+---@return UnityEngine.Rendering.Universal.RenderObjects
+function UnityEngine.Rendering.Universal.RenderObjects.New() end
+function UnityEngine.Rendering.Universal.RenderObjects:Create() end
+---@param renderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@param ref_renderingData UnityEngine.Rendering.Universal.RenderingData
+---@return ,UnityEngine.Rendering.Universal.RenderingData
+function UnityEngine.Rendering.Universal.RenderObjects:AddRenderPasses(renderer, ref_renderingData) end
+
+---@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings : System.Object
+UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings
+CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings
+
+---@return UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings
+function UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.New() end
+
+---@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPersistentResources : System.Object
+---@field Shader UnityEngine.Shader
+---@field isAvailableInPlayerBuild boolean
+---@field version number
+UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPersistentResources = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPersistentResources UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPersistentResources
+CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPersistentResources = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPersistentResources
+
+---@return UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPersistentResources
+function UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPersistentResources.New() end
+
+---@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionDynamicResources : System.Object
+---@field BlueNoise256Textures UnityEngine.Texture2D[]
+---@field isAvailableInPlayerBuild boolean
+---@field version number
+UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionDynamicResources = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionDynamicResources UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionDynamicResources
+CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionDynamicResources = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionDynamicResources
+
+---@return UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionDynamicResources
+function UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionDynamicResources.New() end
+
+---@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion : UnityEngine.Rendering.Universal.ScriptableRendererFeature
+UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion
+CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion
+
+---@return UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion
+function UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion.New() end
+function UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion:Create() end
+---@param renderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@param ref_renderingData UnityEngine.Rendering.Universal.RenderingData
+---@return ,UnityEngine.Rendering.Universal.RenderingData
+function UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion:AddRenderPasses(renderer, ref_renderingData) end
+
+---@class UnityEngine.Rendering.Universal.ScreenSpaceShadowsSettings : System.Object
+UnityEngine.Rendering.Universal.ScreenSpaceShadowsSettings = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceShadowsSettings UnityEngine.Rendering.Universal.ScreenSpaceShadowsSettings
+CS.UnityEngine.Rendering.Universal.ScreenSpaceShadowsSettings = UnityEngine.Rendering.Universal.ScreenSpaceShadowsSettings
+
+---@return UnityEngine.Rendering.Universal.ScreenSpaceShadowsSettings
+function UnityEngine.Rendering.Universal.ScreenSpaceShadowsSettings.New() end
+
+---@class UnityEngine.Rendering.Universal.ScreenSpaceShadows : UnityEngine.Rendering.Universal.ScriptableRendererFeature
+UnityEngine.Rendering.Universal.ScreenSpaceShadows = {}
+---@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceShadows UnityEngine.Rendering.Universal.ScreenSpaceShadows
+CS.UnityEngine.Rendering.Universal.ScreenSpaceShadows = UnityEngine.Rendering.Universal.ScreenSpaceShadows
+
+---@return UnityEngine.Rendering.Universal.ScreenSpaceShadows
+function UnityEngine.Rendering.Universal.ScreenSpaceShadows.New() end
+function UnityEngine.Rendering.Universal.ScreenSpaceShadows:Create() end
+---@param renderer UnityEngine.Rendering.Universal.ScriptableRenderer
+---@param ref_renderingData UnityEngine.Rendering.Universal.RenderingData
+---@return ,UnityEngine.Rendering.Universal.RenderingData
+function UnityEngine.Rendering.Universal.ScreenSpaceShadows:AddRenderPasses(renderer, ref_renderingData) end
+
+---@class UnityEngine.Rendering.Universal.RenderingLayerUtils : System.Object
+UnityEngine.Rendering.Universal.RenderingLayerUtils = {}
+---@alias CS.UnityEngine.Rendering.Universal.RenderingLayerUtils UnityEngine.Rendering.Universal.RenderingLayerUtils
+CS.UnityEngine.Rendering.Universal.RenderingLayerUtils = UnityEngine.Rendering.Universal.RenderingLayerUtils
+
+---@param isDeferred boolean
+---@param msaaSampleCount number
+---@param rendererEvent UnityEngine.Rendering.Universal.RenderingLayerUtils.Event
+---@param ref_combinedEvent UnityEngine.Rendering.Universal.RenderingLayerUtils.Event
+---@return ,UnityEngine.Rendering.Universal.RenderingLayerUtils.Event
+function UnityEngine.Rendering.Universal.RenderingLayerUtils.CombineRendererEvents(isDeferred, msaaSampleCount, rendererEvent, ref_combinedEvent) end
+---@param universalRenderer UnityEngine.Rendering.Universal.UniversalRenderer
+---@param rendererFeatures System.Collections.Generic.List
+---@param msaaSampleCount number
+---@param out_combinedEvent UnityEngine.Rendering.Universal.RenderingLayerUtils.Event
+---@param out_combinedMaskSize UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
+---@return boolean,UnityEngine.Rendering.Universal.RenderingLayerUtils.Event,UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
+function UnityEngine.Rendering.Universal.RenderingLayerUtils.RequireRenderingLayers(universalRenderer, rendererFeatures, msaaSampleCount, out_combinedEvent, out_combinedMaskSize) end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+---@param maskSize UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
+function UnityEngine.Rendering.Universal.RenderingLayerUtils.SetupProperties(cmd, maskSize) end
+---@param maskSize UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
+---@return UnityEngine.Experimental.Rendering.GraphicsFormat
+function UnityEngine.Rendering.Universal.RenderingLayerUtils.GetFormat(maskSize) end
+---@param renderingLayers number
+---@return number
+function UnityEngine.Rendering.Universal.RenderingLayerUtils.ToValidRenderingLayers(renderingLayers) end
+
+---@class UnityEngine.Rendering.Universal.RenderingUtils : System.Object
+UnityEngine.Rendering.Universal.RenderingUtils = {}
+---@alias CS.UnityEngine.Rendering.Universal.RenderingUtils UnityEngine.Rendering.Universal.RenderingUtils
+CS.UnityEngine.Rendering.Universal.RenderingUtils = UnityEngine.Rendering.Universal.RenderingUtils
+
+---@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, viewMatrix: UnityEngine.Matrix4x4, projectionMatrix: UnityEngine.Matrix4x4, setInverseMatrices: boolean)
+---@param cmd UnityEngine.Rendering.RasterCommandBuffer
+---@param viewMatrix UnityEngine.Matrix4x4
+---@param projectionMatrix UnityEngine.Matrix4x4
+---@param setInverseMatrices boolean
+function UnityEngine.Rendering.Universal.RenderingUtils.SetViewAndProjectionMatrices(cmd, viewMatrix, projectionMatrix, setInverseMatrices) end
+---@param format UnityEngine.RenderTextureFormat
+---@return boolean
+function UnityEngine.Rendering.Universal.RenderingUtils.SupportsRenderTextureFormat(format) end
+---@overload fun(ref_handle: UnityEngine.Rendering.RTHandle, ref_descriptor: UnityEngine.RenderTextureDescriptor, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, anisoLevel: number, mipMapBias: number, name: string) : boolean, UnityEngine.Rendering.RTHandle, UnityEngine.RenderTextureDescriptor
+---@overload fun(ref_handle: UnityEngine.Rendering.RTHandle, descriptor: UnityEngine.Rendering.RenderGraphModule.TextureDesc, name: string) : boolean, UnityEngine.Rendering.RTHandle
+---@overload fun(ref_handle: UnityEngine.Rendering.RTHandle, scaleFactor: UnityEngine.Vector2, ref_descriptor: UnityEngine.RenderTextureDescriptor, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, anisoLevel: number, mipMapBias: number, name: string) : boolean, UnityEngine.Rendering.RTHandle, UnityEngine.RenderTextureDescriptor
+---@param ref_handle UnityEngine.Rendering.RTHandle
+---@param scaleFunc UnityEngine.Rendering.ScaleFunc
+---@param ref_descriptor UnityEngine.RenderTextureDescriptor
+---@param filterMode UnityEngine.FilterMode
+---@param wrapMode UnityEngine.TextureWrapMode
+---@param anisoLevel number
+---@param mipMapBias number
+---@param name string
+---@return boolean,UnityEngine.Rendering.RTHandle,UnityEngine.RenderTextureDescriptor
+function UnityEngine.Rendering.Universal.RenderingUtils.ReAllocateHandleIfNeeded(ref_handle, scaleFunc, ref_descriptor, filterMode, wrapMode, anisoLevel, mipMapBias, name) end
+---@param capacity number
+---@return boolean
+function UnityEngine.Rendering.Universal.RenderingUtils.SetMaxRTHandlePoolCapacity(capacity) end
+---@overload fun(shaderTagId: UnityEngine.Rendering.ShaderTagId, ref_renderingData: UnityEngine.Rendering.Universal.RenderingData, sortingCriteria: UnityEngine.Rendering.SortingCriteria) : UnityEngine.Rendering.DrawingSettings, UnityEngine.Rendering.Universal.RenderingData
+---@overload fun(shaderTagId: UnityEngine.Rendering.ShaderTagId, renderingData: UnityEngine.Rendering.Universal.UniversalRenderingData, cameraData: UnityEngine.Rendering.Universal.UniversalCameraData, lightData: UnityEngine.Rendering.Universal.UniversalLightData, sortingCriteria: UnityEngine.Rendering.SortingCriteria) : UnityEngine.Rendering.DrawingSettings
+---@overload fun(shaderTagIdList: System.Collections.Generic.List, ref_renderingData: UnityEngine.Rendering.Universal.RenderingData, sortingCriteria: UnityEngine.Rendering.SortingCriteria) : UnityEngine.Rendering.DrawingSettings, UnityEngine.Rendering.Universal.RenderingData
+---@param shaderTagIdList System.Collections.Generic.List
+---@param renderingData UnityEngine.Rendering.Universal.UniversalRenderingData
+---@param cameraData UnityEngine.Rendering.Universal.UniversalCameraData
+---@param lightData UnityEngine.Rendering.Universal.UniversalLightData
+---@param sortingCriteria UnityEngine.Rendering.SortingCriteria
+---@return UnityEngine.Rendering.DrawingSettings
+function UnityEngine.Rendering.Universal.RenderingUtils.CreateDrawingSettings(shaderTagIdList, renderingData, cameraData, lightData, sortingCriteria) end
+
+---@class UnityEngine.Rendering.Universal.Renderer2DResources : System.Object
+---@field version number
+UnityEngine.Rendering.Universal.Renderer2DResources = {}
+---@alias CS.UnityEngine.Rendering.Universal.Renderer2DResources UnityEngine.Rendering.Universal.Renderer2DResources
+CS.UnityEngine.Rendering.Universal.Renderer2DResources = UnityEngine.Rendering.Universal.Renderer2DResources
+
+---@return UnityEngine.Rendering.Universal.Renderer2DResources
+function UnityEngine.Rendering.Universal.Renderer2DResources.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRendererResources : System.Object
+---@field version number
+---@field copyDepthPS UnityEngine.Shader
+---@field cameraMotionVector UnityEngine.Shader
+---@field stencilDeferredPS UnityEngine.Shader
+---@field clusterDeferred UnityEngine.Shader
+---@field stencilDitherMaskSeedPS UnityEngine.Shader
+---@field decalDBufferClear UnityEngine.Shader
+UnityEngine.Rendering.Universal.UniversalRendererResources = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRendererResources UnityEngine.Rendering.Universal.UniversalRendererResources
+CS.UnityEngine.Rendering.Universal.UniversalRendererResources = UnityEngine.Rendering.Universal.UniversalRendererResources
+
+---@return UnityEngine.Rendering.Universal.UniversalRendererResources
+function UnityEngine.Rendering.Universal.UniversalRendererResources.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugShaders : System.Object
+---@field version number
+---@field debugReplacementPS UnityEngine.Shader
+---@field hdrDebugViewPS UnityEngine.Shader
+---@field probeVolumeSamplingDebugComputeShader UnityEngine.ComputeShader
+UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugShaders = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugShaders UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugShaders
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugShaders = UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugShaders
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugShaders
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugShaders.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorAssets : System.Object
+---@field version number
+---@field defaultVolumeProfile UnityEngine.Rendering.VolumeProfile
+UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorAssets = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorAssets UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorAssets
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorAssets = UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorAssets
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorAssets
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorAssets.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorMaterials : System.Object
+---@field version number
+---@field defaultMaterial UnityEngine.Material
+---@field defaultParticleUnlitMaterial UnityEngine.Material
+---@field defaultLineMaterial UnityEngine.Material
+---@field defaultTerrainLitMaterial UnityEngine.Material
+---@field defaultDecalMaterial UnityEngine.Material
+---@field defaultSpriteMaterial UnityEngine.Material
+UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorMaterials = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorMaterials UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorMaterials
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorMaterials = UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorMaterials
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorMaterials
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorMaterials.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorShaders : System.Object
+---@field version number
+---@field autodeskInteractiveShader UnityEngine.Shader
+---@field autodeskInteractiveTransparentShader UnityEngine.Shader
+---@field autodeskInteractiveMaskedShader UnityEngine.Shader
+---@field defaultSpeedTree7Shader UnityEngine.Shader
+---@field defaultSpeedTree8Shader UnityEngine.Shader
+---@field defaultSpeedTree9Shader UnityEngine.Shader
+UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorShaders = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorShaders UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorShaders
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorShaders = UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorShaders
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorShaders
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorShaders.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeShaders : System.Object
+---@field version number
+---@field fallbackErrorShader UnityEngine.Shader
+---@field blitHDROverlay UnityEngine.Shader
+---@field coreBlitPS UnityEngine.Shader
+---@field coreBlitColorAndDepthPS UnityEngine.Shader
+---@field samplingPS UnityEngine.Shader
+---@field terrainDetailLitShader UnityEngine.Shader
+---@field terrainDetailGrassBillboardShader UnityEngine.Shader
+---@field terrainDetailGrassShader UnityEngine.Shader
+UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeShaders = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeShaders UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeShaders
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeShaders = UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeShaders
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeShaders
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeShaders.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeTextures : System.Object
+---@field version number
+---@field blueNoise64LTex UnityEngine.Texture2D
+---@field bayerMatrixTex UnityEngine.Texture2D
+---@field debugFontTexture UnityEngine.Texture2D
+---@field stencilDitherTex UnityEngine.Texture2D
+UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeTextures = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeTextures UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeTextures
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeTextures = UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeTextures
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeTextures
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeTextures.New() end
+
+---@class UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeXRResources : System.Object
+---@field version number
+---@field xrOcclusionMeshPS UnityEngine.Shader
+---@field xrMirrorViewPS UnityEngine.Shader
+---@field xrMotionVector UnityEngine.Shader
+UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeXRResources = {}
+---@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeXRResources UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeXRResources
+CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeXRResources = UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeXRResources
+
+---@return UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeXRResources
+function UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeXRResources.New() end
+
+---@class UnityEngine.Rendering.Universal.RenderTargetHandle : System.ValueType
+---@field CameraTarget UnityEngine.Rendering.Universal.RenderTargetHandle
+---@field id number
+UnityEngine.Rendering.Universal.RenderTargetHandle = {}
+---@alias CS.UnityEngine.Rendering.Universal.RenderTargetHandle UnityEngine.Rendering.Universal.RenderTargetHandle
+CS.UnityEngine.Rendering.Universal.RenderTargetHandle = UnityEngine.Rendering.Universal.RenderTargetHandle
+
+---@overload fun(renderTargetIdentifier: UnityEngine.Rendering.RenderTargetIdentifier) : UnityEngine.Rendering.Universal.RenderTargetHandle
+---@param rtHandle UnityEngine.Rendering.RTHandle
+---@return UnityEngine.Rendering.Universal.RenderTargetHandle
+function UnityEngine.Rendering.Universal.RenderTargetHandle.New(rtHandle) end
+---@overload fun(self: UnityEngine.Rendering.Universal.RenderTargetHandle, shaderProperty: string)
+---@param renderTargetIdentifier UnityEngine.Rendering.RenderTargetIdentifier
+function UnityEngine.Rendering.Universal.RenderTargetHandle:Init(renderTargetIdentifier) end
+---@return UnityEngine.Rendering.RenderTargetIdentifier
+function UnityEngine.Rendering.Universal.RenderTargetHandle:Identifier() end
+---@return boolean
+function UnityEngine.Rendering.Universal.RenderTargetHandle:HasInternalRenderTargetId() end
+---@overload fun(self: UnityEngine.Rendering.Universal.RenderTargetHandle, other: UnityEngine.Rendering.Universal.RenderTargetHandle) : boolean
+---@param obj System.Object
+---@return boolean
+function UnityEngine.Rendering.Universal.RenderTargetHandle:Equals(obj) end
+---@return number
+function UnityEngine.Rendering.Universal.RenderTargetHandle:GetHashCode() end
+
+---@class UnityEngine.Rendering.Universal.RTHandleResourcePool : System.Object
+UnityEngine.Rendering.Universal.RTHandleResourcePool = {}
+---@alias CS.UnityEngine.Rendering.Universal.RTHandleResourcePool UnityEngine.Rendering.Universal.RTHandleResourcePool
+CS.UnityEngine.Rendering.Universal.RTHandleResourcePool = UnityEngine.Rendering.Universal.RTHandleResourcePool
+
+---@return UnityEngine.Rendering.Universal.RTHandleResourcePool
+function UnityEngine.Rendering.Universal.RTHandleResourcePool.New() end
+
+---@class UnityEngine.Rendering.Universal.SampleCount
+---@field One UnityEngine.Rendering.Universal.SampleCount
+---@field Two UnityEngine.Rendering.Universal.SampleCount
+---@field Four UnityEngine.Rendering.Universal.SampleCount
+UnityEngine.Rendering.Universal.SampleCount = {}
+---@alias CS.UnityEngine.Rendering.Universal.SampleCount UnityEngine.Rendering.Universal.SampleCount
+CS.UnityEngine.Rendering.Universal.SampleCount = UnityEngine.Rendering.Universal.SampleCount
+
+
+---@class UnityEngine.Rendering.Universal.RenderGraphSettings : System.Object
+---@field version number
+---@field enableRenderCompatibilityMode boolean
+UnityEngine.Rendering.Universal.RenderGraphSettings = {}
+---@alias CS.UnityEngine.Rendering.Universal.RenderGraphSettings UnityEngine.Rendering.Universal.RenderGraphSettings
+CS.UnityEngine.Rendering.Universal.RenderGraphSettings = UnityEngine.Rendering.Universal.RenderGraphSettings
+
+---@return UnityEngine.Rendering.Universal.RenderGraphSettings
+function UnityEngine.Rendering.Universal.RenderGraphSettings.New() end
+
+---@class UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings : System.Object
+---@field version number
+---@field volumeProfile UnityEngine.Rendering.VolumeProfile
+UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings = {}
+---@alias CS.UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings
+CS.UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings = UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings
+
+---@return UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings
+function UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings.New() end
+
+---@class UnityEngine.Rendering.Universal.ResetImplementation : System.ValueType
+UnityEngine.Rendering.Universal.ResetImplementation = {}
+---@alias CS.UnityEngine.Rendering.Universal.ResetImplementation UnityEngine.Rendering.Universal.ResetImplementation
+CS.UnityEngine.Rendering.Universal.ResetImplementation = UnityEngine.Rendering.Universal.ResetImplementation
+
+---@param setting UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings
+---@param _ UnityEditor.SerializedProperty
+---@param ref_menu UnityEditor.GenericMenu
+---@return ,UnityEditor.GenericMenu
+function UnityEngine.Rendering.Universal.ResetImplementation:PopulateContextMenu(setting, _, ref_menu) end
+
+---@class UnityEngine.Rendering.Universal.URPShaderStrippingSetting : System.Object
+---@field version number
+---@field stripUnusedPostProcessingVariants boolean
+---@field stripUnusedVariants boolean
+---@field stripScreenCoordOverrideVariants boolean
+UnityEngine.Rendering.Universal.URPShaderStrippingSetting = {}
+---@alias CS.UnityEngine.Rendering.Universal.URPShaderStrippingSetting UnityEngine.Rendering.Universal.URPShaderStrippingSetting
+CS.UnityEngine.Rendering.Universal.URPShaderStrippingSetting = UnityEngine.Rendering.Universal.URPShaderStrippingSetting
+
+---@return UnityEngine.Rendering.Universal.URPShaderStrippingSetting
+function UnityEngine.Rendering.Universal.URPShaderStrippingSetting.New() end
+
+---@class UnityEngine.Rendering.Universal.ShaderBitArray : System.ValueType
+---@field elemLength number
+---@field bitCapacity number
+---@field data System.Single[]
+---@field Item boolean
+UnityEngine.Rendering.Universal.ShaderBitArray = {}
+---@alias CS.UnityEngine.Rendering.Universal.ShaderBitArray UnityEngine.Rendering.Universal.ShaderBitArray
+CS.UnityEngine.Rendering.Universal.ShaderBitArray = UnityEngine.Rendering.Universal.ShaderBitArray
+
+---@param bitCount number
+function UnityEngine.Rendering.Universal.ShaderBitArray:Resize(bitCount) end
+function UnityEngine.Rendering.Universal.ShaderBitArray:Clear() end
+---@return string
+function UnityEngine.Rendering.Universal.ShaderBitArray:ToString() end
+
 ---@class UnityEngine.Rendering.Universal.ShaderData : System.Object
 UnityEngine.Rendering.Universal.ShaderData = {}
 ---@alias CS.UnityEngine.Rendering.Universal.ShaderData UnityEngine.Rendering.Universal.ShaderData
@@ -1839,3169 +5008,3 @@ CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.TaaDebugMode = 
 UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.Strings = {}
 ---@alias CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.Strings UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.Strings
 CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.Strings = UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.Strings
-
-
----@class UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.WidgetFactory : System.Object
-UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.WidgetFactory = {}
----@alias CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.WidgetFactory UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.WidgetFactory
-CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.WidgetFactory = UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.WidgetFactory
-
-
----@class UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.SettingsPanel : UnityEngine.Rendering.DebugDisplaySettingsPanel
----@field data UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.SettingsPanel -- infered from UnityEngine.Rendering.DebugDisplaySettingsPanel`1[UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering]
-UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.SettingsPanel = {}
----@alias CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.SettingsPanel UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.SettingsPanel
-CS.UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.SettingsPanel = UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.SettingsPanel
-
----@param data UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering
----@return UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.SettingsPanel
-function UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering.SettingsPanel.New(data) end
-
----@class UnityEngine.Rendering.Universal.DebugHandler.DebugFinalValidationPassData : System.Object
----@field isFinalPass boolean
----@field resolveFinalTarget boolean
----@field isActiveForCamera boolean
----@field hasDebugRenderTarget boolean
----@field debugRenderTargetHandle UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@field debugTexturePropertyId number
----@field debugRenderTargetPixelRect UnityEngine.Vector4
----@field debugRenderTargetSupportsStereo number
----@field debugRenderTargetRangeRemap UnityEngine.Vector4
----@field debugFontTextureHandle UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@field renderingSettings UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering
-UnityEngine.Rendering.Universal.DebugHandler.DebugFinalValidationPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.DebugHandler.DebugFinalValidationPassData UnityEngine.Rendering.Universal.DebugHandler.DebugFinalValidationPassData
-CS.UnityEngine.Rendering.Universal.DebugHandler.DebugFinalValidationPassData = UnityEngine.Rendering.Universal.DebugHandler.DebugFinalValidationPassData
-
----@return UnityEngine.Rendering.Universal.DebugHandler.DebugFinalValidationPassData
-function UnityEngine.Rendering.Universal.DebugHandler.DebugFinalValidationPassData.New() end
-
----@class UnityEngine.Rendering.Universal.DebugHandler.DebugSetupPassData : System.Object
----@field isActiveForCamera boolean
----@field materialSettings UnityEngine.Rendering.Universal.DebugDisplaySettingsMaterial
----@field renderingSettings UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering
----@field lightingSettings UnityEngine.Rendering.Universal.DebugDisplaySettingsLighting
-UnityEngine.Rendering.Universal.DebugHandler.DebugSetupPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.DebugHandler.DebugSetupPassData UnityEngine.Rendering.Universal.DebugHandler.DebugSetupPassData
-CS.UnityEngine.Rendering.Universal.DebugHandler.DebugSetupPassData = UnityEngine.Rendering.Universal.DebugHandler.DebugSetupPassData
-
----@return UnityEngine.Rendering.Universal.DebugHandler.DebugSetupPassData
-function UnityEngine.Rendering.Universal.DebugHandler.DebugSetupPassData.New() end
-
----@class UnityEngine.Rendering.Universal.DBufferRenderPass.PassData : System.Object
-UnityEngine.Rendering.Universal.DBufferRenderPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.DBufferRenderPass.PassData UnityEngine.Rendering.Universal.DBufferRenderPass.PassData
-CS.UnityEngine.Rendering.Universal.DBufferRenderPass.PassData = UnityEngine.Rendering.Universal.DBufferRenderPass.PassData
-
----@return UnityEngine.Rendering.Universal.DBufferRenderPass.PassData
-function UnityEngine.Rendering.Universal.DBufferRenderPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.DecalForwardEmissivePass.PassData : System.Object
-UnityEngine.Rendering.Universal.DecalForwardEmissivePass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.DecalForwardEmissivePass.PassData UnityEngine.Rendering.Universal.DecalForwardEmissivePass.PassData
-CS.UnityEngine.Rendering.Universal.DecalForwardEmissivePass.PassData = UnityEngine.Rendering.Universal.DecalForwardEmissivePass.PassData
-
----@return UnityEngine.Rendering.Universal.DecalForwardEmissivePass.PassData
-function UnityEngine.Rendering.Universal.DecalForwardEmissivePass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.DecalPreviewPass.PassData : System.Object
-UnityEngine.Rendering.Universal.DecalPreviewPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.DecalPreviewPass.PassData UnityEngine.Rendering.Universal.DecalPreviewPass.PassData
-CS.UnityEngine.Rendering.Universal.DecalPreviewPass.PassData = UnityEngine.Rendering.Universal.DecalPreviewPass.PassData
-
----@return UnityEngine.Rendering.Universal.DecalPreviewPass.PassData
-function UnityEngine.Rendering.Universal.DecalPreviewPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction : System.MulticastDelegate
-UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction = {}
----@alias CS.UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction
-CS.UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction = UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction
-function UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction.New(object, method) end
----@param decalProjector UnityEngine.Rendering.Universal.DecalProjector
-function UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction:Invoke(decalProjector) end
----@param decalProjector UnityEngine.Rendering.Universal.DecalProjector
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction:BeginInvoke(decalProjector, callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.Rendering.Universal.DecalProjector.DecalProjectorAction:EndInvoke(result) end
-
----@class UnityEngine.Rendering.Universal.DecalProjector.Version
----@field Initial UnityEngine.Rendering.Universal.DecalProjector.Version
----@field RenderingLayerMask UnityEngine.Rendering.Universal.DecalProjector.Version
----@field Count UnityEngine.Rendering.Universal.DecalProjector.Version
-UnityEngine.Rendering.Universal.DecalProjector.Version = {}
----@alias CS.UnityEngine.Rendering.Universal.DecalProjector.Version UnityEngine.Rendering.Universal.DecalProjector.Version
-CS.UnityEngine.Rendering.Universal.DecalProjector.Version = UnityEngine.Rendering.Universal.DecalProjector.Version
-
-
----@class UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem.DrawCallJob : System.ValueType
----@field decalToWorlds Unity.Collections.NativeArray
----@field normalToWorlds Unity.Collections.NativeArray
----@field sizeOffsets Unity.Collections.NativeArray
----@field drawDistances Unity.Collections.NativeArray
----@field angleFades Unity.Collections.NativeArray
----@field uvScaleBiases Unity.Collections.NativeArray
----@field layerMasks Unity.Collections.NativeArray
----@field sceneLayerMasks Unity.Collections.NativeArray
----@field fadeFactors Unity.Collections.NativeArray
----@field boundingSpheres Unity.Collections.NativeArray
----@field renderingLayerMasks Unity.Collections.NativeArray
----@field cameraPosition UnityEngine.Vector3
----@field sceneCullingMask number
----@field cullingMask number
----@field visibleDecalIndices Unity.Collections.NativeArray
----@field visibleDecalCount number
----@field maxDrawDistance number
----@field decalToWorldsDraw Unity.Collections.NativeArray
----@field normalToDecalsDraw Unity.Collections.NativeArray
----@field renderingLayerMasksDraw Unity.Collections.NativeArray
----@field subCalls Unity.Collections.NativeArray
----@field subCallCount Unity.Collections.NativeArray
-UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem.DrawCallJob = {}
----@alias CS.UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem.DrawCallJob UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem.DrawCallJob
-CS.UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem.DrawCallJob = UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem.DrawCallJob
-
-function UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem.DrawCallJob:Execute() end
-
----@class UnityEngine.Rendering.Universal.DecalEntityIndexer.DecalEntityItem : System.ValueType
----@field chunkIndex number
----@field arrayIndex number
----@field version number
-UnityEngine.Rendering.Universal.DecalEntityIndexer.DecalEntityItem = {}
----@alias CS.UnityEngine.Rendering.Universal.DecalEntityIndexer.DecalEntityItem UnityEngine.Rendering.Universal.DecalEntityIndexer.DecalEntityItem
-CS.UnityEngine.Rendering.Universal.DecalEntityIndexer.DecalEntityItem = UnityEngine.Rendering.Universal.DecalEntityIndexer.DecalEntityItem
-
-
----@class UnityEngine.Rendering.Universal.DecalEntityManager.CombinedChunks : System.ValueType
----@field entityChunk UnityEngine.Rendering.Universal.DecalEntityChunk
----@field cachedChunk UnityEngine.Rendering.Universal.DecalCachedChunk
----@field culledChunk UnityEngine.Rendering.Universal.DecalCulledChunk
----@field drawCallChunk UnityEngine.Rendering.Universal.DecalDrawCallChunk
----@field previousChunkIndex number
----@field valid boolean
-UnityEngine.Rendering.Universal.DecalEntityManager.CombinedChunks = {}
----@alias CS.UnityEngine.Rendering.Universal.DecalEntityManager.CombinedChunks UnityEngine.Rendering.Universal.DecalEntityManager.CombinedChunks
-CS.UnityEngine.Rendering.Universal.DecalEntityManager.CombinedChunks = UnityEngine.Rendering.Universal.DecalEntityManager.CombinedChunks
-
-
----@class UnityEngine.Rendering.Universal.DecalUpdateCachedSystem.UpdateTransformsJob : System.ValueType
----@field positions Unity.Collections.NativeArray
----@field rotations Unity.Collections.NativeArray
----@field scales Unity.Collections.NativeArray
----@field dirty Unity.Collections.NativeArray
----@field scaleModes Unity.Collections.NativeArray
----@field sizeOffsets Unity.Collections.NativeArray
----@field decalToWorlds Unity.Collections.NativeArray
----@field normalToWorlds Unity.Collections.NativeArray
----@field boundingSpheres Unity.Collections.NativeArray
----@field minDistance number
-UnityEngine.Rendering.Universal.DecalUpdateCachedSystem.UpdateTransformsJob = {}
----@alias CS.UnityEngine.Rendering.Universal.DecalUpdateCachedSystem.UpdateTransformsJob UnityEngine.Rendering.Universal.DecalUpdateCachedSystem.UpdateTransformsJob
-CS.UnityEngine.Rendering.Universal.DecalUpdateCachedSystem.UpdateTransformsJob = UnityEngine.Rendering.Universal.DecalUpdateCachedSystem.UpdateTransformsJob
-
----@param index number
----@param transform UnityEngine.Jobs.TransformAccess
-function UnityEngine.Rendering.Universal.DecalUpdateCachedSystem.UpdateTransformsJob:Execute(index, transform) end
-
----@class UnityEngine.Rendering.Universal.DecalGBufferRenderPass.PassData : System.Object
-UnityEngine.Rendering.Universal.DecalGBufferRenderPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.DecalGBufferRenderPass.PassData UnityEngine.Rendering.Universal.DecalGBufferRenderPass.PassData
-CS.UnityEngine.Rendering.Universal.DecalGBufferRenderPass.PassData = UnityEngine.Rendering.Universal.DecalGBufferRenderPass.PassData
-
----@return UnityEngine.Rendering.Universal.DecalGBufferRenderPass.PassData
-function UnityEngine.Rendering.Universal.DecalGBufferRenderPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass.PassData : System.Object
-UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass.PassData UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass.PassData
-CS.UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass.PassData = UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass.PassData
-
----@return UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass.PassData
-function UnityEngine.Rendering.Universal.DecalScreenSpaceRenderPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.Profiling : System.Object
----@field setPerCameraShaderVariables UnityEngine.Rendering.ProfilingSampler
----@field sortRenderPasses UnityEngine.Rendering.ProfilingSampler
----@field recordRenderGraph UnityEngine.Rendering.ProfilingSampler
----@field setupCamera UnityEngine.Rendering.ProfilingSampler
----@field vfxProcessCamera UnityEngine.Rendering.ProfilingSampler
----@field addRenderPasses UnityEngine.Rendering.ProfilingSampler
----@field clearRenderingState UnityEngine.Rendering.ProfilingSampler
----@field internalFinishRenderingCommon UnityEngine.Rendering.ProfilingSampler
----@field drawGizmos UnityEngine.Rendering.ProfilingSampler
----@field drawWireOverlay UnityEngine.Rendering.ProfilingSampler
-UnityEngine.Rendering.Universal.ScriptableRenderer.Profiling = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.Profiling UnityEngine.Rendering.Universal.ScriptableRenderer.Profiling
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.Profiling = UnityEngine.Rendering.Universal.ScriptableRenderer.Profiling
-
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.RenderingFeatures : System.Object
----@field msaa boolean
-UnityEngine.Rendering.Universal.ScriptableRenderer.RenderingFeatures = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.RenderingFeatures UnityEngine.Rendering.Universal.ScriptableRenderer.RenderingFeatures
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.RenderingFeatures = UnityEngine.Rendering.Universal.ScriptableRenderer.RenderingFeatures
-
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.RenderingFeatures
-function UnityEngine.Rendering.Universal.ScriptableRenderer.RenderingFeatures.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.RenderPassBlock : System.Object
----@field BeforeRendering number
----@field MainRenderingOpaque number
----@field MainRenderingTransparent number
----@field AfterRendering number
-UnityEngine.Rendering.Universal.ScriptableRenderer.RenderPassBlock = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.RenderPassBlock UnityEngine.Rendering.Universal.ScriptableRenderer.RenderPassBlock
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.RenderPassBlock = UnityEngine.Rendering.Universal.ScriptableRenderer.RenderPassBlock
-
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.VFXProcessCameraPassData : System.Object
-UnityEngine.Rendering.Universal.ScriptableRenderer.VFXProcessCameraPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.VFXProcessCameraPassData UnityEngine.Rendering.Universal.ScriptableRenderer.VFXProcessCameraPassData
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.VFXProcessCameraPassData = UnityEngine.Rendering.Universal.ScriptableRenderer.VFXProcessCameraPassData
-
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.VFXProcessCameraPassData
-function UnityEngine.Rendering.Universal.ScriptableRenderer.VFXProcessCameraPassData.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.DrawGizmosPassData : System.Object
----@field gizmoRenderList UnityEngine.Rendering.RenderGraphModule.RendererListHandle
----@field color UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@field depth UnityEngine.Rendering.RenderGraphModule.TextureHandle
-UnityEngine.Rendering.Universal.ScriptableRenderer.DrawGizmosPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.DrawGizmosPassData UnityEngine.Rendering.Universal.ScriptableRenderer.DrawGizmosPassData
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.DrawGizmosPassData = UnityEngine.Rendering.Universal.ScriptableRenderer.DrawGizmosPassData
-
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.DrawGizmosPassData
-function UnityEngine.Rendering.Universal.ScriptableRenderer.DrawGizmosPassData.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.DrawWireOverlayPassData : System.Object
----@field wireOverlayList UnityEngine.Rendering.RenderGraphModule.RendererListHandle
-UnityEngine.Rendering.Universal.ScriptableRenderer.DrawWireOverlayPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.DrawWireOverlayPassData UnityEngine.Rendering.Universal.ScriptableRenderer.DrawWireOverlayPassData
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.DrawWireOverlayPassData = UnityEngine.Rendering.Universal.ScriptableRenderer.DrawWireOverlayPassData
-
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.DrawWireOverlayPassData
-function UnityEngine.Rendering.Universal.ScriptableRenderer.DrawWireOverlayPassData.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.BeginXRPassData : System.Object
-UnityEngine.Rendering.Universal.ScriptableRenderer.BeginXRPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.BeginXRPassData UnityEngine.Rendering.Universal.ScriptableRenderer.BeginXRPassData
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.BeginXRPassData = UnityEngine.Rendering.Universal.ScriptableRenderer.BeginXRPassData
-
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.BeginXRPassData
-function UnityEngine.Rendering.Universal.ScriptableRenderer.BeginXRPassData.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.EndXRPassData : System.Object
----@field cameraData UnityEngine.Rendering.Universal.UniversalCameraData
-UnityEngine.Rendering.Universal.ScriptableRenderer.EndXRPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.EndXRPassData UnityEngine.Rendering.Universal.ScriptableRenderer.EndXRPassData
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.EndXRPassData = UnityEngine.Rendering.Universal.ScriptableRenderer.EndXRPassData
-
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.EndXRPassData
-function UnityEngine.Rendering.Universal.ScriptableRenderer.EndXRPassData.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.DummyData : System.Object
-UnityEngine.Rendering.Universal.ScriptableRenderer.DummyData = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.DummyData UnityEngine.Rendering.Universal.ScriptableRenderer.DummyData
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.DummyData = UnityEngine.Rendering.Universal.ScriptableRenderer.DummyData
-
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.DummyData
-function UnityEngine.Rendering.Universal.ScriptableRenderer.DummyData.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.PassData : System.Object
-UnityEngine.Rendering.Universal.ScriptableRenderer.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.PassData UnityEngine.Rendering.Universal.ScriptableRenderer.PassData
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.PassData = UnityEngine.Rendering.Universal.ScriptableRenderer.PassData
-
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.PassData
-function UnityEngine.Rendering.Universal.ScriptableRenderer.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks : System.ValueType
-UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks = UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks
-
----@param activeRenderPassQueue System.Collections.Generic.List
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks
-function UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.New(activeRenderPassQueue) end
-function UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks:Dispose() end
----@param index number
----@return number
-function UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks:GetLength(index) end
----@param index number
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange
-function UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks:GetRange(index) end
-
----@class UnityEngine.Rendering.Universal.ScriptableRendererData.DebugShaderResources : System.Object
-UnityEngine.Rendering.Universal.ScriptableRendererData.DebugShaderResources = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRendererData.DebugShaderResources UnityEngine.Rendering.Universal.ScriptableRendererData.DebugShaderResources
-CS.UnityEngine.Rendering.Universal.ScriptableRendererData.DebugShaderResources = UnityEngine.Rendering.Universal.ScriptableRendererData.DebugShaderResources
-
----@return UnityEngine.Rendering.Universal.ScriptableRendererData.DebugShaderResources
-function UnityEngine.Rendering.Universal.ScriptableRendererData.DebugShaderResources.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRendererData.ProbeVolumeResources : System.Object
-UnityEngine.Rendering.Universal.ScriptableRendererData.ProbeVolumeResources = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRendererData.ProbeVolumeResources UnityEngine.Rendering.Universal.ScriptableRendererData.ProbeVolumeResources
-CS.UnityEngine.Rendering.Universal.ScriptableRendererData.ProbeVolumeResources = UnityEngine.Rendering.Universal.ScriptableRendererData.ProbeVolumeResources
-
----@return UnityEngine.Rendering.Universal.ScriptableRendererData.ProbeVolumeResources
-function UnityEngine.Rendering.Universal.ScriptableRendererData.ProbeVolumeResources.New() end
-
----@class UnityEngine.Rendering.Universal.XRSystemData.ShaderResources : System.Object
----@field xrOcclusionMeshPS UnityEngine.Shader
----@field xrMirrorViewPS UnityEngine.Shader
-UnityEngine.Rendering.Universal.XRSystemData.ShaderResources = {}
----@alias CS.UnityEngine.Rendering.Universal.XRSystemData.ShaderResources UnityEngine.Rendering.Universal.XRSystemData.ShaderResources
-CS.UnityEngine.Rendering.Universal.XRSystemData.ShaderResources = UnityEngine.Rendering.Universal.XRSystemData.ShaderResources
-
----@return UnityEngine.Rendering.Universal.XRSystemData.ShaderResources
-function UnityEngine.Rendering.Universal.XRSystemData.ShaderResources.New() end
-
----@class UnityEngine.Rendering.Universal.UniversalRendererData.CreateUniversalRendererAsset : UnityEditor.ProjectWindowCallback.EndNameEditAction
-UnityEngine.Rendering.Universal.UniversalRendererData.CreateUniversalRendererAsset = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRendererData.CreateUniversalRendererAsset UnityEngine.Rendering.Universal.UniversalRendererData.CreateUniversalRendererAsset
-CS.UnityEngine.Rendering.Universal.UniversalRendererData.CreateUniversalRendererAsset = UnityEngine.Rendering.Universal.UniversalRendererData.CreateUniversalRendererAsset
-
----@return UnityEngine.Rendering.Universal.UniversalRendererData.CreateUniversalRendererAsset
-function UnityEngine.Rendering.Universal.UniversalRendererData.CreateUniversalRendererAsset.New() end
----@param instanceId number
----@param pathName string
----@param resourceFile string
-function UnityEngine.Rendering.Universal.UniversalRendererData.CreateUniversalRendererAsset:Action(instanceId, pathName, resourceFile) end
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.ShaderResources : System.Object
----@field autodeskInteractivePS UnityEngine.Shader
----@field autodeskInteractiveTransparentPS UnityEngine.Shader
----@field autodeskInteractiveMaskedPS UnityEngine.Shader
----@field terrainDetailLitPS UnityEngine.Shader
----@field terrainDetailGrassPS UnityEngine.Shader
----@field terrainDetailGrassBillboardPS UnityEngine.Shader
----@field defaultSpeedTree7PS UnityEngine.Shader
----@field defaultSpeedTree8PS UnityEngine.Shader
-UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.ShaderResources = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.ShaderResources UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.ShaderResources
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.ShaderResources = UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.ShaderResources
-
----@return UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.ShaderResources
-function UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.ShaderResources.New() end
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.MaterialResources : System.Object
----@field lit UnityEngine.Material
----@field particleLit UnityEngine.Material
----@field terrainLit UnityEngine.Material
----@field decal UnityEngine.Material
-UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.MaterialResources = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.MaterialResources UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.MaterialResources
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.MaterialResources = UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.MaterialResources
-
----@return UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.MaterialResources
-function UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources.MaterialResources.New() end
-
----@class UnityEngine.Rendering.Universal.XROcclusionMeshPass.PassData : System.Object
-UnityEngine.Rendering.Universal.XROcclusionMeshPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.XROcclusionMeshPass.PassData UnityEngine.Rendering.Universal.XROcclusionMeshPass.PassData
-CS.UnityEngine.Rendering.Universal.XROcclusionMeshPass.PassData = UnityEngine.Rendering.Universal.XROcclusionMeshPass.PassData
-
----@return UnityEngine.Rendering.Universal.XROcclusionMeshPass.PassData
-function UnityEngine.Rendering.Universal.XROcclusionMeshPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.ScriptableRendererFeature.IntermediateTextureUsage
----@field Unknown UnityEngine.Rendering.Universal.ScriptableRendererFeature.IntermediateTextureUsage
----@field Required UnityEngine.Rendering.Universal.ScriptableRendererFeature.IntermediateTextureUsage
----@field NotRequired UnityEngine.Rendering.Universal.ScriptableRendererFeature.IntermediateTextureUsage
-UnityEngine.Rendering.Universal.ScriptableRendererFeature.IntermediateTextureUsage = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRendererFeature.IntermediateTextureUsage UnityEngine.Rendering.Universal.ScriptableRendererFeature.IntermediateTextureUsage
-CS.UnityEngine.Rendering.Universal.ScriptableRendererFeature.IntermediateTextureUsage = UnityEngine.Rendering.Universal.ScriptableRendererFeature.IntermediateTextureUsage
-
-
----@class UnityEngine.Rendering.Universal.DrawSkyboxPass.PassData : System.Object
-UnityEngine.Rendering.Universal.DrawSkyboxPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.DrawSkyboxPass.PassData UnityEngine.Rendering.Universal.DrawSkyboxPass.PassData
-CS.UnityEngine.Rendering.Universal.DrawSkyboxPass.PassData = UnityEngine.Rendering.Universal.DrawSkyboxPass.PassData
-
----@return UnityEngine.Rendering.Universal.DrawSkyboxPass.PassData
-function UnityEngine.Rendering.Universal.DrawSkyboxPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.RenderObjectsPass.PassData : System.Object
-UnityEngine.Rendering.Universal.RenderObjectsPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.RenderObjectsPass.PassData UnityEngine.Rendering.Universal.RenderObjectsPass.PassData
-CS.UnityEngine.Rendering.Universal.RenderObjectsPass.PassData = UnityEngine.Rendering.Universal.RenderObjectsPass.PassData
-
----@return UnityEngine.Rendering.Universal.RenderObjectsPass.PassData
-function UnityEngine.Rendering.Universal.RenderObjectsPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.UniversalRenderer.RenderPassInputSummary : System.ValueType
-UnityEngine.Rendering.Universal.UniversalRenderer.RenderPassInputSummary = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderer.RenderPassInputSummary UnityEngine.Rendering.Universal.UniversalRenderer.RenderPassInputSummary
-CS.UnityEngine.Rendering.Universal.UniversalRenderer.RenderPassInputSummary = UnityEngine.Rendering.Universal.UniversalRenderer.RenderPassInputSummary
-
-
----@class UnityEngine.Rendering.Universal.UniversalRenderer.CopyToDebugTexturePassData : System.Object
-UnityEngine.Rendering.Universal.UniversalRenderer.CopyToDebugTexturePassData = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderer.CopyToDebugTexturePassData UnityEngine.Rendering.Universal.UniversalRenderer.CopyToDebugTexturePassData
-CS.UnityEngine.Rendering.Universal.UniversalRenderer.CopyToDebugTexturePassData = UnityEngine.Rendering.Universal.UniversalRenderer.CopyToDebugTexturePassData
-
----@return UnityEngine.Rendering.Universal.UniversalRenderer.CopyToDebugTexturePassData
-function UnityEngine.Rendering.Universal.UniversalRenderer.CopyToDebugTexturePassData.New() end
-
----@class UnityEngine.Rendering.Universal.UniversalRenderer.ClearCameraParams : System.ValueType
-UnityEngine.Rendering.Universal.UniversalRenderer.ClearCameraParams = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderer.ClearCameraParams UnityEngine.Rendering.Universal.UniversalRenderer.ClearCameraParams
-CS.UnityEngine.Rendering.Universal.UniversalRenderer.ClearCameraParams = UnityEngine.Rendering.Universal.UniversalRenderer.ClearCameraParams
-
-
----@class UnityEngine.Rendering.Universal.UniversalRenderer.OccluderPass
----@field None UnityEngine.Rendering.Universal.UniversalRenderer.OccluderPass
----@field DepthPrepass UnityEngine.Rendering.Universal.UniversalRenderer.OccluderPass
----@field ForwardOpaque UnityEngine.Rendering.Universal.UniversalRenderer.OccluderPass
----@field GBuffer UnityEngine.Rendering.Universal.UniversalRenderer.OccluderPass
-UnityEngine.Rendering.Universal.UniversalRenderer.OccluderPass = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderer.OccluderPass UnityEngine.Rendering.Universal.UniversalRenderer.OccluderPass
-CS.UnityEngine.Rendering.Universal.UniversalRenderer.OccluderPass = UnityEngine.Rendering.Universal.UniversalRenderer.OccluderPass
-
-
----@class UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule
----@field DuringPrepass UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule
----@field AfterPrepass UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule
----@field AfterGBuffer UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule
----@field AfterOpaques UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule
----@field AfterSkybox UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule
----@field AfterTransparents UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule
----@field None UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule
-UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule
-CS.UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule = UnityEngine.Rendering.Universal.UniversalRenderer.DepthCopySchedule
-
-
----@class UnityEngine.Rendering.Universal.UniversalRenderer.ColorCopySchedule
----@field AfterSkybox UnityEngine.Rendering.Universal.UniversalRenderer.ColorCopySchedule
----@field None UnityEngine.Rendering.Universal.UniversalRenderer.ColorCopySchedule
-UnityEngine.Rendering.Universal.UniversalRenderer.ColorCopySchedule = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderer.ColorCopySchedule UnityEngine.Rendering.Universal.UniversalRenderer.ColorCopySchedule
-CS.UnityEngine.Rendering.Universal.UniversalRenderer.ColorCopySchedule = UnityEngine.Rendering.Universal.UniversalRenderer.ColorCopySchedule
-
-
----@class UnityEngine.Rendering.Universal.UniversalRenderer.TextureCopySchedules : System.ValueType
-UnityEngine.Rendering.Universal.UniversalRenderer.TextureCopySchedules = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderer.TextureCopySchedules UnityEngine.Rendering.Universal.UniversalRenderer.TextureCopySchedules
-CS.UnityEngine.Rendering.Universal.UniversalRenderer.TextureCopySchedules = UnityEngine.Rendering.Universal.UniversalRenderer.TextureCopySchedules
-
-
----@class UnityEngine.Rendering.Universal.ForwardRendererData.ShaderResources : System.Object
----@field blitPS UnityEngine.Shader
----@field copyDepthPS UnityEngine.Shader
----@field samplingPS UnityEngine.Shader
----@field stencilDeferredPS UnityEngine.Shader
----@field fallbackErrorPS UnityEngine.Shader
----@field fallbackLoadingPS UnityEngine.Shader
----@field cameraMotionVector UnityEngine.Shader
----@field objectMotionVector UnityEngine.Shader
-UnityEngine.Rendering.Universal.ForwardRendererData.ShaderResources = {}
----@alias CS.UnityEngine.Rendering.Universal.ForwardRendererData.ShaderResources UnityEngine.Rendering.Universal.ForwardRendererData.ShaderResources
-CS.UnityEngine.Rendering.Universal.ForwardRendererData.ShaderResources = UnityEngine.Rendering.Universal.ForwardRendererData.ShaderResources
-
----@return UnityEngine.Rendering.Universal.ForwardRendererData.ShaderResources
-function UnityEngine.Rendering.Universal.ForwardRendererData.ShaderResources.New() end
-
----@class UnityEngine.Rendering.Universal.UniversalResourceDataBase.ActiveID
----@field Camera UnityEngine.Rendering.Universal.UniversalResourceDataBase.ActiveID
----@field BackBuffer UnityEngine.Rendering.Universal.UniversalResourceDataBase.ActiveID
-UnityEngine.Rendering.Universal.UniversalResourceDataBase.ActiveID = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalResourceDataBase.ActiveID UnityEngine.Rendering.Universal.UniversalResourceDataBase.ActiveID
-CS.UnityEngine.Rendering.Universal.UniversalResourceDataBase.ActiveID = UnityEngine.Rendering.Universal.UniversalResourceDataBase.ActiveID
-
-
----@class UnityEngine.Rendering.Universal.LightCookieManager.ShaderProperty : System.Object
----@field mainLightTexture number
----@field mainLightWorldToLight number
----@field mainLightCookieTextureFormat number
----@field additionalLightsCookieAtlasTexture number
----@field additionalLightsCookieAtlasTextureFormat number
----@field additionalLightsCookieEnableBits number
----@field additionalLightsCookieAtlasUVRectBuffer number
----@field additionalLightsCookieAtlasUVRects number
----@field additionalLightsWorldToLightBuffer number
----@field additionalLightsLightTypeBuffer number
----@field additionalLightsWorldToLights number
----@field additionalLightsLightTypes number
-UnityEngine.Rendering.Universal.LightCookieManager.ShaderProperty = {}
----@alias CS.UnityEngine.Rendering.Universal.LightCookieManager.ShaderProperty UnityEngine.Rendering.Universal.LightCookieManager.ShaderProperty
-CS.UnityEngine.Rendering.Universal.LightCookieManager.ShaderProperty = UnityEngine.Rendering.Universal.LightCookieManager.ShaderProperty
-
-
----@class UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderFormat
----@field None UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderFormat
----@field RGB UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderFormat
----@field Alpha UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderFormat
----@field Red UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderFormat
-UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderFormat = {}
----@alias CS.UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderFormat UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderFormat
-CS.UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderFormat = UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderFormat
-
-
----@class UnityEngine.Rendering.Universal.LightCookieManager.Settings : System.ValueType
----@field atlas UnityEngine.Rendering.Universal.LightCookieManager.Settings.AtlasSettings
----@field maxAdditionalLights number
----@field cubeOctahedralSizeScale number
----@field useStructuredBuffer boolean
-UnityEngine.Rendering.Universal.LightCookieManager.Settings = {}
----@alias CS.UnityEngine.Rendering.Universal.LightCookieManager.Settings UnityEngine.Rendering.Universal.LightCookieManager.Settings
-CS.UnityEngine.Rendering.Universal.LightCookieManager.Settings = UnityEngine.Rendering.Universal.LightCookieManager.Settings
-
----@return UnityEngine.Rendering.Universal.LightCookieManager.Settings
-function UnityEngine.Rendering.Universal.LightCookieManager.Settings.Create() end
-
----@class UnityEngine.Rendering.Universal.LightCookieManager.LightCookieMapping : System.ValueType
----@field s_CompareByCookieSize System.Func
----@field s_CompareByBufferIndex System.Func
----@field visibleLightIndex number
----@field lightBufferIndex number
----@field light UnityEngine.Light
-UnityEngine.Rendering.Universal.LightCookieManager.LightCookieMapping = {}
----@alias CS.UnityEngine.Rendering.Universal.LightCookieManager.LightCookieMapping UnityEngine.Rendering.Universal.LightCookieManager.LightCookieMapping
-CS.UnityEngine.Rendering.Universal.LightCookieManager.LightCookieMapping = UnityEngine.Rendering.Universal.LightCookieManager.LightCookieMapping
-
-
----@class UnityEngine.Rendering.Universal.LightCookieManager.WorkSlice : System.ValueType
----@field Item T
----@field length number
----@field capacity number
-UnityEngine.Rendering.Universal.LightCookieManager.WorkSlice = {}
----@alias CS.UnityEngine.Rendering.Universal.LightCookieManager.WorkSlice UnityEngine.Rendering.Universal.LightCookieManager.WorkSlice
-CS.UnityEngine.Rendering.Universal.LightCookieManager.WorkSlice = UnityEngine.Rendering.Universal.LightCookieManager.WorkSlice
-
----@overload fun(src: T[], srcLen: number) : UnityEngine.Rendering.Universal.LightCookieManager.WorkSlice
----@param src T[]
----@param srcStart number
----@param srcLen number
----@return UnityEngine.Rendering.Universal.LightCookieManager.WorkSlice
-function UnityEngine.Rendering.Universal.LightCookieManager.WorkSlice.New(src, srcStart, srcLen) end
----@param compare System.Func[T,T,System.Int32]
-function UnityEngine.Rendering.Universal.LightCookieManager.WorkSlice:Sort(compare) end
-
----@class UnityEngine.Rendering.Universal.LightCookieManager.WorkMemory : System.Object
----@field lightMappings UnityEngine.Rendering.Universal.LightCookieManager.LightCookieMapping[]
----@field uvRects UnityEngine.Vector4[]
-UnityEngine.Rendering.Universal.LightCookieManager.WorkMemory = {}
----@alias CS.UnityEngine.Rendering.Universal.LightCookieManager.WorkMemory UnityEngine.Rendering.Universal.LightCookieManager.WorkMemory
-CS.UnityEngine.Rendering.Universal.LightCookieManager.WorkMemory = UnityEngine.Rendering.Universal.LightCookieManager.WorkMemory
-
----@return UnityEngine.Rendering.Universal.LightCookieManager.WorkMemory
-function UnityEngine.Rendering.Universal.LightCookieManager.WorkMemory.New() end
----@param size number
-function UnityEngine.Rendering.Universal.LightCookieManager.WorkMemory:Resize(size) end
-
----@class UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData : System.Object
----@field worldToLights UnityEngine.Matrix4x4[]
----@field cookieEnableBits UnityEngine.Rendering.Universal.ShaderBitArray
----@field atlasUVRects UnityEngine.Vector4[]
----@field lightTypes System.Single[]
----@field isUploaded boolean
-UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData = {}
----@alias CS.UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData
-CS.UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData = UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData
-
----@param size number
----@param useStructuredBuffer boolean
----@return UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData
-function UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData.New(size, useStructuredBuffer) end
-function UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData:Dispose() end
----@param size number
-function UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData:Resize(size) end
----@param cmd UnityEngine.Rendering.CommandBuffer
-function UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData:Upload(cmd) end
----@param cmd UnityEngine.Rendering.CommandBuffer
-function UnityEngine.Rendering.Universal.LightCookieManager.LightCookieShaderData:Clear(cmd) end
-
----@class UnityEngine.Rendering.Universal.BuddyAllocator.Header : System.ValueType
----@field branchingOrder number
----@field levelCount number
----@field allocationCount number
----@field freeAllocationIdsCount number
-UnityEngine.Rendering.Universal.BuddyAllocator.Header = {}
----@alias CS.UnityEngine.Rendering.Universal.BuddyAllocator.Header UnityEngine.Rendering.Universal.BuddyAllocator.Header
-CS.UnityEngine.Rendering.Universal.BuddyAllocator.Header = UnityEngine.Rendering.Universal.BuddyAllocator.Header
-
-
----@class UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest : System.ValueType
----@field visibleLightIndex number
----@field perLightShadowSliceIndex number
----@field requestedResolution number
----@field offsetX number
----@field offsetY number
----@field allocatedResolution number
----@field softShadow boolean
----@field pointLightShadow boolean
-UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest = {}
----@alias CS.UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest
-CS.UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest = UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest
-
-
----@class UnityEngine.Rendering.Universal.CapturePass.UnsafePassData : System.Object
----@field captureActions System.Collections.Generic.IEnumerator
-UnityEngine.Rendering.Universal.CapturePass.UnsafePassData = {}
----@alias CS.UnityEngine.Rendering.Universal.CapturePass.UnsafePassData UnityEngine.Rendering.Universal.CapturePass.UnsafePassData
-CS.UnityEngine.Rendering.Universal.CapturePass.UnsafePassData = UnityEngine.Rendering.Universal.CapturePass.UnsafePassData
-
----@return UnityEngine.Rendering.Universal.CapturePass.UnsafePassData
-function UnityEngine.Rendering.Universal.CapturePass.UnsafePassData.New() end
-
----@class UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.PassData : System.Object
-UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.PassData UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.PassData
-CS.UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.PassData = UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.PassData
-
----@return UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.PassData
-function UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.UnsafePassData : System.Object
-UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.UnsafePassData = {}
----@alias CS.UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.UnsafePassData UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.UnsafePassData
-CS.UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.UnsafePassData = UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.UnsafePassData
-
----@return UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.UnsafePassData
-function UnityEngine.Rendering.Universal.DrawScreenSpaceUIPass.UnsafePassData.New() end
-
----@class UnityEngine.Rendering.Universal.HDRDebugViewPass.HDRDebugPassId
----@field CIExyPrepass UnityEngine.Rendering.Universal.HDRDebugViewPass.HDRDebugPassId
----@field DebugViewPass UnityEngine.Rendering.Universal.HDRDebugViewPass.HDRDebugPassId
-UnityEngine.Rendering.Universal.HDRDebugViewPass.HDRDebugPassId = {}
----@alias CS.UnityEngine.Rendering.Universal.HDRDebugViewPass.HDRDebugPassId UnityEngine.Rendering.Universal.HDRDebugViewPass.HDRDebugPassId
-CS.UnityEngine.Rendering.Universal.HDRDebugViewPass.HDRDebugPassId = UnityEngine.Rendering.Universal.HDRDebugViewPass.HDRDebugPassId
-
-
----@class UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataCIExy : System.Object
-UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataCIExy = {}
----@alias CS.UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataCIExy UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataCIExy
-CS.UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataCIExy = UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataCIExy
-
----@return UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataCIExy
-function UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataCIExy.New() end
-
----@class UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataDebugView : System.Object
-UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataDebugView = {}
----@alias CS.UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataDebugView UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataDebugView
-CS.UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataDebugView = UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataDebugView
-
----@return UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataDebugView
-function UnityEngine.Rendering.Universal.HDRDebugViewPass.PassDataDebugView.New() end
-
----@class UnityEngine.Rendering.Universal.HDRDebugViewPass.ShaderConstants : System.Object
----@field _DebugHDRModeId number
----@field _HDRDebugParamsId number
----@field _xyTextureId number
----@field _SizeOfHDRXYMapping number
----@field _CIExyUAVIndex number
-UnityEngine.Rendering.Universal.HDRDebugViewPass.ShaderConstants = {}
----@alias CS.UnityEngine.Rendering.Universal.HDRDebugViewPass.ShaderConstants UnityEngine.Rendering.Universal.HDRDebugViewPass.ShaderConstants
-CS.UnityEngine.Rendering.Universal.HDRDebugViewPass.ShaderConstants = UnityEngine.Rendering.Universal.HDRDebugViewPass.ShaderConstants
-
----@return UnityEngine.Rendering.Universal.HDRDebugViewPass.ShaderConstants
-function UnityEngine.Rendering.Universal.HDRDebugViewPass.ShaderConstants.New() end
-
----@class UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass.PassData : System.Object
-UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass.PassData UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass.PassData
-CS.UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass.PassData = UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass.PassData
-
----@return UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass.PassData
-function UnityEngine.Rendering.Universal.InvokeOnRenderObjectCallbackPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.MotionVectorRenderPass.PassData : System.Object
-UnityEngine.Rendering.Universal.MotionVectorRenderPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.MotionVectorRenderPass.PassData UnityEngine.Rendering.Universal.MotionVectorRenderPass.PassData
-CS.UnityEngine.Rendering.Universal.MotionVectorRenderPass.PassData = UnityEngine.Rendering.Universal.MotionVectorRenderPass.PassData
-
----@return UnityEngine.Rendering.Universal.MotionVectorRenderPass.PassData
-function UnityEngine.Rendering.Universal.MotionVectorRenderPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.MotionVectorRenderPass.MotionMatrixPassData : System.Object
----@field motionData UnityEngine.Rendering.Universal.MotionVectorsPersistentData
----@field xr UnityEngine.Experimental.Rendering.XRPass
-UnityEngine.Rendering.Universal.MotionVectorRenderPass.MotionMatrixPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.MotionVectorRenderPass.MotionMatrixPassData UnityEngine.Rendering.Universal.MotionVectorRenderPass.MotionMatrixPassData
-CS.UnityEngine.Rendering.Universal.MotionVectorRenderPass.MotionMatrixPassData = UnityEngine.Rendering.Universal.MotionVectorRenderPass.MotionMatrixPassData
-
----@return UnityEngine.Rendering.Universal.MotionVectorRenderPass.MotionMatrixPassData
-function UnityEngine.Rendering.Universal.MotionVectorRenderPass.MotionMatrixPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.ShaderConstants : System.Object
----@field _CameraDepthTextureID number
----@field _StencilRef number
----@field _StencilMask number
----@field _ColorTexture number
----@field _Params number
----@field _Params2 number
----@field _ViewProjM number
----@field _PrevViewProjM number
----@field _ViewProjMStereo number
----@field _PrevViewProjMStereo number
----@field _FullscreenProjMat number
----@field _FullCoCTexture number
----@field _HalfCoCTexture number
----@field _DofTexture number
----@field _CoCParams number
----@field _BokehKernel number
----@field _BokehConstants number
----@field _DownSampleScaleFactor number
----@field _Metrics number
----@field _AreaTexture number
----@field _SearchTexture number
----@field _BlendTexture number
----@field _SourceTexLowMip number
----@field _Bloom_Params number
----@field _Bloom_Texture number
----@field _LensDirt_Texture number
----@field _LensDirt_Params number
----@field _LensDirt_Intensity number
----@field _Distortion_Params1 number
----@field _Distortion_Params2 number
----@field _Chroma_Params number
----@field _Vignette_Params1 number
----@field _Vignette_Params2 number
----@field _Vignette_ParamsXR number
----@field _InternalLut number
----@field _Lut_Params number
----@field _UserLut number
----@field _UserLut_Params number
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.ShaderConstants = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.ShaderConstants UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.ShaderConstants
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.ShaderConstants = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.ShaderConstants
-
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.Constants : System.Object
----@field k_MaxPyramidSize number
----@field k_GaussianDoFPassComputeCoc number
----@field k_GaussianDoFPassDownscalePrefilter number
----@field k_GaussianDoFPassBlurH number
----@field k_GaussianDoFPassBlurV number
----@field k_GaussianDoFPassComposite number
----@field k_BokehDoFPassComputeCoc number
----@field k_BokehDoFPassDownscalePrefilter number
----@field k_BokehDoFPassBlur number
----@field k_BokehDoFPassPostFilter number
----@field k_BokehDoFPassComposite number
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.Constants = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.Constants UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.Constants
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.Constants = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.Constants
-
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UpdateCameraResolutionPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UpdateCameraResolutionPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UpdateCameraResolutionPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UpdateCameraResolutionPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UpdateCameraResolutionPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UpdateCameraResolutionPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UpdateCameraResolutionPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UpdateCameraResolutionPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.StopNaNsPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.StopNaNsPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.StopNaNsPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.StopNaNsPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.StopNaNsPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.StopNaNsPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.StopNaNsPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.StopNaNsPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAASetupPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAASetupPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAASetupPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAASetupPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAASetupPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAASetupPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAASetupPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAASetupPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAAPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAAPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAAPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAAPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAAPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAAPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAAPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.SMAAPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberSetupBloomPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberSetupBloomPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberSetupBloomPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberSetupBloomPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberSetupBloomPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberSetupBloomPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberSetupBloomPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberSetupBloomPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomMaterialParams : System.ValueType
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomMaterialParams = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomMaterialParams UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomMaterialParams
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomMaterialParams = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.BloomMaterialParams
-
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFGaussianPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFGaussianPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFGaussianPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFGaussianPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFGaussianPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFGaussianPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFGaussianPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFGaussianPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFBokehPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFBokehPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFBokehPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFBokehPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFBokehPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFBokehPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFBokehPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.DoFBokehPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PaniniProjectionPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PaniniProjectionPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PaniniProjectionPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PaniniProjectionPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PaniniProjectionPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PaniniProjectionPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PaniniProjectionPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PaniniProjectionPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.MotionBlurPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.MotionBlurPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.MotionBlurPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.MotionBlurPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.MotionBlurPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.MotionBlurPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.MotionBlurPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.MotionBlurPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlarePassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlarePassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlarePassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlarePassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlarePassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlarePassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlarePassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlarePassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlareScreenSpacePassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlareScreenSpacePassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlareScreenSpacePassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlareScreenSpacePassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlareScreenSpacePassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlareScreenSpacePassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlareScreenSpacePassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.LensFlareScreenSpacePassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalSetupPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalSetupPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalSetupPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalSetupPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalSetupPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalSetupPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalSetupPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalSetupPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalFSRScalePassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalFSRScalePassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalFSRScalePassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalFSRScalePassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalFSRScalePassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalFSRScalePassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalFSRScalePassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalFSRScalePassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalBlitPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalBlitPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalBlitPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalBlitPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalBlitPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalBlitPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalBlitPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostProcessingFinalBlitPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings : System.ValueType
----@field isFxaaEnabled boolean
----@field isFsrEnabled boolean
----@field isTaaSharpeningEnabled boolean
----@field requireHDROutput boolean
----@field isAlphaOutputEnabled boolean
----@field hdrOperations UnityEngine.Rendering.HDROutputUtils.Operation
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.FinalBlitSettings.Create() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberPostPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberPostPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberPostPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberPostPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberPostPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberPostPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberPostPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.UberPostPassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostFXSetupPassData : System.Object
-UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostFXSetupPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostFXSetupPassData UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostFXSetupPassData
-CS.UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostFXSetupPassData = UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostFXSetupPassData
-
----@return UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostFXSetupPassData
-function UnityEngine.Rendering.Universal.PostProcessPassRenderGraph.PostFXSetupPassData.New() end
-
----@class UnityEngine.Rendering.Universal.ProbeVolumeDebugPass.WriteApvData : System.Object
----@field computeShader UnityEngine.ComputeShader
----@field resultBuffer UnityEngine.Rendering.RenderGraphModule.BufferHandle
----@field clickCoordinates UnityEngine.Vector2
----@field depthBuffer UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@field normalBuffer UnityEngine.Rendering.RenderGraphModule.TextureHandle
-UnityEngine.Rendering.Universal.ProbeVolumeDebugPass.WriteApvData = {}
----@alias CS.UnityEngine.Rendering.Universal.ProbeVolumeDebugPass.WriteApvData UnityEngine.Rendering.Universal.ProbeVolumeDebugPass.WriteApvData
-CS.UnityEngine.Rendering.Universal.ProbeVolumeDebugPass.WriteApvData = UnityEngine.Rendering.Universal.ProbeVolumeDebugPass.WriteApvData
-
----@return UnityEngine.Rendering.Universal.ProbeVolumeDebugPass.WriteApvData
-function UnityEngine.Rendering.Universal.ProbeVolumeDebugPass.WriteApvData.New() end
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.BlurTypes
----@field Bilateral UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.BlurTypes
----@field Gaussian UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.BlurTypes
----@field Kawase UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.BlurTypes
-UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.BlurTypes = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.BlurTypes UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.BlurTypes
-CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.BlurTypes = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.BlurTypes
-
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
----@field AmbientOcclusion UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
----@field BilateralBlurHorizontal UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
----@field BilateralBlurVertical UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
----@field BilateralBlurFinal UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
----@field BilateralAfterOpaque UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
----@field GaussianBlurHorizontal UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
----@field GaussianBlurVertical UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
----@field GaussianAfterOpaque UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
----@field KawaseBlur UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
----@field KawaseAfterOpaque UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
-UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
-CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.ShaderPasses
-
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOMaterialParams : System.ValueType
-UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOMaterialParams = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOMaterialParams UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOMaterialParams
-CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOMaterialParams = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOMaterialParams
-
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOPassData : System.Object
-UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOPassData UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOPassData
-CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOPassData = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOPassData
-
----@return UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOPassData
-function UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPass.SSAOPassData.New() end
-
----@class UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass.PassData : System.Object
----@field depthTarget UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@field stencilDitherMaskSeedMaterials UnityEngine.Material[]
-UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass.PassData UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass.PassData
-CS.UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass.PassData = UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass.PassData
-
----@return UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass.PassData
-function UnityEngine.Rendering.Universal.StencilCrossFadeRenderPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.XRDepthMotionPass.PassData : System.Object
-UnityEngine.Rendering.Universal.XRDepthMotionPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.XRDepthMotionPass.PassData UnityEngine.Rendering.Universal.XRDepthMotionPass.PassData
-CS.UnityEngine.Rendering.Universal.XRDepthMotionPass.PassData = UnityEngine.Rendering.Universal.XRDepthMotionPass.PassData
-
----@return UnityEngine.Rendering.Universal.XRDepthMotionPass.PassData
-function UnityEngine.Rendering.Universal.XRDepthMotionPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.PostProcessUtils.ShaderConstants : System.Object
----@field _Grain_Texture number
----@field _Grain_Params number
----@field _Grain_TilingParams number
----@field _BlueNoise_Texture number
----@field _Dithering_Params number
----@field _SourceSize number
-UnityEngine.Rendering.Universal.PostProcessUtils.ShaderConstants = {}
----@alias CS.UnityEngine.Rendering.Universal.PostProcessUtils.ShaderConstants UnityEngine.Rendering.Universal.PostProcessUtils.ShaderConstants
-CS.UnityEngine.Rendering.Universal.PostProcessUtils.ShaderConstants = UnityEngine.Rendering.Universal.PostProcessUtils.ShaderConstants
-
-
----@class UnityEngine.Rendering.Universal.ReflectionProbeManager.CachedProbe : System.ValueType
----@field updateCount number
----@field imageContentsHash UnityEngine.Hash128
----@field size number
----@field mipCount number
----@field dataIndices UnityEngine.Rendering.Universal.ReflectionProbeManager.CachedProbe.<dataIndices>e__FixedBuffer
----@field levels UnityEngine.Rendering.Universal.ReflectionProbeManager.CachedProbe.<levels>e__FixedBuffer
----@field texture UnityEngine.Texture
----@field lastUsed number
----@field hdrData UnityEngine.Vector4
-UnityEngine.Rendering.Universal.ReflectionProbeManager.CachedProbe = {}
----@alias CS.UnityEngine.Rendering.Universal.ReflectionProbeManager.CachedProbe UnityEngine.Rendering.Universal.ReflectionProbeManager.CachedProbe
-CS.UnityEngine.Rendering.Universal.ReflectionProbeManager.CachedProbe = UnityEngine.Rendering.Universal.ReflectionProbeManager.CachedProbe
-
-
----@class UnityEngine.Rendering.Universal.ReflectionProbeManager.ShaderProperties : System.Object
----@field BoxMin number
----@field BoxMax number
----@field ProbePosition number
----@field MipScaleOffset number
----@field Count number
----@field Atlas number
----@field Rotation number
-UnityEngine.Rendering.Universal.ReflectionProbeManager.ShaderProperties = {}
----@alias CS.UnityEngine.Rendering.Universal.ReflectionProbeManager.ShaderProperties UnityEngine.Rendering.Universal.ReflectionProbeManager.ShaderProperties
-CS.UnityEngine.Rendering.Universal.ReflectionProbeManager.ShaderProperties = UnityEngine.Rendering.Universal.ReflectionProbeManager.ShaderProperties
-
-
----@class UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.InjectionPoint
----@field BeforeRenderingTransparents UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.InjectionPoint
----@field BeforeRenderingPostProcessing UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.InjectionPoint
----@field AfterRenderingPostProcessing UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.InjectionPoint
-UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.InjectionPoint = {}
----@alias CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.InjectionPoint UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.InjectionPoint
-CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.InjectionPoint = UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.InjectionPoint
-
-
----@class UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
-UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass = {}
----@alias CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass
-CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass = UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass
-
----@param passName string
----@return UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass
-function UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.New(passName) end
----@param material UnityEngine.Material
----@param passIndex number
----@param fetchActiveColor boolean
----@param bindDepthStencilAttachment boolean
-function UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass:SetupMembers(material, passIndex, fetchActiveColor, bindDepthStencilAttachment) end
----@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
----@param frameData UnityEngine.Rendering.ContextContainer
-function UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass:RecordRenderGraph(renderGraph, frameData) end
-
----@class UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version
----@field Uninitialised UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version
----@field Initial UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version
----@field AddFetchColorBufferCheckbox UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version
----@field Count UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version
----@field Latest UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version
-UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version = {}
----@alias CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version
-CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version = UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.Version
-
-
----@class UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings : System.Object
----@field passTag string
----@field Event UnityEngine.Rendering.Universal.RenderPassEvent
----@field filterSettings UnityEngine.Rendering.Universal.RenderObjects.FilterSettings
----@field overrideMaterial UnityEngine.Material
----@field overrideMaterialPassIndex number
----@field overrideShader UnityEngine.Shader
----@field overrideShaderPassIndex number
----@field overrideMode UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.OverrideMaterialMode
----@field overrideDepthState boolean
----@field depthCompareFunction UnityEngine.Rendering.CompareFunction
----@field enableWrite boolean
----@field stencilSettings UnityEngine.Rendering.Universal.StencilStateData
----@field cameraSettings UnityEngine.Rendering.Universal.RenderObjects.CustomCameraSettings
-UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings = {}
----@alias CS.UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings
-CS.UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings = UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings
-
----@return UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings
-function UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.New() end
-
----@class UnityEngine.Rendering.Universal.RenderObjects.FilterSettings : System.Object
----@field RenderQueueType UnityEngine.Rendering.Universal.RenderQueueType
----@field LayerMask UnityEngine.LayerMask
----@field PassNames System.String[]
-UnityEngine.Rendering.Universal.RenderObjects.FilterSettings = {}
----@alias CS.UnityEngine.Rendering.Universal.RenderObjects.FilterSettings UnityEngine.Rendering.Universal.RenderObjects.FilterSettings
-CS.UnityEngine.Rendering.Universal.RenderObjects.FilterSettings = UnityEngine.Rendering.Universal.RenderObjects.FilterSettings
-
----@return UnityEngine.Rendering.Universal.RenderObjects.FilterSettings
-function UnityEngine.Rendering.Universal.RenderObjects.FilterSettings.New() end
-
----@class UnityEngine.Rendering.Universal.RenderObjects.CustomCameraSettings : System.Object
----@field overrideCamera boolean
----@field restoreCamera boolean
----@field offset UnityEngine.Vector4
----@field cameraFieldOfView number
-UnityEngine.Rendering.Universal.RenderObjects.CustomCameraSettings = {}
----@alias CS.UnityEngine.Rendering.Universal.RenderObjects.CustomCameraSettings UnityEngine.Rendering.Universal.RenderObjects.CustomCameraSettings
-CS.UnityEngine.Rendering.Universal.RenderObjects.CustomCameraSettings = UnityEngine.Rendering.Universal.RenderObjects.CustomCameraSettings
-
----@return UnityEngine.Rendering.Universal.RenderObjects.CustomCameraSettings
-function UnityEngine.Rendering.Universal.RenderObjects.CustomCameraSettings.New() end
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.DepthSource
----@field Depth UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.DepthSource
----@field DepthNormals UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.DepthSource
-UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.DepthSource = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.DepthSource UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.DepthSource
-CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.DepthSource = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.DepthSource
-
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.NormalQuality
----@field Low UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.NormalQuality
----@field Medium UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.NormalQuality
----@field High UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.NormalQuality
-UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.NormalQuality = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.NormalQuality UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.NormalQuality
-CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.NormalQuality = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.NormalQuality
-
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOSampleOption
----@field High UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOSampleOption
----@field Medium UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOSampleOption
----@field Low UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOSampleOption
-UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOSampleOption = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOSampleOption UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOSampleOption
-CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOSampleOption = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOSampleOption
-
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOMethodOptions
----@field BlueNoise UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOMethodOptions
----@field InterleavedGradient UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOMethodOptions
-UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOMethodOptions = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOMethodOptions UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOMethodOptions
-CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOMethodOptions = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.AOMethodOptions
-
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.BlurQualityOptions
----@field High UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.BlurQualityOptions
----@field Medium UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.BlurQualityOptions
----@field Low UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.BlurQualityOptions
-UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.BlurQualityOptions = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.BlurQualityOptions UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.BlurQualityOptions
-CS.UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.BlurQualityOptions = UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings.BlurQualityOptions
-
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
-UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass
-CS.UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass = UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass
-
----@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
----@param frameData UnityEngine.Rendering.ContextContainer
-function UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass:RecordRenderGraph(renderGraph, frameData) end
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass : UnityEngine.Rendering.Universal.ScriptableRenderPass
-UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass
-CS.UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass = UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass
-
----@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
----@param frameData UnityEngine.Rendering.ContextContainer
-function UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass:RecordRenderGraph(renderGraph, frameData) end
-
----@class UnityEngine.Rendering.Universal.RenderingLayerUtils.Event
----@field DepthNormalPrePass UnityEngine.Rendering.Universal.RenderingLayerUtils.Event
----@field Opaque UnityEngine.Rendering.Universal.RenderingLayerUtils.Event
-UnityEngine.Rendering.Universal.RenderingLayerUtils.Event = {}
----@alias CS.UnityEngine.Rendering.Universal.RenderingLayerUtils.Event UnityEngine.Rendering.Universal.RenderingLayerUtils.Event
-CS.UnityEngine.Rendering.Universal.RenderingLayerUtils.Event = UnityEngine.Rendering.Universal.RenderingLayerUtils.Event
-
-
----@class UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
----@field Bits8 UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
----@field Bits16 UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
----@field Bits24 UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
----@field Bits32 UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
-UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize = {}
----@alias CS.UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
-CS.UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize = UnityEngine.Rendering.Universal.RenderingLayerUtils.MaskSize
-
-
----@class UnityEngine.Rendering.Universal.RenderGraphSettings.Version
----@field Initial UnityEngine.Rendering.Universal.RenderGraphSettings.Version
-UnityEngine.Rendering.Universal.RenderGraphSettings.Version = {}
----@alias CS.UnityEngine.Rendering.Universal.RenderGraphSettings.Version UnityEngine.Rendering.Universal.RenderGraphSettings.Version
-CS.UnityEngine.Rendering.Universal.RenderGraphSettings.Version = UnityEngine.Rendering.Universal.RenderGraphSettings.Version
-
-
----@class UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings.Version
----@field Initial UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings.Version
-UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings.Version = {}
----@alias CS.UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings.Version UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings.Version
-CS.UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings.Version = UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings.Version
-
-
----@class UnityEngine.Rendering.Universal.URPShaderStrippingSetting.Version
----@field Initial UnityEngine.Rendering.Universal.URPShaderStrippingSetting.Version
-UnityEngine.Rendering.Universal.URPShaderStrippingSetting.Version = {}
----@alias CS.UnityEngine.Rendering.Universal.URPShaderStrippingSetting.Version UnityEngine.Rendering.Universal.URPShaderStrippingSetting.Version
-CS.UnityEngine.Rendering.Universal.URPShaderStrippingSetting.Version = UnityEngine.Rendering.Universal.URPShaderStrippingSetting.Version
-
-
----@class UnityEngine.Rendering.Universal.TemporalAA.ShaderConstants : System.Object
----@field _TaaAccumulationTex number
----@field _TaaMotionVectorTex number
----@field _TaaFilterWeights number
----@field _TaaFrameInfluence number
----@field _TaaVarianceClampScale number
----@field _CameraDepthTexture number
-UnityEngine.Rendering.Universal.TemporalAA.ShaderConstants = {}
----@alias CS.UnityEngine.Rendering.Universal.TemporalAA.ShaderConstants UnityEngine.Rendering.Universal.TemporalAA.ShaderConstants
-CS.UnityEngine.Rendering.Universal.TemporalAA.ShaderConstants = UnityEngine.Rendering.Universal.TemporalAA.ShaderConstants
-
-
----@class UnityEngine.Rendering.Universal.TemporalAA.ShaderKeywords : System.Object
----@field TAA_LOW_PRECISION_SOURCE string
-UnityEngine.Rendering.Universal.TemporalAA.ShaderKeywords = {}
----@alias CS.UnityEngine.Rendering.Universal.TemporalAA.ShaderKeywords UnityEngine.Rendering.Universal.TemporalAA.ShaderKeywords
-CS.UnityEngine.Rendering.Universal.TemporalAA.ShaderKeywords = UnityEngine.Rendering.Universal.TemporalAA.ShaderKeywords
-
-
----@class UnityEngine.Rendering.Universal.TemporalAA.Settings : System.ValueType
----@field quality UnityEngine.Rendering.Universal.TemporalAAQuality
----@field baseBlendFactor number
----@field jitterScale number
----@field mipBias number
----@field varianceClampScale number
----@field contrastAdaptiveSharpening number
-UnityEngine.Rendering.Universal.TemporalAA.Settings = {}
----@alias CS.UnityEngine.Rendering.Universal.TemporalAA.Settings UnityEngine.Rendering.Universal.TemporalAA.Settings
-CS.UnityEngine.Rendering.Universal.TemporalAA.Settings = UnityEngine.Rendering.Universal.TemporalAA.Settings
-
----@return UnityEngine.Rendering.Universal.TemporalAA.Settings
-function UnityEngine.Rendering.Universal.TemporalAA.Settings.Create() end
-
----@class UnityEngine.Rendering.Universal.TemporalAA.JitterFunc : System.MulticastDelegate
-UnityEngine.Rendering.Universal.TemporalAA.JitterFunc = {}
----@alias CS.UnityEngine.Rendering.Universal.TemporalAA.JitterFunc UnityEngine.Rendering.Universal.TemporalAA.JitterFunc
-CS.UnityEngine.Rendering.Universal.TemporalAA.JitterFunc = UnityEngine.Rendering.Universal.TemporalAA.JitterFunc
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.Rendering.Universal.TemporalAA.JitterFunc
-function UnityEngine.Rendering.Universal.TemporalAA.JitterFunc.New(object, method) end
----@param frameIndex number
----@param out_jitter UnityEngine.Vector2
----@param out_allowScaling boolean
----@return ,UnityEngine.Vector2,boolean
-function UnityEngine.Rendering.Universal.TemporalAA.JitterFunc:Invoke(frameIndex, out_jitter, out_allowScaling) end
----@param frameIndex number
----@param out_jitter UnityEngine.Vector2
----@param out_allowScaling boolean
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult,UnityEngine.Vector2,boolean
-function UnityEngine.Rendering.Universal.TemporalAA.JitterFunc:BeginInvoke(frameIndex, out_jitter, out_allowScaling, callback, object) end
----@param out_jitter UnityEngine.Vector2
----@param out_allowScaling boolean
----@param result System.IAsyncResult
----@return ,UnityEngine.Vector2,boolean
-function UnityEngine.Rendering.Universal.TemporalAA.JitterFunc:EndInvoke(out_jitter, out_allowScaling, result) end
-
----@class UnityEngine.Rendering.Universal.TemporalAA.TaaPassData : System.Object
-UnityEngine.Rendering.Universal.TemporalAA.TaaPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.TemporalAA.TaaPassData UnityEngine.Rendering.Universal.TemporalAA.TaaPassData
-CS.UnityEngine.Rendering.Universal.TemporalAA.TaaPassData = UnityEngine.Rendering.Universal.TemporalAA.TaaPassData
-
----@return UnityEngine.Rendering.Universal.TemporalAA.TaaPassData
-function UnityEngine.Rendering.Universal.TemporalAA.TaaPassData.New() end
-
----@class UnityEngine.Rendering.Universal.UniversalAdditionalCameraData.Version
----@field Initial UnityEngine.Rendering.Universal.UniversalAdditionalCameraData.Version
----@field DepthAndOpaqueTextureOptions UnityEngine.Rendering.Universal.UniversalAdditionalCameraData.Version
----@field Count UnityEngine.Rendering.Universal.UniversalAdditionalCameraData.Version
-UnityEngine.Rendering.Universal.UniversalAdditionalCameraData.Version = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalAdditionalCameraData.Version UnityEngine.Rendering.Universal.UniversalAdditionalCameraData.Version
-CS.UnityEngine.Rendering.Universal.UniversalAdditionalCameraData.Version = UnityEngine.Rendering.Universal.UniversalAdditionalCameraData.Version
-
-
----@class UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version
----@field Initial UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version
----@field RenderingLayers UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version
----@field SoftShadowQuality UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version
----@field RenderingLayersMask UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version
----@field Count UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version
-UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version
-CS.UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version = UnityEngine.Rendering.Universal.UniversalAdditionalLightData.Version
-
-
----@class UnityEngine.Rendering.Universal.UniversalCameraHistory.TypeId : System.Object
----@field value number
-UnityEngine.Rendering.Universal.UniversalCameraHistory.TypeId = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalCameraHistory.TypeId UnityEngine.Rendering.Universal.UniversalCameraHistory.TypeId
-CS.UnityEngine.Rendering.Universal.UniversalCameraHistory.TypeId = UnityEngine.Rendering.Universal.UniversalCameraHistory.TypeId
-
-
----@class UnityEngine.Rendering.Universal.UniversalCameraHistory.Item : System.ValueType
----@field storage UnityEngine.Rendering.ContextItem
----@field requestVersion number
----@field writeVersion number
-UnityEngine.Rendering.Universal.UniversalCameraHistory.Item = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalCameraHistory.Item UnityEngine.Rendering.Universal.UniversalCameraHistory.Item
-CS.UnityEngine.Rendering.Universal.UniversalCameraHistory.Item = UnityEngine.Rendering.Universal.UniversalCameraHistory.Item
-
-function UnityEngine.Rendering.Universal.UniversalCameraHistory.Item:Reset() end
-
----@class UnityEngine.Rendering.Universal.RenderGraphUtils.PassData : System.Object
-UnityEngine.Rendering.Universal.RenderGraphUtils.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.RenderGraphUtils.PassData UnityEngine.Rendering.Universal.RenderGraphUtils.PassData
-CS.UnityEngine.Rendering.Universal.RenderGraphUtils.PassData = UnityEngine.Rendering.Universal.RenderGraphUtils.PassData
-
----@return UnityEngine.Rendering.Universal.RenderGraphUtils.PassData
-function UnityEngine.Rendering.Universal.RenderGraphUtils.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.ClearTargetsPass.PassData : System.Object
-UnityEngine.Rendering.Universal.ClearTargetsPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.ClearTargetsPass.PassData UnityEngine.Rendering.Universal.ClearTargetsPass.PassData
-CS.UnityEngine.Rendering.Universal.ClearTargetsPass.PassData = UnityEngine.Rendering.Universal.ClearTargetsPass.PassData
-
----@return UnityEngine.Rendering.Universal.ClearTargetsPass.PassData
-function UnityEngine.Rendering.Universal.ClearTargetsPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache : System.Object
-UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache = UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache
-
----@param camera UnityEngine.Camera
----@return UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache.CameraMetadataCacheEntry
-function UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache.GetCached(camera) end
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling : System.Object
-UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling = UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling
-
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraRenderingScope : System.ValueType
-UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraRenderingScope = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraRenderingScope UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraRenderingScope
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraRenderingScope = UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraRenderingScope
-
----@param context UnityEngine.Rendering.ScriptableRenderContext
----@param camera UnityEngine.Camera
----@return UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraRenderingScope
-function UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraRenderingScope.New(context, camera) end
-function UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraRenderingScope:Dispose() end
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipeline.ContextRenderingScope : System.ValueType
-UnityEngine.Rendering.Universal.UniversalRenderPipeline.ContextRenderingScope = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.ContextRenderingScope UnityEngine.Rendering.Universal.UniversalRenderPipeline.ContextRenderingScope
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.ContextRenderingScope = UnityEngine.Rendering.Universal.UniversalRenderPipeline.ContextRenderingScope
-
----@param context UnityEngine.Rendering.ScriptableRenderContext
----@param cameras System.Collections.Generic.List
----@return UnityEngine.Rendering.Universal.UniversalRenderPipeline.ContextRenderingScope
-function UnityEngine.Rendering.Universal.UniversalRenderPipeline.ContextRenderingScope.New(context, cameras) end
-function UnityEngine.Rendering.Universal.UniversalRenderPipeline.ContextRenderingScope:Dispose() end
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipeline.SingleCameraRequest : System.Object
----@field destination UnityEngine.RenderTexture
----@field mipLevel number
----@field face UnityEngine.CubemapFace
----@field slice number
-UnityEngine.Rendering.Universal.UniversalRenderPipeline.SingleCameraRequest = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.SingleCameraRequest UnityEngine.Rendering.Universal.UniversalRenderPipeline.SingleCameraRequest
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.SingleCameraRequest = UnityEngine.Rendering.Universal.UniversalRenderPipeline.SingleCameraRequest
-
----@return UnityEngine.Rendering.Universal.UniversalRenderPipeline.SingleCameraRequest
-function UnityEngine.Rendering.Universal.UniversalRenderPipeline.SingleCameraRequest.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.DeferredLights.ShaderConstants : System.Object
----@field _LitStencilRef number
----@field _LitStencilReadMask number
----@field _LitStencilWriteMask number
----@field _SimpleLitStencilRef number
----@field _SimpleLitStencilReadMask number
----@field _SimpleLitStencilWriteMask number
----@field _StencilRef number
----@field _StencilReadMask number
----@field _StencilWriteMask number
----@field _LitPunctualStencilRef number
----@field _LitPunctualStencilReadMask number
----@field _LitPunctualStencilWriteMask number
----@field _SimpleLitPunctualStencilRef number
----@field _SimpleLitPunctualStencilReadMask number
----@field _SimpleLitPunctualStencilWriteMask number
----@field _LitDirStencilRef number
----@field _LitDirStencilReadMask number
----@field _LitDirStencilWriteMask number
----@field _SimpleLitDirStencilRef number
----@field _SimpleLitDirStencilReadMask number
----@field _SimpleLitDirStencilWriteMask number
----@field _ScreenToWorld number
----@field _MainLightPosition number
----@field _MainLightColor number
----@field _MainLightLayerMask number
----@field _SpotLightScale number
----@field _SpotLightBias number
----@field _SpotLightGuard number
----@field _LightPosWS number
----@field _LightColor number
----@field _LightAttenuation number
----@field _LightOcclusionProbInfo number
----@field _LightDirection number
----@field _LightFlags number
----@field _ShadowLightIndex number
----@field _LightLayerMask number
----@field _CookieLightIndex number
-UnityEngine.Rendering.Universal.Internal.DeferredLights.ShaderConstants = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.DeferredLights.ShaderConstants UnityEngine.Rendering.Universal.Internal.DeferredLights.ShaderConstants
-CS.UnityEngine.Rendering.Universal.Internal.DeferredLights.ShaderConstants = UnityEngine.Rendering.Universal.Internal.DeferredLights.ShaderConstants
-
-
----@class UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses
----@field StencilVolume UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses
----@field PunctualLit UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses
----@field PunctualSimpleLit UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses
----@field DirectionalLit UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses
----@field DirectionalSimpleLit UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses
----@field Fog UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses
----@field SSAOOnly UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses
-UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses
-CS.UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses = UnityEngine.Rendering.Universal.Internal.DeferredLights.StencilDeferredPasses
-
-
----@class UnityEngine.Rendering.Universal.Internal.DeferredLights.ClusterDeferredPasses
----@field ClusteredLightsLit UnityEngine.Rendering.Universal.Internal.DeferredLights.ClusterDeferredPasses
----@field ClusteredLightsSimpleLit UnityEngine.Rendering.Universal.Internal.DeferredLights.ClusterDeferredPasses
----@field Fog UnityEngine.Rendering.Universal.Internal.DeferredLights.ClusterDeferredPasses
-UnityEngine.Rendering.Universal.Internal.DeferredLights.ClusterDeferredPasses = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.DeferredLights.ClusterDeferredPasses UnityEngine.Rendering.Universal.Internal.DeferredLights.ClusterDeferredPasses
-CS.UnityEngine.Rendering.Universal.Internal.DeferredLights.ClusterDeferredPasses = UnityEngine.Rendering.Universal.Internal.DeferredLights.ClusterDeferredPasses
-
-
----@class UnityEngine.Rendering.Universal.Internal.DeferredLights.InitParams : System.ValueType
----@field stencilDeferredMaterial UnityEngine.Material
----@field clusterDeferredMaterial UnityEngine.Material
----@field lightCookieManager UnityEngine.Rendering.Universal.LightCookieManager
----@field deferredPlus boolean
-UnityEngine.Rendering.Universal.Internal.DeferredLights.InitParams = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.DeferredLights.InitParams UnityEngine.Rendering.Universal.Internal.DeferredLights.InitParams
-CS.UnityEngine.Rendering.Universal.Internal.DeferredLights.InitParams = UnityEngine.Rendering.Universal.Internal.DeferredLights.InitParams
-
-
----@class UnityEngine.Rendering.Universal.Internal.DeferredLights.SetupLightPassData : System.Object
-UnityEngine.Rendering.Universal.Internal.DeferredLights.SetupLightPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.DeferredLights.SetupLightPassData UnityEngine.Rendering.Universal.Internal.DeferredLights.SetupLightPassData
-CS.UnityEngine.Rendering.Universal.Internal.DeferredLights.SetupLightPassData = UnityEngine.Rendering.Universal.Internal.DeferredLights.SetupLightPassData
-
----@return UnityEngine.Rendering.Universal.Internal.DeferredLights.SetupLightPassData
-function UnityEngine.Rendering.Universal.Internal.DeferredLights.SetupLightPassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.AdditionalShadowsConstantBuffer : System.Object
----@field _AdditionalLightsWorldToShadow number
----@field _AdditionalShadowParams number
----@field _AdditionalShadowOffset0 number
----@field _AdditionalShadowOffset1 number
----@field _AdditionalShadowFadeParams number
----@field _AdditionalShadowmapSize number
----@field _AdditionalLightsShadowmapID number
----@field _AdditionalLightsWorldToShadow_SSBO number
----@field _AdditionalShadowParams_SSBO number
-UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.AdditionalShadowsConstantBuffer = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.AdditionalShadowsConstantBuffer UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.AdditionalShadowsConstantBuffer
-CS.UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.AdditionalShadowsConstantBuffer = UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.AdditionalShadowsConstantBuffer
-
-
----@class UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.PassData UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.PassData = UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.PassData
-function UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.PassData UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.PassData = UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.PassData
-function UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.ShaderConstants : System.Object
----@field _Lut_Params number
----@field _ColorBalance number
----@field _ColorFilter number
----@field _ChannelMixerRed number
----@field _ChannelMixerGreen number
----@field _ChannelMixerBlue number
----@field _HueSatCon number
----@field _Lift number
----@field _Gamma number
----@field _Gain number
----@field _Shadows number
----@field _Midtones number
----@field _Highlights number
----@field _ShaHiLimits number
----@field _SplitShadows number
----@field _SplitHighlights number
----@field _CurveMaster number
----@field _CurveRed number
----@field _CurveGreen number
----@field _CurveBlue number
----@field _CurveHueVsHue number
----@field _CurveHueVsSat number
----@field _CurveLumVsSat number
----@field _CurveSatVsSat number
-UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.ShaderConstants = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.ShaderConstants UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.ShaderConstants
-CS.UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.ShaderConstants = UnityEngine.Rendering.Universal.Internal.ColorGradingLutPass.ShaderConstants
-
-
----@class UnityEngine.Rendering.Universal.Internal.CopyColorPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.CopyColorPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.CopyColorPass.PassData UnityEngine.Rendering.Universal.Internal.CopyColorPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.CopyColorPass.PassData = UnityEngine.Rendering.Universal.Internal.CopyColorPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.CopyColorPass.PassData
-function UnityEngine.Rendering.Universal.Internal.CopyColorPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.CopyDepthPass.ShaderConstants : System.Object
----@field _CameraDepthAttachment number
----@field _CameraDepthTexture number
----@field _ZWriteShaderHandle number
-UnityEngine.Rendering.Universal.Internal.CopyDepthPass.ShaderConstants = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.CopyDepthPass.ShaderConstants UnityEngine.Rendering.Universal.Internal.CopyDepthPass.ShaderConstants
-CS.UnityEngine.Rendering.Universal.Internal.CopyDepthPass.ShaderConstants = UnityEngine.Rendering.Universal.Internal.CopyDepthPass.ShaderConstants
-
-
----@class UnityEngine.Rendering.Universal.Internal.CopyDepthPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.CopyDepthPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.CopyDepthPass.PassData UnityEngine.Rendering.Universal.Internal.CopyDepthPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.CopyDepthPass.PassData = UnityEngine.Rendering.Universal.Internal.CopyDepthPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.CopyDepthPass.PassData
-function UnityEngine.Rendering.Universal.Internal.CopyDepthPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass.PassData UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass.PassData = UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass.PassData
-function UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.DepthOnlyPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.DepthOnlyPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.DepthOnlyPass.PassData UnityEngine.Rendering.Universal.Internal.DepthOnlyPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.DepthOnlyPass.PassData = UnityEngine.Rendering.Universal.Internal.DepthOnlyPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.DepthOnlyPass.PassData
-function UnityEngine.Rendering.Universal.Internal.DepthOnlyPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.DrawObjectsPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.DrawObjectsPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.DrawObjectsPass.PassData UnityEngine.Rendering.Universal.Internal.DrawObjectsPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.DrawObjectsPass.PassData = UnityEngine.Rendering.Universal.Internal.DrawObjectsPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.DrawObjectsPass.PassData
-function UnityEngine.Rendering.Universal.Internal.DrawObjectsPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.ForwardLights.LightConstantBuffer : System.Object
----@field _MainLightPosition number
----@field _MainLightColor number
----@field _MainLightOcclusionProbesChannel number
----@field _MainLightLayerMask number
----@field _AdditionalLightsCount number
----@field _AdditionalLightsPosition number
----@field _AdditionalLightsColor number
----@field _AdditionalLightsAttenuation number
----@field _AdditionalLightsSpotDir number
----@field _AdditionalLightOcclusionProbeChannel number
----@field _AdditionalLightsLayerMasks number
-UnityEngine.Rendering.Universal.Internal.ForwardLights.LightConstantBuffer = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.ForwardLights.LightConstantBuffer UnityEngine.Rendering.Universal.Internal.ForwardLights.LightConstantBuffer
-CS.UnityEngine.Rendering.Universal.Internal.ForwardLights.LightConstantBuffer = UnityEngine.Rendering.Universal.Internal.ForwardLights.LightConstantBuffer
-
-
----@class UnityEngine.Rendering.Universal.Internal.ForwardLights.InitParams : System.ValueType
----@field lightCookieManager UnityEngine.Rendering.Universal.LightCookieManager
----@field forwardPlus boolean
-UnityEngine.Rendering.Universal.Internal.ForwardLights.InitParams = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.ForwardLights.InitParams UnityEngine.Rendering.Universal.Internal.ForwardLights.InitParams
-CS.UnityEngine.Rendering.Universal.Internal.ForwardLights.InitParams = UnityEngine.Rendering.Universal.Internal.ForwardLights.InitParams
-
-
----@class UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLightPassData : System.Object
-UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLightPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLightPassData UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLightPassData
-CS.UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLightPassData = UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLightPassData
-
----@return UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLightPassData
-function UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLightPassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitPassNames : System.Object
----@field NearestSampler string
----@field BilinearSampler string
-UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitPassNames = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitPassNames UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitPassNames
-CS.UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitPassNames = UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitPassNames
-
-
----@class UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitType
----@field Core UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitType
----@field HDR UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitType
----@field Count UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitType
-UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitType = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitType UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitType
-CS.UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitType = UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitType
-
-
----@class UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitMaterialData : System.ValueType
----@field material UnityEngine.Material
----@field nearestSamplerPass number
----@field bilinearSamplerPass number
-UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitMaterialData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitMaterialData UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitMaterialData
-CS.UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitMaterialData = UnityEngine.Rendering.Universal.Internal.FinalBlitPass.BlitMaterialData
-
-
----@class UnityEngine.Rendering.Universal.Internal.FinalBlitPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.FinalBlitPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.FinalBlitPass.PassData UnityEngine.Rendering.Universal.Internal.FinalBlitPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.FinalBlitPass.PassData = UnityEngine.Rendering.Universal.Internal.FinalBlitPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.FinalBlitPass.PassData
-function UnityEngine.Rendering.Universal.Internal.FinalBlitPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.MainLightShadowConstantBuffer : System.Object
----@field _WorldToShadow number
----@field _ShadowParams number
----@field _CascadeShadowSplitSpheres0 number
----@field _CascadeShadowSplitSpheres1 number
----@field _CascadeShadowSplitSpheres2 number
----@field _CascadeShadowSplitSpheres3 number
----@field _CascadeShadowSplitSphereRadii number
----@field _ShadowOffset0 number
----@field _ShadowOffset1 number
----@field _ShadowmapSize number
----@field _MainLightShadowmapID number
-UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.MainLightShadowConstantBuffer = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.MainLightShadowConstantBuffer UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.MainLightShadowConstantBuffer
-CS.UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.MainLightShadowConstantBuffer = UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.MainLightShadowConstantBuffer
-
-
----@class UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.PassData UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.PassData = UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.PassData
-function UnityEngine.Rendering.Universal.Internal.MainLightShadowCasterPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.DeferredPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.DeferredPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.DeferredPass.PassData UnityEngine.Rendering.Universal.Internal.DeferredPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.DeferredPass.PassData = UnityEngine.Rendering.Universal.Internal.DeferredPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.DeferredPass.PassData
-function UnityEngine.Rendering.Universal.Internal.DeferredPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.DrawObjectsWithRenderingLayersPass.RenderingLayersPassData : System.Object
-UnityEngine.Rendering.Universal.Internal.DrawObjectsWithRenderingLayersPass.RenderingLayersPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.DrawObjectsWithRenderingLayersPass.RenderingLayersPassData UnityEngine.Rendering.Universal.Internal.DrawObjectsWithRenderingLayersPass.RenderingLayersPassData
-CS.UnityEngine.Rendering.Universal.Internal.DrawObjectsWithRenderingLayersPass.RenderingLayersPassData = UnityEngine.Rendering.Universal.Internal.DrawObjectsWithRenderingLayersPass.RenderingLayersPassData
-
----@return UnityEngine.Rendering.Universal.Internal.DrawObjectsWithRenderingLayersPass.RenderingLayersPassData
-function UnityEngine.Rendering.Universal.Internal.DrawObjectsWithRenderingLayersPass.RenderingLayersPassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.GBufferPass.PassData : System.Object
-UnityEngine.Rendering.Universal.Internal.GBufferPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.GBufferPass.PassData UnityEngine.Rendering.Universal.Internal.GBufferPass.PassData
-CS.UnityEngine.Rendering.Universal.Internal.GBufferPass.PassData = UnityEngine.Rendering.Universal.Internal.GBufferPass.PassData
-
----@return UnityEngine.Rendering.Universal.Internal.GBufferPass.PassData
-function UnityEngine.Rendering.Universal.Internal.GBufferPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.Internal.RenderTargetBufferSystem.SwapBuffer : System.ValueType
----@field rtMSAA UnityEngine.Rendering.RTHandle
----@field rtResolve UnityEngine.Rendering.RTHandle
----@field name string
----@field msaa number
-UnityEngine.Rendering.Universal.Internal.RenderTargetBufferSystem.SwapBuffer = {}
----@alias CS.UnityEngine.Rendering.Universal.Internal.RenderTargetBufferSystem.SwapBuffer UnityEngine.Rendering.Universal.Internal.RenderTargetBufferSystem.SwapBuffer
-CS.UnityEngine.Rendering.Universal.Internal.RenderTargetBufferSystem.SwapBuffer = UnityEngine.Rendering.Universal.Internal.RenderTargetBufferSystem.SwapBuffer
-
-
----@class UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange : System.ValueType
----@field Current number
-UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange = {}
----@alias CS.UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange
-CS.UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange = UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange
-
----@param begin number
----@param _end number
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange
-function UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange.New(begin, _end) end
----@return UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange
-function UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange:GetEnumerator() end
----@return boolean
-function UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange:MoveNext() end
-function UnityEngine.Rendering.Universal.ScriptableRenderer.RenderBlocks.BlockRange:Dispose() end
-
----@class UnityEngine.Rendering.Universal.LightCookieManager.Settings.AtlasSettings : System.ValueType
----@field resolution UnityEngine.Vector2Int
----@field format UnityEngine.Experimental.Rendering.GraphicsFormat
----@field isPow2 boolean
----@field isSquare boolean
-UnityEngine.Rendering.Universal.LightCookieManager.Settings.AtlasSettings = {}
----@alias CS.UnityEngine.Rendering.Universal.LightCookieManager.Settings.AtlasSettings UnityEngine.Rendering.Universal.LightCookieManager.Settings.AtlasSettings
-CS.UnityEngine.Rendering.Universal.LightCookieManager.Settings.AtlasSettings = UnityEngine.Rendering.Universal.LightCookieManager.Settings.AtlasSettings
-
-
----@class UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest.SettingsOptions
----@field None UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest.SettingsOptions
----@field SoftShadow UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest.SettingsOptions
----@field PointLightShadow UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest.SettingsOptions
----@field All UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest.SettingsOptions
-UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest.SettingsOptions = {}
----@alias CS.UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest.SettingsOptions UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest.SettingsOptions
-CS.UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest.SettingsOptions = UnityEngine.Rendering.Universal.AdditionalLightsShadowAtlasLayout.ShadowResolutionRequest.SettingsOptions
-
-
----@class UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.CopyPassData : System.Object
-UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.CopyPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.CopyPassData UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.CopyPassData
-CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.CopyPassData = UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.CopyPassData
-
----@return UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.CopyPassData
-function UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.CopyPassData.New() end
-
----@class UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.MainPassData : System.Object
-UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.MainPassData = {}
----@alias CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.MainPassData UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.MainPassData
-CS.UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.MainPassData = UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.MainPassData
-
----@return UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.MainPassData
-function UnityEngine.Rendering.Universal.FullScreenPassRendererFeature.FullScreenRenderPass.MainPassData.New() end
-
----@class UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.OverrideMaterialMode
----@field None UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.OverrideMaterialMode
----@field Material UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.OverrideMaterialMode
----@field Shader UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.OverrideMaterialMode
-UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.OverrideMaterialMode = {}
----@alias CS.UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.OverrideMaterialMode UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.OverrideMaterialMode
-CS.UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.OverrideMaterialMode = UnityEngine.Rendering.Universal.RenderObjects.RenderObjectsSettings.OverrideMaterialMode
-
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass.PassData : System.Object
-UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass.PassData UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass.PassData
-CS.UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass.PassData = UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass.PassData
-
----@return UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass.PassData
-function UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass.PassData : System.Object
-UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass.PassData = {}
----@alias CS.UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass.PassData UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass.PassData
-CS.UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass.PassData = UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass.PassData
-
----@return UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass.PassData
-function UnityEngine.Rendering.Universal.ScreenSpaceShadows.ScreenSpaceShadowsPostPass.PassData.New() end
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache.CameraMetadataCacheEntry : System.Object
----@field sampler UnityEngine.Rendering.ProfilingSampler
-UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache.CameraMetadataCacheEntry = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache.CameraMetadataCacheEntry UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache.CameraMetadataCacheEntry
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache.CameraMetadataCacheEntry = UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache.CameraMetadataCacheEntry
-
----@return UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache.CameraMetadataCacheEntry
-function UnityEngine.Rendering.Universal.UniversalRenderPipeline.CameraMetadataCache.CameraMetadataCacheEntry.New() end
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline : System.Object
----@field initializeCameraData UnityEngine.Rendering.ProfilingSampler
----@field initializeStackedCameraData UnityEngine.Rendering.ProfilingSampler
----@field initializeAdditionalCameraData UnityEngine.Rendering.ProfilingSampler
----@field initializeRenderingData UnityEngine.Rendering.ProfilingSampler
----@field initializeShadowData UnityEngine.Rendering.ProfilingSampler
----@field initializeLightData UnityEngine.Rendering.ProfilingSampler
----@field buildAdditionalLightsShadowAtlasLayout UnityEngine.Rendering.ProfilingSampler
----@field getPerObjectLightFlags UnityEngine.Rendering.ProfilingSampler
----@field getMainLightIndex UnityEngine.Rendering.ProfilingSampler
----@field setupPerFrameShaderConstants UnityEngine.Rendering.ProfilingSampler
----@field setupPerCameraShaderConstants UnityEngine.Rendering.ProfilingSampler
-UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline = UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline
-
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Renderer : System.Object
----@field setupCullingParameters UnityEngine.Rendering.ProfilingSampler
-UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Renderer = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Renderer UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Renderer
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Renderer = UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Renderer
-
-
----@class UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Context : System.Object
----@field submit UnityEngine.Rendering.ProfilingSampler
-UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Context = {}
----@alias CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Context UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Context
-CS.UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Context = UnityEngine.Rendering.Universal.UniversalRenderPipeline.Profiling.Pipeline.Context
-
-
----@class ShadersDummy : System.Object
-ShadersDummy = {}
----@alias CS.ShadersDummy ShadersDummy
-CS.ShadersDummy = ShadersDummy
-
----@return ShadersDummy
-function ShadersDummy.New() end
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-
----@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData : System.ValueType
----@field FilePathsData System.Byte[]
----@field TypesData System.Byte[]
----@field TotalTypes number
----@field TotalFiles number
----@field IsEditorOnly boolean
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-
----@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData : System.ValueType
----@field FilePathsData System.Byte[]
----@field TypesData System.Byte[]
----@field TotalTypes number
----@field TotalFiles number
----@field IsEditorOnly boolean
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-
----@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData : System.ValueType
----@field FilePathsData System.Byte[]
----@field TypesData System.Byte[]
----@field TotalTypes number
----@field TotalFiles number
----@field IsEditorOnly boolean
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-
----@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
-
----@class UnityEngine.Rendering.ShaderGraph.Documentation : UnityEngine.Rendering.DocumentationInfo
-UnityEngine.Rendering.ShaderGraph.Documentation = {}
----@alias CS.UnityEngine.Rendering.ShaderGraph.Documentation UnityEngine.Rendering.ShaderGraph.Documentation
-CS.UnityEngine.Rendering.ShaderGraph.Documentation = UnityEngine.Rendering.ShaderGraph.Documentation
-
----@return UnityEngine.Rendering.ShaderGraph.Documentation
-function UnityEngine.Rendering.ShaderGraph.Documentation.New() end
-
----@class UnityEngine.Rendering.HighDefinition.FullscreenShaderPass
----@field Blit UnityEngine.Rendering.HighDefinition.FullscreenShaderPass
----@field DrawProcedural UnityEngine.Rendering.HighDefinition.FullscreenShaderPass
-UnityEngine.Rendering.HighDefinition.FullscreenShaderPass = {}
----@alias CS.UnityEngine.Rendering.HighDefinition.FullscreenShaderPass UnityEngine.Rendering.HighDefinition.FullscreenShaderPass
-CS.UnityEngine.Rendering.HighDefinition.FullscreenShaderPass = UnityEngine.Rendering.HighDefinition.FullscreenShaderPass
-
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData : System.ValueType
----@field FilePathsData System.Byte[]
----@field TypesData System.Byte[]
----@field TotalTypes number
----@field TotalFiles number
----@field IsEditorOnly boolean
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-
----@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData : System.ValueType
----@field FilePathsData System.Byte[]
----@field TypesData System.Byte[]
----@field TotalTypes number
----@field TotalFiles number
----@field IsEditorOnly boolean
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-
----@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
-
----@class UnityEngine.TextCore.OTL_FeatureTag
----@field kern UnityEngine.TextCore.OTL_FeatureTag
----@field liga UnityEngine.TextCore.OTL_FeatureTag
----@field mark UnityEngine.TextCore.OTL_FeatureTag
----@field mkmk UnityEngine.TextCore.OTL_FeatureTag
-UnityEngine.TextCore.OTL_FeatureTag = {}
----@alias CS.UnityEngine.TextCore.OTL_FeatureTag UnityEngine.TextCore.OTL_FeatureTag
-CS.UnityEngine.TextCore.OTL_FeatureTag = UnityEngine.TextCore.OTL_FeatureTag
-
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData : System.ValueType
----@field FilePathsData System.Byte[]
----@field TypesData System.Byte[]
----@field TotalTypes number
----@field TotalFiles number
----@field IsEditorOnly boolean
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-
-
----@class TMP_MarkupTagUpdateUtility : System.Object
-TMP_MarkupTagUpdateUtility = {}
----@alias CS.TMP_MarkupTagUpdateUtility TMP_MarkupTagUpdateUtility
-CS.TMP_MarkupTagUpdateUtility = TMP_MarkupTagUpdateUtility
-
----@return TMP_MarkupTagUpdateUtility
-function TMP_MarkupTagUpdateUtility.New() end
----@param c System.Char
----@return System.Char
-function TMP_MarkupTagUpdateUtility.ToUpperFast(c) end
----@param s string
----@return number
-function TMP_MarkupTagUpdateUtility.GetHashCodeCaseInSensitive(s) end
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-
----@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
-
----@class TMP_MarkupTagUpdateUtility.MarkupTagDescriptor : System.ValueType
----@field linefeed TMP_MarkupTagUpdateUtility.MarkupTagDescriptor
----@field name string
----@field tag string
----@field description string
-TMP_MarkupTagUpdateUtility.MarkupTagDescriptor = {}
----@alias CS.TMP_MarkupTagUpdateUtility.MarkupTagDescriptor TMP_MarkupTagUpdateUtility.MarkupTagDescriptor
-CS.TMP_MarkupTagUpdateUtility.MarkupTagDescriptor = TMP_MarkupTagUpdateUtility.MarkupTagDescriptor
-
----@overload fun(name: string, tag: string, description: string) : TMP_MarkupTagUpdateUtility.MarkupTagDescriptor
----@param name string
----@return TMP_MarkupTagUpdateUtility.MarkupTagDescriptor
-function TMP_MarkupTagUpdateUtility.MarkupTagDescriptor.New(name) end
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData : System.ValueType
----@field FilePathsData System.Byte[]
----@field TypesData System.Byte[]
----@field TotalTypes number
----@field TotalFiles number
----@field IsEditorOnly boolean
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
-
-
----@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
-UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
----@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-
----@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
-function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
-
----@class UnityEngine.Timeline.ActivationMixerPlayable : UnityEngine.Playables.PlayableBehaviour
----@field postPlaybackState UnityEngine.Timeline.ActivationTrack.PostPlaybackState
-UnityEngine.Timeline.ActivationMixerPlayable = {}
----@alias CS.UnityEngine.Timeline.ActivationMixerPlayable UnityEngine.Timeline.ActivationMixerPlayable
-CS.UnityEngine.Timeline.ActivationMixerPlayable = UnityEngine.Timeline.ActivationMixerPlayable
-
----@return UnityEngine.Timeline.ActivationMixerPlayable
-function UnityEngine.Timeline.ActivationMixerPlayable.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param inputCount number
----@return UnityEngine.Playables.ScriptPlayable
-function UnityEngine.Timeline.ActivationMixerPlayable.Create(graph, inputCount) end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.ActivationMixerPlayable:OnPlayableDestroy(playable) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
----@param playerData System.Object
-function UnityEngine.Timeline.ActivationMixerPlayable:ProcessFrame(playable, info, playerData) end
-
----@class UnityEngine.Timeline.ActivationPlayableAsset : UnityEngine.Playables.PlayableAsset
----@field clipCaps UnityEngine.Timeline.ClipCaps
-UnityEngine.Timeline.ActivationPlayableAsset = {}
----@alias CS.UnityEngine.Timeline.ActivationPlayableAsset UnityEngine.Timeline.ActivationPlayableAsset
-CS.UnityEngine.Timeline.ActivationPlayableAsset = UnityEngine.Timeline.ActivationPlayableAsset
-
----@return UnityEngine.Timeline.ActivationPlayableAsset
-function UnityEngine.Timeline.ActivationPlayableAsset.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param go UnityEngine.GameObject
----@return UnityEngine.Playables.Playable
-function UnityEngine.Timeline.ActivationPlayableAsset:CreatePlayable(graph, go) end
-
----@class UnityEngine.Timeline.ActivationTrack : UnityEngine.Timeline.TrackAsset
----@field postPlaybackState UnityEngine.Timeline.ActivationTrack.PostPlaybackState
-UnityEngine.Timeline.ActivationTrack = {}
----@alias CS.UnityEngine.Timeline.ActivationTrack UnityEngine.Timeline.ActivationTrack
-CS.UnityEngine.Timeline.ActivationTrack = UnityEngine.Timeline.ActivationTrack
-
----@return UnityEngine.Timeline.ActivationTrack
-function UnityEngine.Timeline.ActivationTrack.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param go UnityEngine.GameObject
----@param inputCount number
----@return UnityEngine.Playables.Playable
-function UnityEngine.Timeline.ActivationTrack:CreateTrackMixer(graph, go, inputCount) end
----@param director UnityEngine.Playables.PlayableDirector
----@param driver UnityEngine.Timeline.IPropertyCollector
-function UnityEngine.Timeline.ActivationTrack:GatherProperties(director, driver) end
-
----@class UnityEngine.Timeline.AnimationOutputWeightProcessor : System.Object
-UnityEngine.Timeline.AnimationOutputWeightProcessor = {}
----@alias CS.UnityEngine.Timeline.AnimationOutputWeightProcessor UnityEngine.Timeline.AnimationOutputWeightProcessor
-CS.UnityEngine.Timeline.AnimationOutputWeightProcessor = UnityEngine.Timeline.AnimationOutputWeightProcessor
-
----@param output UnityEngine.Animations.AnimationPlayableOutput
----@return UnityEngine.Timeline.AnimationOutputWeightProcessor
-function UnityEngine.Timeline.AnimationOutputWeightProcessor.New(output) end
-function UnityEngine.Timeline.AnimationOutputWeightProcessor:Evaluate() end
-
----@class UnityEngine.Timeline.AnimationPlayableAsset : UnityEngine.Playables.PlayableAsset
----@field position UnityEngine.Vector3
----@field rotation UnityEngine.Quaternion
----@field eulerAngles UnityEngine.Vector3
----@field useTrackMatchFields boolean
----@field matchTargetFields UnityEngine.Timeline.MatchTargetFields
----@field removeStartOffset boolean
----@field applyFootIK boolean
----@field loop UnityEngine.Timeline.AnimationPlayableAsset.LoopMode
----@field clip UnityEngine.AnimationClip
----@field duration number
----@field outputs System.Collections.Generic.IEnumerable
----@field clipCaps UnityEngine.Timeline.ClipCaps
-UnityEngine.Timeline.AnimationPlayableAsset = {}
----@alias CS.UnityEngine.Timeline.AnimationPlayableAsset UnityEngine.Timeline.AnimationPlayableAsset
-CS.UnityEngine.Timeline.AnimationPlayableAsset = UnityEngine.Timeline.AnimationPlayableAsset
-
----@return UnityEngine.Timeline.AnimationPlayableAsset
-function UnityEngine.Timeline.AnimationPlayableAsset.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param go UnityEngine.GameObject
----@return UnityEngine.Playables.Playable
-function UnityEngine.Timeline.AnimationPlayableAsset:CreatePlayable(graph, go) end
-function UnityEngine.Timeline.AnimationPlayableAsset:LiveLink() end
-function UnityEngine.Timeline.AnimationPlayableAsset:ResetOffsets() end
----@param director UnityEngine.Playables.PlayableDirector
----@param driver UnityEngine.Timeline.IPropertyCollector
-function UnityEngine.Timeline.AnimationPlayableAsset:GatherProperties(director, driver) end
-
----@class UnityEngine.Timeline.AnimationPreviewUpdateCallback : System.Object
-UnityEngine.Timeline.AnimationPreviewUpdateCallback = {}
----@alias CS.UnityEngine.Timeline.AnimationPreviewUpdateCallback UnityEngine.Timeline.AnimationPreviewUpdateCallback
-CS.UnityEngine.Timeline.AnimationPreviewUpdateCallback = UnityEngine.Timeline.AnimationPreviewUpdateCallback
-
----@param output UnityEngine.Animations.AnimationPlayableOutput
----@return UnityEngine.Timeline.AnimationPreviewUpdateCallback
-function UnityEngine.Timeline.AnimationPreviewUpdateCallback.New(output) end
-function UnityEngine.Timeline.AnimationPreviewUpdateCallback:Evaluate() end
-
----@class UnityEngine.Timeline.MatchTargetFields
----@field PositionX UnityEngine.Timeline.MatchTargetFields
----@field PositionY UnityEngine.Timeline.MatchTargetFields
----@field PositionZ UnityEngine.Timeline.MatchTargetFields
----@field RotationX UnityEngine.Timeline.MatchTargetFields
----@field RotationY UnityEngine.Timeline.MatchTargetFields
----@field RotationZ UnityEngine.Timeline.MatchTargetFields
-UnityEngine.Timeline.MatchTargetFields = {}
----@alias CS.UnityEngine.Timeline.MatchTargetFields UnityEngine.Timeline.MatchTargetFields
-CS.UnityEngine.Timeline.MatchTargetFields = UnityEngine.Timeline.MatchTargetFields
-
----@param fields UnityEngine.Timeline.MatchTargetFields
----@return boolean
-function UnityEngine.Timeline.MatchTargetFields:HasAny(fields) end
----@param flag UnityEngine.Timeline.MatchTargetFields
----@return UnityEngine.Timeline.MatchTargetFields
-function UnityEngine.Timeline.MatchTargetFields:Toggle(flag) end
-
----@class UnityEngine.Timeline.TrackOffset
----@field ApplyTransformOffsets UnityEngine.Timeline.TrackOffset
----@field ApplySceneOffsets UnityEngine.Timeline.TrackOffset
----@field Auto UnityEngine.Timeline.TrackOffset
-UnityEngine.Timeline.TrackOffset = {}
----@alias CS.UnityEngine.Timeline.TrackOffset UnityEngine.Timeline.TrackOffset
-CS.UnityEngine.Timeline.TrackOffset = UnityEngine.Timeline.TrackOffset
-
-
----@class UnityEngine.Timeline.AppliedOffsetMode
----@field NoRootTransform UnityEngine.Timeline.AppliedOffsetMode
----@field TransformOffset UnityEngine.Timeline.AppliedOffsetMode
----@field SceneOffset UnityEngine.Timeline.AppliedOffsetMode
----@field TransformOffsetLegacy UnityEngine.Timeline.AppliedOffsetMode
----@field SceneOffsetLegacy UnityEngine.Timeline.AppliedOffsetMode
----@field SceneOffsetEditor UnityEngine.Timeline.AppliedOffsetMode
----@field SceneOffsetLegacyEditor UnityEngine.Timeline.AppliedOffsetMode
-UnityEngine.Timeline.AppliedOffsetMode = {}
----@alias CS.UnityEngine.Timeline.AppliedOffsetMode UnityEngine.Timeline.AppliedOffsetMode
-CS.UnityEngine.Timeline.AppliedOffsetMode = UnityEngine.Timeline.AppliedOffsetMode
-
-
----@class UnityEngine.Timeline.MatchTargetFieldConstants : System.Object
----@field All UnityEngine.Timeline.MatchTargetFields
----@field None UnityEngine.Timeline.MatchTargetFields
----@field Position UnityEngine.Timeline.MatchTargetFields
----@field Rotation UnityEngine.Timeline.MatchTargetFields
-UnityEngine.Timeline.MatchTargetFieldConstants = {}
----@alias CS.UnityEngine.Timeline.MatchTargetFieldConstants UnityEngine.Timeline.MatchTargetFieldConstants
-CS.UnityEngine.Timeline.MatchTargetFieldConstants = UnityEngine.Timeline.MatchTargetFieldConstants
-
----@param me UnityEngine.Timeline.MatchTargetFields
----@param fields UnityEngine.Timeline.MatchTargetFields
----@return boolean
-function UnityEngine.Timeline.MatchTargetFieldConstants.HasAny(me, fields) end
----@param me UnityEngine.Timeline.MatchTargetFields
----@param flag UnityEngine.Timeline.MatchTargetFields
----@return UnityEngine.Timeline.MatchTargetFields
-function UnityEngine.Timeline.MatchTargetFieldConstants.Toggle(me, flag) end
-
----@class UnityEngine.Timeline.AnimationTrack : UnityEngine.Timeline.TrackAsset
----@field position UnityEngine.Vector3
----@field rotation UnityEngine.Quaternion
----@field eulerAngles UnityEngine.Vector3
----@field trackOffset UnityEngine.Timeline.TrackOffset
----@field matchTargetFields UnityEngine.Timeline.MatchTargetFields
----@field infiniteClip UnityEngine.AnimationClip
----@field avatarMask UnityEngine.AvatarMask
----@field applyAvatarMask boolean
----@field outputs System.Collections.Generic.IEnumerable
----@field inClipMode boolean
----@field infiniteClipOffsetPosition UnityEngine.Vector3
----@field infiniteClipOffsetRotation UnityEngine.Quaternion
----@field infiniteClipOffsetEulerAngles UnityEngine.Vector3
----@field infiniteClipPreExtrapolation UnityEngine.Timeline.TimelineClip.ClipExtrapolation
----@field infiniteClipPostExtrapolation UnityEngine.Timeline.TimelineClip.ClipExtrapolation
-UnityEngine.Timeline.AnimationTrack = {}
----@alias CS.UnityEngine.Timeline.AnimationTrack UnityEngine.Timeline.AnimationTrack
-CS.UnityEngine.Timeline.AnimationTrack = UnityEngine.Timeline.AnimationTrack
-
----@return UnityEngine.Timeline.AnimationTrack
-function UnityEngine.Timeline.AnimationTrack.New() end
----@param clip UnityEngine.AnimationClip
----@return UnityEngine.Timeline.TimelineClip
-function UnityEngine.Timeline.AnimationTrack:CreateClip(clip) end
----@param infiniteClipName string
-function UnityEngine.Timeline.AnimationTrack:CreateInfiniteClip(infiniteClipName) end
----@param animClipName string
----@return UnityEngine.Timeline.TimelineClip
-function UnityEngine.Timeline.AnimationTrack:CreateRecordableClip(animClipName) end
----@param director UnityEngine.Playables.PlayableDirector
----@param driver UnityEngine.Timeline.IPropertyCollector
-function UnityEngine.Timeline.AnimationTrack:GatherProperties(director, driver) end
-
----@class UnityEngine.Timeline.ICurvesOwner
----@field curves UnityEngine.AnimationClip
----@field hasCurves boolean
----@field duration number
----@field defaultCurvesName string
----@field asset UnityEngine.Object
----@field assetOwner UnityEngine.Object
----@field targetTrack UnityEngine.Timeline.TrackAsset
-UnityEngine.Timeline.ICurvesOwner = {}
----@alias CS.UnityEngine.Timeline.ICurvesOwner UnityEngine.Timeline.ICurvesOwner
-CS.UnityEngine.Timeline.ICurvesOwner = UnityEngine.Timeline.ICurvesOwner
-
----@param curvesClipName string
-function UnityEngine.Timeline.ICurvesOwner:CreateCurves(curvesClipName) end
-
----@class UnityEngine.Timeline.TimelineClip : System.Object
----@field kDefaultClipCaps UnityEngine.Timeline.ClipCaps
----@field kDefaultClipDurationInSeconds number
----@field kTimeScaleMin number
----@field kTimeScaleMax number
----@field hasPreExtrapolation boolean
----@field hasPostExtrapolation boolean
----@field timeScale number
----@field start number
----@field duration number
----@field end number
----@field clipIn number
----@field displayName string
----@field clipAssetDuration number
----@field curves UnityEngine.AnimationClip
----@field hasCurves boolean
----@field asset UnityEngine.Object
----@field easeInDuration number
----@field easeOutDuration number
----@field easeOutTime number
----@field blendInDuration number
----@field blendOutDuration number
----@field blendInCurveMode UnityEngine.Timeline.TimelineClip.BlendCurveMode
----@field blendOutCurveMode UnityEngine.Timeline.TimelineClip.BlendCurveMode
----@field hasBlendIn boolean
----@field hasBlendOut boolean
----@field mixInCurve UnityEngine.AnimationCurve
----@field mixInPercentage number
----@field mixInDuration number
----@field mixOutCurve UnityEngine.AnimationCurve
----@field mixOutTime number
----@field mixOutDuration number
----@field mixOutPercentage number
----@field recordable boolean
----@field clipCaps UnityEngine.Timeline.ClipCaps
----@field animationClip UnityEngine.AnimationClip
----@field postExtrapolationMode UnityEngine.Timeline.TimelineClip.ClipExtrapolation
----@field preExtrapolationMode UnityEngine.Timeline.TimelineClip.ClipExtrapolation
----@field extrapolatedStart number
----@field extrapolatedDuration number
-UnityEngine.Timeline.TimelineClip = {}
----@alias CS.UnityEngine.Timeline.TimelineClip UnityEngine.Timeline.TimelineClip
-CS.UnityEngine.Timeline.TimelineClip = UnityEngine.Timeline.TimelineClip
-
----@return UnityEngine.Timeline.TrackAsset
-function UnityEngine.Timeline.TimelineClip:GetParentTrack() end
----@param time number
----@return number
-function UnityEngine.Timeline.TimelineClip:EvaluateMixOut(time) end
----@param time number
----@return number
-function UnityEngine.Timeline.TimelineClip:EvaluateMixIn(time) end
----@param time number
----@return number
-function UnityEngine.Timeline.TimelineClip:ToLocalTime(time) end
----@param time number
----@return number
-function UnityEngine.Timeline.TimelineClip:ToLocalTimeUnbound(time) end
----@param sequenceTime number
----@return boolean
-function UnityEngine.Timeline.TimelineClip:IsExtrapolatedTime(sequenceTime) end
----@param sequenceTime number
----@return boolean
-function UnityEngine.Timeline.TimelineClip:IsPreExtrapolatedTime(sequenceTime) end
----@param sequenceTime number
----@return boolean
-function UnityEngine.Timeline.TimelineClip:IsPostExtrapolatedTime(sequenceTime) end
----@param curvesClipName string
-function UnityEngine.Timeline.TimelineClip:CreateCurves(curvesClipName) end
----@return string
-function UnityEngine.Timeline.TimelineClip:ToString() end
-function UnityEngine.Timeline.TimelineClip:ConformEaseValues() end
----@return boolean
-function UnityEngine.Timeline.TimelineClip:SupportsLooping() end
----@return boolean
-function UnityEngine.Timeline.TimelineClip:SupportsExtrapolation() end
----@return boolean
-function UnityEngine.Timeline.TimelineClip:SupportsClipIn() end
----@return boolean
-function UnityEngine.Timeline.TimelineClip:SupportsSpeedMultiplier() end
----@return boolean
-function UnityEngine.Timeline.TimelineClip:SupportsBlending() end
----@param destinationTrack UnityEngine.Timeline.TrackAsset
-function UnityEngine.Timeline.TimelineClip:MoveToTrack(destinationTrack) end
----@param destinationTrack UnityEngine.Timeline.TrackAsset
----@return boolean
-function UnityEngine.Timeline.TimelineClip:TryMoveToTrack(destinationTrack) end
-
----@class UnityEngine.Timeline.TimelineAsset : UnityEngine.Playables.PlayableAsset
----@field editorSettings UnityEngine.Timeline.TimelineAsset.EditorSettings
----@field duration number
----@field fixedDuration number
----@field durationMode UnityEngine.Timeline.TimelineAsset.DurationMode
----@field outputs System.Collections.Generic.IEnumerable
----@field clipCaps UnityEngine.Timeline.ClipCaps
----@field outputTrackCount number
----@field rootTrackCount number
----@field markerTrack UnityEngine.Timeline.MarkerTrack
-UnityEngine.Timeline.TimelineAsset = {}
----@alias CS.UnityEngine.Timeline.TimelineAsset UnityEngine.Timeline.TimelineAsset
-CS.UnityEngine.Timeline.TimelineAsset = UnityEngine.Timeline.TimelineAsset
-
----@return UnityEngine.Timeline.TimelineAsset
-function UnityEngine.Timeline.TimelineAsset.New() end
----@param index number
----@return UnityEngine.Timeline.TrackAsset
-function UnityEngine.Timeline.TimelineAsset:GetRootTrack(index) end
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.Timeline.TimelineAsset:GetRootTracks() end
----@param index number
----@return UnityEngine.Timeline.TrackAsset
-function UnityEngine.Timeline.TimelineAsset:GetOutputTrack(index) end
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.Timeline.TimelineAsset:GetOutputTracks() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param go UnityEngine.GameObject
----@return UnityEngine.Playables.Playable
-function UnityEngine.Timeline.TimelineAsset:CreatePlayable(graph, go) end
----@param director UnityEngine.Playables.PlayableDirector
----@param driver UnityEngine.Timeline.IPropertyCollector
-function UnityEngine.Timeline.TimelineAsset:GatherProperties(director, driver) end
-function UnityEngine.Timeline.TimelineAsset:CreateMarkerTrack() end
----@param type System.Type
----@param parent UnityEngine.Timeline.TrackAsset
----@param name string
----@return UnityEngine.Timeline.TrackAsset
-function UnityEngine.Timeline.TimelineAsset:CreateTrack(type, parent, name) end
----@param clip UnityEngine.Timeline.TimelineClip
----@return boolean
-function UnityEngine.Timeline.TimelineAsset:DeleteClip(clip) end
----@param track UnityEngine.Timeline.TrackAsset
----@return boolean
-function UnityEngine.Timeline.TimelineAsset:DeleteTrack(track) end
-
----@class UnityEngine.Timeline.TrackAsset : UnityEngine.Playables.PlayableAsset
----@field start number
----@field end number
----@field duration number
----@field muted boolean
----@field mutedInHierarchy boolean
----@field timelineAsset UnityEngine.Timeline.TimelineAsset
----@field parent UnityEngine.Playables.PlayableAsset
----@field isEmpty boolean
----@field hasClips boolean
----@field hasCurves boolean
----@field isSubTrack boolean
----@field outputs System.Collections.Generic.IEnumerable
----@field curves UnityEngine.AnimationClip
----@field locked boolean
----@field lockedInHierarchy boolean
----@field supportsNotifications boolean
-UnityEngine.Timeline.TrackAsset = {}
----@alias CS.UnityEngine.Timeline.TrackAsset UnityEngine.Timeline.TrackAsset
-CS.UnityEngine.Timeline.TrackAsset = UnityEngine.Timeline.TrackAsset
-
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.Timeline.TrackAsset:GetClips() end
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.Timeline.TrackAsset:GetChildTracks() end
----@param curvesClipName string
-function UnityEngine.Timeline.TrackAsset:CreateCurves(curvesClipName) end
----@param graph UnityEngine.Playables.PlayableGraph
----@param go UnityEngine.GameObject
----@param inputCount number
----@return UnityEngine.Playables.Playable
-function UnityEngine.Timeline.TrackAsset:CreateTrackMixer(graph, go, inputCount) end
----@param graph UnityEngine.Playables.PlayableGraph
----@param go UnityEngine.GameObject
----@return UnityEngine.Playables.Playable
-function UnityEngine.Timeline.TrackAsset:CreatePlayable(graph, go) end
----@return UnityEngine.Timeline.TimelineClip
-function UnityEngine.Timeline.TrackAsset:CreateDefaultClip() end
----@param clip UnityEngine.Timeline.TimelineClip
----@return boolean
-function UnityEngine.Timeline.TrackAsset:DeleteClip(clip) end
----@param type System.Type
----@param time number
----@return UnityEngine.Timeline.IMarker
-function UnityEngine.Timeline.TrackAsset:CreateMarker(type, time) end
----@param marker UnityEngine.Timeline.IMarker
----@return boolean
-function UnityEngine.Timeline.TrackAsset:DeleteMarker(marker) end
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.Timeline.TrackAsset:GetMarkers() end
----@return number
-function UnityEngine.Timeline.TrackAsset:GetMarkerCount() end
----@param idx number
----@return UnityEngine.Timeline.IMarker
-function UnityEngine.Timeline.TrackAsset:GetMarker(idx) end
----@param director UnityEngine.Playables.PlayableDirector
----@param driver UnityEngine.Timeline.IPropertyCollector
-function UnityEngine.Timeline.TrackAsset:GatherProperties(director, driver) end
----@return boolean
-function UnityEngine.Timeline.TrackAsset:CanCreateTrackMixer() end
----@return UnityEngine.Timeline.GroupTrack
-function UnityEngine.Timeline.TrackAsset:GetGroup() end
----@param group UnityEngine.Timeline.GroupTrack
-function UnityEngine.Timeline.TrackAsset:SetGroup(group) end
-
----@class UnityEngine.Timeline.TimelineHelpURLAttribute : UnityEngine.HelpURLAttribute
-UnityEngine.Timeline.TimelineHelpURLAttribute = {}
----@alias CS.UnityEngine.Timeline.TimelineHelpURLAttribute UnityEngine.Timeline.TimelineHelpURLAttribute
-CS.UnityEngine.Timeline.TimelineHelpURLAttribute = UnityEngine.Timeline.TimelineHelpURLAttribute
-
----@param type System.Type
----@return UnityEngine.Timeline.TimelineHelpURLAttribute
-function UnityEngine.Timeline.TimelineHelpURLAttribute.New(type) end
-
----@class UnityEngine.Timeline.TrackColorAttribute : System.Attribute
----@field color UnityEngine.Color
-UnityEngine.Timeline.TrackColorAttribute = {}
----@alias CS.UnityEngine.Timeline.TrackColorAttribute UnityEngine.Timeline.TrackColorAttribute
-CS.UnityEngine.Timeline.TrackColorAttribute = UnityEngine.Timeline.TrackColorAttribute
-
----@param r number
----@param g number
----@param b number
----@return UnityEngine.Timeline.TrackColorAttribute
-function UnityEngine.Timeline.TrackColorAttribute.New(r, g, b) end
-
----@class UnityEngine.Timeline.AudioClipProperties : UnityEngine.Playables.PlayableBehaviour
----@field volume number
-UnityEngine.Timeline.AudioClipProperties = {}
----@alias CS.UnityEngine.Timeline.AudioClipProperties UnityEngine.Timeline.AudioClipProperties
-CS.UnityEngine.Timeline.AudioClipProperties = UnityEngine.Timeline.AudioClipProperties
-
----@return UnityEngine.Timeline.AudioClipProperties
-function UnityEngine.Timeline.AudioClipProperties.New() end
-
----@class UnityEngine.Timeline.AudioMixerProperties : UnityEngine.Playables.PlayableBehaviour
----@field volume number
----@field stereoPan number
----@field spatialBlend number
-UnityEngine.Timeline.AudioMixerProperties = {}
----@alias CS.UnityEngine.Timeline.AudioMixerProperties UnityEngine.Timeline.AudioMixerProperties
-CS.UnityEngine.Timeline.AudioMixerProperties = UnityEngine.Timeline.AudioMixerProperties
-
----@return UnityEngine.Timeline.AudioMixerProperties
-function UnityEngine.Timeline.AudioMixerProperties.New() end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.AudioMixerProperties:PrepareFrame(playable, info) end
-
----@class UnityEngine.Timeline.AudioPlayableAsset : UnityEngine.Playables.PlayableAsset
----@field clip UnityEngine.AudioClip
----@field loop boolean
----@field duration number
----@field outputs System.Collections.Generic.IEnumerable
----@field clipCaps UnityEngine.Timeline.ClipCaps
-UnityEngine.Timeline.AudioPlayableAsset = {}
----@alias CS.UnityEngine.Timeline.AudioPlayableAsset UnityEngine.Timeline.AudioPlayableAsset
-CS.UnityEngine.Timeline.AudioPlayableAsset = UnityEngine.Timeline.AudioPlayableAsset
-
----@return UnityEngine.Timeline.AudioPlayableAsset
-function UnityEngine.Timeline.AudioPlayableAsset.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param go UnityEngine.GameObject
----@return UnityEngine.Playables.Playable
-function UnityEngine.Timeline.AudioPlayableAsset:CreatePlayable(graph, go) end
-
----@class UnityEngine.Timeline.AudioTrack : UnityEngine.Timeline.TrackAsset
----@field outputs System.Collections.Generic.IEnumerable
-UnityEngine.Timeline.AudioTrack = {}
----@alias CS.UnityEngine.Timeline.AudioTrack UnityEngine.Timeline.AudioTrack
-CS.UnityEngine.Timeline.AudioTrack = UnityEngine.Timeline.AudioTrack
-
----@return UnityEngine.Timeline.AudioTrack
-function UnityEngine.Timeline.AudioTrack.New() end
----@param clip UnityEngine.AudioClip
----@return UnityEngine.Timeline.TimelineClip
-function UnityEngine.Timeline.AudioTrack:CreateClip(clip) end
-
----@class UnityEngine.Timeline.ClipCaps
----@field None UnityEngine.Timeline.ClipCaps
----@field Looping UnityEngine.Timeline.ClipCaps
----@field Extrapolation UnityEngine.Timeline.ClipCaps
----@field ClipIn UnityEngine.Timeline.ClipCaps
----@field SpeedMultiplier UnityEngine.Timeline.ClipCaps
----@field Blending UnityEngine.Timeline.ClipCaps
----@field AutoScale UnityEngine.Timeline.ClipCaps
----@field All UnityEngine.Timeline.ClipCaps
-UnityEngine.Timeline.ClipCaps = {}
----@alias CS.UnityEngine.Timeline.ClipCaps UnityEngine.Timeline.ClipCaps
-CS.UnityEngine.Timeline.ClipCaps = UnityEngine.Timeline.ClipCaps
-
----@param flags UnityEngine.Timeline.ClipCaps
----@return boolean
-function UnityEngine.Timeline.ClipCaps:HasAll(flags) end
----@param flags UnityEngine.Timeline.ClipCaps
----@return boolean
-function UnityEngine.Timeline.ClipCaps:HasAny(flags) end
-
----@class UnityEngine.Timeline.TimelineClipCapsExtensions : System.Object
-UnityEngine.Timeline.TimelineClipCapsExtensions = {}
----@alias CS.UnityEngine.Timeline.TimelineClipCapsExtensions UnityEngine.Timeline.TimelineClipCapsExtensions
-CS.UnityEngine.Timeline.TimelineClipCapsExtensions = UnityEngine.Timeline.TimelineClipCapsExtensions
-
----@param clip UnityEngine.Timeline.TimelineClip
----@return boolean
-function UnityEngine.Timeline.TimelineClipCapsExtensions.SupportsLooping(clip) end
----@param clip UnityEngine.Timeline.TimelineClip
----@return boolean
-function UnityEngine.Timeline.TimelineClipCapsExtensions.SupportsExtrapolation(clip) end
----@param clip UnityEngine.Timeline.TimelineClip
----@return boolean
-function UnityEngine.Timeline.TimelineClipCapsExtensions.SupportsClipIn(clip) end
----@param clip UnityEngine.Timeline.TimelineClip
----@return boolean
-function UnityEngine.Timeline.TimelineClipCapsExtensions.SupportsSpeedMultiplier(clip) end
----@param clip UnityEngine.Timeline.TimelineClip
----@return boolean
-function UnityEngine.Timeline.TimelineClipCapsExtensions.SupportsBlending(clip) end
----@param caps UnityEngine.Timeline.ClipCaps
----@param flags UnityEngine.Timeline.ClipCaps
----@return boolean
-function UnityEngine.Timeline.TimelineClipCapsExtensions.HasAll(caps, flags) end
----@param caps UnityEngine.Timeline.ClipCaps
----@param flags UnityEngine.Timeline.ClipCaps
----@return boolean
-function UnityEngine.Timeline.TimelineClipCapsExtensions.HasAny(caps, flags) end
-
----@class UnityEngine.Timeline.ControlPlayableAsset : UnityEngine.Playables.PlayableAsset
----@field sourceGameObject UnityEngine.ExposedReference
----@field prefabGameObject UnityEngine.GameObject
----@field updateParticle boolean
----@field particleRandomSeed number
----@field updateDirector boolean
----@field updateITimeControl boolean
----@field searchHierarchy boolean
----@field active boolean
----@field postPlayback UnityEngine.Timeline.ActivationControlPlayable.PostPlaybackState
----@field directorOnClipEnd UnityEngine.Timeline.DirectorControlPlayable.PauseAction
----@field duration number
----@field clipCaps UnityEngine.Timeline.ClipCaps
-UnityEngine.Timeline.ControlPlayableAsset = {}
----@alias CS.UnityEngine.Timeline.ControlPlayableAsset UnityEngine.Timeline.ControlPlayableAsset
-CS.UnityEngine.Timeline.ControlPlayableAsset = UnityEngine.Timeline.ControlPlayableAsset
-
----@return UnityEngine.Timeline.ControlPlayableAsset
-function UnityEngine.Timeline.ControlPlayableAsset.New() end
-function UnityEngine.Timeline.ControlPlayableAsset:OnEnable() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param go UnityEngine.GameObject
----@return UnityEngine.Playables.Playable
-function UnityEngine.Timeline.ControlPlayableAsset:CreatePlayable(graph, go) end
----@param director UnityEngine.Playables.PlayableDirector
----@param driver UnityEngine.Timeline.IPropertyCollector
-function UnityEngine.Timeline.ControlPlayableAsset:GatherProperties(director, driver) end
-
----@class UnityEngine.Timeline.ControlTrack : UnityEngine.Timeline.TrackAsset
-UnityEngine.Timeline.ControlTrack = {}
----@alias CS.UnityEngine.Timeline.ControlTrack UnityEngine.Timeline.ControlTrack
-CS.UnityEngine.Timeline.ControlTrack = UnityEngine.Timeline.ControlTrack
-
----@return UnityEngine.Timeline.ControlTrack
-function UnityEngine.Timeline.ControlTrack.New() end
----@param director UnityEngine.Playables.PlayableDirector
----@param driver UnityEngine.Timeline.IPropertyCollector
-function UnityEngine.Timeline.ControlTrack:GatherProperties(director, driver) end
-
----@class UnityEngine.Timeline.CurveEditUtility : System.Object
-UnityEngine.Timeline.CurveEditUtility = {}
----@alias CS.UnityEngine.Timeline.CurveEditUtility UnityEngine.Timeline.CurveEditUtility
-CS.UnityEngine.Timeline.CurveEditUtility = UnityEngine.Timeline.CurveEditUtility
-
----@param curve UnityEngine.AnimationCurve
----@return UnityEngine.AnimationCurve
-function UnityEngine.Timeline.CurveEditUtility.CreateMatchingCurve(curve) end
-
----@class UnityEngine.Timeline.DiscreteTime : System.ValueType
----@field kMaxTime UnityEngine.Timeline.DiscreteTime
----@field tickValue number
-UnityEngine.Timeline.DiscreteTime = {}
----@alias CS.UnityEngine.Timeline.DiscreteTime UnityEngine.Timeline.DiscreteTime
-CS.UnityEngine.Timeline.DiscreteTime = UnityEngine.Timeline.DiscreteTime
-
----@overload fun(time: UnityEngine.Timeline.DiscreteTime) : UnityEngine.Timeline.DiscreteTime
----@overload fun(time: number) : UnityEngine.Timeline.DiscreteTime
----@overload fun(time: number) : UnityEngine.Timeline.DiscreteTime
----@overload fun(time: number) : UnityEngine.Timeline.DiscreteTime
----@param frame number
----@param fps number
----@return UnityEngine.Timeline.DiscreteTime
-function UnityEngine.Timeline.DiscreteTime.New(frame, fps) end
----@param ticks number
----@return UnityEngine.Timeline.DiscreteTime
-function UnityEngine.Timeline.DiscreteTime.FromTicks(ticks) end
----@param lhs UnityEngine.Timeline.DiscreteTime
----@param rhs UnityEngine.Timeline.DiscreteTime
----@return UnityEngine.Timeline.DiscreteTime
-function UnityEngine.Timeline.DiscreteTime.Min(lhs, rhs) end
----@param lhs UnityEngine.Timeline.DiscreteTime
----@param rhs UnityEngine.Timeline.DiscreteTime
----@return UnityEngine.Timeline.DiscreteTime
-function UnityEngine.Timeline.DiscreteTime.Max(lhs, rhs) end
----@overload fun(time: number) : number
----@param time number
----@return number
-function UnityEngine.Timeline.DiscreteTime.SnapToNearestTick(time) end
----@param time number
----@return number
-function UnityEngine.Timeline.DiscreteTime.GetNearestTick(time) end
----@return UnityEngine.Timeline.DiscreteTime
-function UnityEngine.Timeline.DiscreteTime:OneTickBefore() end
----@return UnityEngine.Timeline.DiscreteTime
-function UnityEngine.Timeline.DiscreteTime:OneTickAfter() end
----@return number
-function UnityEngine.Timeline.DiscreteTime:GetTick() end
----@param obj System.Object
----@return number
-function UnityEngine.Timeline.DiscreteTime:CompareTo(obj) end
----@overload fun(self: UnityEngine.Timeline.DiscreteTime, other: UnityEngine.Timeline.DiscreteTime) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.Timeline.DiscreteTime:Equals(obj) end
----@return string
-function UnityEngine.Timeline.DiscreteTime:ToString() end
----@return number
-function UnityEngine.Timeline.DiscreteTime:GetHashCode() end
-
----@class UnityEngine.Timeline.InfiniteRuntimeClip : UnityEngine.Timeline.RuntimeElement
----@field intervalStart number
----@field intervalEnd number
----@field enable boolean
-UnityEngine.Timeline.InfiniteRuntimeClip = {}
----@alias CS.UnityEngine.Timeline.InfiniteRuntimeClip UnityEngine.Timeline.InfiniteRuntimeClip
-CS.UnityEngine.Timeline.InfiniteRuntimeClip = UnityEngine.Timeline.InfiniteRuntimeClip
-
----@param playable UnityEngine.Playables.Playable
----@return UnityEngine.Timeline.InfiniteRuntimeClip
-function UnityEngine.Timeline.InfiniteRuntimeClip.New(playable) end
----@param localTime number
----@param frameData UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.InfiniteRuntimeClip:EvaluateAt(localTime, frameData) end
----@param localTime number
----@param rootDuration number
----@param frameData UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.InfiniteRuntimeClip:DisableAt(localTime, rootDuration, frameData) end
-
----@class UnityEngine.Timeline.IInterval
----@field intervalStart number
----@field intervalEnd number
-UnityEngine.Timeline.IInterval = {}
----@alias CS.UnityEngine.Timeline.IInterval UnityEngine.Timeline.IInterval
-CS.UnityEngine.Timeline.IInterval = UnityEngine.Timeline.IInterval
-
-
----@class UnityEngine.Timeline.IntervalTreeNode : System.ValueType
----@field center number
----@field first number
----@field last number
----@field left number
----@field right number
-UnityEngine.Timeline.IntervalTreeNode = {}
----@alias CS.UnityEngine.Timeline.IntervalTreeNode UnityEngine.Timeline.IntervalTreeNode
-CS.UnityEngine.Timeline.IntervalTreeNode = UnityEngine.Timeline.IntervalTreeNode
-
-
----@class UnityEngine.Timeline.IntervalTree : System.Object
----@field dirty boolean
-UnityEngine.Timeline.IntervalTree = {}
----@alias CS.UnityEngine.Timeline.IntervalTree UnityEngine.Timeline.IntervalTree
-CS.UnityEngine.Timeline.IntervalTree = UnityEngine.Timeline.IntervalTree
-
----@return UnityEngine.Timeline.IntervalTree
-function UnityEngine.Timeline.IntervalTree.New() end
----@param item T
-function UnityEngine.Timeline.IntervalTree:Add(item) end
----@param value number
----@param results System.Collections.Generic.List[T]
-function UnityEngine.Timeline.IntervalTree:IntersectsWith(value, results) end
----@param start number
----@param _end number
----@param results System.Collections.Generic.List[T]
-function UnityEngine.Timeline.IntervalTree:IntersectsWithRange(start, _end, results) end
-function UnityEngine.Timeline.IntervalTree:UpdateIntervals() end
-function UnityEngine.Timeline.IntervalTree:Clear() end
-
----@class UnityEngine.Timeline.RuntimeClip : UnityEngine.Timeline.RuntimeClipBase
----@field start number
----@field duration number
----@field clip UnityEngine.Timeline.TimelineClip
----@field mixer UnityEngine.Playables.Playable
----@field playable UnityEngine.Playables.Playable
----@field enable boolean
-UnityEngine.Timeline.RuntimeClip = {}
----@alias CS.UnityEngine.Timeline.RuntimeClip UnityEngine.Timeline.RuntimeClip
-CS.UnityEngine.Timeline.RuntimeClip = UnityEngine.Timeline.RuntimeClip
-
----@param clip UnityEngine.Timeline.TimelineClip
----@param clipPlayable UnityEngine.Playables.Playable
----@param parentMixer UnityEngine.Playables.Playable
----@return UnityEngine.Timeline.RuntimeClip
-function UnityEngine.Timeline.RuntimeClip.New(clip, clipPlayable, parentMixer) end
----@param time number
-function UnityEngine.Timeline.RuntimeClip:SetTime(time) end
----@param duration number
-function UnityEngine.Timeline.RuntimeClip:SetDuration(duration) end
----@param localTime number
----@param frameData UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.RuntimeClip:EvaluateAt(localTime, frameData) end
----@param localTime number
----@param rootDuration number
----@param frameData UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.RuntimeClip:DisableAt(localTime, rootDuration, frameData) end
-
----@class UnityEngine.Timeline.RuntimeClipBase : UnityEngine.Timeline.RuntimeElement
----@field start number
----@field duration number
----@field intervalStart number
----@field intervalEnd number
-UnityEngine.Timeline.RuntimeClipBase = {}
----@alias CS.UnityEngine.Timeline.RuntimeClipBase UnityEngine.Timeline.RuntimeClipBase
-CS.UnityEngine.Timeline.RuntimeClipBase = UnityEngine.Timeline.RuntimeClipBase
-
-
----@class UnityEngine.Timeline.RuntimeElement : System.Object
----@field intervalStart number
----@field intervalEnd number
----@field intervalBit number
----@field enable boolean
-UnityEngine.Timeline.RuntimeElement = {}
----@alias CS.UnityEngine.Timeline.RuntimeElement UnityEngine.Timeline.RuntimeElement
-CS.UnityEngine.Timeline.RuntimeElement = UnityEngine.Timeline.RuntimeElement
-
----@param localTime number
----@param frameData UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.RuntimeElement:EvaluateAt(localTime, frameData) end
----@param localTime number
----@param rootDuration number
----@param frameData UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.RuntimeElement:DisableAt(localTime, rootDuration, frameData) end
-
----@class UnityEngine.Timeline.ScheduleRuntimeClip : UnityEngine.Timeline.RuntimeClipBase
----@field start number
----@field duration number
----@field clip UnityEngine.Timeline.TimelineClip
----@field mixer UnityEngine.Playables.Playable
----@field playable UnityEngine.Playables.Playable
----@field enable boolean
-UnityEngine.Timeline.ScheduleRuntimeClip = {}
----@alias CS.UnityEngine.Timeline.ScheduleRuntimeClip UnityEngine.Timeline.ScheduleRuntimeClip
-CS.UnityEngine.Timeline.ScheduleRuntimeClip = UnityEngine.Timeline.ScheduleRuntimeClip
-
----@param clip UnityEngine.Timeline.TimelineClip
----@param clipPlayable UnityEngine.Playables.Playable
----@param parentMixer UnityEngine.Playables.Playable
----@param startDelay number
----@param finishTail number
----@return UnityEngine.Timeline.ScheduleRuntimeClip
-function UnityEngine.Timeline.ScheduleRuntimeClip.New(clip, clipPlayable, parentMixer, startDelay, finishTail) end
----@param time number
-function UnityEngine.Timeline.ScheduleRuntimeClip:SetTime(time) end
----@param localTime number
----@param frameData UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.ScheduleRuntimeClip:EvaluateAt(localTime, frameData) end
----@param localTime number
----@param rootDuration number
----@param frameData UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.ScheduleRuntimeClip:DisableAt(localTime, rootDuration, frameData) end
-
----@class UnityEngine.Timeline.IMarker
----@field time number
----@field parent UnityEngine.Timeline.TrackAsset
-UnityEngine.Timeline.IMarker = {}
----@alias CS.UnityEngine.Timeline.IMarker UnityEngine.Timeline.IMarker
-CS.UnityEngine.Timeline.IMarker = UnityEngine.Timeline.IMarker
-
----@param parent UnityEngine.Timeline.TrackAsset
-function UnityEngine.Timeline.IMarker:Initialize(parent) end
-
----@class UnityEngine.Timeline.INotificationOptionProvider
----@field flags UnityEngine.Timeline.NotificationFlags
-UnityEngine.Timeline.INotificationOptionProvider = {}
----@alias CS.UnityEngine.Timeline.INotificationOptionProvider UnityEngine.Timeline.INotificationOptionProvider
-CS.UnityEngine.Timeline.INotificationOptionProvider = UnityEngine.Timeline.INotificationOptionProvider
-
-
----@class UnityEngine.Timeline.Marker : UnityEngine.ScriptableObject
----@field parent UnityEngine.Timeline.TrackAsset
----@field time number
-UnityEngine.Timeline.Marker = {}
----@alias CS.UnityEngine.Timeline.Marker UnityEngine.Timeline.Marker
-CS.UnityEngine.Timeline.Marker = UnityEngine.Timeline.Marker
-
----@param aPent UnityEngine.Timeline.TrackAsset
-function UnityEngine.Timeline.Marker:OnInitialize(aPent) end
-
----@class UnityEngine.Timeline.MarkerList : System.ValueType
----@field markers System.Collections.Generic.List
----@field Count number
----@field Item UnityEngine.Timeline.IMarker
-UnityEngine.Timeline.MarkerList = {}
----@alias CS.UnityEngine.Timeline.MarkerList UnityEngine.Timeline.MarkerList
-CS.UnityEngine.Timeline.MarkerList = UnityEngine.Timeline.MarkerList
-
----@param capacity number
----@return UnityEngine.Timeline.MarkerList
-function UnityEngine.Timeline.MarkerList.New(capacity) end
----@param item UnityEngine.ScriptableObject
-function UnityEngine.Timeline.MarkerList:Add(item) end
----@overload fun(self: UnityEngine.Timeline.MarkerList, item: UnityEngine.Timeline.IMarker) : boolean
----@param item UnityEngine.ScriptableObject
----@param timelineAsset UnityEngine.Timeline.TimelineAsset
----@param thingToDirty UnityEngine.Playables.PlayableAsset
----@return boolean
-function UnityEngine.Timeline.MarkerList:Remove(item, timelineAsset, thingToDirty) end
-function UnityEngine.Timeline.MarkerList:Clear() end
----@param item UnityEngine.ScriptableObject
----@return boolean
-function UnityEngine.Timeline.MarkerList:Contains(item) end
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.Timeline.MarkerList:GetMarkers() end
----@return System.Collections.Generic.List
-function UnityEngine.Timeline.MarkerList:GetRawMarkerList() end
----@param type System.Type
----@param time number
----@param owner UnityEngine.Timeline.TrackAsset
----@return UnityEngine.Timeline.IMarker
-function UnityEngine.Timeline.MarkerList:CreateMarker(type, time, owner) end
----@return boolean
-function UnityEngine.Timeline.MarkerList:HasNotifications() end
-
----@class UnityEngine.Timeline.MarkerTrack : UnityEngine.Timeline.TrackAsset
----@field outputs System.Collections.Generic.IEnumerable
-UnityEngine.Timeline.MarkerTrack = {}
----@alias CS.UnityEngine.Timeline.MarkerTrack UnityEngine.Timeline.MarkerTrack
-CS.UnityEngine.Timeline.MarkerTrack = UnityEngine.Timeline.MarkerTrack
-
----@return UnityEngine.Timeline.MarkerTrack
-function UnityEngine.Timeline.MarkerTrack.New() end
-
----@class UnityEngine.Timeline.CustomSignalEventDrawer : UnityEngine.PropertyAttribute
-UnityEngine.Timeline.CustomSignalEventDrawer = {}
----@alias CS.UnityEngine.Timeline.CustomSignalEventDrawer UnityEngine.Timeline.CustomSignalEventDrawer
-CS.UnityEngine.Timeline.CustomSignalEventDrawer = UnityEngine.Timeline.CustomSignalEventDrawer
-
----@return UnityEngine.Timeline.CustomSignalEventDrawer
-function UnityEngine.Timeline.CustomSignalEventDrawer.New() end
-
----@class UnityEngine.Timeline.SignalAsset : UnityEngine.ScriptableObject
-UnityEngine.Timeline.SignalAsset = {}
----@alias CS.UnityEngine.Timeline.SignalAsset UnityEngine.Timeline.SignalAsset
-CS.UnityEngine.Timeline.SignalAsset = UnityEngine.Timeline.SignalAsset
-
----@return UnityEngine.Timeline.SignalAsset
-function UnityEngine.Timeline.SignalAsset.New() end
-
----@class UnityEngine.Timeline.SignalEmitter : UnityEngine.Timeline.Marker
----@field retroactive boolean
----@field emitOnce boolean
----@field asset UnityEngine.Timeline.SignalAsset
-UnityEngine.Timeline.SignalEmitter = {}
----@alias CS.UnityEngine.Timeline.SignalEmitter UnityEngine.Timeline.SignalEmitter
-CS.UnityEngine.Timeline.SignalEmitter = UnityEngine.Timeline.SignalEmitter
-
----@return UnityEngine.Timeline.SignalEmitter
-function UnityEngine.Timeline.SignalEmitter.New() end
-
----@class UnityEngine.Timeline.SignalReceiver : UnityEngine.MonoBehaviour
-UnityEngine.Timeline.SignalReceiver = {}
----@alias CS.UnityEngine.Timeline.SignalReceiver UnityEngine.Timeline.SignalReceiver
-CS.UnityEngine.Timeline.SignalReceiver = UnityEngine.Timeline.SignalReceiver
-
----@param origin UnityEngine.Playables.Playable
----@param notification UnityEngine.Playables.INotification
----@param context System.Object
-function UnityEngine.Timeline.SignalReceiver:OnNotify(origin, notification, context) end
----@param asset UnityEngine.Timeline.SignalAsset
----@param reaction UnityEngine.Events.UnityEvent
-function UnityEngine.Timeline.SignalReceiver:AddReaction(asset, reaction) end
----@param reaction UnityEngine.Events.UnityEvent
----@return number
-function UnityEngine.Timeline.SignalReceiver:AddEmptyReaction(reaction) end
----@param asset UnityEngine.Timeline.SignalAsset
-function UnityEngine.Timeline.SignalReceiver:Remove(asset) end
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.Timeline.SignalReceiver:GetRegisteredSignals() end
----@param key UnityEngine.Timeline.SignalAsset
----@return UnityEngine.Events.UnityEvent
-function UnityEngine.Timeline.SignalReceiver:GetReaction(key) end
----@return number
-function UnityEngine.Timeline.SignalReceiver:Count() end
----@param idx number
----@param newKey UnityEngine.Timeline.SignalAsset
-function UnityEngine.Timeline.SignalReceiver:ChangeSignalAtIndex(idx, newKey) end
----@param idx number
-function UnityEngine.Timeline.SignalReceiver:RemoveAtIndex(idx) end
----@param idx number
----@param reaction UnityEngine.Events.UnityEvent
-function UnityEngine.Timeline.SignalReceiver:ChangeReactionAtIndex(idx, reaction) end
----@param idx number
----@return UnityEngine.Events.UnityEvent
-function UnityEngine.Timeline.SignalReceiver:GetReactionAtIndex(idx) end
----@param idx number
----@return UnityEngine.Timeline.SignalAsset
-function UnityEngine.Timeline.SignalReceiver:GetSignalAssetAtIndex(idx) end
-
----@class UnityEngine.Timeline.SignalTrack : UnityEngine.Timeline.MarkerTrack
-UnityEngine.Timeline.SignalTrack = {}
----@alias CS.UnityEngine.Timeline.SignalTrack UnityEngine.Timeline.SignalTrack
-CS.UnityEngine.Timeline.SignalTrack = UnityEngine.Timeline.SignalTrack
-
----@return UnityEngine.Timeline.SignalTrack
-function UnityEngine.Timeline.SignalTrack.New() end
-
----@class UnityEngine.Timeline.TrackAssetExtensions : System.Object
-UnityEngine.Timeline.TrackAssetExtensions = {}
----@alias CS.UnityEngine.Timeline.TrackAssetExtensions UnityEngine.Timeline.TrackAssetExtensions
-CS.UnityEngine.Timeline.TrackAssetExtensions = UnityEngine.Timeline.TrackAssetExtensions
-
----@param asset UnityEngine.Timeline.TrackAsset
----@return UnityEngine.Timeline.GroupTrack
-function UnityEngine.Timeline.TrackAssetExtensions.GetGroup(asset) end
----@param asset UnityEngine.Timeline.TrackAsset
----@param group UnityEngine.Timeline.GroupTrack
-function UnityEngine.Timeline.TrackAssetExtensions.SetGroup(asset, group) end
-
----@class UnityEngine.Timeline.GroupTrack : UnityEngine.Timeline.TrackAsset
----@field outputs System.Collections.Generic.IEnumerable
-UnityEngine.Timeline.GroupTrack = {}
----@alias CS.UnityEngine.Timeline.GroupTrack UnityEngine.Timeline.GroupTrack
-CS.UnityEngine.Timeline.GroupTrack = UnityEngine.Timeline.GroupTrack
-
----@return UnityEngine.Timeline.GroupTrack
-function UnityEngine.Timeline.GroupTrack.New() end
-
----@class UnityEngine.Timeline.ILayerable
-UnityEngine.Timeline.ILayerable = {}
----@alias CS.UnityEngine.Timeline.ILayerable UnityEngine.Timeline.ILayerable
-CS.UnityEngine.Timeline.ILayerable = UnityEngine.Timeline.ILayerable
-
----@param graph UnityEngine.Playables.PlayableGraph
----@param go UnityEngine.GameObject
----@param inputCount number
----@return UnityEngine.Playables.Playable
-function UnityEngine.Timeline.ILayerable:CreateLayerMixer(graph, go, inputCount) end
-
----@class UnityEngine.Timeline.ActivationControlPlayable : UnityEngine.Playables.PlayableBehaviour
----@field gameObject UnityEngine.GameObject
----@field postPlayback UnityEngine.Timeline.ActivationControlPlayable.PostPlaybackState
-UnityEngine.Timeline.ActivationControlPlayable = {}
----@alias CS.UnityEngine.Timeline.ActivationControlPlayable UnityEngine.Timeline.ActivationControlPlayable
-CS.UnityEngine.Timeline.ActivationControlPlayable = UnityEngine.Timeline.ActivationControlPlayable
-
----@return UnityEngine.Timeline.ActivationControlPlayable
-function UnityEngine.Timeline.ActivationControlPlayable.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param gameObject UnityEngine.GameObject
----@param postPlaybackState UnityEngine.Timeline.ActivationControlPlayable.PostPlaybackState
----@return UnityEngine.Playables.ScriptPlayable
-function UnityEngine.Timeline.ActivationControlPlayable.Create(graph, gameObject, postPlaybackState) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.ActivationControlPlayable:OnBehaviourPlay(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.ActivationControlPlayable:OnBehaviourPause(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
----@param userData System.Object
-function UnityEngine.Timeline.ActivationControlPlayable:ProcessFrame(playable, info, userData) end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.ActivationControlPlayable:OnGraphStart(playable) end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.ActivationControlPlayable:OnPlayableDestroy(playable) end
-
----@class UnityEngine.Timeline.BasicPlayableBehaviour : UnityEngine.ScriptableObject
----@field duration number
----@field outputs System.Collections.Generic.IEnumerable
-UnityEngine.Timeline.BasicPlayableBehaviour = {}
----@alias CS.UnityEngine.Timeline.BasicPlayableBehaviour UnityEngine.Timeline.BasicPlayableBehaviour
-CS.UnityEngine.Timeline.BasicPlayableBehaviour = UnityEngine.Timeline.BasicPlayableBehaviour
-
----@return UnityEngine.Timeline.BasicPlayableBehaviour
-function UnityEngine.Timeline.BasicPlayableBehaviour.New() end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.BasicPlayableBehaviour:OnGraphStart(playable) end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.BasicPlayableBehaviour:OnGraphStop(playable) end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.BasicPlayableBehaviour:OnPlayableCreate(playable) end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.BasicPlayableBehaviour:OnPlayableDestroy(playable) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.BasicPlayableBehaviour:OnBehaviourPlay(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.BasicPlayableBehaviour:OnBehaviourPause(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.BasicPlayableBehaviour:PrepareFrame(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
----@param playerData System.Object
-function UnityEngine.Timeline.BasicPlayableBehaviour:ProcessFrame(playable, info, playerData) end
----@param graph UnityEngine.Playables.PlayableGraph
----@param owner UnityEngine.GameObject
----@return UnityEngine.Playables.Playable
-function UnityEngine.Timeline.BasicPlayableBehaviour:CreatePlayable(graph, owner) end
-
----@class UnityEngine.Timeline.DirectorControlPlayable : UnityEngine.Playables.PlayableBehaviour
----@field director UnityEngine.Playables.PlayableDirector
----@field pauseAction UnityEngine.Timeline.DirectorControlPlayable.PauseAction
-UnityEngine.Timeline.DirectorControlPlayable = {}
----@alias CS.UnityEngine.Timeline.DirectorControlPlayable UnityEngine.Timeline.DirectorControlPlayable
-CS.UnityEngine.Timeline.DirectorControlPlayable = UnityEngine.Timeline.DirectorControlPlayable
-
----@return UnityEngine.Timeline.DirectorControlPlayable
-function UnityEngine.Timeline.DirectorControlPlayable.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param director UnityEngine.Playables.PlayableDirector
----@return UnityEngine.Playables.ScriptPlayable
-function UnityEngine.Timeline.DirectorControlPlayable.Create(graph, director) end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.DirectorControlPlayable:OnPlayableDestroy(playable) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.DirectorControlPlayable:PrepareFrame(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.DirectorControlPlayable:OnBehaviourPlay(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.DirectorControlPlayable:OnBehaviourPause(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
----@param playerData System.Object
-function UnityEngine.Timeline.DirectorControlPlayable:ProcessFrame(playable, info, playerData) end
-
----@class UnityEngine.Timeline.ITimeControl
-UnityEngine.Timeline.ITimeControl = {}
----@alias CS.UnityEngine.Timeline.ITimeControl UnityEngine.Timeline.ITimeControl
-CS.UnityEngine.Timeline.ITimeControl = UnityEngine.Timeline.ITimeControl
-
----@param time number
-function UnityEngine.Timeline.ITimeControl:SetTime(time) end
-function UnityEngine.Timeline.ITimeControl:OnControlTimeStart() end
-function UnityEngine.Timeline.ITimeControl:OnControlTimeStop() end
-
----@class UnityEngine.Timeline.NotificationFlags
----@field TriggerInEditMode UnityEngine.Timeline.NotificationFlags
----@field Retroactive UnityEngine.Timeline.NotificationFlags
----@field TriggerOnce UnityEngine.Timeline.NotificationFlags
-UnityEngine.Timeline.NotificationFlags = {}
----@alias CS.UnityEngine.Timeline.NotificationFlags UnityEngine.Timeline.NotificationFlags
-CS.UnityEngine.Timeline.NotificationFlags = UnityEngine.Timeline.NotificationFlags
-
-
----@class UnityEngine.Timeline.ParticleControlPlayable : UnityEngine.Playables.PlayableBehaviour
----@field particleSystem UnityEngine.ParticleSystem
-UnityEngine.Timeline.ParticleControlPlayable = {}
----@alias CS.UnityEngine.Timeline.ParticleControlPlayable UnityEngine.Timeline.ParticleControlPlayable
-CS.UnityEngine.Timeline.ParticleControlPlayable = UnityEngine.Timeline.ParticleControlPlayable
-
----@return UnityEngine.Timeline.ParticleControlPlayable
-function UnityEngine.Timeline.ParticleControlPlayable.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param component UnityEngine.ParticleSystem
----@param randomSeed number
----@return UnityEngine.Playables.ScriptPlayable
-function UnityEngine.Timeline.ParticleControlPlayable.Create(graph, component, randomSeed) end
----@param ps UnityEngine.ParticleSystem
----@param randomSeed number
-function UnityEngine.Timeline.ParticleControlPlayable:Initialize(ps, randomSeed) end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.ParticleControlPlayable:OnPlayableDestroy(playable) end
----@param playable UnityEngine.Playables.Playable
----@param data UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.ParticleControlPlayable:PrepareFrame(playable, data) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.ParticleControlPlayable:OnBehaviourPlay(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.ParticleControlPlayable:OnBehaviourPause(playable, info) end
-
----@class UnityEngine.Timeline.PrefabControlPlayable : UnityEngine.Playables.PlayableBehaviour
----@field prefabInstance UnityEngine.GameObject
-UnityEngine.Timeline.PrefabControlPlayable = {}
----@alias CS.UnityEngine.Timeline.PrefabControlPlayable UnityEngine.Timeline.PrefabControlPlayable
-CS.UnityEngine.Timeline.PrefabControlPlayable = UnityEngine.Timeline.PrefabControlPlayable
-
----@return UnityEngine.Timeline.PrefabControlPlayable
-function UnityEngine.Timeline.PrefabControlPlayable.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param prefabGameObject UnityEngine.GameObject
----@param parentTransform UnityEngine.Transform
----@return UnityEngine.Playables.ScriptPlayable
-function UnityEngine.Timeline.PrefabControlPlayable.Create(graph, prefabGameObject, parentTransform) end
----@param prefabGameObject UnityEngine.GameObject
----@param parentTransform UnityEngine.Transform
----@return UnityEngine.GameObject
-function UnityEngine.Timeline.PrefabControlPlayable:Initialize(prefabGameObject, parentTransform) end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.PrefabControlPlayable:OnPlayableDestroy(playable) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.PrefabControlPlayable:OnBehaviourPlay(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.PrefabControlPlayable:OnBehaviourPause(playable, info) end
-
----@class UnityEngine.Timeline.TimeControlPlayable : UnityEngine.Playables.PlayableBehaviour
-UnityEngine.Timeline.TimeControlPlayable = {}
----@alias CS.UnityEngine.Timeline.TimeControlPlayable UnityEngine.Timeline.TimeControlPlayable
-CS.UnityEngine.Timeline.TimeControlPlayable = UnityEngine.Timeline.TimeControlPlayable
-
----@return UnityEngine.Timeline.TimeControlPlayable
-function UnityEngine.Timeline.TimeControlPlayable.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param timeControl UnityEngine.Timeline.ITimeControl
----@return UnityEngine.Playables.ScriptPlayable
-function UnityEngine.Timeline.TimeControlPlayable.Create(graph, timeControl) end
----@param timeControl UnityEngine.Timeline.ITimeControl
-function UnityEngine.Timeline.TimeControlPlayable:Initialize(timeControl) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.TimeControlPlayable:PrepareFrame(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.TimeControlPlayable:OnBehaviourPlay(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.TimeControlPlayable:OnBehaviourPause(playable, info) end
-
----@class UnityEngine.Timeline.TimeNotificationBehaviour : UnityEngine.Playables.PlayableBehaviour
----@field timeSource UnityEngine.Playables.Playable
-UnityEngine.Timeline.TimeNotificationBehaviour = {}
----@alias CS.UnityEngine.Timeline.TimeNotificationBehaviour UnityEngine.Timeline.TimeNotificationBehaviour
-CS.UnityEngine.Timeline.TimeNotificationBehaviour = UnityEngine.Timeline.TimeNotificationBehaviour
-
----@return UnityEngine.Timeline.TimeNotificationBehaviour
-function UnityEngine.Timeline.TimeNotificationBehaviour.New() end
----@param graph UnityEngine.Playables.PlayableGraph
----@param duration number
----@param loopMode UnityEngine.Playables.DirectorWrapMode
----@return UnityEngine.Playables.ScriptPlayable
-function UnityEngine.Timeline.TimeNotificationBehaviour.Create(graph, duration, loopMode) end
----@param time number
----@param payload UnityEngine.Playables.INotification
----@param flags UnityEngine.Timeline.NotificationFlags
-function UnityEngine.Timeline.TimeNotificationBehaviour:AddNotification(time, payload, flags) end
----@param playable UnityEngine.Playables.Playable
-function UnityEngine.Timeline.TimeNotificationBehaviour:OnGraphStart(playable) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.TimeNotificationBehaviour:OnBehaviourPause(playable, info) end
----@param playable UnityEngine.Playables.Playable
----@param info UnityEngine.Playables.FrameData
-function UnityEngine.Timeline.TimeNotificationBehaviour:PrepareFrame(playable, info) end

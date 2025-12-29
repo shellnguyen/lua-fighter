@@ -1,5 +1,166 @@
 ---@meta
 
+---@class UnityEngine.GraphicsBufferHandle : System.ValueType
+---@field value number
+UnityEngine.GraphicsBufferHandle = {}
+---@alias CS.UnityEngine.GraphicsBufferHandle UnityEngine.GraphicsBufferHandle
+CS.UnityEngine.GraphicsBufferHandle = UnityEngine.GraphicsBufferHandle
+
+---@return number
+function UnityEngine.GraphicsBufferHandle:GetHashCode() end
+---@overload fun(self: UnityEngine.GraphicsBufferHandle, obj: System.Object) : boolean
+---@param other UnityEngine.GraphicsBufferHandle
+---@return boolean
+function UnityEngine.GraphicsBufferHandle:Equals(other) end
+---@param other UnityEngine.GraphicsBufferHandle
+---@return number
+function UnityEngine.GraphicsBufferHandle:CompareTo(other) end
+
+---@class UnityEngine.GraphicsBuffer : System.Object
+---@field count number
+---@field stride number
+---@field target UnityEngine.GraphicsBuffer.Target
+---@field usageFlags UnityEngine.GraphicsBuffer.UsageFlags
+---@field bufferHandle UnityEngine.GraphicsBufferHandle
+---@field name string
+UnityEngine.GraphicsBuffer = {}
+---@alias CS.UnityEngine.GraphicsBuffer UnityEngine.GraphicsBuffer
+CS.UnityEngine.GraphicsBuffer = UnityEngine.GraphicsBuffer
+
+---@overload fun(target: UnityEngine.GraphicsBuffer.Target, count: number, stride: number) : UnityEngine.GraphicsBuffer
+---@param target UnityEngine.GraphicsBuffer.Target
+---@param usageFlags UnityEngine.GraphicsBuffer.UsageFlags
+---@param count number
+---@param stride number
+---@return UnityEngine.GraphicsBuffer
+function UnityEngine.GraphicsBuffer.New(target, usageFlags, count, stride) end
+---@overload fun(src: UnityEngine.ComputeBuffer, dst: UnityEngine.ComputeBuffer, dstOffsetBytes: number)
+---@overload fun(src: UnityEngine.GraphicsBuffer, dst: UnityEngine.ComputeBuffer, dstOffsetBytes: number)
+---@overload fun(src: UnityEngine.ComputeBuffer, dst: UnityEngine.GraphicsBuffer, dstOffsetBytes: number)
+---@param src UnityEngine.GraphicsBuffer
+---@param dst UnityEngine.GraphicsBuffer
+---@param dstOffsetBytes number
+function UnityEngine.GraphicsBuffer.CopyCount(src, dst, dstOffsetBytes) end
+function UnityEngine.GraphicsBuffer:Dispose() end
+function UnityEngine.GraphicsBuffer:Release() end
+---@return boolean
+function UnityEngine.GraphicsBuffer:IsValid() end
+---@overload fun(self: UnityEngine.GraphicsBuffer, data: System.Array)
+---@param data System.Array
+---@param managedBufferStartIndex number
+---@param graphicsBufferStartIndex number
+---@param count number
+function UnityEngine.GraphicsBuffer:SetData(data, managedBufferStartIndex, graphicsBufferStartIndex, count) end
+---@overload fun(self: UnityEngine.GraphicsBuffer, data: System.Array)
+---@param data System.Array
+---@param managedBufferStartIndex number
+---@param computeBufferStartIndex number
+---@param count number
+function UnityEngine.GraphicsBuffer:GetData(data, managedBufferStartIndex, computeBufferStartIndex, count) end
+---@return System.IntPtr
+function UnityEngine.GraphicsBuffer:GetNativeBufferPtr() end
+---@param counterValue number
+function UnityEngine.GraphicsBuffer:SetCounterValue(counterValue) end
+
+---@class UnityEngine.GraphicsBuffer.Target
+---@field Vertex UnityEngine.GraphicsBuffer.Target
+---@field Index UnityEngine.GraphicsBuffer.Target
+---@field CopySource UnityEngine.GraphicsBuffer.Target
+---@field CopyDestination UnityEngine.GraphicsBuffer.Target
+---@field Structured UnityEngine.GraphicsBuffer.Target
+---@field Raw UnityEngine.GraphicsBuffer.Target
+---@field Append UnityEngine.GraphicsBuffer.Target
+---@field Counter UnityEngine.GraphicsBuffer.Target
+---@field IndirectArguments UnityEngine.GraphicsBuffer.Target
+---@field Constant UnityEngine.GraphicsBuffer.Target
+UnityEngine.GraphicsBuffer.Target = {}
+---@alias CS.UnityEngine.GraphicsBuffer.Target UnityEngine.GraphicsBuffer.Target
+CS.UnityEngine.GraphicsBuffer.Target = UnityEngine.GraphicsBuffer.Target
+
+
+---@class UnityEngine.GraphicsBuffer.UsageFlags
+---@field None UnityEngine.GraphicsBuffer.UsageFlags
+---@field LockBufferForWrite UnityEngine.GraphicsBuffer.UsageFlags
+UnityEngine.GraphicsBuffer.UsageFlags = {}
+---@alias CS.UnityEngine.GraphicsBuffer.UsageFlags UnityEngine.GraphicsBuffer.UsageFlags
+CS.UnityEngine.GraphicsBuffer.UsageFlags = UnityEngine.GraphicsBuffer.UsageFlags
+
+
+---@class UnityEngine.GraphicsBuffer.IndirectDrawArgs : System.ValueType
+---@field size number
+---@field vertexCountPerInstance number
+---@field instanceCount number
+---@field startVertex number
+---@field startInstance number
+UnityEngine.GraphicsBuffer.IndirectDrawArgs = {}
+---@alias CS.UnityEngine.GraphicsBuffer.IndirectDrawArgs UnityEngine.GraphicsBuffer.IndirectDrawArgs
+CS.UnityEngine.GraphicsBuffer.IndirectDrawArgs = UnityEngine.GraphicsBuffer.IndirectDrawArgs
+
+
+---@class UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs : System.ValueType
+---@field size number
+---@field indexCountPerInstance number
+---@field instanceCount number
+---@field startIndex number
+---@field baseVertexIndex number
+---@field startInstance number
+UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs = {}
+---@alias CS.UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs
+CS.UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs = UnityEngine.GraphicsBuffer.IndirectDrawIndexedArgs
+
+
+---@class UnityEngine.GraphicsBuffer.BindingsMarshaller : System.Object
+UnityEngine.GraphicsBuffer.BindingsMarshaller = {}
+---@alias CS.UnityEngine.GraphicsBuffer.BindingsMarshaller UnityEngine.GraphicsBuffer.BindingsMarshaller
+CS.UnityEngine.GraphicsBuffer.BindingsMarshaller = UnityEngine.GraphicsBuffer.BindingsMarshaller
+
+---@param ptr System.IntPtr
+---@return UnityEngine.GraphicsBuffer
+function UnityEngine.GraphicsBuffer.BindingsMarshaller.ConvertToManaged(ptr) end
+---@param graphicsBuffer UnityEngine.GraphicsBuffer
+---@return System.IntPtr
+function UnityEngine.GraphicsBuffer.BindingsMarshaller.ConvertToNative(graphicsBuffer) end
+
+---@class UnityEngine.OcclusionPortal : UnityEngine.Component
+---@field open boolean
+UnityEngine.OcclusionPortal = {}
+---@alias CS.UnityEngine.OcclusionPortal UnityEngine.OcclusionPortal
+CS.UnityEngine.OcclusionPortal = UnityEngine.OcclusionPortal
+
+---@return UnityEngine.OcclusionPortal
+function UnityEngine.OcclusionPortal.New() end
+
+---@class UnityEngine.OcclusionArea : UnityEngine.Component
+---@field center UnityEngine.Vector3
+---@field size UnityEngine.Vector3
+UnityEngine.OcclusionArea = {}
+---@alias CS.UnityEngine.OcclusionArea UnityEngine.OcclusionArea
+CS.UnityEngine.OcclusionArea = UnityEngine.OcclusionArea
+
+---@return UnityEngine.OcclusionArea
+function UnityEngine.OcclusionArea.New() end
+
+---@class UnityEngine.Flare : UnityEngine.Object
+UnityEngine.Flare = {}
+---@alias CS.UnityEngine.Flare UnityEngine.Flare
+CS.UnityEngine.Flare = UnityEngine.Flare
+
+---@return UnityEngine.Flare
+function UnityEngine.Flare.New() end
+
+---@class UnityEngine.Flare.FlareElement : System.ValueType
+---@field imageIndex number
+---@field position number
+---@field size number
+---@field color UnityEngine.Color
+---@field useLightColor boolean
+---@field rotate boolean
+---@field zoom boolean
+---@field fade boolean
+UnityEngine.Flare.FlareElement = {}
+---@alias CS.UnityEngine.Flare.FlareElement UnityEngine.Flare.FlareElement
+CS.UnityEngine.Flare.FlareElement = UnityEngine.Flare.FlareElement
+
 
 ---@class UnityEngine.Flare.FlareLayout
 ---@field LayoutLargeRestSmall UnityEngine.Flare.FlareLayout
@@ -116,6 +277,22 @@ function UnityEngine.Light:RemoveAllCommandBuffers() end
 function UnityEngine.Light:GetCommandBuffers(evt) end
 ---@return UnityEngine.Rendering.Universal.UniversalAdditionalLightData
 function UnityEngine.Light:GetUniversalAdditionalLightData() end
+---@param endValue UnityEngine.Color
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Light:DOColor(endValue, duration) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Light:DOIntensity(endValue, duration) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Light:DOShadowStrength(endValue, duration) end
+---@param endValue UnityEngine.Color
+---@param duration number
+---@return DG.Tweening.Tweener
+function UnityEngine.Light:DOBlendableColor(endValue, duration) end
 
 ---@class UnityEngine.Skybox : UnityEngine.Behaviour
 ---@field material UnityEngine.Material
@@ -1365,6 +1542,16 @@ function UnityEngine.Texture2D:LoadImage(data, markNonReadable) end
 ---@param data System.Byte[]
 ---@return boolean
 function UnityEngine.Texture2D:LoadImage(data) end
+---@param x number
+---@param y number
+---@param scale number
+---@return UnityEngine.Rect
+function UnityEngine.Texture2D:GetRect(x, y, scale) end
+---@param filterMode UnityEngine.FilterMode
+---@param maxTextureSize number
+---@param wrapMode UnityEngine.TextureWrapMode
+---@param quality number
+function UnityEngine.Texture2D:SetGUIFormat(filterMode, maxTextureSize, wrapMode, quality) end
 
 ---@class UnityEngine.Texture2D.EXRFlags
 ---@field None UnityEngine.Texture2D.EXRFlags
@@ -3146,6 +3333,23 @@ function UnityEngine.Color:Equals(ref_other) end
 ---@param c2 UnityEngine.Color
 ---@return UnityEngine.Color
 function UnityEngine.Color:MinAlpha(c2) end
+---@param brightnessFactor number
+---@param alpha System.Nullable
+---@return UnityEngine.Color
+function UnityEngine.Color:CloneAndChangeBrightness(brightnessFactor, alpha) end
+---@param saturationFactor number
+---@param alpha System.Nullable
+---@return UnityEngine.Color
+function UnityEngine.Color:CloneAndChangeSaturation(saturationFactor, alpha) end
+---@param alpha number
+---@return UnityEngine.Color
+function UnityEngine.Color:SetAlpha(alpha) end
+---@param alpha number
+---@return UnityEngine.Color
+function UnityEngine.Color:CloneAndSetAlpha(alpha) end
+---@param includeAlpha boolean
+---@return string
+function UnityEngine.Color:ToHex(includeAlpha) end
 
 ---@class UnityEngine.Color32 : System.ValueType
 ---@field r number
@@ -3188,6 +3392,9 @@ function UnityEngine.Color32:Equals(ref_other) end
 ---@param formatProvider System.IFormatProvider
 ---@return string
 function UnityEngine.Color32:ToString(format, formatProvider) end
+---@param includeAlpha boolean
+---@return string
+function UnityEngine.Color32:ToHex(includeAlpha) end
 
 ---@class UnityEngine.ColorUtility : System.Object
 UnityEngine.ColorUtility = {}
@@ -4798,235 +5005,3 @@ function UnityEngine.PropertyNameUtils.StringFromPropertyName(propertyName) end
 ---@param id number
 ---@return number
 function UnityEngine.PropertyNameUtils.ConflictCountForID(id) end
-
----@class UnityEngine.PropertyName : System.ValueType
-UnityEngine.PropertyName = {}
----@alias CS.UnityEngine.PropertyName UnityEngine.PropertyName
-CS.UnityEngine.PropertyName = UnityEngine.PropertyName
-
----@overload fun(name: string) : UnityEngine.PropertyName
----@overload fun(other: UnityEngine.PropertyName) : UnityEngine.PropertyName
----@param id number
----@return UnityEngine.PropertyName
-function UnityEngine.PropertyName.New(id) end
----@param prop UnityEngine.PropertyName
----@return boolean
-function UnityEngine.PropertyName.IsNullOrEmpty(prop) end
----@return number
-function UnityEngine.PropertyName:GetHashCode() end
----@overload fun(self: UnityEngine.PropertyName, other: System.Object) : boolean
----@param other UnityEngine.PropertyName
----@return boolean
-function UnityEngine.PropertyName:Equals(other) end
----@return string
-function UnityEngine.PropertyName:ToString() end
-
----@class UnityEngine.Random : System.Object
----@field state UnityEngine.Random.State
----@field value number
----@field insideUnitSphere UnityEngine.Vector3
----@field insideUnitCircle UnityEngine.Vector2
----@field onUnitSphere UnityEngine.Vector3
----@field rotation UnityEngine.Quaternion
----@field rotationUniform UnityEngine.Quaternion
-UnityEngine.Random = {}
----@alias CS.UnityEngine.Random UnityEngine.Random
-CS.UnityEngine.Random = UnityEngine.Random
-
----@param seed number
-function UnityEngine.Random.InitState(seed) end
----@overload fun(minInclusive: number, maxInclusive: number) : number
----@param minInclusive number
----@param maxExclusive number
----@return number
-function UnityEngine.Random.Range(minInclusive, maxExclusive) end
----@overload fun() : UnityEngine.Color
----@overload fun(hueMin: number, hueMax: number) : UnityEngine.Color
----@overload fun(hueMin: number, hueMax: number, saturationMin: number, saturationMax: number) : UnityEngine.Color
----@overload fun(hueMin: number, hueMax: number, saturationMin: number, saturationMax: number, valueMin: number, valueMax: number) : UnityEngine.Color
----@param hueMin number
----@param hueMax number
----@param saturationMin number
----@param saturationMax number
----@param valueMin number
----@param valueMax number
----@param alphaMin number
----@param alphaMax number
----@return UnityEngine.Color
-function UnityEngine.Random.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax, alphaMin, alphaMax) end
-
----@class UnityEngine.Random.State : System.ValueType
-UnityEngine.Random.State = {}
----@alias CS.UnityEngine.Random.State UnityEngine.Random.State
-CS.UnityEngine.Random.State = UnityEngine.Random.State
-
-
----@class UnityEngine.BitOperationUtils : System.Object
-UnityEngine.BitOperationUtils = {}
----@alias CS.UnityEngine.BitOperationUtils UnityEngine.BitOperationUtils
-CS.UnityEngine.BitOperationUtils = UnityEngine.BitOperationUtils
-
-
----@class UnityEngine.RenderingLayerMask : System.ValueType
----@field defaultRenderingLayerMask UnityEngine.RenderingLayerMask
----@field value number
-UnityEngine.RenderingLayerMask = {}
----@alias CS.UnityEngine.RenderingLayerMask UnityEngine.RenderingLayerMask
-CS.UnityEngine.RenderingLayerMask = UnityEngine.RenderingLayerMask
-
----@param layer number
----@return string
-function UnityEngine.RenderingLayerMask.RenderingLayerToName(layer) end
----@param layerName string
----@return number
-function UnityEngine.RenderingLayerMask.NameToRenderingLayer(layerName) end
----@overload fun(renderingLayerNames: System.String[]) : number
----@param renderingLayerNames System.ReadOnlySpan
----@return number
-function UnityEngine.RenderingLayerMask.GetMask(renderingLayerNames) end
----@return number
-function UnityEngine.RenderingLayerMask.GetDefinedRenderingLayerCount() end
----@return number
-function UnityEngine.RenderingLayerMask.GetLastDefinedRenderingLayerIndex() end
----@return number
-function UnityEngine.RenderingLayerMask.GetDefinedRenderingLayersCombinedMaskValue() end
----@return System.String[]
-function UnityEngine.RenderingLayerMask.GetDefinedRenderingLayerNames() end
----@return System.Int32[]
-function UnityEngine.RenderingLayerMask.GetDefinedRenderingLayerValues() end
----@return number
-function UnityEngine.RenderingLayerMask.GetRenderingLayerCount() end
-
----@class UnityEngine.IconAttribute : System.Attribute
----@field path string
-UnityEngine.IconAttribute = {}
----@alias CS.UnityEngine.IconAttribute UnityEngine.IconAttribute
-CS.UnityEngine.IconAttribute = UnityEngine.IconAttribute
-
----@param path string
----@return UnityEngine.IconAttribute
-function UnityEngine.IconAttribute.New(path) end
-
----@class UnityEngine.ResourceRequest : UnityEngine.AsyncOperation
----@field asset UnityEngine.Object
-UnityEngine.ResourceRequest = {}
----@alias CS.UnityEngine.ResourceRequest UnityEngine.ResourceRequest
-CS.UnityEngine.ResourceRequest = UnityEngine.ResourceRequest
-
----@return UnityEngine.ResourceRequest
-function UnityEngine.ResourceRequest.New() end
-
----@class UnityEngine.ResourceRequest.BindingsMarshaller : System.Object
-UnityEngine.ResourceRequest.BindingsMarshaller = {}
----@alias CS.UnityEngine.ResourceRequest.BindingsMarshaller UnityEngine.ResourceRequest.BindingsMarshaller
-CS.UnityEngine.ResourceRequest.BindingsMarshaller = UnityEngine.ResourceRequest.BindingsMarshaller
-
----@param ptr System.IntPtr
----@return UnityEngine.ResourceRequest
-function UnityEngine.ResourceRequest.BindingsMarshaller.ConvertToManaged(ptr) end
-
----@class UnityEngine.ResourcesAPIInternal : System.Object
-UnityEngine.ResourcesAPIInternal = {}
----@alias CS.UnityEngine.ResourcesAPIInternal UnityEngine.ResourcesAPIInternal
-CS.UnityEngine.ResourcesAPIInternal = UnityEngine.ResourcesAPIInternal
-
----@param type System.Type
----@return UnityEngine.Object[]
-function UnityEngine.ResourcesAPIInternal.FindObjectsOfTypeAll(type) end
----@param name string
----@return UnityEngine.Shader
-function UnityEngine.ResourcesAPIInternal.FindShaderByName(name) end
----@param path string
----@param systemTypeInstance System.Type
----@return UnityEngine.Object
-function UnityEngine.ResourcesAPIInternal.Load(path, systemTypeInstance) end
----@param path string
----@param systemTypeInstance System.Type
----@return UnityEngine.Object[]
-function UnityEngine.ResourcesAPIInternal.LoadAll(path, systemTypeInstance) end
----@param path string
----@return System.String[]
-function UnityEngine.ResourcesAPIInternal.GetAllPaths(path) end
----@param assetToUnload UnityEngine.Object
-function UnityEngine.ResourcesAPIInternal.UnloadAsset(assetToUnload) end
-
----@class UnityEngine.ResourcesAPIInternal.EntitiesAssetGC : System.Object
-UnityEngine.ResourcesAPIInternal.EntitiesAssetGC = {}
----@alias CS.UnityEngine.ResourcesAPIInternal.EntitiesAssetGC UnityEngine.ResourcesAPIInternal.EntitiesAssetGC
-CS.UnityEngine.ResourcesAPIInternal.EntitiesAssetGC = UnityEngine.ResourcesAPIInternal.EntitiesAssetGC
-
-
----@class UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate : System.MulticastDelegate
-UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate = {}
----@alias CS.UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate
-CS.UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate = UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate
-function UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate.New(object, method) end
----@param state System.IntPtr
-function UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate:Invoke(state) end
----@param state System.IntPtr
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate:BeginInvoke(state, callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.ResourcesAPIInternal.EntitiesAssetGC.AdditionalRootsHandlerDelegate:EndInvoke(result) end
-
----@class UnityEngine.ResourcesAPI : System.Object
----@field overrideAPI UnityEngine.ResourcesAPI
-UnityEngine.ResourcesAPI = {}
----@alias CS.UnityEngine.ResourcesAPI UnityEngine.ResourcesAPI
-CS.UnityEngine.ResourcesAPI = UnityEngine.ResourcesAPI
-
-
----@class UnityEngine.Resources : System.Object
-UnityEngine.Resources = {}
----@alias CS.UnityEngine.Resources UnityEngine.Resources
-CS.UnityEngine.Resources = UnityEngine.Resources
-
----@return UnityEngine.Resources
-function UnityEngine.Resources.New() end
----@param type System.Type
----@return UnityEngine.Object[]
-function UnityEngine.Resources.FindObjectsOfTypeAll(type) end
----@overload fun(path: string) : UnityEngine.Object
----@param path string
----@param systemTypeInstance System.Type
----@return UnityEngine.Object
-function UnityEngine.Resources.Load(path, systemTypeInstance) end
----@overload fun(path: string) : UnityEngine.ResourceRequest
----@param path string
----@param type System.Type
----@return UnityEngine.ResourceRequest
-function UnityEngine.Resources.LoadAsync(path, type) end
----@overload fun(path: string, systemTypeInstance: System.Type) : UnityEngine.Object[]
----@param path string
----@return UnityEngine.Object[]
-function UnityEngine.Resources.LoadAll(path) end
----@param type System.Type
----@param path string
----@return UnityEngine.Object
-function UnityEngine.Resources.GetBuiltinResource(type, path) end
----@param assetToUnload UnityEngine.Object
-function UnityEngine.Resources.UnloadAsset(assetToUnload) end
----@return UnityEngine.AsyncOperation
-function UnityEngine.Resources.UnloadUnusedAssets() end
----@param entityId UnityEngine.EntityId
----@return UnityEngine.Object
-function UnityEngine.Resources.EntityIdToObject(entityId) end
----@param entityIds Unity.Collections.NativeArray
----@param objects System.Collections.Generic.List
-function UnityEngine.Resources.EntityIdsToObjectList(entityIds, objects) end
----@param entityId UnityEngine.EntityId
----@return boolean
-function UnityEngine.Resources.EntityIdIsValid(entityId) end
----@overload fun(entityIDs: Unity.Collections.NativeArray, validArray: Unity.Collections.NativeArray)
----@param entityIds System.ReadOnlySpan
----@param validArray System.Span
-function UnityEngine.Resources.EntityIdsToValidArray(entityIds, validArray) end
----@param instanceIDs System.ReadOnlySpan
----@param validArray System.Span
-function UnityEngine.Resources.InstanceIDsToValidArray(instanceIDs, validArray) end

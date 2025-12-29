@@ -1,5 +1,813 @@
 ---@meta
 
+
+---@class UnityEngine.UIElements.FilterParameter : System.ValueType
+---@field type UnityEngine.UIElements.FilterParameterType
+---@field floatValue number
+---@field colorValue UnityEngine.Color
+UnityEngine.UIElements.FilterParameter = {}
+---@alias CS.UnityEngine.UIElements.FilterParameter UnityEngine.UIElements.FilterParameter
+CS.UnityEngine.UIElements.FilterParameter = UnityEngine.UIElements.FilterParameter
+
+---@overload fun(value: number) : UnityEngine.UIElements.FilterParameter
+---@param value UnityEngine.Color
+---@return UnityEngine.UIElements.FilterParameter
+function UnityEngine.UIElements.FilterParameter.New(value) end
+---@overload fun(self: UnityEngine.UIElements.FilterParameter, obj: System.Object) : boolean
+---@param other UnityEngine.UIElements.FilterParameter
+---@return boolean
+function UnityEngine.UIElements.FilterParameter:Equals(other) end
+---@return number
+function UnityEngine.UIElements.FilterParameter:GetHashCode() end
+---@return string
+function UnityEngine.UIElements.FilterParameter:ToString() end
+
+---@class UnityEngine.UIElements.FilterFunction : System.ValueType
+---@field type UnityEngine.UIElements.FilterFunctionType
+---@field parameterCount number
+---@field customDefinition UnityEngine.UIElements.FilterFunctionDefinition
+UnityEngine.UIElements.FilterFunction = {}
+---@alias CS.UnityEngine.UIElements.FilterFunction UnityEngine.UIElements.FilterFunction
+CS.UnityEngine.UIElements.FilterFunction = UnityEngine.UIElements.FilterFunction
+
+---@overload fun(type: UnityEngine.UIElements.FilterFunctionType) : UnityEngine.UIElements.FilterFunction
+---@param filterDef UnityEngine.UIElements.FilterFunctionDefinition
+---@return UnityEngine.UIElements.FilterFunction
+function UnityEngine.UIElements.FilterFunction.New(filterDef) end
+---@param p UnityEngine.UIElements.FilterParameter
+function UnityEngine.UIElements.FilterFunction:AddParameter(p) end
+---@param index number
+---@param p UnityEngine.UIElements.FilterParameter
+function UnityEngine.UIElements.FilterFunction:SetParameter(index, p) end
+---@param index number
+---@return UnityEngine.UIElements.FilterParameter
+function UnityEngine.UIElements.FilterFunction:GetParameter(index) end
+function UnityEngine.UIElements.FilterFunction:ClearParameters() end
+---@overload fun(self: UnityEngine.UIElements.FilterFunction, other: UnityEngine.UIElements.FilterFunction) : boolean
+---@param obj System.Object
+---@return boolean
+function UnityEngine.UIElements.FilterFunction:Equals(obj) end
+---@return number
+function UnityEngine.UIElements.FilterFunction:GetHashCode() end
+---@return string
+function UnityEngine.UIElements.FilterFunction:ToString() end
+
+---@class UnityEngine.UIElements.FilterFunction.PropertyBag : Unity.Properties.ContainerPropertyBag
+UnityEngine.UIElements.FilterFunction.PropertyBag = {}
+---@alias CS.UnityEngine.UIElements.FilterFunction.PropertyBag UnityEngine.UIElements.FilterFunction.PropertyBag
+CS.UnityEngine.UIElements.FilterFunction.PropertyBag = UnityEngine.UIElements.FilterFunction.PropertyBag
+
+---@return UnityEngine.UIElements.FilterFunction.PropertyBag
+function UnityEngine.UIElements.FilterFunction.PropertyBag.New() end
+
+---@class UnityEngine.UIElements.FilterFunction.PropertyBag.ParametersProperty : Unity.Properties.Property
+---@field Name string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.FilterFunction.PropertyBag.ParametersProperty = {}
+---@alias CS.UnityEngine.UIElements.FilterFunction.PropertyBag.ParametersProperty UnityEngine.UIElements.FilterFunction.PropertyBag.ParametersProperty
+CS.UnityEngine.UIElements.FilterFunction.PropertyBag.ParametersProperty = UnityEngine.UIElements.FilterFunction.PropertyBag.ParametersProperty
+
+---@return UnityEngine.UIElements.FilterFunction.PropertyBag.ParametersProperty
+function UnityEngine.UIElements.FilterFunction.PropertyBag.ParametersProperty.New() end
+---@param ref_container UnityEngine.UIElements.FilterFunction
+---@return UnityEngine.UIElements.Layout.FixedBuffer4,UnityEngine.UIElements.FilterFunction
+function UnityEngine.UIElements.FilterFunction.PropertyBag.ParametersProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.FilterFunction
+---@param value UnityEngine.UIElements.Layout.FixedBuffer4
+---@return ,UnityEngine.UIElements.FilterFunction
+function UnityEngine.UIElements.FilterFunction.PropertyBag.ParametersProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.FilterFunction.PropertyBag.FilterFunctionDefinitionProperty : Unity.Properties.Property
+---@field Name string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.FilterFunction.PropertyBag.FilterFunctionDefinitionProperty = {}
+---@alias CS.UnityEngine.UIElements.FilterFunction.PropertyBag.FilterFunctionDefinitionProperty UnityEngine.UIElements.FilterFunction.PropertyBag.FilterFunctionDefinitionProperty
+CS.UnityEngine.UIElements.FilterFunction.PropertyBag.FilterFunctionDefinitionProperty = UnityEngine.UIElements.FilterFunction.PropertyBag.FilterFunctionDefinitionProperty
+
+---@return UnityEngine.UIElements.FilterFunction.PropertyBag.FilterFunctionDefinitionProperty
+function UnityEngine.UIElements.FilterFunction.PropertyBag.FilterFunctionDefinitionProperty.New() end
+---@param ref_container UnityEngine.UIElements.FilterFunction
+---@return UnityEngine.UIElements.FilterFunctionDefinition,UnityEngine.UIElements.FilterFunction
+function UnityEngine.UIElements.FilterFunction.PropertyBag.FilterFunctionDefinitionProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.FilterFunction
+---@param value UnityEngine.UIElements.FilterFunctionDefinition
+---@return ,UnityEngine.UIElements.FilterFunction
+function UnityEngine.UIElements.FilterFunction.PropertyBag.FilterFunctionDefinitionProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.FontDefinition : System.ValueType
+---@field font UnityEngine.Font
+---@field fontAsset UnityEngine.TextCore.Text.FontAsset
+UnityEngine.UIElements.FontDefinition = {}
+---@alias CS.UnityEngine.UIElements.FontDefinition UnityEngine.UIElements.FontDefinition
+CS.UnityEngine.UIElements.FontDefinition = UnityEngine.UIElements.FontDefinition
+
+---@param f UnityEngine.Font
+---@return UnityEngine.UIElements.FontDefinition
+function UnityEngine.UIElements.FontDefinition.FromFont(f) end
+---@param f UnityEngine.TextCore.Text.FontAsset
+---@return UnityEngine.UIElements.FontDefinition
+function UnityEngine.UIElements.FontDefinition.FromSDFFont(f) end
+---@return string
+function UnityEngine.UIElements.FontDefinition:ToString() end
+---@overload fun(self: UnityEngine.UIElements.FontDefinition, other: UnityEngine.UIElements.FontDefinition) : boolean
+---@param obj System.Object
+---@return boolean
+function UnityEngine.UIElements.FontDefinition:Equals(obj) end
+---@return number
+function UnityEngine.UIElements.FontDefinition:GetHashCode() end
+
+---@class UnityEngine.UIElements.FontDefinition.PropertyBag : Unity.Properties.ContainerPropertyBag
+UnityEngine.UIElements.FontDefinition.PropertyBag = {}
+---@alias CS.UnityEngine.UIElements.FontDefinition.PropertyBag UnityEngine.UIElements.FontDefinition.PropertyBag
+CS.UnityEngine.UIElements.FontDefinition.PropertyBag = UnityEngine.UIElements.FontDefinition.PropertyBag
+
+---@return UnityEngine.UIElements.FontDefinition.PropertyBag
+function UnityEngine.UIElements.FontDefinition.PropertyBag.New() end
+
+---@class UnityEngine.UIElements.FontDefinition.PropertyBag.FontProperty : Unity.Properties.Property
+---@field Name string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.FontDefinition.PropertyBag.FontProperty = {}
+---@alias CS.UnityEngine.UIElements.FontDefinition.PropertyBag.FontProperty UnityEngine.UIElements.FontDefinition.PropertyBag.FontProperty
+CS.UnityEngine.UIElements.FontDefinition.PropertyBag.FontProperty = UnityEngine.UIElements.FontDefinition.PropertyBag.FontProperty
+
+---@return UnityEngine.UIElements.FontDefinition.PropertyBag.FontProperty
+function UnityEngine.UIElements.FontDefinition.PropertyBag.FontProperty.New() end
+---@param ref_container UnityEngine.UIElements.FontDefinition
+---@return UnityEngine.Font,UnityEngine.UIElements.FontDefinition
+function UnityEngine.UIElements.FontDefinition.PropertyBag.FontProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.FontDefinition
+---@param value UnityEngine.Font
+---@return ,UnityEngine.UIElements.FontDefinition
+function UnityEngine.UIElements.FontDefinition.PropertyBag.FontProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.FontDefinition.PropertyBag.FontAssetProperty : Unity.Properties.Property
+---@field Name string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.FontDefinition.PropertyBag.FontAssetProperty = {}
+---@alias CS.UnityEngine.UIElements.FontDefinition.PropertyBag.FontAssetProperty UnityEngine.UIElements.FontDefinition.PropertyBag.FontAssetProperty
+CS.UnityEngine.UIElements.FontDefinition.PropertyBag.FontAssetProperty = UnityEngine.UIElements.FontDefinition.PropertyBag.FontAssetProperty
+
+---@return UnityEngine.UIElements.FontDefinition.PropertyBag.FontAssetProperty
+function UnityEngine.UIElements.FontDefinition.PropertyBag.FontAssetProperty.New() end
+---@param ref_container UnityEngine.UIElements.FontDefinition
+---@return UnityEngine.TextCore.Text.FontAsset,UnityEngine.UIElements.FontDefinition
+function UnityEngine.UIElements.FontDefinition.PropertyBag.FontAssetProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.FontDefinition
+---@param value UnityEngine.TextCore.Text.FontAsset
+---@return ,UnityEngine.UIElements.FontDefinition
+function UnityEngine.UIElements.FontDefinition.PropertyBag.FontAssetProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccess : UnityEngine.UIElements.StyleValueCollection
+---@field m_InlineBackgroundSize UnityEngine.UIElements.StyleBackgroundSize
+---@field m_InlineFilter UnityEngine.UIElements.StyleList
+---@field inlineRule UnityEngine.UIElements.InlineStyleAccess.InlineRule
+UnityEngine.UIElements.InlineStyleAccess = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccess UnityEngine.UIElements.InlineStyleAccess
+CS.UnityEngine.UIElements.InlineStyleAccess = UnityEngine.UIElements.InlineStyleAccess
+
+---@param ve UnityEngine.UIElements.VisualElement
+---@return UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccess.New(ve) end
+---@param sheet UnityEngine.UIElements.StyleSheet
+---@param rule UnityEngine.UIElements.StyleRule
+function UnityEngine.UIElements.InlineStyleAccess:SetInlineRule(sheet, rule) end
+---@param id UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@return boolean
+function UnityEngine.UIElements.InlineStyleAccess:IsValueSet(id) end
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.InlineStyleAccess:ApplyInlineStyles(ref_computedStyle) end
+---@param ref_value UnityEngine.UIElements.StyleCursor
+---@return boolean,UnityEngine.UIElements.StyleCursor
+function UnityEngine.UIElements.InlineStyleAccess:TryGetInlineCursor(ref_value) end
+---@param ref_value UnityEngine.UIElements.StyleTextShadow
+---@return boolean,UnityEngine.UIElements.StyleTextShadow
+function UnityEngine.UIElements.InlineStyleAccess:TryGetInlineTextShadow(ref_value) end
+---@param ref_value UnityEngine.UIElements.StyleTextAutoSize
+---@return boolean,UnityEngine.UIElements.StyleTextAutoSize
+function UnityEngine.UIElements.InlineStyleAccess:TryGetInlineTextAutoSize(ref_value) end
+---@param ref_value UnityEngine.UIElements.StyleTransformOrigin
+---@return boolean,UnityEngine.UIElements.StyleTransformOrigin
+function UnityEngine.UIElements.InlineStyleAccess:TryGetInlineTransformOrigin(ref_value) end
+---@param ref_value UnityEngine.UIElements.StyleTranslate
+---@return boolean,UnityEngine.UIElements.StyleTranslate
+function UnityEngine.UIElements.InlineStyleAccess:TryGetInlineTranslate(ref_value) end
+---@param ref_value UnityEngine.UIElements.StyleRotate
+---@return boolean,UnityEngine.UIElements.StyleRotate
+function UnityEngine.UIElements.InlineStyleAccess:TryGetInlineRotate(ref_value) end
+---@param ref_value UnityEngine.UIElements.StyleScale
+---@return boolean,UnityEngine.UIElements.StyleScale
+function UnityEngine.UIElements.InlineStyleAccess:TryGetInlineScale(ref_value) end
+---@param ref_value UnityEngine.UIElements.StyleBackgroundSize
+---@return boolean,UnityEngine.UIElements.StyleBackgroundSize
+function UnityEngine.UIElements.InlineStyleAccess:TryGetInlineBackgroundSize(ref_value) end
+---@param ref_value UnityEngine.UIElements.StyleList
+---@return boolean,UnityEngine.UIElements.StyleList
+function UnityEngine.UIElements.InlineStyleAccess:TryGetInlineFilter(ref_value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccess.InlineRule : System.ValueType
+---@field sheet UnityEngine.UIElements.StyleSheet
+---@field rule UnityEngine.UIElements.StyleRule
+---@field properties UnityEngine.UIElements.StyleProperty[]
+UnityEngine.UIElements.InlineStyleAccess.InlineRule = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccess.InlineRule UnityEngine.UIElements.InlineStyleAccess.InlineRule
+CS.UnityEngine.UIElements.InlineStyleAccess.InlineRule = UnityEngine.UIElements.InlineStyleAccess.InlineRule
+
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag : Unity.Properties.PropertyBag
+UnityEngine.UIElements.InlineStyleAccessPropertyBag = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag UnityEngine.UIElements.InlineStyleAccessPropertyBag
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag = UnityEngine.UIElements.InlineStyleAccessPropertyBag
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.New() end
+---@overload fun() : Unity.Properties.PropertyCollection
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return Unity.Properties.PropertyCollection,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag:GetProperties(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param name string
+---@param out_property Unity.Properties.IProperty
+---@return boolean,UnityEngine.UIElements.InlineStyleAccess,Unity.Properties.IProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag:TryGetProperty(ref_container, name, out_property) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignContentProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleEnumProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignContentProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignContentProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignContentProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignContentProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignContentProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignContentProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignContentProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleEnum,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignContentProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleEnum
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignContentProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignItemsProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleEnumProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignItemsProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignItemsProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignItemsProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignItemsProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignItemsProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignItemsProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignItemsProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleEnum,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignItemsProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleEnum
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignItemsProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignSelfProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleEnumProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignSelfProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignSelfProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignSelfProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignSelfProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignSelfProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignSelfProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignSelfProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleEnum,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignSelfProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleEnum
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AlignSelfProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.AspectRatioProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleRatioProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.AspectRatioProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.AspectRatioProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.AspectRatioProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.AspectRatioProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.AspectRatioProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.AspectRatioProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AspectRatioProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleRatio,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AspectRatioProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleRatio
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.AspectRatioProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundColorProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleColorProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundColorProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundColorProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundColorProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundColorProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundColorProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundColorProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundColorProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleColor,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundColorProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleColor
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundColorProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundImageProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleBackgroundProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundImageProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundImageProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundImageProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundImageProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundImageProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundImageProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundImageProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleBackground,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundImageProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleBackground
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundImageProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionXProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleBackgroundPositionProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionXProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionXProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionXProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionXProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionXProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionXProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionXProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleBackgroundPosition,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionXProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleBackgroundPosition
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionXProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionYProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleBackgroundPositionProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionYProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionYProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionYProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionYProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionYProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionYProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionYProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleBackgroundPosition,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionYProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleBackgroundPosition
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundPositionYProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundRepeatProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleBackgroundRepeatProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundRepeatProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundRepeatProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundRepeatProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundRepeatProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundRepeatProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundRepeatProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundRepeatProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleBackgroundRepeat,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundRepeatProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleBackgroundRepeat
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundRepeatProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundSizeProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleBackgroundSizeProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundSizeProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundSizeProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundSizeProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundSizeProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundSizeProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundSizeProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundSizeProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleBackgroundSize,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundSizeProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleBackgroundSize
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BackgroundSizeProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomColorProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleColorProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomColorProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomColorProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomColorProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomColorProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomColorProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomColorProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomColorProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleColor,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomColorProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleColor
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomColorProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomLeftRadiusProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleLengthProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomLeftRadiusProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomLeftRadiusProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomLeftRadiusProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomLeftRadiusProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomLeftRadiusProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomLeftRadiusProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomLeftRadiusProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleLength,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomLeftRadiusProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleLength
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomLeftRadiusProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomRightRadiusProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleLengthProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomRightRadiusProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomRightRadiusProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomRightRadiusProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomRightRadiusProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomRightRadiusProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomRightRadiusProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomRightRadiusProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleLength,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomRightRadiusProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleLength
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomRightRadiusProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomWidthProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleFloatProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomWidthProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomWidthProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomWidthProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomWidthProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomWidthProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomWidthProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomWidthProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleFloat,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomWidthProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleFloat
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderBottomWidthProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftColorProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleColorProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftColorProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftColorProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftColorProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftColorProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftColorProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftColorProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftColorProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleColor,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftColorProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleColor
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftColorProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftWidthProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleFloatProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftWidthProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftWidthProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftWidthProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftWidthProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftWidthProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftWidthProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftWidthProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleFloat,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftWidthProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleFloat
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderLeftWidthProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightColorProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleColorProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightColorProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightColorProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightColorProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightColorProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightColorProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightColorProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightColorProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleColor,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightColorProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleColor
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightColorProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightWidthProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleFloatProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightWidthProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightWidthProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightWidthProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightWidthProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightWidthProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightWidthProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightWidthProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleFloat,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightWidthProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleFloat
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderRightWidthProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopColorProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleColorProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopColorProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopColorProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopColorProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopColorProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopColorProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopColorProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopColorProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleColor,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopColorProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleColor
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopColorProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopLeftRadiusProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleLengthProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopLeftRadiusProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopLeftRadiusProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopLeftRadiusProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopLeftRadiusProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopLeftRadiusProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopLeftRadiusProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopLeftRadiusProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleLength,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopLeftRadiusProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleLength
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopLeftRadiusProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopRightRadiusProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleLengthProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopRightRadiusProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopRightRadiusProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopRightRadiusProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopRightRadiusProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopRightRadiusProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopRightRadiusProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopRightRadiusProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleLength,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopRightRadiusProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleLength
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopRightRadiusProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopWidthProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleFloatProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopWidthProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopWidthProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopWidthProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopWidthProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopWidthProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopWidthProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopWidthProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleFloat,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopWidthProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleFloat
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BorderTopWidthProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.BottomProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleLengthProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.BottomProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BottomProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.BottomProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.BottomProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.BottomProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.BottomProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BottomProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleLength,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BottomProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleLength
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.BottomProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.ColorProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleColorProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.ColorProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.ColorProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.ColorProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.ColorProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.ColorProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.ColorProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.ColorProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleColor,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.ColorProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleColor
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.ColorProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.CursorProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleCursorProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.CursorProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.CursorProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.CursorProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.CursorProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.CursorProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.CursorProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.CursorProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleCursor,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.CursorProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleCursor
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.CursorProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.DisplayProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleEnumProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.DisplayProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.DisplayProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.DisplayProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.DisplayProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.DisplayProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.DisplayProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.DisplayProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleEnum,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.DisplayProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleEnum
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.DisplayProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.FilterProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleListProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.FilterProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FilterProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.FilterProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FilterProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.FilterProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.FilterProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FilterProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleList,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FilterProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleList
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FilterProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexBasisProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleLengthProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexBasisProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexBasisProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexBasisProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexBasisProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexBasisProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexBasisProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexBasisProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleLength,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexBasisProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleLength
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexBasisProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexDirectionProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleEnumProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexDirectionProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexDirectionProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexDirectionProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexDirectionProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexDirectionProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexDirectionProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexDirectionProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleEnum,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexDirectionProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleEnum
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexDirectionProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexGrowProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleFloatProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexGrowProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexGrowProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexGrowProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexGrowProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexGrowProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexGrowProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexGrowProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleFloat,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexGrowProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleFloat
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexGrowProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexShrinkProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleFloatProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexShrinkProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexShrinkProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexShrinkProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexShrinkProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexShrinkProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexShrinkProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexShrinkProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleFloat,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexShrinkProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleFloat
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexShrinkProperty:SetValue(ref_container, value) end
+
+---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexWrapProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleEnumProperty
+---@field Name string
+---@field ussName string
+---@field IsReadOnly boolean
+UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexWrapProperty = {}
+---@alias CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexWrapProperty UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexWrapProperty
+CS.UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexWrapProperty = UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexWrapProperty
+
+---@return UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexWrapProperty
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexWrapProperty.New() end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@return UnityEngine.UIElements.StyleEnum,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexWrapProperty:GetValue(ref_container) end
+---@param ref_container UnityEngine.UIElements.InlineStyleAccess
+---@param value UnityEngine.UIElements.StyleEnum
+---@return ,UnityEngine.UIElements.InlineStyleAccess
+function UnityEngine.UIElements.InlineStyleAccessPropertyBag.FlexWrapProperty:SetValue(ref_container, value) end
+
 ---@class UnityEngine.UIElements.InlineStyleAccessPropertyBag.FontSizeProperty : UnityEngine.UIElements.InlineStyleAccessPropertyBag.InlineStyleLengthProperty
 ---@field Name string
 ---@field ussName string
@@ -4192,812 +5000,3 @@ function UnityEngine.UIElements.Ratio.PropertyBag.AutoProperty:SetValue(ref_cont
 UnityEngine.UIElements.Rotate = {}
 ---@alias CS.UnityEngine.UIElements.Rotate UnityEngine.UIElements.Rotate
 CS.UnityEngine.UIElements.Rotate = UnityEngine.UIElements.Rotate
-
----@overload fun(angle: UnityEngine.UIElements.Angle, axis: UnityEngine.Vector3) : UnityEngine.UIElements.Rotate
----@overload fun(angle: UnityEngine.UIElements.Angle) : UnityEngine.UIElements.Rotate
----@param quaternion UnityEngine.Quaternion
----@return UnityEngine.UIElements.Rotate
-function UnityEngine.UIElements.Rotate.New(quaternion) end
----@return UnityEngine.UIElements.Rotate
-function UnityEngine.UIElements.Rotate.None() end
----@overload fun(self: UnityEngine.UIElements.Rotate, other: UnityEngine.UIElements.Rotate) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.Rotate:Equals(obj) end
----@return number
-function UnityEngine.UIElements.Rotate:GetHashCode() end
----@return string
-function UnityEngine.UIElements.Rotate:ToString() end
-
----@class UnityEngine.UIElements.Rotate.PropertyBag : Unity.Properties.ContainerPropertyBag
-UnityEngine.UIElements.Rotate.PropertyBag = {}
----@alias CS.UnityEngine.UIElements.Rotate.PropertyBag UnityEngine.UIElements.Rotate.PropertyBag
-CS.UnityEngine.UIElements.Rotate.PropertyBag = UnityEngine.UIElements.Rotate.PropertyBag
-
----@return UnityEngine.UIElements.Rotate.PropertyBag
-function UnityEngine.UIElements.Rotate.PropertyBag.New() end
-
----@class UnityEngine.UIElements.Rotate.PropertyBag.AngleProperty : Unity.Properties.Property
----@field Name string
----@field IsReadOnly boolean
-UnityEngine.UIElements.Rotate.PropertyBag.AngleProperty = {}
----@alias CS.UnityEngine.UIElements.Rotate.PropertyBag.AngleProperty UnityEngine.UIElements.Rotate.PropertyBag.AngleProperty
-CS.UnityEngine.UIElements.Rotate.PropertyBag.AngleProperty = UnityEngine.UIElements.Rotate.PropertyBag.AngleProperty
-
----@return UnityEngine.UIElements.Rotate.PropertyBag.AngleProperty
-function UnityEngine.UIElements.Rotate.PropertyBag.AngleProperty.New() end
----@param ref_container UnityEngine.UIElements.Rotate
----@return UnityEngine.UIElements.Angle,UnityEngine.UIElements.Rotate
-function UnityEngine.UIElements.Rotate.PropertyBag.AngleProperty:GetValue(ref_container) end
----@param ref_container UnityEngine.UIElements.Rotate
----@param value UnityEngine.UIElements.Angle
----@return ,UnityEngine.UIElements.Rotate
-function UnityEngine.UIElements.Rotate.PropertyBag.AngleProperty:SetValue(ref_container, value) end
-
----@class UnityEngine.UIElements.Rotate.PropertyBag.AxisProperty : Unity.Properties.Property
----@field Name string
----@field IsReadOnly boolean
-UnityEngine.UIElements.Rotate.PropertyBag.AxisProperty = {}
----@alias CS.UnityEngine.UIElements.Rotate.PropertyBag.AxisProperty UnityEngine.UIElements.Rotate.PropertyBag.AxisProperty
-CS.UnityEngine.UIElements.Rotate.PropertyBag.AxisProperty = UnityEngine.UIElements.Rotate.PropertyBag.AxisProperty
-
----@return UnityEngine.UIElements.Rotate.PropertyBag.AxisProperty
-function UnityEngine.UIElements.Rotate.PropertyBag.AxisProperty.New() end
----@param ref_container UnityEngine.UIElements.Rotate
----@return UnityEngine.Vector3,UnityEngine.UIElements.Rotate
-function UnityEngine.UIElements.Rotate.PropertyBag.AxisProperty:GetValue(ref_container) end
----@param ref_container UnityEngine.UIElements.Rotate
----@param value UnityEngine.Vector3
----@return ,UnityEngine.UIElements.Rotate
-function UnityEngine.UIElements.Rotate.PropertyBag.AxisProperty:SetValue(ref_container, value) end
-
----@class UnityEngine.UIElements.Scale : System.ValueType
----@field value UnityEngine.Vector3
-UnityEngine.UIElements.Scale = {}
----@alias CS.UnityEngine.UIElements.Scale UnityEngine.UIElements.Scale
-CS.UnityEngine.UIElements.Scale = UnityEngine.UIElements.Scale
-
----@overload fun(scale: UnityEngine.Vector2) : UnityEngine.UIElements.Scale
----@param scale UnityEngine.Vector3
----@return UnityEngine.UIElements.Scale
-function UnityEngine.UIElements.Scale.New(scale) end
----@return UnityEngine.UIElements.Scale
-function UnityEngine.UIElements.Scale.None() end
----@overload fun(self: UnityEngine.UIElements.Scale, other: UnityEngine.UIElements.Scale) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.Scale:Equals(obj) end
----@return number
-function UnityEngine.UIElements.Scale:GetHashCode() end
----@return string
-function UnityEngine.UIElements.Scale:ToString() end
-
----@class UnityEngine.UIElements.Scale.PropertyBag : Unity.Properties.ContainerPropertyBag
-UnityEngine.UIElements.Scale.PropertyBag = {}
----@alias CS.UnityEngine.UIElements.Scale.PropertyBag UnityEngine.UIElements.Scale.PropertyBag
-CS.UnityEngine.UIElements.Scale.PropertyBag = UnityEngine.UIElements.Scale.PropertyBag
-
----@return UnityEngine.UIElements.Scale.PropertyBag
-function UnityEngine.UIElements.Scale.PropertyBag.New() end
-
----@class UnityEngine.UIElements.Scale.PropertyBag.ValueProperty : Unity.Properties.Property
----@field Name string
----@field IsReadOnly boolean
-UnityEngine.UIElements.Scale.PropertyBag.ValueProperty = {}
----@alias CS.UnityEngine.UIElements.Scale.PropertyBag.ValueProperty UnityEngine.UIElements.Scale.PropertyBag.ValueProperty
-CS.UnityEngine.UIElements.Scale.PropertyBag.ValueProperty = UnityEngine.UIElements.Scale.PropertyBag.ValueProperty
-
----@return UnityEngine.UIElements.Scale.PropertyBag.ValueProperty
-function UnityEngine.UIElements.Scale.PropertyBag.ValueProperty.New() end
----@param ref_container UnityEngine.UIElements.Scale
----@return UnityEngine.Vector3,UnityEngine.UIElements.Scale
-function UnityEngine.UIElements.Scale.PropertyBag.ValueProperty:GetValue(ref_container) end
----@param ref_container UnityEngine.UIElements.Scale
----@param value UnityEngine.Vector3
----@return ,UnityEngine.UIElements.Scale
-function UnityEngine.UIElements.Scale.PropertyBag.ValueProperty:SetValue(ref_container, value) end
-
----@class UnityEngine.UIElements.StyleBackground : System.ValueType
----@field value UnityEngine.UIElements.Background
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleBackground = {}
----@alias CS.UnityEngine.UIElements.StyleBackground UnityEngine.UIElements.StyleBackground
-CS.UnityEngine.UIElements.StyleBackground = UnityEngine.UIElements.StyleBackground
-
----@overload fun(v: UnityEngine.UIElements.Background) : UnityEngine.UIElements.StyleBackground
----@overload fun(v: UnityEngine.Texture2D) : UnityEngine.UIElements.StyleBackground
----@overload fun(v: UnityEngine.Sprite) : UnityEngine.UIElements.StyleBackground
----@overload fun(v: UnityEngine.UIElements.VectorImage) : UnityEngine.UIElements.StyleBackground
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleBackground
-function UnityEngine.UIElements.StyleBackground.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleBackground, other: UnityEngine.UIElements.StyleBackground) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleBackground:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleBackground:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleBackground:ToString() end
-
----@class UnityEngine.UIElements.StyleBackgroundPosition : System.ValueType
----@field value UnityEngine.UIElements.BackgroundPosition
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleBackgroundPosition = {}
----@alias CS.UnityEngine.UIElements.StyleBackgroundPosition UnityEngine.UIElements.StyleBackgroundPosition
-CS.UnityEngine.UIElements.StyleBackgroundPosition = UnityEngine.UIElements.StyleBackgroundPosition
-
----@overload fun(v: UnityEngine.UIElements.BackgroundPosition) : UnityEngine.UIElements.StyleBackgroundPosition
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleBackgroundPosition
-function UnityEngine.UIElements.StyleBackgroundPosition.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleBackgroundPosition, other: UnityEngine.UIElements.StyleBackgroundPosition) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleBackgroundPosition:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleBackgroundPosition:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleBackgroundPosition:ToString() end
-
----@class UnityEngine.UIElements.StyleBackgroundRepeat : System.ValueType
----@field value UnityEngine.UIElements.BackgroundRepeat
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleBackgroundRepeat = {}
----@alias CS.UnityEngine.UIElements.StyleBackgroundRepeat UnityEngine.UIElements.StyleBackgroundRepeat
-CS.UnityEngine.UIElements.StyleBackgroundRepeat = UnityEngine.UIElements.StyleBackgroundRepeat
-
----@overload fun(v: UnityEngine.UIElements.BackgroundRepeat) : UnityEngine.UIElements.StyleBackgroundRepeat
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleBackgroundRepeat
-function UnityEngine.UIElements.StyleBackgroundRepeat.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleBackgroundRepeat, other: UnityEngine.UIElements.StyleBackgroundRepeat) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleBackgroundRepeat:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleBackgroundRepeat:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleBackgroundRepeat:ToString() end
-
----@class UnityEngine.UIElements.StyleBackgroundSize : System.ValueType
----@field value UnityEngine.UIElements.BackgroundSize
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleBackgroundSize = {}
----@alias CS.UnityEngine.UIElements.StyleBackgroundSize UnityEngine.UIElements.StyleBackgroundSize
-CS.UnityEngine.UIElements.StyleBackgroundSize = UnityEngine.UIElements.StyleBackgroundSize
-
----@overload fun(v: UnityEngine.UIElements.BackgroundSize) : UnityEngine.UIElements.StyleBackgroundSize
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleBackgroundSize
-function UnityEngine.UIElements.StyleBackgroundSize.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleBackgroundSize, other: UnityEngine.UIElements.StyleBackgroundSize) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleBackgroundSize:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleBackgroundSize:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleBackgroundSize:ToString() end
-
----@class UnityEngine.UIElements.StyleColor : System.ValueType
----@field value UnityEngine.Color
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleColor = {}
----@alias CS.UnityEngine.UIElements.StyleColor UnityEngine.UIElements.StyleColor
-CS.UnityEngine.UIElements.StyleColor = UnityEngine.UIElements.StyleColor
-
----@overload fun(v: UnityEngine.Color) : UnityEngine.UIElements.StyleColor
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleColor
-function UnityEngine.UIElements.StyleColor.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleColor, other: UnityEngine.UIElements.StyleColor) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleColor:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleColor:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleColor:ToString() end
-
----@class UnityEngine.UIElements.StyleCursor : System.ValueType
----@field value UnityEngine.UIElements.Cursor
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleCursor = {}
----@alias CS.UnityEngine.UIElements.StyleCursor UnityEngine.UIElements.StyleCursor
-CS.UnityEngine.UIElements.StyleCursor = UnityEngine.UIElements.StyleCursor
-
----@overload fun(v: UnityEngine.UIElements.Cursor) : UnityEngine.UIElements.StyleCursor
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleCursor
-function UnityEngine.UIElements.StyleCursor.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleCursor, other: UnityEngine.UIElements.StyleCursor) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleCursor:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleCursor:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleCursor:ToString() end
-
----@class UnityEngine.UIElements.StyleDataRef : System.ValueType
----@field refCount number
----@field id number
-UnityEngine.UIElements.StyleDataRef = {}
----@alias CS.UnityEngine.UIElements.StyleDataRef UnityEngine.UIElements.StyleDataRef
-CS.UnityEngine.UIElements.StyleDataRef = UnityEngine.UIElements.StyleDataRef
-
----@return UnityEngine.UIElements.StyleDataRef
-function UnityEngine.UIElements.StyleDataRef.Create() end
----@return UnityEngine.UIElements.StyleDataRef
-function UnityEngine.UIElements.StyleDataRef:Acquire() end
-function UnityEngine.UIElements.StyleDataRef:Release() end
----@param other UnityEngine.UIElements.StyleDataRef
-function UnityEngine.UIElements.StyleDataRef:CopyFrom(other) end
----@return T&
-function UnityEngine.UIElements.StyleDataRef:Read() end
----@return T&
-function UnityEngine.UIElements.StyleDataRef:Write() end
----@return number
-function UnityEngine.UIElements.StyleDataRef:GetHashCode() end
----@overload fun(self: UnityEngine.UIElements.StyleDataRef, other: UnityEngine.UIElements.StyleDataRef) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleDataRef:Equals(obj) end
----@param other UnityEngine.UIElements.StyleDataRef
----@return boolean
-function UnityEngine.UIElements.StyleDataRef:ReferenceEquals(other) end
-
----@class UnityEngine.UIElements.StyleDataRef.RefCounted : System.Object
----@field value T
----@field refCount number
----@field id number
-UnityEngine.UIElements.StyleDataRef.RefCounted = {}
----@alias CS.UnityEngine.UIElements.StyleDataRef.RefCounted UnityEngine.UIElements.StyleDataRef.RefCounted
-CS.UnityEngine.UIElements.StyleDataRef.RefCounted = UnityEngine.UIElements.StyleDataRef.RefCounted
-
----@return UnityEngine.UIElements.StyleDataRef.RefCounted
-function UnityEngine.UIElements.StyleDataRef.RefCounted.New() end
-function UnityEngine.UIElements.StyleDataRef.RefCounted:Acquire() end
-function UnityEngine.UIElements.StyleDataRef.RefCounted:Release() end
----@return UnityEngine.UIElements.StyleDataRef.RefCounted
-function UnityEngine.UIElements.StyleDataRef.RefCounted:Copy() end
-
----@class UnityEngine.UIElements.UxmlStyleProperty : System.ValueType
----@field values Unity.Collections.NativeArray
----@field requireVariableResolve boolean
----@field isInlined boolean
-UnityEngine.UIElements.UxmlStyleProperty = {}
----@alias CS.UnityEngine.UIElements.UxmlStyleProperty UnityEngine.UIElements.UxmlStyleProperty
-CS.UnityEngine.UIElements.UxmlStyleProperty = UnityEngine.UIElements.UxmlStyleProperty
-
----@param values UnityEngine.UIElements.StyleValueHandle[]
----@param requireVariableResolve boolean
----@return UnityEngine.UIElements.UxmlStyleProperty
-function UnityEngine.UIElements.UxmlStyleProperty.New(values, requireVariableResolve) end
----@overload fun(self: UnityEngine.UIElements.UxmlStyleProperty, other: UnityEngine.UIElements.UxmlStyleProperty) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.UxmlStyleProperty:Equals(obj) end
----@return number
-function UnityEngine.UIElements.UxmlStyleProperty:GetHashCode() end
-function UnityEngine.UIElements.UxmlStyleProperty:Dispose() end
-
----@class UnityEngine.UIElements.StylePropertyData : System.ValueType
----@field target UnityEngine.UIElements.VisualElement
----@field inlineValue TInline
----@field uxmlValue UnityEngine.UIElements.UxmlStyleProperty
----@field computedValue TComputedValue
----@field binding UnityEngine.UIElements.Binding
----@field selector UnityEngine.UIElements.StyleSheets.SelectorMatchRecord
----@field isUxmlOverridden boolean
-UnityEngine.UIElements.StylePropertyData = {}
----@alias CS.UnityEngine.UIElements.StylePropertyData UnityEngine.UIElements.StylePropertyData
-CS.UnityEngine.UIElements.StylePropertyData = UnityEngine.UIElements.StylePropertyData
-
----@overload fun(self: UnityEngine.UIElements.StylePropertyData, other: UnityEngine.UIElements.StylePropertyData) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StylePropertyData:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StylePropertyData:GetHashCode() end
-function UnityEngine.UIElements.StylePropertyData:Dispose() end
-
----@class UnityEngine.UIElements.UxmlData : System.ValueType
----@field inlineProperty UnityEngine.UIElements.StyleProperty
----@field bindingInfo UnityEngine.UIElements.BindingInfo
----@field selector UnityEngine.UIElements.StyleSheets.SelectorMatchRecord
-UnityEngine.UIElements.UxmlData = {}
----@alias CS.UnityEngine.UIElements.UxmlData UnityEngine.UIElements.UxmlData
-CS.UnityEngine.UIElements.UxmlData = UnityEngine.UIElements.UxmlData
-
----@param p UnityEngine.UIElements.StyleProperty
----@param b UnityEngine.UIElements.BindingInfo
----@param s UnityEngine.UIElements.StyleSheets.SelectorMatchRecord
----@return UnityEngine.UIElements.UxmlData
-function UnityEngine.UIElements.UxmlData.New(p, b, s) end
----@param ref_data UnityEngine.UIElements.UxmlData
----@param property UnityEngine.UIElements.StyleProperty
----@return UnityEngine.UIElements.UxmlData,UnityEngine.UIElements.UxmlData
-function UnityEngine.UIElements.UxmlData.WithProperty(ref_data, property) end
----@param ref_data UnityEngine.UIElements.UxmlData
----@param bindingInfo UnityEngine.UIElements.BindingInfo
----@return UnityEngine.UIElements.UxmlData,UnityEngine.UIElements.UxmlData
-function UnityEngine.UIElements.UxmlData.WithBindingInfo(ref_data, bindingInfo) end
----@param ref_data UnityEngine.UIElements.UxmlData
----@param selector UnityEngine.UIElements.StyleSheets.SelectorMatchRecord
----@return UnityEngine.UIElements.UxmlData,UnityEngine.UIElements.UxmlData
-function UnityEngine.UIElements.UxmlData.WithSelector(ref_data, selector) end
-
----@class UnityEngine.UIElements.StyleDiffAdditionalDataFlags
----@field None UnityEngine.UIElements.StyleDiffAdditionalDataFlags
----@field UxmlInlineProperties UnityEngine.UIElements.StyleDiffAdditionalDataFlags
----@field Bindings UnityEngine.UIElements.StyleDiffAdditionalDataFlags
----@field Selectors UnityEngine.UIElements.StyleDiffAdditionalDataFlags
----@field All UnityEngine.UIElements.StyleDiffAdditionalDataFlags
-UnityEngine.UIElements.StyleDiffAdditionalDataFlags = {}
----@alias CS.UnityEngine.UIElements.StyleDiffAdditionalDataFlags UnityEngine.UIElements.StyleDiffAdditionalDataFlags
-CS.UnityEngine.UIElements.StyleDiffAdditionalDataFlags = UnityEngine.UIElements.StyleDiffAdditionalDataFlags
-
-
----@class UnityEngine.UIElements.StyleEnum : System.ValueType
----@field value T
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleEnum = {}
----@alias CS.UnityEngine.UIElements.StyleEnum UnityEngine.UIElements.StyleEnum
-CS.UnityEngine.UIElements.StyleEnum = UnityEngine.UIElements.StyleEnum
-
----@overload fun(v: T) : UnityEngine.UIElements.StyleEnum
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleEnum
-function UnityEngine.UIElements.StyleEnum.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleEnum, other: UnityEngine.UIElements.StyleEnum) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleEnum:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleEnum:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleEnum:ToString() end
-
----@class UnityEngine.UIElements.StyleFloat : System.ValueType
----@field value number
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleFloat = {}
----@alias CS.UnityEngine.UIElements.StyleFloat UnityEngine.UIElements.StyleFloat
-CS.UnityEngine.UIElements.StyleFloat = UnityEngine.UIElements.StyleFloat
-
----@overload fun(v: number) : UnityEngine.UIElements.StyleFloat
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleFloat
-function UnityEngine.UIElements.StyleFloat.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleFloat, other: UnityEngine.UIElements.StyleFloat) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleFloat:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleFloat:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleFloat:ToString() end
-
----@class UnityEngine.UIElements.StyleFont : System.ValueType
----@field value UnityEngine.Font
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleFont = {}
----@alias CS.UnityEngine.UIElements.StyleFont UnityEngine.UIElements.StyleFont
-CS.UnityEngine.UIElements.StyleFont = UnityEngine.UIElements.StyleFont
-
----@overload fun(v: UnityEngine.Font) : UnityEngine.UIElements.StyleFont
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleFont
-function UnityEngine.UIElements.StyleFont.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleFont, other: UnityEngine.UIElements.StyleFont) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleFont:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleFont:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleFont:ToString() end
-
----@class UnityEngine.UIElements.StyleFontDefinition : System.ValueType
----@field value UnityEngine.UIElements.FontDefinition
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleFontDefinition = {}
----@alias CS.UnityEngine.UIElements.StyleFontDefinition UnityEngine.UIElements.StyleFontDefinition
-CS.UnityEngine.UIElements.StyleFontDefinition = UnityEngine.UIElements.StyleFontDefinition
-
----@overload fun(f: UnityEngine.UIElements.FontDefinition) : UnityEngine.UIElements.StyleFontDefinition
----@overload fun(f: UnityEngine.TextCore.Text.FontAsset) : UnityEngine.UIElements.StyleFontDefinition
----@overload fun(f: UnityEngine.Font) : UnityEngine.UIElements.StyleFontDefinition
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleFontDefinition
-function UnityEngine.UIElements.StyleFontDefinition.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleFontDefinition, other: UnityEngine.UIElements.StyleFontDefinition) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleFontDefinition:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleFontDefinition:GetHashCode() end
-
----@class UnityEngine.UIElements.StyleInt : System.ValueType
----@field value number
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleInt = {}
----@alias CS.UnityEngine.UIElements.StyleInt UnityEngine.UIElements.StyleInt
-CS.UnityEngine.UIElements.StyleInt = UnityEngine.UIElements.StyleInt
-
----@overload fun(v: number) : UnityEngine.UIElements.StyleInt
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleInt
-function UnityEngine.UIElements.StyleInt.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleInt, other: UnityEngine.UIElements.StyleInt) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleInt:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleInt:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleInt:ToString() end
-
----@class UnityEngine.UIElements.StyleLength : System.ValueType
----@field value UnityEngine.UIElements.Length
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleLength = {}
----@alias CS.UnityEngine.UIElements.StyleLength UnityEngine.UIElements.StyleLength
-CS.UnityEngine.UIElements.StyleLength = UnityEngine.UIElements.StyleLength
-
----@overload fun(v: number) : UnityEngine.UIElements.StyleLength
----@overload fun(v: UnityEngine.UIElements.Length) : UnityEngine.UIElements.StyleLength
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleLength
-function UnityEngine.UIElements.StyleLength.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleLength, other: UnityEngine.UIElements.StyleLength) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleLength:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleLength:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleLength:ToString() end
-
----@class UnityEngine.UIElements.StyleList : System.ValueType
----@field value System.Collections.Generic.List[T]
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleList = {}
----@alias CS.UnityEngine.UIElements.StyleList UnityEngine.UIElements.StyleList
-CS.UnityEngine.UIElements.StyleList = UnityEngine.UIElements.StyleList
-
----@overload fun(v: System.Collections.Generic.List[T]) : UnityEngine.UIElements.StyleList
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleList
-function UnityEngine.UIElements.StyleList.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleList, other: UnityEngine.UIElements.StyleList) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleList:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleList:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleList:ToString() end
-
----@class UnityEngine.UIElements.StyleMaterialDefinition : System.ValueType
----@field value UnityEngine.UIElements.MaterialDefinition
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleMaterialDefinition = {}
----@alias CS.UnityEngine.UIElements.StyleMaterialDefinition UnityEngine.UIElements.StyleMaterialDefinition
-CS.UnityEngine.UIElements.StyleMaterialDefinition = UnityEngine.UIElements.StyleMaterialDefinition
-
----@overload fun(m: UnityEngine.UIElements.MaterialDefinition) : UnityEngine.UIElements.StyleMaterialDefinition
----@overload fun(m: UnityEngine.Material) : UnityEngine.UIElements.StyleMaterialDefinition
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleMaterialDefinition
-function UnityEngine.UIElements.StyleMaterialDefinition.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleMaterialDefinition, other: UnityEngine.UIElements.StyleMaterialDefinition) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleMaterialDefinition:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleMaterialDefinition:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleMaterialDefinition:ToString() end
-
----@class UnityEngine.UIElements.StyleRatio : System.ValueType
----@field value UnityEngine.UIElements.Ratio
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleRatio = {}
----@alias CS.UnityEngine.UIElements.StyleRatio UnityEngine.UIElements.StyleRatio
-CS.UnityEngine.UIElements.StyleRatio = UnityEngine.UIElements.StyleRatio
-
----@overload fun(value: UnityEngine.UIElements.Ratio) : UnityEngine.UIElements.StyleRatio
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleRatio
-function UnityEngine.UIElements.StyleRatio.New(keyword) end
----@return UnityEngine.UIElements.StyleRatio
-function UnityEngine.UIElements.StyleRatio.Auto() end
----@overload fun(self: UnityEngine.UIElements.StyleRatio, other: UnityEngine.UIElements.StyleRatio) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleRatio:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleRatio:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleRatio:ToString() end
-
----@class UnityEngine.UIElements.StyleRotate : System.ValueType
----@field value UnityEngine.UIElements.Rotate
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleRotate = {}
----@alias CS.UnityEngine.UIElements.StyleRotate UnityEngine.UIElements.StyleRotate
-CS.UnityEngine.UIElements.StyleRotate = UnityEngine.UIElements.StyleRotate
-
----@overload fun(v: UnityEngine.UIElements.Rotate) : UnityEngine.UIElements.StyleRotate
----@overload fun(keyword: UnityEngine.UIElements.StyleKeyword) : UnityEngine.UIElements.StyleRotate
----@param quaternion UnityEngine.Quaternion
----@return UnityEngine.UIElements.StyleRotate
-function UnityEngine.UIElements.StyleRotate.New(quaternion) end
----@overload fun(self: UnityEngine.UIElements.StyleRotate, other: UnityEngine.UIElements.StyleRotate) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleRotate:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleRotate:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleRotate:ToString() end
-
----@class UnityEngine.UIElements.StyleScale : System.ValueType
----@field value UnityEngine.UIElements.Scale
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleScale = {}
----@alias CS.UnityEngine.UIElements.StyleScale UnityEngine.UIElements.StyleScale
-CS.UnityEngine.UIElements.StyleScale = UnityEngine.UIElements.StyleScale
-
----@overload fun(v: UnityEngine.UIElements.Scale) : UnityEngine.UIElements.StyleScale
----@overload fun(keyword: UnityEngine.UIElements.StyleKeyword) : UnityEngine.UIElements.StyleScale
----@param scale UnityEngine.Vector2
----@return UnityEngine.UIElements.StyleScale
-function UnityEngine.UIElements.StyleScale.New(scale) end
----@overload fun(self: UnityEngine.UIElements.StyleScale, other: UnityEngine.UIElements.StyleScale) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleScale:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleScale:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleScale:ToString() end
-
----@class UnityEngine.UIElements.StyleTextShadow : System.ValueType
----@field value UnityEngine.UIElements.TextShadow
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleTextShadow = {}
----@alias CS.UnityEngine.UIElements.StyleTextShadow UnityEngine.UIElements.StyleTextShadow
-CS.UnityEngine.UIElements.StyleTextShadow = UnityEngine.UIElements.StyleTextShadow
-
----@overload fun(v: UnityEngine.UIElements.TextShadow) : UnityEngine.UIElements.StyleTextShadow
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleTextShadow
-function UnityEngine.UIElements.StyleTextShadow.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleTextShadow, other: UnityEngine.UIElements.StyleTextShadow) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleTextShadow:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleTextShadow:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleTextShadow:ToString() end
-
----@class UnityEngine.UIElements.StyleTransformOrigin : System.ValueType
----@field value UnityEngine.UIElements.TransformOrigin
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleTransformOrigin = {}
----@alias CS.UnityEngine.UIElements.StyleTransformOrigin UnityEngine.UIElements.StyleTransformOrigin
-CS.UnityEngine.UIElements.StyleTransformOrigin = UnityEngine.UIElements.StyleTransformOrigin
-
----@overload fun(v: UnityEngine.UIElements.TransformOrigin) : UnityEngine.UIElements.StyleTransformOrigin
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleTransformOrigin
-function UnityEngine.UIElements.StyleTransformOrigin.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleTransformOrigin, other: UnityEngine.UIElements.StyleTransformOrigin) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleTransformOrigin:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleTransformOrigin:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleTransformOrigin:ToString() end
-
----@class UnityEngine.UIElements.StyleTranslate : System.ValueType
----@field value UnityEngine.UIElements.Translate
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleTranslate = {}
----@alias CS.UnityEngine.UIElements.StyleTranslate UnityEngine.UIElements.StyleTranslate
-CS.UnityEngine.UIElements.StyleTranslate = UnityEngine.UIElements.StyleTranslate
-
----@overload fun(v: UnityEngine.UIElements.Translate) : UnityEngine.UIElements.StyleTranslate
----@param keyword UnityEngine.UIElements.StyleKeyword
----@return UnityEngine.UIElements.StyleTranslate
-function UnityEngine.UIElements.StyleTranslate.New(keyword) end
----@overload fun(self: UnityEngine.UIElements.StyleTranslate, other: UnityEngine.UIElements.StyleTranslate) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.StyleTranslate:Equals(obj) end
----@return number
-function UnityEngine.UIElements.StyleTranslate:GetHashCode() end
----@return string
-function UnityEngine.UIElements.StyleTranslate:ToString() end
-
----@class UnityEngine.UIElements.IStyleValue
----@field value T
----@field keyword UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.IStyleValue = {}
----@alias CS.UnityEngine.UIElements.IStyleValue UnityEngine.UIElements.IStyleValue
-CS.UnityEngine.UIElements.IStyleValue = UnityEngine.UIElements.IStyleValue
-
-
----@class UnityEngine.UIElements.StyleKeyword
----@field Undefined UnityEngine.UIElements.StyleKeyword
----@field Null UnityEngine.UIElements.StyleKeyword
----@field Auto UnityEngine.UIElements.StyleKeyword
----@field None UnityEngine.UIElements.StyleKeyword
----@field Initial UnityEngine.UIElements.StyleKeyword
-UnityEngine.UIElements.StyleKeyword = {}
----@alias CS.UnityEngine.UIElements.StyleKeyword UnityEngine.UIElements.StyleKeyword
-CS.UnityEngine.UIElements.StyleKeyword = UnityEngine.UIElements.StyleKeyword
-
----@return UnityEngine.UIElements.StyleValueKeyword
-function UnityEngine.UIElements.StyleKeyword:ToStyleValueKeyword() end
-
----@class UnityEngine.UIElements.StyleValueExtensions : System.Object
-UnityEngine.UIElements.StyleValueExtensions = {}
----@alias CS.UnityEngine.UIElements.StyleValueExtensions UnityEngine.UIElements.StyleValueExtensions
-CS.UnityEngine.UIElements.StyleValueExtensions = UnityEngine.UIElements.StyleValueExtensions
-
-
----@class UnityEngine.UIElements.StyleValuePropertyBag : Unity.Properties.ContainerPropertyBag[TContainer]
-UnityEngine.UIElements.StyleValuePropertyBag = {}
----@alias CS.UnityEngine.UIElements.StyleValuePropertyBag UnityEngine.UIElements.StyleValuePropertyBag
-CS.UnityEngine.UIElements.StyleValuePropertyBag = UnityEngine.UIElements.StyleValuePropertyBag
-
----@return UnityEngine.UIElements.StyleValuePropertyBag
-function UnityEngine.UIElements.StyleValuePropertyBag.New() end
-
----@class UnityEngine.UIElements.StyleValuePropertyBag.ValueProperty : Unity.Properties.Property[TContainer,TValue]
----@field Name string
----@field IsReadOnly boolean
-UnityEngine.UIElements.StyleValuePropertyBag.ValueProperty = {}
----@alias CS.UnityEngine.UIElements.StyleValuePropertyBag.ValueProperty UnityEngine.UIElements.StyleValuePropertyBag.ValueProperty
-CS.UnityEngine.UIElements.StyleValuePropertyBag.ValueProperty = UnityEngine.UIElements.StyleValuePropertyBag.ValueProperty
-
----@return UnityEngine.UIElements.StyleValuePropertyBag.ValueProperty
-function UnityEngine.UIElements.StyleValuePropertyBag.ValueProperty.New() end
----@param ref_container TContainer
----@return TValue,TContainer
-function UnityEngine.UIElements.StyleValuePropertyBag.ValueProperty:GetValue(ref_container) end
----@param ref_container TContainer
----@param value TValue
----@return ,TContainer
-function UnityEngine.UIElements.StyleValuePropertyBag.ValueProperty:SetValue(ref_container, value) end
-
----@class UnityEngine.UIElements.StyleValuePropertyBag.KeywordProperty : Unity.Properties.Property[TContainer,UnityEngine.UIElements.StyleKeyword]
----@field Name string
----@field IsReadOnly boolean
-UnityEngine.UIElements.StyleValuePropertyBag.KeywordProperty = {}
----@alias CS.UnityEngine.UIElements.StyleValuePropertyBag.KeywordProperty UnityEngine.UIElements.StyleValuePropertyBag.KeywordProperty
-CS.UnityEngine.UIElements.StyleValuePropertyBag.KeywordProperty = UnityEngine.UIElements.StyleValuePropertyBag.KeywordProperty
-
----@return UnityEngine.UIElements.StyleValuePropertyBag.KeywordProperty
-function UnityEngine.UIElements.StyleValuePropertyBag.KeywordProperty.New() end
----@param ref_container TContainer
----@return UnityEngine.UIElements.StyleKeyword,TContainer
-function UnityEngine.UIElements.StyleValuePropertyBag.KeywordProperty:GetValue(ref_container) end
----@param ref_container TContainer
----@param value UnityEngine.UIElements.StyleKeyword
----@return ,TContainer
-function UnityEngine.UIElements.StyleValuePropertyBag.KeywordProperty:SetValue(ref_container, value) end
-
----@class UnityEngine.UIElements.TimeUnit
----@field Second UnityEngine.UIElements.TimeUnit
----@field Millisecond UnityEngine.UIElements.TimeUnit
-UnityEngine.UIElements.TimeUnit = {}
----@alias CS.UnityEngine.UIElements.TimeUnit UnityEngine.UIElements.TimeUnit
-CS.UnityEngine.UIElements.TimeUnit = UnityEngine.UIElements.TimeUnit
-
----@return UnityEngine.UIElements.StyleSheets.Dimension.Unit
-function UnityEngine.UIElements.TimeUnit:ToDimensionUnit() end
----@return string
-function UnityEngine.UIElements.TimeUnit:ToDisplayString() end
-
----@class UnityEngine.UIElements.TimeValue : System.ValueType
----@field value number
----@field unit UnityEngine.UIElements.TimeUnit
-UnityEngine.UIElements.TimeValue = {}
----@alias CS.UnityEngine.UIElements.TimeValue UnityEngine.UIElements.TimeValue
-CS.UnityEngine.UIElements.TimeValue = UnityEngine.UIElements.TimeValue
-
----@overload fun(value: number) : UnityEngine.UIElements.TimeValue
----@param value number
----@param unit UnityEngine.UIElements.TimeUnit
----@return UnityEngine.UIElements.TimeValue
-function UnityEngine.UIElements.TimeValue.New(value, unit) end
----@param value number
----@return UnityEngine.UIElements.TimeValue
-function UnityEngine.UIElements.TimeValue.Seconds(value) end
----@param value number
----@return UnityEngine.UIElements.TimeValue
-function UnityEngine.UIElements.TimeValue.Milliseconds(value) end
----@overload fun(self: UnityEngine.UIElements.TimeValue, other: UnityEngine.UIElements.TimeValue) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.TimeValue:Equals(obj) end
----@return number
-function UnityEngine.UIElements.TimeValue:GetHashCode() end
----@return string
-function UnityEngine.UIElements.TimeValue:ToString() end
----@return UnityEngine.UIElements.StyleSheets.Dimension
-function UnityEngine.UIElements.TimeValue:ToDimension() end
-
----@class UnityEngine.UIElements.TimeValue.PropertyBag : Unity.Properties.ContainerPropertyBag
-UnityEngine.UIElements.TimeValue.PropertyBag = {}
----@alias CS.UnityEngine.UIElements.TimeValue.PropertyBag UnityEngine.UIElements.TimeValue.PropertyBag
-CS.UnityEngine.UIElements.TimeValue.PropertyBag = UnityEngine.UIElements.TimeValue.PropertyBag
-
----@return UnityEngine.UIElements.TimeValue.PropertyBag
-function UnityEngine.UIElements.TimeValue.PropertyBag.New() end
-
----@class UnityEngine.UIElements.TimeValue.PropertyBag.ValueProperty : Unity.Properties.Property
----@field Name string
----@field IsReadOnly boolean
-UnityEngine.UIElements.TimeValue.PropertyBag.ValueProperty = {}
----@alias CS.UnityEngine.UIElements.TimeValue.PropertyBag.ValueProperty UnityEngine.UIElements.TimeValue.PropertyBag.ValueProperty
-CS.UnityEngine.UIElements.TimeValue.PropertyBag.ValueProperty = UnityEngine.UIElements.TimeValue.PropertyBag.ValueProperty
-
----@return UnityEngine.UIElements.TimeValue.PropertyBag.ValueProperty
-function UnityEngine.UIElements.TimeValue.PropertyBag.ValueProperty.New() end
----@param ref_container UnityEngine.UIElements.TimeValue
----@return number,UnityEngine.UIElements.TimeValue
-function UnityEngine.UIElements.TimeValue.PropertyBag.ValueProperty:GetValue(ref_container) end
----@param ref_container UnityEngine.UIElements.TimeValue
----@param value number
----@return ,UnityEngine.UIElements.TimeValue
-function UnityEngine.UIElements.TimeValue.PropertyBag.ValueProperty:SetValue(ref_container, value) end
-
----@class UnityEngine.UIElements.TimeValue.PropertyBag.UnitProperty : Unity.Properties.Property
----@field Name string
----@field IsReadOnly boolean
-UnityEngine.UIElements.TimeValue.PropertyBag.UnitProperty = {}
----@alias CS.UnityEngine.UIElements.TimeValue.PropertyBag.UnitProperty UnityEngine.UIElements.TimeValue.PropertyBag.UnitProperty
-CS.UnityEngine.UIElements.TimeValue.PropertyBag.UnitProperty = UnityEngine.UIElements.TimeValue.PropertyBag.UnitProperty
-
----@return UnityEngine.UIElements.TimeValue.PropertyBag.UnitProperty
-function UnityEngine.UIElements.TimeValue.PropertyBag.UnitProperty.New() end
----@param ref_container UnityEngine.UIElements.TimeValue
----@return UnityEngine.UIElements.TimeUnit,UnityEngine.UIElements.TimeValue
-function UnityEngine.UIElements.TimeValue.PropertyBag.UnitProperty:GetValue(ref_container) end
----@param ref_container UnityEngine.UIElements.TimeValue
----@param value UnityEngine.UIElements.TimeUnit
----@return ,UnityEngine.UIElements.TimeValue
-function UnityEngine.UIElements.TimeValue.PropertyBag.UnitProperty:SetValue(ref_container, value) end
-
----@class UnityEngine.UIElements.TransformOrigin : System.ValueType
----@field x UnityEngine.UIElements.Length
----@field y UnityEngine.UIElements.Length
----@field z number
-UnityEngine.UIElements.TransformOrigin = {}
----@alias CS.UnityEngine.UIElements.TransformOrigin UnityEngine.UIElements.TransformOrigin
-CS.UnityEngine.UIElements.TransformOrigin = UnityEngine.UIElements.TransformOrigin
-
----@overload fun(x: UnityEngine.UIElements.Length, y: UnityEngine.UIElements.Length, z: number) : UnityEngine.UIElements.TransformOrigin
----@param x UnityEngine.UIElements.Length
----@param y UnityEngine.UIElements.Length
----@return UnityEngine.UIElements.TransformOrigin
-function UnityEngine.UIElements.TransformOrigin.New(x, y) end
----@return UnityEngine.UIElements.TransformOrigin
-function UnityEngine.UIElements.TransformOrigin.Initial() end
----@overload fun(self: UnityEngine.UIElements.TransformOrigin, other: UnityEngine.UIElements.TransformOrigin) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.UIElements.TransformOrigin:Equals(obj) end
----@return number
-function UnityEngine.UIElements.TransformOrigin:GetHashCode() end
----@return string
-function UnityEngine.UIElements.TransformOrigin:ToString() end

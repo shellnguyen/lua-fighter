@@ -1,5 +1,594 @@
 ---@meta
 
+
+---@class UnityEngine.Rendering.GraphicsTier
+---@field Tier1 UnityEngine.Rendering.GraphicsTier
+---@field Tier2 UnityEngine.Rendering.GraphicsTier
+---@field Tier3 UnityEngine.Rendering.GraphicsTier
+UnityEngine.Rendering.GraphicsTier = {}
+---@alias CS.UnityEngine.Rendering.GraphicsTier UnityEngine.Rendering.GraphicsTier
+CS.UnityEngine.Rendering.GraphicsTier = UnityEngine.Rendering.GraphicsTier
+
+
+---@class UnityEngine.Rendering.SubMeshDescriptor : System.ValueType
+---@field bounds UnityEngine.Bounds
+---@field topology UnityEngine.MeshTopology
+---@field indexStart number
+---@field indexCount number
+---@field baseVertex number
+---@field firstVertex number
+---@field vertexCount number
+UnityEngine.Rendering.SubMeshDescriptor = {}
+---@alias CS.UnityEngine.Rendering.SubMeshDescriptor UnityEngine.Rendering.SubMeshDescriptor
+CS.UnityEngine.Rendering.SubMeshDescriptor = UnityEngine.Rendering.SubMeshDescriptor
+
+---@param indexStart number
+---@param indexCount number
+---@param topology UnityEngine.MeshTopology
+---@return UnityEngine.Rendering.SubMeshDescriptor
+function UnityEngine.Rendering.SubMeshDescriptor.New(indexStart, indexCount, topology) end
+---@return string
+function UnityEngine.Rendering.SubMeshDescriptor:ToString() end
+
+---@class UnityEngine.Rendering.VertexAttributeDescriptor : System.ValueType
+---@field attribute UnityEngine.Rendering.VertexAttribute
+---@field format UnityEngine.Rendering.VertexAttributeFormat
+---@field dimension number
+---@field stream number
+UnityEngine.Rendering.VertexAttributeDescriptor = {}
+---@alias CS.UnityEngine.Rendering.VertexAttributeDescriptor UnityEngine.Rendering.VertexAttributeDescriptor
+CS.UnityEngine.Rendering.VertexAttributeDescriptor = UnityEngine.Rendering.VertexAttributeDescriptor
+
+---@param attribute UnityEngine.Rendering.VertexAttribute
+---@param format UnityEngine.Rendering.VertexAttributeFormat
+---@param dimension number
+---@param stream number
+---@return UnityEngine.Rendering.VertexAttributeDescriptor
+function UnityEngine.Rendering.VertexAttributeDescriptor.New(attribute, format, dimension, stream) end
+---@return string
+function UnityEngine.Rendering.VertexAttributeDescriptor:ToString() end
+---@return number
+function UnityEngine.Rendering.VertexAttributeDescriptor:GetHashCode() end
+---@overload fun(self: UnityEngine.Rendering.VertexAttributeDescriptor, other: System.Object) : boolean
+---@param other UnityEngine.Rendering.VertexAttributeDescriptor
+---@return boolean
+function UnityEngine.Rendering.VertexAttributeDescriptor:Equals(other) end
+
+---@class UnityEngine.Rendering.FormatSwizzle
+---@field FormatSwizzleR UnityEngine.Rendering.FormatSwizzle
+---@field FormatSwizzleG UnityEngine.Rendering.FormatSwizzle
+---@field FormatSwizzleB UnityEngine.Rendering.FormatSwizzle
+---@field FormatSwizzleA UnityEngine.Rendering.FormatSwizzle
+---@field FormatSwizzle0 UnityEngine.Rendering.FormatSwizzle
+---@field FormatSwizzle1 UnityEngine.Rendering.FormatSwizzle
+UnityEngine.Rendering.FormatSwizzle = {}
+---@alias CS.UnityEngine.Rendering.FormatSwizzle UnityEngine.Rendering.FormatSwizzle
+CS.UnityEngine.Rendering.FormatSwizzle = UnityEngine.Rendering.FormatSwizzle
+
+
+---@class UnityEngine.Rendering.RenderTargetIdentifier : System.ValueType
+---@field Invalid UnityEngine.Rendering.RenderTargetIdentifier
+---@field AllDepthSlices number
+UnityEngine.Rendering.RenderTargetIdentifier = {}
+---@alias CS.UnityEngine.Rendering.RenderTargetIdentifier UnityEngine.Rendering.RenderTargetIdentifier
+CS.UnityEngine.Rendering.RenderTargetIdentifier = UnityEngine.Rendering.RenderTargetIdentifier
+
+---@overload fun(type: UnityEngine.Rendering.BuiltinRenderTextureType) : UnityEngine.Rendering.RenderTargetIdentifier
+---@overload fun(type: UnityEngine.Rendering.BuiltinRenderTextureType, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number) : UnityEngine.Rendering.RenderTargetIdentifier
+---@overload fun(name: string) : UnityEngine.Rendering.RenderTargetIdentifier
+---@overload fun(name: string, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number) : UnityEngine.Rendering.RenderTargetIdentifier
+---@overload fun(nameID: number) : UnityEngine.Rendering.RenderTargetIdentifier
+---@overload fun(nameID: number, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number) : UnityEngine.Rendering.RenderTargetIdentifier
+---@overload fun(renderTargetIdentifier: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number) : UnityEngine.Rendering.RenderTargetIdentifier
+---@overload fun(tex: UnityEngine.Texture) : UnityEngine.Rendering.RenderTargetIdentifier
+---@overload fun(tex: UnityEngine.Texture, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number) : UnityEngine.Rendering.RenderTargetIdentifier
+---@param buf UnityEngine.RenderBuffer
+---@param mipLevel number
+---@param cubeFace UnityEngine.CubemapFace
+---@param depthSlice number
+---@return UnityEngine.Rendering.RenderTargetIdentifier
+function UnityEngine.Rendering.RenderTargetIdentifier.New(buf, mipLevel, cubeFace, depthSlice) end
+---@return string
+function UnityEngine.Rendering.RenderTargetIdentifier:ToString() end
+---@return number
+function UnityEngine.Rendering.RenderTargetIdentifier:GetHashCode() end
+---@overload fun(self: UnityEngine.Rendering.RenderTargetIdentifier, rhs: UnityEngine.Rendering.RenderTargetIdentifier) : boolean
+---@param obj System.Object
+---@return boolean
+function UnityEngine.Rendering.RenderTargetIdentifier:Equals(obj) end
+
+---@class UnityEngine.Rendering.RenderTargetFlags
+---@field None UnityEngine.Rendering.RenderTargetFlags
+---@field ReadOnlyDepth UnityEngine.Rendering.RenderTargetFlags
+---@field ReadOnlyStencil UnityEngine.Rendering.RenderTargetFlags
+---@field ReadOnlyDepthStencil UnityEngine.Rendering.RenderTargetFlags
+UnityEngine.Rendering.RenderTargetFlags = {}
+---@alias CS.UnityEngine.Rendering.RenderTargetFlags UnityEngine.Rendering.RenderTargetFlags
+CS.UnityEngine.Rendering.RenderTargetFlags = UnityEngine.Rendering.RenderTargetFlags
+
+
+---@class UnityEngine.Rendering.RenderTargetBinding : System.ValueType
+---@field colorRenderTargets UnityEngine.Rendering.RenderTargetIdentifier[]
+---@field depthRenderTarget UnityEngine.Rendering.RenderTargetIdentifier
+---@field colorLoadActions UnityEngine.Rendering.RenderBufferLoadAction[]
+---@field colorStoreActions UnityEngine.Rendering.RenderBufferStoreAction[]
+---@field depthLoadAction UnityEngine.Rendering.RenderBufferLoadAction
+---@field depthStoreAction UnityEngine.Rendering.RenderBufferStoreAction
+---@field flags UnityEngine.Rendering.RenderTargetFlags
+UnityEngine.Rendering.RenderTargetBinding = {}
+---@alias CS.UnityEngine.Rendering.RenderTargetBinding UnityEngine.Rendering.RenderTargetBinding
+CS.UnityEngine.Rendering.RenderTargetBinding = UnityEngine.Rendering.RenderTargetBinding
+
+---@overload fun(colorRenderTargets: UnityEngine.Rendering.RenderTargetIdentifier[], colorLoadActions: UnityEngine.Rendering.RenderBufferLoadAction[], colorStoreActions: UnityEngine.Rendering.RenderBufferStoreAction[], depthRenderTarget: UnityEngine.Rendering.RenderTargetIdentifier, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction) : UnityEngine.Rendering.RenderTargetBinding
+---@overload fun(colorRenderTarget: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depthRenderTarget: UnityEngine.Rendering.RenderTargetIdentifier, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction) : UnityEngine.Rendering.RenderTargetBinding
+---@param setup UnityEngine.RenderTargetSetup
+---@return UnityEngine.Rendering.RenderTargetBinding
+function UnityEngine.Rendering.RenderTargetBinding.New(setup) end
+
+---@class UnityEngine.Rendering.ReflectionProbeUsage
+---@field Off UnityEngine.Rendering.ReflectionProbeUsage
+---@field BlendProbes UnityEngine.Rendering.ReflectionProbeUsage
+---@field BlendProbesAndSkybox UnityEngine.Rendering.ReflectionProbeUsage
+---@field Simple UnityEngine.Rendering.ReflectionProbeUsage
+UnityEngine.Rendering.ReflectionProbeUsage = {}
+---@alias CS.UnityEngine.Rendering.ReflectionProbeUsage UnityEngine.Rendering.ReflectionProbeUsage
+CS.UnityEngine.Rendering.ReflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage
+
+
+---@class UnityEngine.Rendering.ReflectionProbeType
+---@field Cube UnityEngine.Rendering.ReflectionProbeType
+---@field Card UnityEngine.Rendering.ReflectionProbeType
+UnityEngine.Rendering.ReflectionProbeType = {}
+---@alias CS.UnityEngine.Rendering.ReflectionProbeType UnityEngine.Rendering.ReflectionProbeType
+CS.UnityEngine.Rendering.ReflectionProbeType = UnityEngine.Rendering.ReflectionProbeType
+
+
+---@class UnityEngine.Rendering.ReflectionProbeClearFlags
+---@field Skybox UnityEngine.Rendering.ReflectionProbeClearFlags
+---@field SolidColor UnityEngine.Rendering.ReflectionProbeClearFlags
+UnityEngine.Rendering.ReflectionProbeClearFlags = {}
+---@alias CS.UnityEngine.Rendering.ReflectionProbeClearFlags UnityEngine.Rendering.ReflectionProbeClearFlags
+CS.UnityEngine.Rendering.ReflectionProbeClearFlags = UnityEngine.Rendering.ReflectionProbeClearFlags
+
+
+---@class UnityEngine.Rendering.ReflectionProbeMode
+---@field Baked UnityEngine.Rendering.ReflectionProbeMode
+---@field Realtime UnityEngine.Rendering.ReflectionProbeMode
+---@field Custom UnityEngine.Rendering.ReflectionProbeMode
+UnityEngine.Rendering.ReflectionProbeMode = {}
+---@alias CS.UnityEngine.Rendering.ReflectionProbeMode UnityEngine.Rendering.ReflectionProbeMode
+CS.UnityEngine.Rendering.ReflectionProbeMode = UnityEngine.Rendering.ReflectionProbeMode
+
+
+---@class UnityEngine.Rendering.ReflectionProbeBlendInfo : System.ValueType
+---@field probe UnityEngine.ReflectionProbe
+---@field weight number
+UnityEngine.Rendering.ReflectionProbeBlendInfo = {}
+---@alias CS.UnityEngine.Rendering.ReflectionProbeBlendInfo UnityEngine.Rendering.ReflectionProbeBlendInfo
+CS.UnityEngine.Rendering.ReflectionProbeBlendInfo = UnityEngine.Rendering.ReflectionProbeBlendInfo
+
+
+---@class UnityEngine.Rendering.ReflectionProbeRefreshMode
+---@field OnAwake UnityEngine.Rendering.ReflectionProbeRefreshMode
+---@field EveryFrame UnityEngine.Rendering.ReflectionProbeRefreshMode
+---@field ViaScripting UnityEngine.Rendering.ReflectionProbeRefreshMode
+UnityEngine.Rendering.ReflectionProbeRefreshMode = {}
+---@alias CS.UnityEngine.Rendering.ReflectionProbeRefreshMode UnityEngine.Rendering.ReflectionProbeRefreshMode
+CS.UnityEngine.Rendering.ReflectionProbeRefreshMode = UnityEngine.Rendering.ReflectionProbeRefreshMode
+
+
+---@class UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
+---@field AllFacesAtOnce UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
+---@field IndividualFaces UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
+---@field NoTimeSlicing UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
+UnityEngine.Rendering.ReflectionProbeTimeSlicingMode = {}
+---@alias CS.UnityEngine.Rendering.ReflectionProbeTimeSlicingMode UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
+CS.UnityEngine.Rendering.ReflectionProbeTimeSlicingMode = UnityEngine.Rendering.ReflectionProbeTimeSlicingMode
+
+
+---@class UnityEngine.Rendering.ShadowSamplingMode
+---@field CompareDepths UnityEngine.Rendering.ShadowSamplingMode
+---@field RawDepth UnityEngine.Rendering.ShadowSamplingMode
+---@field None UnityEngine.Rendering.ShadowSamplingMode
+UnityEngine.Rendering.ShadowSamplingMode = {}
+---@alias CS.UnityEngine.Rendering.ShadowSamplingMode UnityEngine.Rendering.ShadowSamplingMode
+CS.UnityEngine.Rendering.ShadowSamplingMode = UnityEngine.Rendering.ShadowSamplingMode
+
+
+---@class UnityEngine.Rendering.LightProbeUsage
+---@field Off UnityEngine.Rendering.LightProbeUsage
+---@field BlendProbes UnityEngine.Rendering.LightProbeUsage
+---@field UseProxyVolume UnityEngine.Rendering.LightProbeUsage
+---@field CustomProvided UnityEngine.Rendering.LightProbeUsage
+UnityEngine.Rendering.LightProbeUsage = {}
+---@alias CS.UnityEngine.Rendering.LightProbeUsage UnityEngine.Rendering.LightProbeUsage
+CS.UnityEngine.Rendering.LightProbeUsage = UnityEngine.Rendering.LightProbeUsage
+
+
+---@class UnityEngine.Rendering.BuiltinShaderType
+---@field DeferredShading UnityEngine.Rendering.BuiltinShaderType
+---@field DeferredReflections UnityEngine.Rendering.BuiltinShaderType
+---@field ScreenSpaceShadows UnityEngine.Rendering.BuiltinShaderType
+---@field DepthNormals UnityEngine.Rendering.BuiltinShaderType
+---@field MotionVectors UnityEngine.Rendering.BuiltinShaderType
+---@field LightHalo UnityEngine.Rendering.BuiltinShaderType
+---@field LensFlare UnityEngine.Rendering.BuiltinShaderType
+UnityEngine.Rendering.BuiltinShaderType = {}
+---@alias CS.UnityEngine.Rendering.BuiltinShaderType UnityEngine.Rendering.BuiltinShaderType
+CS.UnityEngine.Rendering.BuiltinShaderType = UnityEngine.Rendering.BuiltinShaderType
+
+
+---@class UnityEngine.Rendering.BuiltinShaderMode
+---@field Disabled UnityEngine.Rendering.BuiltinShaderMode
+---@field UseBuiltin UnityEngine.Rendering.BuiltinShaderMode
+---@field UseCustom UnityEngine.Rendering.BuiltinShaderMode
+UnityEngine.Rendering.BuiltinShaderMode = {}
+---@alias CS.UnityEngine.Rendering.BuiltinShaderMode UnityEngine.Rendering.BuiltinShaderMode
+CS.UnityEngine.Rendering.BuiltinShaderMode = UnityEngine.Rendering.BuiltinShaderMode
+
+
+---@class UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_NO_DXT5nm UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_NO_RGBM UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_ENABLE_REFLECTION_BUFFERS UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_FRAMEBUFFER_FETCH_AVAILABLE UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_METAL_SHADOWS_USE_POINT_FILTERING UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_NO_CUBEMAP_ARRAY UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_NO_SCREENSPACE_SHADOWS UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_PBS_USE_BRDF1 UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_PBS_USE_BRDF2 UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_PBS_USE_BRDF3 UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_SPECCUBE_BOX_PROJECTION UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_SPECCUBE_BLENDING UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_ENABLE_DETAIL_NORMALMAP UnityEngine.Rendering.BuiltinShaderDefine
+---@field SHADER_API_MOBILE UnityEngine.Rendering.BuiltinShaderDefine
+---@field SHADER_API_DESKTOP UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_HARDWARE_TIER1 UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_HARDWARE_TIER2 UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_HARDWARE_TIER3 UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_COLORSPACE_GAMMA UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_LIGHT_PROBE_PROXY_VOLUME UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_LIGHTMAP_DLDR_ENCODING UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_LIGHTMAP_RGBM_ENCODING UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_LIGHTMAP_FULL_HDR UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_VIRTUAL_TEXTURING UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_ASTC_NORMALMAP_ENCODING UnityEngine.Rendering.BuiltinShaderDefine
+---@field SHADER_API_GLES30 UnityEngine.Rendering.BuiltinShaderDefine
+---@field SHADER_API_GLES31 UnityEngine.Rendering.BuiltinShaderDefine
+---@field SHADER_API_GLES32 UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_UNIFIED_SHADER_PRECISION_MODEL UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_PLATFORM_SUPPORTS_WAVE_32 UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_PLATFORM_SUPPORTS_WAVE_64 UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_NEEDS_RENDERPASS_FBFETCH_FALLBACK UnityEngine.Rendering.BuiltinShaderDefine
+---@field UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH UnityEngine.Rendering.BuiltinShaderDefine
+UnityEngine.Rendering.BuiltinShaderDefine = {}
+---@alias CS.UnityEngine.Rendering.BuiltinShaderDefine UnityEngine.Rendering.BuiltinShaderDefine
+CS.UnityEngine.Rendering.BuiltinShaderDefine = UnityEngine.Rendering.BuiltinShaderDefine
+
+
+---@class UnityEngine.Rendering.VideoShadersIncludeMode
+---@field Never UnityEngine.Rendering.VideoShadersIncludeMode
+---@field Referenced UnityEngine.Rendering.VideoShadersIncludeMode
+---@field Always UnityEngine.Rendering.VideoShadersIncludeMode
+UnityEngine.Rendering.VideoShadersIncludeMode = {}
+---@alias CS.UnityEngine.Rendering.VideoShadersIncludeMode UnityEngine.Rendering.VideoShadersIncludeMode
+CS.UnityEngine.Rendering.VideoShadersIncludeMode = UnityEngine.Rendering.VideoShadersIncludeMode
+
+
+---@class UnityEngine.Rendering.TextureDimension
+---@field Unknown UnityEngine.Rendering.TextureDimension
+---@field None UnityEngine.Rendering.TextureDimension
+---@field Any UnityEngine.Rendering.TextureDimension
+---@field Tex2D UnityEngine.Rendering.TextureDimension
+---@field Tex3D UnityEngine.Rendering.TextureDimension
+---@field Cube UnityEngine.Rendering.TextureDimension
+---@field Tex2DArray UnityEngine.Rendering.TextureDimension
+---@field CubeArray UnityEngine.Rendering.TextureDimension
+UnityEngine.Rendering.TextureDimension = {}
+---@alias CS.UnityEngine.Rendering.TextureDimension UnityEngine.Rendering.TextureDimension
+CS.UnityEngine.Rendering.TextureDimension = UnityEngine.Rendering.TextureDimension
+
+
+---@class UnityEngine.Rendering.CopyTextureSupport
+---@field None UnityEngine.Rendering.CopyTextureSupport
+---@field Basic UnityEngine.Rendering.CopyTextureSupport
+---@field Copy3D UnityEngine.Rendering.CopyTextureSupport
+---@field DifferentTypes UnityEngine.Rendering.CopyTextureSupport
+---@field TextureToRT UnityEngine.Rendering.CopyTextureSupport
+---@field RTToTexture UnityEngine.Rendering.CopyTextureSupport
+UnityEngine.Rendering.CopyTextureSupport = {}
+---@alias CS.UnityEngine.Rendering.CopyTextureSupport UnityEngine.Rendering.CopyTextureSupport
+CS.UnityEngine.Rendering.CopyTextureSupport = UnityEngine.Rendering.CopyTextureSupport
+
+
+---@class UnityEngine.Rendering.CameraHDRMode
+---@field FP16 UnityEngine.Rendering.CameraHDRMode
+---@field R11G11B10 UnityEngine.Rendering.CameraHDRMode
+UnityEngine.Rendering.CameraHDRMode = {}
+---@alias CS.UnityEngine.Rendering.CameraHDRMode UnityEngine.Rendering.CameraHDRMode
+CS.UnityEngine.Rendering.CameraHDRMode = UnityEngine.Rendering.CameraHDRMode
+
+
+---@class UnityEngine.Rendering.RealtimeGICPUUsage
+---@field Low UnityEngine.Rendering.RealtimeGICPUUsage
+---@field Medium UnityEngine.Rendering.RealtimeGICPUUsage
+---@field High UnityEngine.Rendering.RealtimeGICPUUsage
+---@field Unlimited UnityEngine.Rendering.RealtimeGICPUUsage
+UnityEngine.Rendering.RealtimeGICPUUsage = {}
+---@alias CS.UnityEngine.Rendering.RealtimeGICPUUsage UnityEngine.Rendering.RealtimeGICPUUsage
+CS.UnityEngine.Rendering.RealtimeGICPUUsage = UnityEngine.Rendering.RealtimeGICPUUsage
+
+
+---@class UnityEngine.Rendering.LightProbeOutsideHullStrategy
+---@field kLightProbeSearchTetrahedralHull UnityEngine.Rendering.LightProbeOutsideHullStrategy
+---@field kLightProbeUseAmbientProbe UnityEngine.Rendering.LightProbeOutsideHullStrategy
+UnityEngine.Rendering.LightProbeOutsideHullStrategy = {}
+---@alias CS.UnityEngine.Rendering.LightProbeOutsideHullStrategy UnityEngine.Rendering.LightProbeOutsideHullStrategy
+CS.UnityEngine.Rendering.LightProbeOutsideHullStrategy = UnityEngine.Rendering.LightProbeOutsideHullStrategy
+
+
+---@class UnityEngine.Rendering.ComputeQueueType
+---@field Default UnityEngine.Rendering.ComputeQueueType
+---@field Background UnityEngine.Rendering.ComputeQueueType
+---@field Urgent UnityEngine.Rendering.ComputeQueueType
+UnityEngine.Rendering.ComputeQueueType = {}
+---@alias CS.UnityEngine.Rendering.ComputeQueueType UnityEngine.Rendering.ComputeQueueType
+CS.UnityEngine.Rendering.ComputeQueueType = UnityEngine.Rendering.ComputeQueueType
+
+
+---@class UnityEngine.Rendering.SinglePassStereoMode
+---@field None UnityEngine.Rendering.SinglePassStereoMode
+---@field SideBySide UnityEngine.Rendering.SinglePassStereoMode
+---@field Instancing UnityEngine.Rendering.SinglePassStereoMode
+---@field Multiview UnityEngine.Rendering.SinglePassStereoMode
+UnityEngine.Rendering.SinglePassStereoMode = {}
+---@alias CS.UnityEngine.Rendering.SinglePassStereoMode UnityEngine.Rendering.SinglePassStereoMode
+CS.UnityEngine.Rendering.SinglePassStereoMode = UnityEngine.Rendering.SinglePassStereoMode
+
+
+---@class UnityEngine.Rendering.FoveatedRenderingCaps
+---@field None UnityEngine.Rendering.FoveatedRenderingCaps
+---@field FoveationImage UnityEngine.Rendering.FoveatedRenderingCaps
+---@field NonUniformRaster UnityEngine.Rendering.FoveatedRenderingCaps
+---@field ModeChangeOnlyBeforeRenderTargetSet UnityEngine.Rendering.FoveatedRenderingCaps
+UnityEngine.Rendering.FoveatedRenderingCaps = {}
+---@alias CS.UnityEngine.Rendering.FoveatedRenderingCaps UnityEngine.Rendering.FoveatedRenderingCaps
+CS.UnityEngine.Rendering.FoveatedRenderingCaps = UnityEngine.Rendering.FoveatedRenderingCaps
+
+
+---@class UnityEngine.Rendering.FoveatedRenderingMode
+---@field Disabled UnityEngine.Rendering.FoveatedRenderingMode
+---@field Enabled UnityEngine.Rendering.FoveatedRenderingMode
+UnityEngine.Rendering.FoveatedRenderingMode = {}
+---@alias CS.UnityEngine.Rendering.FoveatedRenderingMode UnityEngine.Rendering.FoveatedRenderingMode
+CS.UnityEngine.Rendering.FoveatedRenderingMode = UnityEngine.Rendering.FoveatedRenderingMode
+
+
+---@class UnityEngine.Rendering.CommandBufferExecutionFlags
+---@field None UnityEngine.Rendering.CommandBufferExecutionFlags
+---@field AsyncCompute UnityEngine.Rendering.CommandBufferExecutionFlags
+UnityEngine.Rendering.CommandBufferExecutionFlags = {}
+---@alias CS.UnityEngine.Rendering.CommandBufferExecutionFlags UnityEngine.Rendering.CommandBufferExecutionFlags
+CS.UnityEngine.Rendering.CommandBufferExecutionFlags = UnityEngine.Rendering.CommandBufferExecutionFlags
+
+
+---@class UnityEngine.Rendering.RTClearFlags
+---@field None UnityEngine.Rendering.RTClearFlags
+---@field Color UnityEngine.Rendering.RTClearFlags
+---@field Depth UnityEngine.Rendering.RTClearFlags
+---@field Stencil UnityEngine.Rendering.RTClearFlags
+---@field All UnityEngine.Rendering.RTClearFlags
+---@field DepthStencil UnityEngine.Rendering.RTClearFlags
+---@field ColorDepth UnityEngine.Rendering.RTClearFlags
+---@field ColorStencil UnityEngine.Rendering.RTClearFlags
+---@field Color0 UnityEngine.Rendering.RTClearFlags
+---@field Color1 UnityEngine.Rendering.RTClearFlags
+---@field Color2 UnityEngine.Rendering.RTClearFlags
+---@field Color3 UnityEngine.Rendering.RTClearFlags
+---@field Color4 UnityEngine.Rendering.RTClearFlags
+---@field Color5 UnityEngine.Rendering.RTClearFlags
+---@field Color6 UnityEngine.Rendering.RTClearFlags
+---@field Color7 UnityEngine.Rendering.RTClearFlags
+UnityEngine.Rendering.RTClearFlags = {}
+---@alias CS.UnityEngine.Rendering.RTClearFlags UnityEngine.Rendering.RTClearFlags
+CS.UnityEngine.Rendering.RTClearFlags = UnityEngine.Rendering.RTClearFlags
+
+
+---@class UnityEngine.Rendering.RenderTextureSubElement
+---@field Color UnityEngine.Rendering.RenderTextureSubElement
+---@field Depth UnityEngine.Rendering.RenderTextureSubElement
+---@field Stencil UnityEngine.Rendering.RenderTextureSubElement
+---@field Default UnityEngine.Rendering.RenderTextureSubElement
+---@field ShadingRate UnityEngine.Rendering.RenderTextureSubElement
+UnityEngine.Rendering.RenderTextureSubElement = {}
+---@alias CS.UnityEngine.Rendering.RenderTextureSubElement UnityEngine.Rendering.RenderTextureSubElement
+CS.UnityEngine.Rendering.RenderTextureSubElement = UnityEngine.Rendering.RenderTextureSubElement
+
+
+---@class UnityEngine.Rendering.RenderingThreadingMode
+---@field Direct UnityEngine.Rendering.RenderingThreadingMode
+---@field SingleThreaded UnityEngine.Rendering.RenderingThreadingMode
+---@field MultiThreaded UnityEngine.Rendering.RenderingThreadingMode
+---@field LegacyJobified UnityEngine.Rendering.RenderingThreadingMode
+---@field NativeGraphicsJobs UnityEngine.Rendering.RenderingThreadingMode
+---@field NativeGraphicsJobsWithoutRenderThread UnityEngine.Rendering.RenderingThreadingMode
+---@field NativeGraphicsJobsSplitThreading UnityEngine.Rendering.RenderingThreadingMode
+UnityEngine.Rendering.RenderingThreadingMode = {}
+---@alias CS.UnityEngine.Rendering.RenderingThreadingMode UnityEngine.Rendering.RenderingThreadingMode
+CS.UnityEngine.Rendering.RenderingThreadingMode = UnityEngine.Rendering.RenderingThreadingMode
+
+
+---@class UnityEngine.Rendering.CameraLateLatchMatrixType
+---@field View UnityEngine.Rendering.CameraLateLatchMatrixType
+---@field InverseView UnityEngine.Rendering.CameraLateLatchMatrixType
+---@field ViewProjection UnityEngine.Rendering.CameraLateLatchMatrixType
+---@field InverseViewProjection UnityEngine.Rendering.CameraLateLatchMatrixType
+UnityEngine.Rendering.CameraLateLatchMatrixType = {}
+---@alias CS.UnityEngine.Rendering.CameraLateLatchMatrixType UnityEngine.Rendering.CameraLateLatchMatrixType
+CS.UnityEngine.Rendering.CameraLateLatchMatrixType = UnityEngine.Rendering.CameraLateLatchMatrixType
+
+
+---@class UnityEngine.Rendering.OpenGLESVersion
+---@field None UnityEngine.Rendering.OpenGLESVersion
+---@field OpenGLES30 UnityEngine.Rendering.OpenGLESVersion
+---@field OpenGLES31 UnityEngine.Rendering.OpenGLESVersion
+---@field OpenGLES31AEP UnityEngine.Rendering.OpenGLESVersion
+---@field OpenGLES32 UnityEngine.Rendering.OpenGLESVersion
+UnityEngine.Rendering.OpenGLESVersion = {}
+---@alias CS.UnityEngine.Rendering.OpenGLESVersion UnityEngine.Rendering.OpenGLESVersion
+CS.UnityEngine.Rendering.OpenGLESVersion = UnityEngine.Rendering.OpenGLESVersion
+
+
+---@class UnityEngine.Rendering.CustomMarkerCallbackFlags
+---@field CustomMarkerCallbackDefault UnityEngine.Rendering.CustomMarkerCallbackFlags
+---@field CustomMarkerCallbackForceInvalidateStateTracking UnityEngine.Rendering.CustomMarkerCallbackFlags
+UnityEngine.Rendering.CustomMarkerCallbackFlags = {}
+---@alias CS.UnityEngine.Rendering.CustomMarkerCallbackFlags UnityEngine.Rendering.CustomMarkerCallbackFlags
+CS.UnityEngine.Rendering.CustomMarkerCallbackFlags = UnityEngine.Rendering.CustomMarkerCallbackFlags
+
+
+---@class UnityEngine.Rendering.ShadingRateFragmentSize
+---@field FragmentSize1x1 UnityEngine.Rendering.ShadingRateFragmentSize
+---@field FragmentSize1x2 UnityEngine.Rendering.ShadingRateFragmentSize
+---@field FragmentSize2x1 UnityEngine.Rendering.ShadingRateFragmentSize
+---@field FragmentSize2x2 UnityEngine.Rendering.ShadingRateFragmentSize
+---@field FragmentSize1x4 UnityEngine.Rendering.ShadingRateFragmentSize
+---@field FragmentSize4x1 UnityEngine.Rendering.ShadingRateFragmentSize
+---@field FragmentSize2x4 UnityEngine.Rendering.ShadingRateFragmentSize
+---@field FragmentSize4x2 UnityEngine.Rendering.ShadingRateFragmentSize
+---@field FragmentSize4x4 UnityEngine.Rendering.ShadingRateFragmentSize
+UnityEngine.Rendering.ShadingRateFragmentSize = {}
+---@alias CS.UnityEngine.Rendering.ShadingRateFragmentSize UnityEngine.Rendering.ShadingRateFragmentSize
+CS.UnityEngine.Rendering.ShadingRateFragmentSize = UnityEngine.Rendering.ShadingRateFragmentSize
+
+
+---@class UnityEngine.Rendering.ShadingRateCombinerStage
+---@field Primitive UnityEngine.Rendering.ShadingRateCombinerStage
+---@field Fragment UnityEngine.Rendering.ShadingRateCombinerStage
+UnityEngine.Rendering.ShadingRateCombinerStage = {}
+---@alias CS.UnityEngine.Rendering.ShadingRateCombinerStage UnityEngine.Rendering.ShadingRateCombinerStage
+CS.UnityEngine.Rendering.ShadingRateCombinerStage = UnityEngine.Rendering.ShadingRateCombinerStage
+
+
+---@class UnityEngine.Rendering.ShadingRateCombiner
+---@field Keep UnityEngine.Rendering.ShadingRateCombiner
+---@field Override UnityEngine.Rendering.ShadingRateCombiner
+---@field Min UnityEngine.Rendering.ShadingRateCombiner
+---@field Max UnityEngine.Rendering.ShadingRateCombiner
+UnityEngine.Rendering.ShadingRateCombiner = {}
+---@alias CS.UnityEngine.Rendering.ShadingRateCombiner UnityEngine.Rendering.ShadingRateCombiner
+CS.UnityEngine.Rendering.ShadingRateCombiner = UnityEngine.Rendering.ShadingRateCombiner
+
+
+---@class UnityEngine.Rendering.SynchronisationStageFlags
+---@field VertexProcessing UnityEngine.Rendering.SynchronisationStageFlags
+---@field PixelProcessing UnityEngine.Rendering.SynchronisationStageFlags
+---@field ComputeProcessing UnityEngine.Rendering.SynchronisationStageFlags
+---@field AllGPUOperations UnityEngine.Rendering.SynchronisationStageFlags
+UnityEngine.Rendering.SynchronisationStageFlags = {}
+---@alias CS.UnityEngine.Rendering.SynchronisationStageFlags UnityEngine.Rendering.SynchronisationStageFlags
+CS.UnityEngine.Rendering.SynchronisationStageFlags = UnityEngine.Rendering.SynchronisationStageFlags
+
+
+---@class UnityEngine.Rendering.GraphicsFenceType
+---@field AsyncQueueSynchronisation UnityEngine.Rendering.GraphicsFenceType
+---@field CPUSynchronisation UnityEngine.Rendering.GraphicsFenceType
+UnityEngine.Rendering.GraphicsFenceType = {}
+---@alias CS.UnityEngine.Rendering.GraphicsFenceType UnityEngine.Rendering.GraphicsFenceType
+CS.UnityEngine.Rendering.GraphicsFenceType = UnityEngine.Rendering.GraphicsFenceType
+
+
+---@class UnityEngine.Rendering.GraphicsFence : System.ValueType
+---@field passed boolean
+UnityEngine.Rendering.GraphicsFence = {}
+---@alias CS.UnityEngine.Rendering.GraphicsFence UnityEngine.Rendering.GraphicsFence
+CS.UnityEngine.Rendering.GraphicsFence = UnityEngine.Rendering.GraphicsFence
+
+
+---@class UnityEngine.Rendering.DefaultMaterialType
+---@field Default UnityEngine.Rendering.DefaultMaterialType
+---@field Particle UnityEngine.Rendering.DefaultMaterialType
+---@field Line UnityEngine.Rendering.DefaultMaterialType
+---@field Terrain UnityEngine.Rendering.DefaultMaterialType
+---@field Sprite UnityEngine.Rendering.DefaultMaterialType
+---@field SpriteMask UnityEngine.Rendering.DefaultMaterialType
+---@field UGUI UnityEngine.Rendering.DefaultMaterialType
+---@field UGUI_Overdraw UnityEngine.Rendering.DefaultMaterialType
+---@field UGUI_ETC1Supported UnityEngine.Rendering.DefaultMaterialType
+UnityEngine.Rendering.DefaultMaterialType = {}
+---@alias CS.UnityEngine.Rendering.DefaultMaterialType UnityEngine.Rendering.DefaultMaterialType
+CS.UnityEngine.Rendering.DefaultMaterialType = UnityEngine.Rendering.DefaultMaterialType
+
+
+---@class UnityEngine.Rendering.DefaultShaderType
+---@field Default UnityEngine.Rendering.DefaultShaderType
+---@field AutodeskInteractive UnityEngine.Rendering.DefaultShaderType
+---@field AutodeskInteractiveTransparent UnityEngine.Rendering.DefaultShaderType
+---@field AutodeskInteractiveMasked UnityEngine.Rendering.DefaultShaderType
+---@field TerrainDetailLit UnityEngine.Rendering.DefaultShaderType
+---@field TerrainDetailGrass UnityEngine.Rendering.DefaultShaderType
+---@field TerrainDetailGrassBillboard UnityEngine.Rendering.DefaultShaderType
+---@field SpeedTree7 UnityEngine.Rendering.DefaultShaderType
+---@field SpeedTree8 UnityEngine.Rendering.DefaultShaderType
+---@field SpeedTree9 UnityEngine.Rendering.DefaultShaderType
+UnityEngine.Rendering.DefaultShaderType = {}
+---@alias CS.UnityEngine.Rendering.DefaultShaderType UnityEngine.Rendering.DefaultShaderType
+CS.UnityEngine.Rendering.DefaultShaderType = UnityEngine.Rendering.DefaultShaderType
+
+
+---@class UnityEngine.Rendering.GraphicsSettings : UnityEngine.Object
+---@field transparencySortMode UnityEngine.TransparencySortMode
+---@field transparencySortAxis UnityEngine.Vector3
+---@field realtimeDirectRectangularAreaLights boolean
+---@field lightsUseLinearIntensity boolean
+---@field lightsUseColorTemperature boolean
+---@field defaultGateFitMode UnityEngine.Camera.GateFitMode
+---@field useScriptableRenderPipelineBatching boolean
+---@field logWhenShaderIsCompiled boolean
+---@field disableBuiltinCustomRenderTextureUpdate boolean
+---@field videoShadersIncludeMode UnityEngine.Rendering.VideoShadersIncludeMode
+---@field lightProbeOutsideHullStrategy UnityEngine.Rendering.LightProbeOutsideHullStrategy
+---@field currentRenderPipeline UnityEngine.Rendering.RenderPipelineAsset
+---@field isScriptableRenderPipelineEnabled boolean
+---@field currentRenderPipelineAssetType System.Type
+---@field defaultRenderPipeline UnityEngine.Rendering.RenderPipelineAsset
+---@field allConfiguredRenderPipelines UnityEngine.Rendering.RenderPipelineAsset[]
+---@field cameraRelativeLightCulling boolean
+---@field cameraRelativeShadowCulling boolean
+UnityEngine.Rendering.GraphicsSettings = {}
+---@alias CS.UnityEngine.Rendering.GraphicsSettings UnityEngine.Rendering.GraphicsSettings
+CS.UnityEngine.Rendering.GraphicsSettings = UnityEngine.Rendering.GraphicsSettings
+
+---@overload fun(tier: UnityEngine.Rendering.GraphicsTier, defineHash: UnityEngine.Rendering.BuiltinShaderDefine) : boolean
+---@param defineHash UnityEngine.Rendering.BuiltinShaderDefine
+---@return boolean
+function UnityEngine.Rendering.GraphicsSettings.HasShaderDefine(defineHash) end
+---@return UnityEngine.Object
+function UnityEngine.Rendering.GraphicsSettings.GetGraphicsSettings() end
+---@param type UnityEngine.Rendering.BuiltinShaderType
+---@param mode UnityEngine.Rendering.BuiltinShaderMode
+function UnityEngine.Rendering.GraphicsSettings.SetShaderMode(type, mode) end
+---@param type UnityEngine.Rendering.BuiltinShaderType
+---@return UnityEngine.Rendering.BuiltinShaderMode
+function UnityEngine.Rendering.GraphicsSettings.GetShaderMode(type) end
+---@param type UnityEngine.Rendering.BuiltinShaderType
+---@param shader UnityEngine.Shader
+function UnityEngine.Rendering.GraphicsSettings.SetCustomShader(type, shader) end
+---@param type UnityEngine.Rendering.BuiltinShaderType
+---@return UnityEngine.Shader
+function UnityEngine.Rendering.GraphicsSettings.GetCustomShader(type) end
+---@param callback System.Action
+function UnityEngine.Rendering.GraphicsSettings.ForEach(callback) end
+---@param renderPipelineType System.Type
+---@return UnityEngine.Rendering.RenderPipelineGlobalSettings
+function UnityEngine.Rendering.GraphicsSettings.GetSettingsForRenderPipeline(renderPipelineType) end
+---@param out_asset UnityEngine.Rendering.RenderPipelineGlobalSettings
+---@return boolean,UnityEngine.Rendering.RenderPipelineGlobalSettings
+function UnityEngine.Rendering.GraphicsSettings.TryGetCurrentRenderPipelineGlobalSettings(out_asset) end
+
 ---@class UnityEngine.Rendering.GraphicsTextureDescriptorFlags
 ---@field None UnityEngine.Rendering.GraphicsTextureDescriptorFlags
 ---@field RenderTarget UnityEngine.Rendering.GraphicsTextureDescriptorFlags
@@ -4426,590 +5015,3 @@ CS.UnityEngine.Experimental.Rendering.FormatUsage = UnityEngine.Experimental.Ren
 UnityEngine.Experimental.Rendering.GraphicsFormatUsage = {}
 ---@alias CS.UnityEngine.Experimental.Rendering.GraphicsFormatUsage UnityEngine.Experimental.Rendering.GraphicsFormatUsage
 CS.UnityEngine.Experimental.Rendering.GraphicsFormatUsage = UnityEngine.Experimental.Rendering.GraphicsFormatUsage
-
-
----@class UnityEngine.Experimental.Rendering.DefaultFormat
----@field LDR UnityEngine.Experimental.Rendering.DefaultFormat
----@field HDR UnityEngine.Experimental.Rendering.DefaultFormat
----@field DepthStencil UnityEngine.Experimental.Rendering.DefaultFormat
----@field Shadow UnityEngine.Experimental.Rendering.DefaultFormat
----@field Video UnityEngine.Experimental.Rendering.DefaultFormat
-UnityEngine.Experimental.Rendering.DefaultFormat = {}
----@alias CS.UnityEngine.Experimental.Rendering.DefaultFormat UnityEngine.Experimental.Rendering.DefaultFormat
-CS.UnityEngine.Experimental.Rendering.DefaultFormat = UnityEngine.Experimental.Rendering.DefaultFormat
-
-
----@class UnityEngine.Experimental.Rendering.GraphicsFormat
----@field None UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8B8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8B8A8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8B8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8B8A8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8B8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8B8A8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8B8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8B8A8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8B8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R8G8B8A8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16B16_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16B16A16_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16B16_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16B16A16_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16B16_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16B16A16_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16B16_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16B16A16_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32G32_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32G32B32_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32G32B32A32_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32G32_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32G32B32_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32G32B32A32_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16B16_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R16G16B16A16_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32G32_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32G32B32_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R32G32B32A32_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B8G8R8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B8G8R8A8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B8G8R8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B8G8R8A8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B8G8R8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B8G8R8A8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B8G8R8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B8G8R8A8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B8G8R8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B8G8R8A8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R4G4B4A4_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B4G4R4A4_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R5G6B5_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B5G6R5_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R5G5B5A1_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B5G5R5A1_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A1R5G5B5_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field E5B9G9R9_UFloatPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field B10G11R11_UFloatPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A2B10G10R10_UNormPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A2B10G10R10_UIntPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A2B10G10R10_SIntPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A2R10G10B10_UNormPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A2R10G10B10_UIntPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A2R10G10B10_SIntPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A2R10G10B10_XRSRGBPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A2R10G10B10_XRUNormPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R10G10B10_XRSRGBPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R10G10B10_XRUNormPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A10R10G10B10_XRSRGBPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field A10R10G10B10_XRUNormPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field D16_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field D24_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field D24_UNorm_S8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field D32_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field D32_SFloat_S8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field S8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_DXT1_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_DXT1_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_DXT3_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_DXT3_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_DXT5_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_DXT5_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R_BC4_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R_BC4_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RG_BC5_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RG_BC5_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGB_BC6H_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGB_BC6H_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_BC7_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_BC7_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGB_ETC_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGB_ETC2_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGB_ETC2_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGB_A1_ETC2_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGB_A1_ETC2_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ETC2_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ETC2_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R_EAC_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field R_EAC_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RG_EAC_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RG_EAC_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC4X4_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC4X4_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC5X5_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC5X5_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC6X6_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC6X6_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC8X8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC8X8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC10X10_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC10X10_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC12X12_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC12X12_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
----@field YUV2 UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC4X4_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC5X5_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC6X6_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC8X8_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC10X10_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field RGBA_ASTC12X12_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
----@field D16_UNorm_S8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
-UnityEngine.Experimental.Rendering.GraphicsFormat = {}
----@alias CS.UnityEngine.Experimental.Rendering.GraphicsFormat UnityEngine.Experimental.Rendering.GraphicsFormat
-CS.UnityEngine.Experimental.Rendering.GraphicsFormat = UnityEngine.Experimental.Rendering.GraphicsFormat
-
-
----@class UnityEngine.Experimental.Rendering.RayTracingMode
----@field Off UnityEngine.Experimental.Rendering.RayTracingMode
----@field Static UnityEngine.Experimental.Rendering.RayTracingMode
----@field DynamicTransform UnityEngine.Experimental.Rendering.RayTracingMode
----@field DynamicGeometry UnityEngine.Experimental.Rendering.RayTracingMode
----@field DynamicGeometryManualUpdate UnityEngine.Experimental.Rendering.RayTracingMode
-UnityEngine.Experimental.Rendering.RayTracingMode = {}
----@alias CS.UnityEngine.Experimental.Rendering.RayTracingMode UnityEngine.Experimental.Rendering.RayTracingMode
-CS.UnityEngine.Experimental.Rendering.RayTracingMode = UnityEngine.Experimental.Rendering.RayTracingMode
-
-
----@class UnityEngine.Experimental.Rendering.GraphicsFormatUtility : System.Object
-UnityEngine.Experimental.Rendering.GraphicsFormatUtility = {}
----@alias CS.UnityEngine.Experimental.Rendering.GraphicsFormatUtility UnityEngine.Experimental.Rendering.GraphicsFormatUtility
-CS.UnityEngine.Experimental.Rendering.GraphicsFormatUtility = UnityEngine.Experimental.Rendering.GraphicsFormatUtility
-
----@return UnityEngine.Experimental.Rendering.GraphicsFormatUtility
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.New() end
----@overload fun(format: UnityEngine.TextureFormat, isSRGB: boolean) : UnityEngine.Experimental.Rendering.GraphicsFormat
----@overload fun(format: UnityEngine.RenderTextureFormat, isSRGB: boolean) : UnityEngine.Experimental.Rendering.GraphicsFormat
----@param format UnityEngine.RenderTextureFormat
----@param readWrite UnityEngine.RenderTextureReadWrite
----@return UnityEngine.Experimental.Rendering.GraphicsFormat
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetGraphicsFormat(format, readWrite) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return UnityEngine.TextureFormat
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetTextureFormat(format) end
----@overload fun(depthBits: number) : UnityEngine.Experimental.Rendering.GraphicsFormat
----@param minimumDepthBits number
----@param minimumStencilBits number
----@return UnityEngine.Experimental.Rendering.GraphicsFormat
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetDepthStencilFormat(minimumDepthBits, minimumStencilBits) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return number
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetDepthBits(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSRGBFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSwizzleFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return UnityEngine.Experimental.Rendering.GraphicsFormat
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetSRGBFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return UnityEngine.Experimental.Rendering.GraphicsFormat
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetLinearFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return UnityEngine.RenderTextureFormat
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetRenderTextureFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
----@param format UnityEngine.TextureFormat
----@return number
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetColorComponentCount(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
----@param format UnityEngine.TextureFormat
----@return number
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetAlphaComponentCount(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
----@param format UnityEngine.TextureFormat
----@return number
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetComponentCount(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : string
----@param format UnityEngine.TextureFormat
----@return string
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetFormatString(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsCompressedFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsPackedFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.Is16BitPackedFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : UnityEngine.Experimental.Rendering.GraphicsFormat
----@param format UnityEngine.TextureFormat
----@return UnityEngine.TextureFormat
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.ConvertToAlphaFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsAlphaOnlyFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsAlphaTestFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.HasAlphaChannel(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsDepthFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsStencilFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsDepthStencilFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsIEEE754Format(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsFloatFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsHalfFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsUnsignedFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSignedFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsNormFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsUNormFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSNormFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsIntegerFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsUIntFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSIntFormat(format) end
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsXRFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsDXTCFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsRGTCFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsBPTCFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsBCFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsETCFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsEACFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsASTCFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsHDRFormat(format) end
----@param format UnityEngine.TextureFormat
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsCrunchFormat(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : UnityEngine.Rendering.FormatSwizzle
----@param format UnityEngine.TextureFormat
----@return UnityEngine.Rendering.FormatSwizzle
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetSwizzleR(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : UnityEngine.Rendering.FormatSwizzle
----@param format UnityEngine.TextureFormat
----@return UnityEngine.Rendering.FormatSwizzle
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetSwizzleG(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : UnityEngine.Rendering.FormatSwizzle
----@param format UnityEngine.TextureFormat
----@return UnityEngine.Rendering.FormatSwizzle
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetSwizzleB(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : UnityEngine.Rendering.FormatSwizzle
----@param format UnityEngine.TextureFormat
----@return UnityEngine.Rendering.FormatSwizzle
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetSwizzleA(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
----@param format UnityEngine.TextureFormat
----@return number
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetBlockSize(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
----@param format UnityEngine.TextureFormat
----@return number
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetBlockWidth(format) end
----@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
----@param format UnityEngine.TextureFormat
----@return number
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetBlockHeight(format) end
----@overload fun(width: number, height: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
----@overload fun(width: number, height: number, format: UnityEngine.TextureFormat) : number
----@overload fun(width: number, height: number, depth: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
----@param width number
----@param height number
----@param depth number
----@param format UnityEngine.TextureFormat
----@return number
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.ComputeMipmapSize(width, height, depth, format) end
----@overload fun(width: number, height: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat, mipCount: number) : number
----@overload fun(width: number, height: number, format: UnityEngine.TextureFormat, mipCount: number) : number
----@overload fun(width: number, height: number, depth: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat, mipCount: number) : number
----@param width number
----@param height number
----@param depth number
----@param format UnityEngine.TextureFormat
----@param mipCount number
----@return number
-function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.ComputeMipChainSize(width, height, depth, format, mipCount) end
-
----@class UnityEngine.Experimental.Rendering.GraphicsStateCollection : UnityEngine.Object
----@field isTracing boolean
----@field version number
----@field graphicsDeviceType UnityEngine.Rendering.GraphicsDeviceType
----@field runtimePlatform UnityEngine.RuntimePlatform
----@field qualityLevelName string
----@field totalGraphicsStateCount number
----@field completedWarmupCount number
----@field isWarmedUp boolean
----@field variantCount number
-UnityEngine.Experimental.Rendering.GraphicsStateCollection = {}
----@alias CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection UnityEngine.Experimental.Rendering.GraphicsStateCollection
-CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection = UnityEngine.Experimental.Rendering.GraphicsStateCollection
-
----@overload fun() : UnityEngine.Experimental.Rendering.GraphicsStateCollection
----@param filePath string
----@return UnityEngine.Experimental.Rendering.GraphicsStateCollection
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection.New(filePath) end
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:BeginTrace() end
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:EndTrace() end
----@param filePath string
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:LoadFromFile(filePath) end
----@param filePath string
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:SaveToFile(filePath) end
----@param fileName string
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:SendToEditor(fileName) end
----@param dependency Unity.Jobs.JobHandle
----@return Unity.Jobs.JobHandle
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:WarmUp(dependency) end
----@param count number
----@param dependency Unity.Jobs.JobHandle
----@return Unity.Jobs.JobHandle
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:WarmUpProgressively(count, dependency) end
----@param results System.Collections.Generic.List
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:GetVariants(results) end
----@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[], results: System.Collections.Generic.List)
----@param variant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
----@param results System.Collections.Generic.List
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:GetGraphicsStatesForVariant(variant, results) end
----@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : number
----@param variant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
----@return number
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:GetGraphicsStateCountForVariant(variant) end
----@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : boolean
----@param mat UnityEngine.Material
----@param passId UnityEngine.Rendering.PassIdentifier
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:AddVariant(mat, passId) end
----@param mat UnityEngine.Material
----@param subshaderIndex number
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:AddVariants(mat, subshaderIndex) end
----@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : boolean
----@param mat UnityEngine.Material
----@param passId UnityEngine.Rendering.PassIdentifier
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:RemoveVariant(mat, passId) end
----@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : boolean
----@param mat UnityEngine.Material
----@param passId UnityEngine.Rendering.PassIdentifier
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:ContainsVariant(mat, passId) end
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:ClearVariants() end
----@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[], setup: UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState) : boolean
----@param variant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
----@param setup UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:AddGraphicsStateForVariant(variant, setup) end
----@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : boolean
----@param variant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:RemoveGraphicsStatesForVariant(variant) end
----@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, srcShader: UnityEngine.Shader, srcPassId: UnityEngine.Rendering.PassIdentifier, srcKeywords: UnityEngine.Rendering.LocalKeyword[], dstShader: UnityEngine.Shader, dstPassId: UnityEngine.Rendering.PassIdentifier, dstKeywords: UnityEngine.Rendering.LocalKeyword[]) : boolean
----@param srcVariant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
----@param dstVariant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
----@return boolean
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection:CopyGraphicsStatesForVariant(srcVariant, dstVariant) end
-
----@class UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState : System.ValueType
----@field vertexAttributes UnityEngine.Rendering.VertexAttributeDescriptor[]
----@field attachments UnityEngine.Rendering.AttachmentDescriptor[]
----@field subPasses UnityEngine.Rendering.SubPassDescriptor[]
----@field renderState UnityEngine.Rendering.RenderStateBlock
----@field topology UnityEngine.MeshTopology
----@field forceCullMode UnityEngine.Rendering.CullMode
----@field shadingRateCombinerPrimitive UnityEngine.Rendering.ShadingRateCombiner
----@field shadingRateCombinerFragment UnityEngine.Rendering.ShadingRateCombiner
----@field baseShadingRate UnityEngine.Rendering.ShadingRateFragmentSize
----@field depthBias number
----@field slopeDepthBias number
----@field depthAttachmentIndex number
----@field subPassIndex number
----@field shadingRateIndex number
----@field multiviewCount number
----@field sampleCount number
----@field hasEyeTexture boolean
----@field wireframe boolean
----@field invertCulling boolean
----@field negativeScale boolean
----@field invertProjection boolean
-UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState = {}
----@alias CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState
-CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState = UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState
-
----@param mesh UnityEngine.Mesh
----@param submesh number
----@param renderer UnityEngine.Renderer
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState:SetMeshData(mesh, submesh, renderer) end
----@param samples number
----@param attachments Unity.Collections.NativeArray
----@param subPasses Unity.Collections.NativeArray
----@param subPassIndex number
----@param depthAttachmentIndex number
----@param shadingRateIndex number
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState:SetRenderPassData(samples, attachments, subPasses, subPassIndex, depthAttachmentIndex, shadingRateIndex) end
----@param shader UnityEngine.Shader
----@param passId UnityEngine.Rendering.PassIdentifier
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState:SetRenderStateData(shader, passId) end
-
----@class UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant : System.ValueType
----@field shader UnityEngine.Shader
----@field passId UnityEngine.Rendering.PassIdentifier
----@field keywords UnityEngine.Rendering.LocalKeyword[]
-UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant = {}
----@alias CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
-CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant = UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
-
----@overload fun(shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
----@param material UnityEngine.Material
----@param passId UnityEngine.Rendering.PassIdentifier
----@return UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
-function UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant.New(material, passId) end
-
----@class UnityEngine.Experimental.Rendering.ShaderWarmupSetup : System.ValueType
----@field vdecl UnityEngine.Rendering.VertexAttributeDescriptor[]
-UnityEngine.Experimental.Rendering.ShaderWarmupSetup = {}
----@alias CS.UnityEngine.Experimental.Rendering.ShaderWarmupSetup UnityEngine.Experimental.Rendering.ShaderWarmupSetup
-CS.UnityEngine.Experimental.Rendering.ShaderWarmupSetup = UnityEngine.Experimental.Rendering.ShaderWarmupSetup
-
-
----@class UnityEngine.Experimental.Rendering.ShaderWarmup : System.Object
-UnityEngine.Experimental.Rendering.ShaderWarmup = {}
----@alias CS.UnityEngine.Experimental.Rendering.ShaderWarmup UnityEngine.Experimental.Rendering.ShaderWarmup
-CS.UnityEngine.Experimental.Rendering.ShaderWarmup = UnityEngine.Experimental.Rendering.ShaderWarmup
-
----@param shader UnityEngine.Shader
----@param setup UnityEngine.Experimental.Rendering.ShaderWarmupSetup
-function UnityEngine.Experimental.Rendering.ShaderWarmup.WarmupShader(shader, setup) end
----@param collection UnityEngine.ShaderVariantCollection
----@param shader UnityEngine.Shader
----@param setup UnityEngine.Experimental.Rendering.ShaderWarmupSetup
-function UnityEngine.Experimental.Rendering.ShaderWarmup.WarmupShaderFromCollection(collection, shader, setup) end
-
----@class UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo : System.ValueType
----@field SpriteID number
----@field TextureID number
----@field MaterialID number
----@field Color UnityEngine.Color
----@field Transform UnityEngine.Matrix4x4
----@field Bounds UnityEngine.Bounds
----@field Layer number
----@field SortingLayer number
----@field SortingOrder number
----@field SceneCullingMask number
----@field IndexData System.IntPtr
----@field VertexData System.IntPtr
----@field IndexCount number
----@field VertexCount number
----@field ShaderChannelMask number
-UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo = {}
----@alias CS.UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo
-CS.UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo = UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo
-
-
----@class UnityEngine.Experimental.U2D.SpriteRendererGroup : System.Object
-UnityEngine.Experimental.U2D.SpriteRendererGroup = {}
----@alias CS.UnityEngine.Experimental.U2D.SpriteRendererGroup UnityEngine.Experimental.U2D.SpriteRendererGroup
-CS.UnityEngine.Experimental.U2D.SpriteRendererGroup = UnityEngine.Experimental.U2D.SpriteRendererGroup
-
----@return UnityEngine.Experimental.U2D.SpriteRendererGroup
-function UnityEngine.Experimental.U2D.SpriteRendererGroup.New() end
----@param renderers Unity.Collections.NativeArray
-function UnityEngine.Experimental.U2D.SpriteRendererGroup.AddRenderers(renderers) end
-function UnityEngine.Experimental.U2D.SpriteRendererGroup.Clear() end
-
----@class UnityEngine.Sprites.DataUtility : System.Object
-UnityEngine.Sprites.DataUtility = {}
----@alias CS.UnityEngine.Sprites.DataUtility UnityEngine.Sprites.DataUtility
-CS.UnityEngine.Sprites.DataUtility = UnityEngine.Sprites.DataUtility
-
----@return UnityEngine.Sprites.DataUtility
-function UnityEngine.Sprites.DataUtility.New() end
----@param sprite UnityEngine.Sprite
----@return UnityEngine.Vector4
-function UnityEngine.Sprites.DataUtility.GetInnerUV(sprite) end
----@param sprite UnityEngine.Sprite
----@return UnityEngine.Vector4
-function UnityEngine.Sprites.DataUtility.GetOuterUV(sprite) end
----@param sprite UnityEngine.Sprite
----@return UnityEngine.Vector4
-function UnityEngine.Sprites.DataUtility.GetPadding(sprite) end
----@param sprite UnityEngine.Sprite
----@return UnityEngine.Vector2
-function UnityEngine.Sprites.DataUtility.GetMinSize(sprite) end

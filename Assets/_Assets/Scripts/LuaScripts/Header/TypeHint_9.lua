@@ -1,5 +1,767 @@
 ---@meta
 
+---@class UnityEngine.ColliderHit : System.ValueType
+---@field instanceID number
+---@field collider UnityEngine.Collider
+UnityEngine.ColliderHit = {}
+---@alias CS.UnityEngine.ColliderHit UnityEngine.ColliderHit
+CS.UnityEngine.ColliderHit = UnityEngine.ColliderHit
+
+
+---@class UnityEngine.RaycastCommand : System.ValueType
+---@field queryParameters UnityEngine.QueryParameters
+---@field from UnityEngine.Vector3
+---@field direction UnityEngine.Vector3
+---@field physicsScene UnityEngine.PhysicsScene
+---@field distance number
+UnityEngine.RaycastCommand = {}
+---@alias CS.UnityEngine.RaycastCommand UnityEngine.RaycastCommand
+CS.UnityEngine.RaycastCommand = UnityEngine.RaycastCommand
+
+---@overload fun(from: UnityEngine.Vector3, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.RaycastCommand
+---@overload fun(physicsScene: UnityEngine.PhysicsScene, from: UnityEngine.Vector3, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.RaycastCommand
+---@overload fun(from: UnityEngine.Vector3, direction: UnityEngine.Vector3, distance: number, layerMask: number, maxHits: number) : UnityEngine.RaycastCommand
+---@param physicsScene UnityEngine.PhysicsScene
+---@param from UnityEngine.Vector3
+---@param direction UnityEngine.Vector3
+---@param distance number
+---@param layerMask number
+---@param maxHits number
+---@return UnityEngine.RaycastCommand
+function UnityEngine.RaycastCommand.New(physicsScene, from, direction, distance, layerMask, maxHits) end
+---@overload fun(commands: Unity.Collections.NativeArray, results: Unity.Collections.NativeArray, minCommandsPerJob: number, maxHits: number, dependsOn: Unity.Jobs.JobHandle) : Unity.Jobs.JobHandle
+---@param commands Unity.Collections.NativeArray
+---@param results Unity.Collections.NativeArray
+---@param minCommandsPerJob number
+---@param dependsOn Unity.Jobs.JobHandle
+---@return Unity.Jobs.JobHandle
+function UnityEngine.RaycastCommand.ScheduleBatch(commands, results, minCommandsPerJob, dependsOn) end
+
+---@class UnityEngine.SpherecastCommand : System.ValueType
+---@field queryParameters UnityEngine.QueryParameters
+---@field origin UnityEngine.Vector3
+---@field radius number
+---@field direction UnityEngine.Vector3
+---@field distance number
+---@field physicsScene UnityEngine.PhysicsScene
+UnityEngine.SpherecastCommand = {}
+---@alias CS.UnityEngine.SpherecastCommand UnityEngine.SpherecastCommand
+CS.UnityEngine.SpherecastCommand = UnityEngine.SpherecastCommand
+
+---@overload fun(origin: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.SpherecastCommand
+---@overload fun(physicsScene: UnityEngine.PhysicsScene, origin: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.SpherecastCommand
+---@overload fun(origin: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, distance: number, layerMask: number) : UnityEngine.SpherecastCommand
+---@param physicsScene UnityEngine.PhysicsScene
+---@param origin UnityEngine.Vector3
+---@param radius number
+---@param direction UnityEngine.Vector3
+---@param distance number
+---@param layerMask number
+---@return UnityEngine.SpherecastCommand
+function UnityEngine.SpherecastCommand.New(physicsScene, origin, radius, direction, distance, layerMask) end
+---@overload fun(commands: Unity.Collections.NativeArray, results: Unity.Collections.NativeArray, minCommandsPerJob: number, maxHits: number, dependsOn: Unity.Jobs.JobHandle) : Unity.Jobs.JobHandle
+---@param commands Unity.Collections.NativeArray
+---@param results Unity.Collections.NativeArray
+---@param minCommandsPerJob number
+---@param dependsOn Unity.Jobs.JobHandle
+---@return Unity.Jobs.JobHandle
+function UnityEngine.SpherecastCommand.ScheduleBatch(commands, results, minCommandsPerJob, dependsOn) end
+
+---@class UnityEngine.CapsulecastCommand : System.ValueType
+---@field queryParameters UnityEngine.QueryParameters
+---@field point1 UnityEngine.Vector3
+---@field point2 UnityEngine.Vector3
+---@field radius number
+---@field direction UnityEngine.Vector3
+---@field distance number
+---@field physicsScene UnityEngine.PhysicsScene
+UnityEngine.CapsulecastCommand = {}
+---@alias CS.UnityEngine.CapsulecastCommand UnityEngine.CapsulecastCommand
+CS.UnityEngine.CapsulecastCommand = UnityEngine.CapsulecastCommand
+
+---@overload fun(p1: UnityEngine.Vector3, p2: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.CapsulecastCommand
+---@overload fun(physicsScene: UnityEngine.PhysicsScene, p1: UnityEngine.Vector3, p2: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.CapsulecastCommand
+---@overload fun(p1: UnityEngine.Vector3, p2: UnityEngine.Vector3, radius: number, direction: UnityEngine.Vector3, distance: number, layerMask: number) : UnityEngine.CapsulecastCommand
+---@param physicsScene UnityEngine.PhysicsScene
+---@param p1 UnityEngine.Vector3
+---@param p2 UnityEngine.Vector3
+---@param radius number
+---@param direction UnityEngine.Vector3
+---@param distance number
+---@param layerMask number
+---@return UnityEngine.CapsulecastCommand
+function UnityEngine.CapsulecastCommand.New(physicsScene, p1, p2, radius, direction, distance, layerMask) end
+---@overload fun(commands: Unity.Collections.NativeArray, results: Unity.Collections.NativeArray, minCommandsPerJob: number, maxHits: number, dependsOn: Unity.Jobs.JobHandle) : Unity.Jobs.JobHandle
+---@param commands Unity.Collections.NativeArray
+---@param results Unity.Collections.NativeArray
+---@param minCommandsPerJob number
+---@param dependsOn Unity.Jobs.JobHandle
+---@return Unity.Jobs.JobHandle
+function UnityEngine.CapsulecastCommand.ScheduleBatch(commands, results, minCommandsPerJob, dependsOn) end
+
+---@class UnityEngine.BoxcastCommand : System.ValueType
+---@field queryParameters UnityEngine.QueryParameters
+---@field center UnityEngine.Vector3
+---@field halfExtents UnityEngine.Vector3
+---@field orientation UnityEngine.Quaternion
+---@field direction UnityEngine.Vector3
+---@field distance number
+---@field physicsScene UnityEngine.PhysicsScene
+UnityEngine.BoxcastCommand = {}
+---@alias CS.UnityEngine.BoxcastCommand UnityEngine.BoxcastCommand
+CS.UnityEngine.BoxcastCommand = UnityEngine.BoxcastCommand
+
+---@overload fun(center: UnityEngine.Vector3, halfExtents: UnityEngine.Vector3, orientation: UnityEngine.Quaternion, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.BoxcastCommand
+---@overload fun(physicsScene: UnityEngine.PhysicsScene, center: UnityEngine.Vector3, halfExtents: UnityEngine.Vector3, orientation: UnityEngine.Quaternion, direction: UnityEngine.Vector3, queryParameters: UnityEngine.QueryParameters, distance: number) : UnityEngine.BoxcastCommand
+---@overload fun(center: UnityEngine.Vector3, halfExtents: UnityEngine.Vector3, orientation: UnityEngine.Quaternion, direction: UnityEngine.Vector3, distance: number, layerMask: number) : UnityEngine.BoxcastCommand
+---@param physicsScene UnityEngine.PhysicsScene
+---@param center UnityEngine.Vector3
+---@param halfExtents UnityEngine.Vector3
+---@param orientation UnityEngine.Quaternion
+---@param direction UnityEngine.Vector3
+---@param distance number
+---@param layerMask number
+---@return UnityEngine.BoxcastCommand
+function UnityEngine.BoxcastCommand.New(physicsScene, center, halfExtents, orientation, direction, distance, layerMask) end
+---@overload fun(commands: Unity.Collections.NativeArray, results: Unity.Collections.NativeArray, minCommandsPerJob: number, maxHits: number, dependsOn: Unity.Jobs.JobHandle) : Unity.Jobs.JobHandle
+---@param commands Unity.Collections.NativeArray
+---@param results Unity.Collections.NativeArray
+---@param minCommandsPerJob number
+---@param dependsOn Unity.Jobs.JobHandle
+---@return Unity.Jobs.JobHandle
+function UnityEngine.BoxcastCommand.ScheduleBatch(commands, results, minCommandsPerJob, dependsOn) end
+
+---@class UnityEngine.ClosestPointCommand : System.ValueType
+---@field point UnityEngine.Vector3
+---@field colliderInstanceID number
+---@field position UnityEngine.Vector3
+---@field rotation UnityEngine.Quaternion
+---@field scale UnityEngine.Vector3
+UnityEngine.ClosestPointCommand = {}
+---@alias CS.UnityEngine.ClosestPointCommand UnityEngine.ClosestPointCommand
+CS.UnityEngine.ClosestPointCommand = UnityEngine.ClosestPointCommand
+
+---@overload fun(point: UnityEngine.Vector3, colliderInstanceID: number, position: UnityEngine.Vector3, rotation: UnityEngine.Quaternion, scale: UnityEngine.Vector3) : UnityEngine.ClosestPointCommand
+---@param point UnityEngine.Vector3
+---@param collider UnityEngine.Collider
+---@param position UnityEngine.Vector3
+---@param rotation UnityEngine.Quaternion
+---@param scale UnityEngine.Vector3
+---@return UnityEngine.ClosestPointCommand
+function UnityEngine.ClosestPointCommand.New(point, collider, position, rotation, scale) end
+---@param commands Unity.Collections.NativeArray
+---@param results Unity.Collections.NativeArray
+---@param minCommandsPerJob number
+---@param dependsOn Unity.Jobs.JobHandle
+---@return Unity.Jobs.JobHandle
+function UnityEngine.ClosestPointCommand.ScheduleBatch(commands, results, minCommandsPerJob, dependsOn) end
+
+---@class UnityEngine.OverlapSphereCommand : System.ValueType
+---@field queryParameters UnityEngine.QueryParameters
+---@field point UnityEngine.Vector3
+---@field radius number
+---@field physicsScene UnityEngine.PhysicsScene
+UnityEngine.OverlapSphereCommand = {}
+---@alias CS.UnityEngine.OverlapSphereCommand UnityEngine.OverlapSphereCommand
+CS.UnityEngine.OverlapSphereCommand = UnityEngine.OverlapSphereCommand
+
+---@overload fun(point: UnityEngine.Vector3, radius: number, queryParameters: UnityEngine.QueryParameters) : UnityEngine.OverlapSphereCommand
+---@param physicsScene UnityEngine.PhysicsScene
+---@param point UnityEngine.Vector3
+---@param radius number
+---@param queryParameters UnityEngine.QueryParameters
+---@return UnityEngine.OverlapSphereCommand
+function UnityEngine.OverlapSphereCommand.New(physicsScene, point, radius, queryParameters) end
+---@param commands Unity.Collections.NativeArray
+---@param results Unity.Collections.NativeArray
+---@param minCommandsPerJob number
+---@param maxHits number
+---@param dependsOn Unity.Jobs.JobHandle
+---@return Unity.Jobs.JobHandle
+function UnityEngine.OverlapSphereCommand.ScheduleBatch(commands, results, minCommandsPerJob, maxHits, dependsOn) end
+
+---@class UnityEngine.OverlapBoxCommand : System.ValueType
+---@field queryParameters UnityEngine.QueryParameters
+---@field center UnityEngine.Vector3
+---@field halfExtents UnityEngine.Vector3
+---@field orientation UnityEngine.Quaternion
+---@field physicsScene UnityEngine.PhysicsScene
+UnityEngine.OverlapBoxCommand = {}
+---@alias CS.UnityEngine.OverlapBoxCommand UnityEngine.OverlapBoxCommand
+CS.UnityEngine.OverlapBoxCommand = UnityEngine.OverlapBoxCommand
+
+---@overload fun(center: UnityEngine.Vector3, halfExtents: UnityEngine.Vector3, orientation: UnityEngine.Quaternion, queryParameters: UnityEngine.QueryParameters) : UnityEngine.OverlapBoxCommand
+---@param physicsScene UnityEngine.PhysicsScene
+---@param center UnityEngine.Vector3
+---@param halfExtents UnityEngine.Vector3
+---@param orientation UnityEngine.Quaternion
+---@param queryParameters UnityEngine.QueryParameters
+---@return UnityEngine.OverlapBoxCommand
+function UnityEngine.OverlapBoxCommand.New(physicsScene, center, halfExtents, orientation, queryParameters) end
+---@param commands Unity.Collections.NativeArray
+---@param results Unity.Collections.NativeArray
+---@param minCommandsPerJob number
+---@param maxHits number
+---@param dependsOn Unity.Jobs.JobHandle
+---@return Unity.Jobs.JobHandle
+function UnityEngine.OverlapBoxCommand.ScheduleBatch(commands, results, minCommandsPerJob, maxHits, dependsOn) end
+
+---@class UnityEngine.OverlapCapsuleCommand : System.ValueType
+---@field queryParameters UnityEngine.QueryParameters
+---@field point0 UnityEngine.Vector3
+---@field point1 UnityEngine.Vector3
+---@field radius number
+---@field physicsScene UnityEngine.PhysicsScene
+UnityEngine.OverlapCapsuleCommand = {}
+---@alias CS.UnityEngine.OverlapCapsuleCommand UnityEngine.OverlapCapsuleCommand
+CS.UnityEngine.OverlapCapsuleCommand = UnityEngine.OverlapCapsuleCommand
+
+---@overload fun(point0: UnityEngine.Vector3, point1: UnityEngine.Vector3, radius: number, queryParameters: UnityEngine.QueryParameters) : UnityEngine.OverlapCapsuleCommand
+---@param physicsScene UnityEngine.PhysicsScene
+---@param point0 UnityEngine.Vector3
+---@param point1 UnityEngine.Vector3
+---@param radius number
+---@param queryParameters UnityEngine.QueryParameters
+---@return UnityEngine.OverlapCapsuleCommand
+function UnityEngine.OverlapCapsuleCommand.New(physicsScene, point0, point1, radius, queryParameters) end
+---@param commands Unity.Collections.NativeArray
+---@param results Unity.Collections.NativeArray
+---@param minCommandsPerJob number
+---@param maxHits number
+---@param dependsOn Unity.Jobs.JobHandle
+---@return Unity.Jobs.JobHandle
+function UnityEngine.OverlapCapsuleCommand.ScheduleBatch(commands, results, minCommandsPerJob, maxHits, dependsOn) end
+
+---@class UnityEngine.RaycastHit : System.ValueType
+---@field collider UnityEngine.Collider
+---@field colliderEntityId UnityEngine.EntityId
+---@field point UnityEngine.Vector3
+---@field normal UnityEngine.Vector3
+---@field barycentricCoordinate UnityEngine.Vector3
+---@field distance number
+---@field triangleIndex number
+---@field textureCoord UnityEngine.Vector2
+---@field textureCoord2 UnityEngine.Vector2
+---@field transform UnityEngine.Transform
+---@field rigidbody UnityEngine.Rigidbody
+---@field articulationBody UnityEngine.ArticulationBody
+---@field lightmapCoord UnityEngine.Vector2
+UnityEngine.RaycastHit = {}
+---@alias CS.UnityEngine.RaycastHit UnityEngine.RaycastHit
+CS.UnityEngine.RaycastHit = UnityEngine.RaycastHit
+
+
+---@class UnityEngine.RigidbodyConstraints
+---@field None UnityEngine.RigidbodyConstraints
+---@field FreezePositionX UnityEngine.RigidbodyConstraints
+---@field FreezePositionY UnityEngine.RigidbodyConstraints
+---@field FreezePositionZ UnityEngine.RigidbodyConstraints
+---@field FreezeRotationX UnityEngine.RigidbodyConstraints
+---@field FreezeRotationY UnityEngine.RigidbodyConstraints
+---@field FreezeRotationZ UnityEngine.RigidbodyConstraints
+---@field FreezePosition UnityEngine.RigidbodyConstraints
+---@field FreezeRotation UnityEngine.RigidbodyConstraints
+---@field FreezeAll UnityEngine.RigidbodyConstraints
+UnityEngine.RigidbodyConstraints = {}
+---@alias CS.UnityEngine.RigidbodyConstraints UnityEngine.RigidbodyConstraints
+CS.UnityEngine.RigidbodyConstraints = UnityEngine.RigidbodyConstraints
+
+
+---@class UnityEngine.RigidbodyInterpolation
+---@field None UnityEngine.RigidbodyInterpolation
+---@field Interpolate UnityEngine.RigidbodyInterpolation
+---@field Extrapolate UnityEngine.RigidbodyInterpolation
+UnityEngine.RigidbodyInterpolation = {}
+---@alias CS.UnityEngine.RigidbodyInterpolation UnityEngine.RigidbodyInterpolation
+CS.UnityEngine.RigidbodyInterpolation = UnityEngine.RigidbodyInterpolation
+
+
+---@class UnityEngine.Rigidbody : UnityEngine.Component
+---@field linearVelocity UnityEngine.Vector3
+---@field angularVelocity UnityEngine.Vector3
+---@field linearDamping number
+---@field angularDamping number
+---@field mass number
+---@field useGravity boolean
+---@field maxDepenetrationVelocity number
+---@field isKinematic boolean
+---@field freezeRotation boolean
+---@field constraints UnityEngine.RigidbodyConstraints
+---@field collisionDetectionMode UnityEngine.CollisionDetectionMode
+---@field automaticCenterOfMass boolean
+---@field centerOfMass UnityEngine.Vector3
+---@field worldCenterOfMass UnityEngine.Vector3
+---@field automaticInertiaTensor boolean
+---@field inertiaTensorRotation UnityEngine.Quaternion
+---@field inertiaTensor UnityEngine.Vector3
+---@field detectCollisions boolean
+---@field position UnityEngine.Vector3
+---@field rotation UnityEngine.Quaternion
+---@field interpolation UnityEngine.RigidbodyInterpolation
+---@field solverIterations number
+---@field sleepThreshold number
+---@field maxAngularVelocity number
+---@field maxLinearVelocity number
+---@field solverVelocityIterations number
+---@field excludeLayers UnityEngine.LayerMask
+---@field includeLayers UnityEngine.LayerMask
+UnityEngine.Rigidbody = {}
+---@alias CS.UnityEngine.Rigidbody UnityEngine.Rigidbody
+CS.UnityEngine.Rigidbody = UnityEngine.Rigidbody
+
+---@return UnityEngine.Rigidbody
+function UnityEngine.Rigidbody.New() end
+---@param position UnityEngine.Vector3
+function UnityEngine.Rigidbody:MovePosition(position) end
+---@param rotation UnityEngine.Quaternion
+function UnityEngine.Rigidbody:MoveRotation(rotation) end
+---@param position UnityEngine.Vector3
+---@param rotation UnityEngine.Quaternion
+function UnityEngine.Rigidbody:Move(position, rotation) end
+function UnityEngine.Rigidbody:Sleep() end
+---@return boolean
+function UnityEngine.Rigidbody:IsSleeping() end
+function UnityEngine.Rigidbody:WakeUp() end
+function UnityEngine.Rigidbody:ResetCenterOfMass() end
+function UnityEngine.Rigidbody:ResetInertiaTensor() end
+---@param relativePoint UnityEngine.Vector3
+---@return UnityEngine.Vector3
+function UnityEngine.Rigidbody:GetRelativePointVelocity(relativePoint) end
+---@param worldPoint UnityEngine.Vector3
+---@return UnityEngine.Vector3
+function UnityEngine.Rigidbody:GetPointVelocity(worldPoint) end
+function UnityEngine.Rigidbody:PublishTransform() end
+---@overload fun(self: UnityEngine.Rigidbody, step: number) : UnityEngine.Vector3
+---@return UnityEngine.Vector3
+function UnityEngine.Rigidbody:GetAccumulatedForce() end
+---@overload fun(self: UnityEngine.Rigidbody, step: number) : UnityEngine.Vector3
+---@return UnityEngine.Vector3
+function UnityEngine.Rigidbody:GetAccumulatedTorque() end
+---@overload fun(self: UnityEngine.Rigidbody, force: UnityEngine.Vector3, mode: UnityEngine.ForceMode)
+---@overload fun(self: UnityEngine.Rigidbody, force: UnityEngine.Vector3)
+---@overload fun(self: UnityEngine.Rigidbody, x: number, y: number, z: number, mode: UnityEngine.ForceMode)
+---@param x number
+---@param y number
+---@param z number
+function UnityEngine.Rigidbody:AddForce(x, y, z) end
+---@overload fun(self: UnityEngine.Rigidbody, force: UnityEngine.Vector3, mode: UnityEngine.ForceMode)
+---@overload fun(self: UnityEngine.Rigidbody, force: UnityEngine.Vector3)
+---@overload fun(self: UnityEngine.Rigidbody, x: number, y: number, z: number, mode: UnityEngine.ForceMode)
+---@param x number
+---@param y number
+---@param z number
+function UnityEngine.Rigidbody:AddRelativeForce(x, y, z) end
+---@overload fun(self: UnityEngine.Rigidbody, torque: UnityEngine.Vector3, mode: UnityEngine.ForceMode)
+---@overload fun(self: UnityEngine.Rigidbody, torque: UnityEngine.Vector3)
+---@overload fun(self: UnityEngine.Rigidbody, x: number, y: number, z: number, mode: UnityEngine.ForceMode)
+---@param x number
+---@param y number
+---@param z number
+function UnityEngine.Rigidbody:AddTorque(x, y, z) end
+---@overload fun(self: UnityEngine.Rigidbody, torque: UnityEngine.Vector3, mode: UnityEngine.ForceMode)
+---@overload fun(self: UnityEngine.Rigidbody, torque: UnityEngine.Vector3)
+---@overload fun(self: UnityEngine.Rigidbody, x: number, y: number, z: number, mode: UnityEngine.ForceMode)
+---@param x number
+---@param y number
+---@param z number
+function UnityEngine.Rigidbody:AddRelativeTorque(x, y, z) end
+---@overload fun(self: UnityEngine.Rigidbody, force: UnityEngine.Vector3, position: UnityEngine.Vector3, mode: UnityEngine.ForceMode)
+---@param force UnityEngine.Vector3
+---@param position UnityEngine.Vector3
+function UnityEngine.Rigidbody:AddForceAtPosition(force, position) end
+---@overload fun(self: UnityEngine.Rigidbody, explosionForce: number, explosionPosition: UnityEngine.Vector3, explosionRadius: number, upwardsModifier: number, mode: UnityEngine.ForceMode)
+---@overload fun(self: UnityEngine.Rigidbody, explosionForce: number, explosionPosition: UnityEngine.Vector3, explosionRadius: number, upwardsModifier: number)
+---@param explosionForce number
+---@param explosionPosition UnityEngine.Vector3
+---@param explosionRadius number
+function UnityEngine.Rigidbody:AddExplosionForce(explosionForce, explosionPosition, explosionRadius) end
+---@param position UnityEngine.Vector3
+---@return UnityEngine.Vector3
+function UnityEngine.Rigidbody:ClosestPointOnBounds(position) end
+---@overload fun(self: UnityEngine.Rigidbody, direction: UnityEngine.Vector3, out_hitInfo: UnityEngine.RaycastHit, maxDistance: number, queryTriggerInteraction: UnityEngine.QueryTriggerInteraction) : boolean, UnityEngine.RaycastHit
+---@overload fun(self: UnityEngine.Rigidbody, direction: UnityEngine.Vector3, out_hitInfo: UnityEngine.RaycastHit, maxDistance: number) : boolean, UnityEngine.RaycastHit
+---@param direction UnityEngine.Vector3
+---@param out_hitInfo UnityEngine.RaycastHit
+---@return boolean,UnityEngine.RaycastHit
+function UnityEngine.Rigidbody:SweepTest(direction, out_hitInfo) end
+---@overload fun(self: UnityEngine.Rigidbody, direction: UnityEngine.Vector3, maxDistance: number, queryTriggerInteraction: UnityEngine.QueryTriggerInteraction) : UnityEngine.RaycastHit[]
+---@overload fun(self: UnityEngine.Rigidbody, direction: UnityEngine.Vector3, maxDistance: number) : UnityEngine.RaycastHit[]
+---@param direction UnityEngine.Vector3
+---@return UnityEngine.RaycastHit[]
+function UnityEngine.Rigidbody:SweepTestAll(direction) end
+---@param endValue UnityEngine.Vector3
+---@param duration number
+---@param snapping boolean
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody:DOMove(endValue, duration, snapping) end
+---@param endValue number
+---@param duration number
+---@param snapping boolean
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody:DOMoveX(endValue, duration, snapping) end
+---@param endValue number
+---@param duration number
+---@param snapping boolean
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody:DOMoveY(endValue, duration, snapping) end
+---@param endValue number
+---@param duration number
+---@param snapping boolean
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody:DOMoveZ(endValue, duration, snapping) end
+---@param endValue UnityEngine.Vector3
+---@param duration number
+---@param mode DG.Tweening.RotateMode
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody:DORotate(endValue, duration, mode) end
+---@param towards UnityEngine.Vector3
+---@param duration number
+---@param axisConstraint DG.Tweening.AxisConstraint
+---@param up System.Nullable
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody:DOLookAt(towards, duration, axisConstraint, up) end
+---@param endValue UnityEngine.Vector3
+---@param jumpPower number
+---@param numJumps number
+---@param duration number
+---@param snapping boolean
+---@return DG.Tweening.Sequence
+function UnityEngine.Rigidbody:DOJump(endValue, jumpPower, numJumps, duration, snapping) end
+---@param path UnityEngine.Vector3[]
+---@param duration number
+---@param pathType DG.Tweening.PathType
+---@param pathMode DG.Tweening.PathMode
+---@param resolution number
+---@param gizmoColor System.Nullable
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody:DOPath(path, duration, pathType, pathMode, resolution, gizmoColor) end
+---@param path UnityEngine.Vector3[]
+---@param duration number
+---@param pathType DG.Tweening.PathType
+---@param pathMode DG.Tweening.PathMode
+---@param resolution number
+---@param gizmoColor System.Nullable
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody:DOLocalPath(path, duration, pathType, pathMode, resolution, gizmoColor) end
+---@param duration number
+---@param axis System.Nullable
+---@param mode DG.Tweening.SpiralMode
+---@param speed number
+---@param frequency number
+---@param depth number
+---@param snapping boolean
+---@return DG.Tweening.Tweener
+function UnityEngine.Rigidbody:DOSpiral(duration, axis, mode, speed, frequency, depth, snapping) end
+
+---@class UnityEngine.SphereCollider : UnityEngine.Collider
+---@field center UnityEngine.Vector3
+---@field radius number
+UnityEngine.SphereCollider = {}
+---@alias CS.UnityEngine.SphereCollider UnityEngine.SphereCollider
+CS.UnityEngine.SphereCollider = UnityEngine.SphereCollider
+
+---@return UnityEngine.SphereCollider
+function UnityEngine.SphereCollider.New() end
+
+---@class UnityEngine.SpringJoint : UnityEngine.Joint
+---@field spring number
+---@field damper number
+---@field minDistance number
+---@field maxDistance number
+---@field tolerance number
+UnityEngine.SpringJoint = {}
+---@alias CS.UnityEngine.SpringJoint UnityEngine.SpringJoint
+CS.UnityEngine.SpringJoint = UnityEngine.SpringJoint
+
+---@return UnityEngine.SpringJoint
+function UnityEngine.SpringJoint.New() end
+
+---@class UnityEngine.LowLevelPhysics.ImmediateTransform : System.ValueType
+---@field Rotation UnityEngine.Quaternion
+---@field Position UnityEngine.Vector3
+UnityEngine.LowLevelPhysics.ImmediateTransform = {}
+---@alias CS.UnityEngine.LowLevelPhysics.ImmediateTransform UnityEngine.LowLevelPhysics.ImmediateTransform
+CS.UnityEngine.LowLevelPhysics.ImmediateTransform = UnityEngine.LowLevelPhysics.ImmediateTransform
+
+
+---@class UnityEngine.LowLevelPhysics.ImmediateContact : System.ValueType
+---@field Normal UnityEngine.Vector3
+---@field Separation number
+---@field Point UnityEngine.Vector3
+UnityEngine.LowLevelPhysics.ImmediateContact = {}
+---@alias CS.UnityEngine.LowLevelPhysics.ImmediateContact UnityEngine.LowLevelPhysics.ImmediateContact
+CS.UnityEngine.LowLevelPhysics.ImmediateContact = UnityEngine.LowLevelPhysics.ImmediateContact
+
+
+---@class UnityEngine.LowLevelPhysics.ImmediatePhysics : System.Object
+UnityEngine.LowLevelPhysics.ImmediatePhysics = {}
+---@alias CS.UnityEngine.LowLevelPhysics.ImmediatePhysics UnityEngine.LowLevelPhysics.ImmediatePhysics
+CS.UnityEngine.LowLevelPhysics.ImmediatePhysics = UnityEngine.LowLevelPhysics.ImmediatePhysics
+
+---@param geom1 Unity.Collections.NativeArray.ReadOnly
+---@param geom2 Unity.Collections.NativeArray.ReadOnly
+---@param xform1 Unity.Collections.NativeArray.ReadOnly
+---@param xform2 Unity.Collections.NativeArray.ReadOnly
+---@param pairCount number
+---@param outContacts Unity.Collections.NativeArray
+---@param outContactCounts Unity.Collections.NativeArray
+---@param contactDistance number
+---@return number
+function UnityEngine.LowLevelPhysics.ImmediatePhysics.GenerateContacts(geom1, geom2, xform1, xform2, pairCount, outContacts, outContactCounts, contactDistance) end
+
+---@class UnityEngine.LowLevelPhysics.IGeometry
+---@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
+UnityEngine.LowLevelPhysics.IGeometry = {}
+---@alias CS.UnityEngine.LowLevelPhysics.IGeometry UnityEngine.LowLevelPhysics.IGeometry
+CS.UnityEngine.LowLevelPhysics.IGeometry = UnityEngine.LowLevelPhysics.IGeometry
+
+
+---@class UnityEngine.LowLevelPhysics.BoxGeometry : System.ValueType
+---@field HalfExtents UnityEngine.Vector3
+---@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
+UnityEngine.LowLevelPhysics.BoxGeometry = {}
+---@alias CS.UnityEngine.LowLevelPhysics.BoxGeometry UnityEngine.LowLevelPhysics.BoxGeometry
+CS.UnityEngine.LowLevelPhysics.BoxGeometry = UnityEngine.LowLevelPhysics.BoxGeometry
+
+---@param halfExtents UnityEngine.Vector3
+---@return UnityEngine.LowLevelPhysics.BoxGeometry
+function UnityEngine.LowLevelPhysics.BoxGeometry.New(halfExtents) end
+
+---@class UnityEngine.LowLevelPhysics.SphereGeometry : System.ValueType
+---@field Radius number
+---@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
+UnityEngine.LowLevelPhysics.SphereGeometry = {}
+---@alias CS.UnityEngine.LowLevelPhysics.SphereGeometry UnityEngine.LowLevelPhysics.SphereGeometry
+CS.UnityEngine.LowLevelPhysics.SphereGeometry = UnityEngine.LowLevelPhysics.SphereGeometry
+
+---@param radius number
+---@return UnityEngine.LowLevelPhysics.SphereGeometry
+function UnityEngine.LowLevelPhysics.SphereGeometry.New(radius) end
+
+---@class UnityEngine.LowLevelPhysics.CapsuleGeometry : System.ValueType
+---@field Radius number
+---@field HalfLength number
+---@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
+UnityEngine.LowLevelPhysics.CapsuleGeometry = {}
+---@alias CS.UnityEngine.LowLevelPhysics.CapsuleGeometry UnityEngine.LowLevelPhysics.CapsuleGeometry
+CS.UnityEngine.LowLevelPhysics.CapsuleGeometry = UnityEngine.LowLevelPhysics.CapsuleGeometry
+
+---@param radius number
+---@param halfLength number
+---@return UnityEngine.LowLevelPhysics.CapsuleGeometry
+function UnityEngine.LowLevelPhysics.CapsuleGeometry.New(radius, halfLength) end
+
+---@class UnityEngine.LowLevelPhysics.ConvexMeshGeometry : System.ValueType
+---@field Scale UnityEngine.Vector3
+---@field ScaleAxisRotation UnityEngine.Quaternion
+---@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
+UnityEngine.LowLevelPhysics.ConvexMeshGeometry = {}
+---@alias CS.UnityEngine.LowLevelPhysics.ConvexMeshGeometry UnityEngine.LowLevelPhysics.ConvexMeshGeometry
+CS.UnityEngine.LowLevelPhysics.ConvexMeshGeometry = UnityEngine.LowLevelPhysics.ConvexMeshGeometry
+
+
+---@class UnityEngine.LowLevelPhysics.TriangleMeshGeometry : System.ValueType
+---@field Scale UnityEngine.Vector3
+---@field ScaleAxisRotation UnityEngine.Quaternion
+---@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
+UnityEngine.LowLevelPhysics.TriangleMeshGeometry = {}
+---@alias CS.UnityEngine.LowLevelPhysics.TriangleMeshGeometry UnityEngine.LowLevelPhysics.TriangleMeshGeometry
+CS.UnityEngine.LowLevelPhysics.TriangleMeshGeometry = UnityEngine.LowLevelPhysics.TriangleMeshGeometry
+
+
+---@class UnityEngine.LowLevelPhysics.TerrainGeometry : System.ValueType
+---@field GeometryType UnityEngine.LowLevelPhysics.GeometryType
+UnityEngine.LowLevelPhysics.TerrainGeometry = {}
+---@alias CS.UnityEngine.LowLevelPhysics.TerrainGeometry UnityEngine.LowLevelPhysics.TerrainGeometry
+CS.UnityEngine.LowLevelPhysics.TerrainGeometry = UnityEngine.LowLevelPhysics.TerrainGeometry
+
+
+---@class UnityEngine.LowLevelPhysics.GeometryType
+---@field Sphere UnityEngine.LowLevelPhysics.GeometryType
+---@field Capsule UnityEngine.LowLevelPhysics.GeometryType
+---@field Box UnityEngine.LowLevelPhysics.GeometryType
+---@field ConvexMesh UnityEngine.LowLevelPhysics.GeometryType
+---@field TriangleMesh UnityEngine.LowLevelPhysics.GeometryType
+---@field Terrain UnityEngine.LowLevelPhysics.GeometryType
+---@field Invalid UnityEngine.LowLevelPhysics.GeometryType
+UnityEngine.LowLevelPhysics.GeometryType = {}
+---@alias CS.UnityEngine.LowLevelPhysics.GeometryType UnityEngine.LowLevelPhysics.GeometryType
+CS.UnityEngine.LowLevelPhysics.GeometryType = UnityEngine.LowLevelPhysics.GeometryType
+
+
+---@class UnityEngine.LowLevelPhysics.GeometryHolder : System.ValueType
+---@field Type UnityEngine.LowLevelPhysics.GeometryType
+UnityEngine.LowLevelPhysics.GeometryHolder = {}
+---@alias CS.UnityEngine.LowLevelPhysics.GeometryHolder UnityEngine.LowLevelPhysics.GeometryHolder
+CS.UnityEngine.LowLevelPhysics.GeometryHolder = UnityEngine.LowLevelPhysics.GeometryHolder
+
+
+---@class UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension : System.Object
+UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension = {}
+---@alias CS.UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension
+CS.UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension = UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension
+
+---@param col UnityEngine.Collider
+---@return UnityEngine.LowLevelPhysics.GeometryHolder
+function UnityEngine.LowLevelPhysics.PhysXGeometryHolderExtension.GetGeometryHolder(col) end
+
+---@class UnityEngine.PhysicsScene2D : System.ValueType
+---@field subStepCount number
+---@field subStepLostTime number
+UnityEngine.PhysicsScene2D = {}
+---@alias CS.UnityEngine.PhysicsScene2D UnityEngine.PhysicsScene2D
+CS.UnityEngine.PhysicsScene2D = UnityEngine.PhysicsScene2D
+
+---@overload fun(collider: UnityEngine.Collider2D, results: UnityEngine.Collider2D[], layerMask: number) : number
+---@overload fun(collider: UnityEngine.Collider2D, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
+---@overload fun(collider: UnityEngine.Collider2D, results: System.Collections.Generic.List) : number
+---@overload fun(collider: UnityEngine.Collider2D, contactFilter: UnityEngine.ContactFilter2D, results: System.Collections.Generic.List) : number
+---@overload fun(position: UnityEngine.Vector2, angle: number, collider: UnityEngine.Collider2D, results: System.Collections.Generic.List) : number
+---@param position UnityEngine.Vector2
+---@param angle number
+---@param collider UnityEngine.Collider2D
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D.OverlapCollider(position, angle, collider, contactFilter, results) end
+---@return string
+function UnityEngine.PhysicsScene2D:ToString() end
+---@return number
+function UnityEngine.PhysicsScene2D:GetHashCode() end
+---@overload fun(self: UnityEngine.PhysicsScene2D, other: System.Object) : boolean
+---@param other UnityEngine.PhysicsScene2D
+---@return boolean
+function UnityEngine.PhysicsScene2D:Equals(other) end
+---@return boolean
+function UnityEngine.PhysicsScene2D:IsValid() end
+---@return boolean
+function UnityEngine.PhysicsScene2D:IsEmpty() end
+---@overload fun(self: UnityEngine.PhysicsScene2D, deltaTime: number) : boolean
+---@param deltaTime number
+---@param simulationLayers number
+---@return boolean
+function UnityEngine.PhysicsScene2D:Simulate(deltaTime, simulationLayers) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, start: UnityEngine.Vector2, _end: UnityEngine.Vector2, layerMask: number) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, start: UnityEngine.Vector2, _end: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, start: UnityEngine.Vector2, _end: UnityEngine.Vector2, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
+---@overload fun(self: UnityEngine.PhysicsScene2D, start: UnityEngine.Vector2, _end: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.RaycastHit2D[]) : number
+---@param start UnityEngine.Vector2
+---@param _end UnityEngine.Vector2
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D:Linecast(start, _end, contactFilter, results) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, direction: UnityEngine.Vector2, distance: number, layerMask: number) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, direction: UnityEngine.Vector2, distance: number, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.RaycastHit2D[]) : number
+---@param origin UnityEngine.Vector2
+---@param direction UnityEngine.Vector2
+---@param distance number
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D:Raycast(origin, direction, distance, contactFilter, results) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, radius: number, direction: UnityEngine.Vector2, distance: number, layerMask: number) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, radius: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, radius: number, direction: UnityEngine.Vector2, distance: number, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, radius: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.RaycastHit2D[]) : number
+---@param origin UnityEngine.Vector2
+---@param radius number
+---@param direction UnityEngine.Vector2
+---@param distance number
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D:CircleCast(origin, radius, direction, distance, contactFilter, results) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, direction: UnityEngine.Vector2, distance: number, layerMask: number) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, direction: UnityEngine.Vector2, distance: number, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.RaycastHit2D[]) : number
+---@param origin UnityEngine.Vector2
+---@param size UnityEngine.Vector2
+---@param angle number
+---@param direction UnityEngine.Vector2
+---@param distance number
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D:BoxCast(origin, size, angle, direction, distance, contactFilter, results) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, capsuleDirection: UnityEngine.CapsuleDirection2D, angle: number, direction: UnityEngine.Vector2, distance: number, layerMask: number) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, capsuleDirection: UnityEngine.CapsuleDirection2D, angle: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, capsuleDirection: UnityEngine.CapsuleDirection2D, angle: number, direction: UnityEngine.Vector2, distance: number, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
+---@overload fun(self: UnityEngine.PhysicsScene2D, origin: UnityEngine.Vector2, size: UnityEngine.Vector2, capsuleDirection: UnityEngine.CapsuleDirection2D, angle: number, direction: UnityEngine.Vector2, distance: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.RaycastHit2D[]) : number
+---@param origin UnityEngine.Vector2
+---@param size UnityEngine.Vector2
+---@param capsuleDirection UnityEngine.CapsuleDirection2D
+---@param angle number
+---@param direction UnityEngine.Vector2
+---@param distance number
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D:CapsuleCast(origin, size, capsuleDirection, angle, direction, distance, contactFilter, results) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, ray: UnityEngine.Ray, distance: number, layerMask: number) : UnityEngine.RaycastHit2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, ray: UnityEngine.Ray, distance: number, results: UnityEngine.RaycastHit2D[], layerMask: number) : number
+---@param ray UnityEngine.Ray
+---@param distance number
+---@param results System.Collections.Generic.List
+---@param layerMask number
+---@return number
+function UnityEngine.PhysicsScene2D:GetRayIntersection(ray, distance, results, layerMask) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, layerMask: number) : UnityEngine.Collider2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.Collider2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, results: UnityEngine.Collider2D[], layerMask: number) : number
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
+---@param point UnityEngine.Vector2
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D:OverlapPoint(point, contactFilter, results) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, radius: number, layerMask: number) : UnityEngine.Collider2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, radius: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.Collider2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, radius: number, results: UnityEngine.Collider2D[], layerMask: number) : number
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, radius: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
+---@param point UnityEngine.Vector2
+---@param radius number
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D:OverlapCircle(point, radius, contactFilter, results) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, layerMask: number) : UnityEngine.Collider2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.Collider2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, results: UnityEngine.Collider2D[], layerMask: number) : number
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, angle: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
+---@param point UnityEngine.Vector2
+---@param size UnityEngine.Vector2
+---@param angle number
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D:OverlapBox(point, size, angle, contactFilter, results) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, pointA: UnityEngine.Vector2, pointB: UnityEngine.Vector2, layerMask: number) : UnityEngine.Collider2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, pointA: UnityEngine.Vector2, pointB: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.Collider2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, pointA: UnityEngine.Vector2, pointB: UnityEngine.Vector2, results: UnityEngine.Collider2D[], layerMask: number) : number
+---@overload fun(self: UnityEngine.PhysicsScene2D, pointA: UnityEngine.Vector2, pointB: UnityEngine.Vector2, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
+---@param pointA UnityEngine.Vector2
+---@param pointB UnityEngine.Vector2
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D:OverlapArea(pointA, pointB, contactFilter, results) end
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, direction: UnityEngine.CapsuleDirection2D, angle: number, layerMask: number) : UnityEngine.Collider2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, direction: UnityEngine.CapsuleDirection2D, angle: number, contactFilter: UnityEngine.ContactFilter2D) : UnityEngine.Collider2D
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, direction: UnityEngine.CapsuleDirection2D, angle: number, results: UnityEngine.Collider2D[], layerMask: number) : number
+---@overload fun(self: UnityEngine.PhysicsScene2D, point: UnityEngine.Vector2, size: UnityEngine.Vector2, direction: UnityEngine.CapsuleDirection2D, angle: number, contactFilter: UnityEngine.ContactFilter2D, results: UnityEngine.Collider2D[]) : number
+---@param point UnityEngine.Vector2
+---@param size UnityEngine.Vector2
+---@param direction UnityEngine.CapsuleDirection2D
+---@param angle number
+---@param contactFilter UnityEngine.ContactFilter2D
+---@param results System.Collections.Generic.List
+---@return number
+function UnityEngine.PhysicsScene2D:OverlapCapsule(point, size, direction, angle, contactFilter, results) end
+
 ---@class UnityEngine.PhysicsSceneExtensions2D : System.Object
 UnityEngine.PhysicsSceneExtensions2D = {}
 ---@alias CS.UnityEngine.PhysicsSceneExtensions2D UnityEngine.PhysicsSceneExtensions2D
@@ -1001,6 +1763,48 @@ function UnityEngine.Rigidbody2D:Cast(position, angle, direction, contactFilter,
 ---@param results System.Collections.Generic.List
 ---@return number
 function UnityEngine.Rigidbody2D:Overlap(position, angle, contactFilter, results) end
+---@param endValue UnityEngine.Vector2
+---@param duration number
+---@param snapping boolean
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody2D:DOMove(endValue, duration, snapping) end
+---@param endValue number
+---@param duration number
+---@param snapping boolean
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody2D:DOMoveX(endValue, duration, snapping) end
+---@param endValue number
+---@param duration number
+---@param snapping boolean
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody2D:DOMoveY(endValue, duration, snapping) end
+---@param endValue number
+---@param duration number
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody2D:DORotate(endValue, duration) end
+---@param endValue UnityEngine.Vector2
+---@param jumpPower number
+---@param numJumps number
+---@param duration number
+---@param snapping boolean
+---@return DG.Tweening.Sequence
+function UnityEngine.Rigidbody2D:DOJump(endValue, jumpPower, numJumps, duration, snapping) end
+---@param path UnityEngine.Vector2[]
+---@param duration number
+---@param pathType DG.Tweening.PathType
+---@param pathMode DG.Tweening.PathMode
+---@param resolution number
+---@param gizmoColor System.Nullable
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody2D:DOPath(path, duration, pathType, pathMode, resolution, gizmoColor) end
+---@param path UnityEngine.Vector2[]
+---@param duration number
+---@param pathType DG.Tweening.PathType
+---@param pathMode DG.Tweening.PathMode
+---@param resolution number
+---@param gizmoColor System.Nullable
+---@return DG.Tweening.Core.TweenerCore
+function UnityEngine.Rigidbody2D:DOLocalPath(path, duration, pathType, pathMode, resolution, gizmoColor) end
 
 ---@class UnityEngine.Rigidbody2D.SlideMovement : System.ValueType
 ---@field maxIterations number
@@ -4198,826 +5002,3 @@ function UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastShapeInput.FromShape(sha
 UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastResult = {}
 ---@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastResult UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastResult
 CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastResult = UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastResult
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput : System.ValueType
----@field shapeProxyA UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@field shapeProxyB UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@field transformA UnityEngine.LowLevelPhysics2D.PhysicsTransform
----@field transformB UnityEngine.LowLevelPhysics2D.PhysicsTransform
----@field useRadii boolean
-UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput
-CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput = UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceInput
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult : System.ValueType
----@field pointA UnityEngine.Vector2
----@field pointB UnityEngine.Vector2
----@field normal UnityEngine.Vector2
----@field distance number
----@field iterations number
-UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult
-CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult = UnityEngine.LowLevelPhysics2D.PhysicsQuery.DistanceResult
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult : System.ValueType
----@field closest1 UnityEngine.Vector2
----@field closest2 UnityEngine.Vector2
----@field fraction1 number
----@field fraction2 number
----@field distance number
-UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult
-CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult = UnityEngine.LowLevelPhysics2D.PhysicsQuery.SegmentDistanceResult
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep : System.ValueType
----@field localCOM UnityEngine.Vector2
----@field positionStart UnityEngine.Vector2
----@field positionEnd UnityEngine.Vector2
----@field rotationStart UnityEngine.LowLevelPhysics2D.PhysicsRotate
----@field rotationEnd UnityEngine.LowLevelPhysics2D.PhysicsRotate
-UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep
-CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep = UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput : System.ValueType
----@field shapeProxyA UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@field shapeProxyB UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@field shapeSweepA UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep
----@field shapeSweepB UnityEngine.LowLevelPhysics2D.PhysicsQuery.ShapeSweep
----@field maxFraction number
-UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput
-CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput = UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactInput
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult : System.ValueType
----@field point UnityEngine.Vector2
----@field normal UnityEngine.Vector2
----@field impactState UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
----@field fraction number
-UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult
-CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult = UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
----@field Unknown UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
----@field Failed UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
----@field Overlapped UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
----@field Hit UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
----@field Separated UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
-UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
-CS.UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State = UnityEngine.LowLevelPhysics2D.PhysicsQuery.TimeOfImpactResult.State
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape : System.ValueType
----@field definition UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
----@field isValid boolean
----@field world UnityEngine.LowLevelPhysics2D.PhysicsWorld
----@field body UnityEngine.LowLevelPhysics2D.PhysicsBody
----@field isTrigger boolean
----@field shapeType UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
----@field transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
----@field massConfiguration UnityEngine.LowLevelPhysics2D.PhysicsBody.MassConfiguration
----@field friction number
----@field bounciness number
----@field frictionMixing UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
----@field bouncinessMixing UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
----@field frictionPriority number
----@field bouncinessPriority number
----@field rollingResistance number
----@field tangentSpeed number
----@field customColor UnityEngine.Color32
----@field surfaceMaterial UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
----@field contactFilter UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
----@field moverData UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData
----@field triggerEvents boolean
----@field contactEvents boolean
----@field hitEvents boolean
----@field contactFilterCallbacks boolean
----@field preSolveCallbacks boolean
----@field circleGeometry UnityEngine.LowLevelPhysics2D.CircleGeometry
----@field capsuleGeometry UnityEngine.LowLevelPhysics2D.CapsuleGeometry
----@field polygonGeometry UnityEngine.LowLevelPhysics2D.PolygonGeometry
----@field segmentGeometry UnityEngine.LowLevelPhysics2D.SegmentGeometry
----@field chainSegmentGeometry UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry
----@field isChainSegment boolean
----@field chain UnityEngine.LowLevelPhysics2D.PhysicsChain
----@field aabb UnityEngine.LowLevelPhysics2D.PhysicsAABB
----@field localCenter UnityEngine.Vector2
----@field isOwned boolean
----@field callbackTarget System.Object
----@field userData UnityEngine.LowLevelPhysics2D.PhysicsUserData
-UnityEngine.LowLevelPhysics2D.PhysicsShape = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape UnityEngine.LowLevelPhysics2D.PhysicsShape
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape = UnityEngine.LowLevelPhysics2D.PhysicsShape
-
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsShape
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsShape
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsShape
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsShape
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsShape
----@param body UnityEngine.LowLevelPhysics2D.PhysicsBody
----@param geometry UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry
----@return UnityEngine.LowLevelPhysics2D.PhysicsShape
-function UnityEngine.LowLevelPhysics2D.PhysicsShape.CreateShape(body, geometry) end
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: System.ReadOnlySpan, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: System.ReadOnlySpan, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: System.ReadOnlySpan, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@overload fun(body: UnityEngine.LowLevelPhysics2D.PhysicsBody, geometry: System.ReadOnlySpan, definition: UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@param body UnityEngine.LowLevelPhysics2D.PhysicsBody
----@param geometry System.ReadOnlySpan
----@param definition UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsShape.CreateShapeBatch(body, geometry, definition, allocator) end
----@param shapes System.ReadOnlySpan
----@param updateBodyMass boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsShape.DestroyBatch(shapes, updateBodyMass) end
----@return string
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:ToString() end
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsShape, obj: System.Object) : boolean
----@param other UnityEngine.LowLevelPhysics2D.PhysicsShape
----@return boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:Equals(other) end
----@return number
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetHashCode() end
----@param updateBodyMass boolean
----@param ownerKey number
----@return boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:Destroy(updateBodyMass, ownerKey) end
----@param density number
----@param updateBodyMass boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:SetDensity(density, updateBodyMass) end
----@return number
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetDensity() end
----@param force UnityEngine.Vector2
----@param drag number
----@param lift number
----@param wake boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:ApplyWind(force, drag, lift, wake) end
----@param point UnityEngine.Vector2
----@return boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:OverlapPoint(point) end
----@param point UnityEngine.Vector2
----@return UnityEngine.Vector2
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:ClosestPoint(point) end
----@param castRayInput UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastRayInput
----@return UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastResult
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:CastRay(castRayInput) end
----@param input UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastShapeInput
----@return UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastResult
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:CastShape(input) end
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsShape, otherShape: UnityEngine.LowLevelPhysics2D.PhysicsShape) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
----@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
----@param otherShape UnityEngine.LowLevelPhysics2D.PhysicsShape
----@param otherTransform UnityEngine.LowLevelPhysics2D.PhysicsTransform
----@return UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:Intersect(transform, otherShape, otherTransform) end
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetContacts(allocator) end
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetTriggerVisitors(allocator) end
----@return number
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetPerimeter() end
----@param axis UnityEngine.Vector2
----@return number
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetPerimeterProjected(axis) end
----@param owner UnityEngine.Object
----@return number
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:SetOwner(owner) end
----@return UnityEngine.Object
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:GetOwner() end
----@return UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:CreateShapeProxy() end
-function UnityEngine.LowLevelPhysics2D.PhysicsShape:Draw() end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
----@field Circle UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
----@field Capsule UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
----@field Segment UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
----@field Polygon UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
----@field ChainSegment UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
-UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType = UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeType
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial : System.ValueType
----@field Default UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
----@field friction number
----@field bounciness number
----@field frictionMixing UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
----@field bouncinessMixing UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
----@field frictionPriority number
----@field bouncinessPriority number
----@field rollingResistance number
----@field tangentSpeed number
----@field customColor UnityEngine.Color32
-UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial = UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
-
----@return UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
-function UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.New() end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
----@field Average UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
----@field Mean UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
----@field Multiply UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
----@field Minimum UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
----@field Maximum UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
-UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode = UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial.MixingMode
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold : System.ValueType
----@field normal UnityEngine.Vector2
----@field rollingImpulse number
----@field points UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray
----@field pointCount number
----@field speculativePointCount number
----@field Item UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
-UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
-
----@return System.Collections.Generic.IEnumerator
-function UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold:GetEnumerator() end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint : System.ValueType
----@field point UnityEngine.Vector2
----@field anchorA UnityEngine.Vector2
----@field anchorB UnityEngine.Vector2
----@field separation number
----@field normalImpulse number
----@field tangentImpulse number
----@field totalNormalImpulse number
----@field normalVelocity number
----@field id number
----@field persisted boolean
----@field speculative boolean
-UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray : System.ValueType
----@field contactInfo0 UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
----@field contactInfo1 UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
----@field Item UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPoint
----@field speculativePointCount number
-UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointArray
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator : System.ValueType
-UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator
-
----@param contactManifold UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
----@return UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator
-function UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold.ManifoldPointIterator.New(contactManifold) end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact : System.ValueType
----@field contactId UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId
----@field shapeA UnityEngine.LowLevelPhysics2D.PhysicsShape
----@field shapeB UnityEngine.LowLevelPhysics2D.PhysicsShape
----@field manifold UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactManifold
-UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact = UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId : System.ValueType
----@field isValid boolean
----@field contact UnityEngine.LowLevelPhysics2D.PhysicsShape.Contact
-UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId
-
----@return string
-function UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactId:ToString() end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter : System.ValueType
----@field DefaultCategories UnityEngine.LowLevelPhysics2D.PhysicsMask
----@field DefaultContacts UnityEngine.LowLevelPhysics2D.PhysicsMask
----@field Everything UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
----@field defaultFilter UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
----@field categories UnityEngine.LowLevelPhysics2D.PhysicsMask
----@field contacts UnityEngine.LowLevelPhysics2D.PhysicsMask
----@field groupIndex number
-UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter = UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
-
----@param categories UnityEngine.LowLevelPhysics2D.PhysicsMask
----@param contacts UnityEngine.LowLevelPhysics2D.PhysicsMask
----@param groupIndex number
----@return UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
-function UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter.New(categories, contacts, groupIndex) end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray : System.ValueType
----@field vertex0 UnityEngine.Vector2
----@field vertex1 UnityEngine.Vector2
----@field vertex2 UnityEngine.Vector2
----@field vertex3 UnityEngine.Vector2
----@field vertex4 UnityEngine.Vector2
----@field vertex5 UnityEngine.Vector2
----@field vertex6 UnityEngine.Vector2
----@field vertex7 UnityEngine.Vector2
----@field Item UnityEngine.Vector2&
-UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray = UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData : System.ValueType
----@field pushLimit number
----@field clipVelocity boolean
-UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData = UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData
-
----@return UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData
-function UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData.New() end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy : System.ValueType
----@field circleGeometry UnityEngine.LowLevelPhysics2D.CircleGeometry
----@field capsuleGeometry UnityEngine.LowLevelPhysics2D.CapsuleGeometry
----@field polygonGeometry UnityEngine.LowLevelPhysics2D.PolygonGeometry
----@field segmentGeometry UnityEngine.LowLevelPhysics2D.SegmentGeometry
----@field vertices UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeArray
----@field count number
----@field radius number
-UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy = UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
-
----@overload fun(point: UnityEngine.Vector2) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@overload fun(circleGeometry: UnityEngine.LowLevelPhysics2D.CircleGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@overload fun(capsuleGeometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@overload fun(polygonGeometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@overload fun(segmentGeometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry) : UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@param chainSegmentGeometry UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry
----@return UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
-function UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy.New(chainSegmentGeometry) end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition : System.ValueType
----@field surfaceMaterial UnityEngine.LowLevelPhysics2D.PhysicsShape.SurfaceMaterial
----@field contactFilter UnityEngine.LowLevelPhysics2D.PhysicsShape.ContactFilter
----@field moverData UnityEngine.LowLevelPhysics2D.PhysicsShape.MoverData
----@field defaultDefinition UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
----@field density number
----@field isTrigger boolean
----@field triggerEvents boolean
----@field contactEvents boolean
----@field hitEvents boolean
----@field contactFilterCallbacks boolean
----@field preSolveCallbacks boolean
----@field startStaticContacts boolean
----@field startMassUpdate boolean
-UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
-CS.UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition = UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
-
----@overload fun() : UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
----@param useSettings boolean
----@return UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition
-function UnityEngine.LowLevelPhysics2D.PhysicsShapeDefinition.New(useSettings) end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsWorld : System.ValueType
----@field safetyLocksEnabled boolean
----@field bypassLowLevel boolean
----@field isRenderingAllowed boolean
----@field worldCount number
----@field concurrentSimulations number
----@field lengthUnitsPerMeter number
----@field useFullLayers boolean
----@field hugeWorldExtent number
----@field linearSlop number
----@field speculativeContactDistance number
----@field aabbMargin number
----@field bodyMaxRotation number
----@field bodyTimeToSleep number
----@field defaultWorld UnityEngine.LowLevelPhysics2D.PhysicsWorld
----@field globalCounters UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
----@field globalProfile UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
----@field definition UnityEngine.LowLevelPhysics2D.PhysicsWorldDefinition
----@field isOwned boolean
----@field userData UnityEngine.LowLevelPhysics2D.PhysicsUserData
----@field isValid boolean
----@field isEmpty boolean
----@field isDefaultWorld boolean
----@field paused boolean
----@field sleepingAllowed boolean
----@field continuousAllowed boolean
----@field contactFilterCallbacks boolean
----@field preSolveCallbacks boolean
----@field autoBodyUpdateCallbacks boolean
----@field autoContactCallbacks boolean
----@field autoTriggerCallbacks boolean
----@field autoJointThresholdCallbacks boolean
----@field warmStartingAllowed boolean
----@field bounceThreshold number
----@field contactHitEventThreshold number
----@field contactFrequency number
----@field contactDamping number
----@field contactSpeed number
----@field maximumLinearSpeed number
----@field gravity UnityEngine.Vector2
----@field simulationWorkers number
----@field simulationType UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
----@field simulationSubSteps number
----@field lastSimulationTimestamp number
----@field lastSimulationDeltaTime number
----@field transformPlane UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
----@field transformWriteMode UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
----@field transformTweening boolean
----@field bodyUpdateEvents System.ReadOnlySpan
----@field triggerBeginEvents System.ReadOnlySpan
----@field triggerEndEvents System.ReadOnlySpan
----@field contactBeginEvents System.ReadOnlySpan
----@field contactEndEvents System.ReadOnlySpan
----@field contactHitEvents System.ReadOnlySpan
----@field jointThresholdEvents System.ReadOnlySpan
----@field awakeBodyCount number
----@field counters UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
----@field profile UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
----@field drawOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field drawFillOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
----@field drawThickness number
----@field drawFillAlpha number
----@field drawPointScale number
----@field drawNormalScale number
----@field drawImpulseScale number
----@field drawCapacity number
----@field drawColors UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawColors
----@field elementDepth number
-UnityEngine.LowLevelPhysics2D.PhysicsWorld = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld UnityEngine.LowLevelPhysics2D.PhysicsWorld
-CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld = UnityEngine.LowLevelPhysics2D.PhysicsWorld
-
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld.GetWorlds(allocator) end
----@overload fun() : UnityEngine.LowLevelPhysics2D.PhysicsWorld
----@param definition UnityEngine.LowLevelPhysics2D.PhysicsWorldDefinition
----@return UnityEngine.LowLevelPhysics2D.PhysicsWorld
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld.Create(definition) end
----@overload fun(worlds: System.ReadOnlySpan, deltaTime: number)
----@param deltaTime number
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:Simulate(deltaTime) end
----@param bodies System.ReadOnlySpan
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld.DestroyBodyBatch(bodies) end
----@param shapes System.ReadOnlySpan
----@param updateBodyMass boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld.DestroyShapeBatch(shapes, updateBodyMass) end
----@param joints System.ReadOnlySpan
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld.DestroyJointBatch(joints) end
----@return string
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:ToString() end
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, obj: System.Object) : boolean
----@param other UnityEngine.LowLevelPhysics2D.PhysicsWorld
----@return boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:Equals(other) end
----@return number
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetHashCode() end
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetBodies(allocator) end
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetJoints(allocator) end
----@param ownerKey number
----@return boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:Destroy(ownerKey) end
----@param owner UnityEngine.Object
----@return number
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SetOwner(owner) end
----@return UnityEngine.Object
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetOwner() end
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:Reset() end
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetTransformWriteTweens() end
----@param definition UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:Explode(definition) end
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetBodyUpdateUserData(allocator) end
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SendAllCallbacks() end
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SendBodyUpdateCallbacks() end
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SendContactCallbacks() end
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SendTriggerCallbacks() end
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SendJointThresholdCallbacks() end
----@param allocator Unity.Collections.Allocator
----@return UnityEngine.LowLevelPhysics2D.PhysicsCallbacks.BodyUpdateCallbackTargets
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetBodyUpdateCallbackTargets(allocator) end
----@param allocator Unity.Collections.Allocator
----@return UnityEngine.LowLevelPhysics2D.PhysicsCallbacks.TriggerCallbackTargets
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetTriggerCallbackTargets(allocator) end
----@param allocator Unity.Collections.Allocator
----@return UnityEngine.LowLevelPhysics2D.PhysicsCallbacks.ContactCallbackTargets
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetContactCallbackTargets(allocator) end
----@param allocator Unity.Collections.Allocator
----@return UnityEngine.LowLevelPhysics2D.PhysicsCallbacks.JointThresholdCallbackTargets
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:GetJointThresholdCallbackTargets(allocator) end
----@param aabb UnityEngine.LowLevelPhysics2D.PhysicsAABB
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@return boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:TestOverlapAABB(aabb, filter) end
----@param shape UnityEngine.LowLevelPhysics2D.PhysicsShape
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@return boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:TestOverlapShape(shape, filter) end
----@param shapeProxy UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@return boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:TestOverlapShapeProxy(shapeProxy, filter) end
----@param point UnityEngine.Vector2
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@return boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:TestOverlapPoint(point, filter) end
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter) : boolean
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter) : boolean
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter) : boolean
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter) : boolean
----@param geometry UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@return boolean
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:TestOverlapGeometry(geometry, filter) end
----@param aabb UnityEngine.LowLevelPhysics2D.PhysicsAABB
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:OverlapAABB(aabb, filter, allocator) end
----@param shape UnityEngine.LowLevelPhysics2D.PhysicsShape
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:OverlapShape(shape, filter, allocator) end
----@param shapeProxy UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:OverlapShapeProxy(shapeProxy, filter, allocator) end
----@param point UnityEngine.Vector2
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:OverlapPoint(point, filter, allocator) end
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@param geometry UnityEngine.LowLevelPhysics2D.ChainSegmentGeometry
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:OverlapGeometry(geometry, filter, allocator) end
----@param input UnityEngine.LowLevelPhysics2D.PhysicsQuery.CastRayInput
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@param castMode UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CastRay(input, filter, castMode, allocator) end
----@param shape UnityEngine.LowLevelPhysics2D.PhysicsShape
----@param translation UnityEngine.Vector2
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@param castMode UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CastShape(shape, translation, filter, castMode, allocator) end
----@param shapeProxy UnityEngine.LowLevelPhysics2D.PhysicsShape.ShapeProxy
----@param translation UnityEngine.Vector2
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@param castMode UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CastShapeProxy(shapeProxy, translation, filter, castMode, allocator) end
----@param input UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldMoverInput
----@return UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldMoverResult
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CastMover(input) end
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry, translation: UnityEngine.Vector2, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, castMode: UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry, translation: UnityEngine.Vector2, filter: UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter, castMode: UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@param geometry UnityEngine.LowLevelPhysics2D.PolygonGeometry
----@param translation UnityEngine.Vector2
----@param filter UnityEngine.LowLevelPhysics2D.PhysicsQuery.QueryFilter
----@param castMode UnityEngine.LowLevelPhysics2D.PhysicsQuery.WorldCastMode
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CastGeometry(geometry, translation, filter, castMode, allocator) end
----@overload fun() : UnityEngine.LowLevelPhysics2D.PhysicsBody
----@param definition UnityEngine.LowLevelPhysics2D.PhysicsBodyDefinition
----@return UnityEngine.LowLevelPhysics2D.PhysicsBody
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CreateBody(definition) end
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsBodyDefinition, bodyCount: number, allocator: Unity.Collections.Allocator) : Unity.Collections.NativeArray
----@param definitions System.ReadOnlySpan
----@param allocator Unity.Collections.Allocator
----@return Unity.Collections.NativeArray
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CreateBodyBatch(definitions, allocator) end
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsDistanceJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsDistanceJoint
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsRelativeJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsRelativeJoint
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsIgnoreJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsIgnoreJoint
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsSliderJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsSliderJoint
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsHingeJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsHingeJoint
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, definition: UnityEngine.LowLevelPhysics2D.PhysicsFixedJointDefinition) : UnityEngine.LowLevelPhysics2D.PhysicsFixedJoint
----@param definition UnityEngine.LowLevelPhysics2D.PhysicsWheelJointDefinition
----@return UnityEngine.LowLevelPhysics2D.PhysicsWheelJoint
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:CreateJoint(definition) end
----@param position UnityEngine.Vector3
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:SetElementDepth3D(position) end
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:ClearDraw() end
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CircleGeometry, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: System.ReadOnlySpan, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.CapsuleGeometry, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: System.ReadOnlySpan, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.PolygonGeometry, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: System.ReadOnlySpan, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number, drawFillOptions: UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions)
----@overload fun(self: UnityEngine.LowLevelPhysics2D.PhysicsWorld, geometry: UnityEngine.LowLevelPhysics2D.SegmentGeometry, transform: UnityEngine.LowLevelPhysics2D.PhysicsTransform, color: UnityEngine.Color, lifetime: number)
----@param geometry System.ReadOnlySpan
----@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
----@param color UnityEngine.Color
----@param lifetime number
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawGeometry(geometry, transform, color, lifetime) end
----@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
----@param size UnityEngine.Vector2
----@param radius number
----@param color UnityEngine.Color
----@param lifetime number
----@param drawFillOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawBox(transform, size, radius, color, lifetime, drawFillOptions) end
----@param center UnityEngine.Vector2
----@param radius number
----@param color UnityEngine.Color
----@param lifetime number
----@param drawFillOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawCircle(center, radius, color, lifetime, drawFillOptions) end
----@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
----@param center1 UnityEngine.Vector2
----@param center2 UnityEngine.Vector2
----@param radius number
----@param color UnityEngine.Color
----@param lifetime number
----@param drawFillOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawFillOptions
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawCapsule(transform, center1, center2, radius, color, lifetime, drawFillOptions) end
----@param position UnityEngine.Vector2
----@param radius number
----@param color UnityEngine.Color
----@param lifetime number
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawPoint(position, radius, color, lifetime) end
----@param point0 UnityEngine.Vector2
----@param point1 UnityEngine.Vector2
----@param color UnityEngine.Color
----@param lifetime number
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawLine(point0, point1, color, lifetime) end
----@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
----@param vertices System.ReadOnlySpan
----@param loop boolean
----@param color UnityEngine.Color
----@param lifetime number
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawLineStrip(transform, vertices, loop, color, lifetime) end
----@param transform UnityEngine.LowLevelPhysics2D.PhysicsTransform
----@param scale number
----@param lifetime number
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld:DrawTransformAxis(transform, scale, lifetime) end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
----@field FixedUpdate UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
----@field Update UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
----@field Script UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
-UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
-CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType = UnityEngine.LowLevelPhysics2D.PhysicsWorld.SimulationType
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
----@field Off UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
----@field Fast2D UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
----@field Slow3D UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
-UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
-CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode = UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformWriteMode
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
----@field XY UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
----@field XZ UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
----@field ZY UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
-UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
-CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane = UnityEngine.LowLevelPhysics2D.PhysicsWorld.TransformPlane
-
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition : System.ValueType
----@field defaultDefinition UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition
----@field hitCategories UnityEngine.LowLevelPhysics2D.PhysicsMask
----@field position UnityEngine.Vector2
----@field radius number
----@field falloff number
----@field impulsePerLength number
-UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition
-CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition = UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition
-
----@return UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld.ExplosionDefinition.New() end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters : System.ValueType
----@field bodyCount number
----@field shapeCount number
----@field contactCount number
----@field jointCount number
----@field islandCount number
----@field stackUsed number
----@field memoryUsed number
----@field staticBroadphaseHeight number
----@field broadphaseHeight number
----@field taskCount number
-UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
-CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters = UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
-
----@param countersA UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
----@param countersB UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
----@return UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters.Add(countersA, countersB) end
----@param countersA UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
----@param countersB UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
----@return UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldCounters.Maximum(countersA, countersB) end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile : System.ValueType
----@field simulationStep number
----@field contactPairs number
----@field contactUpdates number
----@field solving number
----@field prepareStages number
----@field solveConstraints number
----@field prepareConstraints number
----@field integrateVelocities number
----@field warmStarting number
----@field solveImpulses number
----@field integrateTransforms number
----@field relaxImpulses number
----@field applyBounciness number
----@field storeImpulses number
----@field splitIslands number
----@field bodyTransforms number
----@field fastTriggers number
----@field jointEvents number
----@field hitEvents number
----@field broadphaseUpdates number
----@field solveContinuous number
----@field sleepIslands number
----@field updateTriggers number
----@field writeTransforms number
-UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
-CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile = UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
-
----@param profileA UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
----@param profileB UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
----@return UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile.Add(profileA, profileB) end
----@param profileA UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
----@param profileB UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
----@return UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile
-function UnityEngine.LowLevelPhysics2D.PhysicsWorld.WorldProfile.Maximum(profileA, profileB) end
-
----@class UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field Off UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field SelectedBodies UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field SelectedShapes UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field SelectedShapeBounds UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field SelectedJoints UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field AllBodies UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field AllShapes UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field AllShapeBounds UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field AllJoints UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field AllContactPoints UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field AllContactNormal UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field AllContactImpulse UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field AllContactFriction UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field AllCustom UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field AllSolverIslands UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field DefaultAll UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
----@field DefaultSelected UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
-UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions = {}
----@alias CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions
-CS.UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions = UnityEngine.LowLevelPhysics2D.PhysicsWorld.DrawOptions

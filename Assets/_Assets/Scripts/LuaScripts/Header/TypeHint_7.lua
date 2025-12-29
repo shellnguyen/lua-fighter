@@ -1,5 +1,592 @@
 ---@meta
 
+
+---@class UnityEngine.Experimental.Rendering.DefaultFormat
+---@field LDR UnityEngine.Experimental.Rendering.DefaultFormat
+---@field HDR UnityEngine.Experimental.Rendering.DefaultFormat
+---@field DepthStencil UnityEngine.Experimental.Rendering.DefaultFormat
+---@field Shadow UnityEngine.Experimental.Rendering.DefaultFormat
+---@field Video UnityEngine.Experimental.Rendering.DefaultFormat
+UnityEngine.Experimental.Rendering.DefaultFormat = {}
+---@alias CS.UnityEngine.Experimental.Rendering.DefaultFormat UnityEngine.Experimental.Rendering.DefaultFormat
+CS.UnityEngine.Experimental.Rendering.DefaultFormat = UnityEngine.Experimental.Rendering.DefaultFormat
+
+
+---@class UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field None UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8B8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8B8A8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8B8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8B8A8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8B8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8B8A8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8B8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8B8A8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8B8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R8G8B8A8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16B16_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16B16A16_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16B16_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16B16A16_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16B16_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16B16A16_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16B16_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16B16A16_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32G32_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32G32B32_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32G32B32A32_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32G32_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32G32B32_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32G32B32A32_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16B16_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R16G16B16A16_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32G32_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32G32B32_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R32G32B32A32_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B8G8R8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B8G8R8A8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B8G8R8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B8G8R8A8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B8G8R8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B8G8R8A8_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B8G8R8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B8G8R8A8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B8G8R8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B8G8R8A8_SInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R4G4B4A4_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B4G4R4A4_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R5G6B5_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B5G6R5_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R5G5B5A1_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B5G5R5A1_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A1R5G5B5_UNormPack16 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field E5B9G9R9_UFloatPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field B10G11R11_UFloatPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A2B10G10R10_UNormPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A2B10G10R10_UIntPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A2B10G10R10_SIntPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A2R10G10B10_UNormPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A2R10G10B10_UIntPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A2R10G10B10_SIntPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A2R10G10B10_XRSRGBPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A2R10G10B10_XRUNormPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R10G10B10_XRSRGBPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R10G10B10_XRUNormPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A10R10G10B10_XRSRGBPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field A10R10G10B10_XRUNormPack32 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field D16_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field D24_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field D24_UNorm_S8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field D32_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field D32_SFloat_S8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field S8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_DXT1_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_DXT1_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_DXT3_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_DXT3_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_DXT5_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_DXT5_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R_BC4_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R_BC4_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RG_BC5_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RG_BC5_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGB_BC6H_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGB_BC6H_SFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_BC7_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_BC7_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGB_ETC_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGB_ETC2_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGB_ETC2_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGB_A1_ETC2_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGB_A1_ETC2_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ETC2_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ETC2_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R_EAC_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field R_EAC_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RG_EAC_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RG_EAC_SNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC4X4_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC4X4_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC5X5_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC5X5_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC6X6_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC6X6_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC8X8_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC8X8_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC10X10_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC10X10_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC12X12_SRGB UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC12X12_UNorm UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field YUV2 UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC4X4_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC5X5_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC6X6_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC8X8_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC10X10_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field RGBA_ASTC12X12_UFloat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@field D16_UNorm_S8_UInt UnityEngine.Experimental.Rendering.GraphicsFormat
+UnityEngine.Experimental.Rendering.GraphicsFormat = {}
+---@alias CS.UnityEngine.Experimental.Rendering.GraphicsFormat UnityEngine.Experimental.Rendering.GraphicsFormat
+CS.UnityEngine.Experimental.Rendering.GraphicsFormat = UnityEngine.Experimental.Rendering.GraphicsFormat
+
+
+---@class UnityEngine.Experimental.Rendering.RayTracingMode
+---@field Off UnityEngine.Experimental.Rendering.RayTracingMode
+---@field Static UnityEngine.Experimental.Rendering.RayTracingMode
+---@field DynamicTransform UnityEngine.Experimental.Rendering.RayTracingMode
+---@field DynamicGeometry UnityEngine.Experimental.Rendering.RayTracingMode
+---@field DynamicGeometryManualUpdate UnityEngine.Experimental.Rendering.RayTracingMode
+UnityEngine.Experimental.Rendering.RayTracingMode = {}
+---@alias CS.UnityEngine.Experimental.Rendering.RayTracingMode UnityEngine.Experimental.Rendering.RayTracingMode
+CS.UnityEngine.Experimental.Rendering.RayTracingMode = UnityEngine.Experimental.Rendering.RayTracingMode
+
+
+---@class UnityEngine.Experimental.Rendering.GraphicsFormatUtility : System.Object
+UnityEngine.Experimental.Rendering.GraphicsFormatUtility = {}
+---@alias CS.UnityEngine.Experimental.Rendering.GraphicsFormatUtility UnityEngine.Experimental.Rendering.GraphicsFormatUtility
+CS.UnityEngine.Experimental.Rendering.GraphicsFormatUtility = UnityEngine.Experimental.Rendering.GraphicsFormatUtility
+
+---@return UnityEngine.Experimental.Rendering.GraphicsFormatUtility
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.New() end
+---@overload fun(format: UnityEngine.TextureFormat, isSRGB: boolean) : UnityEngine.Experimental.Rendering.GraphicsFormat
+---@overload fun(format: UnityEngine.RenderTextureFormat, isSRGB: boolean) : UnityEngine.Experimental.Rendering.GraphicsFormat
+---@param format UnityEngine.RenderTextureFormat
+---@param readWrite UnityEngine.RenderTextureReadWrite
+---@return UnityEngine.Experimental.Rendering.GraphicsFormat
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetGraphicsFormat(format, readWrite) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return UnityEngine.TextureFormat
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetTextureFormat(format) end
+---@overload fun(depthBits: number) : UnityEngine.Experimental.Rendering.GraphicsFormat
+---@param minimumDepthBits number
+---@param minimumStencilBits number
+---@return UnityEngine.Experimental.Rendering.GraphicsFormat
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetDepthStencilFormat(minimumDepthBits, minimumStencilBits) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return number
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetDepthBits(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSRGBFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSwizzleFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return UnityEngine.Experimental.Rendering.GraphicsFormat
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetSRGBFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return UnityEngine.Experimental.Rendering.GraphicsFormat
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetLinearFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return UnityEngine.RenderTextureFormat
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetRenderTextureFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
+---@param format UnityEngine.TextureFormat
+---@return number
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetColorComponentCount(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
+---@param format UnityEngine.TextureFormat
+---@return number
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetAlphaComponentCount(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
+---@param format UnityEngine.TextureFormat
+---@return number
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetComponentCount(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : string
+---@param format UnityEngine.TextureFormat
+---@return string
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetFormatString(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsCompressedFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsPackedFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.Is16BitPackedFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : UnityEngine.Experimental.Rendering.GraphicsFormat
+---@param format UnityEngine.TextureFormat
+---@return UnityEngine.TextureFormat
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.ConvertToAlphaFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsAlphaOnlyFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsAlphaTestFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.HasAlphaChannel(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsDepthFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsStencilFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsDepthStencilFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsIEEE754Format(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsFloatFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsHalfFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsUnsignedFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSignedFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsNormFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsUNormFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSNormFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsIntegerFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsUIntFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSIntFormat(format) end
+---@param format UnityEngine.Experimental.Rendering.GraphicsFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsXRFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsDXTCFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsRGTCFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsBPTCFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsBCFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsETCFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsEACFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsASTCFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : boolean
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsHDRFormat(format) end
+---@param format UnityEngine.TextureFormat
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsCrunchFormat(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : UnityEngine.Rendering.FormatSwizzle
+---@param format UnityEngine.TextureFormat
+---@return UnityEngine.Rendering.FormatSwizzle
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetSwizzleR(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : UnityEngine.Rendering.FormatSwizzle
+---@param format UnityEngine.TextureFormat
+---@return UnityEngine.Rendering.FormatSwizzle
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetSwizzleG(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : UnityEngine.Rendering.FormatSwizzle
+---@param format UnityEngine.TextureFormat
+---@return UnityEngine.Rendering.FormatSwizzle
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetSwizzleB(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : UnityEngine.Rendering.FormatSwizzle
+---@param format UnityEngine.TextureFormat
+---@return UnityEngine.Rendering.FormatSwizzle
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetSwizzleA(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
+---@param format UnityEngine.TextureFormat
+---@return number
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetBlockSize(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
+---@param format UnityEngine.TextureFormat
+---@return number
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetBlockWidth(format) end
+---@overload fun(format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
+---@param format UnityEngine.TextureFormat
+---@return number
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetBlockHeight(format) end
+---@overload fun(width: number, height: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
+---@overload fun(width: number, height: number, format: UnityEngine.TextureFormat) : number
+---@overload fun(width: number, height: number, depth: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat) : number
+---@param width number
+---@param height number
+---@param depth number
+---@param format UnityEngine.TextureFormat
+---@return number
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.ComputeMipmapSize(width, height, depth, format) end
+---@overload fun(width: number, height: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat, mipCount: number) : number
+---@overload fun(width: number, height: number, format: UnityEngine.TextureFormat, mipCount: number) : number
+---@overload fun(width: number, height: number, depth: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat, mipCount: number) : number
+---@param width number
+---@param height number
+---@param depth number
+---@param format UnityEngine.TextureFormat
+---@param mipCount number
+---@return number
+function UnityEngine.Experimental.Rendering.GraphicsFormatUtility.ComputeMipChainSize(width, height, depth, format, mipCount) end
+
+---@class UnityEngine.Experimental.Rendering.GraphicsStateCollection : UnityEngine.Object
+---@field isTracing boolean
+---@field version number
+---@field graphicsDeviceType UnityEngine.Rendering.GraphicsDeviceType
+---@field runtimePlatform UnityEngine.RuntimePlatform
+---@field qualityLevelName string
+---@field totalGraphicsStateCount number
+---@field completedWarmupCount number
+---@field isWarmedUp boolean
+---@field variantCount number
+UnityEngine.Experimental.Rendering.GraphicsStateCollection = {}
+---@alias CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection UnityEngine.Experimental.Rendering.GraphicsStateCollection
+CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection = UnityEngine.Experimental.Rendering.GraphicsStateCollection
+
+---@overload fun() : UnityEngine.Experimental.Rendering.GraphicsStateCollection
+---@param filePath string
+---@return UnityEngine.Experimental.Rendering.GraphicsStateCollection
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection.New(filePath) end
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:BeginTrace() end
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:EndTrace() end
+---@param filePath string
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:LoadFromFile(filePath) end
+---@param filePath string
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:SaveToFile(filePath) end
+---@param fileName string
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:SendToEditor(fileName) end
+---@param dependency Unity.Jobs.JobHandle
+---@return Unity.Jobs.JobHandle
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:WarmUp(dependency) end
+---@param count number
+---@param dependency Unity.Jobs.JobHandle
+---@return Unity.Jobs.JobHandle
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:WarmUpProgressively(count, dependency) end
+---@param results System.Collections.Generic.List
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:GetVariants(results) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[], results: System.Collections.Generic.List)
+---@param variant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
+---@param results System.Collections.Generic.List
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:GetGraphicsStatesForVariant(variant, results) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : number
+---@param variant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
+---@return number
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:GetGraphicsStateCountForVariant(variant) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : boolean
+---@param mat UnityEngine.Material
+---@param passId UnityEngine.Rendering.PassIdentifier
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:AddVariant(mat, passId) end
+---@param mat UnityEngine.Material
+---@param subshaderIndex number
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:AddVariants(mat, subshaderIndex) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : boolean
+---@param mat UnityEngine.Material
+---@param passId UnityEngine.Rendering.PassIdentifier
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:RemoveVariant(mat, passId) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : boolean
+---@param mat UnityEngine.Material
+---@param passId UnityEngine.Rendering.PassIdentifier
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:ContainsVariant(mat, passId) end
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:ClearVariants() end
+---@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[], setup: UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState) : boolean
+---@param variant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
+---@param setup UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:AddGraphicsStateForVariant(variant, setup) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : boolean
+---@param variant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:RemoveGraphicsStatesForVariant(variant) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.GraphicsStateCollection, srcShader: UnityEngine.Shader, srcPassId: UnityEngine.Rendering.PassIdentifier, srcKeywords: UnityEngine.Rendering.LocalKeyword[], dstShader: UnityEngine.Shader, dstPassId: UnityEngine.Rendering.PassIdentifier, dstKeywords: UnityEngine.Rendering.LocalKeyword[]) : boolean
+---@param srcVariant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
+---@param dstVariant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
+---@return boolean
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection:CopyGraphicsStatesForVariant(srcVariant, dstVariant) end
+
+---@class UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState : System.ValueType
+---@field vertexAttributes UnityEngine.Rendering.VertexAttributeDescriptor[]
+---@field attachments UnityEngine.Rendering.AttachmentDescriptor[]
+---@field subPasses UnityEngine.Rendering.SubPassDescriptor[]
+---@field renderState UnityEngine.Rendering.RenderStateBlock
+---@field topology UnityEngine.MeshTopology
+---@field forceCullMode UnityEngine.Rendering.CullMode
+---@field shadingRateCombinerPrimitive UnityEngine.Rendering.ShadingRateCombiner
+---@field shadingRateCombinerFragment UnityEngine.Rendering.ShadingRateCombiner
+---@field baseShadingRate UnityEngine.Rendering.ShadingRateFragmentSize
+---@field depthBias number
+---@field slopeDepthBias number
+---@field depthAttachmentIndex number
+---@field subPassIndex number
+---@field shadingRateIndex number
+---@field multiviewCount number
+---@field sampleCount number
+---@field hasEyeTexture boolean
+---@field wireframe boolean
+---@field invertCulling boolean
+---@field negativeScale boolean
+---@field invertProjection boolean
+UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState = {}
+---@alias CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState
+CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState = UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState
+
+---@param mesh UnityEngine.Mesh
+---@param submesh number
+---@param renderer UnityEngine.Renderer
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState:SetMeshData(mesh, submesh, renderer) end
+---@param samples number
+---@param attachments Unity.Collections.NativeArray
+---@param subPasses Unity.Collections.NativeArray
+---@param subPassIndex number
+---@param depthAttachmentIndex number
+---@param shadingRateIndex number
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState:SetRenderPassData(samples, attachments, subPasses, subPassIndex, depthAttachmentIndex, shadingRateIndex) end
+---@param shader UnityEngine.Shader
+---@param passId UnityEngine.Rendering.PassIdentifier
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection.GraphicsState:SetRenderStateData(shader, passId) end
+
+---@class UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant : System.ValueType
+---@field shader UnityEngine.Shader
+---@field passId UnityEngine.Rendering.PassIdentifier
+---@field keywords UnityEngine.Rendering.LocalKeyword[]
+UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant = {}
+---@alias CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
+CS.UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant = UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
+
+---@overload fun(shader: UnityEngine.Shader, passId: UnityEngine.Rendering.PassIdentifier, keywords: UnityEngine.Rendering.LocalKeyword[]) : UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
+---@param material UnityEngine.Material
+---@param passId UnityEngine.Rendering.PassIdentifier
+---@return UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant
+function UnityEngine.Experimental.Rendering.GraphicsStateCollection.ShaderVariant.New(material, passId) end
+
+---@class UnityEngine.Experimental.Rendering.ShaderWarmupSetup : System.ValueType
+---@field vdecl UnityEngine.Rendering.VertexAttributeDescriptor[]
+UnityEngine.Experimental.Rendering.ShaderWarmupSetup = {}
+---@alias CS.UnityEngine.Experimental.Rendering.ShaderWarmupSetup UnityEngine.Experimental.Rendering.ShaderWarmupSetup
+CS.UnityEngine.Experimental.Rendering.ShaderWarmupSetup = UnityEngine.Experimental.Rendering.ShaderWarmupSetup
+
+
+---@class UnityEngine.Experimental.Rendering.ShaderWarmup : System.Object
+UnityEngine.Experimental.Rendering.ShaderWarmup = {}
+---@alias CS.UnityEngine.Experimental.Rendering.ShaderWarmup UnityEngine.Experimental.Rendering.ShaderWarmup
+CS.UnityEngine.Experimental.Rendering.ShaderWarmup = UnityEngine.Experimental.Rendering.ShaderWarmup
+
+---@param shader UnityEngine.Shader
+---@param setup UnityEngine.Experimental.Rendering.ShaderWarmupSetup
+function UnityEngine.Experimental.Rendering.ShaderWarmup.WarmupShader(shader, setup) end
+---@param collection UnityEngine.ShaderVariantCollection
+---@param shader UnityEngine.Shader
+---@param setup UnityEngine.Experimental.Rendering.ShaderWarmupSetup
+function UnityEngine.Experimental.Rendering.ShaderWarmup.WarmupShaderFromCollection(collection, shader, setup) end
+
+---@class UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo : System.ValueType
+---@field SpriteID number
+---@field TextureID number
+---@field MaterialID number
+---@field Color UnityEngine.Color
+---@field Transform UnityEngine.Matrix4x4
+---@field Bounds UnityEngine.Bounds
+---@field Layer number
+---@field SortingLayer number
+---@field SortingOrder number
+---@field SceneCullingMask number
+---@field IndexData System.IntPtr
+---@field VertexData System.IntPtr
+---@field IndexCount number
+---@field VertexCount number
+---@field ShaderChannelMask number
+UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo = {}
+---@alias CS.UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo
+CS.UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo = UnityEngine.Experimental.U2D.SpriteIntermediateRendererInfo
+
+
+---@class UnityEngine.Experimental.U2D.SpriteRendererGroup : System.Object
+UnityEngine.Experimental.U2D.SpriteRendererGroup = {}
+---@alias CS.UnityEngine.Experimental.U2D.SpriteRendererGroup UnityEngine.Experimental.U2D.SpriteRendererGroup
+CS.UnityEngine.Experimental.U2D.SpriteRendererGroup = UnityEngine.Experimental.U2D.SpriteRendererGroup
+
+---@return UnityEngine.Experimental.U2D.SpriteRendererGroup
+function UnityEngine.Experimental.U2D.SpriteRendererGroup.New() end
+---@param renderers Unity.Collections.NativeArray
+function UnityEngine.Experimental.U2D.SpriteRendererGroup.AddRenderers(renderers) end
+function UnityEngine.Experimental.U2D.SpriteRendererGroup.Clear() end
+
+---@class UnityEngine.Sprites.DataUtility : System.Object
+UnityEngine.Sprites.DataUtility = {}
+---@alias CS.UnityEngine.Sprites.DataUtility UnityEngine.Sprites.DataUtility
+CS.UnityEngine.Sprites.DataUtility = UnityEngine.Sprites.DataUtility
+
+---@return UnityEngine.Sprites.DataUtility
+function UnityEngine.Sprites.DataUtility.New() end
+---@param sprite UnityEngine.Sprite
+---@return UnityEngine.Vector4
+function UnityEngine.Sprites.DataUtility.GetInnerUV(sprite) end
+---@param sprite UnityEngine.Sprite
+---@return UnityEngine.Vector4
+function UnityEngine.Sprites.DataUtility.GetOuterUV(sprite) end
+---@param sprite UnityEngine.Sprite
+---@return UnityEngine.Vector4
+function UnityEngine.Sprites.DataUtility.GetPadding(sprite) end
+---@param sprite UnityEngine.Sprite
+---@return UnityEngine.Vector2
+function UnityEngine.Sprites.DataUtility.GetMinSize(sprite) end
+
 ---@class UnityEngine.U2D.Clipper2D : System.ValueType
 UnityEngine.U2D.Clipper2D = {}
 ---@alias CS.UnityEngine.U2D.Clipper2D UnityEngine.U2D.Clipper2D
@@ -1765,6 +2352,8 @@ CS.UnityEngine.GUIContent = UnityEngine.GUIContent
 function UnityEngine.GUIContent.New(src) end
 ---@return string
 function UnityEngine.GUIContent:ToString() end
+---@return boolean
+function UnityEngine.GUIContent:HasText() end
 
 ---@class UnityEngine.GUIDebugger : System.Object
 ---@field active boolean
@@ -2462,6 +3051,130 @@ function UnityEngine.GUIStyle:WithContentOffset(contentOffset) end
 ---@param textColor UnityEngine.Color
 ---@return UnityEngine.GUIStyle
 function UnityEngine.GUIStyle:WithNormalTextColor(textColor) end
+---@param formats System.Object[]
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Clone(formats) end
+---@param formats System.Object[]
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Add(formats) end
+---@param border UnityEngine.RectOffset
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Border(border) end
+---@param border number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Border(border) end
+---@param left number
+---@param right number
+---@param top number
+---@param bottom number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Border(left, right, top, bottom) end
+---@param background UnityEngine.Texture2D
+---@param pressBackground UnityEngine.Texture2D
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Background(background, pressBackground) end
+---@param background UnityEngine.Texture2D
+---@param pressBackground UnityEngine.Texture2D
+---@param overBackground UnityEngine.Texture2D
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Background(background, pressBackground, overBackground) end
+---@param offset UnityEngine.Vector2
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:ContentOffset(offset) end
+---@param offsetX number
+---@param offsetY number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:ContentOffset(offsetX, offsetY) end
+---@param offsetX number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:ContentOffsetX(offsetX) end
+---@param offsetY number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:ContentOffsetY(offsetY) end
+---@param margin UnityEngine.RectOffset
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Margin(margin) end
+---@param left number
+---@param right number
+---@param top number
+---@param bottom number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Margin(left, right, top, bottom) end
+---@param margin number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Margin(margin) end
+---@param left number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:MarginLeft(left) end
+---@param right number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:MarginRight(right) end
+---@param top number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:MarginTop(top) end
+---@param bottom number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:MarginBottom(bottom) end
+---@param overflow UnityEngine.RectOffset
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Overflow(overflow) end
+---@param left number
+---@param right number
+---@param top number
+---@param bottom number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Overflow(left, right, top, bottom) end
+---@param overflow number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Overflow(overflow) end
+---@param left number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:OverflowLeft(left) end
+---@param right number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:OverflowRight(right) end
+---@param top number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:OverflowTop(top) end
+---@param bottom number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:OverflowBottom(bottom) end
+---@param padding UnityEngine.RectOffset
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Padding(padding) end
+---@param left number
+---@param right number
+---@param top number
+---@param bottom number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Padding(left, right, top, bottom) end
+---@param padding number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Padding(padding) end
+---@param left number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:PaddingLeft(left) end
+---@param right number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:PaddingRight(right) end
+---@param top number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:PaddingTop(top) end
+---@param bottom number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:PaddingBottom(bottom) end
+---@param width number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Width(width) end
+---@param height number
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:Height(height) end
+---@param doStretch boolean
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:StretchHeight(doStretch) end
+---@param doStretch boolean
+---@return UnityEngine.GUIStyle
+function UnityEngine.GUIStyle:StretchWidth(doStretch) end
 
 ---@class UnityEngine.GUIStyle.BindingsMarshaller : System.Object
 UnityEngine.GUIStyle.BindingsMarshaller = {}
@@ -4310,695 +5023,3 @@ function UnityEngine.StringTests.ParameterRefStringInNull(ref_param) end
 ---@param ref_param string
 ---@return ,string
 function UnityEngine.StringTests.ParameterRefStringNotSet(ref_param) end
-
----@class UnityEngine.StructInt : System.ValueType
----@field field number
-UnityEngine.StructInt = {}
----@alias CS.UnityEngine.StructInt UnityEngine.StructInt
-CS.UnityEngine.StructInt = UnityEngine.StructInt
-
-
----@class UnityEngine.StructInt2 : System.ValueType
----@field field number
-UnityEngine.StructInt2 = {}
----@alias CS.UnityEngine.StructInt2 UnityEngine.StructInt2
-CS.UnityEngine.StructInt2 = UnityEngine.StructInt2
-
-
----@class UnityEngine.StructNestedBlittable : System.ValueType
----@field field UnityEngine.StructInt
-UnityEngine.StructNestedBlittable = {}
----@alias CS.UnityEngine.StructNestedBlittable UnityEngine.StructNestedBlittable
-CS.UnityEngine.StructNestedBlittable = UnityEngine.StructNestedBlittable
-
-
----@class UnityEngine.StructFixedBuffer : System.ValueType
----@field SomeInts UnityEngine.StructFixedBuffer.<SomeInts>e__FixedBuffer
-UnityEngine.StructFixedBuffer = {}
----@alias CS.UnityEngine.StructFixedBuffer UnityEngine.StructFixedBuffer
-CS.UnityEngine.StructFixedBuffer = UnityEngine.StructFixedBuffer
-
-
----@class UnityEngine.BlittableStructTests : System.Object
----@field structIntProperty UnityEngine.StructInt
-UnityEngine.BlittableStructTests = {}
----@alias CS.UnityEngine.BlittableStructTests UnityEngine.BlittableStructTests
-CS.UnityEngine.BlittableStructTests = UnityEngine.BlittableStructTests
-
----@return UnityEngine.BlittableStructTests
-function UnityEngine.BlittableStructTests.New() end
----@param param UnityEngine.StructInt
-function UnityEngine.BlittableStructTests.ParameterStructInt(param) end
----@param ref_param UnityEngine.StructInt
----@return ,UnityEngine.StructInt
-function UnityEngine.BlittableStructTests.ParameterStructIntByRef(ref_param) end
----@param ref_param UnityEngine.StructInt
----@return ,UnityEngine.StructInt
-function UnityEngine.BlittableStructTests.ParameterStructIntIn(ref_param) end
----@param out_param UnityEngine.StructInt
----@return ,UnityEngine.StructInt
-function UnityEngine.BlittableStructTests.ParameterStructIntOut(out_param) end
----@param param UnityEngine.StructInt2
-function UnityEngine.BlittableStructTests.ParameterStructInt2(param) end
----@return UnityEngine.StructInt
-function UnityEngine.BlittableStructTests.ReturnStructInt() end
----@param s UnityEngine.StructNestedBlittable
-function UnityEngine.BlittableStructTests.ParameterNestedBlittableStruct(s) end
----@return UnityEngine.StructNestedBlittable
-function UnityEngine.BlittableStructTests.ReturnNestedBlittableStruct() end
----@param param UnityEngine.StructInt[]
-function UnityEngine.BlittableStructTests.ParameterStructIntVector(param) end
----@return UnityEngine.StructInt[]
-function UnityEngine.BlittableStructTests.ReturnStructIntVector() end
----@param param UnityEngine.StructNestedBlittable[]
-function UnityEngine.BlittableStructTests.ParameterStructNestedBlittableVector(param) end
----@return UnityEngine.StructNestedBlittable[]
-function UnityEngine.BlittableStructTests.ReturnStructNestedBlittableVector() end
----@param param UnityEngine.StructFixedBuffer
-function UnityEngine.BlittableStructTests.ParameterStructFixedBuffer(param) end
----@return UnityEngine.StructFixedBuffer
-function UnityEngine.BlittableStructTests.ReturnStructFixedBuffer() end
-
----@class UnityEngine.StructIntPtrObject : System.ValueType
----@field field UnityEngine.MyIntPtrObject
-UnityEngine.StructIntPtrObject = {}
----@alias CS.UnityEngine.StructIntPtrObject UnityEngine.StructIntPtrObject
-CS.UnityEngine.StructIntPtrObject = UnityEngine.StructIntPtrObject
-
-
----@class UnityEngine.StructIntPtrObjectVector : System.ValueType
----@field field UnityEngine.MyIntPtrObject[]
-UnityEngine.StructIntPtrObjectVector = {}
----@alias CS.UnityEngine.StructIntPtrObjectVector UnityEngine.StructIntPtrObjectVector
-CS.UnityEngine.StructIntPtrObjectVector = UnityEngine.StructIntPtrObjectVector
-
-
----@class UnityEngine.MyIntPtrObject : System.Object
----@field m_Ptr System.IntPtr
----@field MemberProperty number
-UnityEngine.MyIntPtrObject = {}
----@alias CS.UnityEngine.MyIntPtrObject UnityEngine.MyIntPtrObject
-CS.UnityEngine.MyIntPtrObject = UnityEngine.MyIntPtrObject
-
----@return UnityEngine.MyIntPtrObject
-function UnityEngine.MyIntPtrObject.New() end
----@return UnityEngine.MyIntPtrObject
-function UnityEngine.MyIntPtrObject.Create() end
-function UnityEngine.MyIntPtrObject:Dispose() end
----@param a number
----@return number
-function UnityEngine.MyIntPtrObject:MemberFunction(a) end
-
----@class UnityEngine.MyIntPtrObject.BindingsMarshaller : System.Object
-UnityEngine.MyIntPtrObject.BindingsMarshaller = {}
----@alias CS.UnityEngine.MyIntPtrObject.BindingsMarshaller UnityEngine.MyIntPtrObject.BindingsMarshaller
-CS.UnityEngine.MyIntPtrObject.BindingsMarshaller = UnityEngine.MyIntPtrObject.BindingsMarshaller
-
----@param obj UnityEngine.MyIntPtrObject
----@return System.IntPtr
-function UnityEngine.MyIntPtrObject.BindingsMarshaller.ConvertToNative(obj) end
----@param ptr System.IntPtr
----@return UnityEngine.MyIntPtrObject
-function UnityEngine.MyIntPtrObject.BindingsMarshaller.ConvertToManaged(ptr) end
-
----@class UnityEngine.IntPtrObjectTests : System.Object
-UnityEngine.IntPtrObjectTests = {}
----@alias CS.UnityEngine.IntPtrObjectTests UnityEngine.IntPtrObjectTests
-CS.UnityEngine.IntPtrObjectTests = UnityEngine.IntPtrObjectTests
-
----@return UnityEngine.IntPtrObjectTests
-function UnityEngine.IntPtrObjectTests.New() end
----@param param UnityEngine.MyIntPtrObject
-function UnityEngine.IntPtrObjectTests.ParameterIntPtrObject(param) end
----@param param UnityEngine.MyIntPtrObject[]
-function UnityEngine.IntPtrObjectTests.ParameterIntPtrObjectVector(param) end
----@param param UnityEngine.StructIntPtrObject
-function UnityEngine.IntPtrObjectTests.ParameterStructIntPtrObject(param) end
----@return UnityEngine.MyIntPtrObject[]
-function UnityEngine.IntPtrObjectTests.ReturnIntPtrObjectVector() end
----@param param UnityEngine.StructIntPtrObjectVector
-function UnityEngine.IntPtrObjectTests.ParameterStructIntPtrObjectVector(param) end
----@param value number
----@return UnityEngine.MyIntPtrObject
-function UnityEngine.IntPtrObjectTests.ReturnIntPtrObject(value) end
-
----@class UnityEngine.MarshallingTestObject : UnityEngine.Object
----@field MemberProperty number
----@field FieldBoundMemberProperty number
-UnityEngine.MarshallingTestObject = {}
----@alias CS.UnityEngine.MarshallingTestObject UnityEngine.MarshallingTestObject
-CS.UnityEngine.MarshallingTestObject = UnityEngine.MarshallingTestObject
-
----@return UnityEngine.MarshallingTestObject
-function UnityEngine.MarshallingTestObject.New() end
----@return UnityEngine.MarshallingTestObject
-function UnityEngine.MarshallingTestObject.Create() end
----@param a number
----@return number
-function UnityEngine.MarshallingTestObject:MemberFunction(a) end
-
----@class UnityEngine.DifferentMarshallingTestObject : UnityEngine.Object
-UnityEngine.DifferentMarshallingTestObject = {}
----@alias CS.UnityEngine.DifferentMarshallingTestObject UnityEngine.DifferentMarshallingTestObject
-CS.UnityEngine.DifferentMarshallingTestObject = UnityEngine.DifferentMarshallingTestObject
-
----@return UnityEngine.DifferentMarshallingTestObject
-function UnityEngine.DifferentMarshallingTestObject.New() end
-
----@class UnityEngine.StructUnityObject : System.ValueType
----@field field UnityEngine.MarshallingTestObject
-UnityEngine.StructUnityObject = {}
----@alias CS.UnityEngine.StructUnityObject UnityEngine.StructUnityObject
-CS.UnityEngine.StructUnityObject = UnityEngine.StructUnityObject
-
----@param o System.Object
----@return number
-function UnityEngine.StructUnityObject:InstanceMethod(o) end
-
----@class UnityEngine.StructUnityObjectPPtr : System.ValueType
----@field field UnityEngine.MarshallingTestObject
-UnityEngine.StructUnityObjectPPtr = {}
----@alias CS.UnityEngine.StructUnityObjectPPtr UnityEngine.StructUnityObjectPPtr
-CS.UnityEngine.StructUnityObjectPPtr = UnityEngine.StructUnityObjectPPtr
-
-
----@class UnityEngine.StructUnityObjectVector : System.ValueType
----@field field UnityEngine.MarshallingTestObject[]
-UnityEngine.StructUnityObjectVector = {}
----@alias CS.UnityEngine.StructUnityObjectVector UnityEngine.StructUnityObjectVector
-CS.UnityEngine.StructUnityObjectVector = UnityEngine.StructUnityObjectVector
-
-
----@class UnityEngine.UnityObjectTests : System.Object
-UnityEngine.UnityObjectTests = {}
----@alias CS.UnityEngine.UnityObjectTests UnityEngine.UnityObjectTests
-CS.UnityEngine.UnityObjectTests = UnityEngine.UnityObjectTests
-
----@return UnityEngine.UnityObjectTests
-function UnityEngine.UnityObjectTests.New() end
----@param param UnityEngine.MarshallingTestObject
-function UnityEngine.UnityObjectTests.ParameterUnityObject(param) end
----@param ref_param UnityEngine.MarshallingTestObject
----@return ,UnityEngine.MarshallingTestObject
-function UnityEngine.UnityObjectTests.ParameterUnityObjectByRef(ref_param) end
----@param param UnityEngine.MarshallingTestObject
-function UnityEngine.UnityObjectTests.ParameterUnityObjectPPtr(param) end
----@param param UnityEngine.StructUnityObject
-function UnityEngine.UnityObjectTests.ParameterStructUnityObject(param) end
----@param param UnityEngine.StructUnityObjectPPtr
-function UnityEngine.UnityObjectTests.ParameterStructUnityObjectPPtr(param) end
----@param param UnityEngine.StructUnityObjectVector
-function UnityEngine.UnityObjectTests.ParameterStructUnityObjectVector(param) end
----@param param UnityEngine.MarshallingTestObject[]
-function UnityEngine.UnityObjectTests.ParameterUnityObjectVector(param) end
----@param param UnityEngine.MarshallingTestObject[]
-function UnityEngine.UnityObjectTests.ParameterUnityObjectPPtrVector(param) end
----@return UnityEngine.MarshallingTestObject
-function UnityEngine.UnityObjectTests.ReturnUnityObject() end
----@param obj UnityEngine.MarshallingTestObject
----@return UnityEngine.MarshallingTestObject
-function UnityEngine.UnityObjectTests.ReturnInUnityObject(obj) end
----@return UnityEngine.MarshallingTestObject
-function UnityEngine.UnityObjectTests.ReturnUnityObjectFakeNull() end
----@return UnityEngine.MarshallingTestObject
-function UnityEngine.UnityObjectTests.ReturnUnassignedErrorObject() end
----@return UnityEngine.MarshallingTestObject
-function UnityEngine.UnityObjectTests.ReturnUnityObjectPPtr() end
----@return UnityEngine.MarshallingTestObject[]
-function UnityEngine.UnityObjectTests.ReturnUnityObjectVector() end
----@return UnityEngine.MarshallingTestObject[]
-function UnityEngine.UnityObjectTests.ReturnUnityObjectPPtrVector() end
----@return UnityEngine.StructUnityObject
-function UnityEngine.UnityObjectTests.ReturnStructUnityObject() end
----@return UnityEngine.StructUnityObjectPPtr
-function UnityEngine.UnityObjectTests.ReturnStructUnityObjectPPtr() end
----@return UnityEngine.StructUnityObject[]
-function UnityEngine.UnityObjectTests.ReturnStructUnityObjectVector() end
----@return UnityEngine.StructUnityObjectPPtr[]
-function UnityEngine.UnityObjectTests.ReturnStructUnityObjectPPtrVector() end
----@return UnityEngine.StructUnityObjectVector[]
-function UnityEngine.UnityObjectTests.ReturnStructUnityObjectVectorVector() end
-
----@class UnityEngine.NullCheckTests : System.Object
-UnityEngine.NullCheckTests = {}
----@alias CS.UnityEngine.NullCheckTests UnityEngine.NullCheckTests
-CS.UnityEngine.NullCheckTests = UnityEngine.NullCheckTests
-
----@return UnityEngine.NullCheckTests
-function UnityEngine.NullCheckTests.New() end
----@param param string
-function UnityEngine.NullCheckTests.StringParameterNullAllowed(param) end
----@param param string
-function UnityEngine.NullCheckTests.StringParameterNullNotAllowed(param) end
----@param param System.Int32[]
-function UnityEngine.NullCheckTests.ArrayParameterNullAllowed(param) end
----@param param System.Int32[]
-function UnityEngine.NullCheckTests.ArrayParameterNullNotAllowed(param) end
----@param param UnityEngine.MarshallingTestObject
-function UnityEngine.NullCheckTests.ObjectParameterNullAllowed(param) end
----@param param UnityEngine.MarshallingTestObject
-function UnityEngine.NullCheckTests.ObjectParameterNullNotAllowed(param) end
----@param param UnityEngine.MarshallingTestObject
-function UnityEngine.NullCheckTests.WritableObjectParameterNullAllowed(param) end
----@param param UnityEngine.MarshallingTestObject
-function UnityEngine.NullCheckTests.WritableObjectParameterNullNotAllowed(param) end
----@param param UnityEngine.MyIntPtrObject
-function UnityEngine.NullCheckTests.IntPtrObjectParameterNullAllowed(param) end
----@param param UnityEngine.MyIntPtrObject
-function UnityEngine.NullCheckTests.IntPtrObjectParameterNullNotAllowed(param) end
-
----@class UnityEngine.MyManagedObject : System.Object
----@field value number
-UnityEngine.MyManagedObject = {}
----@alias CS.UnityEngine.MyManagedObject UnityEngine.MyManagedObject
-CS.UnityEngine.MyManagedObject = UnityEngine.MyManagedObject
-
----@return UnityEngine.MyManagedObject
-function UnityEngine.MyManagedObject.New() end
-
----@class UnityEngine.StructManagedObject : System.ValueType
----@field field UnityEngine.MyManagedObject
-UnityEngine.StructManagedObject = {}
----@alias CS.UnityEngine.StructManagedObject UnityEngine.StructManagedObject
-CS.UnityEngine.StructManagedObject = UnityEngine.StructManagedObject
-
-
----@class UnityEngine.StructManagedObjectVector : System.ValueType
----@field field UnityEngine.MyManagedObject[]
-UnityEngine.StructManagedObjectVector = {}
----@alias CS.UnityEngine.StructManagedObjectVector UnityEngine.StructManagedObjectVector
-CS.UnityEngine.StructManagedObjectVector = UnityEngine.StructManagedObjectVector
-
-
----@class UnityEngine.ManagedObjectTests : System.Object
-UnityEngine.ManagedObjectTests = {}
----@alias CS.UnityEngine.ManagedObjectTests UnityEngine.ManagedObjectTests
-CS.UnityEngine.ManagedObjectTests = UnityEngine.ManagedObjectTests
-
----@return UnityEngine.ManagedObjectTests
-function UnityEngine.ManagedObjectTests.New() end
----@param param UnityEngine.MyManagedObject
----@return UnityEngine.MyManagedObject
-function UnityEngine.ManagedObjectTests.ParameterManagedObject(param) end
----@param param UnityEngine.StructManagedObject
----@return UnityEngine.StructManagedObject
-function UnityEngine.ManagedObjectTests.ParameterStructManagedObject(param) end
----@return UnityEngine.MyManagedObject[]
-function UnityEngine.ManagedObjectTests.ReturnNullManagedObjectArray() end
----@param param UnityEngine.MyManagedObject[]
----@return UnityEngine.MyManagedObject[]
-function UnityEngine.ManagedObjectTests.ParameterManagedObjectVector(param) end
----@param param UnityEngine.StructManagedObjectVector
----@return UnityEngine.StructManagedObjectVector
-function UnityEngine.ManagedObjectTests.ParameterStructManagedObjectVector(param) end
-
----@class UnityEngine.StructSystemType : System.ValueType
----@field field System.Type
-UnityEngine.StructSystemType = {}
----@alias CS.UnityEngine.StructSystemType UnityEngine.StructSystemType
-CS.UnityEngine.StructSystemType = UnityEngine.StructSystemType
-
-
----@class UnityEngine.StructSystemTypeArray : System.ValueType
----@field field System.Type[]
-UnityEngine.StructSystemTypeArray = {}
----@alias CS.UnityEngine.StructSystemTypeArray UnityEngine.StructSystemTypeArray
-CS.UnityEngine.StructSystemTypeArray = UnityEngine.StructSystemTypeArray
-
-
----@class UnityEngine.SystemTypeMarshallingTests : System.Object
-UnityEngine.SystemTypeMarshallingTests = {}
----@alias CS.UnityEngine.SystemTypeMarshallingTests UnityEngine.SystemTypeMarshallingTests
-CS.UnityEngine.SystemTypeMarshallingTests = UnityEngine.SystemTypeMarshallingTests
-
----@param param System.Type
----@return string
-function UnityEngine.SystemTypeMarshallingTests.CanMarshallSystemTypeArgumentToScriptingClassPtr(param) end
----@param param UnityEngine.StructSystemType
----@return string
-function UnityEngine.SystemTypeMarshallingTests.CanMarshallSystemTypeStructField(param) end
----@param param UnityEngine.StructSystemTypeArray
----@return System.String[]
-function UnityEngine.SystemTypeMarshallingTests.CanMarshallSystemTypeArrayStructField(param) end
----@return UnityEngine.StructSystemType
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallSystemTypeStructField() end
----@return UnityEngine.StructSystemTypeArray
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallSystemTypeArrayStructField() end
----@param param System.Type[]
----@return System.String[]
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfSystemTypeArgumentToVectorOfScriptingSystemTypeObjectPtr(param) end
----@param param System.Type[]
----@return System.String[]
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfSystemTypeArgumentToVectorOfUnityType(param) end
----@param param System.Type[]
----@return System.String[]
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfSystemTypeArgumentToVectorOfScriptingClassPtr(param) end
----@return System.Type
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallScriptingSystemTypeObjectPtrToSystemType() end
----@return System.Type
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallUnityTypeToSystemType() end
----@return System.Type
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallScriptingClassPtrToSystemType() end
----@return System.Type[]
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallScriptingArrayPtrToSystemTypeArray() end
----@return System.Type[]
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfScriptingSystemTypeObjectPtrToSystemTypeArray() end
----@return System.Type[]
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfUnityTypeToSystemTypeArray() end
----@return System.Type[]
-function UnityEngine.SystemTypeMarshallingTests.CanUnmarshallArrayOfScriptingClassPtrToSystemTypeArray() end
-
----@class UnityEngine.StructSystemReflectionFieldInfo : System.ValueType
----@field field System.Reflection.FieldInfo
-UnityEngine.StructSystemReflectionFieldInfo = {}
----@alias CS.UnityEngine.StructSystemReflectionFieldInfo UnityEngine.StructSystemReflectionFieldInfo
-CS.UnityEngine.StructSystemReflectionFieldInfo = UnityEngine.StructSystemReflectionFieldInfo
-
-
----@class UnityEngine.StructSystemReflectionFieldInfoArray : System.ValueType
----@field field System.Reflection.FieldInfo[]
-UnityEngine.StructSystemReflectionFieldInfoArray = {}
----@alias CS.UnityEngine.StructSystemReflectionFieldInfoArray UnityEngine.StructSystemReflectionFieldInfoArray
-CS.UnityEngine.StructSystemReflectionFieldInfoArray = UnityEngine.StructSystemReflectionFieldInfoArray
-
-
----@class UnityEngine.SystemReflectionFieldInfoMarshallingTests : System.Object
-UnityEngine.SystemReflectionFieldInfoMarshallingTests = {}
----@alias CS.UnityEngine.SystemReflectionFieldInfoMarshallingTests UnityEngine.SystemReflectionFieldInfoMarshallingTests
-CS.UnityEngine.SystemReflectionFieldInfoMarshallingTests = UnityEngine.SystemReflectionFieldInfoMarshallingTests
-
----@param param System.Reflection.FieldInfo
----@return string
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanMarshallFieldInfoArgumentToScriptingFieldPtr(param) end
----@param param UnityEngine.StructSystemReflectionFieldInfo
----@return string
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanMarshallSystemReflectionFieldInfoStructField(param) end
----@param param UnityEngine.StructSystemReflectionFieldInfoArray
----@return System.String[]
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanMarshallSystemReflectionFieldInfoArrayStructField(param) end
----@param param System.Reflection.FieldInfo[]
----@return System.String[]
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanMarshallArrayOfFieldInfoArgumentToVectorOfScriptingFieldInfoObjectPtr(param) end
----@param param System.Reflection.FieldInfo[]
----@return System.String[]
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanMarshallArrayOfFieldInfoArgumentToVectorOfScriptingFieldPtr(param) end
----@return UnityEngine.StructSystemReflectionFieldInfo
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallSystemReflectionFieldInfoStructField() end
----@return UnityEngine.StructSystemReflectionFieldInfoArray
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallSystemReflectionFieldInfoArrayStructField() end
----@return System.Reflection.FieldInfo
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallScriptingFieldInfoObjectPtrToFieldInfo() end
----@return System.Reflection.FieldInfo
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallScriptingFieldPtrToFieldInfo() end
----@return System.Reflection.FieldInfo[]
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallScriptingArrayPtrToFieldInfoArray() end
----@return System.Reflection.FieldInfo[]
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallArrayOfScriptingFieldInfoObjectPtrToFieldInfoArray() end
----@return System.Reflection.FieldInfo[]
-function UnityEngine.SystemReflectionFieldInfoMarshallingTests.CanUnmarshallArrayOfScriptingFieldPtrToFieldInfoArray() end
-
----@class UnityEngine.StructSystemReflectionMethodInfo : System.ValueType
----@field field System.Reflection.MethodInfo
-UnityEngine.StructSystemReflectionMethodInfo = {}
----@alias CS.UnityEngine.StructSystemReflectionMethodInfo UnityEngine.StructSystemReflectionMethodInfo
-CS.UnityEngine.StructSystemReflectionMethodInfo = UnityEngine.StructSystemReflectionMethodInfo
-
-
----@class UnityEngine.StructSystemReflectionMethodInfoArray : System.ValueType
----@field field System.Reflection.MethodInfo[]
-UnityEngine.StructSystemReflectionMethodInfoArray = {}
----@alias CS.UnityEngine.StructSystemReflectionMethodInfoArray UnityEngine.StructSystemReflectionMethodInfoArray
-CS.UnityEngine.StructSystemReflectionMethodInfoArray = UnityEngine.StructSystemReflectionMethodInfoArray
-
-
----@class UnityEngine.SystemReflectionMethodInfoMarshallingTests : System.Object
-UnityEngine.SystemReflectionMethodInfoMarshallingTests = {}
----@alias CS.UnityEngine.SystemReflectionMethodInfoMarshallingTests UnityEngine.SystemReflectionMethodInfoMarshallingTests
-CS.UnityEngine.SystemReflectionMethodInfoMarshallingTests = UnityEngine.SystemReflectionMethodInfoMarshallingTests
-
----@param param System.Reflection.MethodInfo
----@return string
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanMarshallMethodInfoArgumentToScriptingMethodPtr(param) end
----@param param UnityEngine.StructSystemReflectionMethodInfo
----@return string
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanMarshallSystemReflectionMethodInfoStructField(param) end
----@param param UnityEngine.StructSystemReflectionMethodInfoArray
----@return System.String[]
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanMarshallSystemReflectionMethodInfoArrayStructField(param) end
----@param param System.Reflection.MethodInfo[]
----@return System.String[]
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanMarshallArrayOfMethodInfoArgumentToVectorOfScriptingMethodInfoObjectPtr(param) end
----@param param System.Reflection.MethodInfo[]
----@return System.String[]
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanMarshallArrayOfMethodInfoArgumentToVectorOfScriptingMethodPtr(param) end
----@return UnityEngine.StructSystemReflectionMethodInfo
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallSystemReflectionMethodInfoStructField() end
----@return UnityEngine.StructSystemReflectionMethodInfoArray
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallSystemReflectionMethodInfoArrayStructField() end
----@return System.Reflection.MethodInfo
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallScriptingMethodInfoObjectPtrToMethodInfo() end
----@return System.Reflection.MethodInfo
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallScriptingMethodPtrToMethodInfo() end
----@return System.Reflection.MethodInfo[]
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallScriptingArrayPtrToMethodInfoArray() end
----@return System.Reflection.MethodInfo[]
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallArrayOfScriptingMethodInfoObjectPtrToMethodInfoArray() end
----@return System.Reflection.MethodInfo[]
-function UnityEngine.SystemReflectionMethodInfoMarshallingTests.CanUnmarshallArrayOfScriptingMethodPtrToMethodInfoArray() end
-
----@class UnityEngine.StructWithExternTests : System.ValueType
----@field a number
-UnityEngine.StructWithExternTests = {}
----@alias CS.UnityEngine.StructWithExternTests UnityEngine.StructWithExternTests
-CS.UnityEngine.StructWithExternTests = UnityEngine.StructWithExternTests
-
----@param param number
-function UnityEngine.StructWithExternTests.ParameterInt(param) end
----@return number
-function UnityEngine.StructWithExternTests.ReturnInt() end
----@return number
-function UnityEngine.StructWithExternTests:GetTimesTwo() end
-function UnityEngine.StructWithExternTests:SetTimesThree() end
----@param unityObject UnityEngine.Object
----@return number
-function UnityEngine.StructWithExternTests:ParameterWritable(unityObject) end
-
----@class UnityEngine.DelegateTests : System.Object
-UnityEngine.DelegateTests = {}
----@alias CS.UnityEngine.DelegateTests UnityEngine.DelegateTests
-CS.UnityEngine.DelegateTests = UnityEngine.DelegateTests
-
----@return UnityEngine.DelegateTests
-function UnityEngine.DelegateTests.New() end
----@return number
-function UnityEngine.DelegateTests.A() end
----@return number
-function UnityEngine.DelegateTests.B() end
----@param someDelegate UnityEngine.DelegateTests.SomeDelegate
----@return number
-function UnityEngine.DelegateTests.ReturnDelegate(someDelegate) end
----@param SomeDelegateFunctionPtr UnityEngine.DelegateTests.SomeDelegateFunctionPtr
----@return number
-function UnityEngine.DelegateTests.ReturnDelegateFunctionPtr(SomeDelegateFunctionPtr) end
-
----@class UnityEngine.DelegateTests.SomeDelegate : System.MulticastDelegate
-UnityEngine.DelegateTests.SomeDelegate = {}
----@alias CS.UnityEngine.DelegateTests.SomeDelegate UnityEngine.DelegateTests.SomeDelegate
-CS.UnityEngine.DelegateTests.SomeDelegate = UnityEngine.DelegateTests.SomeDelegate
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.DelegateTests.SomeDelegate
-function UnityEngine.DelegateTests.SomeDelegate.New(object, method) end
----@return number
-function UnityEngine.DelegateTests.SomeDelegate:Invoke() end
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.DelegateTests.SomeDelegate:BeginInvoke(callback, object) end
----@param result System.IAsyncResult
----@return number
-function UnityEngine.DelegateTests.SomeDelegate:EndInvoke(result) end
-
----@class UnityEngine.DelegateTests.SomeDelegateFunctionPtr : System.MulticastDelegate
-UnityEngine.DelegateTests.SomeDelegateFunctionPtr = {}
----@alias CS.UnityEngine.DelegateTests.SomeDelegateFunctionPtr UnityEngine.DelegateTests.SomeDelegateFunctionPtr
-CS.UnityEngine.DelegateTests.SomeDelegateFunctionPtr = UnityEngine.DelegateTests.SomeDelegateFunctionPtr
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.DelegateTests.SomeDelegateFunctionPtr
-function UnityEngine.DelegateTests.SomeDelegateFunctionPtr.New(object, method) end
----@return number
-function UnityEngine.DelegateTests.SomeDelegateFunctionPtr:Invoke() end
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.DelegateTests.SomeDelegateFunctionPtr:BeginInvoke(callback, object) end
----@param result System.IAsyncResult
----@return number
-function UnityEngine.DelegateTests.SomeDelegateFunctionPtr:EndInvoke(result) end
-
----@class UnityEngine.ExceptionTests : System.Object
----@field PropertyThatCanThrow number
----@field PropertyGetThatCanThrow number
----@field PropertySetThatCanThrow number
-UnityEngine.ExceptionTests = {}
----@alias CS.UnityEngine.ExceptionTests UnityEngine.ExceptionTests
-CS.UnityEngine.ExceptionTests = UnityEngine.ExceptionTests
-
----@return UnityEngine.ExceptionTests
-function UnityEngine.ExceptionTests.New() end
----@param param string
-function UnityEngine.ExceptionTests.VoidReturnStringParameter(param) end
----@return number
-function UnityEngine.ExceptionTests.NonUnmarshallingReturn() end
----@return string
-function UnityEngine.ExceptionTests.UnmarshallingReturn() end
----@return UnityEngine.StructInt
-function UnityEngine.ExceptionTests.BlittableStructReturn() end
----@return UnityEngine.StructCoreString
-function UnityEngine.ExceptionTests.NonblittableStructReturn() end
-
----@class UnityEngine.ExceptionTypeTests : System.Object
-UnityEngine.ExceptionTypeTests = {}
----@alias CS.UnityEngine.ExceptionTypeTests UnityEngine.ExceptionTypeTests
-CS.UnityEngine.ExceptionTypeTests = UnityEngine.ExceptionTypeTests
-
----@return UnityEngine.ExceptionTypeTests
-function UnityEngine.ExceptionTypeTests.New() end
----@param nativeFormat string
----@param values string
-function UnityEngine.ExceptionTypeTests.NullReferenceException(nativeFormat, values) end
----@param argumentName string
-function UnityEngine.ExceptionTypeTests.ArgumentNullException(argumentName) end
----@param nativeFormat string
----@param values string
-function UnityEngine.ExceptionTypeTests.ArgumentException(nativeFormat, values) end
----@param nativeFormat string
----@param values string
-function UnityEngine.ExceptionTypeTests.InvalidOperationException(nativeFormat, values) end
----@param nativeFormat string
----@param index number
-function UnityEngine.ExceptionTypeTests.IndexOutOfRangeException(nativeFormat, index) end
-
----@class UnityEngine.SomeEnum
----@field A UnityEngine.SomeEnum
----@field B UnityEngine.SomeEnum
----@field C UnityEngine.SomeEnum
-UnityEngine.SomeEnum = {}
----@alias CS.UnityEngine.SomeEnum UnityEngine.SomeEnum
-CS.UnityEngine.SomeEnum = UnityEngine.SomeEnum
-
-
----@class UnityEngine.EnumTests : System.Object
-UnityEngine.EnumTests = {}
----@alias CS.UnityEngine.EnumTests UnityEngine.EnumTests
-CS.UnityEngine.EnumTests = UnityEngine.EnumTests
-
----@return UnityEngine.EnumTests
-function UnityEngine.EnumTests.New() end
----@param enumArray UnityEngine.SomeEnum[]
-function UnityEngine.EnumTests.ParameterVectorEnum(enumArray) end
----@param out_enumArray UnityEngine.SomeEnum
----@return ,UnityEngine.SomeEnum
-function UnityEngine.EnumTests.ParameterOutVectorEnum(out_enumArray) end
-
----@class UnityEngine.StructWithStringIntAndFloat : System.ValueType
----@field a string
----@field b number
----@field c number
-UnityEngine.StructWithStringIntAndFloat = {}
----@alias CS.UnityEngine.StructWithStringIntAndFloat UnityEngine.StructWithStringIntAndFloat
-CS.UnityEngine.StructWithStringIntAndFloat = UnityEngine.StructWithStringIntAndFloat
-
----@param other System.Object
----@return boolean
-function UnityEngine.StructWithStringIntAndFloat:Equals(other) end
----@return number
-function UnityEngine.StructWithStringIntAndFloat:GetHashCode() end
-
----@class UnityEngine.StructWithStringIntAndFloat2 : System.ValueType
----@field a string
----@field b number
----@field c number
-UnityEngine.StructWithStringIntAndFloat2 = {}
----@alias CS.UnityEngine.StructWithStringIntAndFloat2 UnityEngine.StructWithStringIntAndFloat2
-CS.UnityEngine.StructWithStringIntAndFloat2 = UnityEngine.StructWithStringIntAndFloat2
-
-
----@class UnityEngine.StructWithStringIgnoredIntAndFloat : System.ValueType
----@field a string
----@field b number
----@field c number
-UnityEngine.StructWithStringIgnoredIntAndFloat = {}
----@alias CS.UnityEngine.StructWithStringIgnoredIntAndFloat UnityEngine.StructWithStringIgnoredIntAndFloat
-CS.UnityEngine.StructWithStringIgnoredIntAndFloat = UnityEngine.StructWithStringIgnoredIntAndFloat
-
-
----@class UnityEngine.ClassToStruct : System.Object
----@field intField number
----@field stringField string
-UnityEngine.ClassToStruct = {}
----@alias CS.UnityEngine.ClassToStruct UnityEngine.ClassToStruct
-CS.UnityEngine.ClassToStruct = UnityEngine.ClassToStruct
-
----@return UnityEngine.ClassToStruct
-function UnityEngine.ClassToStruct.New() end
-
----@class UnityEngine.StructWithClassToStruct : System.ValueType
----@field classToStructField UnityEngine.ClassToStruct
-UnityEngine.StructWithClassToStruct = {}
----@alias CS.UnityEngine.StructWithClassToStruct UnityEngine.StructWithClassToStruct
-CS.UnityEngine.StructWithClassToStruct = UnityEngine.StructWithClassToStruct
-
-
----@class UnityEngine.StructWithNonBlittableArrayField : System.ValueType
----@field field UnityEngine.StructWithStringIntAndFloat[]
-UnityEngine.StructWithNonBlittableArrayField = {}
----@alias CS.UnityEngine.StructWithNonBlittableArrayField UnityEngine.StructWithNonBlittableArrayField
-CS.UnityEngine.StructWithNonBlittableArrayField = UnityEngine.StructWithNonBlittableArrayField
-
-
----@class UnityEngine.NonBlittableStructTests : System.Object
-UnityEngine.NonBlittableStructTests = {}
----@alias CS.UnityEngine.NonBlittableStructTests UnityEngine.NonBlittableStructTests
-CS.UnityEngine.NonBlittableStructTests = UnityEngine.NonBlittableStructTests
-
----@return UnityEngine.NonBlittableStructTests
-function UnityEngine.NonBlittableStructTests.New() end
----@param param UnityEngine.StructWithStringIntAndFloat
-function UnityEngine.NonBlittableStructTests.ParameterStructWithStringIntAndFloat(param) end
----@param ref_param UnityEngine.StructWithStringIntAndFloat
----@return ,UnityEngine.StructWithStringIntAndFloat
-function UnityEngine.NonBlittableStructTests.RefParameterStructWithStringIntAndFloat(ref_param) end
----@param out_param UnityEngine.StructWithStringIntAndFloat
----@return ,UnityEngine.StructWithStringIntAndFloat
-function UnityEngine.NonBlittableStructTests.OutParameterStructWithStringIntAndFloat(out_param) end
----@param param UnityEngine.StructWithStringIntAndFloat2
-function UnityEngine.NonBlittableStructTests.ParameterStructWithStringIntAndFloat2(param) end
----@param param UnityEngine.StructWithStringIgnoredIntAndFloat
-function UnityEngine.NonBlittableStructTests.ParameterStructWithStringIgnoredIntAndFloat(param) end
----@param param UnityEngine.StructWithStringIntAndFloat[]
-function UnityEngine.NonBlittableStructTests.ParameterStructWithStringIntAndFloatArray(param) end
----@return UnityEngine.StructWithStringIntAndFloat[]
-function UnityEngine.NonBlittableStructTests.ReturnStructWithStringIntAndFloatArray() end
----@param param UnityEngine.StructWithNonBlittableArrayField
-function UnityEngine.NonBlittableStructTests.ParameterStructWithNonBlittableArrayField(param) end
----@return UnityEngine.StructWithNonBlittableArrayField
-function UnityEngine.NonBlittableStructTests.ReturnStructWithNonBlittableArrayField() end
----@param param UnityEngine.ClassToStruct
-function UnityEngine.NonBlittableStructTests.CanMarshalManagedObjectToStruct(param) end
----@param out_param NullType
----@return ,NullType
-function UnityEngine.NonBlittableStructTests.CanMarshalOutManagedObjectToStruct(out_param) end
----@param param UnityEngine.StructWithClassToStruct
-function UnityEngine.NonBlittableStructTests.CanMarshalStructWithNativeAsStructField(param) end
----@param param UnityEngine.ClassToStruct[]
-function UnityEngine.NonBlittableStructTests.CanMarshalNativeAsStructArray(param) end
----@return UnityEngine.ClassToStruct
-function UnityEngine.NonBlittableStructTests.CanUnmarshalManagedObjectFromStruct() end
----@return UnityEngine.StructWithClassToStruct
-function UnityEngine.NonBlittableStructTests.CanUnmarshalStructWithNativeAsStructField() end
----@return UnityEngine.ClassToStruct[]
-function UnityEngine.NonBlittableStructTests.CanUnmarshalNativeAsStructArray() end

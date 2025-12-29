@@ -1,5 +1,736 @@
 ---@meta
 
+---@class UnityEngine.UIElements.Layout.LayoutValueExtensions : System.Object
+UnityEngine.UIElements.Layout.LayoutValueExtensions = {}
+---@alias CS.UnityEngine.UIElements.Layout.LayoutValueExtensions UnityEngine.UIElements.Layout.LayoutValueExtensions
+CS.UnityEngine.UIElements.Layout.LayoutValueExtensions = UnityEngine.UIElements.Layout.LayoutValueExtensions
+
+---@overload fun(value: number) : UnityEngine.UIElements.Layout.LayoutValue
+---@param value number
+---@return UnityEngine.UIElements.Layout.LayoutValue
+function UnityEngine.UIElements.Layout.LayoutValueExtensions.Percent(value) end
+---@overload fun(value: number) : UnityEngine.UIElements.Layout.LayoutValue
+---@param value number
+---@return UnityEngine.UIElements.Layout.LayoutValue
+function UnityEngine.UIElements.Layout.LayoutValueExtensions.Pt(value) end
+
+---@class UnityEngine.UIElements.Layout.LayoutWrap
+---@field NoWrap UnityEngine.UIElements.Layout.LayoutWrap
+---@field Wrap UnityEngine.UIElements.Layout.LayoutWrap
+---@field WrapReverse UnityEngine.UIElements.Layout.LayoutWrap
+UnityEngine.UIElements.Layout.LayoutWrap = {}
+---@alias CS.UnityEngine.UIElements.Layout.LayoutWrap UnityEngine.UIElements.Layout.LayoutWrap
+CS.UnityEngine.UIElements.Layout.LayoutWrap = UnityEngine.UIElements.Layout.LayoutWrap
+
+
+---@class UnityEngine.UIElements.Layout.LayoutNative : System.Object
+UnityEngine.UIElements.Layout.LayoutNative = {}
+---@alias CS.UnityEngine.UIElements.Layout.LayoutNative UnityEngine.UIElements.Layout.LayoutNative
+CS.UnityEngine.UIElements.Layout.LayoutNative = UnityEngine.UIElements.Layout.LayoutNative
+
+
+---@class UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+---@field None UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+---@field Error UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+---@field Measure UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+---@field Layout UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+---@field CacheUsage UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+---@field BeginLayout UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+---@field EndLayout UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType = {}
+---@alias CS.UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+CS.UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType = UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+
+
+---@class UnityEngine.UIElements.Layout.LayoutNative.LayoutLogData : System.Object
+---@field node UnityEngine.UIElements.Layout.LayoutNode
+---@field eventType UnityEngine.UIElements.Layout.LayoutNative.LayoutLogEventType
+---@field message string
+UnityEngine.UIElements.Layout.LayoutNative.LayoutLogData = {}
+---@alias CS.UnityEngine.UIElements.Layout.LayoutNative.LayoutLogData UnityEngine.UIElements.Layout.LayoutNative.LayoutLogData
+CS.UnityEngine.UIElements.Layout.LayoutNative.LayoutLogData = UnityEngine.UIElements.Layout.LayoutNative.LayoutLogData
+
+---@return UnityEngine.UIElements.Layout.LayoutNative.LayoutLogData
+function UnityEngine.UIElements.Layout.LayoutNative.LayoutLogData.New() end
+
+---@class UnityEngine.UIElements.Layout.LayoutStyleData : System.ValueType
+---@field Default UnityEngine.UIElements.Layout.LayoutStyleData
+---@field Direction UnityEngine.UIElements.Layout.LayoutDirection
+---@field FlexDirection UnityEngine.UIElements.Layout.LayoutFlexDirection
+---@field JustifyContent UnityEngine.UIElements.Layout.LayoutJustify
+---@field AlignContent UnityEngine.UIElements.Layout.LayoutAlign
+---@field AlignItems UnityEngine.UIElements.Layout.LayoutAlign
+---@field AlignSelf UnityEngine.UIElements.Layout.LayoutAlign
+---@field PositionType UnityEngine.UIElements.Layout.LayoutPositionType
+---@field AspectRatio number
+---@field FlexWrap UnityEngine.UIElements.Layout.LayoutWrap
+---@field Overflow UnityEngine.UIElements.Layout.LayoutOverflow
+---@field Display UnityEngine.UIElements.Layout.LayoutDisplay
+---@field FlexGrow number
+---@field FlexShrink number
+---@field FlexBasis UnityEngine.UIElements.Layout.LayoutValue
+---@field border UnityEngine.UIElements.Layout.FixedBuffer9
+---@field position UnityEngine.UIElements.Layout.FixedBuffer9
+---@field margin UnityEngine.UIElements.Layout.FixedBuffer9
+---@field padding UnityEngine.UIElements.Layout.FixedBuffer9
+---@field maxDimensions UnityEngine.UIElements.Layout.FixedBuffer2
+---@field minDimensions UnityEngine.UIElements.Layout.FixedBuffer2
+---@field dimensions UnityEngine.UIElements.Layout.FixedBuffer2
+UnityEngine.UIElements.Layout.LayoutStyleData = {}
+---@alias CS.UnityEngine.UIElements.Layout.LayoutStyleData UnityEngine.UIElements.Layout.LayoutStyleData
+CS.UnityEngine.UIElements.Layout.LayoutStyleData = UnityEngine.UIElements.Layout.LayoutStyleData
+
+
+---@class UnityEngine.UIElements.Layout.LayoutState : System.ValueType
+---@field measureFunctionCallback System.IntPtr
+---@field baselineFunctionCallback System.IntPtr
+---@field unusedExceptionPointer System.IntPtr
+---@field depth number
+---@field currentGenerationCount number
+---@field error boolean
+---@field Default UnityEngine.UIElements.Layout.LayoutState
+UnityEngine.UIElements.Layout.LayoutState = {}
+---@alias CS.UnityEngine.UIElements.Layout.LayoutState UnityEngine.UIElements.Layout.LayoutState
+CS.UnityEngine.UIElements.Layout.LayoutState = UnityEngine.UIElements.Layout.LayoutState
+
+
+---@class UnityEngine.UIElements.Layout.LayoutProcessorNative : System.Object
+UnityEngine.UIElements.Layout.LayoutProcessorNative = {}
+---@alias CS.UnityEngine.UIElements.Layout.LayoutProcessorNative UnityEngine.UIElements.Layout.LayoutProcessorNative
+CS.UnityEngine.UIElements.Layout.LayoutProcessorNative = UnityEngine.UIElements.Layout.LayoutProcessorNative
+
+---@return UnityEngine.UIElements.Layout.LayoutProcessorNative
+function UnityEngine.UIElements.Layout.LayoutProcessorNative.New() end
+
+---@class UnityEngine.UIElements.StyleSheets.HierarchyTraversal : System.Object
+UnityEngine.UIElements.StyleSheets.HierarchyTraversal = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.HierarchyTraversal UnityEngine.UIElements.StyleSheets.HierarchyTraversal
+CS.UnityEngine.UIElements.StyleSheets.HierarchyTraversal = UnityEngine.UIElements.StyleSheets.HierarchyTraversal
+
+---@param element UnityEngine.UIElements.VisualElement
+function UnityEngine.UIElements.StyleSheets.HierarchyTraversal:Traverse(element) end
+---@param element UnityEngine.UIElements.VisualElement
+---@param depth number
+function UnityEngine.UIElements.StyleSheets.HierarchyTraversal:TraverseRecursive(element, depth) end
+
+---@class UnityEngine.UIElements.StyleSheets.InitialStyle : System.Object
+---@field alignContent UnityEngine.UIElements.Align
+---@field alignItems UnityEngine.UIElements.Align
+---@field alignSelf UnityEngine.UIElements.Align
+---@field aspectRatio UnityEngine.UIElements.Ratio
+---@field backgroundColor UnityEngine.Color
+---@field backgroundImage UnityEngine.UIElements.Background
+---@field backgroundPositionX UnityEngine.UIElements.BackgroundPosition
+---@field backgroundPositionY UnityEngine.UIElements.BackgroundPosition
+---@field backgroundRepeat UnityEngine.UIElements.BackgroundRepeat
+---@field backgroundSize UnityEngine.UIElements.BackgroundSize
+---@field borderBottomColor UnityEngine.Color
+---@field borderBottomLeftRadius UnityEngine.UIElements.Length
+---@field borderBottomRightRadius UnityEngine.UIElements.Length
+---@field borderBottomWidth number
+---@field borderLeftColor UnityEngine.Color
+---@field borderLeftWidth number
+---@field borderRightColor UnityEngine.Color
+---@field borderRightWidth number
+---@field borderTopColor UnityEngine.Color
+---@field borderTopLeftRadius UnityEngine.UIElements.Length
+---@field borderTopRightRadius UnityEngine.UIElements.Length
+---@field borderTopWidth number
+---@field bottom UnityEngine.UIElements.Length
+---@field color UnityEngine.Color
+---@field cursor UnityEngine.UIElements.Cursor
+---@field display UnityEngine.UIElements.DisplayStyle
+---@field filter System.Collections.Generic.List
+---@field flexBasis UnityEngine.UIElements.Length
+---@field flexDirection UnityEngine.UIElements.FlexDirection
+---@field flexGrow number
+---@field flexShrink number
+---@field flexWrap UnityEngine.UIElements.Wrap
+---@field fontSize UnityEngine.UIElements.Length
+---@field height UnityEngine.UIElements.Length
+---@field justifyContent UnityEngine.UIElements.Justify
+---@field left UnityEngine.UIElements.Length
+---@field letterSpacing UnityEngine.UIElements.Length
+---@field marginBottom UnityEngine.UIElements.Length
+---@field marginLeft UnityEngine.UIElements.Length
+---@field marginRight UnityEngine.UIElements.Length
+---@field marginTop UnityEngine.UIElements.Length
+---@field maxHeight UnityEngine.UIElements.Length
+---@field maxWidth UnityEngine.UIElements.Length
+---@field minHeight UnityEngine.UIElements.Length
+---@field minWidth UnityEngine.UIElements.Length
+---@field opacity number
+---@field overflow UnityEngine.UIElements.OverflowInternal
+---@field paddingBottom UnityEngine.UIElements.Length
+---@field paddingLeft UnityEngine.UIElements.Length
+---@field paddingRight UnityEngine.UIElements.Length
+---@field paddingTop UnityEngine.UIElements.Length
+---@field position UnityEngine.UIElements.Position
+---@field right UnityEngine.UIElements.Length
+---@field rotate UnityEngine.UIElements.Rotate
+---@field scale UnityEngine.UIElements.Scale
+---@field textOverflow UnityEngine.UIElements.TextOverflow
+---@field textShadow UnityEngine.UIElements.TextShadow
+---@field top UnityEngine.UIElements.Length
+---@field transformOrigin UnityEngine.UIElements.TransformOrigin
+---@field transitionDelay System.Collections.Generic.List
+---@field transitionDuration System.Collections.Generic.List
+---@field transitionProperty System.Collections.Generic.List
+---@field transitionTimingFunction System.Collections.Generic.List
+---@field translate UnityEngine.UIElements.Translate
+---@field unityBackgroundImageTintColor UnityEngine.Color
+---@field unityEditorTextRenderingMode UnityEngine.UIElements.EditorTextRenderingMode
+---@field unityFont UnityEngine.Font
+---@field unityFontDefinition UnityEngine.UIElements.FontDefinition
+---@field unityFontStyleAndWeight UnityEngine.FontStyle
+---@field unityMaterial UnityEngine.UIElements.MaterialDefinition
+---@field unityOverflowClipBox UnityEngine.UIElements.OverflowClipBox
+---@field unityParagraphSpacing UnityEngine.UIElements.Length
+---@field unitySliceBottom number
+---@field unitySliceLeft number
+---@field unitySliceRight number
+---@field unitySliceScale number
+---@field unitySliceTop number
+---@field unitySliceType UnityEngine.UIElements.SliceType
+---@field unityTextAlign UnityEngine.TextAnchor
+---@field unityTextAutoSize UnityEngine.UIElements.TextAutoSize
+---@field unityTextGenerator UnityEngine.TextGeneratorType
+---@field unityTextOutlineColor UnityEngine.Color
+---@field unityTextOutlineWidth number
+---@field unityTextOverflowPosition UnityEngine.UIElements.TextOverflowPosition
+---@field visibility UnityEngine.UIElements.Visibility
+---@field whiteSpace UnityEngine.UIElements.WhiteSpace
+---@field width UnityEngine.UIElements.Length
+---@field wordSpacing UnityEngine.UIElements.Length
+UnityEngine.UIElements.StyleSheets.InitialStyle = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.InitialStyle UnityEngine.UIElements.StyleSheets.InitialStyle
+CS.UnityEngine.UIElements.StyleSheets.InitialStyle = UnityEngine.UIElements.StyleSheets.InitialStyle
+
+---@return UnityEngine.UIElements.ComputedStyle&
+function UnityEngine.UIElements.StyleSheets.InitialStyle.Get() end
+---@return UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.InitialStyle.Acquire() end
+
+---@class UnityEngine.UIElements.StyleSheets.ShorthandApplicator : System.Object
+UnityEngine.UIElements.StyleSheets.ShorthandApplicator = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.ShorthandApplicator UnityEngine.UIElements.StyleSheets.ShorthandApplicator
+CS.UnityEngine.UIElements.StyleSheets.ShorthandApplicator = UnityEngine.UIElements.StyleSheets.ShorthandApplicator
+
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.ApplyBackgroundPosition(reader, ref_computedStyle) end
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.ApplyBorderColor(reader, ref_computedStyle) end
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.ApplyBorderRadius(reader, ref_computedStyle) end
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.ApplyBorderWidth(reader, ref_computedStyle) end
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.ApplyFlex(reader, ref_computedStyle) end
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.ApplyMargin(reader, ref_computedStyle) end
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.ApplyPadding(reader, ref_computedStyle) end
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.ApplyTransition(reader, ref_computedStyle) end
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.ApplyUnityBackgroundScaleMode(reader, ref_computedStyle) end
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param ref_computedStyle UnityEngine.UIElements.ComputedStyle
+---@return ,UnityEngine.UIElements.ComputedStyle
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.ApplyUnityTextOutline(reader, ref_computedStyle) end
+---@param reader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+---@param out_backgroundPositionX UnityEngine.UIElements.BackgroundPosition
+---@param out_backgroundPositionY UnityEngine.UIElements.BackgroundPosition
+---@param out_backgroundRepeat UnityEngine.UIElements.BackgroundRepeat
+---@param out_backgroundSize UnityEngine.UIElements.BackgroundSize
+---@return ,UnityEngine.UIElements.BackgroundPosition,UnityEngine.UIElements.BackgroundPosition,UnityEngine.UIElements.BackgroundRepeat,UnityEngine.UIElements.BackgroundSize
+function UnityEngine.UIElements.StyleSheets.ShorthandApplicator.CompileUnityBackgroundScaleMode(reader, out_backgroundPositionX, out_backgroundPositionY, out_backgroundRepeat, out_backgroundSize) end
+
+---@class UnityEngine.UIElements.StyleSheets.StylePropertyCache : System.Object
+UnityEngine.UIElements.StyleSheets.StylePropertyCache = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.StylePropertyCache UnityEngine.UIElements.StyleSheets.StylePropertyCache
+CS.UnityEngine.UIElements.StyleSheets.StylePropertyCache = UnityEngine.UIElements.StyleSheets.StylePropertyCache
+
+---@param name string
+---@param out_syntax string
+---@return boolean,string
+function UnityEngine.UIElements.StyleSheets.StylePropertyCache.TryGetSyntax(name, out_syntax) end
+---@param name string
+---@param out_syntax string
+---@return boolean,string
+function UnityEngine.UIElements.StyleSheets.StylePropertyCache.TryGetNonTerminalValue(name, out_syntax) end
+---@param name string
+---@return string
+function UnityEngine.UIElements.StyleSheets.StylePropertyCache.FindClosestPropertyName(name) end
+
+---@class UnityEngine.UIElements.StyleSheets.StylePropertyGroup
+---@field Inherited UnityEngine.UIElements.StyleSheets.StylePropertyGroup
+---@field Layout UnityEngine.UIElements.StyleSheets.StylePropertyGroup
+---@field Rare UnityEngine.UIElements.StyleSheets.StylePropertyGroup
+---@field Shorthand UnityEngine.UIElements.StyleSheets.StylePropertyGroup
+---@field Transform UnityEngine.UIElements.StyleSheets.StylePropertyGroup
+---@field Transition UnityEngine.UIElements.StyleSheets.StylePropertyGroup
+---@field Visual UnityEngine.UIElements.StyleSheets.StylePropertyGroup
+UnityEngine.UIElements.StyleSheets.StylePropertyGroup = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.StylePropertyGroup UnityEngine.UIElements.StyleSheets.StylePropertyGroup
+CS.UnityEngine.UIElements.StyleSheets.StylePropertyGroup = UnityEngine.UIElements.StyleSheets.StylePropertyGroup
+
+
+---@class UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field Align UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field Axis UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field BackgroundPositionKeyword UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field BackgroundSizeType UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field DisplayStyle UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field EasingMode UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field EditorTextRenderingMode UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field FlexDirection UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field FontStyle UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field Justify UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field Overflow UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field OverflowClipBox UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field OverflowInternal UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field Position UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field Repeat UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field RepeatXY UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field ScaleMode UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field SliceType UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field TextAnchor UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field TextAutoSizeMode UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field TextGeneratorType UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field TextOverflow UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field TextOverflowPosition UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field TransformOriginOffset UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field Visibility UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field WhiteSpace UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@field Wrap UnityEngine.UIElements.StyleSheets.StyleEnumType
+UnityEngine.UIElements.StyleSheets.StyleEnumType = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.StyleEnumType UnityEngine.UIElements.StyleSheets.StyleEnumType
+CS.UnityEngine.UIElements.StyleSheets.StyleEnumType = UnityEngine.UIElements.StyleSheets.StyleEnumType
+
+
+---@class UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Unknown UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Custom UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field AlignContent UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field AlignItems UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field AlignSelf UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field All UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field AspectRatio UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BackgroundColor UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BackgroundImage UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BackgroundPosition UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BackgroundPositionX UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BackgroundPositionY UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BackgroundRepeat UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BackgroundSize UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderBottomColor UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderBottomLeftRadius UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderBottomRightRadius UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderBottomWidth UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderColor UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderLeftColor UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderLeftWidth UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderRadius UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderRightColor UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderRightWidth UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderTopColor UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderTopLeftRadius UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderTopRightRadius UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderTopWidth UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field BorderWidth UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Bottom UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Color UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Cursor UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Display UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Filter UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Flex UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field FlexBasis UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field FlexDirection UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field FlexGrow UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field FlexShrink UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field FlexWrap UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field FontSize UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Height UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field JustifyContent UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Left UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field LetterSpacing UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Margin UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field MarginBottom UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field MarginLeft UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field MarginRight UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field MarginTop UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field MaxHeight UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field MaxWidth UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field MinHeight UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field MinWidth UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Opacity UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Overflow UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Padding UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field PaddingBottom UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field PaddingLeft UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field PaddingRight UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field PaddingTop UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Position UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Right UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Rotate UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Scale UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field TextOverflow UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field TextShadow UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Top UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field TransformOrigin UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Transition UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field TransitionDelay UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field TransitionDuration UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field TransitionProperty UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field TransitionTimingFunction UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Translate UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityBackgroundImageTintColor UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityBackgroundScaleMode UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityEditorTextRenderingMode UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityFont UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityFontDefinition UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityFontStyleAndWeight UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityMaterial UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityOverflowClipBox UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityParagraphSpacing UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnitySliceBottom UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnitySliceLeft UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnitySliceRight UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnitySliceScale UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnitySliceTop UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnitySliceType UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityTextAlign UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityTextAutoSize UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityTextGenerator UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityTextOutline UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityTextOutlineColor UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityTextOutlineWidth UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field UnityTextOverflowPosition UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Visibility UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field WhiteSpace UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field Width UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field WordSpacing UnityEngine.UIElements.StyleSheets.StylePropertyId
+UnityEngine.UIElements.StyleSheets.StylePropertyId = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.StylePropertyId UnityEngine.UIElements.StyleSheets.StylePropertyId
+CS.UnityEngine.UIElements.StyleSheets.StylePropertyId = UnityEngine.UIElements.StyleSheets.StylePropertyId
+
+
+---@class UnityEngine.UIElements.StyleSheets.StylePropertyUtil : System.Object
+---@field k_GroupOffset number
+UnityEngine.UIElements.StyleSheets.StylePropertyUtil = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.StylePropertyUtil UnityEngine.UIElements.StyleSheets.StylePropertyUtil
+CS.UnityEngine.UIElements.StyleSheets.StylePropertyUtil = UnityEngine.UIElements.StyleSheets.StylePropertyUtil
+
+---@param enumType UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@param value string
+---@param out_intValue number
+---@return boolean,number
+function UnityEngine.UIElements.StyleSheets.StylePropertyUtil.TryGetEnumIntValue(enumType, value, out_intValue) end
+---@param shorthand UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@param id UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.StylePropertyUtil.IsMatchingShorthand(shorthand, id) end
+---@param id UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.UIElements.StyleSheets.StylePropertyUtil.GetAllowedAssetTypesForProperty(id) end
+---@param id UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.StylePropertyUtil.StyleValueCanHoldResource(id) end
+---@param id UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.StylePropertyUtil.IsAnimatable(id) end
+---@return System.Collections.Generic.IEnumerable
+function UnityEngine.UIElements.StyleSheets.StylePropertyUtil.AllPropertyIds() end
+---@overload fun(unit: UnityEngine.UIElements.LengthUnit) : string
+---@overload fun(unit: UnityEngine.UIElements.TimeUnit) : string
+---@param unit UnityEngine.UIElements.AngleUnit
+---@return string
+function UnityEngine.UIElements.StyleSheets.StylePropertyUtil.ToDisplayString(unit) end
+---@param floatStr System.ReadOnlySpan
+---@param out_value number
+---@return boolean,number
+function UnityEngine.UIElements.StyleSheets.StylePropertyUtil.TryParseFloat(floatStr, out_value) end
+
+---@class UnityEngine.UIElements.StyleSheets.CSSSpec : System.Object
+UnityEngine.UIElements.StyleSheets.CSSSpec = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.CSSSpec UnityEngine.UIElements.StyleSheets.CSSSpec
+CS.UnityEngine.UIElements.StyleSheets.CSSSpec = UnityEngine.UIElements.StyleSheets.CSSSpec
+
+---@overload fun(selector: string) : number
+---@param parts UnityEngine.UIElements.StyleSelectorPart[]
+---@return number
+function UnityEngine.UIElements.StyleSheets.CSSSpec.GetSelectorSpecificity(parts) end
+---@param selector string
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.CSSSpec.ValidateSelector(selector) end
+---@param selector string
+---@param out_parts UnityEngine.UIElements.StyleSelectorPart[]
+---@return boolean,UnityEngine.UIElements.StyleSelectorPart[]
+function UnityEngine.UIElements.StyleSheets.CSSSpec.ParseSelector(selector, out_parts) end
+
+---@class UnityEngine.UIElements.StyleSheets.Dimension : System.ValueType
+---@field unit UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@field value number
+UnityEngine.UIElements.StyleSheets.Dimension = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.Dimension UnityEngine.UIElements.StyleSheets.Dimension
+CS.UnityEngine.UIElements.StyleSheets.Dimension = UnityEngine.UIElements.StyleSheets.Dimension
+
+---@param value number
+---@param unit UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@return UnityEngine.UIElements.StyleSheets.Dimension
+function UnityEngine.UIElements.StyleSheets.Dimension.New(value, unit) end
+---@return UnityEngine.UIElements.Length
+function UnityEngine.UIElements.StyleSheets.Dimension:ToLength() end
+---@return UnityEngine.UIElements.TimeValue
+function UnityEngine.UIElements.StyleSheets.Dimension:ToTime() end
+---@return UnityEngine.UIElements.Angle
+function UnityEngine.UIElements.StyleSheets.Dimension:ToAngle() end
+---@overload fun(self: UnityEngine.UIElements.StyleSheets.Dimension, other: UnityEngine.UIElements.StyleSheets.Dimension) : boolean
+---@param obj System.Object
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.Dimension:Equals(obj) end
+---@return number
+function UnityEngine.UIElements.StyleSheets.Dimension:GetHashCode() end
+---@return string
+function UnityEngine.UIElements.StyleSheets.Dimension:ToString() end
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.Dimension:IsLength() end
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.Dimension:IsTimeValue() end
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.Dimension:IsAngle() end
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.Dimension:IsUnitless() end
+
+---@class UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@field Unitless UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@field Pixel UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@field Percent UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@field Second UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@field Millisecond UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@field Degree UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@field Gradian UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@field Radian UnityEngine.UIElements.StyleSheets.Dimension.Unit
+---@field Turn UnityEngine.UIElements.StyleSheets.Dimension.Unit
+UnityEngine.UIElements.StyleSheets.Dimension.Unit = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.Dimension.Unit UnityEngine.UIElements.StyleSheets.Dimension.Unit
+CS.UnityEngine.UIElements.StyleSheets.Dimension.Unit = UnityEngine.UIElements.StyleSheets.Dimension.Unit
+
+
+---@class UnityEngine.UIElements.StyleSheets.ScalableImage : System.ValueType
+---@field normalImage UnityEngine.Texture2D
+---@field highResolutionImage UnityEngine.Texture2D
+UnityEngine.UIElements.StyleSheets.ScalableImage = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.ScalableImage UnityEngine.UIElements.StyleSheets.ScalableImage
+CS.UnityEngine.UIElements.StyleSheets.ScalableImage = UnityEngine.UIElements.StyleSheets.ScalableImage
+
+---@return string
+function UnityEngine.UIElements.StyleSheets.ScalableImage:ToString() end
+
+---@class UnityEngine.UIElements.StyleSheets.StylePropertyValue : System.ValueType
+---@field sheet UnityEngine.UIElements.StyleSheet
+---@field handle UnityEngine.UIElements.StyleValueHandle
+UnityEngine.UIElements.StyleSheets.StylePropertyValue = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.StylePropertyValue UnityEngine.UIElements.StyleSheets.StylePropertyValue
+CS.UnityEngine.UIElements.StyleSheets.StylePropertyValue = UnityEngine.UIElements.StyleSheets.StylePropertyValue
+
+
+---@class UnityEngine.UIElements.StyleSheets.ImageSource : System.ValueType
+---@field texture UnityEngine.Texture2D
+---@field sprite UnityEngine.Sprite
+---@field vectorImage UnityEngine.UIElements.VectorImage
+---@field renderTexture UnityEngine.RenderTexture
+UnityEngine.UIElements.StyleSheets.ImageSource = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.ImageSource UnityEngine.UIElements.StyleSheets.ImageSource
+CS.UnityEngine.UIElements.StyleSheets.ImageSource = UnityEngine.UIElements.StyleSheets.ImageSource
+
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.ImageSource:IsNull() end
+
+---@class UnityEngine.UIElements.StyleSheets.StylePropertyReader : System.Object
+---@field property UnityEngine.UIElements.StyleProperty
+---@field propertyId UnityEngine.UIElements.StyleSheets.StylePropertyId
+---@field valueCount number
+---@field dpiScaling number
+UnityEngine.UIElements.StyleSheets.StylePropertyReader = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.StylePropertyReader UnityEngine.UIElements.StyleSheets.StylePropertyReader
+CS.UnityEngine.UIElements.StyleSheets.StylePropertyReader = UnityEngine.UIElements.StyleSheets.StylePropertyReader
+
+---@return UnityEngine.UIElements.StyleSheets.StylePropertyReader
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader.New() end
+---@overload fun(valCount: number, val1: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val2: UnityEngine.UIElements.StyleSheets.StylePropertyValue, zVvalue: UnityEngine.UIElements.StyleSheets.StylePropertyValue) : UnityEngine.UIElements.TransformOrigin
+---@param index number
+---@return UnityEngine.UIElements.TransformOrigin
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadTransformOrigin(index) end
+---@overload fun(valCount: number, val1: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val2: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val3: UnityEngine.UIElements.StyleSheets.StylePropertyValue) : UnityEngine.UIElements.Translate
+---@param index number
+---@return UnityEngine.UIElements.Translate
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadTranslate(index) end
+---@overload fun(valCount: number, val1: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val2: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val3: UnityEngine.UIElements.StyleSheets.StylePropertyValue) : UnityEngine.UIElements.Scale
+---@param index number
+---@return UnityEngine.UIElements.Scale
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadScale(index) end
+---@overload fun(valCount: number, val1: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val2: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val3: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val4: UnityEngine.UIElements.StyleSheets.StylePropertyValue) : UnityEngine.UIElements.Rotate
+---@param index number
+---@return UnityEngine.UIElements.Rotate
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadRotate(index) end
+---@param value UnityEngine.UIElements.StyleSheets.StylePropertyValue
+---@return UnityEngine.UIElements.Angle
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader.ReadAngle(value) end
+---@param valCount number
+---@param val1 UnityEngine.UIElements.StyleSheets.StylePropertyValue
+---@param val2 UnityEngine.UIElements.StyleSheets.StylePropertyValue
+---@param keyword UnityEngine.UIElements.BackgroundPositionKeyword
+---@return UnityEngine.UIElements.BackgroundPosition
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader.ReadBackgroundPosition(valCount, val1, val2, keyword) end
+---@overload fun(valCount: number, val1: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val2: UnityEngine.UIElements.StyleSheets.StylePropertyValue) : UnityEngine.UIElements.BackgroundRepeat
+---@param index number
+---@return UnityEngine.UIElements.BackgroundRepeat
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadBackgroundRepeat(index) end
+---@overload fun(valCount: number, val1: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val2: UnityEngine.UIElements.StyleSheets.StylePropertyValue) : UnityEngine.UIElements.BackgroundSize
+---@param index number
+---@return UnityEngine.UIElements.BackgroundSize
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadBackgroundSize(index) end
+---@overload fun(valCount: number, val1: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val2: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val3: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val4: UnityEngine.UIElements.StyleSheets.StylePropertyValue) : UnityEngine.UIElements.TextShadow
+---@param index number
+---@return UnityEngine.UIElements.TextShadow
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadTextShadow(index) end
+---@overload fun(valCount: number, val1: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val2: UnityEngine.UIElements.StyleSheets.StylePropertyValue, val3: UnityEngine.UIElements.StyleSheets.StylePropertyValue) : UnityEngine.UIElements.TextAutoSize
+---@param index number
+---@return UnityEngine.UIElements.TextAutoSize
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadTextAutoSize(index) end
+---@param sheet UnityEngine.UIElements.StyleSheet
+---@param selector UnityEngine.UIElements.StyleComplexSelector
+---@param varContext UnityEngine.UIElements.StyleVariableContext
+---@param dpiScaling number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:SetContext(sheet, selector, varContext, dpiScaling) end
+---@param sheet UnityEngine.UIElements.StyleSheet
+---@param properties UnityEngine.UIElements.StyleProperty[]
+---@param dpiScaling number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:SetInlineContext(sheet, properties, dpiScaling) end
+---@return UnityEngine.UIElements.StyleSheets.StylePropertyId
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:MoveNextProperty() end
+---@param index number
+---@return UnityEngine.UIElements.StyleSheets.StylePropertyValue
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:GetValue(index) end
+---@param index number
+---@return UnityEngine.UIElements.StyleValueType
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:GetValueType(index) end
+---@param index number
+---@param type UnityEngine.UIElements.StyleValueType
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:IsValueType(index, type) end
+---@param index number
+---@param keyword UnityEngine.UIElements.StyleValueKeyword
+---@return boolean
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:IsKeyword(index, keyword) end
+---@param index number
+---@return string
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadAsString(index) end
+---@param index number
+---@return UnityEngine.UIElements.Length
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadLength(index) end
+---@param index number
+---@return UnityEngine.UIElements.TimeValue
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadTimeValue(index) end
+---@param index number
+---@return number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadFloat(index) end
+---@param index number
+---@return number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadInt(index) end
+---@param index number
+---@return UnityEngine.Color
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadColor(index) end
+---@param enumType UnityEngine.UIElements.StyleSheets.StyleEnumType
+---@param index number
+---@return number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadEnum(enumType, index) end
+---@param index number
+---@return UnityEngine.Object
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadAsset(index) end
+---@param index number
+---@return UnityEngine.UIElements.FontDefinition
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadFontDefinition(index) end
+---@param index number
+---@return UnityEngine.Font
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadFont(index) end
+---@param index number
+---@return UnityEngine.UIElements.MaterialDefinition
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadMaterialDefinition(index) end
+---@param index number
+---@return UnityEngine.UIElements.Background
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadBackground(index) end
+---@param index number
+---@return UnityEngine.UIElements.Cursor
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadCursor(index) end
+---@param index number
+---@return UnityEngine.UIElements.BackgroundPosition
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadBackgroundPositionX(index) end
+---@param index number
+---@return UnityEngine.UIElements.BackgroundPosition
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadBackgroundPositionY(index) end
+---@param list System.Collections.Generic.List
+---@param index number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadListEasingFunction(list, index) end
+---@param list System.Collections.Generic.List
+---@param index number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadListTimeValue(list, index) end
+---@param list System.Collections.Generic.List
+---@param index number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadListFilterFunction(list, index) end
+---@param list System.Collections.Generic.List
+---@param index number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadListStylePropertyName(list, index) end
+---@param list System.Collections.Generic.List
+---@param index number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadListString(list, index) end
+---@param index number
+---@return UnityEngine.UIElements.StyleRatio
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader:ReadRatio(index) end
+
+---@class UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction : System.MulticastDelegate
+UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction = {}
+---@alias CS.UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction
+CS.UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction = UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction.New(object, method) end
+---@param sheet UnityEngine.UIElements.StyleSheet
+---@param handle UnityEngine.UIElements.StyleValueHandle
+---@return number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction:Invoke(sheet, handle) end
+---@param sheet UnityEngine.UIElements.StyleSheet
+---@param handle UnityEngine.UIElements.StyleValueHandle
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction:BeginInvoke(sheet, handle, callback, object) end
+---@param result System.IAsyncResult
+---@return number
+function UnityEngine.UIElements.StyleSheets.StylePropertyReader.GetCursorIdFunction:EndInvoke(result) end
+
 ---@class UnityEngine.UIElements.StyleSheets.MatchResultInfo : System.ValueType
 ---@field success boolean
 ---@field triggerPseudoMask UnityEngine.UIElements.PseudoStates
@@ -4287,721 +5018,3 @@ function UnityEngine.Video.VideoPlayer:SetTargetAudioSource(trackIndex, source) 
 ---@param trackIndex number
 ---@return UnityEngine.Experimental.Audio.AudioSampleProvider
 function UnityEngine.Video.VideoPlayer:GetAudioSampleProvider(trackIndex) end
-
----@class UnityEngine.Video.VideoPlayer.EventHandler : System.MulticastDelegate
-UnityEngine.Video.VideoPlayer.EventHandler = {}
----@alias CS.UnityEngine.Video.VideoPlayer.EventHandler UnityEngine.Video.VideoPlayer.EventHandler
-CS.UnityEngine.Video.VideoPlayer.EventHandler = UnityEngine.Video.VideoPlayer.EventHandler
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.Video.VideoPlayer.EventHandler
-function UnityEngine.Video.VideoPlayer.EventHandler.New(object, method) end
----@param source UnityEngine.Video.VideoPlayer
-function UnityEngine.Video.VideoPlayer.EventHandler:Invoke(source) end
----@param source UnityEngine.Video.VideoPlayer
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.Video.VideoPlayer.EventHandler:BeginInvoke(source, callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.Video.VideoPlayer.EventHandler:EndInvoke(result) end
-
----@class UnityEngine.Video.VideoPlayer.ErrorEventHandler : System.MulticastDelegate
-UnityEngine.Video.VideoPlayer.ErrorEventHandler = {}
----@alias CS.UnityEngine.Video.VideoPlayer.ErrorEventHandler UnityEngine.Video.VideoPlayer.ErrorEventHandler
-CS.UnityEngine.Video.VideoPlayer.ErrorEventHandler = UnityEngine.Video.VideoPlayer.ErrorEventHandler
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.Video.VideoPlayer.ErrorEventHandler
-function UnityEngine.Video.VideoPlayer.ErrorEventHandler.New(object, method) end
----@param source UnityEngine.Video.VideoPlayer
----@param message string
-function UnityEngine.Video.VideoPlayer.ErrorEventHandler:Invoke(source, message) end
----@param source UnityEngine.Video.VideoPlayer
----@param message string
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.Video.VideoPlayer.ErrorEventHandler:BeginInvoke(source, message, callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.Video.VideoPlayer.ErrorEventHandler:EndInvoke(result) end
-
----@class UnityEngine.Video.VideoPlayer.FrameReadyEventHandler : System.MulticastDelegate
-UnityEngine.Video.VideoPlayer.FrameReadyEventHandler = {}
----@alias CS.UnityEngine.Video.VideoPlayer.FrameReadyEventHandler UnityEngine.Video.VideoPlayer.FrameReadyEventHandler
-CS.UnityEngine.Video.VideoPlayer.FrameReadyEventHandler = UnityEngine.Video.VideoPlayer.FrameReadyEventHandler
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.Video.VideoPlayer.FrameReadyEventHandler
-function UnityEngine.Video.VideoPlayer.FrameReadyEventHandler.New(object, method) end
----@param source UnityEngine.Video.VideoPlayer
----@param frameIdx number
-function UnityEngine.Video.VideoPlayer.FrameReadyEventHandler:Invoke(source, frameIdx) end
----@param source UnityEngine.Video.VideoPlayer
----@param frameIdx number
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.Video.VideoPlayer.FrameReadyEventHandler:BeginInvoke(source, frameIdx, callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.Video.VideoPlayer.FrameReadyEventHandler:EndInvoke(result) end
-
----@class UnityEngine.Video.VideoPlayer.TimeEventHandler : System.MulticastDelegate
-UnityEngine.Video.VideoPlayer.TimeEventHandler = {}
----@alias CS.UnityEngine.Video.VideoPlayer.TimeEventHandler UnityEngine.Video.VideoPlayer.TimeEventHandler
-CS.UnityEngine.Video.VideoPlayer.TimeEventHandler = UnityEngine.Video.VideoPlayer.TimeEventHandler
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.Video.VideoPlayer.TimeEventHandler
-function UnityEngine.Video.VideoPlayer.TimeEventHandler.New(object, method) end
----@param source UnityEngine.Video.VideoPlayer
----@param seconds number
-function UnityEngine.Video.VideoPlayer.TimeEventHandler:Invoke(source, seconds) end
----@param source UnityEngine.Video.VideoPlayer
----@param seconds number
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.Video.VideoPlayer.TimeEventHandler:BeginInvoke(source, seconds, callback, object) end
----@param result System.IAsyncResult
-function UnityEngine.Video.VideoPlayer.TimeEventHandler:EndInvoke(result) end
-
----@class UnityEngineInternal.Video.VideoError
----@field NoErr UnityEngineInternal.Video.VideoError
----@field OutOfMemoryErr UnityEngineInternal.Video.VideoError
----@field CantReadFile UnityEngineInternal.Video.VideoError
----@field CantWriteFile UnityEngineInternal.Video.VideoError
----@field BadParams UnityEngineInternal.Video.VideoError
----@field NoData UnityEngineInternal.Video.VideoError
----@field BadPermissions UnityEngineInternal.Video.VideoError
----@field DeviceNotAvailable UnityEngineInternal.Video.VideoError
----@field ResourceNotAvailable UnityEngineInternal.Video.VideoError
----@field NetworkErr UnityEngineInternal.Video.VideoError
-UnityEngineInternal.Video.VideoError = {}
----@alias CS.UnityEngineInternal.Video.VideoError UnityEngineInternal.Video.VideoError
-CS.UnityEngineInternal.Video.VideoError = UnityEngineInternal.Video.VideoError
-
-
----@class UnityEngineInternal.Video.VideoPixelFormat
----@field RGB UnityEngineInternal.Video.VideoPixelFormat
----@field RGBA UnityEngineInternal.Video.VideoPixelFormat
----@field YUV UnityEngineInternal.Video.VideoPixelFormat
----@field YUVA UnityEngineInternal.Video.VideoPixelFormat
-UnityEngineInternal.Video.VideoPixelFormat = {}
----@alias CS.UnityEngineInternal.Video.VideoPixelFormat UnityEngineInternal.Video.VideoPixelFormat
-CS.UnityEngineInternal.Video.VideoPixelFormat = UnityEngineInternal.Video.VideoPixelFormat
-
-
----@class UnityEngineInternal.Video.VideoAlphaLayout
----@field Native UnityEngineInternal.Video.VideoAlphaLayout
----@field Split UnityEngineInternal.Video.VideoAlphaLayout
-UnityEngineInternal.Video.VideoAlphaLayout = {}
----@alias CS.UnityEngineInternal.Video.VideoAlphaLayout UnityEngineInternal.Video.VideoAlphaLayout
-CS.UnityEngineInternal.Video.VideoAlphaLayout = UnityEngineInternal.Video.VideoAlphaLayout
-
-
----@class UnityEngineInternal.Video.VideoPlayback : System.Object
-UnityEngineInternal.Video.VideoPlayback = {}
----@alias CS.UnityEngineInternal.Video.VideoPlayback UnityEngineInternal.Video.VideoPlayback
-CS.UnityEngineInternal.Video.VideoPlayback = UnityEngineInternal.Video.VideoPlayback
-
-function UnityEngineInternal.Video.VideoPlayback:StartPlayback() end
-function UnityEngineInternal.Video.VideoPlayback:PausePlayback() end
-function UnityEngineInternal.Video.VideoPlayback:StopPlayback() end
----@return UnityEngineInternal.Video.VideoError
-function UnityEngineInternal.Video.VideoPlayback:GetStatus() end
----@return boolean
-function UnityEngineInternal.Video.VideoPlayback:IsReady() end
----@return boolean
-function UnityEngineInternal.Video.VideoPlayback:IsPlaying() end
-function UnityEngineInternal.Video.VideoPlayback:Step() end
----@return boolean
-function UnityEngineInternal.Video.VideoPlayback:CanStep() end
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetWidth() end
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetHeight() end
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetFrameRate() end
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetDuration() end
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetFrameCount() end
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetPixelAspectRatioNumerator() end
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetPixelAspectRatioDenominator() end
----@return UnityEngineInternal.Video.VideoPixelFormat
-function UnityEngineInternal.Video.VideoPlayback:GetPixelFormat() end
----@return boolean
-function UnityEngineInternal.Video.VideoPlayback:CanNotSkipOnDrop() end
----@param skipOnDrop boolean
-function UnityEngineInternal.Video.VideoPlayback:SetSkipOnDrop(skipOnDrop) end
----@return boolean
-function UnityEngineInternal.Video.VideoPlayback:GetSkipOnDrop() end
----@param texture UnityEngine.Texture
----@param out_outputFrameNum number
----@return boolean,number
-function UnityEngineInternal.Video.VideoPlayback:GetTexture(texture, out_outputFrameNum) end
----@param frameIndex number
----@param seekCompletedCallback UnityEngineInternal.Video.VideoPlayback.Callback
-function UnityEngineInternal.Video.VideoPlayback:SeekToFrame(frameIndex, seekCompletedCallback) end
----@param secs number
----@param seekCompletedCallback UnityEngineInternal.Video.VideoPlayback.Callback
-function UnityEngineInternal.Video.VideoPlayback:SeekToTime(secs, seekCompletedCallback) end
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetPlaybackSpeed() end
----@param value number
-function UnityEngineInternal.Video.VideoPlayback:SetPlaybackSpeed(value) end
----@return boolean
-function UnityEngineInternal.Video.VideoPlayback:GetLoop() end
----@param value boolean
-function UnityEngineInternal.Video.VideoPlayback:SetLoop(value) end
----@param enable boolean
-function UnityEngineInternal.Video.VideoPlayback:SetAdjustToLinearSpace(enable) end
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetAudioTrackCount() end
----@param trackIdx number
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetAudioChannelCount(trackIdx) end
----@param trackIdx number
----@return number
-function UnityEngineInternal.Video.VideoPlayback:GetAudioSampleRate(trackIdx) end
----@param trackIdx number
----@return string
-function UnityEngineInternal.Video.VideoPlayback:GetAudioLanguageCode(trackIdx) end
----@param trackIdx number
----@param enabled boolean
----@param softwareOutput boolean
----@param audioSource UnityEngine.AudioSource
-function UnityEngineInternal.Video.VideoPlayback:SetAudioTarget(trackIdx, enabled, softwareOutput, audioSource) end
----@param trackIndex number
----@return UnityEngine.Experimental.Audio.AudioSampleProvider
-function UnityEngineInternal.Video.VideoPlayback:GetAudioSampleProvider(trackIndex) end
-
----@class UnityEngineInternal.Video.VideoPlayback.Callback : System.MulticastDelegate
-UnityEngineInternal.Video.VideoPlayback.Callback = {}
----@alias CS.UnityEngineInternal.Video.VideoPlayback.Callback UnityEngineInternal.Video.VideoPlayback.Callback
-CS.UnityEngineInternal.Video.VideoPlayback.Callback = UnityEngineInternal.Video.VideoPlayback.Callback
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngineInternal.Video.VideoPlayback.Callback
-function UnityEngineInternal.Video.VideoPlayback.Callback.New(object, method) end
-function UnityEngineInternal.Video.VideoPlayback.Callback:Invoke() end
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngineInternal.Video.VideoPlayback.Callback:BeginInvoke(callback, object) end
----@param result System.IAsyncResult
-function UnityEngineInternal.Video.VideoPlayback.Callback:EndInvoke(result) end
-
----@class UnityEngineInternal.Video.VideoPlayback.BindingsMarshaller : System.Object
-UnityEngineInternal.Video.VideoPlayback.BindingsMarshaller = {}
----@alias CS.UnityEngineInternal.Video.VideoPlayback.BindingsMarshaller UnityEngineInternal.Video.VideoPlayback.BindingsMarshaller
-CS.UnityEngineInternal.Video.VideoPlayback.BindingsMarshaller = UnityEngineInternal.Video.VideoPlayback.BindingsMarshaller
-
----@param ptr System.IntPtr
----@return UnityEngineInternal.Video.VideoPlayback
-function UnityEngineInternal.Video.VideoPlayback.BindingsMarshaller.ConvertToManaged(ptr) end
----@param videoPlayback UnityEngineInternal.Video.VideoPlayback
----@return System.IntPtr
-function UnityEngineInternal.Video.VideoPlayback.BindingsMarshaller.ConvertToNative(videoPlayback) end
-
----@class UnityEngineInternal.Video.VideoPlaybackMgr : System.Object
----@field videoPlaybackCount number
-UnityEngineInternal.Video.VideoPlaybackMgr = {}
----@alias CS.UnityEngineInternal.Video.VideoPlaybackMgr UnityEngineInternal.Video.VideoPlaybackMgr
-CS.UnityEngineInternal.Video.VideoPlaybackMgr = UnityEngineInternal.Video.VideoPlaybackMgr
-
----@return UnityEngineInternal.Video.VideoPlaybackMgr
-function UnityEngineInternal.Video.VideoPlaybackMgr.New() end
-function UnityEngineInternal.Video.VideoPlaybackMgr:Dispose() end
----@param fileName string
----@param errorCallback UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback
----@param readyCallback UnityEngineInternal.Video.VideoPlaybackMgr.Callback
----@param reachedEndCallback UnityEngineInternal.Video.VideoPlaybackMgr.Callback
----@param splitAlpha boolean
----@return UnityEngineInternal.Video.VideoPlayback
-function UnityEngineInternal.Video.VideoPlaybackMgr:CreateVideoPlayback(fileName, errorCallback, readyCallback, reachedEndCallback, splitAlpha) end
----@param playback UnityEngineInternal.Video.VideoPlayback
-function UnityEngineInternal.Video.VideoPlaybackMgr:ReleaseVideoPlayback(playback) end
-function UnityEngineInternal.Video.VideoPlaybackMgr:Update() end
-
----@class UnityEngineInternal.Video.VideoPlaybackMgr.Callback : System.MulticastDelegate
-UnityEngineInternal.Video.VideoPlaybackMgr.Callback = {}
----@alias CS.UnityEngineInternal.Video.VideoPlaybackMgr.Callback UnityEngineInternal.Video.VideoPlaybackMgr.Callback
-CS.UnityEngineInternal.Video.VideoPlaybackMgr.Callback = UnityEngineInternal.Video.VideoPlaybackMgr.Callback
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngineInternal.Video.VideoPlaybackMgr.Callback
-function UnityEngineInternal.Video.VideoPlaybackMgr.Callback.New(object, method) end
-function UnityEngineInternal.Video.VideoPlaybackMgr.Callback:Invoke() end
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngineInternal.Video.VideoPlaybackMgr.Callback:BeginInvoke(callback, object) end
----@param result System.IAsyncResult
-function UnityEngineInternal.Video.VideoPlaybackMgr.Callback:EndInvoke(result) end
-
----@class UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback : System.MulticastDelegate
-UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback = {}
----@alias CS.UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback
-CS.UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback = UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback
-function UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback.New(object, method) end
----@param message string
-function UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback:Invoke(message) end
----@param message string
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback:BeginInvoke(message, callback, object) end
----@param result System.IAsyncResult
-function UnityEngineInternal.Video.VideoPlaybackMgr.MessageCallback:EndInvoke(result) end
-
----@class UnityEngineInternal.Video.VideoPlaybackMgr.BindingsMarshaller : System.Object
-UnityEngineInternal.Video.VideoPlaybackMgr.BindingsMarshaller = {}
----@alias CS.UnityEngineInternal.Video.VideoPlaybackMgr.BindingsMarshaller UnityEngineInternal.Video.VideoPlaybackMgr.BindingsMarshaller
-CS.UnityEngineInternal.Video.VideoPlaybackMgr.BindingsMarshaller = UnityEngineInternal.Video.VideoPlaybackMgr.BindingsMarshaller
-
----@param videoPlaybackMgr UnityEngineInternal.Video.VideoPlaybackMgr
----@return System.IntPtr
-function UnityEngineInternal.Video.VideoPlaybackMgr.BindingsMarshaller.ConvertToNative(videoPlaybackMgr) end
-
----@class UnityEngine.Rendering.VirtualTexturing.System : System.Object
----@field AllMips number
-UnityEngine.Rendering.VirtualTexturing.System = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.System UnityEngine.Rendering.VirtualTexturing.System
-CS.UnityEngine.Rendering.VirtualTexturing.System = UnityEngine.Rendering.VirtualTexturing.System
-
-function UnityEngine.Rendering.VirtualTexturing.System.Update() end
-
----@class UnityEngine.Rendering.VirtualTexturing.EditorHelpers : System.Object
-UnityEngine.Rendering.VirtualTexturing.EditorHelpers = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.EditorHelpers UnityEngine.Rendering.VirtualTexturing.EditorHelpers
-CS.UnityEngine.Rendering.VirtualTexturing.EditorHelpers = UnityEngine.Rendering.VirtualTexturing.EditorHelpers
-
----@param textures UnityEngine.Texture[]
----@param out_errorMessage string
----@return boolean,string
-function UnityEngine.Rendering.VirtualTexturing.EditorHelpers.ValidateTextureStack(textures, out_errorMessage) end
----@return UnityEngine.Experimental.Rendering.GraphicsFormat[]
-function UnityEngine.Rendering.VirtualTexturing.EditorHelpers.QuerySupportedFormats() end
-
----@class UnityEngine.Rendering.VirtualTexturing.EditorHelpers.StackValidationResult : System.ValueType
----@field stackName string
----@field errorMessage string
-UnityEngine.Rendering.VirtualTexturing.EditorHelpers.StackValidationResult = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.EditorHelpers.StackValidationResult UnityEngine.Rendering.VirtualTexturing.EditorHelpers.StackValidationResult
-CS.UnityEngine.Rendering.VirtualTexturing.EditorHelpers.StackValidationResult = UnityEngine.Rendering.VirtualTexturing.EditorHelpers.StackValidationResult
-
-
----@class UnityEngine.Rendering.VirtualTexturing.Debugging : System.Object
----@field debugTilesEnabled boolean
----@field resolvingEnabled boolean
----@field flushEveryTickEnabled boolean
----@field mipPreloadedTextureCount number
-UnityEngine.Rendering.VirtualTexturing.Debugging = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Debugging UnityEngine.Rendering.VirtualTexturing.Debugging
-CS.UnityEngine.Rendering.VirtualTexturing.Debugging = UnityEngine.Rendering.VirtualTexturing.Debugging
-
----@return number
-function UnityEngine.Rendering.VirtualTexturing.Debugging.GetNumHandles() end
----@param out_debugHandle UnityEngine.Rendering.VirtualTexturing.Debugging.Handle
----@param index number
----@return ,UnityEngine.Rendering.VirtualTexturing.Debugging.Handle
-function UnityEngine.Rendering.VirtualTexturing.Debugging.GrabHandleInfo(out_debugHandle, index) end
----@return string
-function UnityEngine.Rendering.VirtualTexturing.Debugging.GetInfoDump() end
-
----@class UnityEngine.Rendering.VirtualTexturing.Debugging.Handle : System.ValueType
----@field handle number
----@field group string
----@field name string
----@field numLayers number
----@field material UnityEngine.Material
-UnityEngine.Rendering.VirtualTexturing.Debugging.Handle = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Debugging.Handle UnityEngine.Rendering.VirtualTexturing.Debugging.Handle
-CS.UnityEngine.Rendering.VirtualTexturing.Debugging.Handle = UnityEngine.Rendering.VirtualTexturing.Debugging.Handle
-
-
----@class UnityEngine.Rendering.VirtualTexturing.Resolver : System.Object
----@field CurrentWidth number
----@field CurrentHeight number
-UnityEngine.Rendering.VirtualTexturing.Resolver = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Resolver UnityEngine.Rendering.VirtualTexturing.Resolver
-CS.UnityEngine.Rendering.VirtualTexturing.Resolver = UnityEngine.Rendering.VirtualTexturing.Resolver
-
----@return UnityEngine.Rendering.VirtualTexturing.Resolver
-function UnityEngine.Rendering.VirtualTexturing.Resolver.New() end
-function UnityEngine.Rendering.VirtualTexturing.Resolver:Dispose() end
----@param width number
----@param height number
-function UnityEngine.Rendering.VirtualTexturing.Resolver:UpdateSize(width, height) end
----@overload fun(self: UnityEngine.Rendering.VirtualTexturing.Resolver, cmd: UnityEngine.Rendering.CommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier)
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param rt UnityEngine.Rendering.RenderTargetIdentifier
----@param x number
----@param width number
----@param y number
----@param height number
----@param mip number
----@param slice number
-function UnityEngine.Rendering.VirtualTexturing.Resolver:Process(cmd, rt, x, width, y, height, mip, slice) end
-
----@class UnityEngine.Rendering.VirtualTexturing.Resolver.BindingsMarshaller : System.Object
-UnityEngine.Rendering.VirtualTexturing.Resolver.BindingsMarshaller = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Resolver.BindingsMarshaller UnityEngine.Rendering.VirtualTexturing.Resolver.BindingsMarshaller
-CS.UnityEngine.Rendering.VirtualTexturing.Resolver.BindingsMarshaller = UnityEngine.Rendering.VirtualTexturing.Resolver.BindingsMarshaller
-
----@param resolver UnityEngine.Rendering.VirtualTexturing.Resolver
----@return System.IntPtr
-function UnityEngine.Rendering.VirtualTexturing.Resolver.BindingsMarshaller.ConvertToNative(resolver) end
-
----@class UnityEngine.Rendering.VirtualTexturing.GPUCacheSetting : System.ValueType
----@field format UnityEngine.Experimental.Rendering.GraphicsFormat
----@field sizeInMegaBytes number
-UnityEngine.Rendering.VirtualTexturing.GPUCacheSetting = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.GPUCacheSetting UnityEngine.Rendering.VirtualTexturing.GPUCacheSetting
-CS.UnityEngine.Rendering.VirtualTexturing.GPUCacheSetting = UnityEngine.Rendering.VirtualTexturing.GPUCacheSetting
-
-
----@class UnityEngine.Rendering.VirtualTexturing.FilterMode
----@field Bilinear UnityEngine.Rendering.VirtualTexturing.FilterMode
----@field Trilinear UnityEngine.Rendering.VirtualTexturing.FilterMode
-UnityEngine.Rendering.VirtualTexturing.FilterMode = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.FilterMode UnityEngine.Rendering.VirtualTexturing.FilterMode
-CS.UnityEngine.Rendering.VirtualTexturing.FilterMode = UnityEngine.Rendering.VirtualTexturing.FilterMode
-
-
----@class UnityEngine.Rendering.VirtualTexturing.Streaming : System.Object
-UnityEngine.Rendering.VirtualTexturing.Streaming = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Streaming UnityEngine.Rendering.VirtualTexturing.Streaming
-CS.UnityEngine.Rendering.VirtualTexturing.Streaming = UnityEngine.Rendering.VirtualTexturing.Streaming
-
----@param mat UnityEngine.Material
----@param stackNameId number
----@param r UnityEngine.Rect
----@param mipMap number
----@param numMips number
-function UnityEngine.Rendering.VirtualTexturing.Streaming.RequestRegion(mat, stackNameId, r, mipMap, numMips) end
----@param mat UnityEngine.Material
----@param stackNameId number
----@param out_width number
----@param out_height number
----@return ,number,number
-function UnityEngine.Rendering.VirtualTexturing.Streaming.GetTextureStackSize(mat, stackNameId, out_width, out_height) end
----@param sizeInMegabytes number
-function UnityEngine.Rendering.VirtualTexturing.Streaming.SetCPUCacheSize(sizeInMegabytes) end
----@return number
-function UnityEngine.Rendering.VirtualTexturing.Streaming.GetCPUCacheSize() end
----@param cacheSettings UnityEngine.Rendering.VirtualTexturing.GPUCacheSetting[]
-function UnityEngine.Rendering.VirtualTexturing.Streaming.SetGPUCacheSettings(cacheSettings) end
----@return UnityEngine.Rendering.VirtualTexturing.GPUCacheSetting[]
-function UnityEngine.Rendering.VirtualTexturing.Streaming.GetGPUCacheSettings() end
----@param texturesPerFrame number
----@param mipCount number
-function UnityEngine.Rendering.VirtualTexturing.Streaming.EnableMipPreloading(texturesPerFrame, mipCount) end
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural : System.Object
-UnityEngine.Rendering.VirtualTexturing.Procedural = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural UnityEngine.Rendering.VirtualTexturing.Procedural
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural = UnityEngine.Rendering.VirtualTexturing.Procedural
-
----@param guid System.Guid
----@param value number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.SetDebugFlagInteger(guid, value) end
----@param guid System.Guid
----@param value number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.SetDebugFlagDouble(guid, value) end
----@param sizeInMegabytes number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.SetCPUCacheSize(sizeInMegabytes) end
----@return number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.GetCPUCacheSize() end
----@param cacheSettings UnityEngine.Rendering.VirtualTexturing.GPUCacheSetting[]
-function UnityEngine.Rendering.VirtualTexturing.Procedural.SetGPUCacheSettings(cacheSettings) end
----@return UnityEngine.Rendering.VirtualTexturing.GPUCacheSetting[]
-function UnityEngine.Rendering.VirtualTexturing.Procedural.GetGPUCacheSettings() end
----@param tilesPerFrame number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.SetGPUCacheStagingAreaCapacity(tilesPerFrame) end
----@return number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.GetGPUCacheStagingAreaCapacity() end
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.Binding : System.Object
-UnityEngine.Rendering.VirtualTexturing.Procedural.Binding = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.Binding UnityEngine.Rendering.VirtualTexturing.Procedural.Binding
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.Binding = UnityEngine.Rendering.VirtualTexturing.Procedural.Binding
-
----@param handle number
----@param r UnityEngine.Rect
----@param mipMap number
----@param numMips number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.Binding.EvictRegion(handle, r, mipMap, numMips) end
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.CreationParameters : System.ValueType
----@field MaxNumLayers number
----@field MaxRequestsPerFrameSupported number
----@field width number
----@field height number
----@field maxActiveRequests number
----@field tilesize number
----@field layers UnityEngine.Experimental.Rendering.GraphicsFormat[]
----@field filterMode UnityEngine.Rendering.VirtualTexturing.FilterMode
-UnityEngine.Rendering.VirtualTexturing.Procedural.CreationParameters = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.CreationParameters UnityEngine.Rendering.VirtualTexturing.Procedural.CreationParameters
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.CreationParameters = UnityEngine.Rendering.VirtualTexturing.Procedural.CreationParameters
-
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.RequestHandlePayload : System.ValueType
-UnityEngine.Rendering.VirtualTexturing.Procedural.RequestHandlePayload = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.RequestHandlePayload UnityEngine.Rendering.VirtualTexturing.Procedural.RequestHandlePayload
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.RequestHandlePayload = UnityEngine.Rendering.VirtualTexturing.Procedural.RequestHandlePayload
-
----@overload fun(self: UnityEngine.Rendering.VirtualTexturing.Procedural.RequestHandlePayload, obj: System.Object) : boolean
----@param other UnityEngine.Rendering.VirtualTexturing.Procedural.RequestHandlePayload
----@return boolean
-function UnityEngine.Rendering.VirtualTexturing.Procedural.RequestHandlePayload:Equals(other) end
----@return number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.RequestHandlePayload:GetHashCode() end
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle : System.ValueType
-UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle = UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle
-
----@overload fun(requestHandles: Unity.Collections.NativeSlice[UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle[T]], status: Unity.Collections.NativeSlice)
----@param requestHandles Unity.Collections.NativeSlice[UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle[T]]
----@param status Unity.Collections.NativeSlice
----@param fenceBuffer UnityEngine.Rendering.CommandBuffer
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle.CompleteRequests(requestHandles, status, fenceBuffer) end
----@overload fun(handles: Unity.Collections.NativeSlice[UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle[T]], requests: Unity.Collections.NativeSlice[T])
----@return T
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle:GetRequestParameters() end
----@overload fun(self: UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle, obj: System.Object) : boolean
----@param other UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle
----@return boolean
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle:Equals(other) end
----@return number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle:GetHashCode() end
----@overload fun(self: UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle, status: UnityEngine.Rendering.VirtualTexturing.Procedural.RequestStatus)
----@param status UnityEngine.Rendering.VirtualTexturing.Procedural.RequestStatus
----@param fenceBuffer UnityEngine.Rendering.CommandBuffer
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle:CompleteRequest(status, fenceBuffer) end
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestLayerParameters : System.ValueType
----@field destX number
----@field destY number
----@field dest UnityEngine.Rendering.RenderTargetIdentifier
-UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestLayerParameters = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestLayerParameters UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestLayerParameters
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestLayerParameters = UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestLayerParameters
-
----@return number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestLayerParameters:GetWidth() end
----@return number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestLayerParameters:GetHeight() end
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestLayerParameters : System.ValueType
----@field scanlineSize number
----@field mipScanlineSize number
----@field requiresCachedMip boolean
-UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestLayerParameters = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestLayerParameters UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestLayerParameters
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestLayerParameters = UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestLayerParameters
-
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestParameters : System.ValueType
----@field level number
----@field x number
----@field y number
----@field width number
----@field height number
----@field numLayers number
-UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestParameters = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestParameters UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestParameters
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestParameters = UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestParameters
-
----@param index number
----@return UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestLayerParameters
-function UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStackRequestParameters:GetLayer(index) end
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestParameters : System.ValueType
----@field level number
----@field x number
----@field y number
----@field width number
----@field height number
----@field numLayers number
-UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestParameters = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestParameters UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestParameters
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestParameters = UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestParameters
-
----@param index number
----@return UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestLayerParameters
-function UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStackRequestParameters:GetLayer(index) end
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus
----@field StatusFree UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus
----@field StatusRequested UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus
----@field StatusProcessing UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus
----@field StatusComplete UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus
----@field StatusDropped UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus
-UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus = UnityEngine.Rendering.VirtualTexturing.Procedural.ProceduralTextureStackRequestStatus
-
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.RequestStatus
----@field Dropped UnityEngine.Rendering.VirtualTexturing.Procedural.RequestStatus
----@field Generated UnityEngine.Rendering.VirtualTexturing.Procedural.RequestStatus
-UnityEngine.Rendering.VirtualTexturing.Procedural.RequestStatus = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.RequestStatus UnityEngine.Rendering.VirtualTexturing.Procedural.RequestStatus
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.RequestStatus = UnityEngine.Rendering.VirtualTexturing.Procedural.RequestStatus
-
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase : System.Object
----@field borderSize number
----@field AllMips number
-UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase = UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase
-
----@param _name string
----@param _creationParams UnityEngine.Rendering.VirtualTexturing.Procedural.CreationParameters
----@param gpuGeneration boolean
----@return UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase.New(_name, _creationParams, gpuGeneration) end
----@param requestHandles Unity.Collections.NativeSlice[UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackRequestHandle[T]]
----@return number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase:PopRequests(requestHandles) end
----@return boolean
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase:IsValid() end
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase:Dispose() end
----@param mpb UnityEngine.MaterialPropertyBlock
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase:BindToMaterialPropertyBlock(mpb) end
----@param mat UnityEngine.Material
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase:BindToMaterial(mat) end
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase:BindGlobally() end
----@param r UnityEngine.Rect
----@param mipMap number
----@param numMips number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase:RequestRegion(r, mipMap, numMips) end
----@param r UnityEngine.Rect
----@param mipMap number
----@param numMips number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase:InvalidateRegion(r, mipMap, numMips) end
----@param r UnityEngine.Rect
----@param mipMap number
----@param numMips number
-function UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase:EvictRegion(r, mipMap, numMips) end
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStack : UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase
-UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStack = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStack UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStack
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStack = UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStack
-
----@param _name string
----@param creationParams UnityEngine.Rendering.VirtualTexturing.Procedural.CreationParameters
----@return UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStack
-function UnityEngine.Rendering.VirtualTexturing.Procedural.GPUTextureStack.New(_name, creationParams) end
-
----@class UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStack : UnityEngine.Rendering.VirtualTexturing.Procedural.TextureStackBase
-UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStack = {}
----@alias CS.UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStack UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStack
-CS.UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStack = UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStack
-
----@param _name string
----@param creationParams UnityEngine.Rendering.VirtualTexturing.Procedural.CreationParameters
----@return UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStack
-function UnityEngine.Rendering.VirtualTexturing.Procedural.CPUTextureStack.New(_name, creationParams) end
-
----@class UnityEngine.WindZoneMode
----@field Directional UnityEngine.WindZoneMode
----@field Spherical UnityEngine.WindZoneMode
-UnityEngine.WindZoneMode = {}
----@alias CS.UnityEngine.WindZoneMode UnityEngine.WindZoneMode
-CS.UnityEngine.WindZoneMode = UnityEngine.WindZoneMode
-
-
----@class UnityEngine.WindZone : UnityEngine.Component
----@field mode UnityEngine.WindZoneMode
----@field radius number
----@field windMain number
----@field windTurbulence number
----@field windPulseMagnitude number
----@field windPulseFrequency number
-UnityEngine.WindZone = {}
----@alias CS.UnityEngine.WindZone UnityEngine.WindZone
-CS.UnityEngine.WindZone = UnityEngine.WindZone
-
----@return UnityEngine.WindZone
-function UnityEngine.WindZone.New() end
-
----@class UnityEngine.XR.InputTracking : System.Object
-UnityEngine.XR.InputTracking = {}
----@alias CS.UnityEngine.XR.InputTracking UnityEngine.XR.InputTracking
-CS.UnityEngine.XR.InputTracking = UnityEngine.XR.InputTracking
-
----@param nodeStates System.Collections.Generic.List
-function UnityEngine.XR.InputTracking.GetNodeStates(nodeStates) end
-
----@class UnityEngine.XR.InputTracking.TrackingStateEventType
----@field NodeAdded UnityEngine.XR.InputTracking.TrackingStateEventType
----@field NodeRemoved UnityEngine.XR.InputTracking.TrackingStateEventType
----@field TrackingAcquired UnityEngine.XR.InputTracking.TrackingStateEventType
----@field TrackingLost UnityEngine.XR.InputTracking.TrackingStateEventType
-UnityEngine.XR.InputTracking.TrackingStateEventType = {}
----@alias CS.UnityEngine.XR.InputTracking.TrackingStateEventType UnityEngine.XR.InputTracking.TrackingStateEventType
-CS.UnityEngine.XR.InputTracking.TrackingStateEventType = UnityEngine.XR.InputTracking.TrackingStateEventType
-
-
----@class UnityEngine.XR.XRNode
----@field LeftEye UnityEngine.XR.XRNode
----@field RightEye UnityEngine.XR.XRNode
----@field CenterEye UnityEngine.XR.XRNode
----@field Head UnityEngine.XR.XRNode
----@field LeftHand UnityEngine.XR.XRNode
----@field RightHand UnityEngine.XR.XRNode
----@field GameController UnityEngine.XR.XRNode
----@field TrackingReference UnityEngine.XR.XRNode
----@field HardwareTracker UnityEngine.XR.XRNode
-UnityEngine.XR.XRNode = {}
----@alias CS.UnityEngine.XR.XRNode UnityEngine.XR.XRNode
-CS.UnityEngine.XR.XRNode = UnityEngine.XR.XRNode
-
-
----@class UnityEngine.XR.AvailableTrackingData
----@field None UnityEngine.XR.AvailableTrackingData
----@field PositionAvailable UnityEngine.XR.AvailableTrackingData
----@field RotationAvailable UnityEngine.XR.AvailableTrackingData
----@field VelocityAvailable UnityEngine.XR.AvailableTrackingData
----@field AngularVelocityAvailable UnityEngine.XR.AvailableTrackingData
----@field AccelerationAvailable UnityEngine.XR.AvailableTrackingData
----@field AngularAccelerationAvailable UnityEngine.XR.AvailableTrackingData
-UnityEngine.XR.AvailableTrackingData = {}
----@alias CS.UnityEngine.XR.AvailableTrackingData UnityEngine.XR.AvailableTrackingData
-CS.UnityEngine.XR.AvailableTrackingData = UnityEngine.XR.AvailableTrackingData
-
-
----@class UnityEngine.XR.XRNodeState : System.ValueType
----@field uniqueID number
----@field nodeType UnityEngine.XR.XRNode
----@field tracked boolean
----@field position UnityEngine.Vector3
----@field rotation UnityEngine.Quaternion
----@field velocity UnityEngine.Vector3
----@field angularVelocity UnityEngine.Vector3
----@field acceleration UnityEngine.Vector3
----@field angularAcceleration UnityEngine.Vector3
-UnityEngine.XR.XRNodeState = {}
----@alias CS.UnityEngine.XR.XRNodeState UnityEngine.XR.XRNodeState
-CS.UnityEngine.XR.XRNodeState = UnityEngine.XR.XRNodeState

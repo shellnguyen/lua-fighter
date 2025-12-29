@@ -1,5 +1,3175 @@
 ---@meta
 
+
+---@class UnityEngine.Rendering.ProbeVolumeLightingTab.Styles : System.Object
+---@field helpIcon UnityEngine.GUIContent
+---@field settingsIcon UnityEngine.GUIContent
+---@field debugIcon UnityEngine.GUIContent
+---@field lightingSettings UnityEngine.GUIContent
+---@field bakingTitle UnityEngine.GUIContent
+---@field bakingMode UnityEngine.GUIContent
+---@field currentBakingSet UnityEngine.GUIContent
+---@field scenesInSet UnityEngine.GUIContent
+---@field addLoadedScenes UnityEngine.GUIContent
+---@field toggleBakeAll UnityEngine.GUIContent
+---@field toggleBakeNone UnityEngine.GUIContent
+---@field status UnityEngine.GUIContent
+---@field bake UnityEngine.GUIContent
+---@field bakeBox UnityEngine.GUIContent
+---@field warnings UnityEngine.GUIContent
+---@field bakingModeOptions System.String[]
+---@field iconEnableAll UnityEngine.GUIContent
+---@field iconLoadForBake UnityEngine.GUIContent
+---@field msgEnableAll string
+---@field msgUnloadOther string
+---@field msgLoadForBake string
+---@field statusLabelWidth number
+---@field scenarioCostStat UnityEngine.GUIContent
+---@field totalCostStat UnityEngine.GUIContent
+---@field generateLighting UnityEngine.GUIContent
+---@field generateAPV UnityEngine.GUIContent
+---@field cancelBake UnityEngine.GUIContent
+---@field bakeOptionsText System.String[]
+---@field buttonStyle UnityEngine.GUIStyle
+---@field lightingButtonWidth number
+---@field inspectorTitle UnityEngine.GUIStyle
+---@field boldFoldout UnityEngine.GUIStyle
+---@field labelFont UnityEngine.GUIStyle
+UnityEngine.Rendering.ProbeVolumeLightingTab.Styles = {}
+---@alias CS.UnityEngine.Rendering.ProbeVolumeLightingTab.Styles UnityEngine.Rendering.ProbeVolumeLightingTab.Styles
+CS.UnityEngine.Rendering.ProbeVolumeLightingTab.Styles = UnityEngine.Rendering.ProbeVolumeLightingTab.Styles
+
+
+---@class UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+---@field Baking UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+---@field BakingWarnings UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+---@field Scenarios UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+---@field Placement UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+---@field PlacementFilters UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+---@field InvaliditySettings UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+---@field SettingsSkyOcclusion UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+---@field SettingsRenderingLayers UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable = {}
+---@alias CS.UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+CS.UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable = UnityEngine.Rendering.ProbeVolumeLightingTab.Expandable
+
+
+---@class UnityEngine.Rendering.ProbeVolumeLightingTab.SceneData : System.ValueType
+---@field asset UnityEditor.SceneAsset
+---@field guid string
+UnityEngine.Rendering.ProbeVolumeLightingTab.SceneData = {}
+---@alias CS.UnityEngine.Rendering.ProbeVolumeLightingTab.SceneData UnityEngine.Rendering.ProbeVolumeLightingTab.SceneData
+CS.UnityEngine.Rendering.ProbeVolumeLightingTab.SceneData = UnityEngine.Rendering.ProbeVolumeLightingTab.SceneData
+
+---@return string
+function UnityEngine.Rendering.ProbeVolumeLightingTab.SceneData:GetPath() end
+
+---@class UnityEngine.Rendering.ProbeVolumeLightingTab.ProbeVolumeOverlay : UnityEditor.Overlays.Overlay
+---@field visible boolean
+UnityEngine.Rendering.ProbeVolumeLightingTab.ProbeVolumeOverlay = {}
+---@alias CS.UnityEngine.Rendering.ProbeVolumeLightingTab.ProbeVolumeOverlay UnityEngine.Rendering.ProbeVolumeLightingTab.ProbeVolumeOverlay
+CS.UnityEngine.Rendering.ProbeVolumeLightingTab.ProbeVolumeOverlay = UnityEngine.Rendering.ProbeVolumeLightingTab.ProbeVolumeOverlay
+
+---@return UnityEngine.Rendering.ProbeVolumeLightingTab.ProbeVolumeOverlay
+function UnityEngine.Rendering.ProbeVolumeLightingTab.ProbeVolumeOverlay.New() end
+function UnityEngine.Rendering.ProbeVolumeLightingTab.ProbeVolumeOverlay:OnCreated() end
+---@return UnityEngine.UIElements.VisualElement
+function UnityEngine.Rendering.ProbeVolumeLightingTab.ProbeVolumeOverlay:CreatePanelContent() end
+
+---@class UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineAsset : UnityEngine.Rendering.RenderPipelineAsset
+---@field recordRenderGraphBody System.Action
+---@field renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
+---@field renderTextureUVOriginStrategy UnityEngine.Rendering.RenderGraphModule.RenderTextureUVOriginStrategy
+---@field invalidContextForTesting boolean
+UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineAsset = {}
+---@alias CS.UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineAsset UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineAsset
+CS.UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineAsset = UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineAsset
+
+---@return UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineAsset
+function UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineAsset.New() end
+
+---@class UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineInstance : UnityEngine.Rendering.RenderPipeline
+UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineInstance = {}
+---@alias CS.UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineInstance UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineInstance
+CS.UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineInstance = UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineInstance
+
+---@param asset UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineAsset
+---@return UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineInstance
+function UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestPipelineInstance.New(asset) end
+
+---@class UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestGlobalSettings : UnityEngine.Rendering.RenderPipelineGlobalSettings
+UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestGlobalSettings = {}
+---@alias CS.UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestGlobalSettings UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestGlobalSettings
+CS.UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestGlobalSettings = UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestGlobalSettings
+
+---@return UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestGlobalSettings
+function UnityEngine.Rendering.Tests.RenderGraphTestsCore.RenderGraphTestGlobalSettings.New() end
+
+---@class UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName
+---@field Initialized UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName
+---@field Preprocess UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName
+---@field Bake UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName
+---@field PostProcess UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName
+---@field AdditionalBake UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName
+---@field Done UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName
+UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName = {}
+---@alias CS.UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName
+CS.UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName = UnityEngine.Rendering.AdaptiveProbeVolumes.BakePipelineDriver.StageName
+
+
+---@class UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+---@field OnBakeStarted UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+---@field PrepareWorldSubdivision UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+---@field EnsurePerSceneDataInOpenScenes UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+---@field FindWorldBounds UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+---@field PlaceProbes UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+---@field BakeBricks UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+---@field ApplySubdivisionResults UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+---@field None UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages = {}
+---@alias CS.UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+CS.UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages = UnityEngine.Rendering.AdaptiveProbeVolumes.BakingSetupProfiling.Stages
+
+
+---@class UnityEngine.Rendering.AdaptiveProbeVolumes.BakingCompleteProfiling.Stages
+---@field FinalizingBake UnityEngine.Rendering.AdaptiveProbeVolumes.BakingCompleteProfiling.Stages
+---@field WriteBakedData UnityEngine.Rendering.AdaptiveProbeVolumes.BakingCompleteProfiling.Stages
+---@field PerformDilation UnityEngine.Rendering.AdaptiveProbeVolumes.BakingCompleteProfiling.Stages
+---@field None UnityEngine.Rendering.AdaptiveProbeVolumes.BakingCompleteProfiling.Stages
+UnityEngine.Rendering.AdaptiveProbeVolumes.BakingCompleteProfiling.Stages = {}
+---@alias CS.UnityEngine.Rendering.AdaptiveProbeVolumes.BakingCompleteProfiling.Stages UnityEngine.Rendering.AdaptiveProbeVolumes.BakingCompleteProfiling.Stages
+CS.UnityEngine.Rendering.AdaptiveProbeVolumes.BakingCompleteProfiling.Stages = UnityEngine.Rendering.AdaptiveProbeVolumes.BakingCompleteProfiling.Stages
+
+
+---@class UnityEngine.Rendering.AdaptiveProbeVolumes.VoxelToBrickCache.CacheEntry : System.Object
+---@field access number
+---@field map System.Collections.Generic.Dictionary
+UnityEngine.Rendering.AdaptiveProbeVolumes.VoxelToBrickCache.CacheEntry = {}
+---@alias CS.UnityEngine.Rendering.AdaptiveProbeVolumes.VoxelToBrickCache.CacheEntry UnityEngine.Rendering.AdaptiveProbeVolumes.VoxelToBrickCache.CacheEntry
+CS.UnityEngine.Rendering.AdaptiveProbeVolumes.VoxelToBrickCache.CacheEntry = UnityEngine.Rendering.AdaptiveProbeVolumes.VoxelToBrickCache.CacheEntry
+
+---@return UnityEngine.Rendering.AdaptiveProbeVolumes.VoxelToBrickCache.CacheEntry
+function UnityEngine.Rendering.AdaptiveProbeVolumes.VoxelToBrickCache.CacheEntry.New() end
+
+---@class UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling : UnityEngine.Rendering.AdaptiveProbeVolumes.BakingProfiling
+UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling = {}
+---@alias CS.UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling
+CS.UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling = UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling
+
+---@param stage UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+---@return UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling
+function UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.New(stage) end
+---@param out_progress0 number
+---@param out_progress1 number
+---@return ,number,number
+function UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.GetProgressRange(out_progress0, out_progress1) end
+---@return UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+function UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling:GetLastStep() end
+function UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling:Dispose() end
+
+---@class UnityEngine.Rendering.AdaptiveProbeVolumes.DefaultVirtualOffset.ProbeData : System.ValueType
+---@field position UnityEngine.Vector3
+---@field originBias number
+---@field tMax number
+---@field geometryBias number
+---@field probeIndex number
+---@field validityThreshold number
+UnityEngine.Rendering.AdaptiveProbeVolumes.DefaultVirtualOffset.ProbeData = {}
+---@alias CS.UnityEngine.Rendering.AdaptiveProbeVolumes.DefaultVirtualOffset.ProbeData UnityEngine.Rendering.AdaptiveProbeVolumes.DefaultVirtualOffset.ProbeData
+CS.UnityEngine.Rendering.AdaptiveProbeVolumes.DefaultVirtualOffset.ProbeData = UnityEngine.Rendering.AdaptiveProbeVolumes.DefaultVirtualOffset.ProbeData
+
+
+---@class UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+---@field BakeGI UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+---@field IntegrateDirectRadiance UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+---@field IntegrateIndirectRadiance UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+---@field IntegrateValidity UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+---@field IntegrateOcclusion UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+---@field Postprocess UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+---@field ReadBack UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+---@field None UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages = {}
+---@alias CS.UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+CS.UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages = UnityEngine.Rendering.AdaptiveProbeVolumes.BakeContext.LightTransportBakingProfiling.Stages
+
+
+---@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
+UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
+---@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
+CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
+
+---@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
+function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
+
+---@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData : System.ValueType
+---@field FilePathsData System.Byte[]
+---@field TypesData System.Byte[]
+---@field TotalTypes number
+---@field TotalFiles number
+---@field IsEditorOnly boolean
+UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = {}
+---@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
+CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData = UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData
+
+
+---@class RenderGraphCompilationCache : System.Object
+RenderGraphCompilationCache = {}
+---@alias CS.RenderGraphCompilationCache RenderGraphCompilationCache
+CS.RenderGraphCompilationCache = RenderGraphCompilationCache
+
+---@return RenderGraphCompilationCache
+function RenderGraphCompilationCache.New() end
+---@overload fun(self: RenderGraphCompilationCache, hash: number, frameIndex: number, out_outGraph: UnityEngine.Rendering.RenderGraphModule.RenderGraph.CompiledGraph) : boolean, UnityEngine.Rendering.RenderGraphModule.RenderGraph.CompiledGraph
+---@param hash number
+---@param frameIndex number
+---@param out_outGraph UnityEngine.Rendering.RenderGraphModule.NativeRenderPassCompiler.CompilerContextData
+---@return boolean,UnityEngine.Rendering.RenderGraphModule.NativeRenderPassCompiler.CompilerContextData
+function RenderGraphCompilationCache:GetCompilationCache(hash, frameIndex, out_outGraph) end
+function RenderGraphCompilationCache:Clear() end
+function RenderGraphCompilationCache:Cleanup() end
+
+---@class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 : System.Object
+UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = {}
+---@alias CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 UnitySourceGeneratedAssemblyMonoScriptTypes_v1
+CS.UnitySourceGeneratedAssemblyMonoScriptTypes_v1 = UnitySourceGeneratedAssemblyMonoScriptTypes_v1
+
+---@return UnitySourceGeneratedAssemblyMonoScriptTypes_v1
+function UnitySourceGeneratedAssemblyMonoScriptTypes_v1.New() end
+
+---@class UnityEngine.InputManagerEntry : System.Object
+---@field name string
+---@field desc string
+---@field btnNegative string
+---@field btnPositive string
+---@field altBtnNegative string
+---@field altBtnPositive string
+---@field gravity number
+---@field deadZone number
+---@field sensitivity number
+---@field snap boolean
+---@field invert boolean
+---@field kind UnityEngine.InputManagerEntry.Kind
+---@field axis UnityEngine.InputManagerEntry.Axis
+---@field joystick UnityEngine.InputManagerEntry.Joy
+UnityEngine.InputManagerEntry = {}
+---@alias CS.UnityEngine.InputManagerEntry UnityEngine.InputManagerEntry
+CS.UnityEngine.InputManagerEntry = UnityEngine.InputManagerEntry
+
+---@return UnityEngine.InputManagerEntry
+function UnityEngine.InputManagerEntry.New() end
+
+---@class UnityEngine.InputRegistering : System.Object
+UnityEngine.InputRegistering = {}
+---@alias CS.UnityEngine.InputRegistering UnityEngine.InputRegistering
+CS.UnityEngine.InputRegistering = UnityEngine.InputRegistering
+
+---@param entries System.Collections.Generic.List
+function UnityEngine.InputRegistering.RegisterInputs(entries) end
+
+---@class UnityEngine.LightAnchor : UnityEngine.MonoBehaviour
+---@field yaw number
+---@field pitch number
+---@field roll number
+---@field distance number
+---@field frameSpace UnityEngine.LightAnchor.UpDirection
+---@field anchorPosition UnityEngine.Vector3
+---@field anchorPositionOverride UnityEngine.Transform
+---@field anchorPositionOffset UnityEngine.Vector3
+UnityEngine.LightAnchor = {}
+---@alias CS.UnityEngine.LightAnchor UnityEngine.LightAnchor
+CS.UnityEngine.LightAnchor = UnityEngine.LightAnchor
+
+---@param angle number
+---@return number
+function UnityEngine.LightAnchor.NormalizeAngleDegree(angle) end
+---@param camera UnityEngine.Camera
+function UnityEngine.LightAnchor:SynchronizeOnTransform(camera) end
+---@param camera UnityEngine.Camera
+---@param anchor UnityEngine.Vector3
+function UnityEngine.LightAnchor:UpdateTransform(camera, anchor) end
+
+---@class UnityEngine.Experimental.Rendering.XRBuiltinShaderConstants : System.Object
+---@field unity_StereoCameraProjection number
+---@field unity_StereoCameraInvProjection number
+---@field unity_StereoMatrixV number
+---@field unity_StereoMatrixInvV number
+---@field unity_StereoMatrixP number
+---@field unity_StereoMatrixInvP number
+---@field unity_StereoMatrixVP number
+---@field unity_StereoMatrixInvVP number
+---@field unity_StereoWorldSpaceCameraPos number
+UnityEngine.Experimental.Rendering.XRBuiltinShaderConstants = {}
+---@alias CS.UnityEngine.Experimental.Rendering.XRBuiltinShaderConstants UnityEngine.Experimental.Rendering.XRBuiltinShaderConstants
+CS.UnityEngine.Experimental.Rendering.XRBuiltinShaderConstants = UnityEngine.Experimental.Rendering.XRBuiltinShaderConstants
+
+---@param viewMatrix UnityEngine.Matrix4x4
+---@param projMatrix UnityEngine.Matrix4x4
+---@param renderIntoTexture boolean
+---@param viewIndex number
+function UnityEngine.Experimental.Rendering.XRBuiltinShaderConstants.UpdateBuiltinShaderConstants(viewMatrix, projMatrix, renderIntoTexture, viewIndex) end
+---@overload fun(cmd: UnityEngine.Rendering.CommandBuffer)
+---@param cmd UnityEngine.Rendering.RasterCommandBuffer
+function UnityEngine.Experimental.Rendering.XRBuiltinShaderConstants.SetBuiltinShaderConstants(cmd) end
+---@param xrPass UnityEngine.Experimental.Rendering.XRPass
+---@param cmd UnityEngine.Rendering.CommandBuffer
+---@param renderIntoTexture boolean
+function UnityEngine.Experimental.Rendering.XRBuiltinShaderConstants.Update(xrPass, cmd, renderIntoTexture) end
+
+---@class UnityEngine.Experimental.Rendering.XRLayout : System.Object
+UnityEngine.Experimental.Rendering.XRLayout = {}
+---@alias CS.UnityEngine.Experimental.Rendering.XRLayout UnityEngine.Experimental.Rendering.XRLayout
+CS.UnityEngine.Experimental.Rendering.XRLayout = UnityEngine.Experimental.Rendering.XRLayout
+
+---@return UnityEngine.Experimental.Rendering.XRLayout
+function UnityEngine.Experimental.Rendering.XRLayout.New() end
+---@param camera UnityEngine.Camera
+---@param enableXR boolean
+function UnityEngine.Experimental.Rendering.XRLayout:AddCamera(camera, enableXR) end
+---@param xrPass UnityEngine.Experimental.Rendering.XRPass
+---@param camera UnityEngine.Camera
+function UnityEngine.Experimental.Rendering.XRLayout:ReconfigurePass(xrPass, camera) end
+---@return System.Collections.Generic.List
+function UnityEngine.Experimental.Rendering.XRLayout:GetActivePasses() end
+
+---@class UnityEngine.Experimental.Rendering.XRLayoutStack : System.Object
+---@field top UnityEngine.Experimental.Rendering.XRLayout
+UnityEngine.Experimental.Rendering.XRLayoutStack = {}
+---@alias CS.UnityEngine.Experimental.Rendering.XRLayoutStack UnityEngine.Experimental.Rendering.XRLayoutStack
+CS.UnityEngine.Experimental.Rendering.XRLayoutStack = UnityEngine.Experimental.Rendering.XRLayoutStack
+
+---@return UnityEngine.Experimental.Rendering.XRLayoutStack
+function UnityEngine.Experimental.Rendering.XRLayoutStack.New() end
+---@return UnityEngine.Experimental.Rendering.XRLayout
+function UnityEngine.Experimental.Rendering.XRLayoutStack:New() end
+function UnityEngine.Experimental.Rendering.XRLayoutStack:Release() end
+function UnityEngine.Experimental.Rendering.XRLayoutStack:Dispose() end
+
+---@class UnityEngine.Experimental.Rendering.XRMirrorView : System.Object
+UnityEngine.Experimental.Rendering.XRMirrorView = {}
+---@alias CS.UnityEngine.Experimental.Rendering.XRMirrorView UnityEngine.Experimental.Rendering.XRMirrorView
+CS.UnityEngine.Experimental.Rendering.XRMirrorView = UnityEngine.Experimental.Rendering.XRMirrorView
+
+
+---@class UnityEngine.Experimental.Rendering.XROcclusionMesh : System.Object
+UnityEngine.Experimental.Rendering.XROcclusionMesh = {}
+---@alias CS.UnityEngine.Experimental.Rendering.XROcclusionMesh UnityEngine.Experimental.Rendering.XROcclusionMesh
+CS.UnityEngine.Experimental.Rendering.XROcclusionMesh = UnityEngine.Experimental.Rendering.XROcclusionMesh
+
+
+---@class UnityEngine.Experimental.Rendering.XRPassCreateInfo : System.ValueType
+UnityEngine.Experimental.Rendering.XRPassCreateInfo = {}
+---@alias CS.UnityEngine.Experimental.Rendering.XRPassCreateInfo UnityEngine.Experimental.Rendering.XRPassCreateInfo
+CS.UnityEngine.Experimental.Rendering.XRPassCreateInfo = UnityEngine.Experimental.Rendering.XRPassCreateInfo
+
+
+---@class UnityEngine.Experimental.Rendering.XRPass : System.Object
+---@field enabled boolean
+---@field supportsFoveatedRendering boolean
+---@field copyDepth boolean
+---@field hasMotionVectorPass boolean
+---@field spaceWarpRightHandedNDC boolean
+---@field isFirstCameraPass boolean
+---@field isLastCameraPass boolean
+---@field multipassId number
+---@field cullingPassId number
+---@field renderTargetScaledWidth number
+---@field renderTargetScaledHeight number
+---@field renderTarget UnityEngine.Rendering.RenderTargetIdentifier
+---@field renderTargetDesc UnityEngine.RenderTextureDescriptor
+---@field motionVectorRenderTarget UnityEngine.Rendering.RenderTargetIdentifier
+---@field motionVectorRenderTargetDesc UnityEngine.RenderTextureDescriptor
+---@field cullingParams UnityEngine.Rendering.ScriptableCullingParameters
+---@field viewCount number
+---@field singlePassEnabled boolean
+---@field foveatedRenderingInfo System.IntPtr
+---@field isHDRDisplayOutputActive boolean
+---@field hdrDisplayOutputColorGamut UnityEngine.ColorGamut
+---@field hdrDisplayOutputInformation UnityEngine.Rendering.HDROutputUtils.HDRDisplayInformation
+---@field occlusionMeshScale number
+---@field hasValidOcclusionMesh boolean
+---@field hasValidVisibleMesh boolean
+UnityEngine.Experimental.Rendering.XRPass = {}
+---@alias CS.UnityEngine.Experimental.Rendering.XRPass UnityEngine.Experimental.Rendering.XRPass
+CS.UnityEngine.Experimental.Rendering.XRPass = UnityEngine.Experimental.Rendering.XRPass
+
+---@return UnityEngine.Experimental.Rendering.XRPass
+function UnityEngine.Experimental.Rendering.XRPass.New() end
+---@param createInfo UnityEngine.Experimental.Rendering.XRPassCreateInfo
+---@return UnityEngine.Experimental.Rendering.XRPass
+function UnityEngine.Experimental.Rendering.XRPass.CreateDefault(createInfo) end
+function UnityEngine.Experimental.Rendering.XRPass:Release() end
+---@param viewIndex number
+---@return UnityEngine.Matrix4x4
+function UnityEngine.Experimental.Rendering.XRPass:GetProjMatrix(viewIndex) end
+---@param viewIndex number
+---@return UnityEngine.Matrix4x4
+function UnityEngine.Experimental.Rendering.XRPass:GetViewMatrix(viewIndex) end
+---@param viewIndex number
+---@return boolean
+function UnityEngine.Experimental.Rendering.XRPass:GetPrevViewValid(viewIndex) end
+---@param viewIndex number
+---@return UnityEngine.Matrix4x4
+function UnityEngine.Experimental.Rendering.XRPass:GetPrevViewMatrix(viewIndex) end
+---@param viewIndex number
+---@return UnityEngine.Rect
+function UnityEngine.Experimental.Rendering.XRPass:GetViewport(viewIndex) end
+---@param viewIndex number
+---@return UnityEngine.Mesh
+function UnityEngine.Experimental.Rendering.XRPass:GetOcclusionMesh(viewIndex) end
+---@param viewIndex number
+---@return UnityEngine.Mesh
+function UnityEngine.Experimental.Rendering.XRPass:GetVisibleMesh(viewIndex) end
+---@param viewIndex number
+---@return number
+function UnityEngine.Experimental.Rendering.XRPass:GetTextureArraySlice(viewIndex) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.XRPass, cmd: UnityEngine.Rendering.CommandBuffer)
+---@param cmd UnityEngine.Rendering.IRasterCommandBuffer
+function UnityEngine.Experimental.Rendering.XRPass:StartSinglePass(cmd) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.XRPass, cmd: UnityEngine.Rendering.CommandBuffer)
+---@param cmd UnityEngine.Rendering.BaseCommandBuffer
+function UnityEngine.Experimental.Rendering.XRPass:StopSinglePass(cmd) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.XRPass, cmd: UnityEngine.Rendering.CommandBuffer, renderIntoTexture: boolean)
+---@param cmd UnityEngine.Rendering.RasterCommandBuffer
+---@param renderIntoTexture boolean
+function UnityEngine.Experimental.Rendering.XRPass:RenderOcclusionMesh(cmd, renderIntoTexture) end
+---@overload fun(self: UnityEngine.Experimental.Rendering.XRPass, cmd: UnityEngine.Rendering.RasterCommandBuffer, occlusionMeshScale: number, material: UnityEngine.Material, materialBlock: UnityEngine.MaterialPropertyBlock, shaderPass: number, renderIntoTexture: boolean)
+---@param cmd UnityEngine.Rendering.CommandBuffer
+---@param occlusionMeshScale number
+---@param material UnityEngine.Material
+---@param materialBlock UnityEngine.MaterialPropertyBlock
+---@param shaderPass number
+---@param renderIntoTexture boolean
+function UnityEngine.Experimental.Rendering.XRPass:RenderVisibleMeshCustomMaterial(cmd, occlusionMeshScale, material, materialBlock, shaderPass, renderIntoTexture) end
+function UnityEngine.Experimental.Rendering.XRPass:RenderDebugXRViewsFrustum() end
+---@param center UnityEngine.Vector2
+---@return UnityEngine.Vector4
+function UnityEngine.Experimental.Rendering.XRPass:ApplyXRViewCenterOffset(center) end
+---@param createInfo UnityEngine.Experimental.Rendering.XRPassCreateInfo
+function UnityEngine.Experimental.Rendering.XRPass:InitBase(createInfo) end
+
+---@class UnityEngine.Experimental.Rendering.SinglepassKeywords : System.Object
+---@field STEREO_MULTIVIEW_ON UnityEngine.Rendering.GlobalKeyword
+---@field STEREO_INSTANCING_ON UnityEngine.Rendering.GlobalKeyword
+UnityEngine.Experimental.Rendering.SinglepassKeywords = {}
+---@alias CS.UnityEngine.Experimental.Rendering.SinglepassKeywords UnityEngine.Experimental.Rendering.SinglepassKeywords
+CS.UnityEngine.Experimental.Rendering.SinglepassKeywords = UnityEngine.Experimental.Rendering.SinglepassKeywords
+
+
+---@class UnityEngine.Experimental.Rendering.XRSystem : System.Object
+---@field emptyPass UnityEngine.Experimental.Rendering.XRPass
+---@field displayActive boolean
+---@field isHDRDisplayOutputActive boolean
+---@field singlePassAllowed boolean
+---@field foveatedRenderingCaps UnityEngine.Rendering.FoveatedRenderingCaps
+---@field dumpDebugInfo boolean
+UnityEngine.Experimental.Rendering.XRSystem = {}
+---@alias CS.UnityEngine.Experimental.Rendering.XRSystem UnityEngine.Experimental.Rendering.XRSystem
+CS.UnityEngine.Experimental.Rendering.XRSystem = UnityEngine.Experimental.Rendering.XRSystem
+
+---@return UnityEngine.XR.XRDisplaySubsystem
+function UnityEngine.Experimental.Rendering.XRSystem.GetActiveDisplay() end
+---@param passAllocator System.Func
+---@param occlusionMeshPS UnityEngine.Shader
+---@param mirrorViewPS UnityEngine.Shader
+function UnityEngine.Experimental.Rendering.XRSystem.Initialize(passAllocator, occlusionMeshPS, mirrorViewPS) end
+---@param msaaSamples UnityEngine.Rendering.MSAASamples
+function UnityEngine.Experimental.Rendering.XRSystem.SetDisplayMSAASamples(msaaSamples) end
+---@return UnityEngine.Rendering.MSAASamples
+function UnityEngine.Experimental.Rendering.XRSystem.GetDisplayMSAASamples() end
+---@param renderScale number
+function UnityEngine.Experimental.Rendering.XRSystem.SetRenderScale(renderScale) end
+---@return number
+function UnityEngine.Experimental.Rendering.XRSystem.GetRenderViewportScale() end
+---@return number
+function UnityEngine.Experimental.Rendering.XRSystem.GetDynamicResolutionScale() end
+---@param texture UnityEngine.RenderTexture
+---@return number
+function UnityEngine.Experimental.Rendering.XRSystem.ScaleTextureWidthForXR(texture) end
+---@param texture UnityEngine.RenderTexture
+---@return number
+function UnityEngine.Experimental.Rendering.XRSystem.ScaleTextureHeightForXR(texture) end
+---@return UnityEngine.Experimental.Rendering.XRLayout
+function UnityEngine.Experimental.Rendering.XRSystem.NewLayout() end
+function UnityEngine.Experimental.Rendering.XRSystem.EndLayout() end
+---@param cmd UnityEngine.Rendering.CommandBuffer
+---@param camera UnityEngine.Camera
+function UnityEngine.Experimental.Rendering.XRSystem.RenderMirrorView(cmd, camera) end
+function UnityEngine.Experimental.Rendering.XRSystem.Dispose() end
+
+---@class UnityEngine.Experimental.Rendering.XRView : System.ValueType
+UnityEngine.Experimental.Rendering.XRView = {}
+---@alias CS.UnityEngine.Experimental.Rendering.XRView UnityEngine.Experimental.Rendering.XRView
+CS.UnityEngine.Experimental.Rendering.XRView = UnityEngine.Experimental.Rendering.XRView
+
+
+---@class UnityEngine.Experimental.Rendering.XRVisibleMesh : System.Object
+UnityEngine.Experimental.Rendering.XRVisibleMesh = {}
+---@alias CS.UnityEngine.Experimental.Rendering.XRVisibleMesh UnityEngine.Experimental.Rendering.XRVisibleMesh
+CS.UnityEngine.Experimental.Rendering.XRVisibleMesh = UnityEngine.Experimental.Rendering.XRVisibleMesh
+
+
+---@class UnityEngine.Rendering.IPerFrameHistoryAccessTracker
+UnityEngine.Rendering.IPerFrameHistoryAccessTracker = {}
+---@alias CS.UnityEngine.Rendering.IPerFrameHistoryAccessTracker UnityEngine.Rendering.IPerFrameHistoryAccessTracker
+CS.UnityEngine.Rendering.IPerFrameHistoryAccessTracker = UnityEngine.Rendering.IPerFrameHistoryAccessTracker
+
+
+---@class UnityEngine.Rendering.ICameraHistoryWriteAccess
+UnityEngine.Rendering.ICameraHistoryWriteAccess = {}
+---@alias CS.UnityEngine.Rendering.ICameraHistoryWriteAccess UnityEngine.Rendering.ICameraHistoryWriteAccess
+CS.UnityEngine.Rendering.ICameraHistoryWriteAccess = UnityEngine.Rendering.ICameraHistoryWriteAccess
+
+
+---@class UnityEngine.Rendering.ICameraHistoryReadAccess
+UnityEngine.Rendering.ICameraHistoryReadAccess = {}
+---@alias CS.UnityEngine.Rendering.ICameraHistoryReadAccess UnityEngine.Rendering.ICameraHistoryReadAccess
+CS.UnityEngine.Rendering.ICameraHistoryReadAccess = UnityEngine.Rendering.ICameraHistoryReadAccess
+
+
+---@class UnityEngine.Rendering.CameraHistoryItem : UnityEngine.Rendering.ContextItem
+UnityEngine.Rendering.CameraHistoryItem = {}
+---@alias CS.UnityEngine.Rendering.CameraHistoryItem UnityEngine.Rendering.CameraHistoryItem
+CS.UnityEngine.Rendering.CameraHistoryItem = UnityEngine.Rendering.CameraHistoryItem
+
+---@param owner UnityEngine.Rendering.BufferedRTHandleSystem
+---@param typeId number
+function UnityEngine.Rendering.CameraHistoryItem:OnCreate(owner, typeId) end
+
+---@class UnityEngine.Rendering.CameraSwitcher : UnityEngine.MonoBehaviour
+---@field m_Cameras UnityEngine.Camera[]
+UnityEngine.Rendering.CameraSwitcher = {}
+---@alias CS.UnityEngine.Rendering.CameraSwitcher UnityEngine.Rendering.CameraSwitcher
+CS.UnityEngine.Rendering.CameraSwitcher = UnityEngine.Rendering.CameraSwitcher
+
+
+---@class UnityEngine.Rendering.FreeCamera : UnityEngine.MonoBehaviour
+---@field m_LookSpeedController number
+---@field m_LookSpeedMouse number
+---@field m_MoveSpeed number
+---@field m_MoveSpeedIncrement number
+---@field m_Turbo number
+UnityEngine.Rendering.FreeCamera = {}
+---@alias CS.UnityEngine.Rendering.FreeCamera UnityEngine.Rendering.FreeCamera
+CS.UnityEngine.Rendering.FreeCamera = UnityEngine.Rendering.FreeCamera
+
+
+---@class UnityEngine.Rendering.BaseCommandBuffer : System.Object
+---@field name string
+---@field sizeInBytes number
+UnityEngine.Rendering.BaseCommandBuffer = {}
+---@alias CS.UnityEngine.Rendering.BaseCommandBuffer UnityEngine.Rendering.BaseCommandBuffer
+CS.UnityEngine.Rendering.BaseCommandBuffer = UnityEngine.Rendering.BaseCommandBuffer
+
+
+---@class UnityEngine.Rendering.CommandBufferHelpers : System.ValueType
+UnityEngine.Rendering.CommandBufferHelpers = {}
+---@alias CS.UnityEngine.Rendering.CommandBufferHelpers UnityEngine.Rendering.CommandBufferHelpers
+CS.UnityEngine.Rendering.CommandBufferHelpers = UnityEngine.Rendering.CommandBufferHelpers
+
+---@param baseBuffer UnityEngine.Rendering.CommandBuffer
+---@return UnityEngine.Rendering.RasterCommandBuffer
+function UnityEngine.Rendering.CommandBufferHelpers.GetRasterCommandBuffer(baseBuffer) end
+---@param baseBuffer UnityEngine.Rendering.CommandBuffer
+---@return UnityEngine.Rendering.ComputeCommandBuffer
+function UnityEngine.Rendering.CommandBufferHelpers.GetComputeCommandBuffer(baseBuffer) end
+---@param baseBuffer UnityEngine.Rendering.CommandBuffer
+---@return UnityEngine.Rendering.UnsafeCommandBuffer
+function UnityEngine.Rendering.CommandBufferHelpers.GetUnsafeCommandBuffer(baseBuffer) end
+---@param baseBuffer UnityEngine.Rendering.UnsafeCommandBuffer
+---@return UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.CommandBufferHelpers.GetNativeCommandBuffer(baseBuffer) end
+---@param cam UnityEngine.Camera
+---@param cmd UnityEngine.Rendering.UnsafeCommandBuffer
+---@param camXRSettings UnityEngine.VFX.VFXCameraXRSettings
+---@param results UnityEngine.Rendering.CullingResults
+function UnityEngine.Rendering.CommandBufferHelpers.VFXManager_ProcessCameraCommand(cam, cmd, camXRSettings, results) end
+
+---@class UnityEngine.Rendering.ComputeCommandBuffer : UnityEngine.Rendering.BaseCommandBuffer
+UnityEngine.Rendering.ComputeCommandBuffer = {}
+---@alias CS.UnityEngine.Rendering.ComputeCommandBuffer UnityEngine.Rendering.ComputeCommandBuffer
+CS.UnityEngine.Rendering.ComputeCommandBuffer = UnityEngine.Rendering.ComputeCommandBuffer
+
+---@param invertCulling boolean
+function UnityEngine.Rendering.ComputeCommandBuffer:SetInvertCulling(invertCulling) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeFloatParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeIntParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: UnityEngine.Vector4)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val UnityEngine.Vector4
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeVectorParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, values: UnityEngine.Vector4[])
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param values UnityEngine.Vector4[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeVectorArrayParam(computeShader, name, values) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: UnityEngine.Matrix4x4)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val UnityEngine.Matrix4x4
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeMatrixParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, values: UnityEngine.Matrix4x4[])
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param values UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeMatrixArrayParam(computeShader, name, values) end
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param passName string
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingShaderPass(rayTracingShader, passName) end
+---@param pixelRect UnityEngine.Rect
+function UnityEngine.Rendering.ComputeCommandBuffer:SetViewport(pixelRect) end
+---@param scissor UnityEngine.Rect
+function UnityEngine.Rendering.ComputeCommandBuffer:EnableScissorRect(scissor) end
+function UnityEngine.Rendering.ComputeCommandBuffer:DisableScissorRect() end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalFloat(name, value) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalInt(name, value) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalInteger(name, value) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, value: UnityEngine.Vector4)
+---@param name string
+---@param value UnityEngine.Vector4
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalVector(name, value) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, value: UnityEngine.Color)
+---@param name string
+---@param value UnityEngine.Color
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalColor(name, value) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, value: UnityEngine.Matrix4x4)
+---@param name string
+---@param value UnityEngine.Matrix4x4
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalMatrix(name, value) end
+---@param keyword string
+function UnityEngine.Rendering.ComputeCommandBuffer:EnableShaderKeyword(keyword) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.ComputeCommandBuffer:EnableKeyword(computeShader, ref_keyword) end
+---@param keyword string
+function UnityEngine.Rendering.ComputeCommandBuffer:DisableShaderKeyword(keyword) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.ComputeCommandBuffer:DisableKeyword(computeShader, ref_keyword) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword, value: boolean) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword, value: boolean) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@param value boolean
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.ComputeCommandBuffer:SetKeyword(computeShader, ref_keyword, value) end
+---@param view UnityEngine.Matrix4x4
+---@param proj UnityEngine.Matrix4x4
+function UnityEngine.Rendering.ComputeCommandBuffer:SetViewProjectionMatrices(view, proj) end
+---@param bias number
+---@param slopeBias number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalDepthBias(bias, slopeBias) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, values: System.Single[])
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values System.Single[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalFloatArray(propertyName, values) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, values: UnityEngine.Vector4[])
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values UnityEngine.Vector4[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalVectorArray(propertyName, values) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, values: UnityEngine.Matrix4x4[])
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalMatrixArray(propertyName, values) end
+---@param projectionMat UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetLateLatchProjectionMatrices(projectionMat) end
+---@param matrixPropertyType UnityEngine.Rendering.CameraLateLatchMatrixType
+---@param shaderPropertyID number
+function UnityEngine.Rendering.ComputeCommandBuffer:MarkLateLatchMatrixShaderPropertyID(matrixPropertyType, shaderPropertyID) end
+---@param matrixPropertyType UnityEngine.Rendering.CameraLateLatchMatrixType
+function UnityEngine.Rendering.ComputeCommandBuffer:UnmarkLateLatchMatrix(matrixPropertyType) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, name: string)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, sampler: UnityEngine.Profiling.CustomSampler)
+---@param marker Unity.Profiling.ProfilerMarker
+function UnityEngine.Rendering.ComputeCommandBuffer:BeginSample(marker) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, name: string)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, sampler: UnityEngine.Profiling.CustomSampler)
+---@param marker Unity.Profiling.ProfilerMarker
+function UnityEngine.Rendering.ComputeCommandBuffer:EndSample(marker) end
+---@param dest UnityEngine.Rendering.RenderTargetIdentifier
+function UnityEngine.Rendering.ComputeCommandBuffer:IncrementUpdateCount(dest) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, buffer: UnityEngine.ComputeBuffer, data: System.Array)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, buffer: UnityEngine.ComputeBuffer, data: System.Array, managedBufferStartIndex: number, graphicsBufferStartIndex: number, count: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, buffer: UnityEngine.GraphicsBuffer, data: System.Array)
+---@param buffer UnityEngine.GraphicsBuffer
+---@param data System.Array
+---@param managedBufferStartIndex number
+---@param graphicsBufferStartIndex number
+---@param count number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetBufferData(buffer, data, managedBufferStartIndex, graphicsBufferStartIndex, count) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, buffer: UnityEngine.ComputeBuffer, counterValue: number)
+---@param buffer UnityEngine.GraphicsBuffer
+---@param counterValue number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetBufferCounterValue(buffer, counterValue) end
+---@param camera UnityEngine.Camera
+function UnityEngine.Rendering.ComputeCommandBuffer:SetupCameraProperties(camera) end
+function UnityEngine.Rendering.ComputeCommandBuffer:InvokeOnRenderObjectCallbacks() end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, name: string, values: System.Single[])
+---@param computeShader UnityEngine.ComputeShader
+---@param nameID number
+---@param values System.Single[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeFloatParams(computeShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, name: string, values: System.Int32[])
+---@param computeShader UnityEngine.ComputeShader
+---@param nameID number
+---@param values System.Int32[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeIntParams(computeShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle, mipLevel: number, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param nameID number
+---@param rt UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param mipLevel number
+---@param element UnityEngine.Rendering.RenderTextureSubElement
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeTextureParam(computeShader, kernelIndex, nameID, rt, mipLevel, element) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, bufferHandle: UnityEngine.GraphicsBufferHandle)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, bufferHandle: UnityEngine.GraphicsBufferHandle)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, buffer: UnityEngine.GraphicsBuffer)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param name string
+---@param buffer UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeBufferParam(computeShader, kernelIndex, name, buffer) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, name: string, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, buffer: UnityEngine.GraphicsBuffer, offset: number, size: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param buffer UnityEngine.GraphicsBuffer
+---@param offset number
+---@param size number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeConstantBufferParam(computeShader, name, buffer, offset, size) end
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param material UnityEngine.Material
+function UnityEngine.Rendering.ComputeCommandBuffer:SetComputeParamsFromMaterial(computeShader, kernelIndex, material) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, threadGroupsX: number, threadGroupsY: number, threadGroupsZ: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, indirectBuffer: UnityEngine.ComputeBuffer, argsOffset: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param indirectBuffer UnityEngine.GraphicsBuffer
+---@param argsOffset number
+function UnityEngine.Rendering.ComputeCommandBuffer:DispatchCompute(computeShader, kernelIndex, indirectBuffer, argsOffset) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, accelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, accelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure, relativeOrigin: UnityEngine.Vector3)
+---@param accelerationStructure UnityEngine.Rendering.RayTracingAccelerationStructure
+---@param buildSettings UnityEngine.Rendering.RayTracingAccelerationStructure.BuildSettings
+function UnityEngine.Rendering.ComputeCommandBuffer:BuildRayTracingAccelerationStructure(accelerationStructure, buildSettings) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, rayTracingAccelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, rayTracingAccelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rayTracingAccelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param nameID number
+---@param rayTracingAccelerationStructure UnityEngine.Rendering.RayTracingAccelerationStructure
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingAccelerationStructure(computeShader, kernelIndex, nameID, rayTracingAccelerationStructure) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, buffer: UnityEngine.GraphicsBuffer)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.GraphicsBuffer)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, bufferHandle: UnityEngine.GraphicsBufferHandle)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param bufferHandle UnityEngine.GraphicsBufferHandle
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingBufferParam(rayTracingShader, nameID, bufferHandle) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.GraphicsBuffer, offset: number, size: number)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param name string
+---@param buffer UnityEngine.GraphicsBuffer
+---@param offset number
+---@param size number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingConstantBufferParam(rayTracingShader, name, buffer, offset, size) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param rt UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingTextureParam(rayTracingShader, nameID, rt) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: number)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingFloatParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: System.Single[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values System.Single[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingFloatParams(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: number)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingIntParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: System.Int32[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values System.Int32[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingIntParams(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: UnityEngine.Vector4)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val UnityEngine.Vector4
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingVectorParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: UnityEngine.Vector4[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values UnityEngine.Vector4[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingVectorArrayParam(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: UnityEngine.Matrix4x4)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val UnityEngine.Matrix4x4
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingMatrixParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: UnityEngine.Matrix4x4[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.ComputeCommandBuffer:SetRayTracingMatrixArrayParam(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, rayGenName: string, width: number, height: number, depth: number, camera: UnityEngine.Camera)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param rayGenName string
+---@param argsBuffer UnityEngine.GraphicsBuffer
+---@param argsOffset number
+---@param camera UnityEngine.Camera
+function UnityEngine.Rendering.ComputeCommandBuffer:DispatchRays(rayTracingShader, rayGenName, argsBuffer, argsOffset, camera) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, src: UnityEngine.ComputeBuffer, dst: UnityEngine.ComputeBuffer, dstOffsetBytes: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, src: UnityEngine.GraphicsBuffer, dst: UnityEngine.ComputeBuffer, dstOffsetBytes: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, src: UnityEngine.ComputeBuffer, dst: UnityEngine.GraphicsBuffer, dstOffsetBytes: number)
+---@param src UnityEngine.GraphicsBuffer
+---@param dst UnityEngine.GraphicsBuffer
+---@param dstOffsetBytes number
+function UnityEngine.Rendering.ComputeCommandBuffer:CopyCounterValue(src, dst, dstOffsetBytes) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, name: string, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, name: string, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@param nameID number
+---@param value UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param element UnityEngine.Rendering.RenderTextureSubElement
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalTexture(nameID, value, element) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, name: string, value: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, nameID: number, value: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, name: string, value: UnityEngine.GraphicsBuffer)
+---@param nameID number
+---@param value UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalBuffer(nameID, value) end
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, buffer: UnityEngine.ComputeBuffer, nameID: number, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, buffer: UnityEngine.ComputeBuffer, name: string, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.ComputeCommandBuffer, buffer: UnityEngine.GraphicsBuffer, nameID: number, offset: number, size: number)
+---@param buffer UnityEngine.GraphicsBuffer
+---@param name string
+---@param offset number
+---@param size number
+function UnityEngine.Rendering.ComputeCommandBuffer:SetGlobalConstantBuffer(buffer, name, offset, size) end
+---@param shadowmap UnityEngine.Rendering.RenderTargetIdentifier
+---@param mode UnityEngine.Rendering.ShadowSamplingMode
+function UnityEngine.Rendering.ComputeCommandBuffer:SetShadowSamplingMode(shadowmap, mode) end
+---@param mode UnityEngine.Rendering.SinglePassStereoMode
+function UnityEngine.Rendering.ComputeCommandBuffer:SetSinglePassStereo(mode) end
+---@param callback System.IntPtr
+---@param eventID number
+function UnityEngine.Rendering.ComputeCommandBuffer:IssuePluginEvent(callback, eventID) end
+---@param callback System.IntPtr
+---@param eventID number
+---@param data System.IntPtr
+function UnityEngine.Rendering.ComputeCommandBuffer:IssuePluginEventAndData(callback, eventID, data) end
+---@param callback System.IntPtr
+---@param command number
+---@param source UnityEngine.Rendering.RenderTargetIdentifier
+---@param dest UnityEngine.Rendering.RenderTargetIdentifier
+---@param commandParam number
+---@param commandFlags number
+function UnityEngine.Rendering.ComputeCommandBuffer:IssuePluginCustomBlit(callback, command, source, dest, commandParam, commandFlags) end
+---@param callback System.IntPtr
+---@param targetTexture UnityEngine.Texture
+---@param userData number
+function UnityEngine.Rendering.ComputeCommandBuffer:IssuePluginCustomTextureUpdateV2(callback, targetTexture, userData) end
+
+---@class UnityEngine.Rendering.IBaseCommandBuffer
+UnityEngine.Rendering.IBaseCommandBuffer = {}
+---@alias CS.UnityEngine.Rendering.IBaseCommandBuffer UnityEngine.Rendering.IBaseCommandBuffer
+CS.UnityEngine.Rendering.IBaseCommandBuffer = UnityEngine.Rendering.IBaseCommandBuffer
+
+---@param invertCulling boolean
+function UnityEngine.Rendering.IBaseCommandBuffer:SetInvertCulling(invertCulling) end
+---@param pixelRect UnityEngine.Rect
+function UnityEngine.Rendering.IBaseCommandBuffer:SetViewport(pixelRect) end
+---@param scissor UnityEngine.Rect
+function UnityEngine.Rendering.IBaseCommandBuffer:EnableScissorRect(scissor) end
+function UnityEngine.Rendering.IBaseCommandBuffer:DisableScissorRect() end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalFloat(name, value) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalInt(name, value) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalInteger(name, value) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, value: UnityEngine.Vector4)
+---@param name string
+---@param value UnityEngine.Vector4
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalVector(name, value) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, value: UnityEngine.Color)
+---@param name string
+---@param value UnityEngine.Color
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalColor(name, value) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, value: UnityEngine.Matrix4x4)
+---@param name string
+---@param value UnityEngine.Matrix4x4
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalMatrix(name, value) end
+---@param keyword string
+function UnityEngine.Rendering.IBaseCommandBuffer:EnableShaderKeyword(keyword) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.IBaseCommandBuffer:EnableKeyword(computeShader, ref_keyword) end
+---@param keyword string
+function UnityEngine.Rendering.IBaseCommandBuffer:DisableShaderKeyword(keyword) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.IBaseCommandBuffer:DisableKeyword(computeShader, ref_keyword) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword, value: boolean) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword, value: boolean) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@param value boolean
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.IBaseCommandBuffer:SetKeyword(computeShader, ref_keyword, value) end
+---@param view UnityEngine.Matrix4x4
+---@param proj UnityEngine.Matrix4x4
+function UnityEngine.Rendering.IBaseCommandBuffer:SetViewProjectionMatrices(view, proj) end
+---@param bias number
+---@param slopeBias number
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalDepthBias(bias, slopeBias) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, values: System.Single[])
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values System.Single[]
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalFloatArray(propertyName, values) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, values: UnityEngine.Vector4[])
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values UnityEngine.Vector4[]
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalVectorArray(propertyName, values) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, values: UnityEngine.Matrix4x4[])
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalMatrixArray(propertyName, values) end
+---@param projectionMat UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.IBaseCommandBuffer:SetLateLatchProjectionMatrices(projectionMat) end
+---@param matrixPropertyType UnityEngine.Rendering.CameraLateLatchMatrixType
+---@param shaderPropertyID number
+function UnityEngine.Rendering.IBaseCommandBuffer:MarkLateLatchMatrixShaderPropertyID(matrixPropertyType, shaderPropertyID) end
+---@param matrixPropertyType UnityEngine.Rendering.CameraLateLatchMatrixType
+function UnityEngine.Rendering.IBaseCommandBuffer:UnmarkLateLatchMatrix(matrixPropertyType) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, name: string)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, sampler: UnityEngine.Profiling.CustomSampler)
+---@param marker Unity.Profiling.ProfilerMarker
+function UnityEngine.Rendering.IBaseCommandBuffer:BeginSample(marker) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, name: string)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, sampler: UnityEngine.Profiling.CustomSampler)
+---@param marker Unity.Profiling.ProfilerMarker
+function UnityEngine.Rendering.IBaseCommandBuffer:EndSample(marker) end
+---@param dest UnityEngine.Rendering.RenderTargetIdentifier
+function UnityEngine.Rendering.IBaseCommandBuffer:IncrementUpdateCount(dest) end
+---@param camera UnityEngine.Camera
+function UnityEngine.Rendering.IBaseCommandBuffer:SetupCameraProperties(camera) end
+function UnityEngine.Rendering.IBaseCommandBuffer:InvokeOnRenderObjectCallbacks() end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, name: string, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, name: string, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@param nameID number
+---@param value UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param element UnityEngine.Rendering.RenderTextureSubElement
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalTexture(nameID, value, element) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, name: string, value: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, nameID: number, value: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, name: string, value: UnityEngine.GraphicsBuffer)
+---@param nameID number
+---@param value UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalBuffer(nameID, value) end
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, buffer: UnityEngine.ComputeBuffer, nameID: number, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, buffer: UnityEngine.ComputeBuffer, name: string, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.IBaseCommandBuffer, buffer: UnityEngine.GraphicsBuffer, nameID: number, offset: number, size: number)
+---@param buffer UnityEngine.GraphicsBuffer
+---@param name string
+---@param offset number
+---@param size number
+function UnityEngine.Rendering.IBaseCommandBuffer:SetGlobalConstantBuffer(buffer, name, offset, size) end
+---@param shadowmap UnityEngine.Rendering.RenderTargetIdentifier
+---@param mode UnityEngine.Rendering.ShadowSamplingMode
+function UnityEngine.Rendering.IBaseCommandBuffer:SetShadowSamplingMode(shadowmap, mode) end
+---@param mode UnityEngine.Rendering.SinglePassStereoMode
+function UnityEngine.Rendering.IBaseCommandBuffer:SetSinglePassStereo(mode) end
+---@param callback System.IntPtr
+---@param eventID number
+function UnityEngine.Rendering.IBaseCommandBuffer:IssuePluginEvent(callback, eventID) end
+---@param callback System.IntPtr
+---@param eventID number
+---@param data System.IntPtr
+function UnityEngine.Rendering.IBaseCommandBuffer:IssuePluginEventAndData(callback, eventID, data) end
+---@param callback System.IntPtr
+---@param command number
+---@param source UnityEngine.Rendering.RenderTargetIdentifier
+---@param dest UnityEngine.Rendering.RenderTargetIdentifier
+---@param commandParam number
+---@param commandFlags number
+function UnityEngine.Rendering.IBaseCommandBuffer:IssuePluginCustomBlit(callback, command, source, dest, commandParam, commandFlags) end
+---@param callback System.IntPtr
+---@param targetTexture UnityEngine.Texture
+---@param userData number
+function UnityEngine.Rendering.IBaseCommandBuffer:IssuePluginCustomTextureUpdateV2(callback, targetTexture, userData) end
+
+---@class UnityEngine.Rendering.IComputeCommandBuffer
+UnityEngine.Rendering.IComputeCommandBuffer = {}
+---@alias CS.UnityEngine.Rendering.IComputeCommandBuffer UnityEngine.Rendering.IComputeCommandBuffer
+CS.UnityEngine.Rendering.IComputeCommandBuffer = UnityEngine.Rendering.IComputeCommandBuffer
+
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val number
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeFloatParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val number
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeIntParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: UnityEngine.Vector4)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val UnityEngine.Vector4
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeVectorParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, values: UnityEngine.Vector4[])
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param values UnityEngine.Vector4[]
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeVectorArrayParam(computeShader, name, values) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: UnityEngine.Matrix4x4)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val UnityEngine.Matrix4x4
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeMatrixParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, values: UnityEngine.Matrix4x4[])
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param values UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeMatrixArrayParam(computeShader, name, values) end
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param passName string
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingShaderPass(rayTracingShader, passName) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, buffer: UnityEngine.ComputeBuffer, data: System.Array)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, buffer: UnityEngine.ComputeBuffer, data: System.Array, managedBufferStartIndex: number, graphicsBufferStartIndex: number, count: number)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, buffer: UnityEngine.GraphicsBuffer, data: System.Array)
+---@param buffer UnityEngine.GraphicsBuffer
+---@param data System.Array
+---@param managedBufferStartIndex number
+---@param graphicsBufferStartIndex number
+---@param count number
+function UnityEngine.Rendering.IComputeCommandBuffer:SetBufferData(buffer, data, managedBufferStartIndex, graphicsBufferStartIndex, count) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, buffer: UnityEngine.ComputeBuffer, counterValue: number)
+---@param buffer UnityEngine.GraphicsBuffer
+---@param counterValue number
+function UnityEngine.Rendering.IComputeCommandBuffer:SetBufferCounterValue(buffer, counterValue) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, name: string, values: System.Single[])
+---@param computeShader UnityEngine.ComputeShader
+---@param nameID number
+---@param values System.Single[]
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeFloatParams(computeShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, name: string, values: System.Int32[])
+---@param computeShader UnityEngine.ComputeShader
+---@param nameID number
+---@param values System.Int32[]
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeIntParams(computeShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle, mipLevel: number, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param nameID number
+---@param rt UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param mipLevel number
+---@param element UnityEngine.Rendering.RenderTextureSubElement
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeTextureParam(computeShader, kernelIndex, nameID, rt, mipLevel, element) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, bufferHandle: UnityEngine.GraphicsBufferHandle)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, bufferHandle: UnityEngine.GraphicsBufferHandle)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, buffer: UnityEngine.GraphicsBuffer)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param name string
+---@param buffer UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeBufferParam(computeShader, kernelIndex, name, buffer) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, name: string, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, buffer: UnityEngine.GraphicsBuffer, offset: number, size: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param buffer UnityEngine.GraphicsBuffer
+---@param offset number
+---@param size number
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeConstantBufferParam(computeShader, name, buffer, offset, size) end
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param material UnityEngine.Material
+function UnityEngine.Rendering.IComputeCommandBuffer:SetComputeParamsFromMaterial(computeShader, kernelIndex, material) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, threadGroupsX: number, threadGroupsY: number, threadGroupsZ: number)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, indirectBuffer: UnityEngine.ComputeBuffer, argsOffset: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param indirectBuffer UnityEngine.GraphicsBuffer
+---@param argsOffset number
+function UnityEngine.Rendering.IComputeCommandBuffer:DispatchCompute(computeShader, kernelIndex, indirectBuffer, argsOffset) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, accelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, accelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure, relativeOrigin: UnityEngine.Vector3)
+---@param accelerationStructure UnityEngine.Rendering.RayTracingAccelerationStructure
+---@param buildSettings UnityEngine.Rendering.RayTracingAccelerationStructure.BuildSettings
+function UnityEngine.Rendering.IComputeCommandBuffer:BuildRayTracingAccelerationStructure(accelerationStructure, buildSettings) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, rayTracingAccelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, rayTracingAccelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rayTracingAccelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param nameID number
+---@param rayTracingAccelerationStructure UnityEngine.Rendering.RayTracingAccelerationStructure
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingAccelerationStructure(computeShader, kernelIndex, nameID, rayTracingAccelerationStructure) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, buffer: UnityEngine.GraphicsBuffer)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.GraphicsBuffer)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, bufferHandle: UnityEngine.GraphicsBufferHandle)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param bufferHandle UnityEngine.GraphicsBufferHandle
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingBufferParam(rayTracingShader, nameID, bufferHandle) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.GraphicsBuffer, offset: number, size: number)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param name string
+---@param buffer UnityEngine.GraphicsBuffer
+---@param offset number
+---@param size number
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingConstantBufferParam(rayTracingShader, name, buffer, offset, size) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param rt UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingTextureParam(rayTracingShader, nameID, rt) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: number)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val number
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingFloatParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: System.Single[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values System.Single[]
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingFloatParams(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: number)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val number
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingIntParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: System.Int32[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values System.Int32[]
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingIntParams(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: UnityEngine.Vector4)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val UnityEngine.Vector4
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingVectorParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: UnityEngine.Vector4[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values UnityEngine.Vector4[]
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingVectorArrayParam(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: UnityEngine.Matrix4x4)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val UnityEngine.Matrix4x4
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingMatrixParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: UnityEngine.Matrix4x4[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.IComputeCommandBuffer:SetRayTracingMatrixArrayParam(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, rayGenName: string, width: number, height: number, depth: number, camera: UnityEngine.Camera)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param rayGenName string
+---@param argsBuffer UnityEngine.GraphicsBuffer
+---@param argsOffset number
+---@param camera UnityEngine.Camera
+function UnityEngine.Rendering.IComputeCommandBuffer:DispatchRays(rayTracingShader, rayGenName, argsBuffer, argsOffset, camera) end
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, src: UnityEngine.ComputeBuffer, dst: UnityEngine.ComputeBuffer, dstOffsetBytes: number)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, src: UnityEngine.GraphicsBuffer, dst: UnityEngine.ComputeBuffer, dstOffsetBytes: number)
+---@overload fun(self: UnityEngine.Rendering.IComputeCommandBuffer, src: UnityEngine.ComputeBuffer, dst: UnityEngine.GraphicsBuffer, dstOffsetBytes: number)
+---@param src UnityEngine.GraphicsBuffer
+---@param dst UnityEngine.GraphicsBuffer
+---@param dstOffsetBytes number
+function UnityEngine.Rendering.IComputeCommandBuffer:CopyCounterValue(src, dst, dstOffsetBytes) end
+
+---@class UnityEngine.Rendering.IRasterCommandBuffer
+UnityEngine.Rendering.IRasterCommandBuffer = {}
+---@alias CS.UnityEngine.Rendering.IRasterCommandBuffer UnityEngine.Rendering.IRasterCommandBuffer
+CS.UnityEngine.Rendering.IRasterCommandBuffer = UnityEngine.Rendering.IRasterCommandBuffer
+
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color, depth: number)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color, depth: number, stencil: number)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, clearFlags: UnityEngine.Rendering.RTClearFlags, backgroundColor: UnityEngine.Color, depth: number, stencil: number)
+---@param clearFlags UnityEngine.Rendering.RTClearFlags
+---@param backgroundColors UnityEngine.Color[]
+---@param depth number
+---@param stencil number
+function UnityEngine.Rendering.IRasterCommandBuffer:ClearRenderTarget(clearFlags, backgroundColors, depth, stencil) end
+---@param multiplier number
+function UnityEngine.Rendering.IRasterCommandBuffer:SetInstanceMultiplier(multiplier) end
+---@param foveatedRenderingMode UnityEngine.Rendering.FoveatedRenderingMode
+function UnityEngine.Rendering.IRasterCommandBuffer:SetFoveatedRenderingMode(foveatedRenderingMode) end
+---@param enable boolean
+function UnityEngine.Rendering.IRasterCommandBuffer:SetWireframe(enable) end
+---@param platformData System.IntPtr
+function UnityEngine.Rendering.IRasterCommandBuffer:ConfigureFoveatedRendering(platformData) end
+---@param shadingRateFragmentSize UnityEngine.Rendering.ShadingRateFragmentSize
+function UnityEngine.Rendering.IRasterCommandBuffer:SetShadingRateFragmentSize(shadingRateFragmentSize) end
+---@param stage UnityEngine.Rendering.ShadingRateCombinerStage
+---@param combiner UnityEngine.Rendering.ShadingRateCombiner
+function UnityEngine.Rendering.IRasterCommandBuffer:SetShadingRateCombiner(stage, combiner) end
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, mesh: UnityEngine.Mesh, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, submeshIndex: number, shaderPass: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, mesh: UnityEngine.Mesh, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, submeshIndex: number, shaderPass: number)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, mesh: UnityEngine.Mesh, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, submeshIndex: number)
+---@param mesh UnityEngine.Mesh
+---@param matrix UnityEngine.Matrix4x4
+---@param material UnityEngine.Material
+function UnityEngine.Rendering.IRasterCommandBuffer:DrawMesh(mesh, matrix, material) end
+---@param matrices UnityEngine.Matrix4x4[]
+---@param meshes UnityEngine.Mesh[]
+---@param subsetIndices System.Int32[]
+---@param count number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param properties UnityEngine.MaterialPropertyBlock
+function UnityEngine.Rendering.IRasterCommandBuffer:DrawMultipleMeshes(matrices, meshes, subsetIndices, count, material, shaderPass, properties) end
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, renderer: UnityEngine.Renderer, material: UnityEngine.Material, submeshIndex: number, shaderPass: number)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, renderer: UnityEngine.Renderer, material: UnityEngine.Material, submeshIndex: number)
+---@param renderer UnityEngine.Renderer
+---@param material UnityEngine.Material
+function UnityEngine.Rendering.IRasterCommandBuffer:DrawRenderer(renderer, material) end
+---@param rendererList UnityEngine.Rendering.RendererList
+function UnityEngine.Rendering.IRasterCommandBuffer:DrawRendererList(rendererList) end
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, vertexCount: number, instanceCount: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, vertexCount: number, instanceCount: number)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, vertexCount: number)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, indexCount: number, instanceCount: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, indexCount: number, instanceCount: number)
+---@param indexBuffer UnityEngine.GraphicsBuffer
+---@param matrix UnityEngine.Matrix4x4
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param topology UnityEngine.MeshTopology
+---@param indexCount number
+function UnityEngine.Rendering.IRasterCommandBuffer:DrawProcedural(indexBuffer, matrix, material, shaderPass, topology, indexCount) end
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number)
+---@param indexBuffer UnityEngine.GraphicsBuffer
+---@param matrix UnityEngine.Matrix4x4
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param topology UnityEngine.MeshTopology
+---@param bufferWithArgs UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.IRasterCommandBuffer:DrawProceduralIndirect(indexBuffer, matrix, material, shaderPass, topology, bufferWithArgs) end
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, matrices: UnityEngine.Matrix4x4[], count: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, matrices: UnityEngine.Matrix4x4[], count: number)
+---@param mesh UnityEngine.Mesh
+---@param submeshIndex number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param matrices UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.IRasterCommandBuffer:DrawMeshInstanced(mesh, submeshIndex, material, shaderPass, matrices) end
+---@param mesh UnityEngine.Mesh
+---@param submeshIndex number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param count number
+---@param properties UnityEngine.MaterialPropertyBlock
+function UnityEngine.Rendering.IRasterCommandBuffer:DrawMeshInstancedProcedural(mesh, submeshIndex, material, shaderPass, count, properties) end
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.IRasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number)
+---@param mesh UnityEngine.Mesh
+---@param submeshIndex number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param bufferWithArgs UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.IRasterCommandBuffer:DrawMeshInstancedIndirect(mesh, submeshIndex, material, shaderPass, bufferWithArgs) end
+---@param normalizedCamViewport UnityEngine.RectInt
+function UnityEngine.Rendering.IRasterCommandBuffer:DrawOcclusionMesh(normalizedCamViewport) end
+
+---@class UnityEngine.Rendering.IUnsafeCommandBuffer
+UnityEngine.Rendering.IUnsafeCommandBuffer = {}
+---@alias CS.UnityEngine.Rendering.IUnsafeCommandBuffer UnityEngine.Rendering.IUnsafeCommandBuffer
+CS.UnityEngine.Rendering.IUnsafeCommandBuffer = UnityEngine.Rendering.IUnsafeCommandBuffer
+
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.ComputeBuffer, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.GraphicsBuffer, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.ComputeBuffer, size: number, offset: number, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.GraphicsBuffer, size: number, offset: number, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.Texture, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.Texture, mipIndex: number, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.Texture, mipIndex: number, dstFormat: UnityEngine.TextureFormat, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.Texture, mipIndex: number, dstFormat: UnityEngine.Experimental.Rendering.GraphicsFormat, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.Texture, mipIndex: number, x: number, width: number, y: number, height: number, z: number, depth: number, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.Texture, mipIndex: number, x: number, width: number, y: number, height: number, z: number, depth: number, dstFormat: UnityEngine.TextureFormat, callback: System.Action)
+---@param src UnityEngine.Texture
+---@param mipIndex number
+---@param x number
+---@param width number
+---@param y number
+---@param height number
+---@param z number
+---@param depth number
+---@param dstFormat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@param callback System.Action
+function UnityEngine.Rendering.IUnsafeCommandBuffer:RequestAsyncReadback(src, mipIndex, x, width, y, height, z, depth, dstFormat, callback) end
+function UnityEngine.Rendering.IUnsafeCommandBuffer:Clear() end
+function UnityEngine.Rendering.IUnsafeCommandBuffer:ClearRandomWriteTargets() end
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier, loadAction: UnityEngine.Rendering.RenderBufferLoadAction, storeAction: UnityEngine.Rendering.RenderBufferStoreAction)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubemapFace: UnityEngine.CubemapFace)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, color: UnityEngine.Rendering.RenderTargetIdentifier, depth: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, color: UnityEngine.Rendering.RenderTargetIdentifier, depth: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, color: UnityEngine.Rendering.RenderTargetIdentifier, depth: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubemapFace: UnityEngine.CubemapFace)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, color: UnityEngine.Rendering.RenderTargetIdentifier, depth: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, color: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depth: UnityEngine.Rendering.RenderTargetIdentifier, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, colors: UnityEngine.Rendering.RenderTargetIdentifier[], depth: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, colors: UnityEngine.Rendering.RenderTargetIdentifier[], depth: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, binding: UnityEngine.Rendering.RenderTargetBinding, mipLevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
+---@param binding UnityEngine.Rendering.RenderTargetBinding
+function UnityEngine.Rendering.IUnsafeCommandBuffer:SetRenderTarget(binding) end
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param nameID number
+---@param rt UnityEngine.Rendering.RenderTargetIdentifier
+---@param mipLevel number
+---@param element UnityEngine.Rendering.RenderTextureSubElement
+function UnityEngine.Rendering.IUnsafeCommandBuffer:SetComputeTextureParam(computeShader, kernelIndex, nameID, rt, mipLevel, element) end
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param rt UnityEngine.Rendering.RenderTargetIdentifier
+function UnityEngine.Rendering.IUnsafeCommandBuffer:SetRayTracingTextureParam(rayTracingShader, nameID, rt) end
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@param rt UnityEngine.RenderTexture
+function UnityEngine.Rendering.IUnsafeCommandBuffer:GenerateMips(rt) end
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, index: number, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, index: number, buffer: UnityEngine.ComputeBuffer, preserveCounterValue: boolean)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, index: number, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, index: number, buffer: UnityEngine.GraphicsBuffer, preserveCounterValue: boolean)
+---@param index number
+---@param buffer UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.IUnsafeCommandBuffer:SetRandomWriteTarget(index, buffer) end
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.Rendering.RenderTargetIdentifier, dst: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.Rendering.RenderTargetIdentifier, srcElement: number, dst: UnityEngine.Rendering.RenderTargetIdentifier, dstElement: number)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, src: UnityEngine.Rendering.RenderTargetIdentifier, srcElement: number, srcMip: number, dst: UnityEngine.Rendering.RenderTargetIdentifier, dstElement: number, dstMip: number)
+---@param src UnityEngine.Rendering.RenderTargetIdentifier
+---@param srcElement number
+---@param srcMip number
+---@param srcX number
+---@param srcY number
+---@param srcWidth number
+---@param srcHeight number
+---@param dst UnityEngine.Rendering.RenderTargetIdentifier
+---@param dstElement number
+---@param dstMip number
+---@param dstX number
+---@param dstY number
+function UnityEngine.Rendering.IUnsafeCommandBuffer:CopyTexture(src, srcElement, srcMip, srcX, srcY, srcWidth, srcHeight, dst, dstElement, dstMip, dstX, dstY) end
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, name: string, value: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, nameID: number, value: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.IUnsafeCommandBuffer, name: string, value: UnityEngine.Rendering.RenderTargetIdentifier, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@param nameID number
+---@param value UnityEngine.Rendering.RenderTargetIdentifier
+---@param element UnityEngine.Rendering.RenderTextureSubElement
+function UnityEngine.Rendering.IUnsafeCommandBuffer:SetGlobalTexture(nameID, value, element) end
+
+---@class UnityEngine.Rendering.RasterCommandBuffer : UnityEngine.Rendering.BaseCommandBuffer
+UnityEngine.Rendering.RasterCommandBuffer = {}
+---@alias CS.UnityEngine.Rendering.RasterCommandBuffer UnityEngine.Rendering.RasterCommandBuffer
+CS.UnityEngine.Rendering.RasterCommandBuffer = UnityEngine.Rendering.RasterCommandBuffer
+
+---@param invertCulling boolean
+function UnityEngine.Rendering.RasterCommandBuffer:SetInvertCulling(invertCulling) end
+---@param pixelRect UnityEngine.Rect
+function UnityEngine.Rendering.RasterCommandBuffer:SetViewport(pixelRect) end
+---@param scissor UnityEngine.Rect
+function UnityEngine.Rendering.RasterCommandBuffer:EnableScissorRect(scissor) end
+function UnityEngine.Rendering.RasterCommandBuffer:DisableScissorRect() end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color, depth: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color, depth: number, stencil: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, clearFlags: UnityEngine.Rendering.RTClearFlags, backgroundColor: UnityEngine.Color, depth: number, stencil: number)
+---@param clearFlags UnityEngine.Rendering.RTClearFlags
+---@param backgroundColors UnityEngine.Color[]
+---@param depth number
+---@param stencil number
+function UnityEngine.Rendering.RasterCommandBuffer:ClearRenderTarget(clearFlags, backgroundColors, depth, stencil) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalFloat(name, value) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalInt(name, value) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalInteger(name, value) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, value: UnityEngine.Vector4)
+---@param name string
+---@param value UnityEngine.Vector4
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalVector(name, value) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, value: UnityEngine.Color)
+---@param name string
+---@param value UnityEngine.Color
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalColor(name, value) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, value: UnityEngine.Matrix4x4)
+---@param name string
+---@param value UnityEngine.Matrix4x4
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalMatrix(name, value) end
+---@param keyword string
+function UnityEngine.Rendering.RasterCommandBuffer:EnableShaderKeyword(keyword) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.RasterCommandBuffer:EnableKeyword(computeShader, ref_keyword) end
+---@param keyword string
+function UnityEngine.Rendering.RasterCommandBuffer:DisableShaderKeyword(keyword) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.RasterCommandBuffer:DisableKeyword(computeShader, ref_keyword) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword, value: boolean) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword, value: boolean) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@param value boolean
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.RasterCommandBuffer:SetKeyword(computeShader, ref_keyword, value) end
+---@param view UnityEngine.Matrix4x4
+---@param proj UnityEngine.Matrix4x4
+function UnityEngine.Rendering.RasterCommandBuffer:SetViewProjectionMatrices(view, proj) end
+---@param bias number
+---@param slopeBias number
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalDepthBias(bias, slopeBias) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, values: System.Single[])
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values System.Single[]
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalFloatArray(propertyName, values) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, values: UnityEngine.Vector4[])
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values UnityEngine.Vector4[]
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalVectorArray(propertyName, values) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, values: UnityEngine.Matrix4x4[])
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalMatrixArray(propertyName, values) end
+---@param projectionMat UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.RasterCommandBuffer:SetLateLatchProjectionMatrices(projectionMat) end
+---@param matrixPropertyType UnityEngine.Rendering.CameraLateLatchMatrixType
+---@param shaderPropertyID number
+function UnityEngine.Rendering.RasterCommandBuffer:MarkLateLatchMatrixShaderPropertyID(matrixPropertyType, shaderPropertyID) end
+---@param matrixPropertyType UnityEngine.Rendering.CameraLateLatchMatrixType
+function UnityEngine.Rendering.RasterCommandBuffer:UnmarkLateLatchMatrix(matrixPropertyType) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, name: string)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, sampler: UnityEngine.Profiling.CustomSampler)
+---@param marker Unity.Profiling.ProfilerMarker
+function UnityEngine.Rendering.RasterCommandBuffer:BeginSample(marker) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, name: string)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, sampler: UnityEngine.Profiling.CustomSampler)
+---@param marker Unity.Profiling.ProfilerMarker
+function UnityEngine.Rendering.RasterCommandBuffer:EndSample(marker) end
+---@param dest UnityEngine.Rendering.RenderTargetIdentifier
+function UnityEngine.Rendering.RasterCommandBuffer:IncrementUpdateCount(dest) end
+---@param multiplier number
+function UnityEngine.Rendering.RasterCommandBuffer:SetInstanceMultiplier(multiplier) end
+---@param foveatedRenderingMode UnityEngine.Rendering.FoveatedRenderingMode
+function UnityEngine.Rendering.RasterCommandBuffer:SetFoveatedRenderingMode(foveatedRenderingMode) end
+---@param enable boolean
+function UnityEngine.Rendering.RasterCommandBuffer:SetWireframe(enable) end
+---@param platformData System.IntPtr
+function UnityEngine.Rendering.RasterCommandBuffer:ConfigureFoveatedRendering(platformData) end
+---@param camera UnityEngine.Camera
+function UnityEngine.Rendering.RasterCommandBuffer:SetupCameraProperties(camera) end
+function UnityEngine.Rendering.RasterCommandBuffer:InvokeOnRenderObjectCallbacks() end
+---@param shadingRateFragmentSize UnityEngine.Rendering.ShadingRateFragmentSize
+function UnityEngine.Rendering.RasterCommandBuffer:SetShadingRateFragmentSize(shadingRateFragmentSize) end
+---@param stage UnityEngine.Rendering.ShadingRateCombinerStage
+---@param combiner UnityEngine.Rendering.ShadingRateCombiner
+function UnityEngine.Rendering.RasterCommandBuffer:SetShadingRateCombiner(stage, combiner) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, mesh: UnityEngine.Mesh, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, submeshIndex: number, shaderPass: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, mesh: UnityEngine.Mesh, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, submeshIndex: number, shaderPass: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, mesh: UnityEngine.Mesh, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, submeshIndex: number)
+---@param mesh UnityEngine.Mesh
+---@param matrix UnityEngine.Matrix4x4
+---@param material UnityEngine.Material
+function UnityEngine.Rendering.RasterCommandBuffer:DrawMesh(mesh, matrix, material) end
+---@param matrices UnityEngine.Matrix4x4[]
+---@param meshes UnityEngine.Mesh[]
+---@param subsetIndices System.Int32[]
+---@param count number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param properties UnityEngine.MaterialPropertyBlock
+function UnityEngine.Rendering.RasterCommandBuffer:DrawMultipleMeshes(matrices, meshes, subsetIndices, count, material, shaderPass, properties) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, renderer: UnityEngine.Renderer, material: UnityEngine.Material, submeshIndex: number, shaderPass: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, renderer: UnityEngine.Renderer, material: UnityEngine.Material, submeshIndex: number)
+---@param renderer UnityEngine.Renderer
+---@param material UnityEngine.Material
+function UnityEngine.Rendering.RasterCommandBuffer:DrawRenderer(renderer, material) end
+---@param rendererList UnityEngine.Rendering.RendererList
+function UnityEngine.Rendering.RasterCommandBuffer:DrawRendererList(rendererList) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, vertexCount: number, instanceCount: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, vertexCount: number, instanceCount: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, vertexCount: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, indexCount: number, instanceCount: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, indexCount: number, instanceCount: number)
+---@param indexBuffer UnityEngine.GraphicsBuffer
+---@param matrix UnityEngine.Matrix4x4
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param topology UnityEngine.MeshTopology
+---@param indexCount number
+function UnityEngine.Rendering.RasterCommandBuffer:DrawProcedural(indexBuffer, matrix, material, shaderPass, topology, indexCount) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number)
+---@param indexBuffer UnityEngine.GraphicsBuffer
+---@param matrix UnityEngine.Matrix4x4
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param topology UnityEngine.MeshTopology
+---@param bufferWithArgs UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.RasterCommandBuffer:DrawProceduralIndirect(indexBuffer, matrix, material, shaderPass, topology, bufferWithArgs) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, matrices: UnityEngine.Matrix4x4[], count: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, matrices: UnityEngine.Matrix4x4[], count: number)
+---@param mesh UnityEngine.Mesh
+---@param submeshIndex number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param matrices UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.RasterCommandBuffer:DrawMeshInstanced(mesh, submeshIndex, material, shaderPass, matrices) end
+---@param mesh UnityEngine.Mesh
+---@param submeshIndex number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param count number
+---@param properties UnityEngine.MaterialPropertyBlock
+function UnityEngine.Rendering.RasterCommandBuffer:DrawMeshInstancedProcedural(mesh, submeshIndex, material, shaderPass, count, properties) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number)
+---@param mesh UnityEngine.Mesh
+---@param submeshIndex number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param bufferWithArgs UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.RasterCommandBuffer:DrawMeshInstancedIndirect(mesh, submeshIndex, material, shaderPass, bufferWithArgs) end
+---@param normalizedCamViewport UnityEngine.RectInt
+function UnityEngine.Rendering.RasterCommandBuffer:DrawOcclusionMesh(normalizedCamViewport) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, name: string, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, name: string, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@param nameID number
+---@param value UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param element UnityEngine.Rendering.RenderTextureSubElement
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalTexture(nameID, value, element) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, name: string, value: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, nameID: number, value: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, name: string, value: UnityEngine.GraphicsBuffer)
+---@param nameID number
+---@param value UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalBuffer(nameID, value) end
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, buffer: UnityEngine.ComputeBuffer, nameID: number, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, buffer: UnityEngine.ComputeBuffer, name: string, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.RasterCommandBuffer, buffer: UnityEngine.GraphicsBuffer, nameID: number, offset: number, size: number)
+---@param buffer UnityEngine.GraphicsBuffer
+---@param name string
+---@param offset number
+---@param size number
+function UnityEngine.Rendering.RasterCommandBuffer:SetGlobalConstantBuffer(buffer, name, offset, size) end
+---@param shadowmap UnityEngine.Rendering.RenderTargetIdentifier
+---@param mode UnityEngine.Rendering.ShadowSamplingMode
+function UnityEngine.Rendering.RasterCommandBuffer:SetShadowSamplingMode(shadowmap, mode) end
+---@param mode UnityEngine.Rendering.SinglePassStereoMode
+function UnityEngine.Rendering.RasterCommandBuffer:SetSinglePassStereo(mode) end
+---@param callback System.IntPtr
+---@param eventID number
+function UnityEngine.Rendering.RasterCommandBuffer:IssuePluginEvent(callback, eventID) end
+---@param callback System.IntPtr
+---@param eventID number
+---@param data System.IntPtr
+function UnityEngine.Rendering.RasterCommandBuffer:IssuePluginEventAndData(callback, eventID, data) end
+---@param callback System.IntPtr
+---@param command number
+---@param source UnityEngine.Rendering.RenderTargetIdentifier
+---@param dest UnityEngine.Rendering.RenderTargetIdentifier
+---@param commandParam number
+---@param commandFlags number
+function UnityEngine.Rendering.RasterCommandBuffer:IssuePluginCustomBlit(callback, command, source, dest, commandParam, commandFlags) end
+---@param callback System.IntPtr
+---@param targetTexture UnityEngine.Texture
+---@param userData number
+function UnityEngine.Rendering.RasterCommandBuffer:IssuePluginCustomTextureUpdateV2(callback, targetTexture, userData) end
+
+---@class UnityEngine.Rendering.UnsafeCommandBuffer : UnityEngine.Rendering.BaseCommandBuffer
+UnityEngine.Rendering.UnsafeCommandBuffer = {}
+---@alias CS.UnityEngine.Rendering.UnsafeCommandBuffer UnityEngine.Rendering.UnsafeCommandBuffer
+CS.UnityEngine.Rendering.UnsafeCommandBuffer = UnityEngine.Rendering.UnsafeCommandBuffer
+
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.ComputeBuffer, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.GraphicsBuffer, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.ComputeBuffer, size: number, offset: number, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.GraphicsBuffer, size: number, offset: number, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.Texture, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.Texture, mipIndex: number, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.Texture, mipIndex: number, dstFormat: UnityEngine.TextureFormat, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.Texture, mipIndex: number, dstFormat: UnityEngine.Experimental.Rendering.GraphicsFormat, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.Texture, mipIndex: number, x: number, width: number, y: number, height: number, z: number, depth: number, callback: System.Action)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.Texture, mipIndex: number, x: number, width: number, y: number, height: number, z: number, depth: number, dstFormat: UnityEngine.TextureFormat, callback: System.Action)
+---@param src UnityEngine.Texture
+---@param mipIndex number
+---@param x number
+---@param width number
+---@param y number
+---@param height number
+---@param z number
+---@param depth number
+---@param dstFormat UnityEngine.Experimental.Rendering.GraphicsFormat
+---@param callback System.Action
+function UnityEngine.Rendering.UnsafeCommandBuffer:RequestAsyncReadback(src, mipIndex, x, width, y, height, z, depth, dstFormat, callback) end
+---@param invertCulling boolean
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetInvertCulling(invertCulling) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeFloatParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeIntParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: UnityEngine.Vector4)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val UnityEngine.Vector4
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeVectorParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, values: UnityEngine.Vector4[])
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param values UnityEngine.Vector4[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeVectorArrayParam(computeShader, name, values) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, val: UnityEngine.Matrix4x4)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param val UnityEngine.Matrix4x4
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeMatrixParam(computeShader, name, val) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, values: UnityEngine.Matrix4x4[])
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param values UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeMatrixArrayParam(computeShader, name, values) end
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param passName string
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingShaderPass(rayTracingShader, passName) end
+function UnityEngine.Rendering.UnsafeCommandBuffer:Clear() end
+function UnityEngine.Rendering.UnsafeCommandBuffer:ClearRandomWriteTargets() end
+---@param pixelRect UnityEngine.Rect
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetViewport(pixelRect) end
+---@param scissor UnityEngine.Rect
+function UnityEngine.Rendering.UnsafeCommandBuffer:EnableScissorRect(scissor) end
+function UnityEngine.Rendering.UnsafeCommandBuffer:DisableScissorRect() end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color, depth: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color, depth: number, stencil: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, clearFlags: UnityEngine.Rendering.RTClearFlags, backgroundColor: UnityEngine.Color, depth: number, stencil: number)
+---@param clearFlags UnityEngine.Rendering.RTClearFlags
+---@param backgroundColors UnityEngine.Color[]
+---@param depth number
+---@param stencil number
+function UnityEngine.Rendering.UnsafeCommandBuffer:ClearRenderTarget(clearFlags, backgroundColors, depth, stencil) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalFloat(name, value) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalInt(name, value) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, value: number)
+---@param name string
+---@param value number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalInteger(name, value) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, value: UnityEngine.Vector4)
+---@param name string
+---@param value UnityEngine.Vector4
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalVector(name, value) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, value: UnityEngine.Color)
+---@param name string
+---@param value UnityEngine.Color
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalColor(name, value) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, value: UnityEngine.Matrix4x4)
+---@param name string
+---@param value UnityEngine.Matrix4x4
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalMatrix(name, value) end
+---@param keyword string
+function UnityEngine.Rendering.UnsafeCommandBuffer:EnableShaderKeyword(keyword) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.UnsafeCommandBuffer:EnableKeyword(computeShader, ref_keyword) end
+---@param keyword string
+function UnityEngine.Rendering.UnsafeCommandBuffer:DisableShaderKeyword(keyword) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.UnsafeCommandBuffer:DisableKeyword(computeShader, ref_keyword) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, ref_keyword: UnityEngine.Rendering.GlobalKeyword, value: boolean) : UnityEngine.Rendering.GlobalKeyword
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, material: UnityEngine.Material, ref_keyword: UnityEngine.Rendering.LocalKeyword, value: boolean) : UnityEngine.Rendering.LocalKeyword
+---@param computeShader UnityEngine.ComputeShader
+---@param ref_keyword UnityEngine.Rendering.LocalKeyword
+---@param value boolean
+---@return ,UnityEngine.Rendering.LocalKeyword
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetKeyword(computeShader, ref_keyword, value) end
+---@param view UnityEngine.Matrix4x4
+---@param proj UnityEngine.Matrix4x4
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetViewProjectionMatrices(view, proj) end
+---@param bias number
+---@param slopeBias number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalDepthBias(bias, slopeBias) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, values: System.Single[])
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values System.Single[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalFloatArray(propertyName, values) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, values: UnityEngine.Vector4[])
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values UnityEngine.Vector4[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalVectorArray(propertyName, values) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, values: UnityEngine.Matrix4x4[])
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, propertyName: string, values: System.Collections.Generic.List)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, values: System.Collections.Generic.List)
+---@param propertyName string
+---@param values UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalMatrixArray(propertyName, values) end
+---@param projectionMat UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetLateLatchProjectionMatrices(projectionMat) end
+---@param matrixPropertyType UnityEngine.Rendering.CameraLateLatchMatrixType
+---@param shaderPropertyID number
+function UnityEngine.Rendering.UnsafeCommandBuffer:MarkLateLatchMatrixShaderPropertyID(matrixPropertyType, shaderPropertyID) end
+---@param matrixPropertyType UnityEngine.Rendering.CameraLateLatchMatrixType
+function UnityEngine.Rendering.UnsafeCommandBuffer:UnmarkLateLatchMatrix(matrixPropertyType) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, name: string)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, sampler: UnityEngine.Profiling.CustomSampler)
+---@param marker Unity.Profiling.ProfilerMarker
+function UnityEngine.Rendering.UnsafeCommandBuffer:BeginSample(marker) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, name: string)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, sampler: UnityEngine.Profiling.CustomSampler)
+---@param marker Unity.Profiling.ProfilerMarker
+function UnityEngine.Rendering.UnsafeCommandBuffer:EndSample(marker) end
+---@param dest UnityEngine.Rendering.RenderTargetIdentifier
+function UnityEngine.Rendering.UnsafeCommandBuffer:IncrementUpdateCount(dest) end
+---@param multiplier number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetInstanceMultiplier(multiplier) end
+---@param foveatedRenderingMode UnityEngine.Rendering.FoveatedRenderingMode
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetFoveatedRenderingMode(foveatedRenderingMode) end
+---@param enable boolean
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetWireframe(enable) end
+---@param platformData System.IntPtr
+function UnityEngine.Rendering.UnsafeCommandBuffer:ConfigureFoveatedRendering(platformData) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier, loadAction: UnityEngine.Rendering.RenderBufferLoadAction, storeAction: UnityEngine.Rendering.RenderBufferStoreAction)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubemapFace: UnityEngine.CubemapFace)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, color: UnityEngine.Rendering.RenderTargetIdentifier, depth: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, color: UnityEngine.Rendering.RenderTargetIdentifier, depth: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, color: UnityEngine.Rendering.RenderTargetIdentifier, depth: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubemapFace: UnityEngine.CubemapFace)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, color: UnityEngine.Rendering.RenderTargetIdentifier, depth: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, color: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depth: UnityEngine.Rendering.RenderTargetIdentifier, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, colors: UnityEngine.Rendering.RenderTargetIdentifier[], depth: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, colors: UnityEngine.Rendering.RenderTargetIdentifier[], depth: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, binding: UnityEngine.Rendering.RenderTargetBinding, mipLevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
+---@param binding UnityEngine.Rendering.RenderTargetBinding
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRenderTarget(binding) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, buffer: UnityEngine.ComputeBuffer, data: System.Array)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, buffer: UnityEngine.ComputeBuffer, data: System.Array, managedBufferStartIndex: number, graphicsBufferStartIndex: number, count: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, buffer: UnityEngine.GraphicsBuffer, data: System.Array)
+---@param buffer UnityEngine.GraphicsBuffer
+---@param data System.Array
+---@param managedBufferStartIndex number
+---@param graphicsBufferStartIndex number
+---@param count number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetBufferData(buffer, data, managedBufferStartIndex, graphicsBufferStartIndex, count) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, buffer: UnityEngine.ComputeBuffer, counterValue: number)
+---@param buffer UnityEngine.GraphicsBuffer
+---@param counterValue number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetBufferCounterValue(buffer, counterValue) end
+---@param camera UnityEngine.Camera
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetupCameraProperties(camera) end
+function UnityEngine.Rendering.UnsafeCommandBuffer:InvokeOnRenderObjectCallbacks() end
+---@param shadingRateFragmentSize UnityEngine.Rendering.ShadingRateFragmentSize
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetShadingRateFragmentSize(shadingRateFragmentSize) end
+---@param stage UnityEngine.Rendering.ShadingRateCombinerStage
+---@param combiner UnityEngine.Rendering.ShadingRateCombiner
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetShadingRateCombiner(stage, combiner) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, name: string, values: System.Single[])
+---@param computeShader UnityEngine.ComputeShader
+---@param nameID number
+---@param values System.Single[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeFloatParams(computeShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, name: string, values: System.Int32[])
+---@param computeShader UnityEngine.ComputeShader
+---@param nameID number
+---@param values System.Int32[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeIntParams(computeShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle, mipLevel: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle, mipLevel: number, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, rt: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param nameID number
+---@param rt UnityEngine.Rendering.RenderGraphModule.TextureHandle
+---@param mipLevel number
+---@param element UnityEngine.Rendering.RenderTextureSubElement
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeTextureParam(computeShader, kernelIndex, nameID, rt, mipLevel, element) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, bufferHandle: UnityEngine.GraphicsBufferHandle)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, bufferHandle: UnityEngine.GraphicsBufferHandle)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, nameID: number, buffer: UnityEngine.GraphicsBuffer)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param name string
+---@param buffer UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeBufferParam(computeShader, kernelIndex, name, buffer) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, name: string, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, nameID: number, buffer: UnityEngine.GraphicsBuffer, offset: number, size: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param name string
+---@param buffer UnityEngine.GraphicsBuffer
+---@param offset number
+---@param size number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeConstantBufferParam(computeShader, name, buffer, offset, size) end
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param material UnityEngine.Material
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetComputeParamsFromMaterial(computeShader, kernelIndex, material) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, threadGroupsX: number, threadGroupsY: number, threadGroupsZ: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, indirectBuffer: UnityEngine.ComputeBuffer, argsOffset: number)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param indirectBuffer UnityEngine.GraphicsBuffer
+---@param argsOffset number
+function UnityEngine.Rendering.UnsafeCommandBuffer:DispatchCompute(computeShader, kernelIndex, indirectBuffer, argsOffset) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, accelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, accelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure, relativeOrigin: UnityEngine.Vector3)
+---@param accelerationStructure UnityEngine.Rendering.RayTracingAccelerationStructure
+---@param buildSettings UnityEngine.Rendering.RayTracingAccelerationStructure.BuildSettings
+function UnityEngine.Rendering.UnsafeCommandBuffer:BuildRayTracingAccelerationStructure(accelerationStructure, buildSettings) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, rayTracingAccelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, rayTracingAccelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, computeShader: UnityEngine.ComputeShader, kernelIndex: number, name: string, rayTracingAccelerationStructure: UnityEngine.Rendering.RayTracingAccelerationStructure)
+---@param computeShader UnityEngine.ComputeShader
+---@param kernelIndex number
+---@param nameID number
+---@param rayTracingAccelerationStructure UnityEngine.Rendering.RayTracingAccelerationStructure
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingAccelerationStructure(computeShader, kernelIndex, nameID, rayTracingAccelerationStructure) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, buffer: UnityEngine.GraphicsBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.GraphicsBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, bufferHandle: UnityEngine.GraphicsBufferHandle)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param bufferHandle UnityEngine.GraphicsBufferHandle
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingBufferParam(rayTracingShader, nameID, bufferHandle) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, buffer: UnityEngine.ComputeBuffer, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, buffer: UnityEngine.GraphicsBuffer, offset: number, size: number)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param name string
+---@param buffer UnityEngine.GraphicsBuffer
+---@param offset number
+---@param size number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingConstantBufferParam(rayTracingShader, name, buffer, offset, size) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, rt: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, nameID: number, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param rt UnityEngine.Rendering.RenderGraphModule.TextureHandle
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingTextureParam(rayTracingShader, nameID, rt) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: number)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingFloatParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: System.Single[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values System.Single[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingFloatParams(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: number)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingIntParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: System.Int32[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values System.Int32[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingIntParams(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: UnityEngine.Vector4)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val UnityEngine.Vector4
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingVectorParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: UnityEngine.Vector4[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values UnityEngine.Vector4[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingVectorArrayParam(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, val: UnityEngine.Matrix4x4)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param val UnityEngine.Matrix4x4
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingMatrixParam(rayTracingShader, nameID, val) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, name: string, values: UnityEngine.Matrix4x4[])
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param nameID number
+---@param values UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRayTracingMatrixArrayParam(rayTracingShader, nameID, values) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rayTracingShader: UnityEngine.Rendering.RayTracingShader, rayGenName: string, width: number, height: number, depth: number, camera: UnityEngine.Camera)
+---@param rayTracingShader UnityEngine.Rendering.RayTracingShader
+---@param rayGenName string
+---@param argsBuffer UnityEngine.GraphicsBuffer
+---@param argsOffset number
+---@param camera UnityEngine.Camera
+function UnityEngine.Rendering.UnsafeCommandBuffer:DispatchRays(rayTracingShader, rayGenName, argsBuffer, argsOffset, camera) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@param rt UnityEngine.RenderTexture
+function UnityEngine.Rendering.UnsafeCommandBuffer:GenerateMips(rt) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, mesh: UnityEngine.Mesh, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, submeshIndex: number, shaderPass: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, mesh: UnityEngine.Mesh, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, submeshIndex: number, shaderPass: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, mesh: UnityEngine.Mesh, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, submeshIndex: number)
+---@param mesh UnityEngine.Mesh
+---@param matrix UnityEngine.Matrix4x4
+---@param material UnityEngine.Material
+function UnityEngine.Rendering.UnsafeCommandBuffer:DrawMesh(mesh, matrix, material) end
+---@param matrices UnityEngine.Matrix4x4[]
+---@param meshes UnityEngine.Mesh[]
+---@param subsetIndices System.Int32[]
+---@param count number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param properties UnityEngine.MaterialPropertyBlock
+function UnityEngine.Rendering.UnsafeCommandBuffer:DrawMultipleMeshes(matrices, meshes, subsetIndices, count, material, shaderPass, properties) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, renderer: UnityEngine.Renderer, material: UnityEngine.Material, submeshIndex: number, shaderPass: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, renderer: UnityEngine.Renderer, material: UnityEngine.Material, submeshIndex: number)
+---@param renderer UnityEngine.Renderer
+---@param material UnityEngine.Material
+function UnityEngine.Rendering.UnsafeCommandBuffer:DrawRenderer(renderer, material) end
+---@param rendererList UnityEngine.Rendering.RendererList
+function UnityEngine.Rendering.UnsafeCommandBuffer:DrawRendererList(rendererList) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, vertexCount: number, instanceCount: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, vertexCount: number, instanceCount: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, vertexCount: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, indexCount: number, instanceCount: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, indexCount: number, instanceCount: number)
+---@param indexBuffer UnityEngine.GraphicsBuffer
+---@param matrix UnityEngine.Matrix4x4
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param topology UnityEngine.MeshTopology
+---@param indexCount number
+function UnityEngine.Rendering.UnsafeCommandBuffer:DrawProcedural(indexBuffer, matrix, material, shaderPass, topology, indexCount) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, indexBuffer: UnityEngine.GraphicsBuffer, matrix: UnityEngine.Matrix4x4, material: UnityEngine.Material, shaderPass: number, topology: UnityEngine.MeshTopology, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number)
+---@param indexBuffer UnityEngine.GraphicsBuffer
+---@param matrix UnityEngine.Matrix4x4
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param topology UnityEngine.MeshTopology
+---@param bufferWithArgs UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.UnsafeCommandBuffer:DrawProceduralIndirect(indexBuffer, matrix, material, shaderPass, topology, bufferWithArgs) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, matrices: UnityEngine.Matrix4x4[], count: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, matrices: UnityEngine.Matrix4x4[], count: number)
+---@param mesh UnityEngine.Mesh
+---@param submeshIndex number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param matrices UnityEngine.Matrix4x4[]
+function UnityEngine.Rendering.UnsafeCommandBuffer:DrawMeshInstanced(mesh, submeshIndex, material, shaderPass, matrices) end
+---@param mesh UnityEngine.Mesh
+---@param submeshIndex number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param count number
+---@param properties UnityEngine.MaterialPropertyBlock
+function UnityEngine.Rendering.UnsafeCommandBuffer:DrawMeshInstancedProcedural(mesh, submeshIndex, material, shaderPass, count, properties) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.ComputeBuffer, argsOffset: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number, properties: UnityEngine.MaterialPropertyBlock)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, mesh: UnityEngine.Mesh, submeshIndex: number, material: UnityEngine.Material, shaderPass: number, bufferWithArgs: UnityEngine.GraphicsBuffer, argsOffset: number)
+---@param mesh UnityEngine.Mesh
+---@param submeshIndex number
+---@param material UnityEngine.Material
+---@param shaderPass number
+---@param bufferWithArgs UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.UnsafeCommandBuffer:DrawMeshInstancedIndirect(mesh, submeshIndex, material, shaderPass, bufferWithArgs) end
+---@param normalizedCamViewport UnityEngine.RectInt
+function UnityEngine.Rendering.UnsafeCommandBuffer:DrawOcclusionMesh(normalizedCamViewport) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, index: number, rt: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, index: number, buffer: UnityEngine.ComputeBuffer, preserveCounterValue: boolean)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, index: number, buffer: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, index: number, buffer: UnityEngine.GraphicsBuffer, preserveCounterValue: boolean)
+---@param index number
+---@param buffer UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetRandomWriteTarget(index, buffer) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.ComputeBuffer, dst: UnityEngine.ComputeBuffer, dstOffsetBytes: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.GraphicsBuffer, dst: UnityEngine.ComputeBuffer, dstOffsetBytes: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.ComputeBuffer, dst: UnityEngine.GraphicsBuffer, dstOffsetBytes: number)
+---@param src UnityEngine.GraphicsBuffer
+---@param dst UnityEngine.GraphicsBuffer
+---@param dstOffsetBytes number
+function UnityEngine.Rendering.UnsafeCommandBuffer:CopyCounterValue(src, dst, dstOffsetBytes) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.Rendering.RenderTargetIdentifier, dst: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.Rendering.RenderTargetIdentifier, srcElement: number, dst: UnityEngine.Rendering.RenderTargetIdentifier, dstElement: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, src: UnityEngine.Rendering.RenderTargetIdentifier, srcElement: number, srcMip: number, dst: UnityEngine.Rendering.RenderTargetIdentifier, dstElement: number, dstMip: number)
+---@param src UnityEngine.Rendering.RenderTargetIdentifier
+---@param srcElement number
+---@param srcMip number
+---@param srcX number
+---@param srcY number
+---@param srcWidth number
+---@param srcHeight number
+---@param dst UnityEngine.Rendering.RenderTargetIdentifier
+---@param dstElement number
+---@param dstMip number
+---@param dstX number
+---@param dstY number
+function UnityEngine.Rendering.UnsafeCommandBuffer:CopyTexture(src, srcElement, srcMip, srcX, srcY, srcWidth, srcHeight, dst, dstElement, dstMip, dstX, dstY) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, name: string, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, name: string, value: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, value: UnityEngine.Rendering.RenderTargetIdentifier)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, name: string, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, name: string, value: UnityEngine.Rendering.RenderTargetIdentifier, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, value: UnityEngine.Rendering.RenderGraphModule.TextureHandle, element: UnityEngine.Rendering.RenderTextureSubElement)
+---@param nameID number
+---@param value UnityEngine.Rendering.RenderTargetIdentifier
+---@param element UnityEngine.Rendering.RenderTextureSubElement
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalTexture(nameID, value, element) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, name: string, value: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, nameID: number, value: UnityEngine.ComputeBuffer)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, name: string, value: UnityEngine.GraphicsBuffer)
+---@param nameID number
+---@param value UnityEngine.GraphicsBuffer
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalBuffer(nameID, value) end
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, buffer: UnityEngine.ComputeBuffer, nameID: number, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, buffer: UnityEngine.ComputeBuffer, name: string, offset: number, size: number)
+---@overload fun(self: UnityEngine.Rendering.UnsafeCommandBuffer, buffer: UnityEngine.GraphicsBuffer, nameID: number, offset: number, size: number)
+---@param buffer UnityEngine.GraphicsBuffer
+---@param name string
+---@param offset number
+---@param size number
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetGlobalConstantBuffer(buffer, name, offset, size) end
+---@param shadowmap UnityEngine.Rendering.RenderTargetIdentifier
+---@param mode UnityEngine.Rendering.ShadowSamplingMode
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetShadowSamplingMode(shadowmap, mode) end
+---@param mode UnityEngine.Rendering.SinglePassStereoMode
+function UnityEngine.Rendering.UnsafeCommandBuffer:SetSinglePassStereo(mode) end
+---@param callback System.IntPtr
+---@param eventID number
+function UnityEngine.Rendering.UnsafeCommandBuffer:IssuePluginEvent(callback, eventID) end
+---@param callback System.IntPtr
+---@param eventID number
+---@param data System.IntPtr
+function UnityEngine.Rendering.UnsafeCommandBuffer:IssuePluginEventAndData(callback, eventID, data) end
+---@param callback System.IntPtr
+---@param command number
+---@param source UnityEngine.Rendering.RenderTargetIdentifier
+---@param dest UnityEngine.Rendering.RenderTargetIdentifier
+---@param commandParam number
+---@param commandFlags number
+function UnityEngine.Rendering.UnsafeCommandBuffer:IssuePluginCustomBlit(callback, command, source, dest, commandParam, commandFlags) end
+---@param callback System.IntPtr
+---@param targetTexture UnityEngine.Texture
+---@param userData number
+function UnityEngine.Rendering.UnsafeCommandBuffer:IssuePluginCustomTextureUpdateV2(callback, targetTexture, userData) end
+
+---@class UnityEngine.Rendering.CommandBufferPool : System.Object
+UnityEngine.Rendering.CommandBufferPool = {}
+---@alias CS.UnityEngine.Rendering.CommandBufferPool UnityEngine.Rendering.CommandBufferPool
+CS.UnityEngine.Rendering.CommandBufferPool = UnityEngine.Rendering.CommandBufferPool
+
+---@overload fun() : UnityEngine.Rendering.CommandBuffer
+---@param name string
+---@return UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.CommandBufferPool.Get(name) end
+---@param buffer UnityEngine.Rendering.CommandBuffer
+function UnityEngine.Rendering.CommandBufferPool.Release(buffer) end
+
+---@class UnityEngine.Rendering.ClearFlag
+---@field None UnityEngine.Rendering.ClearFlag
+---@field Color UnityEngine.Rendering.ClearFlag
+---@field Depth UnityEngine.Rendering.ClearFlag
+---@field Stencil UnityEngine.Rendering.ClearFlag
+---@field DepthStencil UnityEngine.Rendering.ClearFlag
+---@field ColorStencil UnityEngine.Rendering.ClearFlag
+---@field All UnityEngine.Rendering.ClearFlag
+UnityEngine.Rendering.ClearFlag = {}
+---@alias CS.UnityEngine.Rendering.ClearFlag UnityEngine.Rendering.ClearFlag
+CS.UnityEngine.Rendering.ClearFlag = UnityEngine.Rendering.ClearFlag
+
+
+---@class UnityEngine.Rendering.ComponentSingleton : System.Object
+---@field instance TType
+UnityEngine.Rendering.ComponentSingleton = {}
+---@alias CS.UnityEngine.Rendering.ComponentSingleton UnityEngine.Rendering.ComponentSingleton
+CS.UnityEngine.Rendering.ComponentSingleton = UnityEngine.Rendering.ComponentSingleton
+
+function UnityEngine.Rendering.ComponentSingleton.Release() end
+
+---@class UnityEngine.Rendering.ConstantBuffer : System.Object
+UnityEngine.Rendering.ConstantBuffer = {}
+---@alias CS.UnityEngine.Rendering.ConstantBuffer UnityEngine.Rendering.ConstantBuffer
+CS.UnityEngine.Rendering.ConstantBuffer = UnityEngine.Rendering.ConstantBuffer
+
+---@return UnityEngine.Rendering.ConstantBuffer
+function UnityEngine.Rendering.ConstantBuffer.New() end
+function UnityEngine.Rendering.ConstantBuffer.ReleaseAll() end
+
+---@class UnityEngine.Rendering.ConstantBufferBase : System.Object
+UnityEngine.Rendering.ConstantBufferBase = {}
+---@alias CS.UnityEngine.Rendering.ConstantBufferBase UnityEngine.Rendering.ConstantBufferBase
+CS.UnityEngine.Rendering.ConstantBufferBase = UnityEngine.Rendering.ConstantBufferBase
+
+function UnityEngine.Rendering.ConstantBufferBase:Release() end
+
+---@class UnityEngine.Rendering.ConstantBuffer : UnityEngine.Rendering.ConstantBufferBase
+UnityEngine.Rendering.ConstantBuffer = {}
+---@alias CS.UnityEngine.Rendering.ConstantBuffer UnityEngine.Rendering.ConstantBuffer
+CS.UnityEngine.Rendering.ConstantBuffer = UnityEngine.Rendering.ConstantBuffer
+
+---@return UnityEngine.Rendering.ConstantBuffer
+function UnityEngine.Rendering.ConstantBuffer.New() end
+---@overload fun(self: UnityEngine.Rendering.ConstantBuffer, cmd: UnityEngine.Rendering.CommandBuffer, ref_data: CBType) : CBType
+---@overload fun(self: UnityEngine.Rendering.ConstantBuffer, cmd: UnityEngine.Rendering.BaseCommandBuffer, ref_data: CBType) : CBType
+---@param ref_data CBType
+---@return ,CBType
+function UnityEngine.Rendering.ConstantBuffer:UpdateData(ref_data) end
+---@overload fun(self: UnityEngine.Rendering.ConstantBuffer, cmd: UnityEngine.Rendering.CommandBuffer, shaderId: number)
+---@overload fun(self: UnityEngine.Rendering.ConstantBuffer, cmd: UnityEngine.Rendering.BaseCommandBuffer, shaderId: number)
+---@param shaderId number
+function UnityEngine.Rendering.ConstantBuffer:SetGlobal(shaderId) end
+---@overload fun(self: UnityEngine.Rendering.ConstantBuffer, cmd: UnityEngine.Rendering.CommandBuffer, cs: UnityEngine.ComputeShader, shaderId: number)
+---@overload fun(self: UnityEngine.Rendering.ConstantBuffer, cmd: UnityEngine.Rendering.IComputeCommandBuffer, cs: UnityEngine.ComputeShader, shaderId: number)
+---@overload fun(self: UnityEngine.Rendering.ConstantBuffer, cs: UnityEngine.ComputeShader, shaderId: number)
+---@overload fun(self: UnityEngine.Rendering.ConstantBuffer, mat: UnityEngine.Material, shaderId: number)
+---@param mpb UnityEngine.MaterialPropertyBlock
+---@param shaderId number
+function UnityEngine.Rendering.ConstantBuffer:Set(mpb, shaderId) end
+---@overload fun(self: UnityEngine.Rendering.ConstantBuffer, cmd: UnityEngine.Rendering.CommandBuffer, ref_data: CBType, shaderId: number) : CBType
+---@overload fun(self: UnityEngine.Rendering.ConstantBuffer, cmd: UnityEngine.Rendering.BaseCommandBuffer, ref_data: CBType, shaderId: number) : CBType
+---@param ref_data CBType
+---@param shaderId number
+---@return ,CBType
+function UnityEngine.Rendering.ConstantBuffer:PushGlobal(ref_data, shaderId) end
+function UnityEngine.Rendering.ConstantBuffer:Release() end
+
+---@class UnityEngine.Rendering.ConstantBufferSingleton : UnityEngine.Rendering.ConstantBuffer[CBType]
+UnityEngine.Rendering.ConstantBufferSingleton = {}
+---@alias CS.UnityEngine.Rendering.ConstantBufferSingleton UnityEngine.Rendering.ConstantBufferSingleton
+CS.UnityEngine.Rendering.ConstantBufferSingleton = UnityEngine.Rendering.ConstantBufferSingleton
+
+---@return UnityEngine.Rendering.ConstantBufferSingleton
+function UnityEngine.Rendering.ConstantBufferSingleton.New() end
+function UnityEngine.Rendering.ConstantBufferSingleton:Release() end
+
+---@class UnityEngine.Rendering.ContextContainer : System.Object
+UnityEngine.Rendering.ContextContainer = {}
+---@alias CS.UnityEngine.Rendering.ContextContainer UnityEngine.Rendering.ContextContainer
+CS.UnityEngine.Rendering.ContextContainer = UnityEngine.Rendering.ContextContainer
+
+---@return UnityEngine.Rendering.ContextContainer
+function UnityEngine.Rendering.ContextContainer.New() end
+function UnityEngine.Rendering.ContextContainer:Dispose() end
+
+---@class UnityEngine.Rendering.ContextItem : System.Object
+UnityEngine.Rendering.ContextItem = {}
+---@alias CS.UnityEngine.Rendering.ContextItem UnityEngine.Rendering.ContextItem
+CS.UnityEngine.Rendering.ContextItem = UnityEngine.Rendering.ContextItem
+
+function UnityEngine.Rendering.ContextItem:Reset() end
+
+---@class UnityEngine.Rendering.DisplayInfoAttribute : System.Attribute
+---@field name string
+---@field order number
+UnityEngine.Rendering.DisplayInfoAttribute = {}
+---@alias CS.UnityEngine.Rendering.DisplayInfoAttribute UnityEngine.Rendering.DisplayInfoAttribute
+CS.UnityEngine.Rendering.DisplayInfoAttribute = UnityEngine.Rendering.DisplayInfoAttribute
+
+---@return UnityEngine.Rendering.DisplayInfoAttribute
+function UnityEngine.Rendering.DisplayInfoAttribute.New() end
+
+---@class UnityEngine.Rendering.AdditionalPropertyAttribute : System.Attribute
+UnityEngine.Rendering.AdditionalPropertyAttribute = {}
+---@alias CS.UnityEngine.Rendering.AdditionalPropertyAttribute UnityEngine.Rendering.AdditionalPropertyAttribute
+CS.UnityEngine.Rendering.AdditionalPropertyAttribute = UnityEngine.Rendering.AdditionalPropertyAttribute
+
+---@return UnityEngine.Rendering.AdditionalPropertyAttribute
+function UnityEngine.Rendering.AdditionalPropertyAttribute.New() end
+
+---@class UnityEngine.Rendering.HideInDebugUIAttribute : System.Attribute
+UnityEngine.Rendering.HideInDebugUIAttribute = {}
+---@alias CS.UnityEngine.Rendering.HideInDebugUIAttribute UnityEngine.Rendering.HideInDebugUIAttribute
+CS.UnityEngine.Rendering.HideInDebugUIAttribute = UnityEngine.Rendering.HideInDebugUIAttribute
+
+---@return UnityEngine.Rendering.HideInDebugUIAttribute
+function UnityEngine.Rendering.HideInDebugUIAttribute.New() end
+
+---@class UnityEngine.Rendering.CoreProfileId
+---@field BlitTextureInPotAtlas UnityEngine.Rendering.CoreProfileId
+---@field APVCellStreamingUpdate UnityEngine.Rendering.CoreProfileId
+---@field APVScenarioBlendingUpdate UnityEngine.Rendering.CoreProfileId
+---@field APVIndexDefragUpdate UnityEngine.Rendering.CoreProfileId
+---@field APVDiskStreamingUpdate UnityEngine.Rendering.CoreProfileId
+---@field APVDiskStreamingUpdatePool UnityEngine.Rendering.CoreProfileId
+---@field APVSamplingDebug UnityEngine.Rendering.CoreProfileId
+UnityEngine.Rendering.CoreProfileId = {}
+---@alias CS.UnityEngine.Rendering.CoreProfileId UnityEngine.Rendering.CoreProfileId
+CS.UnityEngine.Rendering.CoreProfileId = UnityEngine.Rendering.CoreProfileId
+
+
+---@class UnityEngine.Rendering.CoreUnsafeUtils : System.Object
+UnityEngine.Rendering.CoreUnsafeUtils = {}
+---@alias CS.UnityEngine.Rendering.CoreUnsafeUtils UnityEngine.Rendering.CoreUnsafeUtils
+CS.UnityEngine.Rendering.CoreUnsafeUtils = UnityEngine.Rendering.CoreUnsafeUtils
+
+---@overload fun(arr: System.UInt32[], sortSize: number, ref_supportArray: System.UInt32[]) : System.UInt32[]
+---@param arr Unity.Collections.NativeArray
+---@param sortSize number
+---@param ref_supportArray Unity.Collections.NativeArray
+---@return ,Unity.Collections.NativeArray
+function UnityEngine.Rendering.CoreUnsafeUtils.MergeSort(arr, sortSize, ref_supportArray) end
+---@overload fun(arr: System.UInt32[], sortSize: number)
+---@param arr Unity.Collections.NativeArray
+---@param sortSize number
+function UnityEngine.Rendering.CoreUnsafeUtils.InsertionSort(arr, sortSize) end
+---@overload fun(arr: System.UInt32[], sortSize: number, ref_supportArray: System.UInt32[], radixBits: number) : System.UInt32[]
+---@param array Unity.Collections.NativeArray
+---@param sortSize number
+---@param ref_supportArray Unity.Collections.NativeArray
+---@param radixBits number
+---@return ,Unity.Collections.NativeArray
+function UnityEngine.Rendering.CoreUnsafeUtils.RadixSort(array, sortSize, ref_supportArray, radixBits) end
+---@overload fun(arr: System.UInt32[], left: number, right: number)
+---@param arr System.UInt64[]
+---@param left number
+---@param right number
+function UnityEngine.Rendering.CoreUnsafeUtils.QuickSort(arr, left, right) end
+---@param oldHashCount number
+---@param oldHashes UnityEngine.Hash128*
+---@param newHashCount number
+---@param newHashes UnityEngine.Hash128*
+---@param addIndices System.Int32*
+---@param removeIndices System.Int32*
+---@param out_addCount number
+---@param out_remCount number
+---@return number,number,number
+function UnityEngine.Rendering.CoreUnsafeUtils.CompareHashes(oldHashCount, oldHashes, newHashCount, newHashes, addIndices, removeIndices, out_addCount, out_remCount) end
+---@param count number
+---@param hashes UnityEngine.Hash128*
+---@param outHash UnityEngine.Hash128*
+function UnityEngine.Rendering.CoreUnsafeUtils.CombineHashes(count, hashes, outHash) end
+---@param arr System.Int32[]
+---@return boolean
+function UnityEngine.Rendering.CoreUnsafeUtils.HaveDuplicates(arr) end
+
+---@class UnityEngine.Rendering.DynamicArray : System.Object
+---@field size number
+---@field capacity number
+---@field Item T&
+UnityEngine.Rendering.DynamicArray = {}
+---@alias CS.UnityEngine.Rendering.DynamicArray UnityEngine.Rendering.DynamicArray
+CS.UnityEngine.Rendering.DynamicArray = UnityEngine.Rendering.DynamicArray
+
+---@overload fun() : UnityEngine.Rendering.DynamicArray
+---@overload fun(size: number) : UnityEngine.Rendering.DynamicArray
+---@overload fun(capacity: number, resize: boolean) : UnityEngine.Rendering.DynamicArray
+---@param deepCopy UnityEngine.Rendering.DynamicArray
+---@return UnityEngine.Rendering.DynamicArray
+function UnityEngine.Rendering.DynamicArray.New(deepCopy) end
+function UnityEngine.Rendering.DynamicArray:Clear() end
+---@param item T
+---@return boolean
+function UnityEngine.Rendering.DynamicArray:Contains(item) end
+---@param ref_value T
+---@return number,T
+function UnityEngine.Rendering.DynamicArray:Add(ref_value) end
+---@param array UnityEngine.Rendering.DynamicArray
+function UnityEngine.Rendering.DynamicArray:AddRange(array) end
+---@param index number
+---@param item T
+function UnityEngine.Rendering.DynamicArray:Insert(index, item) end
+---@param item T
+---@return boolean
+function UnityEngine.Rendering.DynamicArray:Remove(item) end
+---@param index number
+function UnityEngine.Rendering.DynamicArray:RemoveAt(index) end
+---@param index number
+---@param count number
+function UnityEngine.Rendering.DynamicArray:RemoveRange(index, count) end
+---@overload fun(self: UnityEngine.Rendering.DynamicArray, startIndex: number, count: number, match: System.Predicate[T]) : number
+---@param match System.Predicate[T]
+---@return number
+function UnityEngine.Rendering.DynamicArray:FindIndex(match) end
+---@overload fun(self: UnityEngine.Rendering.DynamicArray, item: T, index: number, count: number) : number
+---@overload fun(self: UnityEngine.Rendering.DynamicArray, item: T, index: number) : number
+---@param item T
+---@return number
+function UnityEngine.Rendering.DynamicArray:IndexOf(item) end
+---@param newSize number
+---@param keepContent boolean
+function UnityEngine.Rendering.DynamicArray:Resize(newSize, keepContent) end
+---@param newSize number
+function UnityEngine.Rendering.DynamicArray:ResizeAndClear(newSize) end
+---@param newCapacity number
+---@param keepContent boolean
+function UnityEngine.Rendering.DynamicArray:Reserve(newCapacity, keepContent) end
+---@return UnityEngine.Rendering.DynamicArray.Iterator[T]
+function UnityEngine.Rendering.DynamicArray:GetEnumerator() end
+---@param first number
+---@param numItems number
+---@return UnityEngine.Rendering.DynamicArray.RangeEnumerable[T]
+function UnityEngine.Rendering.DynamicArray:SubRange(first, numItems) end
+
+---@class UnityEngine.Rendering.DynamicArrayExtensions : System.Object
+UnityEngine.Rendering.DynamicArrayExtensions = {}
+---@alias CS.UnityEngine.Rendering.DynamicArrayExtensions UnityEngine.Rendering.DynamicArrayExtensions
+CS.UnityEngine.Rendering.DynamicArrayExtensions = UnityEngine.Rendering.DynamicArrayExtensions
+
+
+---@class UnityEngine.Rendering.PerformDynamicRes : System.MulticastDelegate
+UnityEngine.Rendering.PerformDynamicRes = {}
+---@alias CS.UnityEngine.Rendering.PerformDynamicRes UnityEngine.Rendering.PerformDynamicRes
+CS.UnityEngine.Rendering.PerformDynamicRes = UnityEngine.Rendering.PerformDynamicRes
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.Rendering.PerformDynamicRes
+function UnityEngine.Rendering.PerformDynamicRes.New(object, method) end
+---@return number
+function UnityEngine.Rendering.PerformDynamicRes:Invoke() end
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.Rendering.PerformDynamicRes:BeginInvoke(callback, object) end
+---@param result System.IAsyncResult
+---@return number
+function UnityEngine.Rendering.PerformDynamicRes:EndInvoke(result) end
+
+---@class UnityEngine.Rendering.DynamicResScalePolicyType
+---@field ReturnsPercentage UnityEngine.Rendering.DynamicResScalePolicyType
+---@field ReturnsMinMaxLerpFactor UnityEngine.Rendering.DynamicResScalePolicyType
+UnityEngine.Rendering.DynamicResScalePolicyType = {}
+---@alias CS.UnityEngine.Rendering.DynamicResScalePolicyType UnityEngine.Rendering.DynamicResScalePolicyType
+CS.UnityEngine.Rendering.DynamicResScalePolicyType = UnityEngine.Rendering.DynamicResScalePolicyType
+
+
+---@class UnityEngine.Rendering.DynamicResScalerSlot
+---@field User UnityEngine.Rendering.DynamicResScalerSlot
+---@field System UnityEngine.Rendering.DynamicResScalerSlot
+---@field Count UnityEngine.Rendering.DynamicResScalerSlot
+UnityEngine.Rendering.DynamicResScalerSlot = {}
+---@alias CS.UnityEngine.Rendering.DynamicResScalerSlot UnityEngine.Rendering.DynamicResScalerSlot
+CS.UnityEngine.Rendering.DynamicResScalerSlot = UnityEngine.Rendering.DynamicResScalerSlot
+
+
+---@class UnityEngine.Rendering.DynamicResolutionHandler : System.Object
+---@field instance UnityEngine.Rendering.DynamicResolutionHandler
+---@field filter UnityEngine.Rendering.DynamicResUpscaleFilter
+---@field finalViewport UnityEngine.Vector2Int
+---@field runUpscalerFilterOnFullResolution boolean
+---@field forcingResolution boolean
+---@field upsamplerSchedule UnityEngine.Rendering.DynamicResolutionHandler.UpsamplerScheduleType
+UnityEngine.Rendering.DynamicResolutionHandler = {}
+---@alias CS.UnityEngine.Rendering.DynamicResolutionHandler UnityEngine.Rendering.DynamicResolutionHandler
+CS.UnityEngine.Rendering.DynamicResolutionHandler = UnityEngine.Rendering.DynamicResolutionHandler
+
+---@param scaler UnityEngine.Rendering.PerformDynamicRes
+---@param scalerType UnityEngine.Rendering.DynamicResScalePolicyType
+function UnityEngine.Rendering.DynamicResolutionHandler.SetDynamicResScaler(scaler, scalerType) end
+---@param scaler UnityEngine.Rendering.PerformDynamicRes
+---@param scalerType UnityEngine.Rendering.DynamicResScalePolicyType
+function UnityEngine.Rendering.DynamicResolutionHandler.SetSystemDynamicResScaler(scaler, scalerType) end
+---@param slot UnityEngine.Rendering.DynamicResScalerSlot
+function UnityEngine.Rendering.DynamicResolutionHandler.SetActiveDynamicScalerSlot(slot) end
+function UnityEngine.Rendering.DynamicResolutionHandler.ClearSelectedCamera() end
+---@param camera UnityEngine.Camera
+---@param filter UnityEngine.Rendering.DynamicResUpscaleFilter
+function UnityEngine.Rendering.DynamicResolutionHandler.SetUpscaleFilter(camera, filter) end
+---@param camera UnityEngine.Camera
+---@param settings System.Nullable
+---@param OnResolutionChange System.Action
+function UnityEngine.Rendering.DynamicResolutionHandler.UpdateAndUseCamera(camera, settings, OnResolutionChange) end
+---@return UnityEngine.Vector2
+function UnityEngine.Rendering.DynamicResolutionHandler:GetResolvedScale() end
+---@param inputResolution UnityEngine.Vector2Int
+---@param outputResolution UnityEngine.Vector2Int
+---@param forceApply boolean
+---@return number
+function UnityEngine.Rendering.DynamicResolutionHandler:CalculateMipBias(inputResolution, outputResolution, forceApply) end
+---@param cameraRequest boolean
+function UnityEngine.Rendering.DynamicResolutionHandler:SetCurrentCameraRequest(cameraRequest) end
+---@param settings UnityEngine.Rendering.GlobalDynamicResolutionSettings
+---@param OnResolutionChange System.Action
+function UnityEngine.Rendering.DynamicResolutionHandler:Update(settings, OnResolutionChange) end
+---@return boolean
+function UnityEngine.Rendering.DynamicResolutionHandler:SoftwareDynamicResIsEnabled() end
+---@return boolean
+function UnityEngine.Rendering.DynamicResolutionHandler:HardwareDynamicResIsEnabled() end
+---@return boolean
+function UnityEngine.Rendering.DynamicResolutionHandler:RequestsHardwareDynamicResolution() end
+---@return boolean
+function UnityEngine.Rendering.DynamicResolutionHandler:DynamicResolutionEnabled() end
+function UnityEngine.Rendering.DynamicResolutionHandler:ForceSoftwareFallback() end
+---@param size UnityEngine.Vector2Int
+---@return UnityEngine.Vector2Int
+function UnityEngine.Rendering.DynamicResolutionHandler:GetScaledSize(size) end
+---@param size UnityEngine.Vector2Int
+---@return UnityEngine.Vector2Int
+function UnityEngine.Rendering.DynamicResolutionHandler:ApplyScalesOnSize(size) end
+---@return number
+function UnityEngine.Rendering.DynamicResolutionHandler:GetCurrentScale() end
+---@return UnityEngine.Vector2Int
+function UnityEngine.Rendering.DynamicResolutionHandler:GetLastScaledSize() end
+---@overload fun(self: UnityEngine.Rendering.DynamicResolutionHandler, targetLowRes: number) : number
+---@param targetLowRes number
+---@param minimumThreshold number
+---@return number
+function UnityEngine.Rendering.DynamicResolutionHandler:GetLowResMultiplier(targetLowRes, minimumThreshold) end
+
+---@class UnityEngine.Rendering.DynamicString : UnityEngine.Rendering.DynamicArray
+UnityEngine.Rendering.DynamicString = {}
+---@alias CS.UnityEngine.Rendering.DynamicString UnityEngine.Rendering.DynamicString
+CS.UnityEngine.Rendering.DynamicString = UnityEngine.Rendering.DynamicString
+
+---@overload fun() : UnityEngine.Rendering.DynamicString
+---@overload fun(s: string) : UnityEngine.Rendering.DynamicString
+---@param capacity number
+---@return UnityEngine.Rendering.DynamicString
+function UnityEngine.Rendering.DynamicString.New(capacity) end
+---@overload fun(self: UnityEngine.Rendering.DynamicString, s: string)
+---@param s UnityEngine.Rendering.DynamicString
+function UnityEngine.Rendering.DynamicString:Append(s) end
+---@return string
+function UnityEngine.Rendering.DynamicString:ToString() end
+
+---@class UnityEngine.Rendering.DynamicResolutionType
+---@field Software UnityEngine.Rendering.DynamicResolutionType
+---@field Hardware UnityEngine.Rendering.DynamicResolutionType
+UnityEngine.Rendering.DynamicResolutionType = {}
+---@alias CS.UnityEngine.Rendering.DynamicResolutionType UnityEngine.Rendering.DynamicResolutionType
+CS.UnityEngine.Rendering.DynamicResolutionType = UnityEngine.Rendering.DynamicResolutionType
+
+
+---@class UnityEngine.Rendering.DynamicResUpscaleFilter
+---@field CatmullRom UnityEngine.Rendering.DynamicResUpscaleFilter
+---@field ContrastAdaptiveSharpen UnityEngine.Rendering.DynamicResUpscaleFilter
+---@field EdgeAdaptiveScalingUpres UnityEngine.Rendering.DynamicResUpscaleFilter
+---@field TAAU UnityEngine.Rendering.DynamicResUpscaleFilter
+UnityEngine.Rendering.DynamicResUpscaleFilter = {}
+---@alias CS.UnityEngine.Rendering.DynamicResUpscaleFilter UnityEngine.Rendering.DynamicResUpscaleFilter
+CS.UnityEngine.Rendering.DynamicResUpscaleFilter = UnityEngine.Rendering.DynamicResUpscaleFilter
+
+
+---@class UnityEngine.Rendering.AdvancedUpscalers
+---@field DLSS UnityEngine.Rendering.AdvancedUpscalers
+---@field FSR2 UnityEngine.Rendering.AdvancedUpscalers
+---@field STP UnityEngine.Rendering.AdvancedUpscalers
+UnityEngine.Rendering.AdvancedUpscalers = {}
+---@alias CS.UnityEngine.Rendering.AdvancedUpscalers UnityEngine.Rendering.AdvancedUpscalers
+CS.UnityEngine.Rendering.AdvancedUpscalers = UnityEngine.Rendering.AdvancedUpscalers
+
+
+---@class UnityEngine.Rendering.GlobalDynamicResolutionSettings : System.ValueType
+---@field enabled boolean
+---@field useMipBias boolean
+---@field advancedUpscalerNames System.Collections.Generic.List
+---@field DLSSPerfQualitySetting number
+---@field DLSSInjectionPoint UnityEngine.Rendering.DynamicResolutionHandler.UpsamplerScheduleType
+---@field TAAUInjectionPoint UnityEngine.Rendering.DynamicResolutionHandler.UpsamplerScheduleType
+---@field STPInjectionPoint UnityEngine.Rendering.DynamicResolutionHandler.UpsamplerScheduleType
+---@field defaultInjectionPoint UnityEngine.Rendering.DynamicResolutionHandler.UpsamplerScheduleType
+---@field DLSSUseOptimalSettings boolean
+---@field DLSSSharpness number
+---@field DLSSRenderPresetForQuality number
+---@field DLSSRenderPresetForBalanced number
+---@field DLSSRenderPresetForPerformance number
+---@field DLSSRenderPresetForUltraPerformance number
+---@field DLSSRenderPresetForDLAA number
+---@field FSR2EnableSharpness boolean
+---@field FSR2Sharpness number
+---@field FSR2UseOptimalSettings boolean
+---@field FSR2QualitySetting number
+---@field FSR2InjectionPoint UnityEngine.Rendering.DynamicResolutionHandler.UpsamplerScheduleType
+---@field fsrOverrideSharpness boolean
+---@field fsrSharpness number
+---@field maxPercentage number
+---@field minPercentage number
+---@field dynResType UnityEngine.Rendering.DynamicResolutionType
+---@field upsampleFilter UnityEngine.Rendering.DynamicResUpscaleFilter
+---@field forceResolution boolean
+---@field forcedPercentage number
+---@field lowResTransparencyMinimumThreshold number
+---@field rayTracingHalfResThreshold number
+---@field lowResSSGIMinimumThreshold number
+---@field lowResVolumetricCloudsMinimumThreshold number
+UnityEngine.Rendering.GlobalDynamicResolutionSettings = {}
+---@alias CS.UnityEngine.Rendering.GlobalDynamicResolutionSettings UnityEngine.Rendering.GlobalDynamicResolutionSettings
+CS.UnityEngine.Rendering.GlobalDynamicResolutionSettings = UnityEngine.Rendering.GlobalDynamicResolutionSettings
+
+---@return UnityEngine.Rendering.GlobalDynamicResolutionSettings
+function UnityEngine.Rendering.GlobalDynamicResolutionSettings.NewDefault() end
+
+---@class UnityEngine.Rendering.IAdditionalData
+UnityEngine.Rendering.IAdditionalData = {}
+---@alias CS.UnityEngine.Rendering.IAdditionalData UnityEngine.Rendering.IAdditionalData
+CS.UnityEngine.Rendering.IAdditionalData = UnityEngine.Rendering.IAdditionalData
+
+
+---@class UnityEngine.Rendering.IVirtualTexturingEnabledRenderPipeline
+---@field virtualTexturingEnabled boolean
+UnityEngine.Rendering.IVirtualTexturingEnabledRenderPipeline = {}
+---@alias CS.UnityEngine.Rendering.IVirtualTexturingEnabledRenderPipeline UnityEngine.Rendering.IVirtualTexturingEnabledRenderPipeline
+CS.UnityEngine.Rendering.IVirtualTexturingEnabledRenderPipeline = UnityEngine.Rendering.IVirtualTexturingEnabledRenderPipeline
+
+
+---@class UnityEngine.Rendering.ListBuffer : System.ValueType
+---@field Count number
+---@field Capacity number
+---@field Item T&
+UnityEngine.Rendering.ListBuffer = {}
+---@alias CS.UnityEngine.Rendering.ListBuffer UnityEngine.Rendering.ListBuffer
+CS.UnityEngine.Rendering.ListBuffer = UnityEngine.Rendering.ListBuffer
+
+---@param bufferPtr T*
+---@param countPtr System.Int32*
+---@param capacity number
+---@return UnityEngine.Rendering.ListBuffer
+function UnityEngine.Rendering.ListBuffer.New(bufferPtr, countPtr, capacity) end
+---@param ref_index number
+---@return T&,number
+function UnityEngine.Rendering.ListBuffer:GetUnchecked(ref_index) end
+---@param ref_value T
+---@return boolean,T
+function UnityEngine.Rendering.ListBuffer:TryAdd(ref_value) end
+---@param dstBuffer T*
+---@param startDstIndex number
+---@param copyCount number
+function UnityEngine.Rendering.ListBuffer:CopyTo(dstBuffer, startDstIndex, copyCount) end
+---@param other UnityEngine.Rendering.ListBuffer
+---@return boolean
+function UnityEngine.Rendering.ListBuffer:TryCopyTo(other) end
+---@param srcPtr T*
+---@param count number
+---@return boolean
+function UnityEngine.Rendering.ListBuffer:TryCopyFrom(srcPtr, count) end
+
+---@class UnityEngine.Rendering.ListBufferExtensions : System.Object
+UnityEngine.Rendering.ListBufferExtensions = {}
+---@alias CS.UnityEngine.Rendering.ListBufferExtensions UnityEngine.Rendering.ListBufferExtensions
+CS.UnityEngine.Rendering.ListBufferExtensions = UnityEngine.Rendering.ListBufferExtensions
+
+
+---@class UnityEngine.Rendering.ObjectPool : System.Object
+---@field countAll number
+---@field countActive number
+---@field countInactive number
+UnityEngine.Rendering.ObjectPool = {}
+---@alias CS.UnityEngine.Rendering.ObjectPool UnityEngine.Rendering.ObjectPool
+CS.UnityEngine.Rendering.ObjectPool = UnityEngine.Rendering.ObjectPool
+
+---@param actionOnGet UnityEngine.Events.UnityAction[T]
+---@param actionOnRelease UnityEngine.Events.UnityAction[T]
+---@param collectionCheck boolean
+---@return UnityEngine.Rendering.ObjectPool
+function UnityEngine.Rendering.ObjectPool.New(actionOnGet, actionOnRelease, collectionCheck) end
+---@overload fun() : T
+---@param out_v T
+---@return UnityEngine.Rendering.ObjectPool.PooledObject[T],T
+function UnityEngine.Rendering.ObjectPool:Get(out_v) end
+---@param element T
+function UnityEngine.Rendering.ObjectPool:Release(element) end
+
+---@class UnityEngine.Rendering.GenericPool : System.Object
+UnityEngine.Rendering.GenericPool = {}
+---@alias CS.UnityEngine.Rendering.GenericPool UnityEngine.Rendering.GenericPool
+CS.UnityEngine.Rendering.GenericPool = UnityEngine.Rendering.GenericPool
+
+---@overload fun() : T
+---@param out_value T
+---@return UnityEngine.Rendering.ObjectPool.PooledObject[T],T
+function UnityEngine.Rendering.GenericPool.Get(out_value) end
+---@param toRelease T
+function UnityEngine.Rendering.GenericPool.Release(toRelease) end
+
+---@class UnityEngine.Rendering.UnsafeGenericPool : System.Object
+UnityEngine.Rendering.UnsafeGenericPool = {}
+---@alias CS.UnityEngine.Rendering.UnsafeGenericPool UnityEngine.Rendering.UnsafeGenericPool
+CS.UnityEngine.Rendering.UnsafeGenericPool = UnityEngine.Rendering.UnsafeGenericPool
+
+---@overload fun() : T
+---@param out_value T
+---@return UnityEngine.Rendering.ObjectPool.PooledObject[T],T
+function UnityEngine.Rendering.UnsafeGenericPool.Get(out_value) end
+---@param toRelease T
+function UnityEngine.Rendering.UnsafeGenericPool.Release(toRelease) end
+
+---@class UnityEngine.Rendering.ListPool : System.Object
+UnityEngine.Rendering.ListPool = {}
+---@alias CS.UnityEngine.Rendering.ListPool UnityEngine.Rendering.ListPool
+CS.UnityEngine.Rendering.ListPool = UnityEngine.Rendering.ListPool
+
+---@overload fun() : System.Collections.Generic.List[T]
+---@param out_value System.Collections.Generic.List[T]
+---@return UnityEngine.Rendering.ObjectPool.PooledObject[System.Collections.Generic.List[T]],System.Collections.Generic.List[T]
+function UnityEngine.Rendering.ListPool.Get(out_value) end
+---@param toRelease System.Collections.Generic.List[T]
+function UnityEngine.Rendering.ListPool.Release(toRelease) end
+
+---@class UnityEngine.Rendering.HashSetPool : System.Object
+UnityEngine.Rendering.HashSetPool = {}
+---@alias CS.UnityEngine.Rendering.HashSetPool UnityEngine.Rendering.HashSetPool
+CS.UnityEngine.Rendering.HashSetPool = UnityEngine.Rendering.HashSetPool
+
+---@overload fun() : System.Collections.Generic.HashSet[T]
+---@param out_value System.Collections.Generic.HashSet[T]
+---@return UnityEngine.Rendering.ObjectPool.PooledObject[System.Collections.Generic.HashSet[T]],System.Collections.Generic.HashSet[T]
+function UnityEngine.Rendering.HashSetPool.Get(out_value) end
+---@param toRelease System.Collections.Generic.HashSet[T]
+function UnityEngine.Rendering.HashSetPool.Release(toRelease) end
+
+---@class UnityEngine.Rendering.DictionaryPool : System.Object
+UnityEngine.Rendering.DictionaryPool = {}
+---@alias CS.UnityEngine.Rendering.DictionaryPool UnityEngine.Rendering.DictionaryPool
+CS.UnityEngine.Rendering.DictionaryPool = UnityEngine.Rendering.DictionaryPool
+
+---@overload fun() : System.Collections.Generic.Dictionary[TKey,TValue]
+---@param out_value System.Collections.Generic.Dictionary[TKey,TValue]
+---@return UnityEngine.Rendering.ObjectPool.PooledObject[System.Collections.Generic.Dictionary[TKey,TValue]],System.Collections.Generic.Dictionary[TKey,TValue]
+function UnityEngine.Rendering.DictionaryPool.Get(out_value) end
+---@param toRelease System.Collections.Generic.Dictionary[TKey,TValue]
+function UnityEngine.Rendering.DictionaryPool.Release(toRelease) end
+
+---@class UnityEngine.Rendering.Observable : System.ValueType
+---@field value T
+UnityEngine.Rendering.Observable = {}
+---@alias CS.UnityEngine.Rendering.Observable UnityEngine.Rendering.Observable
+CS.UnityEngine.Rendering.Observable = UnityEngine.Rendering.Observable
+
+---@param newValue T
+---@return UnityEngine.Rendering.Observable
+function UnityEngine.Rendering.Observable.New(newValue) end
+
+---@class UnityEngine.Rendering.ListChangedEventArgs : System.EventArgs
+---@field index number
+---@field item T
+UnityEngine.Rendering.ListChangedEventArgs = {}
+---@alias CS.UnityEngine.Rendering.ListChangedEventArgs UnityEngine.Rendering.ListChangedEventArgs
+CS.UnityEngine.Rendering.ListChangedEventArgs = UnityEngine.Rendering.ListChangedEventArgs
+
+---@param index number
+---@param item T
+---@return UnityEngine.Rendering.ListChangedEventArgs
+function UnityEngine.Rendering.ListChangedEventArgs.New(index, item) end
+
+---@class UnityEngine.Rendering.ListChangedEventHandler : System.MulticastDelegate
+UnityEngine.Rendering.ListChangedEventHandler = {}
+---@alias CS.UnityEngine.Rendering.ListChangedEventHandler UnityEngine.Rendering.ListChangedEventHandler
+CS.UnityEngine.Rendering.ListChangedEventHandler = UnityEngine.Rendering.ListChangedEventHandler
+
+---@param object System.Object
+---@param method System.IntPtr
+---@return UnityEngine.Rendering.ListChangedEventHandler
+function UnityEngine.Rendering.ListChangedEventHandler.New(object, method) end
+---@param sender UnityEngine.Rendering.ObservableList[T]
+---@param e UnityEngine.Rendering.ListChangedEventArgs[T]
+function UnityEngine.Rendering.ListChangedEventHandler:Invoke(sender, e) end
+---@param sender UnityEngine.Rendering.ObservableList[T]
+---@param e UnityEngine.Rendering.ListChangedEventArgs[T]
+---@param callback System.AsyncCallback
+---@param object System.Object
+---@return System.IAsyncResult
+function UnityEngine.Rendering.ListChangedEventHandler:BeginInvoke(sender, e, callback, object) end
+---@param result System.IAsyncResult
+function UnityEngine.Rendering.ListChangedEventHandler:EndInvoke(result) end
+
+---@class UnityEngine.Rendering.ObservableList : System.Object
+---@field Item T
+---@field Count number
+---@field IsReadOnly boolean
+UnityEngine.Rendering.ObservableList = {}
+---@alias CS.UnityEngine.Rendering.ObservableList UnityEngine.Rendering.ObservableList
+CS.UnityEngine.Rendering.ObservableList = UnityEngine.Rendering.ObservableList
+
+---@overload fun() : UnityEngine.Rendering.ObservableList
+---@overload fun(capacity: number, comparison: System.Comparison[T]) : UnityEngine.Rendering.ObservableList
+---@param collection System.Collections.Generic.IEnumerable[T]
+---@param comparison System.Comparison[T]
+---@return UnityEngine.Rendering.ObservableList
+function UnityEngine.Rendering.ObservableList.New(collection, comparison) end
+---@param item T
+---@return boolean
+function UnityEngine.Rendering.ObservableList:Contains(item) end
+---@param item T
+---@return number
+function UnityEngine.Rendering.ObservableList:IndexOf(item) end
+---@overload fun(self: UnityEngine.Rendering.ObservableList, item: T)
+---@param items T[]
+function UnityEngine.Rendering.ObservableList:Add(items) end
+---@param index number
+---@param item T
+function UnityEngine.Rendering.ObservableList:Insert(index, item) end
+---@overload fun(self: UnityEngine.Rendering.ObservableList, item: T) : boolean
+---@param items T[]
+---@return number
+function UnityEngine.Rendering.ObservableList:Remove(items) end
+---@param index number
+function UnityEngine.Rendering.ObservableList:RemoveAt(index) end
+function UnityEngine.Rendering.ObservableList:Clear() end
+---@param array T[]
+---@param arrayIndex number
+function UnityEngine.Rendering.ObservableList:CopyTo(array, arrayIndex) end
+---@return System.Collections.Generic.IEnumerator[T]
+function UnityEngine.Rendering.ObservableList:GetEnumerator() end
+
+---@class UnityEngine.Rendering.ReloadAttribute : System.Attribute
+---@field package UnityEngine.Rendering.ReloadAttribute.Package
+---@field paths System.String[]
+UnityEngine.Rendering.ReloadAttribute = {}
+---@alias CS.UnityEngine.Rendering.ReloadAttribute UnityEngine.Rendering.ReloadAttribute
+CS.UnityEngine.Rendering.ReloadAttribute = UnityEngine.Rendering.ReloadAttribute
+
+---@overload fun(paths: System.String[], package: UnityEngine.Rendering.ReloadAttribute.Package) : UnityEngine.Rendering.ReloadAttribute
+---@overload fun(path: string, package: UnityEngine.Rendering.ReloadAttribute.Package) : UnityEngine.Rendering.ReloadAttribute
+---@param pathFormat string
+---@param rangeMin number
+---@param rangeMax number
+---@param package UnityEngine.Rendering.ReloadAttribute.Package
+---@return UnityEngine.Rendering.ReloadAttribute
+function UnityEngine.Rendering.ReloadAttribute.New(pathFormat, rangeMin, rangeMax, package) end
+
+---@class UnityEngine.Rendering.ReloadGroupAttribute : System.Attribute
+UnityEngine.Rendering.ReloadGroupAttribute = {}
+---@alias CS.UnityEngine.Rendering.ReloadGroupAttribute UnityEngine.Rendering.ReloadGroupAttribute
+CS.UnityEngine.Rendering.ReloadGroupAttribute = UnityEngine.Rendering.ReloadGroupAttribute
+
+---@return UnityEngine.Rendering.ReloadGroupAttribute
+function UnityEngine.Rendering.ReloadGroupAttribute.New() end
+
+---@class UnityEngine.Rendering.RemoveRangeExtensions : System.Object
+UnityEngine.Rendering.RemoveRangeExtensions = {}
+---@alias CS.UnityEngine.Rendering.RemoveRangeExtensions UnityEngine.Rendering.RemoveRangeExtensions
+CS.UnityEngine.Rendering.RemoveRangeExtensions = UnityEngine.Rendering.RemoveRangeExtensions
+
+
+---@class UnityEngine.Rendering.SerializableEnum : System.Object
+---@field value System.Enum
+UnityEngine.Rendering.SerializableEnum = {}
+---@alias CS.UnityEngine.Rendering.SerializableEnum UnityEngine.Rendering.SerializableEnum
+CS.UnityEngine.Rendering.SerializableEnum = UnityEngine.Rendering.SerializableEnum
+
+---@param enumType System.Type
+---@return UnityEngine.Rendering.SerializableEnum
+function UnityEngine.Rendering.SerializableEnum.New(enumType) end
+
+---@class UnityEngine.Rendering.SerializedDictionaryDebugView : System.Object
+---@field Items System.Collections.Generic.KeyValuePair[K,V][]
+UnityEngine.Rendering.SerializedDictionaryDebugView = {}
+---@alias CS.UnityEngine.Rendering.SerializedDictionaryDebugView UnityEngine.Rendering.SerializedDictionaryDebugView
+CS.UnityEngine.Rendering.SerializedDictionaryDebugView = UnityEngine.Rendering.SerializedDictionaryDebugView
+
+---@param dictionary System.Collections.Generic.IDictionary[K,V]
+---@return UnityEngine.Rendering.SerializedDictionaryDebugView
+function UnityEngine.Rendering.SerializedDictionaryDebugView.New(dictionary) end
+
+---@class UnityEngine.Rendering.SerializedDictionary : UnityEngine.Rendering.SerializedDictionary[K,V,K,V]
+UnityEngine.Rendering.SerializedDictionary = {}
+---@alias CS.UnityEngine.Rendering.SerializedDictionary UnityEngine.Rendering.SerializedDictionary
+CS.UnityEngine.Rendering.SerializedDictionary = UnityEngine.Rendering.SerializedDictionary
+
+---@return UnityEngine.Rendering.SerializedDictionary
+function UnityEngine.Rendering.SerializedDictionary.New() end
+---@param key K
+---@return K
+function UnityEngine.Rendering.SerializedDictionary:SerializeKey(key) end
+---@param val V
+---@return V
+function UnityEngine.Rendering.SerializedDictionary:SerializeValue(val) end
+---@param key K
+---@return K
+function UnityEngine.Rendering.SerializedDictionary:DeserializeKey(key) end
+---@param val V
+---@return V
+function UnityEngine.Rendering.SerializedDictionary:DeserializeValue(val) end
+
+---@class UnityEngine.Rendering.SerializedDictionary : System.Collections.Generic.Dictionary[K,V]
+UnityEngine.Rendering.SerializedDictionary = {}
+---@alias CS.UnityEngine.Rendering.SerializedDictionary UnityEngine.Rendering.SerializedDictionary
+CS.UnityEngine.Rendering.SerializedDictionary = UnityEngine.Rendering.SerializedDictionary
+
+---@param key K
+---@return SK
+function UnityEngine.Rendering.SerializedDictionary:SerializeKey(key) end
+---@param value V
+---@return SV
+function UnityEngine.Rendering.SerializedDictionary:SerializeValue(value) end
+---@param serializedKey SK
+---@return K
+function UnityEngine.Rendering.SerializedDictionary:DeserializeKey(serializedKey) end
+---@param serializedValue SV
+---@return V
+function UnityEngine.Rendering.SerializedDictionary:DeserializeValue(serializedValue) end
+function UnityEngine.Rendering.SerializedDictionary:OnBeforeSerialize() end
+function UnityEngine.Rendering.SerializedDictionary:OnAfterDeserialize() end
+
+---@class UnityEngine.Rendering.SwapCollectionExtensions : System.Object
+UnityEngine.Rendering.SwapCollectionExtensions = {}
+---@alias CS.UnityEngine.Rendering.SwapCollectionExtensions UnityEngine.Rendering.SwapCollectionExtensions
+CS.UnityEngine.Rendering.SwapCollectionExtensions = UnityEngine.Rendering.SwapCollectionExtensions
+
+
+---@class UnityEngine.Rendering.DebugDisplaySettings : System.Object
+---@field Instance T
+---@field AreAnySettingsActive boolean
+---@field IsPostProcessingAllowed boolean
+---@field IsLightingActive boolean
+UnityEngine.Rendering.DebugDisplaySettings = {}
+---@alias CS.UnityEngine.Rendering.DebugDisplaySettings UnityEngine.Rendering.DebugDisplaySettings
+CS.UnityEngine.Rendering.DebugDisplaySettings = UnityEngine.Rendering.DebugDisplaySettings
+
+---@param onExecute System.Action
+function UnityEngine.Rendering.DebugDisplaySettings:ForEach(onExecute) end
+function UnityEngine.Rendering.DebugDisplaySettings:Reset() end
+---@param ref_color UnityEngine.Color
+---@return boolean,UnityEngine.Color
+function UnityEngine.Rendering.DebugDisplaySettings:TryGetScreenClearColor(ref_color) end
+
+---@class UnityEngine.Rendering.DebugDisplaySettingsHDROutput : System.Object
+UnityEngine.Rendering.DebugDisplaySettingsHDROutput = {}
+---@alias CS.UnityEngine.Rendering.DebugDisplaySettingsHDROutput UnityEngine.Rendering.DebugDisplaySettingsHDROutput
+CS.UnityEngine.Rendering.DebugDisplaySettingsHDROutput = UnityEngine.Rendering.DebugDisplaySettingsHDROutput
+
+---@return UnityEngine.Rendering.DebugDisplaySettingsHDROutput
+function UnityEngine.Rendering.DebugDisplaySettingsHDROutput.New() end
+---@return UnityEngine.Rendering.DebugUI.Table
+function UnityEngine.Rendering.DebugDisplaySettingsHDROutput.CreateHDROuputDisplayTable() end
+
+---@class UnityEngine.Rendering.DebugDisplaySettingsPanel : System.Object
+---@field PanelName string
+---@field Order number
+---@field Widgets UnityEngine.Rendering.DebugUI.Widget[]
+---@field Flags UnityEngine.Rendering.DebugUI.Flags
+UnityEngine.Rendering.DebugDisplaySettingsPanel = {}
+---@alias CS.UnityEngine.Rendering.DebugDisplaySettingsPanel UnityEngine.Rendering.DebugDisplaySettingsPanel
+CS.UnityEngine.Rendering.DebugDisplaySettingsPanel = UnityEngine.Rendering.DebugDisplaySettingsPanel
+
+function UnityEngine.Rendering.DebugDisplaySettingsPanel:Dispose() end
+
+---@class UnityEngine.Rendering.DebugDisplaySettingsPanel : UnityEngine.Rendering.DebugDisplaySettingsPanel
+---@field data T
+UnityEngine.Rendering.DebugDisplaySettingsPanel = {}
+---@alias CS.UnityEngine.Rendering.DebugDisplaySettingsPanel UnityEngine.Rendering.DebugDisplaySettingsPanel
+CS.UnityEngine.Rendering.DebugDisplaySettingsPanel = UnityEngine.Rendering.DebugDisplaySettingsPanel
+
+
+---@class UnityEngine.Rendering.DebugDisplaySettingsStats : System.Object
+---@field debugDisplayStats UnityEngine.Rendering.DebugDisplayStats[TProfileId]
+---@field AreAnySettingsActive boolean
+UnityEngine.Rendering.DebugDisplaySettingsStats = {}
+---@alias CS.UnityEngine.Rendering.DebugDisplaySettingsStats UnityEngine.Rendering.DebugDisplaySettingsStats
+CS.UnityEngine.Rendering.DebugDisplaySettingsStats = UnityEngine.Rendering.DebugDisplaySettingsStats
+
+---@param debugDisplayStats UnityEngine.Rendering.DebugDisplayStats[TProfileId]
+---@return UnityEngine.Rendering.DebugDisplaySettingsStats
+function UnityEngine.Rendering.DebugDisplaySettingsStats.New(debugDisplayStats) end
+---@return UnityEngine.Rendering.IDebugDisplaySettingsPanelDisposable
+function UnityEngine.Rendering.DebugDisplaySettingsStats:CreatePanel() end
+
+---@class UnityEngine.Rendering.DebugDisplaySettingsUI : System.Object
+UnityEngine.Rendering.DebugDisplaySettingsUI = {}
+---@alias CS.UnityEngine.Rendering.DebugDisplaySettingsUI UnityEngine.Rendering.DebugDisplaySettingsUI
+CS.UnityEngine.Rendering.DebugDisplaySettingsUI = UnityEngine.Rendering.DebugDisplaySettingsUI
+
+---@return UnityEngine.Rendering.DebugDisplaySettingsUI
+function UnityEngine.Rendering.DebugDisplaySettingsUI.New() end
+---@param settings UnityEngine.Rendering.IDebugDisplaySettings
+function UnityEngine.Rendering.DebugDisplaySettingsUI:RegisterDebug(settings) end
+function UnityEngine.Rendering.DebugDisplaySettingsUI:UnregisterDebug() end
+---@return System.Action
+function UnityEngine.Rendering.DebugDisplaySettingsUI:GetReset() end
+
+---@class UnityEngine.Rendering.DebugDisplaySettingsVolume : System.Object
+---@field selectedComponent number
+---@field selectedComponentType System.Type
+---@field volumeComponentsPathAndType System.Collections.Generic.List
+---@field selectedCamera UnityEngine.Camera
+---@field AreAnySettingsActive boolean
+UnityEngine.Rendering.DebugDisplaySettingsVolume = {}
+---@alias CS.UnityEngine.Rendering.DebugDisplaySettingsVolume UnityEngine.Rendering.DebugDisplaySettingsVolume
+CS.UnityEngine.Rendering.DebugDisplaySettingsVolume = UnityEngine.Rendering.DebugDisplaySettingsVolume
+
+---@overload fun(volumeDebugSettings: UnityEngine.Rendering.IVolumeDebugSettings) : UnityEngine.Rendering.DebugDisplaySettingsVolume
+---@return UnityEngine.Rendering.DebugDisplaySettingsVolume
+function UnityEngine.Rendering.DebugDisplaySettingsVolume.New() end
+---@param volume UnityEngine.Rendering.Volume
+---@return number
+function UnityEngine.Rendering.DebugDisplaySettingsVolume:GetVolumeWeight(volume) end
+---@return UnityEngine.Rendering.ObservableList
+function UnityEngine.Rendering.DebugDisplaySettingsVolume:GetVolumesList() end
+---@return UnityEngine.Rendering.IDebugDisplaySettingsPanelDisposable
+function UnityEngine.Rendering.DebugDisplaySettingsVolume:CreatePanel() end
+
+---@class UnityEngine.Rendering.DebugDisplayStats : System.Object
+UnityEngine.Rendering.DebugDisplayStats = {}
+---@alias CS.UnityEngine.Rendering.DebugDisplayStats UnityEngine.Rendering.DebugDisplayStats
+CS.UnityEngine.Rendering.DebugDisplayStats = UnityEngine.Rendering.DebugDisplayStats
+
+function UnityEngine.Rendering.DebugDisplayStats:EnableProfilingRecorders() end
+function UnityEngine.Rendering.DebugDisplayStats:DisableProfilingRecorders() end
+---@param list System.Collections.Generic.List
+function UnityEngine.Rendering.DebugDisplayStats:RegisterDebugUI(list) end
+function UnityEngine.Rendering.DebugDisplayStats:Update() end
+
+---@class UnityEngine.Rendering.DebugFrameTiming : System.Object
+---@field bottleneckHistorySize number
+---@field sampleHistorySize number
+UnityEngine.Rendering.DebugFrameTiming = {}
+---@alias CS.UnityEngine.Rendering.DebugFrameTiming UnityEngine.Rendering.DebugFrameTiming
+CS.UnityEngine.Rendering.DebugFrameTiming = UnityEngine.Rendering.DebugFrameTiming
+
+---@return UnityEngine.Rendering.DebugFrameTiming
+function UnityEngine.Rendering.DebugFrameTiming.New() end
+function UnityEngine.Rendering.DebugFrameTiming:UpdateFrameTiming() end
+---@param list System.Collections.Generic.List
+function UnityEngine.Rendering.DebugFrameTiming:RegisterDebugUI(list) end
+
+---@class UnityEngine.Rendering.DebugAction
+---@field EnableDebugMenu UnityEngine.Rendering.DebugAction
+---@field PreviousDebugPanel UnityEngine.Rendering.DebugAction
+---@field NextDebugPanel UnityEngine.Rendering.DebugAction
+---@field Action UnityEngine.Rendering.DebugAction
+---@field MakePersistent UnityEngine.Rendering.DebugAction
+---@field MoveVertical UnityEngine.Rendering.DebugAction
+---@field MoveHorizontal UnityEngine.Rendering.DebugAction
+---@field Multiplier UnityEngine.Rendering.DebugAction
+---@field ResetAll UnityEngine.Rendering.DebugAction
+---@field DebugActionCount UnityEngine.Rendering.DebugAction
+UnityEngine.Rendering.DebugAction = {}
+---@alias CS.UnityEngine.Rendering.DebugAction UnityEngine.Rendering.DebugAction
+CS.UnityEngine.Rendering.DebugAction = UnityEngine.Rendering.DebugAction
+
+
+---@class UnityEngine.Rendering.DebugActionRepeatMode
+---@field Never UnityEngine.Rendering.DebugActionRepeatMode
+---@field Delay UnityEngine.Rendering.DebugActionRepeatMode
+UnityEngine.Rendering.DebugActionRepeatMode = {}
+---@alias CS.UnityEngine.Rendering.DebugActionRepeatMode UnityEngine.Rendering.DebugActionRepeatMode
+CS.UnityEngine.Rendering.DebugActionRepeatMode = UnityEngine.Rendering.DebugActionRepeatMode
+
+
+---@class UnityEngine.Rendering.DebugManager : System.Object
+---@field refreshEditorRequested boolean
+---@field instance UnityEngine.Rendering.DebugManager
+---@field panels System.Collections.ObjectModel.ReadOnlyCollection
+---@field isAnyDebugUIActive boolean
+---@field displayEditorUI boolean
+---@field enableRuntimeUI boolean
+---@field displayRuntimeUI boolean
+---@field displayPersistentRuntimeUI boolean
+UnityEngine.Rendering.DebugManager = {}
+---@alias CS.UnityEngine.Rendering.DebugManager UnityEngine.Rendering.DebugManager
+CS.UnityEngine.Rendering.DebugManager = UnityEngine.Rendering.DebugManager
+
+function UnityEngine.Rendering.DebugManager:RefreshEditor() end
+function UnityEngine.Rendering.DebugManager:Reset() end
+function UnityEngine.Rendering.DebugManager:ReDrawOnScreenDebug() end
+---@param data UnityEngine.Rendering.IDebugData
+function UnityEngine.Rendering.DebugManager:RegisterData(data) end
+---@param data UnityEngine.Rendering.IDebugData
+function UnityEngine.Rendering.DebugManager:UnregisterData(data) end
+---@return number
+function UnityEngine.Rendering.DebugManager:GetState() end
+---@param displayName string
+---@return number
+function UnityEngine.Rendering.DebugManager:PanelIndex(displayName) end
+---@param panelIndex number
+---@return string
+function UnityEngine.Rendering.DebugManager:PanelDisplayName(panelIndex) end
+---@param index number
+function UnityEngine.Rendering.DebugManager:RequestEditorWindowPanelIndex(index) end
+---@param displayName string
+---@param createIfNull boolean
+---@param groupIndex number
+---@param overrideIfExist boolean
+---@return UnityEngine.Rendering.DebugUI.Panel
+function UnityEngine.Rendering.DebugManager:GetPanel(displayName, createIfNull, groupIndex, overrideIfExist) end
+---@param displayName string
+---@return number
+function UnityEngine.Rendering.DebugManager:FindPanelIndex(displayName) end
+---@overload fun(self: UnityEngine.Rendering.DebugManager, displayName: string)
+---@param panel UnityEngine.Rendering.DebugUI.Panel
+function UnityEngine.Rendering.DebugManager:RemovePanel(panel) end
+---@param flags UnityEngine.Rendering.DebugUI.Flags
+---@return UnityEngine.Rendering.DebugUI.Widget[]
+function UnityEngine.Rendering.DebugManager:GetItems(flags) end
+---@param queryPath string
+---@return UnityEngine.Rendering.DebugUI.Widget
+function UnityEngine.Rendering.DebugManager:GetItem(queryPath) end
+
+---@class UnityEngine.Rendering.DebugActionDesc : System.Object
+---@field buttonAction UnityEngine.InputSystem.InputAction
+---@field repeatMode UnityEngine.Rendering.DebugActionRepeatMode
+---@field repeatDelay number
+UnityEngine.Rendering.DebugActionDesc = {}
+---@alias CS.UnityEngine.Rendering.DebugActionDesc UnityEngine.Rendering.DebugActionDesc
+CS.UnityEngine.Rendering.DebugActionDesc = UnityEngine.Rendering.DebugActionDesc
+
 ---@return UnityEngine.Rendering.DebugActionDesc
 function UnityEngine.Rendering.DebugActionDesc.New() end
 
@@ -1831,3177 +5001,3 @@ CS.UnityEngine.Rendering.SurfaceDataAttributes = UnityEngine.Rendering.SurfaceDa
 ---@param preprocessor string
 ---@return UnityEngine.Rendering.SurfaceDataAttributes
 function UnityEngine.Rendering.SurfaceDataAttributes.New(displayNames, isDirection, sRGBDisplay, precision, checkIsNormalized, preprocessor) end
-
----@class UnityEngine.Rendering.HLSLArray : System.Attribute
----@field arraySize number
----@field elementType System.Type
-UnityEngine.Rendering.HLSLArray = {}
----@alias CS.UnityEngine.Rendering.HLSLArray UnityEngine.Rendering.HLSLArray
-CS.UnityEngine.Rendering.HLSLArray = UnityEngine.Rendering.HLSLArray
-
----@param arraySize number
----@param elementType System.Type
----@return UnityEngine.Rendering.HLSLArray
-function UnityEngine.Rendering.HLSLArray.New(arraySize, elementType) end
-
----@class UnityEngine.Rendering.PackingAttribute : System.Attribute
----@field displayNames System.String[]
----@field range System.Single[]
----@field packingScheme UnityEngine.Rendering.FieldPacking
----@field offsetInSource number
----@field sizeInBits number
----@field isDirection boolean
----@field sRGBDisplay boolean
----@field checkIsNormalized boolean
----@field preprocessor string
-UnityEngine.Rendering.PackingAttribute = {}
----@alias CS.UnityEngine.Rendering.PackingAttribute UnityEngine.Rendering.PackingAttribute
-CS.UnityEngine.Rendering.PackingAttribute = UnityEngine.Rendering.PackingAttribute
-
----@overload fun(displayNames: System.String[], packingScheme: UnityEngine.Rendering.FieldPacking, bitSize: number, offsetInSource: number, minValue: number, maxValue: number, isDirection: boolean, sRGBDisplay: boolean, checkIsNormalized: boolean, preprocessor: string) : UnityEngine.Rendering.PackingAttribute
----@param displayName string
----@param packingScheme UnityEngine.Rendering.FieldPacking
----@param bitSize number
----@param offsetInSource number
----@param minValue number
----@param maxValue number
----@param isDirection boolean
----@param sRGBDisplay boolean
----@param checkIsNormalized boolean
----@param preprocessor string
----@return UnityEngine.Rendering.PackingAttribute
-function UnityEngine.Rendering.PackingAttribute.New(displayName, packingScheme, bitSize, offsetInSource, minValue, maxValue, isDirection, sRGBDisplay, checkIsNormalized, preprocessor) end
-
----@class UnityEngine.Rendering.ShaderGenUInt4 : System.ValueType
-UnityEngine.Rendering.ShaderGenUInt4 = {}
----@alias CS.UnityEngine.Rendering.ShaderGenUInt4 UnityEngine.Rendering.ShaderGenUInt4
-CS.UnityEngine.Rendering.ShaderGenUInt4 = UnityEngine.Rendering.ShaderGenUInt4
-
-
----@class UnityEngine.Rendering.Hammersley : System.Object
-UnityEngine.Rendering.Hammersley = {}
----@alias CS.UnityEngine.Rendering.Hammersley UnityEngine.Rendering.Hammersley
-CS.UnityEngine.Rendering.Hammersley = UnityEngine.Rendering.Hammersley
-
-function UnityEngine.Rendering.Hammersley.Initialize() end
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, cs: UnityEngine.ComputeShader)
----@param cmd UnityEngine.Rendering.IComputeCommandBuffer
----@param cs UnityEngine.ComputeShader
-function UnityEngine.Rendering.Hammersley.BindConstants(cmd, cs) end
-
----@class UnityEngine.Rendering.ISTPEnabledRenderPipeline
----@field isStpUsed boolean
-UnityEngine.Rendering.ISTPEnabledRenderPipeline = {}
----@alias CS.UnityEngine.Rendering.ISTPEnabledRenderPipeline UnityEngine.Rendering.ISTPEnabledRenderPipeline
-CS.UnityEngine.Rendering.ISTPEnabledRenderPipeline = UnityEngine.Rendering.ISTPEnabledRenderPipeline
-
-
----@class UnityEngine.Rendering.STP : System.Object
----@field debugViewDescriptions UnityEngine.GUIContent[]
----@field debugViewIndices System.Int32[]
----@field perViewConfigs UnityEngine.Rendering.STP.PerViewConfig[]
-UnityEngine.Rendering.STP = {}
----@alias CS.UnityEngine.Rendering.STP UnityEngine.Rendering.STP
-CS.UnityEngine.Rendering.STP = UnityEngine.Rendering.STP
-
----@return boolean
-function UnityEngine.Rendering.STP.IsSupported() end
----@param frameIndex number
----@return UnityEngine.Vector2
-function UnityEngine.Rendering.STP.Jit16(frameIndex) end
----@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
----@param ref_config UnityEngine.Rendering.STP.Config
----@return UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.STP.Config
-function UnityEngine.Rendering.STP.Execute(renderGraph, ref_config) end
-
----@class UnityEngine.Rendering.IRenderPipelineGraphicsSettingsStripper
-UnityEngine.Rendering.IRenderPipelineGraphicsSettingsStripper = {}
----@alias CS.UnityEngine.Rendering.IRenderPipelineGraphicsSettingsStripper UnityEngine.Rendering.IRenderPipelineGraphicsSettingsStripper
-CS.UnityEngine.Rendering.IRenderPipelineGraphicsSettingsStripper = UnityEngine.Rendering.IRenderPipelineGraphicsSettingsStripper
-
----@param settings T
----@return boolean
-function UnityEngine.Rendering.IRenderPipelineGraphicsSettingsStripper:CanRemoveSettings(settings) end
-
----@class UnityEngine.Rendering.IStripper
----@field active boolean
-UnityEngine.Rendering.IStripper = {}
----@alias CS.UnityEngine.Rendering.IStripper UnityEngine.Rendering.IStripper
-CS.UnityEngine.Rendering.IStripper = UnityEngine.Rendering.IStripper
-
-
----@class UnityEngine.Rendering.RenderPipelineGraphicsSettingsStripper : System.Object
-UnityEngine.Rendering.RenderPipelineGraphicsSettingsStripper = {}
----@alias CS.UnityEngine.Rendering.RenderPipelineGraphicsSettingsStripper UnityEngine.Rendering.RenderPipelineGraphicsSettingsStripper
-CS.UnityEngine.Rendering.RenderPipelineGraphicsSettingsStripper = UnityEngine.Rendering.RenderPipelineGraphicsSettingsStripper
-
----@param settingsList System.Collections.Generic.List
----@param runtimeSettingsList System.Collections.Generic.List
-function UnityEngine.Rendering.RenderPipelineGraphicsSettingsStripper.PerformStripping(settingsList, runtimeSettingsList) end
-
----@class UnityEngine.Rendering.BufferedRTHandleSystem : System.Object
----@field maxWidth number
----@field maxHeight number
----@field rtHandleProperties UnityEngine.Rendering.RTHandleProperties
-UnityEngine.Rendering.BufferedRTHandleSystem = {}
----@alias CS.UnityEngine.Rendering.BufferedRTHandleSystem UnityEngine.Rendering.BufferedRTHandleSystem
-CS.UnityEngine.Rendering.BufferedRTHandleSystem = UnityEngine.Rendering.BufferedRTHandleSystem
-
----@return UnityEngine.Rendering.BufferedRTHandleSystem
-function UnityEngine.Rendering.BufferedRTHandleSystem.New() end
----@param bufferId number
----@param frameIndex number
----@return UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.BufferedRTHandleSystem:GetFrameRT(bufferId, frameIndex) end
----@param cmd UnityEngine.Rendering.CommandBuffer
-function UnityEngine.Rendering.BufferedRTHandleSystem:ClearBuffers(cmd) end
----@overload fun(self: UnityEngine.Rendering.BufferedRTHandleSystem, bufferId: number, allocator: System.Func, bufferCount: number)
----@param bufferId number
----@param bufferCount number
----@param ref_descriptor UnityEngine.RenderTextureDescriptor
----@param filterMode UnityEngine.FilterMode
----@param wrapMode UnityEngine.TextureWrapMode
----@param isShadowMap boolean
----@param anisoLevel number
----@param mipMapBias number
----@param name string
----@return ,UnityEngine.RenderTextureDescriptor
-function UnityEngine.Rendering.BufferedRTHandleSystem:AllocBuffer(bufferId, bufferCount, ref_descriptor, filterMode, wrapMode, isShadowMap, anisoLevel, mipMapBias, name) end
----@param bufferId number
-function UnityEngine.Rendering.BufferedRTHandleSystem:ReleaseBuffer(bufferId) end
----@param width number
----@param height number
-function UnityEngine.Rendering.BufferedRTHandleSystem:SwapAndSetReferenceSize(width, height) end
----@param width number
----@param height number
-function UnityEngine.Rendering.BufferedRTHandleSystem:ResetReferenceSize(width, height) end
----@param bufferId number
----@return number
-function UnityEngine.Rendering.BufferedRTHandleSystem:GetNumFramesAllocated(bufferId) end
----@param width number
----@param height number
----@return UnityEngine.Vector2
-function UnityEngine.Rendering.BufferedRTHandleSystem:CalculateRatioAgainstMaxSize(width, height) end
-function UnityEngine.Rendering.BufferedRTHandleSystem:Dispose() end
-function UnityEngine.Rendering.BufferedRTHandleSystem:ReleaseAll() end
-
----@class UnityEngine.Rendering.DepthBits
----@field None UnityEngine.Rendering.DepthBits
----@field Depth8 UnityEngine.Rendering.DepthBits
----@field Depth16 UnityEngine.Rendering.DepthBits
----@field Depth24 UnityEngine.Rendering.DepthBits
----@field Depth32 UnityEngine.Rendering.DepthBits
-UnityEngine.Rendering.DepthBits = {}
----@alias CS.UnityEngine.Rendering.DepthBits UnityEngine.Rendering.DepthBits
-CS.UnityEngine.Rendering.DepthBits = UnityEngine.Rendering.DepthBits
-
-
----@class UnityEngine.Rendering.MSAASamples
----@field None UnityEngine.Rendering.MSAASamples
----@field MSAA2x UnityEngine.Rendering.MSAASamples
----@field MSAA4x UnityEngine.Rendering.MSAASamples
----@field MSAA8x UnityEngine.Rendering.MSAASamples
-UnityEngine.Rendering.MSAASamples = {}
----@alias CS.UnityEngine.Rendering.MSAASamples UnityEngine.Rendering.MSAASamples
-CS.UnityEngine.Rendering.MSAASamples = UnityEngine.Rendering.MSAASamples
-
-
----@class UnityEngine.Rendering.PowerOfTwoTextureAtlas : UnityEngine.Rendering.Texture2DAtlas
----@field mipPadding number
-UnityEngine.Rendering.PowerOfTwoTextureAtlas = {}
----@alias CS.UnityEngine.Rendering.PowerOfTwoTextureAtlas UnityEngine.Rendering.PowerOfTwoTextureAtlas
-CS.UnityEngine.Rendering.PowerOfTwoTextureAtlas = UnityEngine.Rendering.PowerOfTwoTextureAtlas
-
----@param size number
----@param mipPadding number
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@param filterMode UnityEngine.FilterMode
----@param name string
----@param useMipMap boolean
----@return UnityEngine.Rendering.PowerOfTwoTextureAtlas
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas.New(size, mipPadding, format, filterMode, name, useMipMap) end
----@overload fun(ref_textureSize: UnityEngine.Vector2, ref_paddingSize: UnityEngine.Vector2, ref_scaleOffset: UnityEngine.Vector4) : UnityEngine.Vector4, UnityEngine.Vector2, UnityEngine.Vector2, UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@param ref_scaleOffset UnityEngine.Vector4
----@return UnityEngine.Vector4,UnityEngine.Vector4
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas:GetPayloadScaleOffset(texture, ref_scaleOffset) end
----@param nbElement number
----@param resolution number
----@param hasMipmap boolean
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return number
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas.GetApproxCacheSizeInByte(nbElement, resolution, hasMipmap, format) end
----@param weight number
----@param hasMipmap boolean
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@return number
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas.GetMaxCacheSizeForWeightInByte(weight, hasMipmap, format) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param scaleOffset UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@param sourceScaleOffset UnityEngine.Vector4
----@param blitMips boolean
----@param overrideInstanceID number
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas:BlitTexture(cmd, scaleOffset, texture, sourceScaleOffset, blitMips, overrideInstanceID) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param scaleOffset UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@param sourceScaleOffset UnityEngine.Vector4
----@param blitMips boolean
----@param overrideInstanceID number
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas:BlitTextureMultiply(cmd, scaleOffset, texture, sourceScaleOffset, blitMips, overrideInstanceID) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param scaleOffset UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@param sourceScaleOffset UnityEngine.Vector4
----@param blitMips boolean
----@param overrideInstanceID number
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas:BlitOctahedralTexture(cmd, scaleOffset, texture, sourceScaleOffset, blitMips, overrideInstanceID) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param scaleOffset UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@param sourceScaleOffset UnityEngine.Vector4
----@param blitMips boolean
----@param overrideInstanceID number
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas:BlitOctahedralTextureMultiply(cmd, scaleOffset, texture, sourceScaleOffset, blitMips, overrideInstanceID) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param ref_scaleOffset UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@param width number
----@param height number
----@param overrideInstanceID number
----@return boolean,UnityEngine.Vector4
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas:AllocateTexture(cmd, ref_scaleOffset, texture, width, height, overrideInstanceID) end
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas:ResetRequestedTexture() end
----@overload fun(self: UnityEngine.Rendering.PowerOfTwoTextureAtlas, texture: UnityEngine.Texture) : boolean
----@overload fun(self: UnityEngine.Rendering.PowerOfTwoTextureAtlas, texture: UnityEngine.Texture, width: number, height: number) : boolean
----@overload fun(self: UnityEngine.Rendering.PowerOfTwoTextureAtlas, textureA: UnityEngine.Texture, textureB: UnityEngine.Texture, width: number, height: number) : boolean
----@param id number
----@param width number
----@param height number
----@return boolean
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas:ReserveSpace(id, width, height) end
----@return boolean
-function UnityEngine.Rendering.PowerOfTwoTextureAtlas:RelayoutEntries() end
-
----@class UnityEngine.Rendering.RTHandleStaticHelpers : System.ValueType
----@field s_RTHandleWrapper UnityEngine.Rendering.RTHandle
-UnityEngine.Rendering.RTHandleStaticHelpers = {}
----@alias CS.UnityEngine.Rendering.RTHandleStaticHelpers UnityEngine.Rendering.RTHandleStaticHelpers
-CS.UnityEngine.Rendering.RTHandleStaticHelpers = UnityEngine.Rendering.RTHandleStaticHelpers
-
----@param rtId UnityEngine.Rendering.RenderTargetIdentifier
-function UnityEngine.Rendering.RTHandleStaticHelpers.SetRTHandleStaticWrapper(rtId) end
----@param ref_rtWrapper UnityEngine.Rendering.RTHandle
----@param rtId UnityEngine.Rendering.RenderTargetIdentifier
----@return ,UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.RTHandleStaticHelpers.SetRTHandleUserManagedWrapper(ref_rtWrapper, rtId) end
-
----@class UnityEngine.Rendering.RTHandle : System.Object
----@field scaleFactor UnityEngine.Vector2
----@field useScaling boolean
----@field referenceSize UnityEngine.Vector2Int
----@field rtHandleProperties UnityEngine.Rendering.RTHandleProperties
----@field rt UnityEngine.RenderTexture
----@field externalTexture UnityEngine.Texture
----@field nameID UnityEngine.Rendering.RenderTargetIdentifier
----@field name string
----@field isMSAAEnabled boolean
-UnityEngine.Rendering.RTHandle = {}
----@alias CS.UnityEngine.Rendering.RTHandle UnityEngine.Rendering.RTHandle
-CS.UnityEngine.Rendering.RTHandle = UnityEngine.Rendering.RTHandle
-
----@param ref_properties UnityEngine.Rendering.RTHandleProperties
----@return ,UnityEngine.Rendering.RTHandleProperties
-function UnityEngine.Rendering.RTHandle:SetCustomHandleProperties(ref_properties) end
-function UnityEngine.Rendering.RTHandle:ClearCustomHandleProperties() end
----@return number
-function UnityEngine.Rendering.RTHandle:GetInstanceID() end
-function UnityEngine.Rendering.RTHandle:Release() end
----@overload fun(self: UnityEngine.Rendering.RTHandle, refSize: UnityEngine.Vector2Int) : UnityEngine.Vector2Int
----@return UnityEngine.Vector2Int
-function UnityEngine.Rendering.RTHandle:GetScaledSize() end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param residencyFraction number
----@param flags UnityEngine.Rendering.FastMemoryFlags
----@param copyContents boolean
-function UnityEngine.Rendering.RTHandle:SwitchToFastMemory(cmd, residencyFraction, flags, copyContents) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param residencyFraction number
----@param flags UnityEngine.Rendering.FastMemoryFlags
-function UnityEngine.Rendering.RTHandle:CopyToFastMemory(cmd, residencyFraction, flags) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param copyContents boolean
-function UnityEngine.Rendering.RTHandle:SwitchOutFastMemory(cmd, copyContents) end
-
----@class UnityEngine.Rendering.RTHandles : System.Object
----@field maxWidth number
----@field maxHeight number
----@field rtHandleProperties UnityEngine.Rendering.RTHandleProperties
-UnityEngine.Rendering.RTHandles = {}
----@alias CS.UnityEngine.Rendering.RTHandles UnityEngine.Rendering.RTHandles
-CS.UnityEngine.Rendering.RTHandles = UnityEngine.Rendering.RTHandles
-
----@overload fun(scaleFactor: UnityEngine.Vector2) : UnityEngine.Vector2Int
----@param scaleFunc UnityEngine.Rendering.ScaleFunc
----@return UnityEngine.Vector2Int
-function UnityEngine.Rendering.RTHandles.CalculateDimensions(scaleFunc) end
----@overload fun(width: number, height: number, slices: number, depthBufferBits: UnityEngine.Rendering.DepthBits, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(width: number, height: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat, slices: number, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(width: number, height: number, wrapModeU: UnityEngine.TextureWrapMode, wrapModeV: UnityEngine.TextureWrapMode, wrapModeW: UnityEngine.TextureWrapMode, slices: number, depthBufferBits: UnityEngine.Rendering.DepthBits, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat, filterMode: UnityEngine.FilterMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(width: number, height: number, info: UnityEngine.Rendering.RTHandleAllocInfo) : UnityEngine.Rendering.RTHandle
----@overload fun(ref_descriptor: UnityEngine.RenderTextureDescriptor, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, name: string) : UnityEngine.Rendering.RTHandle, UnityEngine.RenderTextureDescriptor
----@overload fun(scaleFactor: UnityEngine.Vector2, slices: number, depthBufferBits: UnityEngine.Rendering.DepthBits, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(scaleFactor: UnityEngine.Vector2, format: UnityEngine.Experimental.Rendering.GraphicsFormat, slices: number, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(scaleFactor: UnityEngine.Vector2, ref_descriptor: UnityEngine.RenderTextureDescriptor, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, name: string) : UnityEngine.Rendering.RTHandle, UnityEngine.RenderTextureDescriptor
----@overload fun(scaleFactor: UnityEngine.Vector2, info: UnityEngine.Rendering.RTHandleAllocInfo) : UnityEngine.Rendering.RTHandle
----@overload fun(scaleFunc: UnityEngine.Rendering.ScaleFunc, slices: number, depthBufferBits: UnityEngine.Rendering.DepthBits, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(scaleFunc: UnityEngine.Rendering.ScaleFunc, format: UnityEngine.Experimental.Rendering.GraphicsFormat, slices: number, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(scaleFunc: UnityEngine.Rendering.ScaleFunc, ref_descriptor: UnityEngine.RenderTextureDescriptor, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, name: string) : UnityEngine.Rendering.RTHandle, UnityEngine.RenderTextureDescriptor
----@overload fun(scaleFunc: UnityEngine.Rendering.ScaleFunc, info: UnityEngine.Rendering.RTHandleAllocInfo) : UnityEngine.Rendering.RTHandle
----@overload fun(tex: UnityEngine.Texture) : UnityEngine.Rendering.RTHandle
----@overload fun(tex: UnityEngine.RenderTexture, transferOwnership: boolean) : UnityEngine.Rendering.RTHandle
----@overload fun(tex: UnityEngine.Rendering.RenderTargetIdentifier) : UnityEngine.Rendering.RTHandle
----@param tex UnityEngine.Rendering.RenderTargetIdentifier
----@param name string
----@return UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.RTHandles.Alloc(tex, name) end
----@param width number
----@param height number
-function UnityEngine.Rendering.RTHandles.Initialize(width, height) end
----@param rth UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.RTHandles.Release(rth) end
----@param hwDynamicResRequested boolean
-function UnityEngine.Rendering.RTHandles.SetHardwareDynamicResolutionState(hwDynamicResRequested) end
----@param width number
----@param height number
-function UnityEngine.Rendering.RTHandles.SetReferenceSize(width, height) end
----@param width number
----@param height number
-function UnityEngine.Rendering.RTHandles.ResetReferenceSize(width, height) end
----@param width number
----@param height number
----@return UnityEngine.Vector2
-function UnityEngine.Rendering.RTHandles.CalculateRatioAgainstMaxSize(width, height) end
-
----@class UnityEngine.Rendering.ScaleFunc : System.MulticastDelegate
-UnityEngine.Rendering.ScaleFunc = {}
----@alias CS.UnityEngine.Rendering.ScaleFunc UnityEngine.Rendering.ScaleFunc
-CS.UnityEngine.Rendering.ScaleFunc = UnityEngine.Rendering.ScaleFunc
-
----@param object System.Object
----@param method System.IntPtr
----@return UnityEngine.Rendering.ScaleFunc
-function UnityEngine.Rendering.ScaleFunc.New(object, method) end
----@param size UnityEngine.Vector2Int
----@return UnityEngine.Vector2Int
-function UnityEngine.Rendering.ScaleFunc:Invoke(size) end
----@param size UnityEngine.Vector2Int
----@param callback System.AsyncCallback
----@param object System.Object
----@return System.IAsyncResult
-function UnityEngine.Rendering.ScaleFunc:BeginInvoke(size, callback, object) end
----@param result System.IAsyncResult
----@return UnityEngine.Vector2Int
-function UnityEngine.Rendering.ScaleFunc:EndInvoke(result) end
-
----@class UnityEngine.Rendering.RTHandleProperties : System.ValueType
----@field previousViewportSize UnityEngine.Vector2Int
----@field previousRenderTargetSize UnityEngine.Vector2Int
----@field currentViewportSize UnityEngine.Vector2Int
----@field currentRenderTargetSize UnityEngine.Vector2Int
----@field rtHandleScale UnityEngine.Vector4
-UnityEngine.Rendering.RTHandleProperties = {}
----@alias CS.UnityEngine.Rendering.RTHandleProperties UnityEngine.Rendering.RTHandleProperties
-CS.UnityEngine.Rendering.RTHandleProperties = UnityEngine.Rendering.RTHandleProperties
-
-
----@class UnityEngine.Rendering.RTHandleAllocInfo : System.ValueType
----@field slices number
----@field format UnityEngine.Experimental.Rendering.GraphicsFormat
----@field filterMode UnityEngine.FilterMode
----@field wrapModeU UnityEngine.TextureWrapMode
----@field wrapModeV UnityEngine.TextureWrapMode
----@field wrapModeW UnityEngine.TextureWrapMode
----@field dimension UnityEngine.Rendering.TextureDimension
----@field enableRandomWrite boolean
----@field useMipMap boolean
----@field autoGenerateMips boolean
----@field isShadowMap boolean
----@field anisoLevel number
----@field mipMapBias number
----@field msaaSamples UnityEngine.Rendering.MSAASamples
----@field bindTextureMS boolean
----@field useDynamicScale boolean
----@field useDynamicScaleExplicit boolean
----@field memoryless UnityEngine.RenderTextureMemoryless
----@field vrUsage UnityEngine.VRTextureUsage
----@field enableShadingRate boolean
----@field name string
-UnityEngine.Rendering.RTHandleAllocInfo = {}
----@alias CS.UnityEngine.Rendering.RTHandleAllocInfo UnityEngine.Rendering.RTHandleAllocInfo
-CS.UnityEngine.Rendering.RTHandleAllocInfo = UnityEngine.Rendering.RTHandleAllocInfo
-
----@param name string
----@return UnityEngine.Rendering.RTHandleAllocInfo
-function UnityEngine.Rendering.RTHandleAllocInfo.New(name) end
-
----@class UnityEngine.Rendering.RTHandleSystem : System.Object
----@field rtHandleProperties UnityEngine.Rendering.RTHandleProperties
-UnityEngine.Rendering.RTHandleSystem = {}
----@alias CS.UnityEngine.Rendering.RTHandleSystem UnityEngine.Rendering.RTHandleSystem
-CS.UnityEngine.Rendering.RTHandleSystem = UnityEngine.Rendering.RTHandleSystem
-
----@return UnityEngine.Rendering.RTHandleSystem
-function UnityEngine.Rendering.RTHandleSystem.New() end
-function UnityEngine.Rendering.RTHandleSystem:Dispose() end
----@param width number
----@param height number
-function UnityEngine.Rendering.RTHandleSystem:Initialize(width, height) end
----@param rth UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.RTHandleSystem:Release(rth) end
----@param width number
----@param height number
-function UnityEngine.Rendering.RTHandleSystem:ResetReferenceSize(width, height) end
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, width: number, height: number)
----@param width number
----@param height number
----@param reset boolean
-function UnityEngine.Rendering.RTHandleSystem:SetReferenceSize(width, height, reset) end
----@param enableHWDynamicRes boolean
-function UnityEngine.Rendering.RTHandleSystem:SetHardwareDynamicResolutionState(enableHWDynamicRes) end
----@return number
-function UnityEngine.Rendering.RTHandleSystem:GetMaxWidth() end
----@return number
-function UnityEngine.Rendering.RTHandleSystem:GetMaxHeight() end
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, width: number, height: number, slices: number, depthBufferBits: UnityEngine.Rendering.DepthBits, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, width: number, height: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat, slices: number, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, width: number, height: number, wrapModeU: UnityEngine.TextureWrapMode, wrapModeV: UnityEngine.TextureWrapMode, wrapModeW: UnityEngine.TextureWrapMode, slices: number, depthBufferBits: UnityEngine.Rendering.DepthBits, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat, filterMode: UnityEngine.FilterMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, width: number, height: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat, wrapModeU: UnityEngine.TextureWrapMode, wrapModeV: UnityEngine.TextureWrapMode, wrapModeW: UnityEngine.TextureWrapMode, slices: number, filterMode: UnityEngine.FilterMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, width: number, height: number, info: UnityEngine.Rendering.RTHandleAllocInfo) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, scaleFactor: UnityEngine.Vector2, format: UnityEngine.Experimental.Rendering.GraphicsFormat, slices: number, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, scaleFactor: UnityEngine.Vector2, slices: number, depthBufferBits: UnityEngine.Rendering.DepthBits, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, scaleFactor: UnityEngine.Vector2, info: UnityEngine.Rendering.RTHandleAllocInfo) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, scaleFunc: UnityEngine.Rendering.ScaleFunc, slices: number, depthBufferBits: UnityEngine.Rendering.DepthBits, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, scaleFunc: UnityEngine.Rendering.ScaleFunc, format: UnityEngine.Experimental.Rendering.GraphicsFormat, slices: number, filterMode: UnityEngine.FilterMode, wrapMode: UnityEngine.TextureWrapMode, dimension: UnityEngine.Rendering.TextureDimension, enableRandomWrite: boolean, useMipMap: boolean, autoGenerateMips: boolean, isShadowMap: boolean, anisoLevel: number, mipMapBias: number, msaaSamples: UnityEngine.Rendering.MSAASamples, bindTextureMS: boolean, useDynamicScale: boolean, useDynamicScaleExplicit: boolean, memoryless: UnityEngine.RenderTextureMemoryless, vrUsage: UnityEngine.VRTextureUsage, name: string) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, scaleFunc: UnityEngine.Rendering.ScaleFunc, info: UnityEngine.Rendering.RTHandleAllocInfo) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, texture: UnityEngine.RenderTexture, transferOwnership: boolean) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, texture: UnityEngine.Texture) : UnityEngine.Rendering.RTHandle
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, texture: UnityEngine.Rendering.RenderTargetIdentifier) : UnityEngine.Rendering.RTHandle
----@param texture UnityEngine.Rendering.RenderTargetIdentifier
----@param name string
----@return UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.RTHandleSystem:Alloc(texture, name) end
----@overload fun(self: UnityEngine.Rendering.RTHandleSystem, scaleFactor: UnityEngine.Vector2) : UnityEngine.Vector2Int
----@param scaleFunc UnityEngine.Rendering.ScaleFunc
----@return UnityEngine.Vector2Int
-function UnityEngine.Rendering.RTHandleSystem:CalculateDimensions(scaleFunc) end
-
----@class UnityEngine.Rendering.AtlasAllocator : System.Object
-UnityEngine.Rendering.AtlasAllocator = {}
----@alias CS.UnityEngine.Rendering.AtlasAllocator UnityEngine.Rendering.AtlasAllocator
-CS.UnityEngine.Rendering.AtlasAllocator = UnityEngine.Rendering.AtlasAllocator
-
----@param width number
----@param height number
----@param potPadding boolean
----@return UnityEngine.Rendering.AtlasAllocator
-function UnityEngine.Rendering.AtlasAllocator.New(width, height, potPadding) end
----@param ref_result UnityEngine.Vector4
----@param width number
----@param height number
----@return boolean,UnityEngine.Vector4
-function UnityEngine.Rendering.AtlasAllocator:Allocate(ref_result, width, height) end
-function UnityEngine.Rendering.AtlasAllocator:Reset() end
-
----@class UnityEngine.Rendering.Texture2DAtlas : System.Object
----@field maxMipLevelPadding number
----@field AtlasTexture UnityEngine.Rendering.RTHandle
-UnityEngine.Rendering.Texture2DAtlas = {}
----@alias CS.UnityEngine.Rendering.Texture2DAtlas UnityEngine.Rendering.Texture2DAtlas
-CS.UnityEngine.Rendering.Texture2DAtlas = UnityEngine.Rendering.Texture2DAtlas
-
----@param width number
----@param height number
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@param filterMode UnityEngine.FilterMode
----@param powerOfTwoPadding boolean
----@param name string
----@param useMipMap boolean
----@return UnityEngine.Rendering.Texture2DAtlas
-function UnityEngine.Rendering.Texture2DAtlas.New(width, height, format, filterMode, powerOfTwoPadding, name, useMipMap) end
-function UnityEngine.Rendering.Texture2DAtlas:Release() end
-function UnityEngine.Rendering.Texture2DAtlas:ResetAllocator() end
----@param cmd UnityEngine.Rendering.CommandBuffer
-function UnityEngine.Rendering.Texture2DAtlas:ClearTarget(cmd) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param scaleOffset UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@param sourceScaleOffset UnityEngine.Vector4
----@param blitMips boolean
----@param overrideInstanceID number
-function UnityEngine.Rendering.Texture2DAtlas:BlitTexture(cmd, scaleOffset, texture, sourceScaleOffset, blitMips, overrideInstanceID) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param scaleOffset UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@param sourceScaleOffset UnityEngine.Vector4
----@param blitMips boolean
----@param overrideInstanceID number
-function UnityEngine.Rendering.Texture2DAtlas:BlitOctahedralTexture(cmd, scaleOffset, texture, sourceScaleOffset, blitMips, overrideInstanceID) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param scaleOffset UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@param blitMips boolean
----@param overrideInstanceID number
-function UnityEngine.Rendering.Texture2DAtlas:BlitCubeTexture2D(cmd, scaleOffset, texture, blitMips, overrideInstanceID) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param ref_scaleOffset UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@param width number
----@param height number
----@param overrideInstanceID number
----@return boolean,UnityEngine.Vector4
-function UnityEngine.Rendering.Texture2DAtlas:AllocateTexture(cmd, ref_scaleOffset, texture, width, height, overrideInstanceID) end
----@overload fun(self: UnityEngine.Rendering.Texture2DAtlas, texture: UnityEngine.Texture, width: number, height: number, ref_scaleOffset: UnityEngine.Vector4) : boolean, UnityEngine.Vector4
----@param instanceId number
----@param width number
----@param height number
----@param ref_scaleOffset UnityEngine.Vector4
----@return boolean,UnityEngine.Vector4
-function UnityEngine.Rendering.Texture2DAtlas:AllocateTextureWithoutBlit(instanceId, width, height, ref_scaleOffset) end
----@overload fun(self: UnityEngine.Rendering.Texture2DAtlas, texture: UnityEngine.Texture) : number
----@param textureA UnityEngine.Texture
----@param textureB UnityEngine.Texture
----@return number
-function UnityEngine.Rendering.Texture2DAtlas:GetTextureID(textureA, textureB) end
----@overload fun(self: UnityEngine.Rendering.Texture2DAtlas, out_scaleOffset: UnityEngine.Vector4, textureA: UnityEngine.Texture, textureB: UnityEngine.Texture) : boolean, UnityEngine.Vector4
----@overload fun(self: UnityEngine.Rendering.Texture2DAtlas, out_scaleOffset: UnityEngine.Vector4, texture: UnityEngine.Texture) : boolean, UnityEngine.Vector4
----@param out_scaleOffset UnityEngine.Vector4
----@param id number
----@return boolean,UnityEngine.Vector4
-function UnityEngine.Rendering.Texture2DAtlas:IsCached(out_scaleOffset, id) end
----@overload fun(self: UnityEngine.Rendering.Texture2DAtlas, texture: UnityEngine.Texture, needMips: boolean) : boolean
----@overload fun(self: UnityEngine.Rendering.Texture2DAtlas, id: number, updateCount: number, needMips: boolean) : boolean
----@param textureA UnityEngine.Texture
----@param textureB UnityEngine.Texture
----@param needMips boolean
----@return boolean
-function UnityEngine.Rendering.Texture2DAtlas:NeedsUpdate(textureA, textureB, needMips) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param ref_scaleOffset UnityEngine.Vector4
----@param texture UnityEngine.Texture
----@return boolean,UnityEngine.Vector4
-function UnityEngine.Rendering.Texture2DAtlas:AddTexture(cmd, ref_scaleOffset, texture) end
----@overload fun(self: UnityEngine.Rendering.Texture2DAtlas, cmd: UnityEngine.Rendering.CommandBuffer, oldTexture: UnityEngine.Texture, newTexture: UnityEngine.Texture, ref_scaleOffset: UnityEngine.Vector4, sourceScaleOffset: UnityEngine.Vector4, updateIfNeeded: boolean, blitMips: boolean) : boolean, UnityEngine.Vector4
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param texture UnityEngine.Texture
----@param ref_scaleOffset UnityEngine.Vector4
----@param updateIfNeeded boolean
----@param blitMips boolean
----@return boolean,UnityEngine.Vector4
-function UnityEngine.Rendering.Texture2DAtlas:UpdateTexture(cmd, texture, ref_scaleOffset, updateIfNeeded, blitMips) end
-
----@class UnityEngine.Rendering.TextureXR : System.Object
----@field maxViews number
----@field slices number
----@field useTexArray boolean
----@field dimension UnityEngine.Rendering.TextureDimension
-UnityEngine.Rendering.TextureXR = {}
----@alias CS.UnityEngine.Rendering.TextureXR UnityEngine.Rendering.TextureXR
-CS.UnityEngine.Rendering.TextureXR = UnityEngine.Rendering.TextureXR
-
----@return UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.TextureXR.GetBlackUIntTexture() end
----@return UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.TextureXR.GetClearTexture() end
----@return UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.TextureXR.GetMagentaTexture() end
----@return UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.TextureXR.GetBlackTexture() end
----@return UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.TextureXR.GetBlackTextureArray() end
----@return UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.TextureXR.GetBlackTexture3D() end
----@return UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.TextureXR.GetWhiteTexture() end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param clearR32_UIntShader UnityEngine.ComputeShader
-function UnityEngine.Rendering.TextureXR.Initialize(cmd, clearR32_UIntShader) end
-
----@class UnityEngine.Rendering.ArrayExtensions : System.Object
-UnityEngine.Rendering.ArrayExtensions = {}
----@alias CS.UnityEngine.Rendering.ArrayExtensions UnityEngine.Rendering.ArrayExtensions
-CS.UnityEngine.Rendering.ArrayExtensions = UnityEngine.Rendering.ArrayExtensions
-
----@param ref_array UnityEngine.Jobs.TransformAccessArray
----@param capacity number
----@return ,UnityEngine.Jobs.TransformAccessArray
-function UnityEngine.Rendering.ArrayExtensions.ResizeArray(ref_array, capacity) end
-
----@class UnityEngine.Rendering.SHCoefficients : System.ValueType
----@field SHAr UnityEngine.Vector4
----@field SHAg UnityEngine.Vector4
----@field SHAb UnityEngine.Vector4
----@field SHBr UnityEngine.Vector4
----@field SHBg UnityEngine.Vector4
----@field SHBb UnityEngine.Vector4
----@field SHC UnityEngine.Vector4
----@field ProbesOcclusion UnityEngine.Vector4
-UnityEngine.Rendering.SHCoefficients = {}
----@alias CS.UnityEngine.Rendering.SHCoefficients UnityEngine.Rendering.SHCoefficients
-CS.UnityEngine.Rendering.SHCoefficients = UnityEngine.Rendering.SHCoefficients
-
----@overload fun(sh: UnityEngine.Rendering.SphericalHarmonicsL2) : UnityEngine.Rendering.SHCoefficients
----@param sh UnityEngine.Rendering.SphericalHarmonicsL2
----@param probesOcclusion UnityEngine.Vector4
----@return UnityEngine.Rendering.SHCoefficients
-function UnityEngine.Rendering.SHCoefficients.New(sh, probesOcclusion) end
----@overload fun(self: UnityEngine.Rendering.SHCoefficients, other: UnityEngine.Rendering.SHCoefficients) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.Rendering.SHCoefficients:Equals(obj) end
----@return number
-function UnityEngine.Rendering.SHCoefficients:GetHashCode() end
-
----@class UnityEngine.Rendering.BatchRendererGroupGlobals : System.ValueType
----@field kGlobalsPropertyName string
----@field kGlobalsPropertyId number
----@field ProbesOcclusion UnityEngine.Vector4
----@field SpecCube0_HDR UnityEngine.Vector4
----@field SpecCube1_HDR UnityEngine.Vector4
----@field SHCoefficients UnityEngine.Rendering.SHCoefficients
----@field Default UnityEngine.Rendering.BatchRendererGroupGlobals
-UnityEngine.Rendering.BatchRendererGroupGlobals = {}
----@alias CS.UnityEngine.Rendering.BatchRendererGroupGlobals UnityEngine.Rendering.BatchRendererGroupGlobals
-CS.UnityEngine.Rendering.BatchRendererGroupGlobals = UnityEngine.Rendering.BatchRendererGroupGlobals
-
----@overload fun(self: UnityEngine.Rendering.BatchRendererGroupGlobals, other: UnityEngine.Rendering.BatchRendererGroupGlobals) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.Rendering.BatchRendererGroupGlobals:Equals(obj) end
----@return number
-function UnityEngine.Rendering.BatchRendererGroupGlobals:GetHashCode() end
-
----@class UnityEngine.Rendering.IBitArray
----@field capacity number
----@field allFalse boolean
----@field allTrue boolean
----@field Item boolean
----@field humanizedData string
-UnityEngine.Rendering.IBitArray = {}
----@alias CS.UnityEngine.Rendering.IBitArray UnityEngine.Rendering.IBitArray
-CS.UnityEngine.Rendering.IBitArray = UnityEngine.Rendering.IBitArray
-
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.IBitArray:BitAnd(other) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.IBitArray:BitOr(other) end
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.IBitArray:BitNot() end
-
----@class UnityEngine.Rendering.BitArray8 : System.ValueType
----@field capacity number
----@field allFalse boolean
----@field allTrue boolean
----@field humanizedData string
----@field Item boolean
-UnityEngine.Rendering.BitArray8 = {}
----@alias CS.UnityEngine.Rendering.BitArray8 UnityEngine.Rendering.BitArray8
-CS.UnityEngine.Rendering.BitArray8 = UnityEngine.Rendering.BitArray8
-
----@overload fun(initValue: number) : UnityEngine.Rendering.BitArray8
----@param bitIndexTrue System.Collections.Generic.IEnumerable
----@return UnityEngine.Rendering.BitArray8
-function UnityEngine.Rendering.BitArray8.New(bitIndexTrue) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray8:BitAnd(other) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray8:BitOr(other) end
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray8:BitNot() end
----@param obj System.Object
----@return boolean
-function UnityEngine.Rendering.BitArray8:Equals(obj) end
----@return number
-function UnityEngine.Rendering.BitArray8:GetHashCode() end
-
----@class UnityEngine.Rendering.BitArray16 : System.ValueType
----@field capacity number
----@field allFalse boolean
----@field allTrue boolean
----@field humanizedData string
----@field Item boolean
-UnityEngine.Rendering.BitArray16 = {}
----@alias CS.UnityEngine.Rendering.BitArray16 UnityEngine.Rendering.BitArray16
-CS.UnityEngine.Rendering.BitArray16 = UnityEngine.Rendering.BitArray16
-
----@overload fun(initValue: number) : UnityEngine.Rendering.BitArray16
----@param bitIndexTrue System.Collections.Generic.IEnumerable
----@return UnityEngine.Rendering.BitArray16
-function UnityEngine.Rendering.BitArray16.New(bitIndexTrue) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray16:BitAnd(other) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray16:BitOr(other) end
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray16:BitNot() end
----@param obj System.Object
----@return boolean
-function UnityEngine.Rendering.BitArray16:Equals(obj) end
----@return number
-function UnityEngine.Rendering.BitArray16:GetHashCode() end
-
----@class UnityEngine.Rendering.BitArray32 : System.ValueType
----@field capacity number
----@field allFalse boolean
----@field allTrue boolean
----@field humanizedData string
----@field Item boolean
-UnityEngine.Rendering.BitArray32 = {}
----@alias CS.UnityEngine.Rendering.BitArray32 UnityEngine.Rendering.BitArray32
-CS.UnityEngine.Rendering.BitArray32 = UnityEngine.Rendering.BitArray32
-
----@overload fun(initValue: number) : UnityEngine.Rendering.BitArray32
----@param bitIndexTrue System.Collections.Generic.IEnumerable
----@return UnityEngine.Rendering.BitArray32
-function UnityEngine.Rendering.BitArray32.New(bitIndexTrue) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray32:BitAnd(other) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray32:BitOr(other) end
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray32:BitNot() end
----@param obj System.Object
----@return boolean
-function UnityEngine.Rendering.BitArray32:Equals(obj) end
----@return number
-function UnityEngine.Rendering.BitArray32:GetHashCode() end
-
----@class UnityEngine.Rendering.BitArray64 : System.ValueType
----@field capacity number
----@field allFalse boolean
----@field allTrue boolean
----@field humanizedData string
----@field Item boolean
-UnityEngine.Rendering.BitArray64 = {}
----@alias CS.UnityEngine.Rendering.BitArray64 UnityEngine.Rendering.BitArray64
-CS.UnityEngine.Rendering.BitArray64 = UnityEngine.Rendering.BitArray64
-
----@overload fun(initValue: number) : UnityEngine.Rendering.BitArray64
----@param bitIndexTrue System.Collections.Generic.IEnumerable
----@return UnityEngine.Rendering.BitArray64
-function UnityEngine.Rendering.BitArray64.New(bitIndexTrue) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray64:BitAnd(other) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray64:BitOr(other) end
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray64:BitNot() end
----@param obj System.Object
----@return boolean
-function UnityEngine.Rendering.BitArray64:Equals(obj) end
----@return number
-function UnityEngine.Rendering.BitArray64:GetHashCode() end
-
----@class UnityEngine.Rendering.BitArray128 : System.ValueType
----@field capacity number
----@field allFalse boolean
----@field allTrue boolean
----@field humanizedData string
----@field Item boolean
-UnityEngine.Rendering.BitArray128 = {}
----@alias CS.UnityEngine.Rendering.BitArray128 UnityEngine.Rendering.BitArray128
-CS.UnityEngine.Rendering.BitArray128 = UnityEngine.Rendering.BitArray128
-
----@overload fun(initValue1: number, initValue2: number) : UnityEngine.Rendering.BitArray128
----@param bitIndexTrue System.Collections.Generic.IEnumerable
----@return UnityEngine.Rendering.BitArray128
-function UnityEngine.Rendering.BitArray128.New(bitIndexTrue) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray128:BitAnd(other) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray128:BitOr(other) end
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray128:BitNot() end
----@param obj System.Object
----@return boolean
-function UnityEngine.Rendering.BitArray128:Equals(obj) end
----@return number
-function UnityEngine.Rendering.BitArray128:GetHashCode() end
-
----@class UnityEngine.Rendering.BitArray256 : System.ValueType
----@field capacity number
----@field allFalse boolean
----@field allTrue boolean
----@field humanizedData string
----@field Item boolean
-UnityEngine.Rendering.BitArray256 = {}
----@alias CS.UnityEngine.Rendering.BitArray256 UnityEngine.Rendering.BitArray256
-CS.UnityEngine.Rendering.BitArray256 = UnityEngine.Rendering.BitArray256
-
----@overload fun(initValue1: number, initValue2: number, initValue3: number, initValue4: number) : UnityEngine.Rendering.BitArray256
----@param bitIndexTrue System.Collections.Generic.IEnumerable
----@return UnityEngine.Rendering.BitArray256
-function UnityEngine.Rendering.BitArray256.New(bitIndexTrue) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray256:BitAnd(other) end
----@param other UnityEngine.Rendering.IBitArray
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray256:BitOr(other) end
----@return UnityEngine.Rendering.IBitArray
-function UnityEngine.Rendering.BitArray256:BitNot() end
----@param obj System.Object
----@return boolean
-function UnityEngine.Rendering.BitArray256:Equals(obj) end
----@return number
-function UnityEngine.Rendering.BitArray256:GetHashCode() end
-
----@class UnityEngine.Rendering.BitArrayUtilities : System.Object
-UnityEngine.Rendering.BitArrayUtilities = {}
----@alias CS.UnityEngine.Rendering.BitArrayUtilities UnityEngine.Rendering.BitArrayUtilities
-CS.UnityEngine.Rendering.BitArrayUtilities = UnityEngine.Rendering.BitArrayUtilities
-
----@param index number
----@param data number
----@return boolean
-function UnityEngine.Rendering.BitArrayUtilities.Get8(index, data) end
----@param index number
----@param data number
----@return boolean
-function UnityEngine.Rendering.BitArrayUtilities.Get16(index, data) end
----@param index number
----@param data number
----@return boolean
-function UnityEngine.Rendering.BitArrayUtilities.Get32(index, data) end
----@param index number
----@param data number
----@return boolean
-function UnityEngine.Rendering.BitArrayUtilities.Get64(index, data) end
----@param index number
----@param data1 number
----@param data2 number
----@return boolean
-function UnityEngine.Rendering.BitArrayUtilities.Get128(index, data1, data2) end
----@param index number
----@param data1 number
----@param data2 number
----@param data3 number
----@param data4 number
----@return boolean
-function UnityEngine.Rendering.BitArrayUtilities.Get256(index, data1, data2, data3, data4) end
----@param index number
----@param ref_data number
----@param value boolean
----@return ,number
-function UnityEngine.Rendering.BitArrayUtilities.Set8(index, ref_data, value) end
----@param index number
----@param ref_data number
----@param value boolean
----@return ,number
-function UnityEngine.Rendering.BitArrayUtilities.Set16(index, ref_data, value) end
----@param index number
----@param ref_data number
----@param value boolean
----@return ,number
-function UnityEngine.Rendering.BitArrayUtilities.Set32(index, ref_data, value) end
----@param index number
----@param ref_data number
----@param value boolean
----@return ,number
-function UnityEngine.Rendering.BitArrayUtilities.Set64(index, ref_data, value) end
----@param index number
----@param ref_data1 number
----@param ref_data2 number
----@param value boolean
----@return ,number,number
-function UnityEngine.Rendering.BitArrayUtilities.Set128(index, ref_data1, ref_data2, value) end
----@param index number
----@param ref_data1 number
----@param ref_data2 number
----@param ref_data3 number
----@param ref_data4 number
----@param value boolean
----@return ,number,number,number,number
-function UnityEngine.Rendering.BitArrayUtilities.Set256(index, ref_data1, ref_data2, ref_data3, ref_data4, value) end
-
----@class UnityEngine.Rendering.Blitter : System.Object
-UnityEngine.Rendering.Blitter = {}
----@alias CS.UnityEngine.Rendering.Blitter UnityEngine.Rendering.Blitter
-CS.UnityEngine.Rendering.Blitter = UnityEngine.Rendering.Blitter
-
----@param blitPS UnityEngine.Shader
----@param blitColorAndDepthPS UnityEngine.Shader
-function UnityEngine.Rendering.Blitter.Initialize(blitPS, blitColorAndDepthPS) end
-function UnityEngine.Rendering.Blitter.Cleanup() end
----@param dimension UnityEngine.Rendering.TextureDimension
----@param singleSlice boolean
----@return UnityEngine.Material
-function UnityEngine.Rendering.Blitter.GetBlitMaterial(dimension, singleSlice) end
----@overload fun(cmd: UnityEngine.Rendering.RasterCommandBuffer, source: UnityEngine.Rendering.RTHandle, scaleBias: UnityEngine.Vector4, mipLevel: number, bilinear: boolean)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, source: UnityEngine.Rendering.RTHandle, scaleBias: UnityEngine.Vector4, mipLevel: number, bilinear: boolean)
----@overload fun(cmd: UnityEngine.Rendering.RasterCommandBuffer, source: UnityEngine.Rendering.RTHandle, scaleBias: UnityEngine.Vector4, material: UnityEngine.Material, pass: number)
----@overload fun(cmd: UnityEngine.Rendering.UnsafeCommandBuffer, source: UnityEngine.Rendering.RTHandle, scaleBias: UnityEngine.Vector4, material: UnityEngine.Material, pass: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, source: UnityEngine.Rendering.RTHandle, scaleBias: UnityEngine.Vector4, material: UnityEngine.Material, pass: number)
----@overload fun(cmd: UnityEngine.Rendering.RasterCommandBuffer, source: UnityEngine.Rendering.RenderTargetIdentifier, scaleBias: UnityEngine.Vector4, material: UnityEngine.Material, pass: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, source: UnityEngine.Rendering.RenderTargetIdentifier, scaleBias: UnityEngine.Vector4, material: UnityEngine.Material, pass: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, source: UnityEngine.Rendering.RenderTargetIdentifier, destination: UnityEngine.Rendering.RenderTargetIdentifier, material: UnityEngine.Material, pass: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, source: UnityEngine.Rendering.RenderTargetIdentifier, destination: UnityEngine.Rendering.RenderTargetIdentifier, loadAction: UnityEngine.Rendering.RenderBufferLoadAction, storeAction: UnityEngine.Rendering.RenderBufferStoreAction, material: UnityEngine.Material, pass: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, scaleBias: UnityEngine.Vector4, material: UnityEngine.Material, pass: number)
----@param cmd UnityEngine.Rendering.RasterCommandBuffer
----@param scaleBias UnityEngine.Vector4
----@param material UnityEngine.Material
----@param pass number
-function UnityEngine.Rendering.Blitter.BlitTexture(cmd, scaleBias, material, pass) end
----@overload fun(cmd: UnityEngine.Rendering.RasterCommandBuffer, source: UnityEngine.Rendering.RTHandle, scaleBias: UnityEngine.Vector4, mipLevel: number, bilinear: boolean)
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Rendering.RTHandle
----@param scaleBias UnityEngine.Vector4
----@param mipLevel number
----@param bilinear boolean
-function UnityEngine.Rendering.Blitter.BlitTexture2D(cmd, source, scaleBias, mipLevel, bilinear) end
----@overload fun(cmd: UnityEngine.Rendering.RasterCommandBuffer, sourceColor: UnityEngine.Texture, sourceDepth: UnityEngine.RenderTexture, scaleBias: UnityEngine.Vector4, mipLevel: number, blitDepth: boolean)
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param sourceColor UnityEngine.Texture
----@param sourceDepth UnityEngine.RenderTexture
----@param scaleBias UnityEngine.Vector4
----@param mipLevel number
----@param blitDepth boolean
-function UnityEngine.Rendering.Blitter.BlitColorAndDepth(cmd, sourceColor, sourceDepth, scaleBias, mipLevel, blitDepth) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param sourceDepth UnityEngine.RenderTexture
----@param scaleBias UnityEngine.Vector4
----@param mipLevel number
-function UnityEngine.Rendering.Blitter.BlitDepth(cmd, sourceDepth, scaleBias, mipLevel) end
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, source: UnityEngine.Rendering.RTHandle, destination: UnityEngine.Rendering.RTHandle, mipLevel: number, bilinear: boolean)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, source: UnityEngine.Rendering.RTHandle, destination: UnityEngine.Rendering.RTHandle, material: UnityEngine.Material, pass: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, source: UnityEngine.Rendering.RTHandle, destination: UnityEngine.Rendering.RTHandle, scaleBias: UnityEngine.Vector4, loadAction: UnityEngine.Rendering.RenderBufferLoadAction, storeAction: UnityEngine.Rendering.RenderBufferStoreAction, material: UnityEngine.Material, pass: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, source: UnityEngine.Rendering.RTHandle, destination: UnityEngine.Rendering.RTHandle, loadAction: UnityEngine.Rendering.RenderBufferLoadAction, storeAction: UnityEngine.Rendering.RenderBufferStoreAction, material: UnityEngine.Material, pass: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, source: UnityEngine.Rendering.RTHandle, destination: UnityEngine.Rendering.RTHandle, scaleBias: UnityEngine.Vector4, mipLevel: number, bilinear: boolean)
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Rendering.RTHandle
----@param destination UnityEngine.Rendering.RTHandle
----@param destViewport UnityEngine.Rect
----@param mipLevel number
----@param bilinear boolean
-function UnityEngine.Rendering.Blitter.BlitCameraTexture(cmd, source, destination, destViewport, mipLevel, bilinear) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Rendering.RTHandle
----@param destination UnityEngine.Rendering.RTHandle
----@param mipLevel number
----@param bilinear boolean
-function UnityEngine.Rendering.Blitter.BlitCameraTexture2D(cmd, source, destination, mipLevel, bilinear) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Texture
----@param scaleBiasTex UnityEngine.Vector4
----@param scaleBiasRT UnityEngine.Vector4
----@param mipLevelTex number
----@param bilinear boolean
-function UnityEngine.Rendering.Blitter.BlitQuad(cmd, source, scaleBiasTex, scaleBiasRT, mipLevelTex, bilinear) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Texture
----@param textureSize UnityEngine.Vector2
----@param scaleBiasTex UnityEngine.Vector4
----@param scaleBiasRT UnityEngine.Vector4
----@param mipLevelTex number
----@param bilinear boolean
----@param paddingInPixels number
-function UnityEngine.Rendering.Blitter.BlitQuadWithPadding(cmd, source, textureSize, scaleBiasTex, scaleBiasRT, mipLevelTex, bilinear, paddingInPixels) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Texture
----@param textureSize UnityEngine.Vector2
----@param scaleBiasTex UnityEngine.Vector4
----@param scaleBiasRT UnityEngine.Vector4
----@param mipLevelTex number
----@param bilinear boolean
----@param paddingInPixels number
-function UnityEngine.Rendering.Blitter.BlitQuadWithPaddingMultiply(cmd, source, textureSize, scaleBiasTex, scaleBiasRT, mipLevelTex, bilinear, paddingInPixels) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Texture
----@param textureSize UnityEngine.Vector2
----@param scaleBiasTex UnityEngine.Vector4
----@param scaleBiasRT UnityEngine.Vector4
----@param mipLevelTex number
----@param bilinear boolean
----@param paddingInPixels number
-function UnityEngine.Rendering.Blitter.BlitOctahedralWithPadding(cmd, source, textureSize, scaleBiasTex, scaleBiasRT, mipLevelTex, bilinear, paddingInPixels) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Texture
----@param textureSize UnityEngine.Vector2
----@param scaleBiasTex UnityEngine.Vector4
----@param scaleBiasRT UnityEngine.Vector4
----@param mipLevelTex number
----@param bilinear boolean
----@param paddingInPixels number
-function UnityEngine.Rendering.Blitter.BlitOctahedralWithPaddingMultiply(cmd, source, textureSize, scaleBiasTex, scaleBiasRT, mipLevelTex, bilinear, paddingInPixels) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Texture
----@param scaleBiasRT UnityEngine.Vector4
----@param mipLevelTex number
-function UnityEngine.Rendering.Blitter.BlitCubeToOctahedral2DQuad(cmd, source, scaleBiasRT, mipLevelTex) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Texture
----@param textureSize UnityEngine.Vector2
----@param scaleBiasRT UnityEngine.Vector4
----@param mipLevelTex number
----@param bilinear boolean
----@param paddingInPixels number
----@param decodeInstructions System.Nullable
-function UnityEngine.Rendering.Blitter.BlitCubeToOctahedral2DQuadWithPadding(cmd, source, textureSize, scaleBiasRT, mipLevelTex, bilinear, paddingInPixels, decodeInstructions) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Texture
----@param scaleBiasRT UnityEngine.Vector4
----@param mipLevelTex number
-function UnityEngine.Rendering.Blitter.BlitCubeToOctahedral2DQuadSingleChannel(cmd, source, scaleBiasRT, mipLevelTex) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param source UnityEngine.Texture
----@param scaleBiasTex UnityEngine.Vector4
----@param scaleBiasRT UnityEngine.Vector4
----@param mipLevelTex number
-function UnityEngine.Rendering.Blitter.BlitQuadSingleChannel(cmd, source, scaleBiasTex, scaleBiasRT, mipLevelTex) end
-
----@class UnityEngine.Rendering.CameraCaptureBridge : System.Object
----@field enabled boolean
-UnityEngine.Rendering.CameraCaptureBridge = {}
----@alias CS.UnityEngine.Rendering.CameraCaptureBridge UnityEngine.Rendering.CameraCaptureBridge
-CS.UnityEngine.Rendering.CameraCaptureBridge = UnityEngine.Rendering.CameraCaptureBridge
-
----@param camera UnityEngine.Camera
----@return System.Collections.Generic.IEnumerator
-function UnityEngine.Rendering.CameraCaptureBridge.GetCaptureActions(camera) end
----@param camera UnityEngine.Camera
----@param action System.Action
-function UnityEngine.Rendering.CameraCaptureBridge.AddCaptureAction(camera, action) end
----@param camera UnityEngine.Camera
----@param action System.Action
-function UnityEngine.Rendering.CameraCaptureBridge.RemoveCaptureAction(camera, action) end
-
----@class UnityEngine.Rendering.ColorSpaceUtils : System.Object
----@field Rec709ToRec2020Mat Unity.Mathematics.float3x3
----@field Rec709ToP3D65Mat Unity.Mathematics.float3x3
----@field Rec2020ToRec709Mat Unity.Mathematics.float3x3
----@field Rec2020ToP3D65Mat Unity.Mathematics.float3x3
----@field P3D65ToRec2020Mat Unity.Mathematics.float3x3
-UnityEngine.Rendering.ColorSpaceUtils = {}
----@alias CS.UnityEngine.Rendering.ColorSpaceUtils UnityEngine.Rendering.ColorSpaceUtils
-CS.UnityEngine.Rendering.ColorSpaceUtils = UnityEngine.Rendering.ColorSpaceUtils
-
-
----@class UnityEngine.Rendering.ColorUtils : System.Object
----@field s_LightMeterCalibrationConstant number
----@field s_LensAttenuation number
----@field lensImperfectionExposureScale number
-UnityEngine.Rendering.ColorUtils = {}
----@alias CS.UnityEngine.Rendering.ColorUtils UnityEngine.Rendering.ColorUtils
-CS.UnityEngine.Rendering.ColorUtils = UnityEngine.Rendering.ColorUtils
-
----@param x number
----@return number
-function UnityEngine.Rendering.ColorUtils.StandardIlluminantY(x) end
----@param x number
----@param y number
----@return UnityEngine.Vector3
-function UnityEngine.Rendering.ColorUtils.CIExyToLMS(x, y) end
----@param temperature number
----@param tint number
----@return UnityEngine.Vector3
-function UnityEngine.Rendering.ColorUtils.ColorBalanceToLMSCoeffs(temperature, tint) end
----@param ref_inShadows UnityEngine.Vector4
----@param ref_inMidtones UnityEngine.Vector4
----@param ref_inHighlights UnityEngine.Vector4
----@return System.ValueTuple,UnityEngine.Vector4,UnityEngine.Vector4,UnityEngine.Vector4
-function UnityEngine.Rendering.ColorUtils.PrepareShadowsMidtonesHighlights(ref_inShadows, ref_inMidtones, ref_inHighlights) end
----@param ref_inLift UnityEngine.Vector4
----@param ref_inGamma UnityEngine.Vector4
----@param ref_inGain UnityEngine.Vector4
----@return System.ValueTuple,UnityEngine.Vector4,UnityEngine.Vector4,UnityEngine.Vector4
-function UnityEngine.Rendering.ColorUtils.PrepareLiftGammaGain(ref_inLift, ref_inGamma, ref_inGain) end
----@param ref_inShadows UnityEngine.Vector4
----@param ref_inHighlights UnityEngine.Vector4
----@param balance number
----@return System.ValueTuple,UnityEngine.Vector4,UnityEngine.Vector4
-function UnityEngine.Rendering.ColorUtils.PrepareSplitToning(ref_inShadows, ref_inHighlights, balance) end
----@param ref_color UnityEngine.Color
----@return number,UnityEngine.Color
-function UnityEngine.Rendering.ColorUtils.Luminance(ref_color) end
----@param aperture number
----@param shutterSpeed number
----@param ISO number
----@return number
-function UnityEngine.Rendering.ColorUtils.ComputeEV100(aperture, shutterSpeed, ISO) end
----@param EV100 number
----@return number
-function UnityEngine.Rendering.ColorUtils.ConvertEV100ToExposure(EV100) end
----@param exposure number
----@return number
-function UnityEngine.Rendering.ColorUtils.ConvertExposureToEV100(exposure) end
----@param avgLuminance number
----@return number
-function UnityEngine.Rendering.ColorUtils.ComputeEV100FromAvgLuminance(avgLuminance) end
----@param aperture number
----@param shutterSpeed number
----@param targetEV100 number
----@return number
-function UnityEngine.Rendering.ColorUtils.ComputeISO(aperture, shutterSpeed, targetEV100) end
----@param c UnityEngine.Color
----@return number
-function UnityEngine.Rendering.ColorUtils.ToHex(c) end
----@param hex number
----@return UnityEngine.Color
-function UnityEngine.Rendering.ColorUtils.ToRGBA(hex) end
-
----@class UnityEngine.Rendering.CoreMatrixUtils : System.Object
-UnityEngine.Rendering.CoreMatrixUtils = {}
----@alias CS.UnityEngine.Rendering.CoreMatrixUtils UnityEngine.Rendering.CoreMatrixUtils
-CS.UnityEngine.Rendering.CoreMatrixUtils = UnityEngine.Rendering.CoreMatrixUtils
-
----@param ref_inOutMatrix UnityEngine.Matrix4x4
----@param translation UnityEngine.Vector3
----@return ,UnityEngine.Matrix4x4
-function UnityEngine.Rendering.CoreMatrixUtils.MatrixTimesTranslation(ref_inOutMatrix, translation) end
----@param ref_inOutMatrix UnityEngine.Matrix4x4
----@param translation UnityEngine.Vector3
----@return ,UnityEngine.Matrix4x4
-function UnityEngine.Rendering.CoreMatrixUtils.TranslationTimesMatrix(ref_inOutMatrix, translation) end
----@param perspective UnityEngine.Matrix4x4
----@param rhs UnityEngine.Matrix4x4
----@return UnityEngine.Matrix4x4
-function UnityEngine.Rendering.CoreMatrixUtils.MultiplyPerspectiveMatrix(perspective, rhs) end
----@param ortho UnityEngine.Matrix4x4
----@param rhs UnityEngine.Matrix4x4
----@param centered boolean
----@return UnityEngine.Matrix4x4
-function UnityEngine.Rendering.CoreMatrixUtils.MultiplyOrthoMatrix(ortho, rhs, centered) end
----@param projMatrix UnityEngine.Matrix4x4
----@param rhs UnityEngine.Matrix4x4
----@param orthoCentered boolean
----@return UnityEngine.Matrix4x4
-function UnityEngine.Rendering.CoreMatrixUtils.MultiplyProjectionMatrix(projMatrix, rhs, orthoCentered) end
-
----@class UnityEngine.Rendering.CoreRenderPipelinePreferences : System.Object
----@field previewBackgroundColor UnityEngine.Color
-UnityEngine.Rendering.CoreRenderPipelinePreferences = {}
----@alias CS.UnityEngine.Rendering.CoreRenderPipelinePreferences UnityEngine.Rendering.CoreRenderPipelinePreferences
-CS.UnityEngine.Rendering.CoreRenderPipelinePreferences = UnityEngine.Rendering.CoreRenderPipelinePreferences
-
----@param name string
----@param defaultColor UnityEngine.Color
----@return System.Func
-function UnityEngine.Rendering.CoreRenderPipelinePreferences.RegisterPreferenceColor(name, defaultColor) end
-
----@class UnityEngine.Rendering.CoreUtils : System.Object
----@field lookAtList UnityEngine.Vector3[]
----@field upVectorList UnityEngine.Vector3[]
----@field blackCubeTexture UnityEngine.Cubemap
----@field magentaCubeTexture UnityEngine.Cubemap
----@field magentaCubeTextureArray UnityEngine.CubemapArray
----@field whiteCubeTexture UnityEngine.Cubemap
----@field emptyUAV UnityEngine.RenderTexture
----@field emptyBuffer UnityEngine.GraphicsBuffer
----@field blackVolumeTexture UnityEngine.Texture3D
-UnityEngine.Rendering.CoreUtils = {}
----@alias CS.UnityEngine.Rendering.CoreUtils UnityEngine.Rendering.CoreUtils
-CS.UnityEngine.Rendering.CoreUtils = UnityEngine.Rendering.CoreUtils
-
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param clearFlag UnityEngine.Rendering.ClearFlag
----@param clearColor UnityEngine.Color
-function UnityEngine.Rendering.CoreUtils.ClearRenderTarget(cmd, clearFlag, clearColor) end
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, buffer: UnityEngine.Rendering.RenderTargetIdentifier, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, buffer: UnityEngine.Rendering.RenderTargetIdentifier, clearFlag: UnityEngine.Rendering.ClearFlag, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RenderTargetIdentifier, depthBuffer: UnityEngine.Rendering.RenderTargetIdentifier, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RenderTargetIdentifier, depthBuffer: UnityEngine.Rendering.RenderTargetIdentifier, clearFlag: UnityEngine.Rendering.ClearFlag, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RenderTargetIdentifier, depthBuffer: UnityEngine.Rendering.RenderTargetIdentifier, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffers: UnityEngine.Rendering.RenderTargetIdentifier[], depthBuffer: UnityEngine.Rendering.RenderTargetIdentifier)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffers: UnityEngine.Rendering.RenderTargetIdentifier[], depthBuffer: UnityEngine.Rendering.RenderTargetIdentifier, clearFlag: UnityEngine.Rendering.ClearFlag)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffers: UnityEngine.Rendering.RenderTargetIdentifier[], depthBuffer: UnityEngine.Rendering.RenderTargetIdentifier, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, buffer: UnityEngine.Rendering.RenderTargetIdentifier, loadAction: UnityEngine.Rendering.RenderBufferLoadAction, storeAction: UnityEngine.Rendering.RenderBufferStoreAction, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, buffer: UnityEngine.Rendering.RenderTargetIdentifier, loadAction: UnityEngine.Rendering.RenderBufferLoadAction, storeAction: UnityEngine.Rendering.RenderBufferStoreAction, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, buffer: UnityEngine.Rendering.RenderTargetIdentifier, loadAction: UnityEngine.Rendering.RenderBufferLoadAction, storeAction: UnityEngine.Rendering.RenderBufferStoreAction, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, buffer: UnityEngine.Rendering.RenderTargetIdentifier, loadAction: UnityEngine.Rendering.RenderBufferLoadAction, storeAction: UnityEngine.Rendering.RenderBufferStoreAction, clearFlag: UnityEngine.Rendering.ClearFlag)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depthBuffer: UnityEngine.Rendering.RenderTargetIdentifier, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depthBuffer: UnityEngine.Rendering.RenderTargetIdentifier, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depthBuffer: UnityEngine.Rendering.RenderTargetIdentifier, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, buffer: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RenderTargetIdentifier, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depthBuffer: UnityEngine.Rendering.RenderTargetIdentifier, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, clearFlag: UnityEngine.Rendering.ClearFlag)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, buffer: UnityEngine.Rendering.RTHandle, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.ComputeCommandBuffer, buffer: UnityEngine.Rendering.RTHandle, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, buffer: UnityEngine.Rendering.RTHandle, clearFlag: UnityEngine.Rendering.ClearFlag, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RTHandle, depthBuffer: UnityEngine.Rendering.RTHandle, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RTHandle, depthBuffer: UnityEngine.Rendering.RTHandle, clearFlag: UnityEngine.Rendering.ClearFlag, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RTHandle, depthBuffer: UnityEngine.Rendering.RTHandle, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, buffer: UnityEngine.Rendering.RTHandle, loadAction: UnityEngine.Rendering.RenderBufferLoadAction, storeAction: UnityEngine.Rendering.RenderBufferStoreAction, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffer: UnityEngine.Rendering.RTHandle, colorLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, colorStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, depthBuffer: UnityEngine.Rendering.RTHandle, depthLoadAction: UnityEngine.Rendering.RenderBufferLoadAction, depthStoreAction: UnityEngine.Rendering.RenderBufferStoreAction, clearFlag: UnityEngine.Rendering.ClearFlag, clearColor: UnityEngine.Color, miplevel: number, cubemapFace: UnityEngine.CubemapFace, depthSlice: number)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffers: UnityEngine.Rendering.RenderTargetIdentifier[], depthBuffer: UnityEngine.Rendering.RTHandle)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, colorBuffers: UnityEngine.Rendering.RenderTargetIdentifier[], depthBuffer: UnityEngine.Rendering.RTHandle, clearFlag: UnityEngine.Rendering.ClearFlag)
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param colorBuffers UnityEngine.Rendering.RenderTargetIdentifier[]
----@param depthBuffer UnityEngine.Rendering.RTHandle
----@param clearFlag UnityEngine.Rendering.ClearFlag
----@param clearColor UnityEngine.Color
-function UnityEngine.Rendering.CoreUtils.SetRenderTarget(cmd, colorBuffers, depthBuffer, clearFlag, clearColor) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param baseShadingRateFragmentSize UnityEngine.Rendering.ShadingRateFragmentSize
-function UnityEngine.Rendering.CoreUtils.SetShadingRateFragmentSize(cmd, baseShadingRateFragmentSize) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param stage UnityEngine.Rendering.ShadingRateCombinerStage
----@param combiner UnityEngine.Rendering.ShadingRateCombiner
-function UnityEngine.Rendering.CoreUtils.SetShadingRateCombiner(cmd, stage, combiner) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param ref_shadingRateImage UnityEngine.Rendering.RenderTargetIdentifier
----@return ,UnityEngine.Rendering.RenderTargetIdentifier
-function UnityEngine.Rendering.CoreUtils.SetShadingRateImage(cmd, ref_shadingRateImage) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param target UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.CoreUtils.SetViewport(cmd, target) end
----@overload fun(width: number, height: number, depth: number, format: UnityEngine.RenderTextureFormat, name: string, mips: boolean, enableMSAA: boolean, msaaSamples: UnityEngine.Rendering.MSAASamples) : string
----@overload fun(width: number, height: number, depth: number, format: UnityEngine.Experimental.Rendering.GraphicsFormat, name: string, mips: boolean, enableMSAA: boolean, msaaSamples: UnityEngine.Rendering.MSAASamples) : string
----@param width number
----@param height number
----@param depth number
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@param dim UnityEngine.Rendering.TextureDimension
----@param name string
----@param mips boolean
----@param enableMSAA boolean
----@param msaaSamples UnityEngine.Rendering.MSAASamples
----@param dynamicRes boolean
----@param dynamicResExplicit boolean
----@return string
-function UnityEngine.Rendering.CoreUtils.GetRenderTargetAutoName(width, height, depth, format, dim, name, mips, enableMSAA, msaaSamples, dynamicRes, dynamicResExplicit) end
----@overload fun(width: number, height: number, format: UnityEngine.TextureFormat, dim: UnityEngine.Rendering.TextureDimension, name: string, mips: boolean, depth: number) : string
----@param width number
----@param height number
----@param format UnityEngine.Experimental.Rendering.GraphicsFormat
----@param dim UnityEngine.Rendering.TextureDimension
----@param name string
----@param mips boolean
----@param depth number
----@return string
-function UnityEngine.Rendering.CoreUtils.GetTextureAutoName(width, height, format, dim, name, mips, depth) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param renderTexture UnityEngine.RenderTexture
----@param clearColor UnityEngine.Color
----@param clearMips boolean
-function UnityEngine.Rendering.CoreUtils.ClearCubemap(cmd, renderTexture, clearColor, clearMips) end
----@overload fun(commandBuffer: UnityEngine.Rendering.CommandBuffer, material: UnityEngine.Material, properties: UnityEngine.MaterialPropertyBlock, shaderPassId: number)
----@overload fun(commandBuffer: UnityEngine.Rendering.RasterCommandBuffer, material: UnityEngine.Material, properties: UnityEngine.MaterialPropertyBlock, shaderPassId: number)
----@overload fun(commandBuffer: UnityEngine.Rendering.CommandBuffer, material: UnityEngine.Material, colorBuffer: UnityEngine.Rendering.RenderTargetIdentifier, properties: UnityEngine.MaterialPropertyBlock, shaderPassId: number)
----@overload fun(commandBuffer: UnityEngine.Rendering.CommandBuffer, material: UnityEngine.Material, colorBuffer: UnityEngine.Rendering.RenderTargetIdentifier, depthStencilBuffer: UnityEngine.Rendering.RenderTargetIdentifier, properties: UnityEngine.MaterialPropertyBlock, shaderPassId: number)
----@overload fun(commandBuffer: UnityEngine.Rendering.CommandBuffer, material: UnityEngine.Material, colorBuffers: UnityEngine.Rendering.RenderTargetIdentifier[], depthStencilBuffer: UnityEngine.Rendering.RenderTargetIdentifier, properties: UnityEngine.MaterialPropertyBlock, shaderPassId: number)
----@param commandBuffer UnityEngine.Rendering.CommandBuffer
----@param material UnityEngine.Material
----@param colorBuffers UnityEngine.Rendering.RenderTargetIdentifier[]
----@param properties UnityEngine.MaterialPropertyBlock
----@param shaderPassId number
-function UnityEngine.Rendering.CoreUtils.DrawFullScreen(commandBuffer, material, colorBuffers, properties, shaderPassId) end
----@param color UnityEngine.Color
----@return UnityEngine.Color
-function UnityEngine.Rendering.CoreUtils.ConvertSRGBToActiveColorSpace(color) end
----@param color UnityEngine.Color
----@return UnityEngine.Color
-function UnityEngine.Rendering.CoreUtils.ConvertLinearToActiveColorSpace(color) end
----@overload fun(shaderPath: string) : UnityEngine.Material
----@param shader UnityEngine.Shader
----@return UnityEngine.Material
-function UnityEngine.Rendering.CoreUtils.CreateEngineMaterial(shader) end
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, keyword: string, state: boolean)
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, cs: UnityEngine.ComputeShader, keyword: string, state: boolean)
----@overload fun(cmd: UnityEngine.Rendering.BaseCommandBuffer, keyword: string, state: boolean)
----@overload fun(material: UnityEngine.Material, keyword: string, state: boolean)
----@overload fun(material: UnityEngine.Material, keyword: UnityEngine.Rendering.LocalKeyword, state: boolean)
----@param cs UnityEngine.ComputeShader
----@param keyword string
----@param state boolean
-function UnityEngine.Rendering.CoreUtils.SetKeyword(cs, keyword, state) end
----@param obj UnityEngine.Object
-function UnityEngine.Rendering.CoreUtils.Destroy(obj) end
----@return System.Collections.Generic.IEnumerable
-function UnityEngine.Rendering.CoreUtils.GetAllAssemblyTypes() end
----@overload fun(buffer: UnityEngine.GraphicsBuffer)
----@param buffer UnityEngine.ComputeBuffer
-function UnityEngine.Rendering.CoreUtils.SafeRelease(buffer) end
----@param min UnityEngine.Vector3
----@param max UnityEngine.Vector3
----@return UnityEngine.Mesh
-function UnityEngine.Rendering.CoreUtils.CreateCubeMesh(min, max) end
----@param camera UnityEngine.Camera
----@return boolean
-function UnityEngine.Rendering.CoreUtils.ArePostProcessesEnabled(camera) end
----@param camera UnityEngine.Camera
----@return boolean
-function UnityEngine.Rendering.CoreUtils.AreAnimatedMaterialsEnabled(camera) end
----@param camera UnityEngine.Camera
----@return boolean
-function UnityEngine.Rendering.CoreUtils.IsSceneLightingDisabled(camera) end
----@param camera UnityEngine.Camera
----@return boolean
-function UnityEngine.Rendering.CoreUtils.IsLightOverlapDebugEnabled(camera) end
----@param camera UnityEngine.Camera
----@return boolean
-function UnityEngine.Rendering.CoreUtils.IsSceneViewFogEnabled(camera) end
----@return boolean
-function UnityEngine.Rendering.CoreUtils.IsSceneFilteringEnabled() end
----@return boolean
-function UnityEngine.Rendering.CoreUtils.IsSceneViewPrefabStageContextHidden() end
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, rendererList: UnityEngine.Rendering.RendererList)
----@param cmd UnityEngine.Rendering.IRasterCommandBuffer
----@param rendererList UnityEngine.Rendering.RendererList
-function UnityEngine.Rendering.CoreUtils.DrawRendererList(cmd, rendererList) end
----@param texture UnityEngine.Texture
----@return number
-function UnityEngine.Rendering.CoreUtils.GetTextureHash(texture) end
----@param size number
----@return number
-function UnityEngine.Rendering.CoreUtils.PreviousPowerOfTwo(size) end
----@overload fun(size: number) : number
----@param size number
----@return number
-function UnityEngine.Rendering.CoreUtils.GetMipCount(size) end
----@param value number
----@param divisor number
----@return number
-function UnityEngine.Rendering.CoreUtils.DivRoundUp(value, divisor) end
----@param filePath string
-function UnityEngine.Rendering.CoreUtils.EnsureFolderTreeInAssetFilePath(filePath) end
----@param proj UnityEngine.Matrix4x4
----@param z number
----@return UnityEngine.Vector3[]
-function UnityEngine.Rendering.CoreUtils.CalculateViewSpaceCorners(proj, z) end
----@return UnityEngine.Experimental.Rendering.GraphicsFormat
-function UnityEngine.Rendering.CoreUtils.GetDefaultDepthStencilFormat() end
----@return UnityEngine.Experimental.Rendering.GraphicsFormat
-function UnityEngine.Rendering.CoreUtils.GetDefaultDepthOnlyFormat() end
----@return UnityEngine.Rendering.DepthBits
-function UnityEngine.Rendering.CoreUtils.GetDefaultDepthBufferBits() end
-
----@class UnityEngine.Rendering.DelegateUtility : System.Object
-UnityEngine.Rendering.DelegateUtility = {}
----@alias CS.UnityEngine.Rendering.DelegateUtility UnityEngine.Rendering.DelegateUtility
-CS.UnityEngine.Rendering.DelegateUtility = UnityEngine.Rendering.DelegateUtility
-
----@param source System.Delegate
----@param type System.Type
----@return System.Delegate
-function UnityEngine.Rendering.DelegateUtility.Cast(source, type) end
-
----@class UnityEngine.Rendering.FSRUtils : System.Object
----@field kDefaultSharpnessStops number
----@field kDefaultSharpnessLinear number
-UnityEngine.Rendering.FSRUtils = {}
----@alias CS.UnityEngine.Rendering.FSRUtils UnityEngine.Rendering.FSRUtils
-CS.UnityEngine.Rendering.FSRUtils = UnityEngine.Rendering.FSRUtils
-
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, inputViewportSizeInPixels: UnityEngine.Vector2, inputImageSizeInPixels: UnityEngine.Vector2, outputImageSizeInPixels: UnityEngine.Vector2)
----@param cmd UnityEngine.Rendering.BaseCommandBuffer
----@param inputViewportSizeInPixels UnityEngine.Vector2
----@param inputImageSizeInPixels UnityEngine.Vector2
----@param outputImageSizeInPixels UnityEngine.Vector2
-function UnityEngine.Rendering.FSRUtils.SetEasuConstants(cmd, inputViewportSizeInPixels, inputImageSizeInPixels, outputImageSizeInPixels) end
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, sharpnessStops: number)
----@param cmd UnityEngine.Rendering.BaseCommandBuffer
----@param sharpnessStops number
-function UnityEngine.Rendering.FSRUtils.SetRcasConstants(cmd, sharpnessStops) end
----@overload fun(cmd: UnityEngine.Rendering.CommandBuffer, sharpnessLinear: number)
----@param cmd UnityEngine.Rendering.RasterCommandBuffer
----@param sharpnessLinear number
-function UnityEngine.Rendering.FSRUtils.SetRcasConstantsLinear(cmd, sharpnessLinear) end
----@return boolean
-function UnityEngine.Rendering.FSRUtils.IsSupported() end
-
----@class UnityEngine.Rendering.GPUPrefixSum : System.ValueType
-UnityEngine.Rendering.GPUPrefixSum = {}
----@alias CS.UnityEngine.Rendering.GPUPrefixSum UnityEngine.Rendering.GPUPrefixSum
-CS.UnityEngine.Rendering.GPUPrefixSum = UnityEngine.Rendering.GPUPrefixSum
-
----@param resources UnityEngine.Rendering.GPUPrefixSum.SystemResources
----@return UnityEngine.Rendering.GPUPrefixSum
-function UnityEngine.Rendering.GPUPrefixSum.New(resources) end
----@overload fun(self: UnityEngine.Rendering.GPUPrefixSum, cmdBuffer: UnityEngine.Rendering.IComputeCommandBuffer, ref_arguments: UnityEngine.Rendering.GPUPrefixSum.DirectArgs) : UnityEngine.Rendering.GPUPrefixSum.DirectArgs
----@param cmdBuffer UnityEngine.Rendering.CommandBuffer
----@param ref_arguments UnityEngine.Rendering.GPUPrefixSum.DirectArgs
----@return ,UnityEngine.Rendering.GPUPrefixSum.DirectArgs
-function UnityEngine.Rendering.GPUPrefixSum:DispatchDirect(cmdBuffer, ref_arguments) end
----@overload fun(self: UnityEngine.Rendering.GPUPrefixSum, cmdBuffer: UnityEngine.Rendering.IComputeCommandBuffer, ref_arguments: UnityEngine.Rendering.GPUPrefixSum.IndirectDirectArgs) : UnityEngine.Rendering.GPUPrefixSum.IndirectDirectArgs
----@param cmdBuffer UnityEngine.Rendering.CommandBuffer
----@param ref_arguments UnityEngine.Rendering.GPUPrefixSum.IndirectDirectArgs
----@return ,UnityEngine.Rendering.GPUPrefixSum.IndirectDirectArgs
-function UnityEngine.Rendering.GPUPrefixSum:DispatchIndirect(cmdBuffer, ref_arguments) end
-
----@class UnityEngine.Rendering.GPUSort : System.ValueType
-UnityEngine.Rendering.GPUSort = {}
----@alias CS.UnityEngine.Rendering.GPUSort UnityEngine.Rendering.GPUSort
-CS.UnityEngine.Rendering.GPUSort = UnityEngine.Rendering.GPUSort
-
----@param resources UnityEngine.Rendering.GPUSort.SystemResources
----@return UnityEngine.Rendering.GPUSort
-function UnityEngine.Rendering.GPUSort.New(resources) end
----@overload fun(self: UnityEngine.Rendering.GPUSort, cmd: UnityEngine.Rendering.IComputeCommandBuffer, args: UnityEngine.Rendering.GPUSort.Args)
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param args UnityEngine.Rendering.GPUSort.Args
-function UnityEngine.Rendering.GPUSort:Dispatch(cmd, args) end
-
----@class UnityEngine.Rendering.HableCurve : System.Object
----@field segments UnityEngine.Rendering.HableCurve.Segment[]
----@field uniforms UnityEngine.Rendering.HableCurve.Uniforms
----@field whitePoint number
----@field inverseWhitePoint number
----@field x0 number
----@field x1 number
-UnityEngine.Rendering.HableCurve = {}
----@alias CS.UnityEngine.Rendering.HableCurve UnityEngine.Rendering.HableCurve
-CS.UnityEngine.Rendering.HableCurve = UnityEngine.Rendering.HableCurve
-
----@return UnityEngine.Rendering.HableCurve
-function UnityEngine.Rendering.HableCurve.New() end
----@param x number
----@return number
-function UnityEngine.Rendering.HableCurve:Eval(x) end
----@param toeStrength number
----@param toeLength number
----@param shoulderStrength number
----@param shoulderLength number
----@param shoulderAngle number
----@param gamma number
-function UnityEngine.Rendering.HableCurve:Init(toeStrength, toeLength, shoulderStrength, shoulderLength, shoulderAngle, gamma) end
-
----@class UnityEngine.Rendering.HaltonSequence : System.Object
-UnityEngine.Rendering.HaltonSequence = {}
----@alias CS.UnityEngine.Rendering.HaltonSequence UnityEngine.Rendering.HaltonSequence
-CS.UnityEngine.Rendering.HaltonSequence = UnityEngine.Rendering.HaltonSequence
-
----@param index number
----@param radix number
----@return number
-function UnityEngine.Rendering.HaltonSequence.Get(index, radix) end
-
----@class UnityEngine.Rendering.HashFNV1A32 : System.ValueType
----@field value number
-UnityEngine.Rendering.HashFNV1A32 = {}
----@alias CS.UnityEngine.Rendering.HashFNV1A32 UnityEngine.Rendering.HashFNV1A32
-CS.UnityEngine.Rendering.HashFNV1A32 = UnityEngine.Rendering.HashFNV1A32
-
----@return UnityEngine.Rendering.HashFNV1A32
-function UnityEngine.Rendering.HashFNV1A32.Create() end
----@overload fun(self: UnityEngine.Rendering.HashFNV1A32, ref_input: number) : number
----@overload fun(self: UnityEngine.Rendering.HashFNV1A32, ref_input: number) : number
----@overload fun(self: UnityEngine.Rendering.HashFNV1A32, ref_input: boolean) : boolean
----@overload fun(self: UnityEngine.Rendering.HashFNV1A32, ref_input: number) : number
----@overload fun(self: UnityEngine.Rendering.HashFNV1A32, ref_input: number) : number
----@overload fun(self: UnityEngine.Rendering.HashFNV1A32, ref_input: UnityEngine.Vector2) : UnityEngine.Vector2
----@overload fun(self: UnityEngine.Rendering.HashFNV1A32, ref_input: UnityEngine.Vector3) : UnityEngine.Vector3
----@param ref_input UnityEngine.Vector4
----@return ,UnityEngine.Vector4
-function UnityEngine.Rendering.HashFNV1A32:Append(ref_input) end
----@return number
-function UnityEngine.Rendering.HashFNV1A32:GetHashCode() end
-
----@class UnityEngine.Rendering.DelegateHashCodeUtils : System.Object
-UnityEngine.Rendering.DelegateHashCodeUtils = {}
----@alias CS.UnityEngine.Rendering.DelegateHashCodeUtils UnityEngine.Rendering.DelegateHashCodeUtils
-CS.UnityEngine.Rendering.DelegateHashCodeUtils = UnityEngine.Rendering.DelegateHashCodeUtils
-
----@param del System.Delegate
----@return number
-function UnityEngine.Rendering.DelegateHashCodeUtils.GetFuncHashCode(del) end
-
----@class UnityEngine.Rendering.HDROutputUtils : System.Object
-UnityEngine.Rendering.HDROutputUtils = {}
----@alias CS.UnityEngine.Rendering.HDROutputUtils UnityEngine.Rendering.HDROutputUtils
-CS.UnityEngine.Rendering.HDROutputUtils = UnityEngine.Rendering.HDROutputUtils
-
----@param gamut UnityEngine.ColorGamut
----@param out_colorspace number
----@return boolean,number
-function UnityEngine.Rendering.HDROutputUtils.GetColorSpaceForGamut(gamut, out_colorspace) end
----@param gamut UnityEngine.ColorGamut
----@param out_encoding number
----@return boolean,number
-function UnityEngine.Rendering.HDROutputUtils.GetColorEncodingForGamut(gamut, out_encoding) end
----@overload fun(material: UnityEngine.Material, gamut: UnityEngine.ColorGamut, operations: UnityEngine.Rendering.HDROutputUtils.Operation)
----@overload fun(properties: UnityEngine.MaterialPropertyBlock, gamut: UnityEngine.ColorGamut)
----@overload fun(material: UnityEngine.Material, operations: UnityEngine.Rendering.HDROutputUtils.Operation)
----@param computeShader UnityEngine.ComputeShader
----@param gamut UnityEngine.ColorGamut
----@param operations UnityEngine.Rendering.HDROutputUtils.Operation
-function UnityEngine.Rendering.HDROutputUtils.ConfigureHDROutput(computeShader, gamut, operations) end
----@param shaderKeywordSet UnityEngine.Rendering.ShaderKeywordSet
----@param isHDREnabled boolean
----@return boolean
-function UnityEngine.Rendering.HDROutputUtils.IsShaderVariantValid(shaderKeywordSet, isHDREnabled) end
-
----@class UnityEngine.Rendering.LightUnitUtils : System.Object
----@field SphereSolidAngle number
-UnityEngine.Rendering.LightUnitUtils = {}
----@alias CS.UnityEngine.Rendering.LightUnitUtils UnityEngine.Rendering.LightUnitUtils
-CS.UnityEngine.Rendering.LightUnitUtils = UnityEngine.Rendering.LightUnitUtils
-
----@param lightType UnityEngine.LightType
----@return UnityEngine.Rendering.LightUnit
-function UnityEngine.Rendering.LightUnitUtils.GetNativeLightUnit(lightType) end
----@param lightType UnityEngine.LightType
----@param lightUnit UnityEngine.Rendering.LightUnit
----@return boolean
-function UnityEngine.Rendering.LightUnitUtils.IsLightUnitSupported(lightType, lightUnit) end
----@return number
-function UnityEngine.Rendering.LightUnitUtils.GetSolidAngleFromPointLight() end
----@param spotAngle number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.GetSolidAngleFromSpotLight(spotAngle) end
----@param spotAngle number
----@param aspectRatio number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.GetSolidAngleFromPyramidLight(spotAngle, aspectRatio) end
----@overload fun(rectSizeX: number, rectSizeY: number) : number
----@param rectSize UnityEngine.Vector2
----@return number
-function UnityEngine.Rendering.LightUnitUtils.GetAreaFromRectangleLight(rectSize) end
----@param discRadius number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.GetAreaFromDiscLight(discRadius) end
----@param tubeLength number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.GetAreaFromTubeLight(tubeLength) end
----@param lumen number
----@param solidAngle number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.LumenToCandela(lumen, solidAngle) end
----@param candela number
----@param solidAngle number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.CandelaToLumen(candela, solidAngle) end
----@param lumen number
----@param area number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.LumenToNits(lumen, area) end
----@param nits number
----@param area number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.NitsToLumen(nits, area) end
----@param lux number
----@param distance number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.LuxToCandela(lux, distance) end
----@param candela number
----@param distance number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.CandelaToLux(candela, distance) end
----@param ev100 number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.Ev100ToNits(ev100) end
----@param nits number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.NitsToEv100(nits) end
----@param ev100 number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.Ev100ToCandela(ev100) end
----@param candela number
----@return number
-function UnityEngine.Rendering.LightUnitUtils.CandelaToEv100(candela) end
----@param light UnityEngine.Light
----@param intensity number
----@param fromUnit UnityEngine.Rendering.LightUnit
----@param toUnit UnityEngine.Rendering.LightUnit
----@return number
-function UnityEngine.Rendering.LightUnitUtils.ConvertIntensity(light, intensity, fromUnit, toUnit) end
-
----@class UnityEngine.Rendering.MaterialQuality
----@field Low UnityEngine.Rendering.MaterialQuality
----@field Medium UnityEngine.Rendering.MaterialQuality
----@field High UnityEngine.Rendering.MaterialQuality
-UnityEngine.Rendering.MaterialQuality = {}
----@alias CS.UnityEngine.Rendering.MaterialQuality UnityEngine.Rendering.MaterialQuality
-CS.UnityEngine.Rendering.MaterialQuality = UnityEngine.Rendering.MaterialQuality
-
----@return UnityEngine.Rendering.MaterialQuality
-function UnityEngine.Rendering.MaterialQuality:GetHighestQuality() end
----@param requestedLevel UnityEngine.Rendering.MaterialQuality
----@return UnityEngine.Rendering.MaterialQuality
-function UnityEngine.Rendering.MaterialQuality:GetClosestQuality(requestedLevel) end
-function UnityEngine.Rendering.MaterialQuality:SetGlobalShaderKeywords() end
----@param cmd UnityEngine.Rendering.CommandBuffer
-function UnityEngine.Rendering.MaterialQuality:SetGlobalShaderKeywords(cmd) end
----@return number
-function UnityEngine.Rendering.MaterialQuality:ToFirstIndex() end
-
----@class UnityEngine.Rendering.MaterialQualityUtilities : System.Object
----@field KeywordNames System.String[]
----@field EnumNames System.String[]
----@field Keywords UnityEngine.Rendering.ShaderKeyword[]
-UnityEngine.Rendering.MaterialQualityUtilities = {}
----@alias CS.UnityEngine.Rendering.MaterialQualityUtilities UnityEngine.Rendering.MaterialQualityUtilities
-CS.UnityEngine.Rendering.MaterialQualityUtilities = UnityEngine.Rendering.MaterialQualityUtilities
-
----@param levels UnityEngine.Rendering.MaterialQuality
----@return UnityEngine.Rendering.MaterialQuality
-function UnityEngine.Rendering.MaterialQualityUtilities.GetHighestQuality(levels) end
----@param availableLevels UnityEngine.Rendering.MaterialQuality
----@param requestedLevel UnityEngine.Rendering.MaterialQuality
----@return UnityEngine.Rendering.MaterialQuality
-function UnityEngine.Rendering.MaterialQualityUtilities.GetClosestQuality(availableLevels, requestedLevel) end
----@overload fun(level: UnityEngine.Rendering.MaterialQuality)
----@param level UnityEngine.Rendering.MaterialQuality
----@param cmd UnityEngine.Rendering.CommandBuffer
-function UnityEngine.Rendering.MaterialQualityUtilities.SetGlobalShaderKeywords(level, cmd) end
----@param level UnityEngine.Rendering.MaterialQuality
----@return number
-function UnityEngine.Rendering.MaterialQualityUtilities.ToFirstIndex(level) end
----@param index number
----@return UnityEngine.Rendering.MaterialQuality
-function UnityEngine.Rendering.MaterialQualityUtilities.FromIndex(index) end
-
----@class UnityEngine.Rendering.MeshGizmo : System.Object
----@field vertexCountPerCube number
----@field mesh UnityEngine.Mesh
-UnityEngine.Rendering.MeshGizmo = {}
----@alias CS.UnityEngine.Rendering.MeshGizmo UnityEngine.Rendering.MeshGizmo
-CS.UnityEngine.Rendering.MeshGizmo = UnityEngine.Rendering.MeshGizmo
-
----@param capacity number
----@return UnityEngine.Rendering.MeshGizmo
-function UnityEngine.Rendering.MeshGizmo.New(capacity) end
-function UnityEngine.Rendering.MeshGizmo:Clear() end
----@param center UnityEngine.Vector3
----@param size UnityEngine.Vector3
----@param color UnityEngine.Color
-function UnityEngine.Rendering.MeshGizmo:AddWireCube(center, size, color) end
----@param trs UnityEngine.Matrix4x4
----@param depthTest UnityEngine.Rendering.CompareFunction
----@param gizmoName string
-function UnityEngine.Rendering.MeshGizmo:RenderWireframe(trs, depthTest, gizmoName) end
-function UnityEngine.Rendering.MeshGizmo:Dispose() end
-
----@class UnityEngine.Rendering.ResourceReloader : System.Object
-UnityEngine.Rendering.ResourceReloader = {}
----@alias CS.UnityEngine.Rendering.ResourceReloader UnityEngine.Rendering.ResourceReloader
-CS.UnityEngine.Rendering.ResourceReloader = UnityEngine.Rendering.ResourceReloader
-
----@param container System.Object
----@param basePath string
----@return System.ValueTuple
-function UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn(container, basePath) end
----@param container System.Object
----@param basePath string
----@return boolean
-function UnityEngine.Rendering.ResourceReloader.ReloadAllNullIn(container, basePath) end
-
----@class UnityEngine.Rendering.SceneRenderPipeline : UnityEngine.MonoBehaviour
----@field renderPipelineAsset UnityEngine.Rendering.RenderPipelineAsset
-UnityEngine.Rendering.SceneRenderPipeline = {}
----@alias CS.UnityEngine.Rendering.SceneRenderPipeline UnityEngine.Rendering.SceneRenderPipeline
-CS.UnityEngine.Rendering.SceneRenderPipeline = UnityEngine.Rendering.SceneRenderPipeline
-
-
----@class UnityEngine.Rendering.TextureCurve : System.Object
----@field length number
----@field Item UnityEngine.Keyframe
-UnityEngine.Rendering.TextureCurve = {}
----@alias CS.UnityEngine.Rendering.TextureCurve UnityEngine.Rendering.TextureCurve
-CS.UnityEngine.Rendering.TextureCurve = UnityEngine.Rendering.TextureCurve
-
----@overload fun(baseCurve: UnityEngine.AnimationCurve, zeroValue: number, loop: boolean, ref_bounds: UnityEngine.Vector2) : UnityEngine.Rendering.TextureCurve, UnityEngine.Vector2
----@param keys UnityEngine.Keyframe[]
----@param zeroValue number
----@param loop boolean
----@param ref_bounds UnityEngine.Vector2
----@return UnityEngine.Rendering.TextureCurve,UnityEngine.Vector2
-function UnityEngine.Rendering.TextureCurve.New(keys, zeroValue, loop, ref_bounds) end
-function UnityEngine.Rendering.TextureCurve:Dispose() end
-function UnityEngine.Rendering.TextureCurve:Release() end
-function UnityEngine.Rendering.TextureCurve:SetDirty() end
----@return UnityEngine.Texture2D
-function UnityEngine.Rendering.TextureCurve:GetTexture() end
----@param time number
----@return number
-function UnityEngine.Rendering.TextureCurve:Evaluate(time) end
----@param time number
----@param value number
----@return number
-function UnityEngine.Rendering.TextureCurve:AddKey(time, value) end
----@param index number
----@param ref_key UnityEngine.Keyframe
----@return number,UnityEngine.Keyframe
-function UnityEngine.Rendering.TextureCurve:MoveKey(index, ref_key) end
----@param index number
-function UnityEngine.Rendering.TextureCurve:RemoveKey(index) end
----@param index number
----@param weight number
-function UnityEngine.Rendering.TextureCurve:SmoothTangents(index, weight) end
-
----@class UnityEngine.Rendering.TextureCurveParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.TextureCurveParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.TextureCurve]
-UnityEngine.Rendering.TextureCurveParameter = {}
----@alias CS.UnityEngine.Rendering.TextureCurveParameter UnityEngine.Rendering.TextureCurveParameter
-CS.UnityEngine.Rendering.TextureCurveParameter = UnityEngine.Rendering.TextureCurveParameter
-
----@param value UnityEngine.Rendering.TextureCurve
----@param overrideState boolean
----@return UnityEngine.Rendering.TextureCurveParameter
-function UnityEngine.Rendering.TextureCurveParameter.New(value, overrideState) end
-function UnityEngine.Rendering.TextureCurveParameter:Release() end
-
----@class UnityEngine.Rendering.TextureGradient : System.Object
----@field mode UnityEngine.GradientMode
----@field colorSpace UnityEngine.ColorSpace
----@field textureSize number
----@field colorKeys UnityEngine.GradientColorKey[]
----@field alphaKeys UnityEngine.GradientAlphaKey[]
-UnityEngine.Rendering.TextureGradient = {}
----@alias CS.UnityEngine.Rendering.TextureGradient UnityEngine.Rendering.TextureGradient
-CS.UnityEngine.Rendering.TextureGradient = UnityEngine.Rendering.TextureGradient
-
----@overload fun(baseCurve: UnityEngine.Gradient) : UnityEngine.Rendering.TextureGradient
----@param colorKeys UnityEngine.GradientColorKey[]
----@param alphaKeys UnityEngine.GradientAlphaKey[]
----@param mode UnityEngine.GradientMode
----@param colorSpace UnityEngine.ColorSpace
----@param requestedTextureSize number
----@param precise boolean
----@return UnityEngine.Rendering.TextureGradient
-function UnityEngine.Rendering.TextureGradient.New(colorKeys, alphaKeys, mode, colorSpace, requestedTextureSize, precise) end
-function UnityEngine.Rendering.TextureGradient:Dispose() end
-function UnityEngine.Rendering.TextureGradient:Release() end
-function UnityEngine.Rendering.TextureGradient:SetDirty() end
----@return UnityEngine.Texture2D
-function UnityEngine.Rendering.TextureGradient:GetTexture() end
----@param time number
----@return UnityEngine.Color
-function UnityEngine.Rendering.TextureGradient:Evaluate(time) end
----@param colorKeys UnityEngine.GradientColorKey[]
----@param alphaKeys UnityEngine.GradientAlphaKey[]
----@param mode UnityEngine.GradientMode
----@param colorSpace UnityEngine.ColorSpace
-function UnityEngine.Rendering.TextureGradient:SetKeys(colorKeys, alphaKeys, mode, colorSpace) end
-
----@class UnityEngine.Rendering.TextureGradientParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.TextureGradientParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Rendering.TextureGradient]
-UnityEngine.Rendering.TextureGradientParameter = {}
----@alias CS.UnityEngine.Rendering.TextureGradientParameter UnityEngine.Rendering.TextureGradientParameter
-CS.UnityEngine.Rendering.TextureGradientParameter = UnityEngine.Rendering.TextureGradientParameter
-
----@param value UnityEngine.Rendering.TextureGradient
----@param overrideState boolean
----@return UnityEngine.Rendering.TextureGradientParameter
-function UnityEngine.Rendering.TextureGradientParameter.New(value, overrideState) end
-function UnityEngine.Rendering.TextureGradientParameter:Release() end
-
----@class UnityEngine.Rendering.TileLayoutUtils : System.Object
-UnityEngine.Rendering.TileLayoutUtils = {}
----@alias CS.UnityEngine.Rendering.TileLayoutUtils UnityEngine.Rendering.TileLayoutUtils
-CS.UnityEngine.Rendering.TileLayoutUtils = UnityEngine.Rendering.TileLayoutUtils
-
----@param src UnityEngine.RectInt
----@param tileSize number
----@param out_main UnityEngine.RectInt
----@param out_topRow UnityEngine.RectInt
----@param out_rightCol UnityEngine.RectInt
----@param out_topRight UnityEngine.RectInt
----@return boolean,UnityEngine.RectInt,UnityEngine.RectInt,UnityEngine.RectInt,UnityEngine.RectInt
-function UnityEngine.Rendering.TileLayoutUtils.TryLayoutByTiles(src, tileSize, out_main, out_topRow, out_rightCol, out_topRight) end
----@param src UnityEngine.RectInt
----@param tileSize number
----@param out_main UnityEngine.RectInt
----@param out_other UnityEngine.RectInt
----@return boolean,UnityEngine.RectInt,UnityEngine.RectInt
-function UnityEngine.Rendering.TileLayoutUtils.TryLayoutByRow(src, tileSize, out_main, out_other) end
----@param src UnityEngine.RectInt
----@param tileSize number
----@param out_main UnityEngine.RectInt
----@param out_other UnityEngine.RectInt
----@return boolean,UnityEngine.RectInt,UnityEngine.RectInt
-function UnityEngine.Rendering.TileLayoutUtils.TryLayoutByCol(src, tileSize, out_main, out_other) end
-
----@class UnityEngine.Rendering.IVolume
----@field isGlobal boolean
----@field colliders System.Collections.Generic.List
-UnityEngine.Rendering.IVolume = {}
----@alias CS.UnityEngine.Rendering.IVolume UnityEngine.Rendering.IVolume
-CS.UnityEngine.Rendering.IVolume = UnityEngine.Rendering.IVolume
-
-
----@class UnityEngine.Rendering.KeyframeUtility : System.Object
-UnityEngine.Rendering.KeyframeUtility = {}
----@alias CS.UnityEngine.Rendering.KeyframeUtility UnityEngine.Rendering.KeyframeUtility
-CS.UnityEngine.Rendering.KeyframeUtility = UnityEngine.Rendering.KeyframeUtility
-
----@return UnityEngine.Rendering.KeyframeUtility
-function UnityEngine.Rendering.KeyframeUtility.New() end
----@param curve UnityEngine.AnimationCurve
-function UnityEngine.Rendering.KeyframeUtility.ResetAnimationCurve(curve) end
----@param ref_lhsAndResultCurve UnityEngine.AnimationCurve
----@param rhsCurve UnityEngine.AnimationCurve
----@param t number
----@return ,UnityEngine.AnimationCurve
-function UnityEngine.Rendering.KeyframeUtility.InterpAnimationCurve(ref_lhsAndResultCurve, rhsCurve, t) end
-
----@class UnityEngine.Rendering.Volume : UnityEngine.MonoBehaviour
----@field priority number
----@field blendDistance number
----@field weight number
----@field sharedProfile UnityEngine.Rendering.VolumeProfile
----@field isGlobal boolean
----@field profile UnityEngine.Rendering.VolumeProfile
----@field colliders System.Collections.Generic.List
-UnityEngine.Rendering.Volume = {}
----@alias CS.UnityEngine.Rendering.Volume UnityEngine.Rendering.Volume
-CS.UnityEngine.Rendering.Volume = UnityEngine.Rendering.Volume
-
----@return boolean
-function UnityEngine.Rendering.Volume:HasInstantiatedProfile() end
-function UnityEngine.Rendering.Volume:UpdateColliders() end
-
----@class UnityEngine.Rendering.VolumeCollection : System.Object
----@field count number
-UnityEngine.Rendering.VolumeCollection = {}
----@alias CS.UnityEngine.Rendering.VolumeCollection UnityEngine.Rendering.VolumeCollection
-CS.UnityEngine.Rendering.VolumeCollection = UnityEngine.Rendering.VolumeCollection
-
----@return UnityEngine.Rendering.VolumeCollection
-function UnityEngine.Rendering.VolumeCollection.New() end
----@param volume UnityEngine.Rendering.Volume
----@param layer number
----@return boolean
-function UnityEngine.Rendering.VolumeCollection:Register(volume, layer) end
----@param volume UnityEngine.Rendering.Volume
----@param layer number
----@return boolean
-function UnityEngine.Rendering.VolumeCollection:Unregister(volume, layer) end
----@param volume UnityEngine.Rendering.Volume
----@param previousLayerIndex number
----@param currentLayerIndex number
----@return boolean
-function UnityEngine.Rendering.VolumeCollection:ChangeLayer(volume, previousLayerIndex, currentLayerIndex) end
----@param mask UnityEngine.LayerMask
----@return System.Collections.Generic.List
-function UnityEngine.Rendering.VolumeCollection:GrabVolumes(mask) end
----@param layerIndex number
-function UnityEngine.Rendering.VolumeCollection:SetLayerIndexDirty(layerIndex) end
-
----@class UnityEngine.Rendering.VolumeComponentMenu : System.Attribute
----@field menu string
-UnityEngine.Rendering.VolumeComponentMenu = {}
----@alias CS.UnityEngine.Rendering.VolumeComponentMenu UnityEngine.Rendering.VolumeComponentMenu
-CS.UnityEngine.Rendering.VolumeComponentMenu = UnityEngine.Rendering.VolumeComponentMenu
-
----@param menu string
----@return UnityEngine.Rendering.VolumeComponentMenu
-function UnityEngine.Rendering.VolumeComponentMenu.New(menu) end
-
----@class UnityEngine.Rendering.VolumeComponentMenuForRenderPipeline : UnityEngine.Rendering.VolumeComponentMenu
----@field pipelineTypes System.Type[]
-UnityEngine.Rendering.VolumeComponentMenuForRenderPipeline = {}
----@alias CS.UnityEngine.Rendering.VolumeComponentMenuForRenderPipeline UnityEngine.Rendering.VolumeComponentMenuForRenderPipeline
-CS.UnityEngine.Rendering.VolumeComponentMenuForRenderPipeline = UnityEngine.Rendering.VolumeComponentMenuForRenderPipeline
-
----@param menu string
----@param pipelineTypes System.Type[]
----@return UnityEngine.Rendering.VolumeComponentMenuForRenderPipeline
-function UnityEngine.Rendering.VolumeComponentMenuForRenderPipeline.New(menu, pipelineTypes) end
-
----@class UnityEngine.Rendering.VolumeComponentDeprecated : System.Attribute
-UnityEngine.Rendering.VolumeComponentDeprecated = {}
----@alias CS.UnityEngine.Rendering.VolumeComponentDeprecated UnityEngine.Rendering.VolumeComponentDeprecated
-CS.UnityEngine.Rendering.VolumeComponentDeprecated = UnityEngine.Rendering.VolumeComponentDeprecated
-
----@return UnityEngine.Rendering.VolumeComponentDeprecated
-function UnityEngine.Rendering.VolumeComponentDeprecated.New() end
-
----@class UnityEngine.Rendering.VolumeComponent : UnityEngine.ScriptableObject
----@field active boolean
----@field parameters System.Collections.ObjectModel.ReadOnlyCollection
-UnityEngine.Rendering.VolumeComponent = {}
----@alias CS.UnityEngine.Rendering.VolumeComponent UnityEngine.Rendering.VolumeComponent
-CS.UnityEngine.Rendering.VolumeComponent = UnityEngine.Rendering.VolumeComponent
-
----@return UnityEngine.Rendering.VolumeComponent
-function UnityEngine.Rendering.VolumeComponent.New() end
----@param state UnityEngine.Rendering.VolumeComponent
----@param interpFactor number
-function UnityEngine.Rendering.VolumeComponent:Override(state, interpFactor) end
----@param state boolean
-function UnityEngine.Rendering.VolumeComponent:SetAllOverridesTo(state) end
----@return number
-function UnityEngine.Rendering.VolumeComponent:GetHashCode() end
----@return boolean
-function UnityEngine.Rendering.VolumeComponent:AnyPropertiesIsOverridden() end
-function UnityEngine.Rendering.VolumeComponent:Release() end
----@param property UnityEditor.SerializedProperty
----@param out_revertMethod System.Action
----@return boolean,System.Action
-function UnityEngine.Rendering.VolumeComponent:TryGetRevertMethodForFieldName(property, out_revertMethod) end
----@return string
-function UnityEngine.Rendering.VolumeComponent:GetSourceTerm() end
----@param property UnityEditor.SerializedProperty
----@param out_applyMethod System.Action
----@return boolean,System.Action
-function UnityEngine.Rendering.VolumeComponent:TryGetApplyMethodForFieldName(property, out_applyMethod) end
----@param comp UnityEngine.Component
----@return string
-function UnityEngine.Rendering.VolumeComponent:GetSourceName(comp) end
-
----@class UnityEngine.Rendering.VolumeDebugData : System.Object
-UnityEngine.Rendering.VolumeDebugData = {}
----@alias CS.UnityEngine.Rendering.VolumeDebugData UnityEngine.Rendering.VolumeDebugData
-CS.UnityEngine.Rendering.VolumeDebugData = UnityEngine.Rendering.VolumeDebugData
-
-
----@class UnityEngine.Rendering.VolumeIsolationScope : System.ValueType
-UnityEngine.Rendering.VolumeIsolationScope = {}
----@alias CS.UnityEngine.Rendering.VolumeIsolationScope UnityEngine.Rendering.VolumeIsolationScope
-CS.UnityEngine.Rendering.VolumeIsolationScope = UnityEngine.Rendering.VolumeIsolationScope
-
----@param unused boolean
----@return UnityEngine.Rendering.VolumeIsolationScope
-function UnityEngine.Rendering.VolumeIsolationScope.New(unused) end
-
----@class UnityEngine.Rendering.VolumeParameter : System.Object
----@field k_DebuggerDisplay string
----@field overrideState boolean
-UnityEngine.Rendering.VolumeParameter = {}
----@alias CS.UnityEngine.Rendering.VolumeParameter UnityEngine.Rendering.VolumeParameter
-CS.UnityEngine.Rendering.VolumeParameter = UnityEngine.Rendering.VolumeParameter
-
----@param type System.Type
----@return boolean
-function UnityEngine.Rendering.VolumeParameter.IsObjectParameter(type) end
----@param parameter UnityEngine.Rendering.VolumeParameter
-function UnityEngine.Rendering.VolumeParameter:SetValue(parameter) end
-function UnityEngine.Rendering.VolumeParameter:Release() end
----@return System.Object
-function UnityEngine.Rendering.VolumeParameter:Clone() end
-
----@class UnityEngine.Rendering.VolumeParameter : UnityEngine.Rendering.VolumeParameter
----@field value T
-UnityEngine.Rendering.VolumeParameter = {}
----@alias CS.UnityEngine.Rendering.VolumeParameter UnityEngine.Rendering.VolumeParameter
-CS.UnityEngine.Rendering.VolumeParameter = UnityEngine.Rendering.VolumeParameter
-
----@return UnityEngine.Rendering.VolumeParameter
-function UnityEngine.Rendering.VolumeParameter.New() end
----@param from T
----@param to T
----@param t number
-function UnityEngine.Rendering.VolumeParameter:Interp(from, to, t) end
----@param x T
-function UnityEngine.Rendering.VolumeParameter:Override(x) end
----@param parameter UnityEngine.Rendering.VolumeParameter
-function UnityEngine.Rendering.VolumeParameter:SetValue(parameter) end
----@return number
-function UnityEngine.Rendering.VolumeParameter:GetHashCode() end
----@return string
-function UnityEngine.Rendering.VolumeParameter:ToString() end
----@overload fun(self: UnityEngine.Rendering.VolumeParameter, other: UnityEngine.Rendering.VolumeParameter) : boolean
----@param obj System.Object
----@return boolean
-function UnityEngine.Rendering.VolumeParameter:Equals(obj) end
----@return System.Object
-function UnityEngine.Rendering.VolumeParameter:Clone() end
-
----@class UnityEngine.Rendering.EnumParameter : UnityEngine.Rendering.VolumeParameter[T]
-UnityEngine.Rendering.EnumParameter = {}
----@alias CS.UnityEngine.Rendering.EnumParameter UnityEngine.Rendering.EnumParameter
-CS.UnityEngine.Rendering.EnumParameter = UnityEngine.Rendering.EnumParameter
-
----@param value T
----@param overrideState boolean
----@return UnityEngine.Rendering.EnumParameter
-function UnityEngine.Rendering.EnumParameter.New(value, overrideState) end
-
----@class UnityEngine.Rendering.BoolParameter : UnityEngine.Rendering.VolumeParameter
----@field displayType UnityEngine.Rendering.BoolParameter.DisplayType
----@field value UnityEngine.Rendering.BoolParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Boolean]
-UnityEngine.Rendering.BoolParameter = {}
----@alias CS.UnityEngine.Rendering.BoolParameter UnityEngine.Rendering.BoolParameter
-CS.UnityEngine.Rendering.BoolParameter = UnityEngine.Rendering.BoolParameter
-
----@overload fun(value: boolean, overrideState: boolean) : UnityEngine.Rendering.BoolParameter
----@param value boolean
----@param displayType UnityEngine.Rendering.BoolParameter.DisplayType
----@param overrideState boolean
----@return UnityEngine.Rendering.BoolParameter
-function UnityEngine.Rendering.BoolParameter.New(value, displayType, overrideState) end
-
----@class UnityEngine.Rendering.LayerMaskParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.LayerMaskParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.LayerMask]
-UnityEngine.Rendering.LayerMaskParameter = {}
----@alias CS.UnityEngine.Rendering.LayerMaskParameter UnityEngine.Rendering.LayerMaskParameter
-CS.UnityEngine.Rendering.LayerMaskParameter = UnityEngine.Rendering.LayerMaskParameter
-
----@param value UnityEngine.LayerMask
----@param overrideState boolean
----@return UnityEngine.Rendering.LayerMaskParameter
-function UnityEngine.Rendering.LayerMaskParameter.New(value, overrideState) end
-
----@class UnityEngine.Rendering.RenderingLayerMaskParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.RenderingLayerMaskParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.RenderingLayerMask]
-UnityEngine.Rendering.RenderingLayerMaskParameter = {}
----@alias CS.UnityEngine.Rendering.RenderingLayerMaskParameter UnityEngine.Rendering.RenderingLayerMaskParameter
-CS.UnityEngine.Rendering.RenderingLayerMaskParameter = UnityEngine.Rendering.RenderingLayerMaskParameter
-
----@param value UnityEngine.RenderingLayerMask
----@param overrideState boolean
----@return UnityEngine.Rendering.RenderingLayerMaskParameter
-function UnityEngine.Rendering.RenderingLayerMaskParameter.New(value, overrideState) end
-
----@class UnityEngine.Rendering.IntParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.IntParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Int32]
-UnityEngine.Rendering.IntParameter = {}
----@alias CS.UnityEngine.Rendering.IntParameter UnityEngine.Rendering.IntParameter
-CS.UnityEngine.Rendering.IntParameter = UnityEngine.Rendering.IntParameter
-
----@param value number
----@param overrideState boolean
----@return UnityEngine.Rendering.IntParameter
-function UnityEngine.Rendering.IntParameter.New(value, overrideState) end
----@param from number
----@param to number
----@param t number
-function UnityEngine.Rendering.IntParameter:Interp(from, to, t) end
-
----@class UnityEngine.Rendering.NoInterpIntParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.NoInterpIntParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Int32]
-UnityEngine.Rendering.NoInterpIntParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpIntParameter UnityEngine.Rendering.NoInterpIntParameter
-CS.UnityEngine.Rendering.NoInterpIntParameter = UnityEngine.Rendering.NoInterpIntParameter
-
----@param value number
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpIntParameter
-function UnityEngine.Rendering.NoInterpIntParameter.New(value, overrideState) end
-
----@class UnityEngine.Rendering.MinIntParameter : UnityEngine.Rendering.IntParameter
----@field min number
----@field value number
-UnityEngine.Rendering.MinIntParameter = {}
----@alias CS.UnityEngine.Rendering.MinIntParameter UnityEngine.Rendering.MinIntParameter
-CS.UnityEngine.Rendering.MinIntParameter = UnityEngine.Rendering.MinIntParameter
-
----@param value number
----@param min number
----@param overrideState boolean
----@return UnityEngine.Rendering.MinIntParameter
-function UnityEngine.Rendering.MinIntParameter.New(value, min, overrideState) end
-
----@class UnityEngine.Rendering.NoInterpMinIntParameter : UnityEngine.Rendering.VolumeParameter
----@field min number
----@field value number
----@field value UnityEngine.Rendering.NoInterpMinIntParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Int32]
-UnityEngine.Rendering.NoInterpMinIntParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpMinIntParameter UnityEngine.Rendering.NoInterpMinIntParameter
-CS.UnityEngine.Rendering.NoInterpMinIntParameter = UnityEngine.Rendering.NoInterpMinIntParameter
-
----@param value number
----@param min number
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpMinIntParameter
-function UnityEngine.Rendering.NoInterpMinIntParameter.New(value, min, overrideState) end
-
----@class UnityEngine.Rendering.MaxIntParameter : UnityEngine.Rendering.IntParameter
----@field max number
----@field value number
-UnityEngine.Rendering.MaxIntParameter = {}
----@alias CS.UnityEngine.Rendering.MaxIntParameter UnityEngine.Rendering.MaxIntParameter
-CS.UnityEngine.Rendering.MaxIntParameter = UnityEngine.Rendering.MaxIntParameter
-
----@param value number
----@param max number
----@param overrideState boolean
----@return UnityEngine.Rendering.MaxIntParameter
-function UnityEngine.Rendering.MaxIntParameter.New(value, max, overrideState) end
-
----@class UnityEngine.Rendering.NoInterpMaxIntParameter : UnityEngine.Rendering.VolumeParameter
----@field max number
----@field value number
----@field value UnityEngine.Rendering.NoInterpMaxIntParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Int32]
-UnityEngine.Rendering.NoInterpMaxIntParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpMaxIntParameter UnityEngine.Rendering.NoInterpMaxIntParameter
-CS.UnityEngine.Rendering.NoInterpMaxIntParameter = UnityEngine.Rendering.NoInterpMaxIntParameter
-
----@param value number
----@param max number
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpMaxIntParameter
-function UnityEngine.Rendering.NoInterpMaxIntParameter.New(value, max, overrideState) end
-
----@class UnityEngine.Rendering.ClampedIntParameter : UnityEngine.Rendering.IntParameter
----@field min number
----@field max number
----@field value number
-UnityEngine.Rendering.ClampedIntParameter = {}
----@alias CS.UnityEngine.Rendering.ClampedIntParameter UnityEngine.Rendering.ClampedIntParameter
-CS.UnityEngine.Rendering.ClampedIntParameter = UnityEngine.Rendering.ClampedIntParameter
-
----@param value number
----@param min number
----@param max number
----@param overrideState boolean
----@return UnityEngine.Rendering.ClampedIntParameter
-function UnityEngine.Rendering.ClampedIntParameter.New(value, min, max, overrideState) end
-
----@class UnityEngine.Rendering.NoInterpClampedIntParameter : UnityEngine.Rendering.VolumeParameter
----@field min number
----@field max number
----@field value number
----@field value UnityEngine.Rendering.NoInterpClampedIntParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Int32]
-UnityEngine.Rendering.NoInterpClampedIntParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpClampedIntParameter UnityEngine.Rendering.NoInterpClampedIntParameter
-CS.UnityEngine.Rendering.NoInterpClampedIntParameter = UnityEngine.Rendering.NoInterpClampedIntParameter
-
----@param value number
----@param min number
----@param max number
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpClampedIntParameter
-function UnityEngine.Rendering.NoInterpClampedIntParameter.New(value, min, max, overrideState) end
-
----@class UnityEngine.Rendering.FloatParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.FloatParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Single]
-UnityEngine.Rendering.FloatParameter = {}
----@alias CS.UnityEngine.Rendering.FloatParameter UnityEngine.Rendering.FloatParameter
-CS.UnityEngine.Rendering.FloatParameter = UnityEngine.Rendering.FloatParameter
-
----@param value number
----@param overrideState boolean
----@return UnityEngine.Rendering.FloatParameter
-function UnityEngine.Rendering.FloatParameter.New(value, overrideState) end
----@param from number
----@param to number
----@param t number
-function UnityEngine.Rendering.FloatParameter:Interp(from, to, t) end
-
----@class UnityEngine.Rendering.NoInterpFloatParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.NoInterpFloatParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Single]
-UnityEngine.Rendering.NoInterpFloatParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpFloatParameter UnityEngine.Rendering.NoInterpFloatParameter
-CS.UnityEngine.Rendering.NoInterpFloatParameter = UnityEngine.Rendering.NoInterpFloatParameter
-
----@param value number
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpFloatParameter
-function UnityEngine.Rendering.NoInterpFloatParameter.New(value, overrideState) end
-
----@class UnityEngine.Rendering.MinFloatParameter : UnityEngine.Rendering.FloatParameter
----@field min number
----@field value number
-UnityEngine.Rendering.MinFloatParameter = {}
----@alias CS.UnityEngine.Rendering.MinFloatParameter UnityEngine.Rendering.MinFloatParameter
-CS.UnityEngine.Rendering.MinFloatParameter = UnityEngine.Rendering.MinFloatParameter
-
----@param value number
----@param min number
----@param overrideState boolean
----@return UnityEngine.Rendering.MinFloatParameter
-function UnityEngine.Rendering.MinFloatParameter.New(value, min, overrideState) end
-
----@class UnityEngine.Rendering.NoInterpMinFloatParameter : UnityEngine.Rendering.VolumeParameter
----@field min number
----@field value number
----@field value UnityEngine.Rendering.NoInterpMinFloatParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Single]
-UnityEngine.Rendering.NoInterpMinFloatParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpMinFloatParameter UnityEngine.Rendering.NoInterpMinFloatParameter
-CS.UnityEngine.Rendering.NoInterpMinFloatParameter = UnityEngine.Rendering.NoInterpMinFloatParameter
-
----@param value number
----@param min number
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpMinFloatParameter
-function UnityEngine.Rendering.NoInterpMinFloatParameter.New(value, min, overrideState) end
-
----@class UnityEngine.Rendering.MaxFloatParameter : UnityEngine.Rendering.FloatParameter
----@field max number
----@field value number
-UnityEngine.Rendering.MaxFloatParameter = {}
----@alias CS.UnityEngine.Rendering.MaxFloatParameter UnityEngine.Rendering.MaxFloatParameter
-CS.UnityEngine.Rendering.MaxFloatParameter = UnityEngine.Rendering.MaxFloatParameter
-
----@param value number
----@param max number
----@param overrideState boolean
----@return UnityEngine.Rendering.MaxFloatParameter
-function UnityEngine.Rendering.MaxFloatParameter.New(value, max, overrideState) end
-
----@class UnityEngine.Rendering.NoInterpMaxFloatParameter : UnityEngine.Rendering.VolumeParameter
----@field max number
----@field value number
----@field value UnityEngine.Rendering.NoInterpMaxFloatParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Single]
-UnityEngine.Rendering.NoInterpMaxFloatParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpMaxFloatParameter UnityEngine.Rendering.NoInterpMaxFloatParameter
-CS.UnityEngine.Rendering.NoInterpMaxFloatParameter = UnityEngine.Rendering.NoInterpMaxFloatParameter
-
----@param value number
----@param max number
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpMaxFloatParameter
-function UnityEngine.Rendering.NoInterpMaxFloatParameter.New(value, max, overrideState) end
-
----@class UnityEngine.Rendering.ClampedFloatParameter : UnityEngine.Rendering.FloatParameter
----@field min number
----@field max number
----@field value number
-UnityEngine.Rendering.ClampedFloatParameter = {}
----@alias CS.UnityEngine.Rendering.ClampedFloatParameter UnityEngine.Rendering.ClampedFloatParameter
-CS.UnityEngine.Rendering.ClampedFloatParameter = UnityEngine.Rendering.ClampedFloatParameter
-
----@param value number
----@param min number
----@param max number
----@param overrideState boolean
----@return UnityEngine.Rendering.ClampedFloatParameter
-function UnityEngine.Rendering.ClampedFloatParameter.New(value, min, max, overrideState) end
-
----@class UnityEngine.Rendering.NoInterpClampedFloatParameter : UnityEngine.Rendering.VolumeParameter
----@field min number
----@field max number
----@field value number
----@field value UnityEngine.Rendering.NoInterpClampedFloatParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[System.Single]
-UnityEngine.Rendering.NoInterpClampedFloatParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpClampedFloatParameter UnityEngine.Rendering.NoInterpClampedFloatParameter
-CS.UnityEngine.Rendering.NoInterpClampedFloatParameter = UnityEngine.Rendering.NoInterpClampedFloatParameter
-
----@param value number
----@param min number
----@param max number
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpClampedFloatParameter
-function UnityEngine.Rendering.NoInterpClampedFloatParameter.New(value, min, max, overrideState) end
-
----@class UnityEngine.Rendering.FloatRangeParameter : UnityEngine.Rendering.VolumeParameter
----@field min number
----@field max number
----@field value UnityEngine.Vector2
----@field value UnityEngine.Rendering.FloatRangeParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Vector2]
-UnityEngine.Rendering.FloatRangeParameter = {}
----@alias CS.UnityEngine.Rendering.FloatRangeParameter UnityEngine.Rendering.FloatRangeParameter
-CS.UnityEngine.Rendering.FloatRangeParameter = UnityEngine.Rendering.FloatRangeParameter
-
----@param value UnityEngine.Vector2
----@param min number
----@param max number
----@param overrideState boolean
----@return UnityEngine.Rendering.FloatRangeParameter
-function UnityEngine.Rendering.FloatRangeParameter.New(value, min, max, overrideState) end
----@param from UnityEngine.Vector2
----@param to UnityEngine.Vector2
----@param t number
-function UnityEngine.Rendering.FloatRangeParameter:Interp(from, to, t) end
-
----@class UnityEngine.Rendering.NoInterpFloatRangeParameter : UnityEngine.Rendering.VolumeParameter
----@field min number
----@field max number
----@field value UnityEngine.Vector2
----@field value UnityEngine.Rendering.NoInterpFloatRangeParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Vector2]
-UnityEngine.Rendering.NoInterpFloatRangeParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpFloatRangeParameter UnityEngine.Rendering.NoInterpFloatRangeParameter
-CS.UnityEngine.Rendering.NoInterpFloatRangeParameter = UnityEngine.Rendering.NoInterpFloatRangeParameter
-
----@param value UnityEngine.Vector2
----@param min number
----@param max number
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpFloatRangeParameter
-function UnityEngine.Rendering.NoInterpFloatRangeParameter.New(value, min, max, overrideState) end
-
----@class UnityEngine.Rendering.ColorParameter : UnityEngine.Rendering.VolumeParameter
----@field hdr boolean
----@field showAlpha boolean
----@field showEyeDropper boolean
----@field value UnityEngine.Rendering.ColorParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Color]
-UnityEngine.Rendering.ColorParameter = {}
----@alias CS.UnityEngine.Rendering.ColorParameter UnityEngine.Rendering.ColorParameter
-CS.UnityEngine.Rendering.ColorParameter = UnityEngine.Rendering.ColorParameter
-
----@overload fun(value: UnityEngine.Color, overrideState: boolean) : UnityEngine.Rendering.ColorParameter
----@param value UnityEngine.Color
----@param hdr boolean
----@param showAlpha boolean
----@param showEyeDropper boolean
----@param overrideState boolean
----@return UnityEngine.Rendering.ColorParameter
-function UnityEngine.Rendering.ColorParameter.New(value, hdr, showAlpha, showEyeDropper, overrideState) end
----@param from UnityEngine.Color
----@param to UnityEngine.Color
----@param t number
-function UnityEngine.Rendering.ColorParameter:Interp(from, to, t) end
-
----@class UnityEngine.Rendering.NoInterpColorParameter : UnityEngine.Rendering.VolumeParameter
----@field hdr boolean
----@field showAlpha boolean
----@field showEyeDropper boolean
----@field value UnityEngine.Rendering.NoInterpColorParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Color]
-UnityEngine.Rendering.NoInterpColorParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpColorParameter UnityEngine.Rendering.NoInterpColorParameter
-CS.UnityEngine.Rendering.NoInterpColorParameter = UnityEngine.Rendering.NoInterpColorParameter
-
----@overload fun(value: UnityEngine.Color, overrideState: boolean) : UnityEngine.Rendering.NoInterpColorParameter
----@param value UnityEngine.Color
----@param hdr boolean
----@param showAlpha boolean
----@param showEyeDropper boolean
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpColorParameter
-function UnityEngine.Rendering.NoInterpColorParameter.New(value, hdr, showAlpha, showEyeDropper, overrideState) end
-
----@class UnityEngine.Rendering.Vector2Parameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.Vector2Parameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Vector2]
-UnityEngine.Rendering.Vector2Parameter = {}
----@alias CS.UnityEngine.Rendering.Vector2Parameter UnityEngine.Rendering.Vector2Parameter
-CS.UnityEngine.Rendering.Vector2Parameter = UnityEngine.Rendering.Vector2Parameter
-
----@param value UnityEngine.Vector2
----@param overrideState boolean
----@return UnityEngine.Rendering.Vector2Parameter
-function UnityEngine.Rendering.Vector2Parameter.New(value, overrideState) end
----@param from UnityEngine.Vector2
----@param to UnityEngine.Vector2
----@param t number
-function UnityEngine.Rendering.Vector2Parameter:Interp(from, to, t) end
-
----@class UnityEngine.Rendering.NoInterpVector2Parameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.NoInterpVector2Parameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Vector2]
-UnityEngine.Rendering.NoInterpVector2Parameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpVector2Parameter UnityEngine.Rendering.NoInterpVector2Parameter
-CS.UnityEngine.Rendering.NoInterpVector2Parameter = UnityEngine.Rendering.NoInterpVector2Parameter
-
----@param value UnityEngine.Vector2
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpVector2Parameter
-function UnityEngine.Rendering.NoInterpVector2Parameter.New(value, overrideState) end
-
----@class UnityEngine.Rendering.Vector3Parameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.Vector3Parameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Vector3]
-UnityEngine.Rendering.Vector3Parameter = {}
----@alias CS.UnityEngine.Rendering.Vector3Parameter UnityEngine.Rendering.Vector3Parameter
-CS.UnityEngine.Rendering.Vector3Parameter = UnityEngine.Rendering.Vector3Parameter
-
----@param value UnityEngine.Vector3
----@param overrideState boolean
----@return UnityEngine.Rendering.Vector3Parameter
-function UnityEngine.Rendering.Vector3Parameter.New(value, overrideState) end
----@param from UnityEngine.Vector3
----@param to UnityEngine.Vector3
----@param t number
-function UnityEngine.Rendering.Vector3Parameter:Interp(from, to, t) end
-
----@class UnityEngine.Rendering.NoInterpVector3Parameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.NoInterpVector3Parameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Vector3]
-UnityEngine.Rendering.NoInterpVector3Parameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpVector3Parameter UnityEngine.Rendering.NoInterpVector3Parameter
-CS.UnityEngine.Rendering.NoInterpVector3Parameter = UnityEngine.Rendering.NoInterpVector3Parameter
-
----@param value UnityEngine.Vector3
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpVector3Parameter
-function UnityEngine.Rendering.NoInterpVector3Parameter.New(value, overrideState) end
-
----@class UnityEngine.Rendering.Vector4Parameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.Vector4Parameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Vector4]
-UnityEngine.Rendering.Vector4Parameter = {}
----@alias CS.UnityEngine.Rendering.Vector4Parameter UnityEngine.Rendering.Vector4Parameter
-CS.UnityEngine.Rendering.Vector4Parameter = UnityEngine.Rendering.Vector4Parameter
-
----@param value UnityEngine.Vector4
----@param overrideState boolean
----@return UnityEngine.Rendering.Vector4Parameter
-function UnityEngine.Rendering.Vector4Parameter.New(value, overrideState) end
----@param from UnityEngine.Vector4
----@param to UnityEngine.Vector4
----@param t number
-function UnityEngine.Rendering.Vector4Parameter:Interp(from, to, t) end
-
----@class UnityEngine.Rendering.NoInterpVector4Parameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.NoInterpVector4Parameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Vector4]
-UnityEngine.Rendering.NoInterpVector4Parameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpVector4Parameter UnityEngine.Rendering.NoInterpVector4Parameter
-CS.UnityEngine.Rendering.NoInterpVector4Parameter = UnityEngine.Rendering.NoInterpVector4Parameter
-
----@param value UnityEngine.Vector4
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpVector4Parameter
-function UnityEngine.Rendering.NoInterpVector4Parameter.New(value, overrideState) end
-
----@class UnityEngine.Rendering.TextureParameter : UnityEngine.Rendering.VolumeParameter
----@field dimension UnityEngine.Rendering.TextureDimension
----@field value UnityEngine.Rendering.TextureParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Texture]
-UnityEngine.Rendering.TextureParameter = {}
----@alias CS.UnityEngine.Rendering.TextureParameter UnityEngine.Rendering.TextureParameter
-CS.UnityEngine.Rendering.TextureParameter = UnityEngine.Rendering.TextureParameter
-
----@overload fun(value: UnityEngine.Texture, overrideState: boolean) : UnityEngine.Rendering.TextureParameter
----@param value UnityEngine.Texture
----@param dimension UnityEngine.Rendering.TextureDimension
----@param overrideState boolean
----@return UnityEngine.Rendering.TextureParameter
-function UnityEngine.Rendering.TextureParameter.New(value, dimension, overrideState) end
----@return number
-function UnityEngine.Rendering.TextureParameter:GetHashCode() end
-
----@class UnityEngine.Rendering.NoInterpTextureParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.NoInterpTextureParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Texture]
-UnityEngine.Rendering.NoInterpTextureParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpTextureParameter UnityEngine.Rendering.NoInterpTextureParameter
-CS.UnityEngine.Rendering.NoInterpTextureParameter = UnityEngine.Rendering.NoInterpTextureParameter
-
----@param value UnityEngine.Texture
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpTextureParameter
-function UnityEngine.Rendering.NoInterpTextureParameter.New(value, overrideState) end
----@return number
-function UnityEngine.Rendering.NoInterpTextureParameter:GetHashCode() end
-
----@class UnityEngine.Rendering.Texture2DParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.Texture2DParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Texture]
-UnityEngine.Rendering.Texture2DParameter = {}
----@alias CS.UnityEngine.Rendering.Texture2DParameter UnityEngine.Rendering.Texture2DParameter
-CS.UnityEngine.Rendering.Texture2DParameter = UnityEngine.Rendering.Texture2DParameter
-
----@param value UnityEngine.Texture
----@param overrideState boolean
----@return UnityEngine.Rendering.Texture2DParameter
-function UnityEngine.Rendering.Texture2DParameter.New(value, overrideState) end
----@return number
-function UnityEngine.Rendering.Texture2DParameter:GetHashCode() end
-
----@class UnityEngine.Rendering.Texture3DParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.Texture3DParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Texture]
-UnityEngine.Rendering.Texture3DParameter = {}
----@alias CS.UnityEngine.Rendering.Texture3DParameter UnityEngine.Rendering.Texture3DParameter
-CS.UnityEngine.Rendering.Texture3DParameter = UnityEngine.Rendering.Texture3DParameter
-
----@param value UnityEngine.Texture
----@param overrideState boolean
----@return UnityEngine.Rendering.Texture3DParameter
-function UnityEngine.Rendering.Texture3DParameter.New(value, overrideState) end
----@return number
-function UnityEngine.Rendering.Texture3DParameter:GetHashCode() end
-
----@class UnityEngine.Rendering.RenderTextureParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.RenderTextureParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.RenderTexture]
-UnityEngine.Rendering.RenderTextureParameter = {}
----@alias CS.UnityEngine.Rendering.RenderTextureParameter UnityEngine.Rendering.RenderTextureParameter
-CS.UnityEngine.Rendering.RenderTextureParameter = UnityEngine.Rendering.RenderTextureParameter
-
----@param value UnityEngine.RenderTexture
----@param overrideState boolean
----@return UnityEngine.Rendering.RenderTextureParameter
-function UnityEngine.Rendering.RenderTextureParameter.New(value, overrideState) end
----@return number
-function UnityEngine.Rendering.RenderTextureParameter:GetHashCode() end
-
----@class UnityEngine.Rendering.NoInterpRenderTextureParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.NoInterpRenderTextureParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.RenderTexture]
-UnityEngine.Rendering.NoInterpRenderTextureParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpRenderTextureParameter UnityEngine.Rendering.NoInterpRenderTextureParameter
-CS.UnityEngine.Rendering.NoInterpRenderTextureParameter = UnityEngine.Rendering.NoInterpRenderTextureParameter
-
----@param value UnityEngine.RenderTexture
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpRenderTextureParameter
-function UnityEngine.Rendering.NoInterpRenderTextureParameter.New(value, overrideState) end
----@return number
-function UnityEngine.Rendering.NoInterpRenderTextureParameter:GetHashCode() end
-
----@class UnityEngine.Rendering.CubemapParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.CubemapParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Texture]
-UnityEngine.Rendering.CubemapParameter = {}
----@alias CS.UnityEngine.Rendering.CubemapParameter UnityEngine.Rendering.CubemapParameter
-CS.UnityEngine.Rendering.CubemapParameter = UnityEngine.Rendering.CubemapParameter
-
----@param value UnityEngine.Texture
----@param overrideState boolean
----@return UnityEngine.Rendering.CubemapParameter
-function UnityEngine.Rendering.CubemapParameter.New(value, overrideState) end
----@return number
-function UnityEngine.Rendering.CubemapParameter:GetHashCode() end
-
----@class UnityEngine.Rendering.NoInterpCubemapParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.NoInterpCubemapParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Cubemap]
-UnityEngine.Rendering.NoInterpCubemapParameter = {}
----@alias CS.UnityEngine.Rendering.NoInterpCubemapParameter UnityEngine.Rendering.NoInterpCubemapParameter
-CS.UnityEngine.Rendering.NoInterpCubemapParameter = UnityEngine.Rendering.NoInterpCubemapParameter
-
----@param value UnityEngine.Cubemap
----@param overrideState boolean
----@return UnityEngine.Rendering.NoInterpCubemapParameter
-function UnityEngine.Rendering.NoInterpCubemapParameter.New(value, overrideState) end
----@return number
-function UnityEngine.Rendering.NoInterpCubemapParameter:GetHashCode() end
-
----@class UnityEngine.Rendering.ObjectParameter : UnityEngine.Rendering.VolumeParameter[T]
----@field overrideState boolean
----@field value T
-UnityEngine.Rendering.ObjectParameter = {}
----@alias CS.UnityEngine.Rendering.ObjectParameter UnityEngine.Rendering.ObjectParameter
-CS.UnityEngine.Rendering.ObjectParameter = UnityEngine.Rendering.ObjectParameter
-
----@param value T
----@return UnityEngine.Rendering.ObjectParameter
-function UnityEngine.Rendering.ObjectParameter.New(value) end
-
----@class UnityEngine.Rendering.AnimationCurveParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.AnimationCurveParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.AnimationCurve]
-UnityEngine.Rendering.AnimationCurveParameter = {}
----@alias CS.UnityEngine.Rendering.AnimationCurveParameter UnityEngine.Rendering.AnimationCurveParameter
-CS.UnityEngine.Rendering.AnimationCurveParameter = UnityEngine.Rendering.AnimationCurveParameter
-
----@param value UnityEngine.AnimationCurve
----@param overrideState boolean
----@return UnityEngine.Rendering.AnimationCurveParameter
-function UnityEngine.Rendering.AnimationCurveParameter.New(value, overrideState) end
----@param lhsCurve UnityEngine.AnimationCurve
----@param rhsCurve UnityEngine.AnimationCurve
----@param t number
-function UnityEngine.Rendering.AnimationCurveParameter:Interp(lhsCurve, rhsCurve, t) end
----@param parameter UnityEngine.Rendering.VolumeParameter
-function UnityEngine.Rendering.AnimationCurveParameter:SetValue(parameter) end
----@return System.Object
-function UnityEngine.Rendering.AnimationCurveParameter:Clone() end
----@return number
-function UnityEngine.Rendering.AnimationCurveParameter:GetHashCode() end
-
----@class UnityEngine.Rendering.MaterialParameter : UnityEngine.Rendering.VolumeParameter
----@field value UnityEngine.Rendering.MaterialParameter -- infered from UnityEngine.Rendering.VolumeParameter`1[UnityEngine.Material]
-UnityEngine.Rendering.MaterialParameter = {}
----@alias CS.UnityEngine.Rendering.MaterialParameter UnityEngine.Rendering.MaterialParameter
-CS.UnityEngine.Rendering.MaterialParameter = UnityEngine.Rendering.MaterialParameter
-
----@param value UnityEngine.Material
----@param overrideState boolean
----@return UnityEngine.Rendering.MaterialParameter
-function UnityEngine.Rendering.MaterialParameter.New(value, overrideState) end
-
----@class UnityEngine.Rendering.VolumeProfile : UnityEngine.ScriptableObject
----@field components System.Collections.Generic.List
-UnityEngine.Rendering.VolumeProfile = {}
----@alias CS.UnityEngine.Rendering.VolumeProfile UnityEngine.Rendering.VolumeProfile
-CS.UnityEngine.Rendering.VolumeProfile = UnityEngine.Rendering.VolumeProfile
-
----@return UnityEngine.Rendering.VolumeProfile
-function UnityEngine.Rendering.VolumeProfile.New() end
-function UnityEngine.Rendering.VolumeProfile:Reset() end
----@param type System.Type
----@param overrides boolean
----@return UnityEngine.Rendering.VolumeComponent
-function UnityEngine.Rendering.VolumeProfile:Add(type, overrides) end
----@param type System.Type
-function UnityEngine.Rendering.VolumeProfile:Remove(type) end
----@param type System.Type
----@return boolean
-function UnityEngine.Rendering.VolumeProfile:Has(type) end
----@param type System.Type
----@return boolean
-function UnityEngine.Rendering.VolumeProfile:HasSubclassOf(type) end
----@return number
-function UnityEngine.Rendering.VolumeProfile:GetHashCode() end
-
----@class UnityEngine.Rendering.VolumeStack : System.Object
----@field isValid boolean
-UnityEngine.Rendering.VolumeStack = {}
----@alias CS.UnityEngine.Rendering.VolumeStack UnityEngine.Rendering.VolumeStack
-CS.UnityEngine.Rendering.VolumeStack = UnityEngine.Rendering.VolumeStack
-
----@param type System.Type
----@return UnityEngine.Rendering.VolumeComponent
-function UnityEngine.Rendering.VolumeStack:GetComponent(type) end
-function UnityEngine.Rendering.VolumeStack:Dispose() end
-
----@class UnityEngine.Rendering.Vrs : System.Object
-UnityEngine.Rendering.Vrs = {}
----@alias CS.UnityEngine.Rendering.Vrs UnityEngine.Rendering.Vrs
-CS.UnityEngine.Rendering.Vrs = UnityEngine.Rendering.Vrs
-
----@return boolean
-function UnityEngine.Rendering.Vrs.IsColorMaskTextureConversionSupported() end
----@return boolean
-function UnityEngine.Rendering.Vrs.IsInitialized() end
-function UnityEngine.Rendering.Vrs.InitializeResources() end
-function UnityEngine.Rendering.Vrs.DisposeResources() end
----@overload fun(renderGraph: UnityEngine.Rendering.RenderGraphModule.RenderGraph, sriRtHandle: UnityEngine.Rendering.RTHandle, colorMaskRtHandle: UnityEngine.Rendering.RTHandle, yFlip: boolean) : UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
----@param sriTextureHandle UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param colorMaskHandle UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param colorMaskDimension UnityEngine.Rendering.TextureDimension
----@param yFlip boolean
----@return UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.Vrs.ColorMaskTextureToShadingRateImage(renderGraph, sriTextureHandle, colorMaskHandle, colorMaskDimension, yFlip) end
----@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
----@param ref_sriTextureHandle UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param ref_colorMaskHandle UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.Vrs.ShadingRateImageToColorMaskTexture(renderGraph, ref_sriTextureHandle, ref_colorMaskHandle) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param sriDestination UnityEngine.Rendering.RTHandle
----@param colorMaskSource UnityEngine.Texture
----@param yFlip boolean
-function UnityEngine.Rendering.Vrs.ColorMaskTextureToShadingRateImageDispatch(cmd, sriDestination, colorMaskSource, yFlip) end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param sriSource UnityEngine.Rendering.RTHandle
----@param colorMaskDestination UnityEngine.Rendering.RTHandle
-function UnityEngine.Rendering.Vrs.ShadingRateImageToColorMaskTextureBlit(cmd, sriSource, colorMaskDestination) end
-
----@class UnityEngine.Rendering.VrsLut : System.Object
----@field Item UnityEngine.Color
-UnityEngine.Rendering.VrsLut = {}
----@alias CS.UnityEngine.Rendering.VrsLut UnityEngine.Rendering.VrsLut
-CS.UnityEngine.Rendering.VrsLut = UnityEngine.Rendering.VrsLut
-
----@return UnityEngine.Rendering.VrsLut
-function UnityEngine.Rendering.VrsLut.New() end
----@return UnityEngine.Rendering.VrsLut
-function UnityEngine.Rendering.VrsLut.CreateDefault() end
----@param forVisualization boolean
----@return UnityEngine.GraphicsBuffer
-function UnityEngine.Rendering.VrsLut:CreateBuffer(forVisualization) end
-
----@class UnityEngine.Rendering.VrsRenderPipelineRuntimeResources : System.Object
----@field version number
----@field textureComputeShader UnityEngine.ComputeShader
----@field visualizationShader UnityEngine.Shader
----@field visualizationLookupTable UnityEngine.Rendering.VrsLut
----@field conversionLookupTable UnityEngine.Rendering.VrsLut
-UnityEngine.Rendering.VrsRenderPipelineRuntimeResources = {}
----@alias CS.UnityEngine.Rendering.VrsRenderPipelineRuntimeResources UnityEngine.Rendering.VrsRenderPipelineRuntimeResources
-CS.UnityEngine.Rendering.VrsRenderPipelineRuntimeResources = UnityEngine.Rendering.VrsRenderPipelineRuntimeResources
-
----@return UnityEngine.Rendering.VrsRenderPipelineRuntimeResources
-function UnityEngine.Rendering.VrsRenderPipelineRuntimeResources.New() end
-
----@class UnityEngine.Rendering.VrsResources : System.Object
-UnityEngine.Rendering.VrsResources = {}
----@alias CS.UnityEngine.Rendering.VrsResources UnityEngine.Rendering.VrsResources
-CS.UnityEngine.Rendering.VrsResources = UnityEngine.Rendering.VrsResources
-
-function UnityEngine.Rendering.VrsResources:Dispose() end
-
----@class UnityEngine.Rendering.VrsShaders : System.Object
-UnityEngine.Rendering.VrsShaders = {}
----@alias CS.UnityEngine.Rendering.VrsShaders UnityEngine.Rendering.VrsShaders
-CS.UnityEngine.Rendering.VrsShaders = UnityEngine.Rendering.VrsShaders
-
-
----@class UnityEngine.Rendering.XRGraphicsAutomatedTests : System.Object
----@field running boolean
----@field enabled boolean
-UnityEngine.Rendering.XRGraphicsAutomatedTests = {}
----@alias CS.UnityEngine.Rendering.XRGraphicsAutomatedTests UnityEngine.Rendering.XRGraphicsAutomatedTests
-CS.UnityEngine.Rendering.XRGraphicsAutomatedTests = UnityEngine.Rendering.XRGraphicsAutomatedTests
-
-
----@class UnityEngine.Rendering.XRSRPSettings : System.Object
----@field tryEnable boolean
----@field enabled boolean
----@field isDeviceActive boolean
----@field loadedDeviceName string
----@field supportedDevices System.String[]
----@field eyeTextureDesc UnityEngine.RenderTextureDescriptor
----@field eyeTextureWidth number
----@field eyeTextureHeight number
----@field occlusionMeshScale number
----@field useVisibilityMesh boolean
----@field mirrorViewMode number
-UnityEngine.Rendering.XRSRPSettings = {}
----@alias CS.UnityEngine.Rendering.XRSRPSettings UnityEngine.Rendering.XRSRPSettings
-CS.UnityEngine.Rendering.XRSRPSettings = UnityEngine.Rendering.XRSRPSettings
-
----@return UnityEngine.Rendering.XRSRPSettings
-function UnityEngine.Rendering.XRSRPSettings.New() end
-
----@class UnityEngine.Rendering.Universal.CullContextData : UnityEngine.Rendering.ContextItem
-UnityEngine.Rendering.Universal.CullContextData = {}
----@alias CS.UnityEngine.Rendering.Universal.CullContextData UnityEngine.Rendering.Universal.CullContextData
-CS.UnityEngine.Rendering.Universal.CullContextData = UnityEngine.Rendering.Universal.CullContextData
-
----@return UnityEngine.Rendering.Universal.CullContextData
-function UnityEngine.Rendering.Universal.CullContextData.New() end
-function UnityEngine.Rendering.Universal.CullContextData:Reset() end
----@param ref_renderContext UnityEngine.Rendering.ScriptableRenderContext
----@return ,UnityEngine.Rendering.ScriptableRenderContext
-function UnityEngine.Rendering.Universal.CullContextData:SetRenderContext(ref_renderContext) end
----@param ref_parameters UnityEngine.Rendering.ScriptableCullingParameters
----@return UnityEngine.Rendering.CullingResults,UnityEngine.Rendering.ScriptableCullingParameters
-function UnityEngine.Rendering.Universal.CullContextData:Cull(ref_parameters) end
----@param cullingResults UnityEngine.Rendering.CullingResults
----@param shadowCastersCullingInfos UnityEngine.Rendering.ShadowCastersCullingInfos
-function UnityEngine.Rendering.Universal.CullContextData:CullShadowCasters(cullingResults, shadowCastersCullingInfos) end
-
----@class UnityEngine.Rendering.Sampling.SamplingResources : System.Object
----@field sobolMatrices System.UInt32[]
-UnityEngine.Rendering.Sampling.SamplingResources = {}
----@alias CS.UnityEngine.Rendering.Sampling.SamplingResources UnityEngine.Rendering.Sampling.SamplingResources
-CS.UnityEngine.Rendering.Sampling.SamplingResources = UnityEngine.Rendering.Sampling.SamplingResources
-
----@return UnityEngine.Rendering.Sampling.SamplingResources
-function UnityEngine.Rendering.Sampling.SamplingResources.New() end
----@param cmd UnityEngine.Rendering.CommandBuffer
----@param resources UnityEngine.Rendering.Sampling.SamplingResources
-function UnityEngine.Rendering.Sampling.SamplingResources.Bind(cmd, resources) end
----@param resourceBitmask number
-function UnityEngine.Rendering.Sampling.SamplingResources:Load(resourceBitmask) end
-function UnityEngine.Rendering.Sampling.SamplingResources:Dispose() end
-
----@class UnityEngine.Rendering.Sampling.SobolData : System.Object
----@field SobolDims number
----@field SobolSize number
----@field SobolMatrices System.UInt32[]
-UnityEngine.Rendering.Sampling.SobolData = {}
----@alias CS.UnityEngine.Rendering.Sampling.SobolData UnityEngine.Rendering.Sampling.SobolData
-CS.UnityEngine.Rendering.Sampling.SobolData = UnityEngine.Rendering.Sampling.SobolData
-
-
----@class UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler : UnityEngine.ScriptableObject
-UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler
-CS.UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler = UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler
-
----@return UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler
-function UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler.New() end
----@param callback System.Action
-function UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler:Register(callback) end
-function UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler:UnregisterAll() end
----@param messageType UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler.MessageType
----@param payload UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler.IPayload
-function UnityEngine.Rendering.RenderGraphModule.DebugMessageHandler:Send(messageType, payload) end
-
----@class UnityEngine.Rendering.RenderGraphModule.RenderGraph : System.Object
----@field kMaxMRTCount number
----@field isRenderGraphViewerActive boolean
----@field nativeRenderPassesEnabled boolean
----@field name string
----@field renderTextureUVOriginStrategy UnityEngine.Rendering.RenderGraphModule.RenderTextureUVOriginStrategy
----@field defaultResources UnityEngine.Rendering.RenderGraphModule.RenderGraphDefaultResources
-UnityEngine.Rendering.RenderGraphModule.RenderGraph = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.RenderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
-CS.UnityEngine.Rendering.RenderGraphModule.RenderGraph = UnityEngine.Rendering.RenderGraphModule.RenderGraph
-
----@param name string
----@return UnityEngine.Rendering.RenderGraphModule.RenderGraph
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph.New(name) end
----@return System.Collections.Generic.List
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph.GetRegisteredRenderGraphs() end
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:Cleanup() end
----@param panel UnityEngine.Rendering.DebugUI.Panel
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:RegisterDebug(panel) end
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:UnRegisterDebug() end
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:EndFrame() end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.RenderGraph, rt: UnityEngine.Rendering.RTHandle) : UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.RenderGraph, rt: UnityEngine.Rendering.RTHandle, importParams: UnityEngine.Rendering.RenderGraphModule.ImportResourceParams) : UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param rt UnityEngine.Rendering.RTHandle
----@param info UnityEngine.Rendering.RenderGraphModule.RenderTargetInfo
----@param importParams UnityEngine.Rendering.RenderGraphModule.ImportResourceParams
----@return UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:ImportTexture(rt, info, importParams) end
----@param rt UnityEngine.Rendering.RTHandle
----@return UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:ImportShadingRateImageTexture(rt) end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.RenderGraph, rt: UnityEngine.Rendering.RenderTargetIdentifier, info: UnityEngine.Rendering.RenderGraphModule.RenderTargetInfo, importParams: UnityEngine.Rendering.RenderGraphModule.ImportResourceParams) : UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param rt UnityEngine.Rendering.RenderTargetIdentifier
----@return UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:ImportBackbuffer(rt) end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.RenderGraph, ref_desc: UnityEngine.Rendering.RenderGraphModule.TextureDesc) : UnityEngine.Rendering.RenderGraphModule.TextureHandle, UnityEngine.Rendering.RenderGraphModule.TextureDesc
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.RenderGraph, texture: UnityEngine.Rendering.RenderGraphModule.TextureHandle) : UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param texture UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param name string
----@param clear boolean
----@return UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:CreateTexture(texture, name, clear) end
----@param ref_desc UnityEngine.Rendering.RenderGraphModule.TextureDesc
----@param ref_texture UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@return ,UnityEngine.Rendering.RenderGraphModule.TextureDesc,UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:CreateTextureIfInvalid(ref_desc, ref_texture) end
----@param ref_texture UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@return UnityEngine.Rendering.RenderGraphModule.TextureDesc,UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:GetTextureDesc(ref_texture) end
----@param texture UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@return UnityEngine.Rendering.RenderGraphModule.RenderTargetInfo
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:GetRenderTargetInfo(texture) end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.RenderGraph, ref_desc: UnityEngine.Rendering.RendererUtils.RendererListDesc) : UnityEngine.Rendering.RenderGraphModule.RendererListHandle, UnityEngine.Rendering.RendererUtils.RendererListDesc
----@param ref_desc UnityEngine.Rendering.RendererListParams
----@return UnityEngine.Rendering.RenderGraphModule.RendererListHandle,UnityEngine.Rendering.RendererListParams
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:CreateRendererList(ref_desc) end
----@param ref_shadowDrawingSettings UnityEngine.Rendering.ShadowDrawingSettings
----@return UnityEngine.Rendering.RenderGraphModule.RendererListHandle,UnityEngine.Rendering.ShadowDrawingSettings
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:CreateShadowRendererList(ref_shadowDrawingSettings) end
----@param ref_camera UnityEngine.Camera
----@param ref_gizmoSubset UnityEngine.Rendering.GizmoSubset
----@return UnityEngine.Rendering.RenderGraphModule.RendererListHandle,UnityEngine.Camera,UnityEngine.Rendering.GizmoSubset
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:CreateGizmoRendererList(ref_camera, ref_gizmoSubset) end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.RenderGraph, ref_camera: UnityEngine.Camera) : UnityEngine.Rendering.RenderGraphModule.RendererListHandle, UnityEngine.Camera
----@param ref_camera UnityEngine.Camera
----@param ref_uiSubset UnityEngine.Rendering.UISubset
----@return UnityEngine.Rendering.RenderGraphModule.RendererListHandle,UnityEngine.Camera,UnityEngine.Rendering.UISubset
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:CreateUIOverlayRendererList(ref_camera, ref_uiSubset) end
----@param ref_camera UnityEngine.Camera
----@return UnityEngine.Rendering.RenderGraphModule.RendererListHandle,UnityEngine.Camera
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:CreateWireOverlayRendererList(ref_camera) end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.RenderGraph, ref_camera: UnityEngine.Camera) : UnityEngine.Rendering.RenderGraphModule.RendererListHandle, UnityEngine.Camera
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.RenderGraph, ref_camera: UnityEngine.Camera, projectionMatrix: UnityEngine.Matrix4x4, viewMatrix: UnityEngine.Matrix4x4) : UnityEngine.Rendering.RenderGraphModule.RendererListHandle, UnityEngine.Camera
----@param ref_camera UnityEngine.Camera
----@param projectionMatrixL UnityEngine.Matrix4x4
----@param viewMatrixL UnityEngine.Matrix4x4
----@param projectionMatrixR UnityEngine.Matrix4x4
----@param viewMatrixR UnityEngine.Matrix4x4
----@return UnityEngine.Rendering.RenderGraphModule.RendererListHandle,UnityEngine.Camera
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:CreateSkyboxRendererList(ref_camera, projectionMatrixL, viewMatrixL, projectionMatrixR, viewMatrixR) end
----@param graphicsBuffer UnityEngine.GraphicsBuffer
----@return UnityEngine.Rendering.RenderGraphModule.BufferHandle
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:ImportBuffer(graphicsBuffer) end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.RenderGraph, ref_desc: UnityEngine.Rendering.RenderGraphModule.BufferDesc) : UnityEngine.Rendering.RenderGraphModule.BufferHandle, UnityEngine.Rendering.RenderGraphModule.BufferDesc
----@param ref_graphicsBuffer UnityEngine.Rendering.RenderGraphModule.BufferHandle
----@return UnityEngine.Rendering.RenderGraphModule.BufferHandle,UnityEngine.Rendering.RenderGraphModule.BufferHandle
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:CreateBuffer(ref_graphicsBuffer) end
----@param ref_graphicsBuffer UnityEngine.Rendering.RenderGraphModule.BufferHandle
----@return UnityEngine.Rendering.RenderGraphModule.BufferDesc,UnityEngine.Rendering.RenderGraphModule.BufferHandle
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:GetBufferDesc(ref_graphicsBuffer) end
----@param ref_accelStruct UnityEngine.Rendering.RayTracingAccelerationStructure
----@param name string
----@return UnityEngine.Rendering.RenderGraphModule.RayTracingAccelerationStructureHandle,UnityEngine.Rendering.RayTracingAccelerationStructure
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:ImportRayTracingAccelerationStructure(ref_accelStruct, name) end
----@param ref_parameters UnityEngine.Rendering.RenderGraphModule.RenderGraphParameters
----@return ,UnityEngine.Rendering.RenderGraphModule.RenderGraphParameters
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:BeginRecording(ref_parameters) end
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:EndRecordingAndExecute() end
----@param e System.Exception
----@return boolean
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:ResetGraphAndLogException(e) end
----@param sampler UnityEngine.Rendering.ProfilingSampler
----@param file string
----@param line number
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:BeginProfilingSampler(sampler, file, line) end
----@param sampler UnityEngine.Rendering.ProfilingSampler
----@param file string
----@param line number
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:EndProfilingSampler(sampler, file, line) end
----@param ref_tex UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@return boolean,UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:IsFramebufferFetchSupportedOnCurrentPlatform(ref_tex) end
----@param source UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@return boolean
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:CanAddCopyPass(source, destination) end
----@param source UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param passName string
----@param returnBuilder boolean
----@param file string
----@param line number
----@return UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:AddCopyPass(source, destination, passName, returnBuilder, file, line) end
----@param source UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param sourceSlice number
----@param destinationSlice number
----@param sourceMip number
----@param destinationMip number
----@param passName string
----@param file string
----@param line number
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:AddCopyPass(source, destination, sourceSlice, destinationSlice, sourceMip, destinationMip, passName, file, line) end
----@param source UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param destination UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param scale UnityEngine.Vector2
----@param offset UnityEngine.Vector2
----@param sourceSlice number
----@param destinationSlice number
----@param numSlices number
----@param sourceMip number
----@param destinationMip number
----@param numMips number
----@param filterMode UnityEngine.Rendering.RenderGraphModule.Util.RenderGraphUtils.BlitFilterMode
----@param passName string
----@param returnBuilder boolean
----@param file string
----@param line number
----@return UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:AddBlitPass(source, destination, scale, offset, sourceSlice, destinationSlice, numSlices, sourceMip, destinationMip, numMips, filterMode, passName, returnBuilder, file, line) end
----@param blitParameters UnityEngine.Rendering.RenderGraphModule.Util.RenderGraphUtils.BlitMaterialParameters
----@param passName string
----@param returnBuilder boolean
----@param file string
----@param line number
----@return UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder
-function UnityEngine.Rendering.RenderGraphModule.RenderGraph:AddBlitPass(blitParameters, passName, returnBuilder, file, line) end
-
----@class UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams : System.Object
----@field clearRenderTargetsAtCreation boolean
----@field clearRenderTargetsAtRelease boolean
----@field disablePassCulling boolean
----@field disablePassMerging boolean
----@field immediateMode boolean
----@field logFrameInformation boolean
----@field logResources boolean
----@field enableLogging boolean
----@field AreAnySettingsActive boolean
-UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams
-CS.UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams = UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams
-
----@return UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams.New() end
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams:ResetLogging() end
----@param name string
----@param debugPanel UnityEngine.Rendering.DebugUI.Panel
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams:RegisterDebug(name, debugPanel) end
----@param name string
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugParams:UnRegisterDebug(name) end
-
----@class UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession : System.Object
----@field hasActiveDebugSession boolean
----@field currentDebugSession UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession
----@field isActive boolean
-UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession
-CS.UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession = UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession
-
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession.EndSession() end
----@return System.Collections.Generic.List
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession.GetRegisteredGraphs() end
----@param graphName string
----@return System.Collections.Generic.List
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession.GetExecutions(graphName) end
----@param renderGraph string
----@param executionId UnityEngine.EntityId
----@return UnityEngine.Rendering.RenderGraphModule.RenderGraph.DebugData
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession.GetDebugData(renderGraph, executionId) end
----@param renderGraph string
----@param executionId UnityEngine.EntityId
----@param data UnityEngine.Rendering.RenderGraphModule.RenderGraph.DebugData
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession.SetDebugData(renderGraph, executionId, data) end
----@param renderGraph string
----@param executionIds System.Collections.Generic.List
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession.DeleteExecutionIds(renderGraph, executionIds) end
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphDebugSession:Dispose() end
-
----@class UnityEngine.Rendering.RenderGraphModule.RenderGraphLogIndent : System.ValueType
-UnityEngine.Rendering.RenderGraphModule.RenderGraphLogIndent = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.RenderGraphLogIndent UnityEngine.Rendering.RenderGraphModule.RenderGraphLogIndent
-CS.UnityEngine.Rendering.RenderGraphModule.RenderGraphLogIndent = UnityEngine.Rendering.RenderGraphModule.RenderGraphLogIndent
-
----@param logger UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger
----@param indentation number
----@return UnityEngine.Rendering.RenderGraphModule.RenderGraphLogIndent
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphLogIndent.New(logger, indentation) end
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphLogIndent:Dispose() end
-
----@class UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger : System.Object
-UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger
-CS.UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger = UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger
-
----@return UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger.New() end
----@param logName string
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger:Initialize(logName) end
----@param value number
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger:IncrementIndentation(value) end
----@param value number
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger:DecrementIndentation(value) end
----@param format string
----@param args System.Object[]
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger:LogLine(format, args) end
-function UnityEngine.Rendering.RenderGraphModule.RenderGraphLogger:FlushLogs() end
-
----@class UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder
-UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder
-CS.UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder = UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder
-
----@param ref_input UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param flags UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:UseTexture(ref_input, flags) end
----@param propertyId number
----@param flags UnityEngine.Rendering.RenderGraphModule.AccessFlags
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:UseGlobalTexture(propertyId, flags) end
----@param enable boolean
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:UseAllGlobalTextures(enable) end
----@param ref_input UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param propertyId number
----@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:SetGlobalTextureAfterPass(ref_input, propertyId) end
----@param ref_input UnityEngine.Rendering.RenderGraphModule.BufferHandle
----@param flags UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@return UnityEngine.Rendering.RenderGraphModule.BufferHandle,UnityEngine.Rendering.RenderGraphModule.BufferHandle
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:UseBuffer(ref_input, flags) end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder, ref_desc: UnityEngine.Rendering.RenderGraphModule.TextureDesc) : UnityEngine.Rendering.RenderGraphModule.TextureHandle, UnityEngine.Rendering.RenderGraphModule.TextureDesc
----@param ref_texture UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@return UnityEngine.Rendering.RenderGraphModule.TextureHandle,UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:CreateTransientTexture(ref_texture) end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder, ref_desc: UnityEngine.Rendering.RenderGraphModule.BufferDesc) : UnityEngine.Rendering.RenderGraphModule.BufferHandle, UnityEngine.Rendering.RenderGraphModule.BufferDesc
----@param ref_computebuffer UnityEngine.Rendering.RenderGraphModule.BufferHandle
----@return UnityEngine.Rendering.RenderGraphModule.BufferHandle,UnityEngine.Rendering.RenderGraphModule.BufferHandle
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:CreateTransientBuffer(ref_computebuffer) end
----@param ref_input UnityEngine.Rendering.RenderGraphModule.RendererListHandle
----@return ,UnityEngine.Rendering.RenderGraphModule.RendererListHandle
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:UseRendererList(ref_input) end
----@param value boolean
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:EnableAsyncCompute(value) end
----@param value boolean
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:AllowPassCulling(value) end
----@param value boolean
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:AllowGlobalStateModification(value) end
----@param value boolean
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:EnableFoveatedRasterization(value) end
----@param value boolean
-function UnityEngine.Rendering.RenderGraphModule.IBaseRenderGraphBuilder:GenerateDebugData(value) end
-
----@class UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder
-UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder
-CS.UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder = UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder
-
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder, tex: UnityEngine.Rendering.RenderGraphModule.TextureHandle, index: number, flags: UnityEngine.Rendering.RenderGraphModule.AccessFlags)
----@param tex UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param index number
----@param flags UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@param mipLevel number
----@param depthSlice number
-function UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder:SetRenderAttachment(tex, index, flags, mipLevel, depthSlice) end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder, tex: UnityEngine.Rendering.RenderGraphModule.TextureHandle, flags: UnityEngine.Rendering.RenderGraphModule.AccessFlags)
----@param tex UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param flags UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@param mipLevel number
----@param depthSlice number
-function UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder:SetRenderAttachmentDepth(tex, flags, mipLevel, depthSlice) end
----@param tex UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param index number
----@param flags UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@return UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder:SetRandomAccessAttachment(tex, index, flags) end
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder, tex: UnityEngine.Rendering.RenderGraphModule.BufferHandle, index: number, flags: UnityEngine.Rendering.RenderGraphModule.AccessFlags) : UnityEngine.Rendering.RenderGraphModule.BufferHandle
----@param tex UnityEngine.Rendering.RenderGraphModule.BufferHandle
----@param index number
----@param preserveCounterValue boolean
----@param flags UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@return UnityEngine.Rendering.RenderGraphModule.BufferHandle
-function UnityEngine.Rendering.RenderGraphModule.IRenderAttachmentRenderGraphBuilder:UseBufferRandomAccess(tex, index, preserveCounterValue, flags) end
-
----@class UnityEngine.Rendering.RenderGraphModule.IComputeRenderGraphBuilder
-UnityEngine.Rendering.RenderGraphModule.IComputeRenderGraphBuilder = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.IComputeRenderGraphBuilder UnityEngine.Rendering.RenderGraphModule.IComputeRenderGraphBuilder
-CS.UnityEngine.Rendering.RenderGraphModule.IComputeRenderGraphBuilder = UnityEngine.Rendering.RenderGraphModule.IComputeRenderGraphBuilder
-
-
----@class UnityEngine.Rendering.RenderGraphModule.IUnsafeRenderGraphBuilder
-UnityEngine.Rendering.RenderGraphModule.IUnsafeRenderGraphBuilder = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.IUnsafeRenderGraphBuilder UnityEngine.Rendering.RenderGraphModule.IUnsafeRenderGraphBuilder
-CS.UnityEngine.Rendering.RenderGraphModule.IUnsafeRenderGraphBuilder = UnityEngine.Rendering.RenderGraphModule.IUnsafeRenderGraphBuilder
-
-
----@class UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder
-UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder
-CS.UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder = UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder
-
----@overload fun(self: UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder, tex: UnityEngine.Rendering.RenderGraphModule.TextureHandle, index: number, flags: UnityEngine.Rendering.RenderGraphModule.AccessFlags)
----@param tex UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@param index number
----@param flags UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@param mipLevel number
----@param depthSlice number
-function UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder:SetInputAttachment(tex, index, flags, mipLevel, depthSlice) end
----@param ref_tex UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@return ,UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder:SetShadingRateImageAttachment(ref_tex) end
----@param shadingRateFragmentSize UnityEngine.Rendering.ShadingRateFragmentSize
-function UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder:SetShadingRateFragmentSize(shadingRateFragmentSize) end
----@param stage UnityEngine.Rendering.ShadingRateCombinerStage
----@param combiner UnityEngine.Rendering.ShadingRateCombiner
-function UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder:SetShadingRateCombiner(stage, combiner) end
----@param extendedFeatureFlags UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags
-function UnityEngine.Rendering.RenderGraphModule.IRasterRenderGraphBuilder:SetExtendedFeatureFlags(extendedFeatureFlags) end
-
----@class UnityEngine.Rendering.RenderGraphModule.IRenderGraphEnabledRenderPipeline
----@field isImmediateModeSupported boolean
-UnityEngine.Rendering.RenderGraphModule.IRenderGraphEnabledRenderPipeline = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.IRenderGraphEnabledRenderPipeline UnityEngine.Rendering.RenderGraphModule.IRenderGraphEnabledRenderPipeline
-CS.UnityEngine.Rendering.RenderGraphModule.IRenderGraphEnabledRenderPipeline = UnityEngine.Rendering.RenderGraphModule.IRenderGraphEnabledRenderPipeline
-
-
----@class UnityEngine.Rendering.RenderGraphModule.IRenderGraphRecorder
-UnityEngine.Rendering.RenderGraphModule.IRenderGraphRecorder = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.IRenderGraphRecorder UnityEngine.Rendering.RenderGraphModule.IRenderGraphRecorder
-CS.UnityEngine.Rendering.RenderGraphModule.IRenderGraphRecorder = UnityEngine.Rendering.RenderGraphModule.IRenderGraphRecorder
-
----@param renderGraph UnityEngine.Rendering.RenderGraphModule.RenderGraph
----@param frameData UnityEngine.Rendering.ContextContainer
-function UnityEngine.Rendering.RenderGraphModule.IRenderGraphRecorder:RecordRenderGraph(renderGraph, frameData) end
-
----@class UnityEngine.Rendering.RenderGraphModule.DepthAccess
----@field Read UnityEngine.Rendering.RenderGraphModule.DepthAccess
----@field Write UnityEngine.Rendering.RenderGraphModule.DepthAccess
----@field ReadWrite UnityEngine.Rendering.RenderGraphModule.DepthAccess
-UnityEngine.Rendering.RenderGraphModule.DepthAccess = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.DepthAccess UnityEngine.Rendering.RenderGraphModule.DepthAccess
-CS.UnityEngine.Rendering.RenderGraphModule.DepthAccess = UnityEngine.Rendering.RenderGraphModule.DepthAccess
-
-
----@class UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@field None UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@field Read UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@field Write UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@field Discard UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@field WriteAll UnityEngine.Rendering.RenderGraphModule.AccessFlags
----@field ReadWrite UnityEngine.Rendering.RenderGraphModule.AccessFlags
-UnityEngine.Rendering.RenderGraphModule.AccessFlags = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.AccessFlags UnityEngine.Rendering.RenderGraphModule.AccessFlags
-CS.UnityEngine.Rendering.RenderGraphModule.AccessFlags = UnityEngine.Rendering.RenderGraphModule.AccessFlags
-
-
----@class UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags
----@field None UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags
----@field TileProperties UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags
----@field MultiviewRenderRegionsCompatible UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags
----@field MultisampledShaderResolve UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags
-UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags
-CS.UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags = UnityEngine.Rendering.RenderGraphModule.ExtendedFeatureFlags
-
-
----@class UnityEngine.Rendering.RenderGraphModule.RenderGraphState
----@field Idle UnityEngine.Rendering.RenderGraphModule.RenderGraphState
----@field RecordingGraph UnityEngine.Rendering.RenderGraphModule.RenderGraphState
----@field RecordingPass UnityEngine.Rendering.RenderGraphModule.RenderGraphState
----@field Executing UnityEngine.Rendering.RenderGraphModule.RenderGraphState
----@field Active UnityEngine.Rendering.RenderGraphModule.RenderGraphState
-UnityEngine.Rendering.RenderGraphModule.RenderGraphState = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.RenderGraphState UnityEngine.Rendering.RenderGraphModule.RenderGraphState
-CS.UnityEngine.Rendering.RenderGraphModule.RenderGraphState = UnityEngine.Rendering.RenderGraphModule.RenderGraphState
-
-
----@class UnityEngine.Rendering.RenderGraphModule.RenderTextureUVOriginStrategy
----@field BottomLeft UnityEngine.Rendering.RenderGraphModule.RenderTextureUVOriginStrategy
----@field PropagateAttachmentOrientation UnityEngine.Rendering.RenderGraphModule.RenderTextureUVOriginStrategy
-UnityEngine.Rendering.RenderGraphModule.RenderTextureUVOriginStrategy = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.RenderTextureUVOriginStrategy UnityEngine.Rendering.RenderGraphModule.RenderTextureUVOriginStrategy
-CS.UnityEngine.Rendering.RenderGraphModule.RenderTextureUVOriginStrategy = UnityEngine.Rendering.RenderGraphModule.RenderTextureUVOriginStrategy
-
-
----@class UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext : System.Object
-UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext
-CS.UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext = UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext
-
----@return UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext
-function UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext.New() end
-
----@class UnityEngine.Rendering.RenderGraphModule.IDerivedRendergraphContext
-UnityEngine.Rendering.RenderGraphModule.IDerivedRendergraphContext = {}
----@alias CS.UnityEngine.Rendering.RenderGraphModule.IDerivedRendergraphContext UnityEngine.Rendering.RenderGraphModule.IDerivedRendergraphContext
-CS.UnityEngine.Rendering.RenderGraphModule.IDerivedRendergraphContext = UnityEngine.Rendering.RenderGraphModule.IDerivedRendergraphContext
-
----@param context UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext
-function UnityEngine.Rendering.RenderGraphModule.IDerivedRendergraphContext:FromInternalContext(context) end
----@param ref_textureHandle UnityEngine.Rendering.RenderGraphModule.TextureHandle
----@return UnityEngine.Rendering.RenderGraphModule.TextureUVOrigin,UnityEngine.Rendering.RenderGraphModule.TextureHandle
-function UnityEngine.Rendering.RenderGraphModule.IDerivedRendergraphContext:GetTextureUVOrigin(ref_textureHandle) end
