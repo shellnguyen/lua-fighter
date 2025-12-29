@@ -31,5 +31,3 @@ function OnTriggerEnter(other)
         return
     end
 end
-
-function 
