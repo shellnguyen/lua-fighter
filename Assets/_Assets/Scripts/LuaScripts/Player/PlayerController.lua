@@ -8,6 +8,9 @@ local offsetMinX = 2.5
 local offsetMaxX = 3
 local offsetMaxY = 0.9
 
+local tiltAngle = 15
+local tiltSpeed = 5
+
 -- Boundary variables (to be calculated in Awake)
 local minX
 local maxX
@@ -43,7 +46,16 @@ function MovementUpdate()
     local horizontal = CS.ShellSoft.InputController.moveValue.x
     local vertical = CS.ShellSoft.InputController.moveValue.y
 
+    -- Movement
     self.transform:Translate(CS.UnityEngine.Vector3(horizontal, vertical, 0) * CS.UnityEngine.Time.deltaTime * speed)
+
+    -- Rotation based on vertical movement                    -- Maximum rotation in degrees
+    local targetRotationZ = vertical * tiltAngle -- Negative for intuitive rotation direction
+    local targetQuanternion = CS.UnityEngine.Quaternion.Euler(0, 0, targetRotationZ)
+
+    self.transform.rotation = CS.UnityEngine.Quaternion.Lerp(self.transform.rotation,
+        targetQuanternion,
+        CS.UnityEngine.Time.deltaTime * tiltSpeed)
 end
 
 function ClampToScreen()
